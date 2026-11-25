@@ -13,6 +13,7 @@ function arcsecs_publications_download_url( $key ) {
     if ( ! in_array( $key, $allowed, true ) ) { return ''; }
     $override = arcsecs_publications_sanitize_url( get_theme_mod( 'arcsecs_publications_' . $key, '' ) );
     if ( $override ) { return $override; }
+    if ( 'zenodo' === $key ) { return 'https://zenodo.org/records/24543781'; }
     $bundled = array( 'book_pdf' => 'BEYOND_SPACETIME.pdf', 'book_epub' => 'BEYOND_SPACETIME.epub', 'paper_pdf' => 'ArcSecs_Scientific_Review_6.pdf' );
     if ( ! isset( $bundled[ $key ] ) ) { return ''; }
     $relative = '/assets/publications/' . $bundled[ $key ];
@@ -25,7 +26,7 @@ function arcsecs_publications_sanitize_url( $value ) {
     return esc_url_raw( $value, array( 'https' ) );
 }
 function arcsecs_publications_customize( $customizer ) {
-    $customizer->add_section( 'arcsecs_publications', array( 'title' => __( 'ArcSecs Publications', 'arcsecs' ), 'description' => __( 'The approved book PDF, EPUB and scientific paper are bundled and available by default. Enter an HTTPS URL to override a bundled file. Leave Zenodo or support blank to hide those optional links.', 'arcsecs' ), 'priority' => 30 ) );
+    $customizer->add_section( 'arcsecs_publications', array( 'title' => __( 'ArcSecs Publications', 'arcsecs' ), 'description' => __( 'The approved book PDF, EPUB and scientific paper are bundled and available by default. Enter an HTTPS URL to override a bundled file. The supplied Zenodo record is linked by default; enter an HTTPS URL to override it. Leave support blank to hide the additional support link.', 'arcsecs' ), 'priority' => 30 ) );
     $fields = array(
         'book_pdf' => 'Free book PDF URL override',
         'book_epub' => 'Free book EPUB URL override',
@@ -35,7 +36,7 @@ function arcsecs_publications_customize( $customizer ) {
     );
     foreach ( $fields as $key => $label ) {
         $id = 'arcsecs_publications_' . $key;
-        $customizer->add_setting( $id, array( 'default' => '', 'sanitize_callback' => 'arcsecs_publications_sanitize_url', 'transport' => 'refresh', 'capability' => 'edit_theme_options' ) );
+        $customizer->add_setting( $id, array( 'default' => ( 'zenodo' === $key ? 'https://zenodo.org/records/24543781' : '' ), 'sanitize_callback' => 'arcsecs_publications_sanitize_url', 'transport' => 'refresh', 'capability' => 'edit_theme_options' ) );
         $customizer->add_control( $id, array( 'section' => 'arcsecs_publications', 'label' => $label, 'type' => 'url' ) );
     }
 }
@@ -69,8 +70,9 @@ function arcsecs_publications_metadata() {
     }
     $pdf = arcsecs_publications_download_url( 'paper_pdf' );
     if ( $pdf ) { $paper['encoding'] = array( '@type' => 'MediaObject', 'contentUrl' => $pdf, 'encodingFormat' => 'application/pdf' ); }
-    $doi = arcsecs_publications_download_url( 'zenodo' );
-    if ( $doi ) { $paper['sameAs'] = $doi; }
+    $archive = arcsecs_publications_download_url( 'zenodo' );
+    // The supplied record is a related archive link, not an independently verified DOI.
+    if ( $archive ) { $paper['subjectOf'] = array( '@type' => 'WebPage', 'url' => $archive, 'name' => 'Related Zenodo record (link supplied by investigator)' ); }
     $graph = array( '@context' => 'https://schema.org', '@graph' => arcsecs_with_base_schema_graph( array( array( '@type' => 'CollectionPage', '@id' => $url, 'name' => $entry['name'], 'url' => $url, 'description' => $entry['description'], 'mainEntity' => array( array( '@id' => $url . '#book' ), array( '@id' => $url . '#scientific-paper' ) ) ), $book, $paper ) ) );
     echo '<link rel="canonical" href="' . esc_url( $url ) . '" />' . "\n";
     // Avoid forcing a robots meta tag on sites with indexing disabled.
@@ -124,6 +126,13 @@ function arcsecs_reader_metadata() {
     echo '<meta name="description" content="' . esc_attr( $entry['description'] ) . '" />' . "\n";
     echo '<link rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/" />' . "\n";
     $schema = array( '@context' => 'https://schema.org', '@type' => 'WebPage', 'name' => $entry['name'], 'url' => $url, 'description' => $entry['description'], 'isAccessibleForFree' => true, 'mainEntity' => array( '@id' => arcsecs_ai_access_url( 'publications/' ) . ( 'book' === $key ? '#book' : '#scientific-paper' ) ) );
+    if ( 'paper' === $key ) {
+        $archive = arcsecs_publications_download_url( 'zenodo' );
+        if ( $archive ) { $schema['relatedLink'] = $archive; }
+        echo '<meta name="citation_title" content="' . esc_attr( 'ArcSecs: A Physical-Process Research Program for Photon Propagation, Cosmic Distance, and Relational Inertia' ) . '" />' . "\n";
+        $pdf = arcsecs_publications_download_url( 'paper_pdf' );
+        if ( $pdf ) { echo '<meta name="citation_pdf_url" content="' . esc_attr( $pdf ) . '" />' . "\n"; }
+    }
     echo '<script type="application/ld+json">' . wp_json_encode( $schema, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT | JSON_UNESCAPED_SLASHES ) . '</script>' . "\n";
 }
 add_action( 'wp_head', 'arcsecs_reader_metadata', 3 );

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "release": "3.138.0",
+  "release": "3.139.0",
   "research_version": "Review 6.0",
   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
   "license_scope": "Original rights-controlled publication materials only; third-party content and existing software licenses unaffected.",
@@ -43,7 +43,16 @@
       "tex_fallback_count": 0,
       "toc_links": 90,
       "figure_count": 11,
-      "source_note": "Exact original manuscript Markdown. HTML reading edition uses browser-ready figures and MathML."
+      "source_note": "Exact original manuscript Markdown. HTML reading edition uses browser-ready figures and MathML.",
+      "related_archive": {
+        "url": "https://zenodo.org/records/24543781",
+        "provider": "Zenodo",
+        "metadata_status": "investigator_supplied_record_url; DOI and registered metadata not independently verified"
+      },
+      "citation_assets": {
+        "bibtex": "review6.bib",
+        "ris": "review6.ris"
+      }
     }
   ],
   "epub_asset": "BEYOND_SPACETIME.epub",

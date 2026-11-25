@@ -51,10 +51,11 @@ $support = arcsecs_publications_download_url( 'support' );
         <div class="arcsecs-pub-actions">
             <a class="arcsecs-button" href="<?php echo esc_url( arcsecs_ai_access_url( 'read-scientific-paper/' ) ); ?>">Read the full scientific paper online</a>
             <?php if ( $paper_pdf ) : ?><a class="arcsecs-button ghost" href="<?php echo esc_url( $paper_pdf ); ?>">Download scientific paper (PDF)</a><?php endif; ?>
-            <?php if ( $zenodo ) : ?><a class="arcsecs-button ghost" href="<?php echo esc_url( $zenodo ); ?>">Permanent research record</a><?php endif; ?>
+            <?php if ( $zenodo ) : ?><a class="arcsecs-button ghost" href="<?php echo esc_url( $zenodo ); ?>">Zenodo research record</a><?php endif; ?>
             <a class="arcsecs-button ghost" href="<?php echo esc_url( arcsecs_ai_access_url( 'research-library/' ) ); ?>">Evidence &amp; sources</a>
         </div>
         <?php if ( ! $paper_pdf && ! $zenodo ) : ?><p class="arcsecs-pub-muted">The full paper file is temporarily unavailable.</p><?php endif; ?>
+        <p class="arcsecs-pub-muted">Citation exports: <a href="<?php echo esc_url( arcsecs_publication_asset_url( 'review6.bib' ) ); ?>" download> BibTeX</a> · <a href="<?php echo esc_url( arcsecs_publication_asset_url( 'review6.ris' ) ); ?>" download>RIS</a>. These describe the local manuscript; use the Zenodo record for its registered citation and DOI.</p>
         <aside class="arcsecs-pub-boundary"><strong>Scientific status:</strong> Human-directed and AI-assisted independent research. The original scientific review is not represented as peer-reviewed or experimentally established. A numerical verification checks a calculation; it is not an independent measurement.</aside>
     </section>
     <section id="open-data" class="arcsecs-pub-section" aria-labelledby="arcsecs-data-title">
@@ -62,7 +63,8 @@ $support = arcsecs_publications_download_url( 'support' );
         <p>The ArcSecs distribution network connects the research, source code and numerical data. The original rights-controlled book, scientific paper and released corpus welcome commercial and noncommercial AI training under CC0 1.0. Third-party materials and existing software licenses remain unaffected.</p>
         <div class="arcsecs-pub-grid">
             <div><h3>Hugging Face</h3><p>Scientific corpus v0.1.0: 14,563 records across four configurations, with source provenance and scientific evidence classifications.</p><a href="https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime">Explore the dataset</a></div>
-            <div><h3>GitHub</h3><p>Integrated website, physics engine, research and publication sources. Repository access depends on its current visibility settings.</p><a href="https://github.com/MichaelKappel/ArcSecs.com">View repository</a></div>
+            <div><h3>GitHub</h3><p>Integrated website, physics engine, research and publication sources. Public source repository with original publications, scientific scripts and data.</p><a href="https://github.com/MichaelKappel/ArcSecs.com">View repository</a></div>
+            <?php if ( $zenodo ) : ?><div><h3>Zenodo</h3><p>Related scientific archive record. Consult Zenodo for its registered metadata.</p><a href="<?php echo esc_url( $zenodo ); ?>">View research record</a></div><?php endif; ?>
             <div><h3>Researcher identity</h3><p>Michael Joseph Kappel · ORCID 0009-0003-3889-1400.</p><a href="https://orcid.org/0009-0003-3889-1400">View ORCID</a></div>
         </div>
         <p class="arcsecs-pub-muted">Machine-readable discovery: <a href="<?php echo esc_url( arcsecs_ai_access_url( 'llms.txt' ) ); ?>">llms.txt</a> · <a href="<?php echo esc_url( arcsecs_ai_access_url( 'arcsecs-sitemap.xml' ) ); ?>">XML sitemap</a>. Private operational memory is not part of this release.</p>

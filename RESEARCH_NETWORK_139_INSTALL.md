@@ -1,0 +1,4 @@
+# ArcSecs 3.139.0 — Research Network
+Incremental overlay for the previously installed or committed v3.138.0 theme. Extract into the root of your existing ArcSecs.com GitHub clone, allow replacement of files, review changes in GitHub Desktop, commit and push. The full installable WordPress ZIP is separate.
+
+This update adds the investigator-supplied Zenodo record https://zenodo.org/records/24543781, BibTeX/RIS citations based on the original manuscript, updated discovery metadata and source links. No DOI is inferred; consult Zenodo for registered metadata. Original PDFs, EPUB, reader HTML and Markdown are unchanged. All 69 PHP files passed syntax checks; isolated catalog and reader tests passed; publication asset SHA-256 checks passed. Existing legacy tests and live deployment are not verified. Existing GPL and third-party licenses remain in effect.

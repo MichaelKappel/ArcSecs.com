@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('ARCSECS_VERSION', '3.138.0');
+define('ARCSECS_VERSION', '3.139.0');
 define('ARCSECS_DIR', get_template_directory());
 define('ARCSECS_URI', get_template_directory_uri());
 define('ARCSECS_CONTENT_MODIFIED_DATE', '2026-11-25');
@@ -210,7 +210,7 @@ require ARCSECS_DIR . '/inc/publications.php';
  * Integrated AI/crawler access layer from the former ArcSecs V5 AI Access child theme.
  * This is now part of the single ArcSecs V5 theme package so only one theme needs to be installed.
  */
-define( 'ARCSECS_AI_ACCESS_THEME_VERSION', '3.138.0' );
+define( 'ARCSECS_AI_ACCESS_THEME_VERSION', '3.139.0' );
 define( 'ARCSECS_AI_ACCESS_DEMO_PATH', '/arcsecs-physics-engine-demo/' );
 define( 'ARCSECS_DARK_MATTER_DRIVE_SIMULATOR_PATH', '/dark-matter-drive-simulator/' );
 define( 'ARCSECS_SPACE_TRAVEL_SIMULATION_PATH', '/space-travel-simulation/' );
@@ -2182,6 +2182,11 @@ function arcsecs_ai_access_output_llms_txt() {
     }
     echo "Hugging Face dataset: https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime\n";
     echo "Researcher ORCID: https://orcid.org/0009-0003-3889-1400\n";
+    echo "Public research repository: https://github.com/MichaelKappel/ArcSecs.com\n";
+    $archive = arcsecs_publications_download_url( 'zenodo' );
+    if ( $archive ) { echo "Related Zenodo record: " . esc_url_raw( $archive ) . "\n"; }
+    echo "Review 6.0 BibTeX: " . esc_url_raw( arcsecs_publication_asset_url( 'review6.bib' ) ) . "\n";
+    echo "Review 6.0 RIS: " . esc_url_raw( arcsecs_publication_asset_url( 'review6.ris' ) ) . "\n";
     echo "Primary demo: " . esc_url_raw( arcsecs_ai_access_url( 'arcsecs-physics-engine-demo/' ) ) . "\n";
     echo "Dark Matter Drive Simulator: " . esc_url_raw( arcsecs_dark_matter_drive_simulator_url() ) . " — plugin-provided interactive ArcSecs propulsion sandbox for field capture, shielding, energy ledgers, thermal stress, and replayable speculative physics experiments.\n";
     echo "Cosmology comparison: " . esc_url_raw( arcsecs_ai_access_url( 'standard-cosmology-vs-arcsecs/' ) ) . "\n";

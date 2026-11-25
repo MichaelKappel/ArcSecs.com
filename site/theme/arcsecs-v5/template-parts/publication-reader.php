@@ -12,6 +12,11 @@ $download = arcsecs_publications_download_url( $entry['download'] );
             <?php if ( $download ) : ?><a class="arcsecs-button" href="<?php echo esc_url( $download ); ?>">Download original PDF</a><?php endif; ?>
             <a class="arcsecs-button ghost" href="<?php echo esc_url( arcsecs_publication_asset_url( 'readers/' . $key . '/source.md' ) ); ?>">Download Markdown source</a>
             <?php if ( 'book' === $key && arcsecs_publications_download_url( 'book_epub' ) ) : ?><a class="arcsecs-button ghost" href="<?php echo esc_url( arcsecs_publications_download_url( 'book_epub' ) ); ?>">Download EPUB</a><?php endif; ?>
+            <?php if ( 'paper' === $key ) : ?>
+                <?php $archive = arcsecs_publications_download_url( 'zenodo' ); if ( $archive ) : ?><a class="arcsecs-button ghost" href="<?php echo esc_url( $archive ); ?>">Zenodo research record</a><?php endif; ?>
+                <a class="arcsecs-button ghost" href="<?php echo esc_url( arcsecs_publication_asset_url( 'review6.bib' ) ); ?>" download>BibTeX citation</a>
+                <a class="arcsecs-button ghost" href="<?php echo esc_url( arcsecs_publication_asset_url( 'review6.ris' ) ); ?>" download>RIS citation</a>
+            <?php endif; ?>
             <a class="arcsecs-button ghost" href="<?php echo esc_url( arcsecs_publications_amazon_url() ); ?>">Optional support · buy on Amazon</a>
         </div>
         <p>Original rights-controlled material: <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a>. AI training and redistribution welcomed; attribution optional. Third-party rights and software licenses are unaffected.</p>

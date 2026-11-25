@@ -4,7 +4,7 @@ Theme URI: https://arcsecs.com/
 Author: ArcSecs
 Author URI: https://arcsecs.com/
 Description: A refined ArcSecs cosmic magazine theme with integrated AI/crawler access, robots.txt, llms.txt, ArcSecs sitemap endpoints, bundled theme-local imagery, and integrated book and scientific publication discovery.
-Version: 3.138.0
+Version: 3.139.0
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 7.4
@@ -5507,7 +5507,7 @@ figure { margin: 2rem 0; }
   }
 }
 
-/* Publications catalog — 3.138.0. Scoped to preserve existing routes. */
+/* Publications catalog — 3.139.0. Scoped to preserve existing routes. */
 .arcsecs-publications { padding-block: clamp(2rem,6vw,5rem); }
 .arcsecs-publications h1 { font-size: clamp(2.5rem,6.2vw,5rem); line-height:1.06; letter-spacing:-.035em; margin:.7rem 0 1.2rem; }
 .arcsecs-publications h2,.arcsecs-pub-feature h2 { color:var(--text); font-size:clamp(1.65rem,3vw,2.7rem); line-height:1.15; margin:.5rem 0 .8rem; }

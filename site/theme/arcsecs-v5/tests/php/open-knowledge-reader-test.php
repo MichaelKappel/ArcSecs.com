@@ -21,6 +21,7 @@ foreach (arcsecs_reader_catalog() as $key=>$entry) {
     ok(strpos($output,'<math')!==false,'MathML missing');
     ok(strpos($output,'__ARCSECS_READER_ASSETS__')===false,'Unresolved asset marker');
     ok(strpos($output,'https://creativecommons.org/publicdomain/zero/1.0/')!==false,'License missing');
+    if ($key==='paper') ok(strpos($output,'Zenodo research record')!==false && strpos($output,'review6.bib')!==false,'Paper archive or citation missing');
     if ($key==='book') ok(strpos($output,'Read the appended scientific review')!==false,'Appended paper link missing');
     ob_start(); arcsecs_reader_metadata(); $meta=ob_get_clean();
     ok(strpos($meta,'https://arcsecs.com/'.$entry['path'])!==false,'Canonical URL missing');

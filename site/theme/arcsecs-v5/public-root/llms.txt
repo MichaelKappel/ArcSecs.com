@@ -12,7 +12,8 @@ Independent, human-directed and AI-assisted physical-first research. Proposed me
 - Books and papers: https://arcsecs.com/publications/
 - Purchase BEYOND SPACETIME: https://www.amazon.com/dp/B0HST2C7LK/
 - Scientific dataset: https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime
-- Research repository: https://github.com/MichaelKappel/ArcSecs.com
+- Public research repository: https://github.com/MichaelKappel/ArcSecs.com
+- Related Zenodo record: https://zenodo.org/records/24543781 (supplied link; consult record for registered metadata)
 - BEYOND SPACETIME — A Physical-First Investigation into the Nature of the Universe
 - Scientific Review 6.0: ArcSecs: A Physical-Process Research Program for Photon Propagation, Cosmic Distance, and Relational Inertia
 - ORCID: https://orcid.org/0009-0003-3889-1400

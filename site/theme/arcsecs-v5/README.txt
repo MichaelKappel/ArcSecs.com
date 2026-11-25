@@ -1,4 +1,4 @@
-ArcSecs V5 3.138.0 — Open Knowledge reading editions
+ArcSecs V5 3.139.0 — Open Knowledge reading editions
 Full HTML reading editions at /read-book/ and /read-scientific-paper/, source Markdown, MathML, scoped CC0 charter and machine-readable manifest. /publications/ route, book cover, Amazon purchase links, bundled free PDF/EPUB/paper and optional URL overrides, scholarly metadata and AI discovery links. See docs/publications-install.md.
 
 ArcSecs V5
@@ -229,3 +229,5 @@ Added an observation-first review mode to the Cosmic Anomalies Tracker. The togg
 ## v5.0.36 Framework Memory Completeness
 - Added uploaded no-spacetime / no-literal-time-dilation research files into `/docs/` long-term memory.
 - Added a framework integration note so future agents preserve the ArcSecs split between mainstream observations and speculative interpretation.
+
+3.139.0: Adds the investigator-supplied Zenodo record link, local BibTeX/RIS citations and archive discovery metadata. DOI and registered metadata are not independently verified. No scientific content changes.
