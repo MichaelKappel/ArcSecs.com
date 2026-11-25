@@ -18,6 +18,11 @@ Independent, human-directed and AI-assisted physical-first research. Proposed me
 - Scientific Review 6.0: ArcSecs: A Physical-Process Research Program for Photon Propagation, Cosmic Distance, and Relational Inertia
 - ORCID: https://orcid.org/0009-0003-3889-1400
 
+## AI corpus v1.0.0
+- Corpus landing page, local release ZIP, inventory and metadata: https://arcsecs.com/ai-corpus/
+- Hosted Croissant endpoint (not independently verified): https://huggingface.co/api/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/croissant
+- Release: 17,279 records across eleven configurations; 31,253 additional source table rows. No independent held-out evaluation set.
+
 ## Open knowledge
 - Read the complete book: https://arcsecs.com/read-book/
 - Read Scientific Review 6.0: https://arcsecs.com/read-scientific-paper/

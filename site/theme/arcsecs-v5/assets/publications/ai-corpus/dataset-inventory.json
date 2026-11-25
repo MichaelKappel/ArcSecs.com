@@ -1,0 +1,703 @@
+{
+  "dataset_version": "1.0.0",
+  "dataset_url": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime",
+  "croissant_url": "https://huggingface.co/api/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/croissant",
+  "source_repository": "https://github.com/MichaelKappel/ArcSecs.com",
+  "related_record": "https://zenodo.org/records/24543781",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_scope": "CC0 applies only to original rights-controlled material; existing third-party rights remain. Historical quotations and citations retain their source context.",
+  "total_records": 17279,
+  "additional_csv_rows": 31253,
+  "total_text_characters_in_text_fields_including_overlaps": 5125611,
+  "source_package_sha256": "e1a77972b96bda84b4d239921e771a1db553dbb7121b41ca9f5ecf9ccab33b61",
+  "verification_scope": "Exact bundled v1.0.0 release ZIP verified locally. Investigator reported uploading to Hugging Face; live hosted bytes and generated Croissant are not independently verified. Main-branch URLs are mutable; use SHA-256 to identify exact files.",
+  "configurations": [
+    {
+      "configuration": "escape_cases",
+      "records": 6,
+      "file": "escape_cases.jsonl",
+      "bytes": 5861,
+      "sha256": "88de0db28978dc613e1cbfbb10588e84b6b42666708b4ee0239048a149f8c818",
+      "url": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/escape_cases.jsonl",
+      "fields": {
+        "record_id": [
+          "str"
+        ],
+        "source_path": [
+          "str"
+        ],
+        "source_sha256": [
+          "str"
+        ],
+        "source_url": [
+          "str"
+        ],
+        "source_version": [
+          "str"
+        ],
+        "rights_status": [
+          "str"
+        ],
+        "release_status": [
+          "str"
+        ],
+        "source_record_index": [
+          "int"
+        ],
+        "epistemic_status": [
+          "str"
+        ],
+        "kappa_over_g": [
+          "float"
+        ],
+        "kappa": [
+          "float"
+        ],
+        "final_escaped": [
+          "float"
+        ],
+        "min_sample_population_derivative": [
+          "float"
+        ],
+        "first_sample_t90_escape": [
+          "NoneType",
+          "float"
+        ],
+        "max_solution_difference": [
+          "float"
+        ],
+        "analytic_monotonic_total_conversion": [
+          "bool"
+        ],
+        "license": [
+          "str"
+        ],
+        "source_git_commit": [
+          "str"
+        ],
+        "source_git_blob_sha1": [
+          "str"
+        ],
+        "source_git_sha256": [
+          "str"
+        ]
+      }
+    },
+    {
+      "configuration": "escape_timeseries",
+      "records": 14406,
+      "file": "escape_timeseries.jsonl",
+      "bytes": 13762518,
+      "sha256": "7aba34522fdf66b2fedf6c3158edf3208bba40822e9ff855e9a533ebfdaf7053",
+      "url": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/escape_timeseries.jsonl",
+      "fields": {
+        "record_id": [
+          "str"
+        ],
+        "source_path": [
+          "str"
+        ],
+        "source_sha256": [
+          "str"
+        ],
+        "source_url": [
+          "str"
+        ],
+        "source_version": [
+          "str"
+        ],
+        "rights_status": [
+          "str"
+        ],
+        "release_status": [
+          "str"
+        ],
+        "source_row": [
+          "int"
+        ],
+        "epistemic_status": [
+          "str"
+        ],
+        "kappa_over_g": [
+          "float"
+        ],
+        "kappa": [
+          "float"
+        ],
+        "g": [
+          "float"
+        ],
+        "T": [
+          "float"
+        ],
+        "A_population": [
+          "float"
+        ],
+        "B_local_population": [
+          "float"
+        ],
+        "B_escaped_population": [
+          "float"
+        ],
+        "total_B": [
+          "float"
+        ],
+        "d_total_B_dT": [
+          "float"
+        ],
+        "license": [
+          "str"
+        ],
+        "source_git_commit": [
+          "str"
+        ],
+        "source_git_blob_sha1": [
+          "str"
+        ],
+        "source_git_sha256": [
+          "str"
+        ]
+      }
+    },
+    {
+      "configuration": "regression_checks",
+      "records": 137,
+      "file": "regression_checks.jsonl",
+      "bytes": 107472,
+      "sha256": "23da5973212afeae500bef314af37468cf8e030337a8479ce2f4f16d47366a4a",
+      "url": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/regression_checks.jsonl",
+      "fields": {
+        "record_id": [
+          "str"
+        ],
+        "source_path": [
+          "str"
+        ],
+        "source_sha256": [
+          "str"
+        ],
+        "source_url": [
+          "str"
+        ],
+        "source_version": [
+          "str"
+        ],
+        "rights_status": [
+          "str"
+        ],
+        "release_status": [
+          "str"
+        ],
+        "source_row": [
+          "int"
+        ],
+        "epistemic_status": [
+          "str"
+        ],
+        "test": [
+          "str"
+        ],
+        "passed": [
+          "bool"
+        ],
+        "license": [
+          "str"
+        ],
+        "source_git_commit": [
+          "str"
+        ],
+        "source_git_blob_sha1": [
+          "str"
+        ],
+        "source_git_sha256": [
+          "str"
+        ]
+      }
+    },
+    {
+      "configuration": "research_sections",
+      "records": 14,
+      "file": "research_sections.jsonl",
+      "bytes": 53474,
+      "sha256": "2196e447c1d80d13a9af784d1b9209b908982eb1db8c8bc2876f1005a9636746",
+      "url": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/research_sections.jsonl",
+      "fields": {
+        "record_id": [
+          "str"
+        ],
+        "source_path": [
+          "str"
+        ],
+        "source_sha256": [
+          "str"
+        ],
+        "source_url": [
+          "str"
+        ],
+        "source_version": [
+          "str"
+        ],
+        "rights_status": [
+          "str"
+        ],
+        "release_status": [
+          "str"
+        ],
+        "section": [
+          "str"
+        ],
+        "heading": [
+          "str"
+        ],
+        "source_line_start": [
+          "int"
+        ],
+        "source_line_end": [
+          "int"
+        ],
+        "epistemic_status": [
+          "str"
+        ],
+        "interpretation": [
+          "str"
+        ],
+        "text": [
+          "str"
+        ],
+        "text_sha256": [
+          "str"
+        ],
+        "license": [
+          "str"
+        ],
+        "source_git_commit": [
+          "str"
+        ],
+        "source_git_blob_sha1": [
+          "str"
+        ],
+        "source_git_sha256": [
+          "str"
+        ]
+      }
+    },
+    {
+      "configuration": "book",
+      "records": 351,
+      "file": "book.jsonl",
+      "bytes": 1066689,
+      "sha256": "576f3fd10013b5828d65c8a091a3207c8da83fd5b98e6de0f7dd7b95e7678804",
+      "url": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/book.jsonl",
+      "fields": {
+        "record_id": [
+          "str"
+        ],
+        "source_path": [
+          "str"
+        ],
+        "source_url": [
+          "str"
+        ],
+        "source_git_commit": [
+          "str"
+        ],
+        "source_git_blob_sha1": [
+          "str"
+        ],
+        "source_sha256": [
+          "str"
+        ],
+        "license": [
+          "str"
+        ],
+        "license_scope": [
+          "str"
+        ],
+        "rights_status": [
+          "str"
+        ],
+        "release_status": [
+          "str"
+        ],
+        "epistemic_status": [
+          "str"
+        ],
+        "source_line_start": [
+          "int"
+        ],
+        "source_line_end": [
+          "int"
+        ],
+        "heading": [
+          "str"
+        ],
+        "text": [
+          "str"
+        ],
+        "text_sha256": [
+          "str"
+        ],
+        "interpretation": [
+          "str"
+        ]
+      }
+    },
+    {
+      "configuration": "scientific_papers",
+      "records": 351,
+      "file": "scientific_papers.jsonl",
+      "bytes": 1068927,
+      "sha256": "293d46fa5eda8e0f43efe00c26296c8d7e225ed1ce1685d4a31af42ebe45c416",
+      "url": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/scientific_papers.jsonl",
+      "fields": {
+        "record_id": [
+          "str"
+        ],
+        "source_path": [
+          "str"
+        ],
+        "source_url": [
+          "str"
+        ],
+        "source_git_commit": [
+          "str"
+        ],
+        "source_git_blob_sha1": [
+          "str"
+        ],
+        "source_sha256": [
+          "str"
+        ],
+        "license": [
+          "str"
+        ],
+        "license_scope": [
+          "str"
+        ],
+        "rights_status": [
+          "str"
+        ],
+        "release_status": [
+          "str"
+        ],
+        "epistemic_status": [
+          "str"
+        ],
+        "source_line_start": [
+          "int"
+        ],
+        "source_line_end": [
+          "int"
+        ],
+        "heading": [
+          "str"
+        ],
+        "text": [
+          "str"
+        ],
+        "text_sha256": [
+          "str"
+        ],
+        "interpretation": [
+          "str"
+        ]
+      }
+    },
+    {
+      "configuration": "research_reports",
+      "records": 1694,
+      "file": "research_reports.jsonl",
+      "bytes": 5808766,
+      "sha256": "9384ac099583431bf0fc7ea3baadbcd3669f0bf6159bdbf26e49901618edb473",
+      "url": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/research_reports.jsonl",
+      "fields": {
+        "record_id": [
+          "str"
+        ],
+        "source_path": [
+          "str"
+        ],
+        "source_url": [
+          "str"
+        ],
+        "source_git_commit": [
+          "str"
+        ],
+        "source_git_blob_sha1": [
+          "str"
+        ],
+        "source_sha256": [
+          "str"
+        ],
+        "license": [
+          "str"
+        ],
+        "license_scope": [
+          "str"
+        ],
+        "rights_status": [
+          "str"
+        ],
+        "release_status": [
+          "str"
+        ],
+        "epistemic_status": [
+          "str"
+        ],
+        "source_line_start": [
+          "int"
+        ],
+        "source_line_end": [
+          "int"
+        ],
+        "heading": [
+          "str"
+        ],
+        "text": [
+          "str"
+        ],
+        "text_sha256": [
+          "str"
+        ],
+        "interpretation": [
+          "str"
+        ]
+      }
+    },
+    {
+      "configuration": "foundations",
+      "records": 12,
+      "file": "foundations.jsonl",
+      "bytes": 13057,
+      "sha256": "1fd19073cd0054a56f31b158c3d4b5518131e827d0e4298d41e6805cb4cb3fab",
+      "url": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/foundations.jsonl",
+      "fields": {
+        "record_id": [
+          "str"
+        ],
+        "source_path": [
+          "str"
+        ],
+        "source_url": [
+          "str"
+        ],
+        "source_git_commit": [
+          "str"
+        ],
+        "source_git_blob_sha1": [
+          "str"
+        ],
+        "source_sha256": [
+          "str"
+        ],
+        "license": [
+          "str"
+        ],
+        "license_scope": [
+          "str"
+        ],
+        "rights_status": [
+          "str"
+        ],
+        "release_status": [
+          "str"
+        ],
+        "epistemic_status": [
+          "str"
+        ],
+        "number": [
+          "int"
+        ],
+        "source_line_start": [
+          "int"
+        ],
+        "source_line_end": [
+          "int"
+        ],
+        "text": [
+          "str"
+        ],
+        "text_sha256": [
+          "str"
+        ],
+        "interpretation": [
+          "str"
+        ]
+      }
+    },
+    {
+      "configuration": "numerical_data",
+      "records": 302,
+      "file": "numerical_data.jsonl",
+      "bytes": 6464650,
+      "sha256": "9a241fd3ebe9cbea29c7b5121bcde13b9dcd2b10156d53e43057bb40a6f55fc5",
+      "url": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/numerical_data.jsonl",
+      "fields": {
+        "record_id": [
+          "str"
+        ],
+        "source_path": [
+          "str"
+        ],
+        "source_url": [
+          "str"
+        ],
+        "source_git_commit": [
+          "str"
+        ],
+        "source_git_blob_sha1": [
+          "str"
+        ],
+        "source_sha256": [
+          "str"
+        ],
+        "license": [
+          "str"
+        ],
+        "license_scope": [
+          "str"
+        ],
+        "rights_status": [
+          "str"
+        ],
+        "release_status": [
+          "str"
+        ],
+        "epistemic_status": [
+          "str"
+        ],
+        "source_record_start": [
+          "int"
+        ],
+        "source_record_end": [
+          "int"
+        ],
+        "columns": [
+          "list"
+        ],
+        "rows": [
+          "list"
+        ],
+        "interpretation": [
+          "str"
+        ]
+      }
+    },
+    {
+      "configuration": "verification",
+      "records": 5,
+      "file": "verification.jsonl",
+      "bytes": 22617,
+      "sha256": "f52adf49dac7d91eb0d1ee3042a5ae73dcc992602f03b5223026a141883880a1",
+      "url": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/verification.jsonl",
+      "fields": {
+        "record_id": [
+          "str"
+        ],
+        "source_path": [
+          "str"
+        ],
+        "source_url": [
+          "str"
+        ],
+        "source_git_commit": [
+          "str"
+        ],
+        "source_git_blob_sha1": [
+          "str"
+        ],
+        "source_sha256": [
+          "str"
+        ],
+        "license": [
+          "str"
+        ],
+        "license_scope": [
+          "str"
+        ],
+        "rights_status": [
+          "str"
+        ],
+        "release_status": [
+          "str"
+        ],
+        "epistemic_status": [
+          "str"
+        ],
+        "source_record_start": [
+          "int"
+        ],
+        "source_record_end": [
+          "int"
+        ],
+        "columns": [
+          "list"
+        ],
+        "rows": [
+          "list"
+        ],
+        "interpretation": [
+          "str"
+        ]
+      }
+    },
+    {
+      "configuration": "open_knowledge",
+      "records": 1,
+      "file": "open_knowledge.jsonl",
+      "bytes": 2547,
+      "sha256": "2e93e149f75755eec66b3fa94975db1f3c78f776c012f09898f388efa0bc71a3",
+      "url": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/open_knowledge.jsonl",
+      "fields": {
+        "record_id": [
+          "str"
+        ],
+        "source_path": [
+          "str"
+        ],
+        "source_url": [
+          "str"
+        ],
+        "source_git_commit": [
+          "str"
+        ],
+        "source_git_blob_sha1": [
+          "str"
+        ],
+        "source_sha256": [
+          "str"
+        ],
+        "license": [
+          "str"
+        ],
+        "license_scope": [
+          "str"
+        ],
+        "rights_status": [
+          "str"
+        ],
+        "release_status": [
+          "str"
+        ],
+        "epistemic_status": [
+          "str"
+        ],
+        "text": [
+          "str"
+        ],
+        "text_sha256": [
+          "str"
+        ],
+        "source_line_start": [
+          "int"
+        ],
+        "source_line_end": [
+          "int"
+        ]
+      }
+    }
+  ],
+  "local_archive": "ArcSecs_AI_Corpus_v1.0.0.zip",
+  "local_archive_bytes": 4983156,
+  "website_route": "ai-corpus/"
+}

@@ -1,0 +1,119 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime#dataset",
+  "name": "ArcSecs — Beyond Spacetime AI Corpus",
+  "description": "Human-directed, AI-assisted independent theoretical physics research: book, five scientific reviews, 41 historical reports, twelve stipulated premises, and selected archived numerical and verification data. Conditional findings are not experimentally established. Original rights-controlled material is CC0; existing third-party rights are unaffected. No held-out evaluation set. The bundled release archive is the verified local distribution; hosted files and generated Croissant are not independently verified.",
+  "url": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime",
+  "version": "1.0.0",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "creator": {
+    "@type": "Person",
+    "name": "Michael Joseph Kappel",
+    "identifier": "https://orcid.org/0009-0003-3889-1400"
+  },
+  "keywords": [
+    "theoretical physics",
+    "scientific reasoning",
+    "mathematics",
+    "reproducibility",
+    "AI training"
+  ],
+  "isBasedOn": {
+    "@type": "CreativeWork",
+    "url": "https://github.com/MichaelKappel/ArcSecs.com"
+  },
+  "subjectOf": {
+    "@type": "CreativeWork",
+    "url": "https://zenodo.org/records/24543781",
+    "name": "Related Zenodo record (investigator supplied; DOI unverified)"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "escape_cases",
+      "contentUrl": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/escape_cases.jsonl",
+      "encodingFormat": "application/x-ndjson",
+      "contentSize": "5861 bytes"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "escape_timeseries",
+      "contentUrl": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/escape_timeseries.jsonl",
+      "encodingFormat": "application/x-ndjson",
+      "contentSize": "13762518 bytes"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "regression_checks",
+      "contentUrl": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/regression_checks.jsonl",
+      "encodingFormat": "application/x-ndjson",
+      "contentSize": "107472 bytes"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "research_sections",
+      "contentUrl": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/research_sections.jsonl",
+      "encodingFormat": "application/x-ndjson",
+      "contentSize": "53474 bytes"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "book",
+      "contentUrl": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/book.jsonl",
+      "encodingFormat": "application/x-ndjson",
+      "contentSize": "1066689 bytes"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "scientific_papers",
+      "contentUrl": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/scientific_papers.jsonl",
+      "encodingFormat": "application/x-ndjson",
+      "contentSize": "1068927 bytes"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "research_reports",
+      "contentUrl": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/research_reports.jsonl",
+      "encodingFormat": "application/x-ndjson",
+      "contentSize": "5808766 bytes"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "foundations",
+      "contentUrl": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/foundations.jsonl",
+      "encodingFormat": "application/x-ndjson",
+      "contentSize": "13057 bytes"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "numerical_data",
+      "contentUrl": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/numerical_data.jsonl",
+      "encodingFormat": "application/x-ndjson",
+      "contentSize": "6464650 bytes"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "verification",
+      "contentUrl": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/verification.jsonl",
+      "encodingFormat": "application/x-ndjson",
+      "contentSize": "22617 bytes"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "open_knowledge",
+      "contentUrl": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/resolve/main/open_knowledge.jsonl",
+      "encodingFormat": "application/x-ndjson",
+      "contentSize": "2547 bytes"
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Complete v1.0.0 ZIP (local mirror)",
+      "contentUrl": "ArcSecs_AI_Corpus_v1.0.0.zip",
+      "encodingFormat": "application/zip",
+      "contentSize": "4983156 bytes"
+    }
+  ]
+}

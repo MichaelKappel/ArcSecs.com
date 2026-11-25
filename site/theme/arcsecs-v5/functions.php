@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('ARCSECS_VERSION', '3.139.0');
+define('ARCSECS_VERSION', '3.140.0');
 define('ARCSECS_DIR', get_template_directory());
 define('ARCSECS_URI', get_template_directory_uri());
 define('ARCSECS_CONTENT_MODIFIED_DATE', '2026-11-25');
@@ -204,13 +204,14 @@ function arcsecs_has_featured_image($post_id = null) {
 
 require ARCSECS_DIR . '/inc/site-repair.php';
 require ARCSECS_DIR . '/inc/publications.php';
+require ARCSECS_DIR . '/inc/ai-corpus.php';
 
 
 /**
  * Integrated AI/crawler access layer from the former ArcSecs V5 AI Access child theme.
  * This is now part of the single ArcSecs V5 theme package so only one theme needs to be installed.
  */
-define( 'ARCSECS_AI_ACCESS_THEME_VERSION', '3.139.0' );
+define( 'ARCSECS_AI_ACCESS_THEME_VERSION', '3.140.0' );
 define( 'ARCSECS_AI_ACCESS_DEMO_PATH', '/arcsecs-physics-engine-demo/' );
 define( 'ARCSECS_DARK_MATTER_DRIVE_SIMULATOR_PATH', '/dark-matter-drive-simulator/' );
 define( 'ARCSECS_SPACE_TRAVEL_SIMULATION_PATH', '/space-travel-simulation/' );
@@ -937,6 +938,7 @@ add_action( 'wp_head', 'arcsecs_output_favicon_and_browser_metadata', 1 );
 function arcsecs_get_public_route_seo_entries() {
     return array(
         arcsecs_publications_seo_entry(),
+        arcsecs_corpus_seo_entry(),
         arcsecs_reader_catalog()['book'],
         arcsecs_reader_catalog()['paper'],
         array(
@@ -1796,6 +1798,7 @@ function arcsecs_output_route_social_metadata( $canonical, $entry, $type ) {
  * @return string Updated document title.
  */
 function arcsecs_public_route_document_title( $title ) {
+    if ( arcsecs_is_corpus_page() ) { return arcsecs_corpus_seo_entry()['title']; }
     if ( $reader = arcsecs_reader_key() ) { return arcsecs_reader_catalog()[ $reader ]['title']; }
     if ( arcsecs_is_publications_page() ) {
         return arcsecs_publications_seo_entry()['title'];
@@ -2055,6 +2058,7 @@ add_filter( 'wp_headers', 'arcsecs_ai_access_headers', 50 );
 function arcsecs_ai_access_rewrite_rules() {
     add_rewrite_rule( '^read-book/?$', 'index.php?arcsecs_reader=book', 'top' );
     add_rewrite_rule( '^read-scientific-paper/?$', 'index.php?arcsecs_reader=paper', 'top' );
+    add_rewrite_rule( '^ai-corpus/?$', 'index.php?arcsecs_corpus=1', 'top' );
     add_rewrite_rule( '^publications/?$', 'index.php?arcsecs_publications=1', 'top' );
     add_rewrite_rule( '^llms\.txt$', 'index.php?arcsecs_llms_txt=1', 'top' );
     add_rewrite_rule( '^arcsecs-sitemap\.xml$', 'index.php?arcsecs_sitemap_xml=1', 'top' );
@@ -2077,6 +2081,7 @@ add_action( 'init', 'arcsecs_ai_access_rewrite_rules' );
 function arcsecs_ai_access_query_vars( $vars ) {
     $vars[] = 'arcsecs_reader';
     $vars[] = 'arcsecs_publications';
+    $vars[] = 'arcsecs_corpus';
     $vars[] = 'arcsecs_llms_txt';
     $vars[] = 'arcsecs_ai_summary';
     $vars[] = 'arcsecs_sitemap_xml';
@@ -2181,6 +2186,11 @@ function arcsecs_ai_access_output_llms_txt() {
         if ( $download ) { echo $format . ': ' . esc_url_raw( $download ) . "\n"; }
     }
     echo "Hugging Face dataset: https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime\n";
+    echo "AI Corpus v1.0.0: " . esc_url_raw( arcsecs_ai_access_url( 'ai-corpus/' ) ) . " — 17,279 release records; 11 configurations; original rights-controlled content CC0.\n";
+    echo "Local corpus ZIP: " . esc_url_raw( arcsecs_corpus_asset_url( 'ArcSecs_AI_Corpus_v1.0.0.zip' ) ) . "\n";
+    echo "Corpus inventory: " . esc_url_raw( arcsecs_corpus_asset_url( 'dataset-inventory.json' ) ) . "\n";
+    echo "Dataset Schema.org metadata: " . esc_url_raw( arcsecs_corpus_asset_url( 'dataset.jsonld' ) ) . "\n";
+    echo "Hugging Face generated Croissant (hosted endpoint, not independently verified): https://huggingface.co/api/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/croissant\n";
     echo "Researcher ORCID: https://orcid.org/0009-0003-3889-1400\n";
     echo "Public research repository: https://github.com/MichaelKappel/ArcSecs.com\n";
     $archive = arcsecs_publications_download_url( 'zenodo' );
@@ -2325,6 +2335,7 @@ function arcsecs_ai_access_output_sitemap_xml() {
  * @return void
  */
 function arcsecs_ai_access_template_redirect() {
+    if ( arcsecs_is_corpus_page() ) { arcsecs_render_corpus_page(); }
     if ( $reader = arcsecs_reader_key() ) { arcsecs_render_reader( $reader ); }
     if ( arcsecs_is_publications_page() ) {
         arcsecs_render_publications_page();
@@ -3451,7 +3462,7 @@ function arcsecs_ai_access_admin_notice() {
         return;
     }
 
-    echo '<div class="notice notice-info"><p><strong>ArcSecs V5 AI Access:</strong> after activating or updating, visit Settings &gt; Permalinks and click Save Changes if /llms.txt, /arcsecs-sitemap.xml, or /arcsecs-physics-engine-demo/ai-summary/, or /arcsecs-research-hub/ or /research-library/ or /multi-messenger-light-delay/ or /standard-cosmology-vs-arcsecs/ or /cosmic-anomalies-tracker/ or /dark-matter-drive-simulator/ returns 404.</p></div>';
+    echo '<div class="notice notice-info"><p><strong>ArcSecs V5 AI Access:</strong> after activating or updating, visit Settings &gt; Permalinks and click Save Changes if /ai-corpus/, /llms.txt, /arcsecs-sitemap.xml, or /arcsecs-physics-engine-demo/ai-summary/, or /arcsecs-research-hub/ or /research-library/ or /multi-messenger-light-delay/ or /standard-cosmology-vs-arcsecs/ or /cosmic-anomalies-tracker/ or /dark-matter-drive-simulator/ returns 404.</p></div>';
 }
 add_action( 'admin_notices', 'arcsecs_ai_access_admin_notice' );
 

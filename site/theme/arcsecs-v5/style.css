@@ -4,7 +4,7 @@ Theme URI: https://arcsecs.com/
 Author: ArcSecs
 Author URI: https://arcsecs.com/
 Description: A refined ArcSecs cosmic magazine theme with integrated AI/crawler access, robots.txt, llms.txt, ArcSecs sitemap endpoints, bundled theme-local imagery, and integrated book and scientific publication discovery.
-Version: 3.139.0
+Version: 3.140.0
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 7.4
@@ -5563,3 +5563,14 @@ figure { margin: 2rem 0; }
 @media print{.arcsecs-reader-intro .arcsecs-pub-actions,.arcsecs-reader-toc{display:none}.arcsecs-reader{max-width:none}.arcsecs-reader-body{color:#111;background:#fff}}
 
 .arcsecs-reader-toc .arcsecs-toc-level-2{margin-left:1.3rem}.arcsecs-reader-toc .arcsecs-toc-level-1{font-weight:650;margin-top:.5rem}
+
+/* AI Corpus discovery page */
+.arcsecs-corpus-table-wrap { overflow-x:auto; margin-block:1.25rem; }
+.arcsecs-corpus-table { width:100%; border-collapse:collapse; text-align:left; font-size:.95rem; }
+.arcsecs-corpus-table th,.arcsecs-corpus-table td { padding:.8rem .6rem; border-bottom:1px solid var(--line); vertical-align:top; }
+.arcsecs-corpus-table th { color:var(--gold); }
+.arcsecs-corpus-table td:nth-child(2) { font-variant-numeric:tabular-nums; }
+.arcsecs-corpus-table a { color:var(--blue-2); text-decoration:underline; }
+.arcsecs-corpus-hash { overflow-wrap:anywhere; font-size:.8rem; }
+.arcsecs-corpus-steps { padding-left:1.4rem; line-height:1.8; }
+@media(max-width:600px){.arcsecs-corpus-table th,.arcsecs-corpus-table td{padding:.6rem .4rem;font-size:.85rem}.arcsecs-corpus-table td:first-child{overflow-wrap:anywhere}}

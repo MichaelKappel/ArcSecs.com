@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "release": "3.139.0",
+  "release": "3.140.0",
   "research_version": "Review 6.0",
   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
   "license_scope": "Original rights-controlled publication materials only; third-party content and existing software licenses unaffected.",
@@ -58,5 +58,18 @@
   "epub_asset": "BEYOND_SPACETIME.epub",
   "epub_sha256": "3585438c26d664123e61c1c3487519a5a15b87cee67980971a9332cd30dd212f",
   "asset_paths_relative_to": "directory containing publication-manifest.json",
-  "reader_paths_relative_to": "website"
+  "reader_paths_relative_to": "website",
+  "ai_corpus": {
+    "version": "1.0.0",
+    "records": 17279,
+    "configurations": 11,
+    "additional_csv_rows": 31253,
+    "landing_path": "ai-corpus/",
+    "archive_asset": "ai-corpus/ArcSecs_AI_Corpus_v1.0.0.zip",
+    "archive_sha256": "e1a77972b96bda84b4d239921e771a1db553dbb7121b41ca9f5ecf9ccab33b61",
+    "inventory_asset": "ai-corpus/dataset-inventory.json",
+    "schema_asset": "ai-corpus/dataset.jsonld",
+    "croissant_url": "https://huggingface.co/api/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime/croissant",
+    "verification_scope": "Exact bundled v1.0.0 release ZIP verified locally. Investigator reported uploading to Hugging Face; live hosted bytes and generated Croissant are not independently verified. Main-branch URLs are mutable; use SHA-256 to identify exact files."
+  }
 }

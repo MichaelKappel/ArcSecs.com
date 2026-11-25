@@ -30,7 +30,7 @@ ok(arcsecs_publications_download_url('zenodo')==='https://zenodo.org/records/245
 ok(strpos($default,'https://zenodo.org/records/24543781')!==false,'Default archive link not rendered');
 ok(strpos($default,'review6.bib')!==false && strpos($default,'review6.ris')!==false,'Citation downloads missing');
 ok(strpos($default,'Download scientific paper (PDF)')!==false,'Bundled paper missing');
-ok(strpos($default,'14,563')!==false,'Dataset link/metadata missing');
+ok(strpos($default,'17,279')!==false,'Dataset link/metadata missing');
 ok(strpos($default,'129 pages')!==false,'Paper metadata missing');
 $GLOBALS['settings']=['arcsecs_publications_book_pdf'=>'https://arcsecs.com/book.pdf','arcsecs_publications_book_epub'=>'https://arcsecs.com/book.epub','arcsecs_publications_paper_pdf'=>'https://arcsecs.com/paper.pdf','arcsecs_publications_zenodo'=>'https://zenodo.org/records/123','arcsecs_publications_support'=>'https://example.org/support'];
 $enabled=render_catalog($root);
