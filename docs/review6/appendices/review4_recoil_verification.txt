@@ -1,0 +1,1 @@
+Five finite/infinite wall integrations: energy/momentum assertions passed; finite-mass refinement passed. Eight directional area cases: independent numerical Jacobi equation agrees with sinh(eta). No interval certificate or physical fit.

@@ -1,0 +1,130 @@
+{
+  "generatedUtc": "2026-05-31T01:45:00Z",
+  "sourceRoot": "assets/ts",
+  "includedGlobPatterns": [
+    "assets/ts/**/*.ts"
+  ],
+  "pluginSourceExportRequiredGlobPatterns": [
+    "src/ts/arcsecs/**/*.ts",
+    "src/ts/simulator/**/*.ts",
+    "src/ts/arcsecs-physics-engine.ts"
+  ],
+  "excludedGlobPatterns": [
+    "node_modules/**",
+    "dist/**",
+    "build/**",
+    "*.map",
+    ".env*"
+  ],
+  "fileCount": 8,
+  "totalLineCount": 320,
+  "totalCharacterCount": 12065,
+  "files": [
+    {
+      "relativePath": "assets/ts/arcsecs-physics-engine/ConstantsManager.ts",
+      "fileSize": 2019,
+      "lineCount": 56,
+      "exported": true,
+      "detectedImports": [
+        "./PhysicsTypes"
+      ],
+      "detectedExports": [
+        "ConstantsManager"
+      ],
+      "purposeSummary": "Theme-packaged ArcSecs TypeScript source file available in this ZIP; plugin src/ts export still belongs in plugin repository."
+    },
+    {
+      "relativePath": "assets/ts/arcsecs-physics-engine/CorePhysicsEngine.ts",
+      "fileSize": 2499,
+      "lineCount": 66,
+      "exported": true,
+      "detectedImports": [
+        "./ConstantsManager",
+        "./PhysicsTypes"
+      ],
+      "detectedExports": [
+        "CorePhysicsEngine"
+      ],
+      "purposeSummary": "Theme-packaged ArcSecs TypeScript source file available in this ZIP; plugin src/ts export still belongs in plugin repository."
+    },
+    {
+      "relativePath": "assets/ts/arcsecs-physics-engine/DarkMatterCondensateModel.ts",
+      "fileSize": 960,
+      "lineCount": 22,
+      "exported": true,
+      "detectedImports": [],
+      "detectedExports": [
+        "DarkMatterCondensateModel"
+      ],
+      "purposeSummary": "Theme-packaged ArcSecs TypeScript source file available in this ZIP; plugin src/ts export still belongs in plugin repository."
+    },
+    {
+      "relativePath": "assets/ts/arcsecs-physics-engine/PhysicsTypes.ts",
+      "fileSize": 1659,
+      "lineCount": 54,
+      "exported": true,
+      "detectedImports": [],
+      "detectedExports": [
+        "ScenarioMode",
+        "Vector3D",
+        "SimulationEntity",
+        "PhysicalConstantsSnapshot",
+        "SimulationStepInput",
+        "ConservationLedgerEntry",
+        "TelemetryFrame"
+      ],
+      "purposeSummary": "Theme-packaged ArcSecs TypeScript source file available in this ZIP; plugin src/ts export still belongs in plugin repository."
+    },
+    {
+      "relativePath": "assets/ts/arcsecs-physics-engine/ProcaPhotonModel.ts",
+      "fileSize": 1130,
+      "lineCount": 25,
+      "exported": true,
+      "detectedImports": [
+        "./PhysicsTypes"
+      ],
+      "detectedExports": [
+        "ProcaPhotonModel"
+      ],
+      "purposeSummary": "Theme-packaged ArcSecs TypeScript source file available in this ZIP; plugin src/ts export still belongs in plugin repository."
+    },
+    {
+      "relativePath": "assets/ts/arcsecs-physics-engine/RelationalInertiaModel.ts",
+      "fileSize": 1733,
+      "lineCount": 41,
+      "exported": true,
+      "detectedImports": [
+        "./PhysicsTypes"
+      ],
+      "detectedExports": [
+        "RelationalInertiaModel"
+      ],
+      "purposeSummary": "Theme-packaged ArcSecs TypeScript source file available in this ZIP; plugin src/ts export still belongs in plugin repository."
+    },
+    {
+      "relativePath": "assets/ts/arcsecs-physics-engine/TelemetryRenderer.ts",
+      "fileSize": 856,
+      "lineCount": 24,
+      "exported": true,
+      "detectedImports": [
+        "./PhysicsTypes"
+      ],
+      "detectedExports": [
+        "TelemetryRenderer"
+      ],
+      "purposeSummary": "Theme-packaged ArcSecs TypeScript source file available in this ZIP; plugin src/ts export still belongs in plugin repository."
+    },
+    {
+      "relativePath": "assets/ts/arcsecs-physics-engine/TiredLightModel.ts",
+      "fileSize": 1209,
+      "lineCount": 32,
+      "exported": true,
+      "detectedImports": [],
+      "detectedExports": [
+        "TiredLightModel"
+      ],
+      "purposeSummary": "Theme-packaged ArcSecs TypeScript source file available in this ZIP; plugin src/ts export still belongs in plugin repository."
+    }
+  ],
+  "note": "This manifest covers TypeScript files present in the theme package. The plugin agent must export the real plugin src/ts tree from the plugin repository."
+}

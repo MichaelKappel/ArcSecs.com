@@ -1,0 +1,7 @@
+HYPOTHETICAL HOMOGENEOUS TOY MODEL — NOT OBSERVED DATA
+Independent pure-Python RK4 solution of the source continuation ODE.
+psi_arrival: -0.07225367886388731
+max_relative_energy_drift: 5.260965900618261e-15
+steps: 4000
+Source approximation: fixed electron mass, e, hbar; leading Coulomb spectrum.
+Identity: (1+z_spec)*S_prop=(alpha_a/alpha_e)^2.

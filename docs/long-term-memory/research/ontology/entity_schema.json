@@ -1,0 +1,114 @@
+{
+  "schema_version": "arcsecs-ontology-v1.0-editorial-spec",
+  "authorial_scope": "ArcSecs research ontology, not independent experimental verification or operational physics engine",
+  "charter_file": ".uai/totem.uai",
+  "no_material_spacetime": true,
+  "physical_entities_not_to_be_confused_with_space_or_time": true,
+  "universal_T_epistemic_status": "ArcSecs premise",
+  "field_source_anchor": "ArcSecs proposed ontology, not an experimentally established universal restriction",
+  "photon_mass_types": [
+    "RadiativeFieldMass",
+    "InvariantRestMass",
+    "InMediumEffectiveMass"
+  ],
+  "required_evidence_tags": [
+    "ArcSecsPremise",
+    "ObservedInstrumentRecord",
+    "ModelDependentInterpretation",
+    "DerivedConsequence",
+    "OpenHypothesis"
+  ],
+  "primitives": [
+    {
+      "id": "ARC-T01",
+      "name": "Entity",
+      "kind": "physical"
+    },
+    {
+      "id": "ARC-T02",
+      "name": "Composite",
+      "kind": "physical"
+    },
+    {
+      "id": "ARC-T03",
+      "name": "Excitation",
+      "kind": "physical"
+    },
+    {
+      "id": "ARC-T04",
+      "name": "FieldState",
+      "kind": "physical"
+    },
+    {
+      "id": "ARC-T05",
+      "name": "Source",
+      "kind": "physical"
+    },
+    {
+      "id": "ARC-T06",
+      "name": "Receiver",
+      "kind": "physical"
+    },
+    {
+      "id": "ARC-T07",
+      "name": "InteractionEvent",
+      "kind": "process"
+    },
+    {
+      "id": "ARC-T08",
+      "name": "MassType",
+      "kind": "attribute"
+    },
+    {
+      "id": "ARC-T09",
+      "name": "Energy",
+      "kind": "attribute"
+    },
+    {
+      "id": "ARC-T10",
+      "name": "Momentum",
+      "kind": "attribute"
+    },
+    {
+      "id": "ARC-T11",
+      "name": "OccupiedRegion",
+      "kind": "attribute"
+    },
+    {
+      "id": "ARC-T12",
+      "name": "Uncertainty",
+      "kind": "epistemic"
+    },
+    {
+      "id": "ARC-T13",
+      "name": "LocationRelation",
+      "kind": "relational"
+    },
+    {
+      "id": "ARC-T14",
+      "name": "SequenceRelation",
+      "kind": "relational"
+    },
+    {
+      "id": "ARC-T15",
+      "name": "Observer",
+      "kind": "physical"
+    },
+    {
+      "id": "ARC-T16",
+      "name": "MeasurementApparatus",
+      "kind": "physical"
+    },
+    {
+      "id": "ARC-T17",
+      "name": "Observable",
+      "kind": "epistemic"
+    },
+    {
+      "id": "ARC-T18",
+      "name": "Inference",
+      "kind": "epistemic"
+    }
+  ],
+  "source_report": "docs/long-term-memory/reports/R38.md"
+}

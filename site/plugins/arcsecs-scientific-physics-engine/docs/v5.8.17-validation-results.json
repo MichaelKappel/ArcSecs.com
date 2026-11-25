@@ -1,0 +1,58 @@
+{
+  "version": "5.8.27",
+  "package": "arcsecs-v5.8.27-scenario-review-walkthrough-evidence-repair-queue-package.zip",
+  "generatedUtc": "2026-06-02T00:00:00Z",
+  "commands": [
+    {
+      "command": "find assets/js -name '*.js' -print0 | xargs -0 -n1 node --check",
+      "result": "passed"
+    },
+    {
+      "command": "php -l arcsecs-scientific-physics-engine.php",
+      "result": "passed"
+    },
+    {
+      "command": "find includes -name '*.php' -print0 | xargs -0 -n1 php -l",
+      "result": "passed"
+    },
+    {
+      "command": "npm run build",
+      "result": "passed"
+    },
+    {
+      "command": "npm run lint",
+      "result": "passed"
+    },
+    {
+      "command": "npm run test:js",
+      "result": "passed",
+      "details": "52 Node tests passed"
+    },
+    {
+      "command": "npm run test:php",
+      "result": "passed"
+    },
+    {
+      "command": "npm test",
+      "result": "passed"
+    },
+    {
+      "command": "npm run test:e2e",
+      "result": "not run",
+      "details": "No tests/e2e directory; no heavy browser dependency added."
+    },
+    {
+      "command": "unzip -t arcsecs-v5.8.27-scenario-review-walkthrough-evidence-repair-queue-package.zip",
+      "result": "pending"
+    },
+    {
+      "command": "ZIP package identity check",
+      "result": "pending"
+    }
+  ],
+  "knownLimitations": [
+    "Core runtime physics unchanged.",
+    "Review reconciliation imports are inert pasted JSON only.",
+    "Live WordPress browser verification still required after deployment."
+  ]
+}

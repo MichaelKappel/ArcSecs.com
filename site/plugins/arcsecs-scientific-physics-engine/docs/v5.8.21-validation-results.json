@@ -1,0 +1,53 @@
+{
+  "version": "5.8.27",
+  "package": "arcsecs-v5.8.27-public-demo-script-builder-screenshot-caption-pack-package.zip",
+  "status": "passed",
+  "commands": [
+    {
+      "command": "find assets/js -name '*.js' -print0 | xargs -0 -n1 node --check",
+      "result": "passed"
+    },
+    {
+      "command": "php -l arcsecs-scientific-physics-engine.php",
+      "result": "passed"
+    },
+    {
+      "command": "find includes -name '*.php' -print0 | xargs -0 -n1 php -l",
+      "result": "passed"
+    },
+    {
+      "command": "npm run build",
+      "result": "passed"
+    },
+    {
+      "command": "npm run lint",
+      "result": "passed"
+    },
+    {
+      "command": "npm run test:js",
+      "result": "passed",
+      "details": "83 Node tests passed"
+    },
+    {
+      "command": "npm run test:php",
+      "result": "passed"
+    },
+    {
+      "command": "npm test",
+      "result": "passed"
+    },
+    {
+      "command": "npm run test:e2e",
+      "result": "not-run",
+      "details": "No tests/e2e directory is present; no heavy browser-test dependency was added."
+    },
+    {
+      "command": "unzip -t arcsecs-v5.8.27-public-demo-script-builder-screenshot-caption-pack-package.zip",
+      "result": "passed"
+    },
+    {
+      "command": "ZIP package identity check",
+      "result": "passed"
+    }
+  ]
+}

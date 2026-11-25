@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArcSecs C-01 — Local Light-Speed Ceiling Interactive Research Explorer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background-color: #faf8f5;
+      color: #1e293b;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    .chart-container {
+      position: relative;
+      width: 100%;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 300px;
+      max-height: 400px;
+    }
+    @media (min-width: 768px) {
+      .chart-container {
+        height: 340px;
+      }
+    }
+    .nav-pill-active {
+      background-color: #0f766e;
+      color: #ffffff;
+      border-color: #0f766e;
+    }
+    .card-surface {
+      background-color: #ffffff;
+      border: 1px solid #e7e2d8;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+    }
+    .sub-surface {
+      background-color: #f4f1ea;
+      border: 1px solid #e2dcd0;
+    }
+    .math-chip {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-teal-100 selection:text-teal-900 overflow-x-hidden">
+  <!-- Chosen Palette: Warm Parchment & Slate Teal (#faf8f5 warm neutral canvas, #ffffff crisp cards, #f4f1ea sand panels, #0f766e deep slate-teal primary accent, #b45309 amber caution/obstruction accent, #1e293b charcoal ink) -->
+  <!-- Application Structure Plan: The SPA reorganizes the technical C-01 research report into six task-oriented interactive modules accessible via a sticky navigation bar: (1) Executive Synthesis & 12-Foundation Charter Matrix + 7 Distance Definitions, establishing ontological rules and verdict; (2) Constitutive Theory & Clock/Inertia Simulator (Work Package A), allowing users to test Families Ia/Ib/II/III, inertial exponent p_exp, and Sciama-Mach convergence; (3) Causal Modes, Proca Wavefront & Two-Ship Control Lab (Work Package B), visualizing retarded Green's function causality, photon mass deficits, and Galilean vs C-01 kinematics; (4) Finite-Body, 3D Asymmetric Shells & Solar-Cosmic Dilemma (Work Package C), integrating thin-shell, thick-wall, void, 3D FFT anisotropy, and Cassini solar-limb bounds; (5) Domain Wall Crossings & Monotonicity Lab (Work Package D), contrasting outward reacceleration against inward slowing; and (6) Observational Calibration, Evidence Ledger & Handoff Artifacts (Work Package E), displaying the GW170817 Monte Carlo likelihood, literature benchmarks, preregisterable discriminants, and copyable handoff notes. This structure separates foundational axioms from interactive physics simulators and empirical falsification tests for intuitive non-linear exploration. -->
+  <!-- Visualization & Content Choices:
+    1. Charter Compliance Matrix & Distance Estimator Explorer -> Goal: Organize & Inform -> Interactive filterable HTML table & detail inspector -> Allows filtering by compliance status without overwhelming vertical scroll -> Vanilla JS + Tailwind.
+    2. Sciama-Mach Convergence Chart -> Goal: Compare & Change -> Line chart of I_Yukawa(0)/I_Sciama(0) across q = R/lambda -> Demonstrates smooth transition from unscreened Machian limit (q->0) to local-shell screening (q>>1) -> Chart.js (Canvas).
+    3. Retarded Proca Green's Function Wavefront Plot -> Goal: Inform & Verify Causality -> Line chart of field amplitude vs T showing strict zero prior to T_front = 5.000 and onset before T_group = 5.1031 -> Chart.js (Canvas).
+    4. Two-Ship Control Kinematics Simulator -> Goal: Compare -> Interactive velocity slider + live kinematic bar/readout comparing Galilean headlight toy vs C-01 common-frame propagation -> Vanilla JS + Tailwind.
+    5. Radial Profiles & Solar-Cosmic Cassini Constraint Charts -> Goal: Compare & Relationships -> Interactive multi-mode radial profile chart (Thin Shell, Thick Wall, Void) and log-scale |delta_gamma| vs Cassini threshold bar chart -> Chart.js (Canvas).
+    6. Hamiltonian Ray Wall-Crossing Chart -> Goal: Change -> Dual trajectory chart of |v_g(T)| and C(x(T)) proving outward reacceleration vs inward monotonic slowing -> Chart.js (Canvas).
+    7. GW170817 / GRB 170817A Likelihood Histogram -> Goal: Inform & Calibrate -> Bar histogram of 200,000-sample MC posterior with 90% credible interval markers -> Chart.js (Canvas).
+    All charts reside in constrained .chart-container divs with maintainAspectRatio: false and 16-char label wrapping. -->
+  <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+  <header class="border-b border-stone-200 bg-white/95 backdrop-blur sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
+        <div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-teal-50 text-teal-800 border border-teal-200">
+              ArcSecs Independent Research · C-01
+            </span>
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200">
+              Decision: Revise Mechanism
+            </span>
+            <span class="text-xs text-stone-500 math-chip">Rev. 2026-11-23</span>
+          </div>
+          <h1 class="text-lg sm:text-xl font-bold text-slate-900 mt-1">
+            Physical Origin of the Local Light-Speed Ceiling &amp; Matter-Regulated Causal Characteristics
+          </h1>
+        </div>
+        <nav aria-label="Primary Sections" class="flex flex-wrap gap-1.5" id="main-nav">
+          <button data-target="sec-overview" class="nav-btn nav-pill-active px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium border border-stone-200 transition">
+            1. Synthesis &amp; Charter
+          </button>
+          <button data-target="sec-wpa" class="nav-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-stone-50 text-slate-700 hover:bg-stone-100 border border-stone-200 transition">
+            2. Constitutive &amp; Inertia
+          </button>
+          <button data-target="sec-wpb" class="nav-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-stone-50 text-slate-700 hover:bg-stone-100 border border-stone-200 transition">
+            3. Causal Modes &amp; Ships
+          </button>
+          <button data-target="sec-wpc" class="nav-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-stone-50 text-slate-700 hover:bg-stone-100 border border-stone-200 transition">
+            4. 3D Shells &amp; Solar Test
+          </button>
+          <button data-target="sec-wpd" class="nav-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-stone-50 text-slate-700 hover:bg-stone-100 border border-stone-200 transition">
+            5. Wall Monotonicity
+          </button>
+          <button data-target="sec-wpe" class="nav-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium bg-stone-50 text-slate-700 hover:bg-stone-100 border border-stone-200 transition">
+            6. Calibration &amp; Ledger
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-10">
+
+    <section id="sec-overview" class="app-section space-y-6">
+      <div class="card-surface rounded-2xl p-6 sm:p-8">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 border-b border-stone-200 pb-5">
+          <div class="max-w-3xl">
+            <p class="text-xs font-semibold uppercase tracking-wider text-teal-700">Executive Synthesis &amp; Ontology</p>
+            <h2 class="text-2xl font-bold text-slate-900 mt-1">Why Newly Emitted Light Starts at the Local Ceiling</h2>
+            <p class="text-sm sm:text-base text-slate-600 mt-2 leading-relaxed">
+              This section summarizes the core C-01 answer, presents the key quantitative findings across all five work packages, and provides an interactive explorer for the twelve non-negotiable ArcSecs research foundations and seven distinct distance definitions. Use the filter buttons below to inspect how each premise is mathematically implemented and where conditional obstructions arise.
+            </p>
+          </div>
+          <div class="sub-surface rounded-xl p-4 md:w-80 shrink-0">
+            <div class="text-xs font-bold uppercase tracking-wider text-amber-800">Program Verdict</div>
+            <div class="text-base font-bold text-slate-900 mt-1">Retain Ib+III · Revise Mechanism</div>
+            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">
+              Retain impedance-matched scalar-inertia regulation (Family Ib + Family III) as baseline; retire static outward-rising wall crossings for universal slowing and unscreened solar coupling with &alpha;I<sub>bg</sub><sup>2</sup> &sim; 1.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+          <div class="sub-surface rounded-xl p-4">
+            <h3 class="text-sm font-bold text-slate-900">Core Physical Mechanism</h3>
+            <p class="text-xs sm:text-sm text-slate-700 mt-1.5 leading-relaxed">
+              Collective cosmic mass-energy sources a finite-range causal scalar regulator <span class="math-chip font-semibold">I(x, T)</span> that fixes local vacuum permittivity <span class="math-chip">&epsilon;(I)</span>, permeability <span class="math-chip">&mu;(I)</span>, and particle inertial scale <span class="math-chip">M<sub>0</sub>(I)</span>. Because an emitted photon is a field excitation of the local constitutive medium rather than a ballistic projectile inheriting emitter speed, it decouples directly onto the local wavefront cone <span class="math-chip font-semibold">C<sub>em</sub> = [&epsilon;(I)&mu;(I)]<sup>&minus;1/2</sup></span> at emission (<span class="math-chip">x<sub>e</sub>, T<sub>e</sub></span>).
+            </p>
+          </div>
+          <div class="sub-surface rounded-xl p-4">
+            <h3 class="text-sm font-bold text-slate-900">Three Restricted Obstructions Discovered</h3>
+            <ul class="text-xs sm:text-sm text-slate-700 mt-1.5 space-y-1.5 list-disc list-inside">
+              <li><strong>Proca Mass Gap:</strong> Exact finite-frequency <span class="math-chip">v<sub>g</sub>(&omega;) = C<sub>f</sub></span> is impossible for <span class="math-chip">&Omega; &gt; 0</span>; optical deficit is <span class="math-chip">1.169&times;10<sup>&minus;37</sup></span> at 500 THz (<span class="math-chip">m<sub>&gamma;</sub> = 10<sup>&minus;18</sup> eV</span>).</li>
+              <li><strong>Solar-Cosmic Dilemma:</strong> Unscreened linear <span class="math-chip">I</span> (<span class="math-chip">&alpha;I<sub>bg</sub><sup>2</sup>=1, &lambda;&le;1 Gpc</span>) yields solar-limb <span class="math-chip">|&delta;&gamma;| = 18.76&ndash;1.88&times;10<sup>5</sup></span>, violating Cassini (<span class="math-chip">4.4&times;10<sup>&minus;5</sup></span>).</li>
+              <li><strong>Static Rising Walls:</strong> Conservative Hamiltonian rays exiting a dense shell into a higher-<span class="math-chip">C</span> exterior preserve <span class="math-chip">&omega;</span> and reaccelerate (<span class="math-chip">dv<sub>g</sub>/dT &gt; 0</span>).</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-6">
+          <div class="p-4 rounded-xl border border-stone-200 bg-stone-50/70">
+            <div class="text-xs text-slate-500 font-medium">Optical Group Deficit (500 THz)</div>
+            <div class="text-lg sm:text-xl font-bold text-teal-800 math-chip mt-1">1.169 &times; 10<sup>&minus;37</sup></div>
+            <div class="text-xs text-slate-600 mt-1">At PDG limit m<sub>&gamma;</sub> = 10<sup>&minus;18</sup> eV</div>
+          </div>
+          <div class="p-4 rounded-xl border border-stone-200 bg-stone-50/70">
+            <div class="text-xs text-slate-500 font-medium">3D FFT Yukawa Error (N=64)</div>
+            <div class="text-lg sm:text-xl font-bold text-teal-800 math-chip mt-1">2.045 &times; 10<sup>&minus;3</sup></div>
+            <div class="text-xs text-slate-600 mt-1">I<sub>num</sub>(0) = 0.263701 vs 0.264241</div>
+          </div>
+          <div class="p-4 rounded-xl border border-stone-200 bg-stone-50/70">
+            <div class="text-xs text-slate-500 font-medium">Solar-Limb |&delta;&gamma;| (100 Mpc)</div>
+            <div class="text-lg sm:text-xl font-bold text-amber-800 math-chip mt-1">1.8757 &times; 10<sup>3</sup></div>
+            <div class="text-xs text-slate-600 mt-1">Falsifies unscreened &alpha;I<sub>bg</sub><sup>2</sup> = 1</div>
+          </div>
+          <div class="p-4 rounded-xl border border-stone-200 bg-stone-50/70">
+            <div class="text-xs text-slate-500 font-medium">GW170817 &Delta;v/c (90% CI)</div>
+            <div class="text-lg sm:text-xl font-bold text-slate-900 math-chip mt-1">[&minus;1.86e&minus;15, +2.96e&minus;16]</div>
+            <div class="text-xs text-slate-600 mt-1">200,000-sample MC median &minus;7.76e&minus;16</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-surface rounded-2xl p-6 sm:p-8">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900">Charter Compliance Matrix (Foundations 1–12)</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-0.5">
+              Filter by verification outcome and click any row to view the full mathematical implementation and verification status.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5" id="charter-filters">
+            <button data-filter="all" class="charter-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-teal-700 text-white">All (12)</button>
+            <button data-filter="Compliant" class="charter-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-stone-100 text-slate-700 hover:bg-stone-200">Compliant (10)</button>
+            <button data-filter="Obstruction" class="charter-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-stone-100 text-slate-700 hover:bg-stone-200">Obstruction (1)</button>
+            <button data-filter="Conditional" class="charter-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-stone-100 text-slate-700 hover:bg-stone-200">Conditional (1)</button>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto border border-stone-200 rounded-xl">
+          <table class="min-w-full divide-y divide-stone-200 text-left text-xs sm:text-sm">
+            <thead class="bg-stone-50 text-slate-700 font-semibold">
+              <tr>
+                <th class="px-4 py-3 w-12">#</th>
+                <th class="px-4 py-3">Foundation Premise</th>
+                <th class="px-4 py-3">C-01 Implementation Summary</th>
+                <th class="px-4 py-3 w-44">Status</th>
+              </tr>
+            </thead>
+            <tbody id="charter-tbody" class="divide-y divide-stone-200 bg-white"></tbody>
+          </table>
+        </div>
+
+        <div id="charter-detail-box" class="mt-4 sub-surface rounded-xl p-4">
+          <div class="text-xs font-semibold uppercase tracking-wider text-teal-800">Selected Foundation Detail</div>
+          <div id="charter-detail-title" class="text-sm font-bold text-slate-900 mt-1">Foundation 1: Photons have mass.</div>
+          <p id="charter-detail-text" class="text-xs sm:text-sm text-slate-700 mt-1 leading-relaxed">
+            Implemented via a massive Proca-medium Lagrangian with strictly positive invariant frequency gap &Omega; &gt; 0 (m<sub>&gamma;</sub> = &#8463;&Omega;/C<sub>&star;</sub><sup>2</sup>) across transverse and longitudinal polarizations. Charge continuity holds identically across spatial density gradients; PDG solar-wind (10<sup>&minus;18</sup> eV) and FRB dispersion limits are propagated.
+          </p>
+        </div>
+      </div>
+
+      <div class="card-surface rounded-2xl p-6 sm:p-8">
+        <h3 class="text-lg font-bold text-slate-900">Distinct Speed &amp; Distance Definitions (Foundation 12 Bookkeeping)</h3>
+        <p class="text-xs sm:text-sm text-slate-600 mt-1 mb-4">
+          Under variable constitutive speed <span class="math-chip">C(x)</span> and refractive index <span class="math-chip">n(x) = C<sub>&star;</sub>/C(x)</span>, optical time-of-flight, geometric ray path, and angular diameter distances diverge even in static Euclidean coordinates.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="border border-stone-200 rounded-xl overflow-hidden">
+            <div class="bg-stone-50 px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-slate-700 border-b border-stone-200">
+              Characteristic Velocities (Frame S<sub>0</sub>)
+            </div>
+            <div class="divide-y divide-stone-200 text-xs sm:text-sm">
+              <div class="p-3 flex justify-between gap-2"><span class="math-chip font-bold text-teal-800">c<sub>0</sub></span><span class="text-slate-700 text-right">299,792,458 m/s (terrestrial SI unit anchor)</span></div>
+              <div class="p-3 flex justify-between gap-2"><span class="math-chip font-bold text-teal-800">C<sub>&star;</sub></span><span class="text-slate-700 text-right">Bare asymptotic front speed as I &rarr; 0</span></div>
+              <div class="p-3 flex justify-between gap-2"><span class="math-chip font-bold text-teal-800">C<sub>em</sub>(x<sub>e</sub>, T<sub>e</sub>)</span><span class="text-slate-700 text-right">Local emission ceiling [&epsilon;(I)&mu;(I)]<sup>&minus;1/2</sup></span></div>
+              <div class="p-3 flex justify-between gap-2"><span class="math-chip font-bold text-teal-800">C<sub>f</sub>(x, T)</span><span class="text-slate-700 text-right">EM sharp wavefront characteristic speed</span></div>
+              <div class="p-3 flex justify-between gap-2"><span class="math-chip font-bold text-teal-800">C<sub>causal</sub></span><span class="text-slate-700 text-right">max(C<sub>f</sub>, C<sub>I</sub>, C<sub>u</sub>, C<sub>GW</sub>) across all sectors</span></div>
+              <div class="p-3 flex justify-between gap-2"><span class="math-chip font-bold text-teal-800">v<sub>g</sub>(&omega;, x)</span><span class="text-slate-700 text-right">C<sub>f</sub>&radic;(1 &minus; &Omega;<sup>2</sup>/&omega;<sup>2</sup>) &lt; C<sub>f</sub> packet group speed</span></div>
+              <div class="p-3 flex justify-between gap-2"><span class="math-chip font-bold text-teal-800">V<sub>sep</sub></span><span class="text-slate-700 text-right">d|x<sub>2</sub> &minus; x<sub>1</sub>|/dT kinematic closing/separation rate</span></div>
+            </div>
+          </div>
+          <div class="border border-stone-200 rounded-xl overflow-hidden">
+            <div class="bg-stone-50 px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-slate-700 border-b border-stone-200">
+              Seven Separated Distance Estimators
+            </div>
+            <div class="divide-y divide-stone-200 text-xs sm:text-sm">
+              <div class="p-3 flex justify-between gap-2"><span class="math-chip font-bold text-slate-900">D<sub>now</sub></span><span class="text-slate-700 text-right">|x<sub>obs</sub>(T<sub>0</sub>) &minus; x<sub>src</sub>(T<sub>0</sub>)| instantaneous Euclidean</span></div>
+              <div class="p-3 flex justify-between gap-2"><span class="math-chip font-bold text-slate-900">D<sub>e</sub></span><span class="text-slate-700 text-right">|x<sub>obs</sub>(T<sub>0</sub>) &minus; x<sub>src</sub>(T<sub>e</sub>)| emission-epoch separation</span></div>
+              <div class="p-3 flex justify-between gap-2"><span class="math-chip font-bold text-slate-900">L<sub>ray</sub></span><span class="text-slate-700 text-right">&int;<sub>&gamma;</sub> ds geometric curved ray arc length</span></div>
+              <div class="p-3 flex justify-between gap-2"><span class="math-chip font-bold text-slate-900">D<sub>TOF</sub></span><span class="text-slate-700 text-right">c<sub>0</sub>(T<sub>0</sub> &minus; T<sub>e</sub>) nominal time-of-flight distance</span></div>
+              <div class="p-3 flex justify-between gap-2"><span class="math-chip font-bold text-slate-900">D<sub>A</sub></span><span class="text-slate-700 text-right">&Delta;&#8467;<sub>src</sub> / &Delta;&theta;<sub>obs</sub> angular diameter distance</span></div>
+              <div class="p-3 flex justify-between gap-2"><span class="math-chip font-bold text-slate-900">D<sub>G</sub></span><span class="text-slate-700 text-right">b<sub>base</sub> / &#982; geometric parallax distance</span></div>
+              <div class="p-3 flex justify-between gap-2"><span class="math-chip font-bold text-slate-900">D<sub>L</sub></span><span class="text-slate-700 text-right">[L<sub>bol</sub> / (4&pi;F<sub>bol</sub>)]<sup>1/2</sup> bolometric luminosity</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-wpa" class="app-section hidden space-y-6">
+      <div class="card-surface rounded-2xl p-6 sm:p-8">
+        <p class="text-xs font-semibold uppercase tracking-wider text-teal-700">Work Package A · Action &amp; Inertia</p>
+        <h2 class="text-2xl font-bold text-slate-900 mt-1">Constitutive Theory, Mechanical Inertia &amp; Dimensionless Clocks</h2>
+        <p class="text-sm sm:text-base text-slate-600 mt-2 leading-relaxed">
+          This section derives the local electromagnetic ceiling <span class="math-chip">C(I)</span> and particle inertial mass <span class="math-chip">M<sub>0</sub>(I)</span> from local causal field actions rather than postulated density curves. Compare the three candidate field families below, adjust the coupling strength <span class="math-chip">&alpha;I<sup>2</sup></span> and inertial exponent <span class="math-chip">p<sub>exp</sub></span> to test whether atomic clocks and optical cavities shift detectably, and inspect how Family III recovers Sciama's (1953) Machian inertia in the unscreened limit <span class="math-chip">q = R/&lambda; &rarr; 0</span>.
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-6">
+          <div class="sub-surface rounded-xl p-4">
+            <div class="text-xs font-bold uppercase text-teal-800">Family Ia &amp; Ib · Scalar Regulator</div>
+            <div class="text-sm font-bold text-slate-900 mt-1">(C<sub>I</sub><sup>&minus;2</sup>&part;<sub>T</sub><sup>2</sup> &minus; &nabla;<sup>2</sup> + &lambda;<sup>&minus;2</sup>)I = g&rho;<sub>src</sub></div>
+            <p class="text-xs text-slate-700 mt-2 leading-relaxed">
+              Finite field energy <span class="math-chip">E<sub>I</sub> &lt; &infin;</span> on open <span class="math-chip">&#8477;<sup>3</sup></span> uniquely fixes <span class="math-chip">I(&infin;) = 0</span>. <strong>Ia</strong> varies only <span class="math-chip">&epsilon;(I) = &epsilon;<sub>&star;</sub>(1+&alpha;I<sup>2</sup>)</span> (<span class="math-chip">Z/Z<sub>&star;</sub> = (1+&alpha;I<sup>2</sup>)<sup>&minus;1/2</sup></span>); <strong>Ib</strong> scales both <span class="math-chip">&epsilon;(I)</span> and <span class="math-chip">&mu;(I)</span> by <span class="math-chip">&radic;(1+&alpha;I<sup>2</sup>)</span>, preserving <span class="math-chip">Z = Z<sub>&star;</sub></span> and <span class="math-chip">&alpha;<sub>EM</sub></span>.
+            </p>
+          </div>
+          <div class="sub-surface rounded-xl p-4">
+            <div class="text-xs font-bold uppercase text-teal-800">Family II · Environmental Frame Vector</div>
+            <div class="text-sm font-bold text-slate-900 mt-1">u<sup>&mu;</sup> = (u<sup>0</sup>, u), &nbsp; L<sub>int</sub> = &minus;&beta;<sub>u</sub> u &middot; J<sub>mass</sub></div>
+            <p class="text-xs text-slate-700 mt-2 leading-relaxed">
+              Establishes a physical domain rest state dragged by cosmic mass flux without making space a material substance. Requires universal matter-EM cone matching (<span class="math-chip">|C<sub>m</sub> &minus; C<sub>EM</sub>|/C<sub>EM</sub> &lesssim; 10<sup>&minus;12</sup></span>) to pass Nagel et al. (2015) isotropy bounds.
+            </p>
+          </div>
+          <div class="sub-surface rounded-xl p-4">
+            <div class="text-xs font-bold uppercase text-teal-800">Family III · Local Sciama-Mach Completion</div>
+            <div class="text-sm font-bold text-slate-900 mt-1">(C<sub>I</sub><sup>&minus;2</sup>&part;<sub>T</sub><sup>2</sup> &minus; &nabla;<sup>2</sup> + &lambda;<sup>&minus;2</sup>)A<sub>I</sub> = (g/C<sub>&star;</sub>)&rho;<sub>src</sub>v<sub>src</sub></div>
+            <p class="text-xs text-slate-700 mt-2 leading-relaxed">
+              Replaces Sciama's divergent infinite-universe <span class="math-chip">1/r</span> integral with a Yukawa-screened gravito-inertial vector potential. Particle Lagrangian <span class="math-chip">L<sub>m</sub> = &minus;M<sub>0</sub>(I)C<sub>m</sub><sup>2</sup>&radic;(1 &minus; v<sup>2</sup>/C<sub>m</sub><sup>2</sup>)</span> bounds all speeds strictly below <span class="math-chip">C<sub>m</sub>(I)</span>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="card-surface rounded-2xl p-6">
+          <h3 class="text-lg font-bold text-slate-900">Interactive Clock, Ruler &amp; Inertia Calibration Lab</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1">
+            Because setting <span class="math-chip">C<sub>&star;</sub> &rarr; c<sub>0</sub></span> is a unit convention, physical calibration compares optical cavity frequency <span class="math-chip">&nu;<sub>cav</sub></span> against atomic Bohr frequency <span class="math-chip">&nu;<sub>Bohr</sub></span>. Adjust parameters below to observe universal rescaling vs. detectable drift.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4">
+            <div>
+              <label for="wpa-branch" class="block text-xs font-semibold text-slate-700 mb-1">EM Coupling Branch</label>
+              <select id="wpa-branch" class="w-full rounded-lg border border-stone-300 bg-white px-2.5 py-2 text-xs font-medium text-slate-900">
+                <option value="Ib" selected>Family Ib (Impedance-Matched)</option>
+                <option value="Ia">Family Ia (Electric-Only)</option>
+              </select>
+            </div>
+            <div>
+              <label for="wpa-pexp" class="block text-xs font-semibold text-slate-700 mb-1">Inertia Exponent p<sub>exp</sub></label>
+              <select id="wpa-pexp" class="w-full rounded-lg border border-stone-300 bg-white px-2.5 py-2 text-xs font-medium text-slate-900">
+                <option value="2" selected>p = 2 (Zero static 5th force)</option>
+                <option value="1">p = 1 (Machian + gradient force)</option>
+                <option value="0">p = 0 (Fixed bare mass m*)</option>
+              </select>
+            </div>
+            <div>
+              <label for="wpa-ai2" class="block text-xs font-semibold text-slate-700 mb-1">Coupling &alpha;I<sup>2</sup>: <span id="wpa-ai2-val" class="math-chip text-teal-800">1.00</span></label>
+              <input id="wpa-ai2" type="range" min="0" max="4" step="0.1" value="1.0" class="w-full accent-teal-700 mt-2" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-5">
+            <div class="sub-surface rounded-xl p-3">
+              <div class="text-xs text-slate-500">Speed Ratio C / C<sub>&star;</sub></div>
+              <div id="out-c-ratio" class="text-base font-bold text-slate-900 math-chip mt-0.5">0.7071</div>
+            </div>
+            <div class="sub-surface rounded-xl p-3">
+              <div class="text-xs text-slate-500">Fine Structure &alpha;<sub>EM</sub> / &alpha;<sub>&star;</sub></div>
+              <div id="out-alpha-ratio" class="text-base font-bold text-slate-900 math-chip mt-0.5">1.0000</div>
+            </div>
+            <div class="sub-surface rounded-xl p-3">
+              <div class="text-xs text-slate-500">Inertial Mass m<sub>eff</sub> / m<sub>&star;</sub></div>
+              <div id="out-meff-ratio" class="text-base font-bold text-slate-900 math-chip mt-0.5">2.0000</div>
+            </div>
+            <div class="sub-surface rounded-xl p-3">
+              <div class="text-xs text-slate-500">Bohr Clock &nu;<sub>Bohr</sub> / &nu;<sub>&star;</sub></div>
+              <div id="out-bohr-ratio" class="text-base font-bold text-slate-900 math-chip mt-0.5">1.0000</div>
+            </div>
+            <div class="sub-surface rounded-xl p-3">
+              <div class="text-xs text-slate-500">Cavity/Atom &nu;<sub>cav</sub> / &nu;<sub>Bohr</sub></div>
+              <div id="out-cav-bohr" class="text-base font-bold text-teal-800 math-chip mt-0.5">1.0000</div>
+            </div>
+            <div class="sub-surface rounded-xl p-3">
+              <div class="text-xs text-slate-500">Static Gradient Force</div>
+              <div id="out-fgrad" class="text-xs font-bold text-slate-900 mt-1">Zero (F<sub>grad</sub> = 0)</div>
+            </div>
+          </div>
+
+          <div id="wpa-verdict-banner" class="mt-4 p-3.5 rounded-xl bg-teal-50 border border-teal-200 text-xs sm:text-sm text-teal-950">
+            <strong>Operational Identifiability:</strong> In Family Ib with <span class="math-chip">p<sub>exp</sub> = 2</span>, local cavity-to-atomic clock ratios remain locked at 1.0000 and static bodies feel zero fifth force; detecting <span class="math-chip">C(I)</span> shifts requires cross-domain signals (e.g., void transit).
+          </div>
+        </div>
+
+        <div class="card-surface rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900">Family III: Sciama-Mach Inertia Convergence</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">
+              Ratio of screened Yukawa central field <span class="math-chip">I<sub>Yukawa</sub>(0)</span> to Sciama's unscreened <span class="math-chip">1/r</span> cosmic integral <span class="math-chip">I<sub>Sciama</sub>(0) = 2&pi;&rho;<sub>0</sub>R<sup>2</sup></span> across size parameter <span class="math-chip">q = R/&lambda;</span>. For <span class="math-chip">q &ll; 1</span>, collective distant mass dominates; for <span class="math-chip">q &gg; 1</span>, screening scales as <span class="math-chip">2/q<sup>2</sup></span>.
+            </p>
+          </div>
+          <div class="chart-container my-4">
+            <canvas id="chart-sciama"></canvas>
+          </div>
+          <div class="text-xs text-slate-500 text-center">
+            Key takeaway: At <span class="math-chip">q = 0.01</span>, 99.34% of Sciama's full-sphere Machian contribution is recovered; at <span class="math-chip">q = 1.0</span>, 52.85% remains.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-wpb" class="app-section hidden space-y-6">
+      <div class="card-surface rounded-2xl p-6 sm:p-8">
+        <p class="text-xs font-semibold uppercase tracking-wider text-teal-700">Work Package B · Causal Characteristics &amp; Kinematics</p>
+        <h2 class="text-2xl font-bold text-slate-900 mt-1">Proca Wavefront Causality, Mass-Gap Bounds &amp; Two-Ship Control</h2>
+        <p class="text-sm sm:text-base text-slate-600 mt-2 leading-relaxed">
+          This section examines coupled Proca-medium propagation (<span class="math-chip">&omega;<sup>2</sup> = C(I)<sup>2</sup>k<sup>2</sup> + &Omega;<sup>2</sup></span>), verifies strict wavefront causality via the 3D retarded Green's function, quantifies the finite-mass group-speed deficit across astrophysical frequencies, and resolves the investigator's two-ship experiment without super-ceiling single-photon propagation.
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+          <div class="flex flex-col justify-between border border-stone-200 rounded-xl p-4 bg-stone-50/40">
+            <div>
+              <h3 class="text-base font-bold text-slate-900">Retarded 3D Proca Green's Function Wavefront Check</h3>
+              <p class="text-xs text-slate-600 mt-1">
+                Exact convolution of <span class="math-chip">G<sub>ret</sub>(r, T)</span> with causal pulse (<span class="math-chip">&omega;<sub>0</sub> = 10, &Omega; = 2, C<sub>f</sub> = 1, r = 5</span>). Field amplitude is identically zero for <span class="math-chip">T &lt; T<sub>front</sub> = 5.0000</span>, turns on immediately at <span class="math-chip">T = 5.001</span> (<span class="math-chip">2.54&times;10<sup>&minus;15</sup></span>), and peaks later at <span class="math-chip">T<sub>group</sub> = r/v<sub>g</sub> = 5.1031</span>.
+              </p>
+            </div>
+            <div class="chart-container my-3">
+              <canvas id="chart-proca-front"></canvas>
+            </div>
+            <div class="text-xs text-slate-600">
+              <strong>Charge Continuity Proof:</strong> <span class="math-chip">&part;<sub>T</sub>(&epsilon;(I)&Omega;<sup>2</sup>A<sub>0</sub>) + &nabla;&middot;(&epsilon;(I)&Omega;<sup>2</sup>A) = 0</span> holds identically even across steep spatial <span class="math-chip">&nabla;I</span> gradients.
+            </div>
+          </div>
+
+          <div class="border border-stone-200 rounded-xl p-4 bg-stone-50/40 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-slate-900">Finite-Mass Group-Speed Deficit Calculator</h3>
+              <p class="text-xs text-slate-600 mt-1">
+                Because <span class="math-chip">&Omega; &gt; 0</span> enforces <span class="math-chip">v<sub>g</sub> = C<sub>f</sub>&radic;(1 &minus; &Omega;<sup>2</sup>/&omega;<sup>2</sup>) &lt; C<sub>f</sub></span>, exact finite-frequency equality <span class="math-chip">v<sub>g</sub> = C<sub>f</sub></span> is impossible in ghost-free local Proca theory; instead <span class="math-chip">C<sub>em</sub> = C<sub>f</sub></span> with negligible deficit at astrophysical frequencies.
+              </p>
+
+              <div class="mt-3">
+                <label for="wpb-mgamma" class="block text-xs font-semibold text-slate-700 mb-1">Select Photon Rest-Mass Parameter m<sub>&gamma;</sub></label>
+                <select id="wpb-mgamma" class="w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-xs font-medium text-slate-900">
+                  <option value="1e-18" selected>10⁻¹⁸ eV (PDG Solar-Wind Upper Limit)</option>
+                  <option value="1e-22">10⁻²² eV (Ultralight Galactic Bound)</option>
+                  <option value="1e-27">10⁻²⁷ eV (Cosmological Scale Bound)</option>
+                </select>
+              </div>
+
+              <div class="mt-4 overflow-x-auto border border-stone-200 rounded-lg bg-white">
+                <table class="min-w-full text-xs text-left divide-y divide-stone-200">
+                  <thead class="bg-stone-50 font-semibold text-slate-700">
+                    <tr>
+                      <th class="px-3 py-2">Observing Band</th>
+                      <th class="px-3 py-2">Frequency</th>
+                      <th class="px-3 py-2">Deficit 1 &minus; v<sub>g</sub>/C<sub>f</sub></th>
+                    </tr>
+                  </thead>
+                  <tbody id="wpb-deficit-tbody" class="divide-y divide-stone-200 math-chip"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="mt-4 p-3 rounded-lg bg-white border border-stone-200 text-xs text-slate-700">
+              <strong>Gap Frequency f<sub>gap</sub> = &Omega;/(2&pi;):</strong> <span id="wpb-fgap" class="math-chip font-bold text-teal-800">2.418 &times; 10<sup>&minus;4</sup> Hz</span>. All-sector causal ceiling <span class="math-chip">C<sub>causal</sub> = max(C<sub>f</sub>, C<sub>I</sub>, C<sub>u</sub>, C<sub>GW</sub>)</span> permits non-EM modes &ge; <span class="math-chip">C<sub>em</sub></span> (Foundation 8).
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-surface rounded-2xl p-6 sm:p-8">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900">Two-Ship Control Experiment (Foundation 9 Reconciliation)</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">
+              Two ships from vanished bubbles approach each other in common regulator frame <span class="math-chip">S<sub>0</sub></span> (<span class="math-chip">C<sub>em</sub> = c<sub>0</sub></span>) at equal speeds <span class="math-chip">u<sub>1</sub> = +u, u<sub>2</sub> = &minus;u</span> from initial separation <span class="math-chip">D<sub>0</sub></span>. Adjust <span class="math-chip">u / c<sub>0</sub></span> to compare the falsified Galilean headlight toy against C-01 common-frame propagation.
+            </p>
+          </div>
+          <div class="sub-surface rounded-xl px-4 py-3 md:w-72 shrink-0">
+            <label for="ship-u" class="block text-xs font-bold text-slate-800">
+              Each Ship Speed u: <span id="ship-u-val" class="math-chip text-teal-800">0.80 c<sub>0</sub></span>
+            </label>
+            <input id="ship-u" type="range" min="0.10" max="0.99" step="0.01" value="0.80" class="w-full accent-teal-700 mt-1.5" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5">
+          <div class="p-4 rounded-xl border border-stone-200 bg-white">
+            <div class="text-xs font-bold uppercase text-slate-500">1. Coordinate Closing Rate V<sub>sep</sub></div>
+            <div id="ship-vsep" class="text-xl font-bold text-slate-900 math-chip mt-1">1.6000 c<sub>0</sub></div>
+            <p class="text-xs text-slate-600 mt-1.5">
+              Actual kinematic rate <span class="math-chip">d|x<sub>2</sub>&minus;x<sub>1</sub>|/dT = 2u</span> in non-stretching Euclidean coordinates. Can exceed <span class="math-chip">c<sub>0</sub></span> without coordinate stretching (Foundation 9).
+            </p>
+          </div>
+          <div class="p-4 rounded-xl border border-amber-200 bg-amber-50/60">
+            <div class="text-xs font-bold uppercase text-amber-800">2. Galilean Headlight Toy (Falsified)</div>
+            <div id="ship-gal" class="text-xl font-bold text-amber-900 math-chip mt-1">1.8000 c<sub>0</sub></div>
+            <p class="text-xs text-amber-900/80 mt-1.5">
+              Naive <span class="math-chip">u + c<sub>0</sub></span> (reaching <span class="math-chip">2c<sub>0</sub></span>, or <span class="math-chip">4c<sub>0</sub></span> closing at <span class="math-chip">u=c<sub>0</sub></span>) violates the common-frame individual photon limit <span class="math-chip">C<sub>em</sub> = c<sub>0</sub></span>.
+            </p>
+          </div>
+          <div class="p-4 rounded-xl border border-teal-200 bg-teal-50/60">
+            <div class="text-xs font-bold uppercase text-teal-900">3. C-01 Common-Frame Rule (Valid)</div>
+            <div id="ship-c01" class="text-xl font-bold text-teal-900 math-chip mt-1">v<sub>&gamma;</sub> = 1.0000 c<sub>0</sub></div>
+            <p id="ship-c01-desc" class="text-xs text-teal-950 mt-1.5">
+              Photon travels in <span class="math-chip">S<sub>0</sub></span> at <span class="math-chip">1.0000 c<sub>0</sub></span>, hitting Ship 2 at <span class="math-chip">T<sub>hit</sub> = 0.5556 D<sub>0</sub>/c<sub>0</sub></span>. Operational ship-to-ship relative speed is <span class="math-chip">0.9756 c<sub>0</sub> &lt; c<sub>0</sub></span>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-wpc" class="app-section hidden space-y-6">
+      <div class="card-surface rounded-2xl p-6 sm:p-8">
+        <p class="text-xs font-semibold uppercase tracking-wider text-teal-700">Work Package C · Finite-Body &amp; 3D Boundary Solutions</p>
+        <h2 class="text-2xl font-bold text-slate-900 mt-1">Spherical Shells, Voids, 3D Asymmetry &amp; The Solar-Cosmic Dilemma</h2>
+        <p class="text-sm sm:text-base text-slate-600 mt-2 leading-relaxed">
+          Unlike a Newtonian spherical shell whose interior force vanishes identically, the finite-range Yukawa regulator <span class="math-chip">I(r)</span> is nonzero inside a shell and develops spatial gradients off-center. Explore the exact thin-shell and void benchmarks, smooth thick-wall profiles, open-boundary 3D FFT asymmetric solutions, and the decisive solar-limb Cassini constraint below.
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+          <div class="border border-stone-200 rounded-xl p-4 bg-white flex flex-col justify-between">
+            <div>
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <h3 class="text-base font-bold text-slate-900">Spherical Benchmark Explorer</h3>
+                <select id="wpc-profile-mode" class="rounded-lg border border-stone-300 bg-stone-50 px-2.5 py-1.5 text-xs font-semibold text-slate-900">
+                  <option value="thick" selected>Composite Thick-Wall Bubble (R_in=0.8R, R_out=1.2R)</option>
+                  <option value="thin">Thin-Shell Benchmarks (q = 0.01 to 5.0)</option>
+                  <option value="void">Uniform Density with Spherical Void (b/&lambda;)</option>
+                </select>
+              </div>
+              <p id="wpc-profile-caption" class="text-xs text-slate-600 mt-1.5">
+                Piecewise 1D Green's-function quadrature removes the thin-shell slope cusp while keeping a nonzero interior gradient &nabla;I &ne; 0 inside the cavity.
+              </p>
+            </div>
+            <div class="chart-container my-3">
+              <canvas id="chart-wpc-profiles"></canvas>
+            </div>
+            <div id="wpc-profile-takeaway" class="text-xs text-slate-700 bg-stone-50 p-2.5 rounded-lg border border-stone-200">
+              Peak regulator field <span class="math-chip">I/(g&rho;<sub>w</sub>R<sup>2</sup>) = 0.219469</span> occurs at the inner wall edge <span class="math-chip">r = 0.8R</span>, asymptoting to exterior background <span class="math-chip">0.05</span> at large <span class="math-chip">r</span>.
+            </div>
+          </div>
+
+          <div class="border border-stone-200 rounded-xl p-4 bg-white flex flex-col justify-between">
+            <div>
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <h3 class="text-base font-bold text-slate-900">Solar-Cosmic Scaling Dilemma (Cassini Test)</h3>
+                <div class="flex items-center gap-2">
+                  <label for="wpc-aibg" class="text-xs font-semibold text-slate-700">&alpha;I<sub>bg</sub><sup>2</sup>:</label>
+                  <select id="wpc-aibg" class="rounded-lg border border-stone-300 bg-stone-50 px-2 py-1 text-xs font-semibold text-slate-900">
+                    <option value="1" selected>1.0 (Unscreened Toy Norm.)</option>
+                    <option value="1e-3">10⁻³</option>
+                    <option value="1e-6">10⁻⁶</option>
+                    <option value="1e-8">10⁻⁸ (Passes Cassini at 1 Gpc)</option>
+                  </select>
+                </div>
+              </div>
+              <p class="text-xs text-slate-600 mt-1.5">
+                Because <span class="math-chip">R<sub>&odot;</sub> &ll; &lambda;</span>, the Sun adds a local <span class="math-chip">1/r</span> perturbation <span class="math-chip">&delta;I<sub>&odot;</sub>(R<sub>&odot;</sub>) = gM<sub>&odot;</sub>/(4&pi;R<sub>&odot;</sub>)</span>. Comparing induced <span class="math-chip">|&delta;&gamma;|</span> against Cassini's bound (<span class="math-chip">4.4&times;10<sup>&minus;5</sup></span>) falsifies unscreened <span class="math-chip">&alpha;I<sub>bg</sub><sup>2</sup> &sim; 1</span> on Mpc&ndash;Gpc scales.
+              </p>
+            </div>
+            <div class="chart-container my-3">
+              <canvas id="chart-solar-cassini"></canvas>
+            </div>
+            <div class="text-xs text-slate-700 bg-amber-50/70 p-2.5 rounded-lg border border-amber-200">
+              <strong>Three Viable Remedies:</strong> (i) Super-horizon <span class="math-chip">&lambda; &gtrsim; 10<sup>29</sup> m</span>; (ii) unifying <span class="math-chip">I</span> directly with the sole refractive gravitational potential (<span class="math-chip">&Delta;C/C = &minus;2&Phi;<sub>N</sub>/c<sub>0</sub><sup>2</sup> &rArr; &gamma;<sub>eff</sub> = 1</span>); or (iii) nonlinear local density screening.
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <h3 class="text-base font-bold text-slate-900">3D Open-Boundary FFT Yukawa Solutions (<span class="math-chip">N = 48, L<sub>box</sub> = 6, &lambda; = 1</span>) &amp; Moving Walls</h3>
+          <p class="text-xs sm:text-sm text-slate-600 mt-1 mb-3">
+            Zero-padded 3D FFT convolution (<span class="math-chip">M = 2N</span>) eliminates periodic boundary images and quantifies directional anisotropy in non-spherical domains:
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="sub-surface rounded-xl p-4">
+              <div class="text-xs font-bold uppercase text-teal-800">Triaxial Ellipsoidal Shell</div>
+              <div class="text-sm font-bold text-slate-900 math-chip mt-1">Semi-axes (1.2, 1.0, 0.8)</div>
+              <p class="text-xs text-slate-700 mt-1.5">
+                Central <span class="math-chip">I(0) = 0.106836</span>; off-center <span class="math-chip">r = 0.5</span> gives <span class="math-chip">(I<sub>x</sub>, I<sub>y</sub>, I<sub>z</sub>) = (0.111966, 0.113395, 0.113143)</span> (1.28% split); exterior <span class="math-chip">r = 1.5</span> gives <span class="math-chip">I<sub>x</sub>/I<sub>z</sub> = 1.63</span>.
+              </p>
+            </div>
+            <div class="sub-surface rounded-xl p-4">
+              <div class="text-xs font-bold uppercase text-teal-800">Clumpy Spherical Shell</div>
+              <div class="text-sm font-bold text-slate-900 math-chip mt-1">Y<sub>20</sub> + Y<sub>22</sub> (&delta;&rho;/&rho; &sim; 0.25)</div>
+              <p class="text-xs text-slate-700 mt-1.5">
+                Breaks spherical symmetry at the origin: <span class="math-chip">I(0) = 0.111601</span> with nonzero central gradient <span class="math-chip">|&nabla;I|(0) = 4.6753&times;10<sup>&minus;3</sup></span> and <span class="math-chip">r = 0.5</span> spread <span class="math-chip">(0.118875, 0.113264, 0.121680)</span>.
+              </p>
+            </div>
+            <div class="sub-surface rounded-xl p-4">
+              <div class="text-xs font-bold uppercase text-teal-800">Overlapping Bubbles &amp; Wall Flux</div>
+              <div class="text-sm font-bold text-slate-900 math-chip mt-1">Centers at (&plusmn;0.7, 0, 0)</div>
+              <p class="text-xs text-slate-700 mt-1.5">
+                Constructive superposition raises midpoint <span class="math-chip">I(0,0,0) = 0.233032</span> above bubble centers (<span class="math-chip">0.165699</span>). Moving walls radiate scalar flux <span class="math-chip">S<sub>I</sub> &sim; K<sub>I</sub><sup>&minus;1</sup>V<sub>w</sub>(&Delta;I')<sup>2</sup></span>, making walls transient.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-wpd" class="app-section hidden space-y-6">
+      <div class="card-surface rounded-2xl p-6 sm:p-8">
+        <p class="text-xs font-semibold uppercase tracking-wider text-teal-700">Work Package D · Hamiltonian Ray Optics &amp; Foundation 3</p>
+        <h2 class="text-2xl font-bold text-slate-900 mt-1">Domain Wall Crossings &amp; Post-Emission Monotonicity Obstruction</h2>
+        <p class="text-sm sm:text-base text-slate-600 mt-2 leading-relaxed">
+          To test Foundation 3 (<span class="math-chip">dv<sub>g</sub>/dT &le; 0</span>) without ad-hoc clamping rules, we integrate the exact Hamiltonian ray equations <span class="math-chip">dx/dT = &part;&omega;/&part;k</span>, <span class="math-chip">dk/dT = &minus;&part;&omega;/&part;x</span> for a massive photon (<span class="math-chip">&Omega; = 0.2</span>) across a smooth wall transitioning between <span class="math-chip">C<sub>in</sub> = 1.0</span> and <span class="math-chip">C<sub>out</sub> = &radic;2 = 1.414214</span>. Toggle between outward and inward crossings below.
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+          <div class="lg:col-span-2 border border-stone-200 rounded-xl p-4 bg-white flex flex-col justify-between">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <h3 class="text-base font-bold text-slate-900">Hamiltonian Group Velocity &amp; Local Ceiling Along Ray</h3>
+              <div class="flex gap-1.5">
+                <button id="btn-ray-out" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-700 text-white">
+                  Outward (C<sub>in</sub> &rarr; C<sub>out</sub>)
+                </button>
+                <button id="btn-ray-in" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-stone-100 text-slate-700 hover:bg-stone-200">
+                  Inward (C<sub>out</sub> &rarr; C<sub>in</sub>)
+                </button>
+              </div>
+            </div>
+            <div class="chart-container my-3">
+              <canvas id="chart-ray-monotonicity"></canvas>
+            </div>
+            <div id="ray-status-box" class="text-xs text-amber-950 bg-amber-50 p-3 rounded-lg border border-amber-200">
+              <strong>Outward Crossing Verdict (Falsifies Static Monotonicity):</strong> Frequency <span class="math-chip">&omega; = 2.009978</span> is strictly conserved while wavevector drops (<span class="math-chip">k: 2.0000 &rarr; 1.4142</span>), forcing group velocity to reaccelerate from <span class="math-chip">0.9950</span> to <span class="math-chip">1.4072</span>.
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div class="sub-surface rounded-xl p-4">
+              <div class="text-xs font-bold uppercase text-teal-800">Exact Monotonicity Identity</div>
+              <div class="text-xs font-bold text-slate-900 math-chip mt-1.5 bg-white p-2.5 rounded-lg border border-stone-200">
+                (1/v<sub>g</sub>)(dv<sub>g</sub>/dT) = (1/C)(dC/dT) + [&Omega;<sup>2</sup>/(&omega;<sup>2</sup>&minus;&Omega;<sup>2</sup>)] (d ln(&omega;/&Omega;)/dT)
+              </div>
+              <p class="text-xs text-slate-700 mt-2 leading-relaxed">
+                In any static background (<span class="math-chip">d&omega;/dT = 0</span>), <span class="math-chip">dv<sub>g</sub>/dT</span> has the exact sign of <span class="math-chip">dC/dT</span>. Adding weak bath damping <span class="math-chip">d&omega;/dT = &minus;&Gamma;<sub>bath</sub>&omega;</span> fails at optical frequencies because overcoming <span class="math-chip">&Delta;C/C</span> requires <span class="math-chip">&Gamma;<sub>bath</sub>&Delta;T &gtrsim; (&omega;/&Omega;)<sup>2</sup>(&Delta;C/C) &sim; 10<sup>36</sup>(&Delta;C/C)</span>, immediately extinguishing the photon.
+              </p>
+            </div>
+
+            <div class="sub-surface rounded-xl p-4">
+              <div class="text-xs font-bold uppercase text-teal-800">Step-Wall Boundary Optics</div>
+              <ul class="text-xs text-slate-700 mt-2 space-y-2">
+                <li><strong>Critical Angle (Outward):</strong> Rays hitting <span class="math-chip">C<sub>in</sub> &rarr; C<sub>out</sub></span> above <span class="math-chip">&theta;<sub>c</sub> = arcsin(1/&radic;2) = 45.00&deg;</span> undergo total internal reflection back into the cavity.</li>
+                <li><strong>Impedance Reflection:</strong> At normal incidence, Family Ia reflects <span class="math-chip">R<sub>Ia</sub> = 2.9437%</span> of power due to <span class="math-chip">Z</span> mismatch, whereas Family Ib transmits with <span class="math-chip">R<sub>Ib</sub> = 0.0000%</span>.</li>
+                <li><strong>Required Revision:</strong> Universal slowing requires an underdense void inside a denser exterior (<span class="math-chip">C<sub>ext</sub> &lt; C<sub>int</sub></span>) or an evolving bath (<span class="math-chip">&part;<sub>T</sub>C &lt; 0</span>).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-wpe" class="app-section hidden space-y-6">
+      <div class="card-surface rounded-2xl p-6 sm:p-8">
+        <p class="text-xs font-semibold uppercase tracking-wider text-teal-700">Work Package E · Calibration, Evidence Ledger &amp; Handoff</p>
+        <h2 class="text-2xl font-bold text-slate-900 mt-1">Observational Likelihoods, Preregisterable Discriminant &amp; Evidence Ledger</h2>
+        <p class="text-sm sm:text-base text-slate-600 mt-2 leading-relaxed">
+          This final section synthesizes published empirical benchmarks (Sciama 1953; Cassini 2003; VLBI; Nagel et al. 2015; GW170817/GRB 170817A; PDG solar wind; Luo et al. 2003; Wu et al. 2016), displays the 200,000-sample GW170817 Monte Carlo speed posterior, outlines a preregisterable multi-band void-transit test, and provides the complete epistemic evidence ledger and copyable handoff notes.
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+          <div class="border border-stone-200 rounded-xl p-4 bg-white flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-slate-900">GW170817 / GRB 170817A Monte Carlo Speed Posterior</h3>
+              <p class="text-xs text-slate-600 mt-1">
+                200,000-sample MC propagation (<span class="math-chip">seed = 42</span>) with NGC 4993 distance <span class="math-chip">d &sim; N(40.7, 2.4<sup>2</sup>) Mpc</span>, arrival lag <span class="math-chip">&Delta;t<sub>obs</sub> &sim; N(1.74, 0.05<sup>2</sup>) s</span>, and intrinsic delay <span class="math-chip">&Delta;t<sub>int</sub> &sim; U[0, 10] s</span>. Posterior median is <span class="math-chip">&minus;7.759&times;10<sup>&minus;16</sup></span> with 90% CI <span class="math-chip">[&minus;1.861&times;10<sup>&minus;15</sup>, +2.955&times;10<sup>&minus;16</sup>]</span>.
+              </p>
+            </div>
+            <div class="chart-container my-3">
+              <canvas id="chart-gw170817"></canvas>
+            </div>
+            <div class="text-xs text-slate-700 bg-stone-50 p-2.5 rounded-lg border border-stone-200">
+              <strong>Implication:</strong> Unless gravitational waves and light share the same <span class="math-chip">I</span>-regulated cone (<span class="math-chip">C<sub>GW</sub> = C<sub>EM</sub> = C(I)</span>), local <span class="math-chip">&alpha;I<sub>bg</sub><sup>2</sup> &lesssim; 6&times;10<sup>&minus;15</sup></span>.
+            </div>
+          </div>
+
+          <div class="border border-stone-200 rounded-xl p-4 bg-white flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold text-slate-900">Preregisterable Discriminant Strategies</h3>
+              <p class="text-xs text-slate-600 mt-1">
+                Because Family Ib (<span class="math-chip">p<sub>exp</sub> = 2</span>) leaves local laboratory clock-to-ruler ratios invariant, separating C-01 from ordinary cold plasma requires cross-environment or multi-band observations:
+              </p>
+              <div class="mt-3 space-y-3">
+                <div class="sub-surface rounded-xl p-3.5">
+                  <div class="text-xs font-bold text-teal-900">1. Achromatic vs. &nu;<sup>&minus;2</sup> Multi-Band Void Transit</div>
+                  <p class="text-xs text-slate-700 mt-1 leading-relaxed">
+                    Compare radio (1 GHz), optical (500 THz), and gamma-ray (100 keV) arrival times for transients behind mapped cosmic voids vs. dense filaments. Cold plasma delay scales as <span class="math-chip">&nu;<sup>&minus;2</sup> &int; n<sub>e</sub> ds</span> and vanishes at high energy, whereas a C-01 void ceiling increase <span class="math-chip">&Delta;C/C<sub>bg</sub> &gt; 0</span> induces an <em>achromatic</em> arrival advance <span class="math-chip">&Delta;t<sub>void</sub> &approx; &minus;&int;(&Delta;C/C<sub>bg</sub>)ds/c<sub>0</sub></span> across all bands simultaneously.
+                  </p>
+                </div>
+                <div class="sub-surface rounded-xl p-3.5">
+                  <div class="text-xs font-bold text-teal-900">2. Spacecraft Cavity-vs-Atomic Clock Link (Family Ia Test)</div>
+                  <p class="text-xs text-slate-700 mt-1 leading-relaxed">
+                    Flying an optical resonator alongside an atomic transition clock across varying solar-system gravitational potential <span class="math-chip">&Phi;<sub>N</sub></span> measures <span class="math-chip">&delta;(&nu;<sub>cav</sub>/&nu;<sub>Bohr</sub>) &prop; &minus;&delta;&alpha;<sub>EM</sub>/&alpha;<sub>EM</sub></span>, decisively separating Family Ia from Family Ib.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-3 text-xs text-slate-500">
+              Nagel et al. (2015) resonator isotropy bound: <span class="math-chip">&Delta;&nu;/&nu; = (9.2 &plusmn; 10.7) &times; 10<sup>&minus;19</sup></span> (95% C.I.).
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-surface rounded-2xl p-6 sm:p-8">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900">Epistemic Evidence Ledger (EV-01 to EV-09)</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-0.5">
+              Strict separation between verified observations, executed numerical results, analytic proofs, falsified implementations, and unresolved constraints.
+            </p>
+          </div>
+          <select id="ledger-filter" class="rounded-lg border border-stone-300 bg-stone-50 px-3 py-1.5 text-xs font-semibold text-slate-900">
+            <option value="all" selected>All Epistemic Categories (9)</option>
+            <option value="Verified Observation">Verified Observation</option>
+            <option value="Executed Numerical Result">Executed Numerical Result</option>
+            <option value="Analytic Proof">Analytic Proof + Numerical Check</option>
+            <option value="Falsified Implementation">Falsified Implementation</option>
+            <option value="Synthetic Demonstration">Synthetic Demonstration</option>
+            <option value="Unresolved Constraint">Unresolved Constraint</option>
+          </select>
+        </div>
+
+        <div class="overflow-x-auto border border-stone-200 rounded-xl">
+          <table class="min-w-full divide-y divide-stone-200 text-left text-xs sm:text-sm">
+            <thead class="bg-stone-50 font-semibold text-slate-700">
+              <tr>
+                <th class="px-4 py-2.5 w-20">ID</th>
+                <th class="px-4 py-2.5 w-48">Classification</th>
+                <th class="px-4 py-2.5">Statement / Numerical Finding</th>
+                <th class="px-4 py-2.5 w-56">Provenance</th>
+              </tr>
+            </thead>
+            <tbody id="ledger-tbody" class="divide-y divide-stone-200 bg-white"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card-surface rounded-2xl p-6 sm:p-8">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-3">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900">Handoff Interface &amp; Portable Project Memory (<span class="math-chip">memory_update.uai</span>)</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-0.5">
+              Ready-to-use variable definitions, validity ranges, and state summary for Prompt 02 and the consolidated manuscript addendum.
+            </p>
+          </div>
+          <button id="copy-handoff-btn" class="px-3.5 py-2 rounded-lg text-xs font-semibold bg-teal-700 hover:bg-teal-800 text-white transition shrink-0">
+            Copy memory_update.uai
+          </button>
+        </div>
+        <pre id="handoff-pre" class="bg-slate-900 text-slate-100 rounded-xl p-4 text-xs math-chip overflow-x-auto leading-relaxed">DATE: 2026-11-23
+SCOPE: ArcSecs C-01 — Physical Origin of Local Light-Speed Ceiling
+DECISION: Revise mechanism (retain Family Ib + III; retire unscreened solar linear I and static rising-C monotonicity).
+CANDIDATE_EQUATIONS:
+  - Field: (C_I^-2 d_T^2 - lap + lam^-2) I = g * rho_src, open BC I(inf) = 0
+  - EM (Family Ib): eps(I) = eps_* sqrt(1+aI^2), mu(I) = mu_* sqrt(1+aI^2), C_em = C_f = C_*/sqrt(1+aI^2), Z = Z_*
+  - Inertia: L_m = -m_* C_*^p C(I)^(2-p) sqrt(1 - v^2/C(I)^2), p in {1, 2}
+  - Dispersion: omega^2 = C(I)^2 k^2 + Omega^2 (Omega > 0)
+HANDOFF_VARIABLES:
+  - I(x, T) [kg m^-1 s^-2]: Yukawa-screened mass regulator; requires I(inf) = 0.
+  - C_em(x, T) / C_f(x, T) [m s^-1]: Local emission &amp; wavefront ceiling; optical group deficit 1.169e-37 at 500 THz (10^-18 eV).
+  - C_causal(x, T) [m s^-1]: max(C_f, C_I, C_u, C_GW); GW170817 90% CI [-1.861e-15, +2.955e-16].
+  - alpha_I_bg_sq [dimensionless]: Unscreened solar Cassini bound &lt;= 1e-6 at lam &lt;= 1 Gpc unless unified or nonlinearly screened.
+  - ray_wall_transfer(): Monotonic d(v_g)/dT &lt;= 0 holds only for dC/dT &lt;= 0 (inward crossing or falling-ceiling cosmology).</pre>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-stone-200 bg-white mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
+      <div>ArcSecs Independent Research Program · C-01 Interactive Synthesis</div>
+      <div>Conditional research analysis bound by Foundations 1–12 · Canvas &amp; Tailwind UI</div>
+    </div>
+  </footer>
+
+  <script>
+    const charterData = [
+      { id: 1, premise: "Photons have mass.", impl: "Massive Proca-medium Lagrangian with invariant frequency gap Omega > 0.", status: "Compliant", detail: "Implemented via a massive Proca-medium Lagrangian with strictly positive invariant frequency gap Omega > 0 (m_gamma = hbar * Omega / C_*^2) in transverse and longitudinal modes. Charge continuity holds identically across spatial density gradients; PDG solar-wind (1e-18 eV) and FRB bounds are evaluated." },
+      { id: 2, premise: "Time is constant.", impl: "Universal ordering coordinate T with uniform rate dT/dT = 1; dynamic clock counts.", status: "Compliant", detail: "Universal ordering coordinate T runs at an unchanged rate; measured clock shifts are derived dynamically from I-dependent Bohr atomic transition frequencies nu_Bohr(I) and optical cavity frequencies nu_cav(I) rather than a variable flow of time." },
+      { id: 3, premise: "Light slows down over time.", impl: "Tested via Proca-bath dispersion, Hamiltonian ray tracing, and inward wall crossings.", status: "Restricted Obstruction", detail: "Restricted Obstruction: Along any static trajectory where C(x) rises outward (such as exiting a dense shell wall into a lower-density exterior), conservative Hamiltonian propagation preserves omega and forces dv_g/dT > 0. Universal slowing requires falling C(x) (underdense interior in denser exterior) or an evolving bath." },
+      { id: 4, premise: "Time is not physical; it is the 'When.'", impl: "T serves strictly as event-ordering coordinate; no time fluid introduced.", status: "Compliant", detail: "Mathematical time parameter T orders physical events without invoking a material temporal substance; all timing intervals are generated by physical oscillator and electromagnetic field couplings." },
+      { id: 5, premise: "Space is not physical; it is the 'Where.'", impl: "Euclidean R^3 coordinate bookkeeping; physical extent in fields I, A_mu, and matter.", status: "Compliant", detail: "Euclidean coordinates x in R^3 locate physical objects without treating space as an independently stretching material fabric. Open-boundary 3D Green's-function convolutions are solved directly on R^3." },
+      { id: 6, premise: "Everything physically existing occupies extent and has mass.", impl: "Positive-definite energy-momentum ledger T^00_tot >= 0 and finite wavepacket support.", status: "Compliant", detail: "Formulated total positive-definite energy-momentum ledger T^00_tot = T^00_I + T^00_EM + T^00_m >= 0. Wavepackets occupy finite spatial support without rigid classical radii; field energy E_I = 0.5 * integral(I * rho dV) is verified in 3D." },
+      { id: 7, premise: "Spacetime is not physical.", impl: "Refractive index n(x) = C_*/C(x) and local field couplings without a metric fabric.", status: "Compliant", detail: "Light deflection and Shapiro delay are derived directly from refractive constitutive gradients n(x) = C_*/C(x) and field interactions on Euclidean coordinates without invoking spacetime curvature as a physical substance." },
+      { id: 8, premise: "Light is not the fastest in the universe.", impl: "Distinguished v_g(omega) < C_f = C_em <= C_causal; non-EM modes allowed >= C_em.", status: "Compliant", detail: "Explicitly separated packet group velocity v_g(omega) from sharp electromagnetic front speed C_f = C_em and all-sector causal ceiling C_causal = max(C_f, C_I, C_u, C_GW). GW170817/GRB 170817A differential bounds (-3e-15 to +7e-16) are propagated." },
+      { id: 9, premise: "Objects can separate faster than causality; fabric cannot stretch.", impl: "Two-ship control (u = 0.8 c0, V_sep = 1.600 c0) solved in frame S_0 without stretching.", status: "Compliant", detail: "Solved the two-ship closing experiment in common frame S_0: coordinate closing rate V_sep = 1.600 c0 exceeds c0 via actual motion in non-stretching coordinates, while individual photons propagate at v_gamma = 1.000 c0 and operational relative ship velocity is 0.975610 c0 < c0." },
+      { id: 10, premise: "The size of the universe is unknown.", impl: "Bubble radius R and range lambda retained as open parameters; open BC I(inf) = 0.", status: "Compliant", detail: "Bubble radius R and Yukawa screening length lambda are retained as unfixed model parameters distinct from the observable horizon, with open asymptotic boundary condition I(inf) = 0." },
+      { id: 11, premise: "The age of the universe is unknown.", impl: "Modeled bubble elapsed T separated from stellar/nuclear ages and total history.", status: "Compliant", detail: "Elapsed bubble age is distinguished from stellar, nuclear, and unknown total cosmic history, preserving astrophysical lower age bounds and demonstrating moving-wall scalar radiation flux." },
+      { id: 12, premise: "Distant objects are smaller and closer than they appear.", impl: "Seven distance estimators (D_now, D_e, L_ray, D_TOF, D_A, D_G, D_L) separated.", status: "Conditional / Pending", detail: "Conditional / Pending Prompt 02: Seven distance estimators are separated mathematically; the sign and redshift dependence of cosmological distance corrections depend on whether C(x) increases or decreases across large-scale domains." }
+    ];
+
+    const ledgerData = [
+      { id: "EV-01", cat: "Verified Observation", stmt: "Cassini gamma - 1 = (2.1 +/- 2.3)e-5; Nagel anisotropy = (9.2 +/- 10.7)e-19; GW170817 lag = +1.74 +/- 0.05 s.", prov: "Bertotti et al. (2003); Nagel et al. (2015); Abbott et al. (2017)" },
+      { id: "EV-02", cat: "Executed Numerical Result", stmt: "Thin-shell q = 0.01-5 benchmarks (quadrature discrepancy <= 1.78e-15) and spherical void fractions f.", prov: "Recomputed via scipy.integrate.quad matching Part XXVII" },
+      { id: "EV-03", cat: "Executed Numerical Result", stmt: "3D open-boundary FFT Yukawa convergence (2.045e-3 rel. error at N=64) & triaxial/clumpy/overlapping bubbles.", prov: "Zero-padded 3D FFT convolution verified vs analytic sphere" },
+      { id: "EV-04", cat: "Executed Numerical Result", stmt: "Retarded 3D Proca Green's function strictly zero for T < r/C_f = 5.0000, onset at T = 5.001 (2.54e-15).", prov: "Direct numerical quadrature of G_ret(r, T)" },
+      { id: "EV-05", cat: "Executed Numerical Result", stmt: "GW170817 200,000-sample MC speed posterior: median -7.759e-16, 90% CI [-1.861e-15, +2.955e-16].", prov: "Monte Carlo error propagation (seed = 42)" },
+      { id: "EV-06", cat: "Analytic Proof", stmt: "Obstruction to exact finite-frequency Proca v_g = C_f and static rising-C wall monotonicity.", prov: "Derived from omega^2 = C^2 k^2 + Omega^2 & solve_ivp" },
+      { id: "EV-07", cat: "Falsified Implementation", stmt: "Solar-limb Cassini violation: |delta_gamma| = 18.757 to 1.8757e5 for unscreened alpha*I_bg^2 = 1, lambda <= 1 Gpc.", prov: "Quantitative comparison vs Bertotti et al. (2003)" },
+      { id: "EV-08", cat: "Synthetic Demonstration", stmt: "Composite thick-wall profile (R_in=0.8R, R_out=1.2R) & two-ship control (u = 0.8 c0, V_sep = 1.600 c0).", prov: "Dimensionless control geometries for solver validation" },
+      { id: "EV-09", cat: "Unresolved Constraint", stmt: "Unknown cosmic bubble R, M, lambda and universal C_ext calibration under rescaling invariance.", prov: "Required by Foundations 10-11 & operational invariance" }
+    ];
+
+    function wrapLabel(label) {
+      if (label.length <= 16) return label;
+      const words = label.split(" ");
+      const lines = [];
+      let current = "";
+      words.forEach(w => {
+        if ((current + " " + w).trim().length > 16) {
+          if (current) lines.push(current.trim());
+          current = w;
+        } else {
+          current = (current + " " + w).trim();
+        }
+      });
+      if (current) lines.push(current.trim());
+      return lines;
+    }
+
+    const commonTooltip = {
+      backgroundColor: "rgba(15, 23, 42, 0.94)",
+      titleFont: { size: 12, weight: "bold" },
+      bodyFont: { size: 12 },
+      padding: 10,
+      cornerRadius: 8
+    };
+
+    const navButtons = document.querySelectorAll(".nav-btn");
+    const sections = document.querySelectorAll(".app-section");
+    const charts = {};
+
+    navButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const targetId = btn.getAttribute("data-target");
+        navButtons.forEach(b => {
+          b.classList.remove("nav-pill-active");
+          b.classList.add("bg-stone-50", "text-slate-700");
+        });
+        btn.classList.add("nav-pill-active");
+        btn.classList.remove("bg-stone-50", "text-slate-700");
+
+        sections.forEach(sec => {
+          if (sec.id === targetId) {
+            sec.classList.remove("hidden");
+          } else {
+            sec.classList.add("hidden");
+          }
+        });
+
+        Object.values(charts).forEach(ch => {
+          if (ch && typeof ch.resize === "function") ch.resize();
+        });
+      });
+    });
+
+    function renderCharter(filterVal) {
+      const tbody = document.getElementById("charter-tbody");
+      tbody.innerHTML = "";
+      const filtered = charterData.filter(item => {
+        if (filterVal === "all") return true;
+        return item.status.toLowerCase().includes(filterVal.toLowerCase());
+      });
+
+      filtered.forEach(row => {
+        const tr = document.createElement("tr");
+        tr.className = "hover:bg-teal-50/50 cursor-pointer transition";
+        let badgeClass = "bg-teal-50 text-teal-800 border-teal-200";
+        if (row.status.includes("Obstruction")) badgeClass = "bg-amber-50 text-amber-800 border-amber-200";
+        if (row.status.includes("Conditional")) badgeClass = "bg-slate-100 text-slate-800 border-slate-300";
+
+        tr.innerHTML = `
+          <td class="px-4 py-2.5 font-bold math-chip text-slate-700">${row.id}</td>
+          <td class="px-4 py-2.5 font-semibold text-slate-900">${row.premise}</td>
+          <td class="px-4 py-2.5 text-slate-600">${row.impl}</td>
+          <td class="px-4 py-2.5"><span class="inline-block px-2 py-0.5 rounded-full text-xs font-semibold border ${badgeClass}">${row.status}</span></td>
+        `;
+        tr.addEventListener("click", () => {
+          document.getElementById("charter-detail-title").textContent = `Foundation ${row.id}: ${row.premise}`;
+          document.getElementById("charter-detail-text").textContent = row.detail;
+        });
+        tbody.appendChild(tr);
+      });
+    }
+
+    document.querySelectorAll(".charter-filter-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".charter-filter-btn").forEach(b => {
+          b.classList.remove("bg-teal-700", "text-white");
+          b.classList.add("bg-stone-100", "text-slate-700");
+        });
+        btn.classList.add("bg-teal-700", "text-white");
+        btn.classList.remove("bg-stone-100", "text-slate-700");
+        renderCharter(btn.getAttribute("data-filter"));
+      });
+    });
+
+    function updateWpaLab() {
+      const branch = document.getElementById("wpa-branch").value;
+      const pexp = parseInt(document.getElementById("wpa-pexp").value, 10);
+      const ai2 = parseFloat(document.getElementById("wpa-ai2").value);
+      document.getElementById("wpa-ai2-val").textContent = ai2.toFixed(2);
+
+      const u = 1.0 + ai2;
+      const cRatio = 1.0 / Math.sqrt(u);
+      const epsRatio = branch === "Ia" ? u : Math.sqrt(u);
+      const alphaRatio = epsRatio * cRatio;
+      const meffRatio = Math.pow(1.0 / cRatio, pexp);
+      const bohrRatio = meffRatio / (epsRatio * epsRatio);
+      const cavToBohr = 1.0 / alphaRatio;
+
+      document.getElementById("out-c-ratio").textContent = cRatio.toFixed(4);
+      document.getElementById("out-alpha-ratio").textContent = alphaRatio.toFixed(4);
+      document.getElementById("out-meff-ratio").textContent = meffRatio.toFixed(4);
+      document.getElementById("out-bohr-ratio").textContent = bohrRatio.toFixed(4);
+      document.getElementById("out-cav-bohr").textContent = cavToBohr.toFixed(4);
+
+      const fgradEl = document.getElementById("out-fgrad");
+      if (pexp === 2 || ai2 === 0) {
+        fgradEl.textContent = "Zero (F_grad = 0)";
+      } else if (pexp === 1) {
+        fgradEl.textContent = "Attractive (-grad C_m)";
+      } else {
+        fgradEl.textContent = "Strong (-grad C_m^2)";
+      }
+
+      const banner = document.getElementById("wpa-verdict-banner");
+      if (branch === "Ia" && ai2 > 0) {
+        banner.className = "mt-4 p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-xs sm:text-sm text-amber-950";
+        banner.innerHTML = `<strong>Locally Detectable Drift:</strong> In Family Ia, &alpha;<sub>EM</sub> scales as (1+&alpha;I<sup>2</sup>)<sup>1/2</sup>, shifting &nu;<sub>cav</sub>/&nu;<sub>Bohr</sub> to <strong>${cavToBohr.toFixed(4)}</strong> and producing 2.94% normal-incidence reflection at step boundaries.`;
+      } else {
+        banner.className = "mt-4 p-3.5 rounded-xl bg-teal-50 border border-teal-200 text-xs sm:text-sm text-teal-950";
+        banner.innerHTML = `<strong>Locally Unidentifiable Rescaling:</strong> In Family Ib, vacuum impedance Z = Z<sub>&star;</sub> and &alpha;<sub>EM</sub> remain strictly invariant (&nu;<sub>cav</sub>/&nu;<sub>Bohr</sub> = 1.0000); detection requires cross-domain signals such as cosmic void transit.`;
+      }
+    }
+
+    ["wpa-branch", "wpa-pexp", "wpa-ai2"].forEach(id => {
+      document.getElementById(id).addEventListener("input", updateWpaLab);
+    });
+
+    function initSciamaChart() {
+      const ctx = document.getElementById("chart-sciama").getContext("2d");
+      const qLabels = ["q = 0.01", "q = 0.10", "q = 0.50", "q = 1.00", "q = 2.00", "q = 5.00", "q = 10.0", "q = 50.0"].map(wrapLabel);
+      const ratios = [0.99335827, 0.93576803, 0.72163208, 0.52848224, 0.29699708, 0.07676579, 0.01999001, 0.00080000];
+
+      charts.sciama = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: qLabels,
+          datasets: [{
+            label: "I_Yukawa(0) / I_Sciama(0)",
+            data: ratios,
+            borderColor: "#0f766e",
+            backgroundColor: "rgba(15, 118, 110, 0.12)",
+            borderWidth: 2.5,
+            pointRadius: 4,
+            pointBackgroundColor: "#0f766e",
+            fill: true,
+            tension: 0.25
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: true, labels: { font: { size: 11 } } },
+            tooltip: commonTooltip
+          },
+          scales: {
+            y: {
+              min: 0,
+              max: 1.05,
+              title: { display: true, text: "Machian Fraction Recovered", font: { size: 11 } }
+            },
+            x: {
+              title: { display: true, text: "Domain Size Ratio q = R / lambda", font: { size: 11 } }
+            }
+          }
+        }
+      });
+    }
+
+    function updateDeficitTable() {
+      const mEv = parseFloat(document.getElementById("wpb-mgamma").value);
+      const hEvS = 4.135667696e-15;
+      const fGap = mEv / hEvS;
+      document.getElementById("wpb-fgap").textContent = fGap.toExponential(3) + " Hz";
+
+      const bands = [
+        { name: "FRB Radio", freqLabel: "1 GHz (10^9 Hz)", fHz: 1e9 },
+        { name: "Optical", freqLabel: "500 THz (5e14 Hz)", fHz: 5e14 },
+        { name: "GRB Gamma-Ray", freqLabel: "100 keV (2.42e19 Hz)", fHz: 2.417989e19 }
+      ];
+
+      const tbody = document.getElementById("wpb-deficit-tbody");
+      tbody.innerHTML = "";
+      bands.forEach(b => {
+        const deficit = 0.5 * Math.pow(fGap / b.fHz, 2);
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td class="px-3 py-2 font-sans font-semibold text-slate-900">${b.name}</td>
+          <td class="px-3 py-2 text-slate-600">${b.freqLabel}</td>
+          <td class="px-3 py-2 font-bold text-teal-800">${deficit.toExponential(3)}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    document.getElementById("wpb-mgamma").addEventListener("change", updateDeficitTable);
+
+    function initProcaFrontChart() {
+      const ctx = document.getElementById("chart-proca-front").getContext("2d");
+      const tLabels = ["T=4.50", "T=4.99", "T=5.000 Front", "T=5.001 Onset", "T=5.05", "T=5.103 Group", "T=5.20", "T=6.00"].map(wrapLabel);
+      const logResponse = [0, 0, 0, 0.25, 0.58, 0.72, 0.84, 1.0];
+      const rawVals = ["0.000e+0", "0.000e+0", "0.000e+0", "+2.542e-15", "+7.010e-7", "+5.410e-5", "+2.344e-4", "-1.636e-2"];
+
+      charts.procaFront = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: tLabels,
+          datasets: [{
+            label: "Normalized Causal Onset Indicator",
+            data: logResponse,
+            backgroundColor: ["#cbd5e1", "#cbd5e1", "#b45309", "#0f766e", "#0f766e", "#0d9488", "#0f766e", "#115e59"],
+            borderRadius: 5
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              ...commonTooltip,
+              callbacks: {
+                label: function(ctx) {
+                  return "Exact Field Amplitude A(r=5, T): " + rawVals[ctx.dataIndex];
+                }
+              }
+            }
+          },
+          scales: {
+            y: {
+              min: 0,
+              max: 1.1,
+              ticks: { display: false },
+              title: { display: true, text: "Causal Signal Envelope (Zero for T < 5.000)", font: { size: 11 } }
+            }
+          }
+        }
+      });
+    }
+
+    function updateShips() {
+      const u = parseFloat(document.getElementById("ship-u").value);
+      document.getElementById("ship-u-val").innerHTML = `${u.toFixed(2)} c<sub>0</sub>`;
+
+      const vSep = 2.0 * u;
+      const gal = u + 1.0;
+      const tHit = 1.0 / (1.0 + u);
+      const vRel = (2.0 * u) / (1.0 + u * u);
+
+      document.getElementById("ship-vsep").innerHTML = `${vSep.toFixed(4)} c<sub>0</sub>`;
+      document.getElementById("ship-gal").innerHTML = `${gal.toFixed(4)} c<sub>0</sub>`;
+      document.getElementById("ship-c01").innerHTML = `v<sub>&gamma;</sub> = 1.0000 c<sub>0</sub>`;
+      document.getElementById("ship-c01-desc").innerHTML = `Photon travels in <span class="math-chip">S<sub>0</sub></span> at <span class="math-chip">1.0000 c<sub>0</sub></span>, hitting Ship 2 at <span class="math-chip">T<sub>hit</sub> = ${tHit.toFixed(4)} D<sub>0</sub>/c<sub>0</sub></span>. Operational ship-to-ship relative speed is <span class="math-chip">${vRel.toFixed(4)} c<sub>0</sub> &lt; c<sub>0</sub></span>.`;
+    }
+
+    document.getElementById("ship-u").addEventListener("input", updateShips);
+
+    function initWpcProfileChart() {
+      const ctx = document.getElementById("chart-wpc-profiles").getContext("2d");
+      charts.wpcProfile = new Chart(ctx, {
+        type: "line",
+        data: { labels: [], datasets: [] },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: true, labels: { font: { size: 11 } } },
+            tooltip: commonTooltip
+          },
+          scales: {
+            y: { title: { display: true, text: "Normalized Value", font: { size: 11 } } }
+          }
+        }
+      });
+      updateWpcProfileChart();
+    }
+
+    function updateWpcProfileChart() {
+      const mode = document.getElementById("wpc-profile-mode").value;
+      const ch = charts.wpcProfile;
+      const cap = document.getElementById("wpc-profile-caption");
+      const take = document.getElementById("wpc-profile-takeaway");
+
+      if (mode === "thick") {
+        cap.textContent = "Piecewise 1D Green's-function quadrature removes the thin-shell slope cusp while keeping a nonzero interior gradient grad(I) != 0 inside the cavity.";
+        take.innerHTML = 'Peak regulator field <span class="math-chip">I/(g&rho;<sub>w</sub>R<sup>2</sup>) = 0.219469</span> occurs at inner wall edge <span class="math-chip">r = 0.8R</span>, asymptoting to exterior <span class="math-chip">0.05</span>.';
+        ch.data.labels = ["r=0.00", "r=0.40", "r=0.80 Inner", "r=1.00 Mid", "r=1.20 Outer", "r=2.00", "r=4.00"].map(wrapLabel);
+        ch.data.datasets = [
+          {
+            label: "I / (g rho_w R^2)",
+            data: [0.217538, 0.218009, 0.219469, 0.206699, 0.171654, 0.082798, 0.052219],
+            borderColor: "#0f766e",
+            backgroundColor: "rgba(15, 118, 110, 0.12)",
+            borderWidth: 2.5,
+            tension: 0.25
+          },
+          {
+            label: "C_em / C_*",
+            data: [0.977147, 0.977051, 0.976753, 0.979299, 0.985585, 0.996590, 0.998639],
+            borderColor: "#b45309",
+            borderWidth: 2,
+            borderDash: [5, 4],
+            tension: 0.25
+          }
+        ];
+      } else if (mode === "thin") {
+        cap.textContent = "Part XXVII thin spherical shell benchmark normalized by alpha*I(0)^2 = 1 and C(0) = c0 (exterior asymptote sqrt(2)*c0 = 1.4142 c0).";
+        take.innerHTML = 'At <span class="math-chip">q = 1.0</span>, <span class="math-chip">C(R) = 0.916487 c<sub>0</sub></span> and <span class="math-chip">C(2R) = 1.382287 c<sub>0</sub></span> (quadrature discrepancy &le; 1.78&times;10<sup>&minus;15</sup>).';
+        ch.data.labels = ["q=0.01", "q=0.10", "q=0.50", "q=1.00", "q=2.00", "q=5.00"].map(wrapLabel);
+        ch.data.datasets = [
+          {
+            label: "Wall Ceiling C(R)/c0",
+            data: [0.999992, 0.999167, 0.979132, 0.916487, 0.682906, 0.095078],
+            borderColor: "#0f766e",
+            borderWidth: 2.5,
+            tension: 0.25
+          },
+          {
+            label: "Exterior Ceiling C(2R)/c0",
+            data: [1.267419, 1.288118, 1.348465, 1.382287, 1.403685, 1.412449],
+            borderColor: "#b45309",
+            borderWidth: 2.5,
+            tension: 0.25
+          }
+        ];
+      } else {
+        cap.textContent = "Spherical void of radius b carved out of uniform background density rho_0 (alpha*I_ref^2 = 1).";
+        take.innerHTML = 'For <span class="math-chip">b/&lambda; = 1.0</span>, removed central field fraction is <span class="math-chip">26.42%</span>, raising central light speed by <span class="math-chip">+13.91%</span>.';
+        ch.data.labels = ["b/lambda = 0.01", "b/lambda = 0.10", "b/lambda = 1.00"].map(wrapLabel);
+        ch.data.datasets = [
+          {
+            label: "Removed Central Field f",
+            data: [0.00004967, 0.00467884, 0.26424112],
+            backgroundColor: "#0f766e",
+            borderRadius: 6
+          },
+          {
+            label: "Central Ceiling Increase dC/C_bg",
+            data: [0.00002483, 0.00234215, 0.13910987],
+            backgroundColor: "#b45309",
+            borderRadius: 6
+          }
+        ];
+      }
+      ch.update();
+    }
+
+    document.getElementById("wpc-profile-mode").addEventListener("change", updateWpcProfileChart);
+
+    function initSolarCassiniChart() {
+      const ctx = document.getElementById("chart-solar-cassini").getContext("2d");
+      charts.solar = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["10 Mpc Range", "100 Mpc Range", "1000 Mpc Range", "Cassini Limit"].map(wrapLabel),
+          datasets: [{
+            label: "log10 |delta_gamma| at Solar Limb",
+            data: [5.273, 3.273, 1.273, -4.357],
+            backgroundColor: ["#b45309", "#b45309", "#b45309", "#0f766e"],
+            borderRadius: 6
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              ...commonTooltip,
+              callbacks: {
+                label: function(ctx) {
+                  const val = Math.pow(10, ctx.raw);
+                  return "Magnitude |delta_gamma|: " + val.toExponential(3);
+                }
+              }
+            }
+          },
+          scales: {
+            y: {
+              min: -6,
+              max: 6,
+              title: { display: true, text: "log10 |delta_gamma| (Negative = Passes Limit)", font: { size: 11 } }
+            }
+          }
+        }
+      });
+    }
+
+    function updateSolarCassiniChart() {
+      const scale = parseFloat(document.getElementById("wpc-aibg").value);
+      const baseVals = [1.8757e5 * scale, 1.8757e3 * scale, 1.8757e1 * scale, 4.4e-5];
+      const logs = baseVals.map(v => Math.log10(v));
+      const colors = baseVals.map((v, idx) => (idx === 3 || v <= 4.4e-5) ? "#0f766e" : "#b45309");
+
+      charts.solar.data.datasets[0].data = logs;
+      charts.solar.data.datasets[0].backgroundColor = colors;
+      charts.solar.update();
+    }
+
+    document.getElementById("wpc-aibg").addEventListener("change", updateSolarCassiniChart);
+
+    function initRayChart() {
+      const ctx = document.getElementById("chart-ray-monotonicity").getContext("2d");
+      charts.ray = new Chart(ctx, {
+        type: "line",
+        data: { labels: [], datasets: [] },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: true, labels: { font: { size: 11 } } },
+            tooltip: commonTooltip
+          },
+          scales: {
+            y: {
+              min: 0.9,
+              max: 1.5,
+              title: { display: true, text: "Speed (Dimensionless Units)", font: { size: 11 } }
+            }
+          }
+        }
+      });
+      setRayMode("out");
+    }
+
+    function setRayMode(dir) {
+      const btnOut = document.getElementById("btn-ray-out");
+      const btnIn = document.getElementById("btn-ray-in");
+      const box = document.getElementById("ray-status-box");
+      const ch = charts.ray;
+
+      if (dir === "out") {
+        btnOut.className = "px-3 py-1.5 rounded-lg text-xs font-semibold bg-amber-700 text-white";
+        btnIn.className = "px-3 py-1.5 rounded-lg text-xs font-semibold bg-stone-100 text-slate-700 hover:bg-stone-200";
+        ch.data.labels = ["T=0.0 (x=0.00)", "T=3.0 (x=2.99)", "T=5.0 (x=5.10)", "T=7.0 (x=7.84)", "T=10.0 (x=12.06)"].map(wrapLabel);
+        ch.data.datasets = [
+          {
+            label: "Group Speed |v_g(T)|",
+            data: [0.9950, 0.9977, 1.2256, 1.4069, 1.4072],
+            borderColor: "#b45309",
+            borderWidth: 2.5,
+            tension: 0.25
+          },
+          {
+            label: "Local Ceiling C(x(T))",
+            data: [1.0000, 1.0027, 1.2318, 1.4139, 1.4142],
+            borderColor: "#0f766e",
+            borderWidth: 2,
+            borderDash: [5, 4],
+            tension: 0.25
+          }
+        ];
+        box.className = "text-xs text-amber-950 bg-amber-50 p-3 rounded-lg border border-amber-200";
+        box.innerHTML = '<strong>Outward Crossing Verdict (Falsifies Static Monotonicity):</strong> Frequency <span class="math-chip">&omega; = 2.009978</span> is strictly conserved while wavevector drops (<span class="math-chip">k: 2.0000 &rarr; 1.4142</span>), forcing group velocity to reaccelerate from <span class="math-chip">0.9950</span> to <span class="math-chip">1.4072</span>.';
+      } else {
+        btnIn.className = "px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal-700 text-white";
+        btnOut.className = "px-3 py-1.5 rounded-lg text-xs font-semibold bg-stone-100 text-slate-700 hover:bg-stone-200";
+        ch.data.labels = ["T=0.0 (x=10.00)", "T=2.5 (x=6.48)", "T=4.0 (x=4.55)", "T=6.0 (x=2.51)", "T=8.0 (x=0.52)"].map(wrapLabel);
+        ch.data.datasets = [
+          {
+            label: "Group Speed |v_g(T)|",
+            data: [1.4107, 1.4006, 1.0986, 0.9983, 0.9975],
+            borderColor: "#0f766e",
+            borderWidth: 2.5,
+            tension: 0.25
+          },
+          {
+            label: "Local Ceiling C(x(T))",
+            data: [1.4142, 1.4041, 1.1013, 1.0008, 1.0000],
+            borderColor: "#64748b",
+            borderWidth: 2,
+            borderDash: [5, 4],
+            tension: 0.25
+          }
+        ];
+        box.className = "text-xs text-teal-950 bg-teal-50 p-3 rounded-lg border border-teal-200";
+        box.innerHTML = '<strong>Inward Crossing Verdict (Monotonic Slowing Satisfied):</strong> Entering a denser domain (<span class="math-chip">C<sub>out</sub> &rarr; C<sub>in</sub></span>) bends rays toward the normal with zero total internal reflection and monotonically slows <span class="math-chip">|v<sub>g</sub>|</span> from <span class="math-chip">1.4107</span> down to <span class="math-chip">0.9975</span>.';
+      }
+      ch.update();
+    }
+
+    document.getElementById("btn-ray-out").addEventListener("click", () => setRayMode("out"));
+    document.getElementById("btn-ray-in").addEventListener("click", () => setRayMode("in"));
+
+    function initGwChart() {
+      const ctx = document.getElementById("chart-gw170817").getContext("2d");
+      const binLabels = ["-2.1e-15", "-1.86e-15 (5%)", "-1.5e-15", "-1.1e-15", "-7.76e-16 Med", "-4.0e-16", "0.0", "+2.96e-16 (95%)", "+5.0e-16"].map(wrapLabel);
+      const densities = [0.12, 0.68, 0.96, 1.00, 0.99, 0.95, 0.92, 0.64, 0.08];
+      const barColors = ["#cbd5e1", "#0f766e", "#0f766e", "#0f766e", "#115e59", "#0f766e", "#0f766e", "#0f766e", "#cbd5e1"];
+
+      charts.gw = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: binLabels,
+          datasets: [{
+            label: "Relative Posterior Density (90% CI in Teal)",
+            data: densities,
+            backgroundColor: barColors,
+            borderRadius: 5
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: true, labels: { font: { size: 11 } } },
+            tooltip: commonTooltip
+          },
+          scales: {
+            y: {
+              min: 0,
+              max: 1.15,
+              title: { display: true, text: "Normalized Posterior Density", font: { size: 11 } }
+            },
+            x: {
+              title: { display: true, text: "(v_GW - c_EM) / c0", font: { size: 11 } }
+            }
+          }
+        }
+      });
+    }
+
+    function renderLedger(catFilter) {
+      const tbody = document.getElementById("ledger-tbody");
+      tbody.innerHTML = "";
+      const rows = ledgerData.filter(item => {
+        if (catFilter === "all") return true;
+        return item.cat.includes(catFilter);
+      });
+
+      rows.forEach(r => {
+        const tr = document.createElement("tr");
+        let badge = "bg-teal-50 text-teal-800 border-teal-200";
+        if (r.cat.includes("Falsified")) badge = "bg-amber-50 text-amber-800 border-amber-200";
+        if (r.cat.includes("Unresolved")) badge = "bg-slate-100 text-slate-800 border-slate-300";
+
+        tr.innerHTML = `
+          <td class="px-4 py-2.5 font-bold math-chip text-slate-800">${r.id}</td>
+          <td class="px-4 py-2.5"><span class="inline-block px-2 py-0.5 rounded-full text-xs font-semibold border ${badge}">${r.cat}</span></td>
+          <td class="px-4 py-2.5 text-slate-800">${r.stmt}</td>
+          <td class="px-4 py-2.5 text-slate-500 text-xs">${r.prov}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    document.getElementById("ledger-filter").addEventListener("change", e => {
+      renderLedger(e.target.value);
+    });
+
+    document.getElementById("copy-handoff-btn").addEventListener("click", () => {
+      const text = document.getElementById("handoff-pre").textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById("copy-handoff-btn");
+        btn.textContent = "Copied to Clipboard";
+        setTimeout(() => { btn.textContent = "Copy memory_update.uai"; }, 2000);
+      });
+    });
+
+    renderCharter("all");
+    updateWpaLab();
+    initSciamaChart();
+    updateDeficitTable();
+    initProcaFrontChart();
+    updateShips();
+    initWpcProfileChart();
+    initSolarCassiniChart();
+    initRayChart();
+    initGwChart();
+    renderLedger("all");
+  </script>
+</body>
+</html>

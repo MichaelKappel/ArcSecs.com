@@ -1,0 +1,143 @@
+135 assertions passed.
+15 named runs + 27 parameter cases.
+8/27 scanned cases cross with no positive sampled derivative (tolerance 1e-10).
+Maximum energy error: 2.1573847e-08
+Maximum momentum error: 8.8817842e-16
+Finite-difference derivative error: 5.2235816e-08
+Baseline endpoint differences under refinement: {'duration': np.float64(2.8037128174673853e-11), 'energy_final': np.float64(4.975471146195787e-10), 'v_final': np.float64(5.958313842313601e-10), 'gap_final': np.float64(3.776468027183455e-11)}
+
+PASS baseline energy ledger
+PASS baseline momentum ledger
+PASS baseline nonnegative heat, capacity and group ceiling
+PASS refined energy ledger
+PASS refined momentum ledger
+PASS refined nonnegative heat, capacity and group ceiling
+PASS tiny_bare_gap energy ledger
+PASS tiny_bare_gap momentum ledger
+PASS tiny_bare_gap nonnegative heat, capacity and group ceiling
+PASS no_exchange energy ledger
+PASS no_exchange momentum ledger
+PASS no_exchange nonnegative heat, capacity and group ceiling
+PASS fixed_gap energy ledger
+PASS fixed_gap momentum ledger
+PASS fixed_gap nonnegative heat, capacity and group ceiling
+PASS no_lead energy ledger
+PASS no_lead momentum ledger
+PASS no_lead nonnegative heat, capacity and group ceiling
+PASS capacity_0.1 energy ledger
+PASS capacity_0.1 momentum ledger
+PASS capacity_0.1 nonnegative heat, capacity and group ceiling
+PASS capacity_0.3 energy ledger
+PASS capacity_0.3 momentum ledger
+PASS capacity_0.3 nonnegative heat, capacity and group ceiling
+PASS capacity_0.5 energy ledger
+PASS capacity_0.5 momentum ledger
+PASS capacity_0.5 nonnegative heat, capacity and group ceiling
+PASS low_energy energy ledger
+PASS low_energy momentum ledger
+PASS low_energy nonnegative heat, capacity and group ceiling
+PASS high_energy energy ledger
+PASS high_energy momentum ledger
+PASS high_energy nonnegative heat, capacity and group ceiling
+PASS higher_energy energy ledger
+PASS higher_energy momentum ledger
+PASS higher_energy nonnegative heat, capacity and group ceiling
+PASS steeper_wall energy ledger
+PASS steeper_wall momentum ledger
+PASS steeper_wall nonnegative heat, capacity and group ceiling
+PASS light_receiver energy ledger
+PASS light_receiver momentum ledger
+PASS light_receiver nonnegative heat, capacity and group ceiling
+PASS linear_wall energy ledger
+PASS linear_wall momentum ledger
+PASS linear_wall nonnegative heat, capacity and group ceiling
+PASS (0.5, 0.5, 0.1) energy ledger
+PASS (0.5, 0.5, 0.1) momentum ledger
+PASS (0.5, 0.5, 0.1) nonnegative heat, capacity and group ceiling
+PASS (0.5, 0.5, 0.3) energy ledger
+PASS (0.5, 0.5, 0.3) momentum ledger
+PASS (0.5, 0.5, 0.3) nonnegative heat, capacity and group ceiling
+PASS (0.5, 0.5, 0.6) energy ledger
+PASS (0.5, 0.5, 0.6) momentum ledger
+PASS (0.5, 0.5, 0.6) nonnegative heat, capacity and group ceiling
+PASS (0.5, 1.0, 0.1) energy ledger
+PASS (0.5, 1.0, 0.1) momentum ledger
+PASS (0.5, 1.0, 0.1) nonnegative heat, capacity and group ceiling
+PASS (0.5, 1.0, 0.3) energy ledger
+PASS (0.5, 1.0, 0.3) momentum ledger
+PASS (0.5, 1.0, 0.3) nonnegative heat, capacity and group ceiling
+PASS (0.5, 1.0, 0.6) energy ledger
+PASS (0.5, 1.0, 0.6) momentum ledger
+PASS (0.5, 1.0, 0.6) nonnegative heat, capacity and group ceiling
+PASS (0.5, 2.0, 0.1) energy ledger
+PASS (0.5, 2.0, 0.1) momentum ledger
+PASS (0.5, 2.0, 0.1) nonnegative heat, capacity and group ceiling
+PASS (0.5, 2.0, 0.3) energy ledger
+PASS (0.5, 2.0, 0.3) momentum ledger
+PASS (0.5, 2.0, 0.3) nonnegative heat, capacity and group ceiling
+PASS (0.5, 2.0, 0.6) energy ledger
+PASS (0.5, 2.0, 0.6) momentum ledger
+PASS (0.5, 2.0, 0.6) nonnegative heat, capacity and group ceiling
+PASS (1.0, 0.5, 0.1) energy ledger
+PASS (1.0, 0.5, 0.1) momentum ledger
+PASS (1.0, 0.5, 0.1) nonnegative heat, capacity and group ceiling
+PASS (1.0, 0.5, 0.3) energy ledger
+PASS (1.0, 0.5, 0.3) momentum ledger
+PASS (1.0, 0.5, 0.3) nonnegative heat, capacity and group ceiling
+PASS (1.0, 0.5, 0.6) energy ledger
+PASS (1.0, 0.5, 0.6) momentum ledger
+PASS (1.0, 0.5, 0.6) nonnegative heat, capacity and group ceiling
+PASS (1.0, 1.0, 0.1) energy ledger
+PASS (1.0, 1.0, 0.1) momentum ledger
+PASS (1.0, 1.0, 0.1) nonnegative heat, capacity and group ceiling
+PASS (1.0, 1.0, 0.3) energy ledger
+PASS (1.0, 1.0, 0.3) momentum ledger
+PASS (1.0, 1.0, 0.3) nonnegative heat, capacity and group ceiling
+PASS (1.0, 1.0, 0.6) energy ledger
+PASS (1.0, 1.0, 0.6) momentum ledger
+PASS (1.0, 1.0, 0.6) nonnegative heat, capacity and group ceiling
+PASS (1.0, 2.0, 0.1) energy ledger
+PASS (1.0, 2.0, 0.1) momentum ledger
+PASS (1.0, 2.0, 0.1) nonnegative heat, capacity and group ceiling
+PASS (1.0, 2.0, 0.3) energy ledger
+PASS (1.0, 2.0, 0.3) momentum ledger
+PASS (1.0, 2.0, 0.3) nonnegative heat, capacity and group ceiling
+PASS (1.0, 2.0, 0.6) energy ledger
+PASS (1.0, 2.0, 0.6) momentum ledger
+PASS (1.0, 2.0, 0.6) nonnegative heat, capacity and group ceiling
+PASS (2.0, 0.5, 0.1) energy ledger
+PASS (2.0, 0.5, 0.1) momentum ledger
+PASS (2.0, 0.5, 0.1) nonnegative heat, capacity and group ceiling
+PASS (2.0, 0.5, 0.3) energy ledger
+PASS (2.0, 0.5, 0.3) momentum ledger
+PASS (2.0, 0.5, 0.3) nonnegative heat, capacity and group ceiling
+PASS (2.0, 0.5, 0.6) energy ledger
+PASS (2.0, 0.5, 0.6) momentum ledger
+PASS (2.0, 0.5, 0.6) nonnegative heat, capacity and group ceiling
+PASS (2.0, 1.0, 0.1) energy ledger
+PASS (2.0, 1.0, 0.1) momentum ledger
+PASS (2.0, 1.0, 0.1) nonnegative heat, capacity and group ceiling
+PASS (2.0, 1.0, 0.3) energy ledger
+PASS (2.0, 1.0, 0.3) momentum ledger
+PASS (2.0, 1.0, 0.3) nonnegative heat, capacity and group ceiling
+PASS (2.0, 1.0, 0.6) energy ledger
+PASS (2.0, 1.0, 0.6) momentum ledger
+PASS (2.0, 1.0, 0.6) nonnegative heat, capacity and group ceiling
+PASS (2.0, 2.0, 0.1) energy ledger
+PASS (2.0, 2.0, 0.1) momentum ledger
+PASS (2.0, 2.0, 0.1) nonnegative heat, capacity and group ceiling
+PASS (2.0, 2.0, 0.3) energy ledger
+PASS (2.0, 2.0, 0.3) momentum ledger
+PASS (2.0, 2.0, 0.3) nonnegative heat, capacity and group ceiling
+PASS (2.0, 2.0, 0.6) energy ledger
+PASS (2.0, 2.0, 0.6) momentum ledger
+PASS (2.0, 2.0, 0.6) nonnegative heat, capacity and group ceiling
+PASS baseline positive traversal and sampled monotonicity
+PASS refinement preserves monotonicity
+PASS endpoint convergence
+PASS baseline endpoint gap bound
+PASS no exchange reaccelerates
+PASS tiny gap positive and sampled monotone
+PASS finite capacity obstruction
+PASS monotone speed derivative agrees with sample signs
+PASS finite-difference speed derivative

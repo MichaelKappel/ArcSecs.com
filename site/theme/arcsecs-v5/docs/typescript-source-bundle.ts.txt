@@ -1,0 +1,350 @@
+// ============================================================
+// FILE: assets/ts/arcsecs-physics-engine/ConstantsManager.ts
+// ============================================================
+import { PhysicalConstantsSnapshot, ScenarioMode } from "./PhysicsTypes";
+
+/**
+ * Coordinates invariant constants and explicitly selected speculative branches.
+ * Dimensionless constants are kept visible so model drift cannot hide inside magic numbers.
+ */
+export class ConstantsManager {
+    private readonly baseline: PhysicalConstantsSnapshot;
+
+    /**
+     * @param baseline The reference constants used before a scenario branch changes anything.
+     */
+    public constructor(baseline: PhysicalConstantsSnapshot) {
+        this.baseline = baseline;
+    }
+
+    /**
+     * Returns constants for a scenario and elapsed time.
+     *
+     * @param mode The selected simulation scenario mode.
+     * @param elapsedSeconds Elapsed scenario time in seconds.
+     * @returns A snapshot of constants for this step.
+     */
+    public getSnapshot(mode: ScenarioMode, elapsedSeconds: number): PhysicalConstantsSnapshot {
+        if (mode === "tired-light") {
+            return this.createTiredLightSnapshot(elapsedSeconds);
+        }
+
+        if (mode === "proca-photon" || mode === "condensate") {
+            return {
+                ...this.baseline,
+                photonMassKilograms: Math.max(this.baseline.photonMassKilograms, 1e-54)
+            };
+        }
+
+        return this.baseline;
+    }
+
+    /**
+     * Creates a conservative tired-light branch where effective c decay is explicit.
+     *
+     * @param elapsedSeconds Elapsed scenario time in seconds.
+     * @returns A constants snapshot with the effective light speed adjusted.
+     */
+    private createTiredLightSnapshot(elapsedSeconds: number): PhysicalConstantsSnapshot {
+        const hubbleLikeDecayPerSecond: number = 2.2e-18;
+        const decayFactor: number = Math.exp(-hubbleLikeDecayPerSecond * elapsedSeconds);
+        const adjustedSpeedOfLight: number = this.baseline.speedOfLightMetersPerSecond * decayFactor;
+
+        return {
+            ...this.baseline,
+            speedOfLightMetersPerSecond: adjustedSpeedOfLight
+        };
+    }
+}
+
+
+// ============================================================
+// FILE: assets/ts/arcsecs-physics-engine/CorePhysicsEngine.ts
+// ============================================================
+import { ConstantsManager } from "./ConstantsManager";
+import { ConservationLedgerEntry, SimulationStepInput, TelemetryFrame } from "./PhysicsTypes";
+
+/**
+ * Minimal deterministic coordinator for ArcSecs research-mode simulations.
+ * The implementation favors visible ledgers over hidden corrections.
+ */
+export class CorePhysicsEngine {
+    private readonly constantsManager: ConstantsManager;
+
+    /**
+     * @param constantsManager Supplies scenario-specific constants for each step.
+     */
+    public constructor(constantsManager: ConstantsManager) {
+        this.constantsManager = constantsManager;
+    }
+
+    /**
+     * Executes one simulation step and returns the telemetry needed by the UI.
+     *
+     * @param input Step mode, elapsed time, and entity state.
+     * @returns A telemetry frame for charts, warnings, and conservation ledgers.
+     */
+    public step(input: SimulationStepInput): TelemetryFrame {
+        const constants = this.constantsManager.getSnapshot(input.mode, input.elapsedSeconds);
+        const conservationLedger: ConservationLedgerEntry[] = this.createConservationLedger(input);
+        const warnings: string[] = [];
+
+        if (input.mode !== "mainstream" && conservationLedger.some((entry: ConservationLedgerEntry) => !entry.passed)) {
+            warnings.push("Speculative branch failed at least one conservation ledger check.");
+        }
+
+        return {
+            mode: input.mode,
+            elapsedSeconds: input.elapsedSeconds,
+            constants,
+            conservationLedger,
+            warnings
+        };
+    }
+
+    /**
+     * Builds conservation entries for a step. Real scenario modules should append their own checks.
+     *
+     * @param input Current simulation step input.
+     * @returns Ledger entries that make failures visible.
+     */
+    private createConservationLedger(input: SimulationStepInput): ConservationLedgerEntry[] {
+        const totalRestMassKilograms: number = input.entities.reduce(
+            (runningTotal: number, entity) => runningTotal + entity.restMassKilograms,
+            0
+        );
+
+        return [
+            {
+                name: "Total rest mass accounting",
+                expectedValue: totalRestMassKilograms,
+                observedValue: totalRestMassKilograms,
+                tolerance: 1e-12,
+                passed: true,
+                notes: "Baseline placeholder check. Scenario modules should add energy, momentum, and redshift ledgers."
+            }
+        ];
+    }
+}
+
+
+// ============================================================
+// FILE: assets/ts/arcsecs-physics-engine/DarkMatterCondensateModel.ts
+// ============================================================
+/**
+ * Slow-light condensate helper for speculative dark-sector density fields.
+ */
+export class DarkMatterCondensateModel {
+    /**
+     * Estimates density growth from degraded photon energy.
+     *
+     * @param capturedEnergyJoules Captured or exhausted photon energy.
+     * @param effectiveVolumeCubicMeters Volume over which the condensate is distributed.
+     * @param speedOfLightMetersPerSecond Local effective speed of light.
+     * @returns Effective mass density in kilograms per cubic meter.
+     */
+    public estimateDensity(capturedEnergyJoules: number, effectiveVolumeCubicMeters: number, speedOfLightMetersPerSecond: number): number {
+        if (effectiveVolumeCubicMeters <= 0 || speedOfLightMetersPerSecond <= 0) {
+            return 0;
+        }
+
+        const equivalentMassKilograms: number = capturedEnergyJoules / Math.pow(speedOfLightMetersPerSecond, 2);
+        return equivalentMassKilograms / effectiveVolumeCubicMeters;
+    }
+}
+
+
+// ============================================================
+// FILE: assets/ts/arcsecs-physics-engine/PhysicsTypes.ts
+// ============================================================
+/**
+ * Shared TypeScript contracts for ArcSecs speculative physics-engine examples.
+ * These files are source examples for the research package; the current WordPress
+ * theme does not compile or enqueue them at runtime.
+ */
+
+export type ScenarioMode = "mainstream" | "tired-light" | "proca-photon" | "condensate" | "relational-inertia";
+
+export interface Vector3D {
+    readonly x: number;
+    readonly y: number;
+    readonly z: number;
+}
+
+export interface SimulationEntity {
+    readonly entityId: string;
+    readonly displayName: string;
+    readonly restMassKilograms: number;
+    readonly positionMeters: Vector3D;
+    readonly velocityMetersPerSecond: Vector3D;
+}
+
+export interface PhysicalConstantsSnapshot {
+    readonly speedOfLightMetersPerSecond: number;
+    readonly gravitationalConstant: number;
+    readonly planckConstantReduced: number;
+    readonly elementaryChargeCoulombs: number;
+    readonly fineStructureConstant: number;
+    readonly photonMassKilograms: number;
+}
+
+export interface SimulationStepInput {
+    readonly mode: ScenarioMode;
+    readonly elapsedSeconds: number;
+    readonly entities: readonly SimulationEntity[];
+}
+
+export interface ConservationLedgerEntry {
+    readonly name: string;
+    readonly expectedValue: number;
+    readonly observedValue: number;
+    readonly tolerance: number;
+    readonly passed: boolean;
+    readonly notes: string;
+}
+
+export interface TelemetryFrame {
+    readonly mode: ScenarioMode;
+    readonly elapsedSeconds: number;
+    readonly constants: PhysicalConstantsSnapshot;
+    readonly conservationLedger: readonly ConservationLedgerEntry[];
+    readonly warnings: readonly string[];
+}
+
+
+// ============================================================
+// FILE: assets/ts/arcsecs-physics-engine/ProcaPhotonModel.ts
+// ============================================================
+import { PhysicalConstantsSnapshot } from "./PhysicsTypes";
+
+/**
+ * Proca-inspired photon transport helper for speculative massive-photon branches.
+ */
+export class ProcaPhotonModel {
+    /**
+     * Calculates an approximate group velocity for a photon with a tiny rest mass.
+     *
+     * @param frequencyHertz Photon frequency in hertz.
+     * @param constants Constants snapshot containing c, h-bar, and photon mass.
+     * @returns Approximate group velocity in meters per second.
+     */
+    public calculateGroupVelocity(frequencyHertz: number, constants: PhysicalConstantsSnapshot): number {
+        if (constants.photonMassKilograms <= 0) {
+            return constants.speedOfLightMetersPerSecond;
+        }
+
+        const angularFrequency: number = 2 * Math.PI * frequencyHertz;
+        const massTerm: number = (constants.photonMassKilograms * Math.pow(constants.speedOfLightMetersPerSecond, 2)) / constants.planckConstantReduced;
+        const velocityFactor: number = Math.sqrt(Math.max(0, 1 - Math.pow(massTerm / angularFrequency, 2)));
+        return constants.speedOfLightMetersPerSecond * velocityFactor;
+    }
+}
+
+
+// ============================================================
+// FILE: assets/ts/arcsecs-physics-engine/RelationalInertiaModel.ts
+// ============================================================
+import { SimulationEntity, Vector3D } from "./PhysicsTypes";
+
+/**
+ * Estimates relational inertia links between entities without hiding the approximation.
+ */
+export class RelationalInertiaModel {
+    /**
+     * Calculates a simple distance-weighted relational influence score.
+     *
+     * @param entity The local body being evaluated.
+     * @param universeEntities Other bodies contributing relational context.
+     * @returns A dimensionless influence score for telemetry comparisons.
+     */
+    public calculateInfluenceScore(entity: SimulationEntity, universeEntities: readonly SimulationEntity[]): number {
+        return universeEntities
+            .filter((otherEntity: SimulationEntity) => otherEntity.entityId !== entity.entityId)
+            .reduce((runningScore: number, otherEntity: SimulationEntity) => {
+                const separationMeters: number = this.calculateDistance(entity.positionMeters, otherEntity.positionMeters);
+                if (separationMeters <= 0) {
+                    return runningScore;
+                }
+
+                return runningScore + (otherEntity.restMassKilograms / Math.pow(separationMeters, 2));
+            }, 0);
+    }
+
+    /**
+     * Calculates Euclidean distance between two vectors.
+     *
+     * @param first First point.
+     * @param second Second point.
+     * @returns Distance in meters.
+     */
+    private calculateDistance(first: Vector3D, second: Vector3D): number {
+        const xDifference: number = first.x - second.x;
+        const yDifference: number = first.y - second.y;
+        const zDifference: number = first.z - second.z;
+        return Math.sqrt((xDifference * xDifference) + (yDifference * yDifference) + (zDifference * zDifference));
+    }
+}
+
+
+// ============================================================
+// FILE: assets/ts/arcsecs-physics-engine/TelemetryRenderer.ts
+// ============================================================
+import { TelemetryFrame } from "./PhysicsTypes";
+
+/**
+ * Converts telemetry frames into plain view models for a WordPress or canvas UI layer.
+ */
+export class TelemetryRenderer {
+    /**
+     * Creates human-readable lines for a telemetry panel.
+     *
+     * @param frame The telemetry frame returned by the engine.
+     * @returns Display lines for a non-jQuery UI renderer.
+     */
+    public createDisplayLines(frame: TelemetryFrame): readonly string[] {
+        const failedChecks: number = frame.conservationLedger.filter((entry) => !entry.passed).length;
+        return [
+            `Mode: ${frame.mode}`,
+            `Elapsed seconds: ${frame.elapsedSeconds}`,
+            `Photon mass kg: ${frame.constants.photonMassKilograms}`,
+            `Ledger failures: ${failedChecks}`,
+            `Warnings: ${frame.warnings.length}`
+        ];
+    }
+}
+
+
+// ============================================================
+// FILE: assets/ts/arcsecs-physics-engine/TiredLightModel.ts
+// ============================================================
+/**
+ * Models explicit photon-energy attenuation for tired-light thought experiments.
+ */
+export class TiredLightModel {
+    /**
+     * Applies exponential energy decay across path length.
+     *
+     * @param initialEnergyJoules Initial photon or packet energy.
+     * @param distanceMeters Propagation distance.
+     * @param attenuationPerMeter Energy-loss coefficient per meter.
+     * @returns Remaining energy in joules.
+     */
+    public calculateRemainingEnergy(initialEnergyJoules: number, distanceMeters: number, attenuationPerMeter: number): number {
+        return initialEnergyJoules * Math.exp(-attenuationPerMeter * distanceMeters);
+    }
+
+    /**
+     * Converts energy loss into an observed redshift-style ratio.
+     *
+     * @param initialEnergyJoules Initial energy before attenuation.
+     * @param remainingEnergyJoules Remaining energy after attenuation.
+     * @returns A redshift-like z value.
+     */
+    public calculateEnergyLossRedshift(initialEnergyJoules: number, remainingEnergyJoules: number): number {
+        if (remainingEnergyJoules <= 0) {
+            return Number.POSITIVE_INFINITY;
+        }
+
+        return (initialEnergyJoules / remainingEnergyJoules) - 1;
+    }
+}

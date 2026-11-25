@@ -1,0 +1,4 @@
+Maximum allowed-event energy or momentum-magnitude residual: 3.3306690738754696e-16
+One arcsec bath-speed band: 0.99999999997649525 to 0.99999999999999978
+Synthetic random azimuth seed 3026, 20000 rays per case.
+All quantities dimensionless. Tree-level scalar proxy rates only; no vector rate or fit.

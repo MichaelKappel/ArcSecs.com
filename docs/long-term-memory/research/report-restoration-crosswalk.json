@@ -1,0 +1,107 @@
+{
+  "source_total_words": 129601,
+  "short_total_words": 13092,
+  "full_depth_total_words": 145689,
+  "figures": 22,
+  "reports": [
+    {
+      "mission": 1,
+      "source_name": "Testing Intrinsic Photon Rest Mass.md",
+      "full_words": 16494,
+      "short_words": 1513,
+      "expanded_words": 18316,
+      "source_text_bytes": 606348,
+      "expanded_md_bytes": 147202,
+      "figures": 4,
+      "reconstructed_file": "R01.md"
+    },
+    {
+      "mission": 2,
+      "source_name": "Constant Time Physical-Process Model.md",
+      "full_words": 14203,
+      "short_words": 1426,
+      "expanded_words": 16006,
+      "source_text_bytes": 458023,
+      "expanded_md_bytes": 136057,
+      "figures": 3,
+      "reconstructed_file": "R02.md"
+    },
+    {
+      "mission": 3,
+      "source_name": "Cosmic Age and Distance Calibration.md",
+      "full_words": 16759,
+      "short_words": 1391,
+      "expanded_words": 18527,
+      "source_text_bytes": 421349,
+      "expanded_md_bytes": 150328,
+      "figures": 2,
+      "reconstructed_file": "R03.md"
+    },
+    {
+      "mission": 4,
+      "source_name": "Cosmological Photon Energy-Loss Mechanisms.md",
+      "full_words": 15267,
+      "short_words": 1459,
+      "expanded_words": 17121,
+      "source_text_bytes": 802028,
+      "expanded_md_bytes": 144995,
+      "figures": 5,
+      "reconstructed_file": "R04.md"
+    },
+    {
+      "mission": 5,
+      "source_name": "Testing Relational Gravity Mechanisms.md",
+      "full_words": 15468,
+      "short_words": 1460,
+      "expanded_words": 17203,
+      "source_text_bytes": 573111,
+      "expanded_md_bytes": 145177,
+      "figures": 4,
+      "reconstructed_file": "R05.md"
+    },
+    {
+      "mission": 6,
+      "source_name": "Dark Sector Alternatives and Propulsion.md",
+      "full_words": 16212,
+      "short_words": 1522,
+      "expanded_words": 18044,
+      "source_text_bytes": 725292,
+      "expanded_md_bytes": 144027,
+      "figures": 4,
+      "reconstructed_file": "R06.md"
+    },
+    {
+      "mission": 7,
+      "source_name": "External Influence on Cosmic Bubbles.md",
+      "full_words": 12396,
+      "short_words": 1438,
+      "expanded_words": 14157,
+      "source_text_bytes": 97983,
+      "expanded_md_bytes": 111078,
+      "figures": 0,
+      "reconstructed_file": "R07.md"
+    },
+    {
+      "mission": 8,
+      "source_name": "Bubble Multiverse Dynamics and Age.md",
+      "full_words": 11260,
+      "short_words": 1440,
+      "expanded_words": 13008,
+      "source_text_bytes": 88779,
+      "expanded_md_bytes": 101779,
+      "figures": 0,
+      "reconstructed_file": "R08.md"
+    },
+    {
+      "mission": 9,
+      "source_name": "Cosmic Bubble Detection Falsification Analysis.md",
+      "full_words": 11542,
+      "short_words": 1443,
+      "expanded_words": 13307,
+      "source_text_bytes": 91802,
+      "expanded_md_bytes": 105123,
+      "figures": 0,
+      "reconstructed_file": "R09.md"
+    }
+  ]
+}

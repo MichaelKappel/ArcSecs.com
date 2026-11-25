@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Positive-Mass Photons: Causal Emission, Redshift &amp; Energy Ledger</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background-color: #FAF8F5;
+      color: #1E293B;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .chart-container {
+      position: relative;
+      width: 100%;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 290px;
+      max-height: 360px;
+    }
+    @media (min-width: 768px) {
+      .chart-container {
+        height: 330px;
+      }
+    }
+    .math-pill {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-amber-100 selection:text-amber-900">
+  <!-- Chosen Palette: Warm Alabaster & Slate Editorial (#FAF8F5 warm neutral background, #FFFFFF crisp card surfaces, #1E293B deep slate ink, #2B6CB0 / #2C7A7B calm teal-slate primary accent, and #C05621 warm terracotta secondary accent for empirical bounds and obstructions) -->
+  <!-- Application Structure Plan: Designed as a five-module interactive scientific synthesis rather than mirroring the linear 12-section manuscript. (1) Executive Synthesis & Verdict opens with key empirical constraints and the core programmatic decision (retiring stationary fixed-gap drag in favor of Hybrid Bulk-Recession + Open-System Bath). (2) Photon Ontology & Recoil Emission pairs interactive model architecture cards (Stueckelberg A1, Abelian Higgs A2, Polariton A3) with a live atomic emission recoil and speed-deficit calculator. (3) Transport Dynamics & PDE Diagnostics integrates interactive benchmarks for Part XXVIII fixed-gap drag, Part XXVII shell reacceleration, finite-capacity bath saturation vs. multiplicative history-state relaxation, and the 1D+T Stueckelberg-matter PDE energy ledger. (4) Cosmological Confrontation (DES-SN5YR & Foundation 12) enables hands-on testing of the dissipative fraction slider against supernova time-dilation bounds and explores Euclidean ballistic vs. tired-light distance ratios. (5) Observational Bounds, Closed Energy Ledger & Charter Matrix consolidates empirical mass limits, dark-matter energy comparisons, and filterable compliance across all 12 ArcSecs foundations. This structure prioritizes active hypothesis testing and cross-linking physical equations with observational constraints. -->
+  <!-- Visualization & Content Choices:
+       1. Key Metrics & Programmatic Verdict -> Goal: Inform -> Structured HTML KPI cards & Verdict matrix -> Clickable verdict filter -> Immediate clarity on what is retained vs. retired -> HTML/Tailwind/JS.
+       2. Photon Ontology (A1, A2, A3) & Atomic Recoil -> Goal: Organize & Inform -> Tabbed architecture explorer + interactive transition/mass calculator -> User selects transition (HI 21cm, Optical, Ly-alpha, X-ray) and photon mass -> Dynamically computes recoil fraction, speed deficit, and H 1S-2S shift -> HTML/JS.
+       3. Fixed-Gap Drag & Shell Crossing Diagnostics -> Goal: Compare -> Interactive parameter selector + comparative data table -> Switch between epsilon regimes (1e-2 to 1e-16) and shell modes -> Highlights the (1+u^2) reacceleration obstruction -> HTML/JS.
+       4. Bath Saturation & History-State Slowing -> Goal: Change -> Multi-series Line Chart -> Toggle between finite heat capacities (c_v = 20, 100, 1e6), Multiplicative History-State, and failed Additive Linear Memory -> Demonstrates asymptotic coasting v_inf > 0 vs. unphysical momentum reversal -> Chart.js (Canvas).
+       5. Autonomous 1D+T Stueckelberg PDE Energy Ledger -> Goal: Change & Inform -> Stacked/Multi-line Energy Partition Chart -> Toggle grid resolution (Nx=600 vs Nx=1200) and inspect spectral blue-shift (k: 8.000 -> 8.009) -> Proves energy conservation to 9.75e-6 and high-pass blue-shift -> Chart.js (Canvas).
+       6. DES-SN5YR Hybrid Stretch Explorer -> Goal: Relationships -> Interactive Line Chart + Range Slider -> Adjust dissipative redshift fraction f_diss (0% to 10%) -> Real-time comparison of b_eff(z) against DES-SN5YR (1.003 +/- 0.011) -> Chart.js (Canvas).
+       7. Foundation 12 Distance Ratio Explorer -> Goal: Compare -> Line Chart -> Toggle D_A and D_L ratios relative to flat LCDM across z in [0.05, 2.0] -> Shows static tired light failure and Euclidean ballistic crossover at z ~ 1.3 -> Chart.js (Canvas).
+       8. Closed Radiation Energy Ledger -> Goal: Inform -> Logarithmic Bar Chart -> Compare CMB, deposited heat (0.5% vs 100% dissipation), and Dark Matter density -> Confirms dissipated radiation is < 0.02% of DM -> Chart.js (Canvas).
+       9. Charter Compliance & Observational Bounds -> Goal: Organize -> Filterable interactive tables -> Search/filter by foundation status or observational channel -> HTML/JS. -->
+  <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+  <header class="sticky top-0 z-30 bg-[#FAF8F5]/95 backdrop-blur border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="inline-block w-2.5 h-2.5 rounded-full bg-teal-700"></span>
+          <span class="text-xs font-semibold uppercase tracking-wider text-teal-800">ArcSecs Research Program &bull; Prompt 02 of 06</span>
+        </div>
+        <h1 class="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">Positive-Mass Photons: Causal Emission, Redshift &amp; Energy Ledger</h1>
+      </div>
+      <nav class="flex flex-wrap gap-1.5 text-xs sm:text-sm" aria-label="Section navigation">
+        <a href="#sec-synthesis" class="px-3 py-1.5 rounded-lg bg-white border border-stone-200 text-slate-700 hover:border-teal-700 hover:text-teal-800 transition">1. Synthesis &amp; Verdict</a>
+        <a href="#sec-ontology" class="px-3 py-1.5 rounded-lg bg-white border border-stone-200 text-slate-700 hover:border-teal-700 hover:text-teal-800 transition">2. Ontology &amp; Recoil</a>
+        <a href="#sec-transport" class="px-3 py-1.5 rounded-lg bg-white border border-stone-200 text-slate-700 hover:border-teal-700 hover:text-teal-800 transition">3. Transport &amp; PDE</a>
+        <a href="#sec-cosmology" class="px-3 py-1.5 rounded-lg bg-white border border-stone-200 text-slate-700 hover:border-teal-700 hover:text-teal-800 transition">4. Supernovae &amp; Distances</a>
+        <a href="#sec-ledger" class="px-3 py-1.5 rounded-lg bg-white border border-stone-200 text-slate-700 hover:border-teal-700 hover:text-teal-800 transition">5. Bounds &amp; Charter</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <section id="sec-synthesis" class="space-y-6">
+      <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-sm">
+        <div class="max-w-4xl space-y-3">
+          <span class="text-xs font-semibold uppercase tracking-widest text-amber-800">Executive Synthesis &amp; Programmatic Resolution</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Why Stationary Photon Drag Fails—And How Hybrid Kinematics Resolves It</h2>
+          <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+            This opening module synthesizes the core findings of Work Packages A–E under the ArcSecs scientific charter, where photons are finite-energy wavepackets carrying strictly positive rest mass or frequency gap (<span class="math-pill text-slate-800">&#937; &gt; 0</span>) in universal constant ordering time (<span class="math-pill text-slate-800">T</span>) and non-stretching Euclidean space (<span class="math-pill text-slate-800">x</span>). By confronting high-precision analytical benchmarks and autonomous PDE simulations with primary astrophysical datasets, we establish two quantitative obstructions against stationary post-emission drag and define the charter-compliant <strong>Hybrid Bulk-Recession plus Open-System Bath</strong> replacement.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+          <div class="bg-[#FAF8F5] rounded-xl border border-stone-200 p-4">
+            <div class="text-xs font-medium text-slate-500 uppercase">FRB Photon Mass Ceiling</div>
+            <div class="text-xl font-bold text-slate-900 mt-1 math-pill">&le; 4.83 &times; 10<sup>&minus;51</sup> kg</div>
+            <p class="text-xs text-slate-600 mt-1.5">1&sigma; limit from 104 localized FRBs (&Lambda;CDM), restricting optical gap ratios to <span class="math-pill">&epsilon; &le; 3&times;10<sup>&minus;16</sup></span>.</p>
+          </div>
+          <div class="bg-[#FAF8F5] rounded-xl border border-stone-200 p-4">
+            <div class="text-xs font-medium text-slate-500 uppercase">DES-SN5YR Stretch Exponent</div>
+            <div class="text-xl font-bold text-teal-800 mt-1 math-pill">b = 1.003 &plusmn; 0.011</div>
+            <p class="text-xs text-slate-600 mt-1.5">1504 Type Ia SNe (<span class="math-pill">0.1 &lesssim; z &lesssim; 1.2</span>) rule out stationary drag (<span class="math-pill">A = 1, b = 0</span>) at &gt;65&sigma; nominal.</p>
+          </div>
+          <div class="bg-[#FAF8F5] rounded-xl border border-stone-200 p-4">
+            <div class="text-xs font-medium text-slate-500 uppercase">Allowed Dissipative Fraction</div>
+            <div class="text-xl font-bold text-amber-800 mt-1 math-pill">z<sub>diss</sub> / z<sub>total</sub> &le; 0.5&ndash;1.0%</div>
+            <p class="text-xs text-slate-600 mt-1.5">Bulk recession (<span class="math-pill">V<sub>rec</sub></span>) drives achromatic stretch <span class="math-pill">A = 1+z<sub>kin</sub></span>; bath aging is tightly subdominant.</p>
+          </div>
+          <div class="bg-[#FAF8F5] rounded-xl border border-stone-200 p-4">
+            <div class="text-xs font-medium text-slate-500 uppercase">Closed Ledger Dark-Sector Share</div>
+            <div class="text-xl font-bold text-slate-900 mt-1 math-pill">9.52 &times; 10<sup>&minus;7</sup> &rho;<sub>DM</sub>c<sup>2</sup></div>
+            <p class="text-xs text-slate-600 mt-1.5">At 0.5% dissipation (<span class="math-pill">1.91&times;10<sup>&minus;4</sup></span> even at 100%), proving lost photon energy cannot form dark matter.</p>
+          </div>
+        </div>
+
+        <div class="mt-8 border-t border-stone-200 pt-6">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+            <div>
+              <h3 class="text-base font-bold text-slate-900">Programmatic Architecture Decisions</h3>
+              <p class="text-xs text-slate-500">Click a filter to inspect which mechanisms are retained, revised, or retired under the charter.</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5" id="verdict-filters">
+              <button data-filter="all" class="verdict-btn px-3 py-1 rounded-md text-xs font-medium bg-teal-800 text-white">All (5)</button>
+              <button data-filter="retain" class="verdict-btn px-3 py-1 rounded-md text-xs font-medium bg-stone-100 text-slate-700 hover:bg-stone-200">Retain / Advance</button>
+              <button data-filter="revise" class="verdict-btn px-3 py-1 rounded-md text-xs font-medium bg-stone-100 text-slate-700 hover:bg-stone-200">Revise</button>
+              <button data-filter="retire" class="verdict-btn px-3 py-1 rounded-md text-xs font-medium bg-stone-100 text-slate-700 hover:bg-stone-200">Retire</button>
+            </div>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse text-xs sm:text-sm">
+              <thead>
+                <tr class="border-b border-stone-200 text-slate-500 uppercase text-[11px]">
+                  <th class="py-2.5 pr-4">Candidate Mechanism</th>
+                  <th class="py-2.5 px-4">Stability &amp; Gap</th>
+                  <th class="py-2.5 px-4">Observational &amp; Numerical Diagnostic</th>
+                  <th class="py-2.5 pl-4">Verdict</th>
+                </tr>
+              </thead>
+              <tbody id="verdict-tbody" class="divide-y divide-stone-100"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-ontology" class="space-y-6">
+      <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-sm">
+        <div class="max-w-4xl space-y-2 mb-6">
+          <span class="text-xs font-semibold uppercase tracking-widest text-teal-800">Work Package A &bull; Ontology &amp; Causal Emission</span>
+          <h2 class="text-2xl font-bold text-slate-900">Positive-Mass Field Implementations &amp; Atomic Recoil Calculator</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            In this section, explore the three field-theoretic implementations constructed to support a strictly positive frequency gap (<span class="math-pill">&#937; &gt; 0</span>) without ghost instabilities or charge violation, and use the interactive emission calculator to test how finite atomic mass (<span class="math-pill">M<sub>a</sub></span>) and photon rest mass (<span class="math-pill">m<sub>&gamma;</sub></span>) prevent freshly emitted wavepackets from strictly reaching the local causal ceiling <span class="math-pill">C<sub>em</sub></span>.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <div class="lg:col-span-6 flex flex-col justify-between bg-[#FAF8F5] rounded-xl border border-stone-200 p-5">
+            <div>
+              <div class="flex flex-wrap gap-2 mb-4" id="impl-tabs">
+                <button data-impl="A1" class="impl-tab px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal-800 text-white">A1: Stueckelberg Vector</button>
+                <button data-impl="A2" class="impl-tab px-3 py-1.5 rounded-lg text-xs font-semibold bg-white border border-stone-200 text-slate-700 hover:border-teal-700">A2: Abelian Higgs</button>
+                <button data-impl="A3" class="impl-tab px-3 py-1.5 rounded-lg text-xs font-semibold bg-white border border-stone-200 text-slate-700 hover:border-teal-700">A3: Causal Polariton</button>
+              </div>
+              <div id="impl-content" class="space-y-3 text-sm text-slate-700"></div>
+            </div>
+            <div class="mt-5 pt-4 border-t border-stone-200 text-xs text-slate-500">
+              <strong>Key Separation:</strong> Frequency gap <span class="math-pill">&#937;</span>, invariant rest mass <span class="math-pill">m<sub>&gamma;</sub> = &#8463;&#937;/C<sup>2</sup></span>, and packet stress-energy integral remain distinct whenever <span class="math-pill">C(&#8464;)</span> varies spatially.
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 bg-[#FAF8F5] rounded-xl border border-stone-200 p-5 space-y-4">
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-bold text-slate-900">Atomic Recoil &amp; Emission Speed Deficit Simulator</h3>
+              <span class="text-xs px-2 py-0.5 rounded bg-teal-100 text-teal-900 font-medium">60-Digit Exact Kinematics</span>
+            </div>
+            <p class="text-xs text-slate-600">
+              Select an atomic transition and photon mass scale to inspect exact emitted photon energy <span class="math-pill">E<sub>&gamma;</sub></span>, emission speed deficit <span class="math-pill">(C<sub>em</sub> &minus; v<sub>g</sub>)/C<sub>em</sub></span>, and Hydrogen 1S&ndash;2S Yukawa clock shift <span class="math-pill">&delta;&nu;/&nu; = &minus;6(a<sub>B</sub>/&#8467;<sub>Y</sub>)<sup>2</sup></span>.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label for="calc-transition" class="block text-xs font-semibold text-slate-700 mb-1">Atomic Transition (Emitter Mass)</label>
+                <select id="calc-transition" class="w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-xs text-slate-800 focus:outline-none focus:border-teal-700">
+                  <option value="hi21">HI 21 cm (1.42 GHz, M_H)</option>
+                  <option value="opt2" selected>Optical Line (2.0 eV, Fe-56)</option>
+                  <option value="lya">Hydrogen Ly-&alpha; (10.20 eV, M_H)</option>
+                  <option value="xray">X-ray Transition (10 keV, Fe-56)</option>
+                </select>
+              </div>
+              <div>
+                <label for="calc-mass" class="block text-xs font-semibold text-slate-700 mb-1">Photon Rest Mass m<sub>&gamma;</sub></label>
+                <select id="calc-mass" class="w-full rounded-lg border border-stone-300 bg-white px-3 py-2 text-xs text-slate-800 focus:outline-none focus:border-teal-700">
+                  <option value="1e-54">10&#8315;&#8309;&#8308; kg (Ultra-light Benchmark)</option>
+                  <option value="1e-51" selected>10&#8315;&#8309;&#185; kg (FRB / Solar Wind Scale)</option>
+                  <option value="1e-40">10&#8315;&#8308;&#8304; kg (H 1S-2S Spectroscopy Limit)</option>
+                  <option value="1e-36">10&#8315;&#179;&#8310; kg (Heavy Test Mass)</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="recoil-results" class="grid grid-cols-2 gap-3 pt-1"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-transport" class="space-y-6">
+      <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-sm space-y-8">
+        <div class="max-w-4xl space-y-2">
+          <span class="text-xs font-semibold uppercase tracking-widest text-teal-800">Work Packages B &amp; C &bull; Slowing Pathways &amp; PDE Diagnostics</span>
+          <h2 class="text-2xl font-bold text-slate-900">Numerical Benchmarks, Shell Reacceleration &amp; Stueckelberg PDE Ledger</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Here we examine four coupled numerical diagnostics proving why stationary drag and passive linear baths cannot produce cosmological redshift: (1) Part XXVIII fixed-gap drag produces negligible slowing at empirical photon masses; (2) exiting a rising-<span class="math-pill">C(&#8464;)</span> shell reaccelerates photons unless drag is amplified by <span class="math-pill">(1+u<sup>2</sup>)</span>; (3) finite-capacity baths saturate at positive coasting speeds <span class="math-pill">v<sub>&infin;</sub> &gt; 0</span> while additive memory reverses momentum; and (4) the autonomous 1D+T Stueckelberg-matter PDE conserves energy to <span class="math-pill">9.75&times;10<sup>&minus;6</sup></span> (<span class="math-pill">N<sub>x</sub>=1200</span>) but blue-shifts broadband packets.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="bg-[#FAF8F5] rounded-xl border border-stone-200 p-5 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <h3 class="text-base font-bold text-slate-900">Bath Saturation vs. History-State Slowing</h3>
+                <button id="toggle-additive-btn" class="px-2.5 py-1 rounded text-xs font-medium bg-amber-100 text-amber-900 hover:bg-amber-200 transition">Show Failed Additive Memory</button>
+              </div>
+              <p class="text-xs text-slate-600 mb-3">
+                Normalized group velocity <span class="math-pill">v<sub>g</sub>/C</span> vs. photon age <span class="math-pill">&gamma;<sub>0</sub>&tau;</span> (<span class="math-pill">p<sub>0</sub> = 100</span>). Low heat capacity (<span class="math-pill">c<sub>v</sub> = 20</span>) heats to equilibrium and halts slowing at <span class="math-pill">v<sub>f</sub> = 0.99993</span>; multiplicative history-state (<span class="math-pill">&tau;<sub>M</sub> = 2.0</span>) preserves positivity (<span class="math-pill">v<sub>f</sub> = 0.34683</span>).
+              </p>
+            </div>
+            <div class="chart-container">
+              <canvas id="bathChart"></canvas>
+            </div>
+          </div>
+
+          <div class="bg-[#FAF8F5] rounded-xl border border-stone-200 p-5 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <h3 class="text-base font-bold text-slate-900">Autonomous 1D+T Stueckelberg PDE Energy Ledger</h3>
+                <div class="flex gap-1.5">
+                  <button data-nx="600" class="pde-nx-btn px-2.5 py-1 rounded text-xs font-semibold bg-teal-800 text-white">Nx = 600</button>
+                  <button data-nx="1200" class="pde-nx-btn px-2.5 py-1 rounded text-xs font-semibold bg-white border border-stone-300 text-slate-700">Nx = 1200</button>
+                </div>
+              </div>
+              <p class="text-xs text-slate-600 mb-3">
+                Energy partition (<span class="math-pill">E<sub>EM</sub>, E<sub>mat</sub>, E<sub>heat</sub></span>) for <span class="math-pill">&#937;=1, k<sub>0</sub>=8, &omega;<sub>b</sub>=1.5, g<sub>c</sub>=0.4, &gamma;<sub>b</sub>=0.08</span>. Sub-carrier oscillator damping removes low-<span class="math-pill">k</span> components, causing the packet to <strong>blue-shift</strong> (<span class="math-pill">k: 8.000 &rarr; 8.009</span>).
+              </p>
+            </div>
+            <div class="chart-container">
+              <canvas id="pdeChart"></canvas>
+            </div>
+            <div id="pde-stats-bar" class="grid grid-cols-3 gap-2 text-center bg-white rounded-lg border border-stone-200 p-2 text-xs"></div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-2">
+          <div class="lg:col-span-6 bg-[#FAF8F5] rounded-xl border border-stone-200 p-5 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="text-sm font-bold text-slate-900">Part XXVIII Fixed-Gap Drag Benchmark (60-Digit Precision)</h3>
+              <select id="drag-eps-select" class="rounded border border-stone-300 bg-white px-2.5 py-1 text-xs text-slate-800">
+                <option value="1e-2">&epsilon; = 10&#8315;&#178;</option>
+                <option value="1e-4">&epsilon; = 10&#8315;&#8308;</option>
+                <option value="1e-8" selected>&epsilon; = 10&#8315;&#8312;</option>
+                <option value="1e-16">&epsilon; = 10&#8315;&#185;&#8310; (Empirical Optical)</option>
+              </select>
+            </div>
+            <p class="text-xs text-slate-600">
+              Even after losing 50% of its energy (<span class="math-pill">z = 1</span>), an optical photon at <span class="math-pill">&epsilon; = 10<sup>&minus;16</sup></span> slows by only <span class="math-pill">2.00 &times; 10<sup>&minus;32</sup></span> and exhibits zero pulse stretch (<span class="math-pill">A = 1.000</span>).
+            </p>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr class="border-b border-stone-300 text-slate-500">
+                    <th class="py-1.5">Redshift z</th>
+                    <th class="py-1.5">Speed Deficit (C&minus;v<sub>a</sub>)/C</th>
+                    <th class="py-1.5">Exact Distance D&gamma;/C</th>
+                  </tr>
+                </thead>
+                <tbody id="drag-bench-tbody" class="divide-y divide-stone-200 math-pill"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 bg-[#FAF8F5] rounded-xl border border-stone-200 p-5 space-y-3">
+            <h3 class="text-sm font-bold text-slate-900">Part XXVII Shell-Crossing Reacceleration Obstruction</h3>
+            <p class="text-xs text-slate-600">
+              When exiting a dense Gaussian regulator shell (<span class="math-pill">u<sub>0</sub> = 100, &gamma;<sub>0</sub> = 0.05</span>), rising <span class="math-pill">C(x)</span> reaccelerates the photon (<span class="math-pill">dv<sub>g</sub>/dT &gt; 0</span>) unless drag scales as <span class="math-pill">(1+u<sup>2</sup>) d(ln C)/dT</span>, stripping <strong>98.54%</strong> of packet energy.
+            </p>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr class="border-b border-stone-300 text-slate-500">
+                    <th class="py-1.5">Shell-Crossing Regime</th>
+                    <th class="py-1.5">&omega;<sub>f</sub> / &omega;<sub>0</sub></th>
+                    <th class="py-1.5">v<sub>g,f</sub> / C<sub>&star;</sub></th>
+                    <th class="py-1.5">Foundation 3</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-stone-200">
+                  <tr>
+                    <td class="py-2 font-medium text-slate-800">Static Shell, No Drag (&gamma;=0)</td>
+                    <td class="py-2 math-pill">1.000000</td>
+                    <td class="py-2 math-pill">0.999950</td>
+                    <td class="py-2 text-amber-800 font-semibold">Violated (+0.134)</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2 font-medium text-slate-800">Fixed Drag (&gamma;=0.05, fixed &Omega;)</td>
+                    <td class="py-2 math-pill">0.548875</td>
+                    <td class="py-2 math-pill">0.999834</td>
+                    <td class="py-2 text-amber-800 font-semibold">Violated (+0.134)</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2 font-medium text-slate-800">Fixed Mass (m<sub>&gamma;</sub> fixed, &Omega;&prop;C<sup>2</sup>)</td>
+                    <td class="py-2 math-pill">0.548869</td>
+                    <td class="py-2 math-pill">0.999834</td>
+                    <td class="py-2 text-amber-800 font-semibold">Violated (+0.134)</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2 font-medium text-slate-800">Compensating Drag (&gamma;<sub>req</sub>)</td>
+                    <td class="py-2 math-pill">0.014587</td>
+                    <td class="py-2 math-pill">0.728046</td>
+                    <td class="py-2 text-teal-800 font-semibold">Preserved (98.5% loss)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-cosmology" class="space-y-6">
+      <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-sm space-y-6">
+        <div class="max-w-4xl space-y-2">
+          <span class="text-xs font-semibold uppercase tracking-widest text-teal-800">Work Package D &bull; Supernova Time Dilation &amp; Foundation 12 Distances</span>
+          <h2 class="text-2xl font-bold text-slate-900">Confronting DES-SN5YR Stretch &amp; Euclidean Distance Ratios</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Use the interactive controls below to test two decisive cosmological observables: (left) adjust the non-stretching dissipative redshift fraction <span class="math-pill">f<sub>diss</sub> = z<sub>diss</sub> / z<sub>total</sub></span> to see how the effective stretch exponent <span class="math-pill">b<sub>eff</sub>(z)</span> departs from the DES-SN5YR supernova measurement (<span class="math-pill">b = 1.003 &plusmn; 0.011</span>); (right) compare angular diameter (<span class="math-pill">D<sub>A</sub></span>) and luminosity (<span class="math-pill">D<sub>L</sub></span>) distances in Euclidean ballistic recession vs. static tired light against flat &Lambda;CDM to evaluate Foundation 12.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="bg-[#FAF8F5] rounded-xl border border-stone-200 p-5 flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <h3 class="text-base font-bold text-slate-900">DES-SN5YR Hybrid Time-Dilation Bound</h3>
+                <span id="fdiss-badge" class="px-2.5 py-1 rounded-full text-xs font-bold bg-teal-100 text-teal-900">Consistent (0.85&sigma;)</span>
+              </div>
+              <div class="bg-white rounded-lg border border-stone-200 p-3 space-y-2">
+                <div class="flex justify-between text-xs font-semibold text-slate-700">
+                  <label for="fdiss-slider">Dissipative Fraction f<sub>diss</sub> = z<sub>diss</sub> / z<sub>total</sub></label>
+                  <span id="fdiss-val" class="math-pill text-teal-800 font-bold">0.5% (0.005)</span>
+                </div>
+                <input id="fdiss-slider" type="range" min="0" max="10" step="0.5" value="0.5" class="w-full accent-teal-800 cursor-pointer" />
+                <div class="flex justify-between text-[11px] text-slate-500">
+                  <span>0% (Pure Recession)</span>
+                  <span>1.0% (DES Limit)</span>
+                  <span>5.0%</span>
+                  <span>10.0%</span>
+                </div>
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="desChart"></canvas>
+            </div>
+          </div>
+
+          <div class="bg-[#FAF8F5] rounded-xl border border-stone-200 p-5 flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <h3 class="text-base font-bold text-slate-900">Foundation 12 Distance Ratio Test (D / D<sub>&Lambda;CDM</sub>)</h3>
+                <div class="flex gap-1.5">
+                  <button data-dist="ballistic" class="dist-mode-btn px-2.5 py-1 rounded text-xs font-semibold bg-teal-800 text-white">Euclidean Ballistic</button>
+                  <button data-dist="all" class="dist-mode-btn px-2.5 py-1 rounded text-xs font-semibold bg-white border border-stone-300 text-slate-700">+ Static Tired Light</button>
+                </div>
+              </div>
+              <p class="text-xs text-slate-600">
+                Foundation 12 tests whether distant objects are closer than conventional &Lambda;CDM (<span class="math-pill">ratio &lt; 1.0</span>). Euclidean ballistic recession is <strong>1.9&ndash;5.0% closer</strong> for <span class="math-pill">z &le; 1</span> before crossing above <span class="math-pill">1.0</span> near <span class="math-pill">z &approx; 1.3</span>, while static tired-light <span class="math-pill">D<sub>A</sub></span> fails badly (<span class="math-pill">1.81&times;</span> larger at <span class="math-pill">z = 1</span>).
+              </p>
+            </div>
+            <div class="chart-container">
+              <canvas id="distChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sec-ledger" class="space-y-6">
+      <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-sm space-y-8">
+        <div class="max-w-4xl space-y-2">
+          <span class="text-xs font-semibold uppercase tracking-widest text-teal-800">Work Package E &bull; Empirical Bounds, Energy Ledger &amp; Charter Matrix</span>
+          <h2 class="text-2xl font-bold text-slate-900">Closed Radiation Energy Ledger, Mass Constraints &amp; 12-Foundation Compliance</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            This final section synthesizes primary experimental limits on photon mass and blackbody spectral distortion, demonstrates via a closed energy ledger that dissipated radiation cannot account for cosmological dark-matter abundance, and provides an interactive verification matrix across all twelve non-negotiable foundations of the ArcSecs charter.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <div class="lg:col-span-5 bg-[#FAF8F5] rounded-xl border border-stone-200 p-5 flex flex-col justify-between space-y-4">
+            <div>
+              <h3 class="text-base font-bold text-slate-900">Closed Radiation Energy Ledger (Log<sub>10</sub> J m<sup>&minus;3</sup>)</h3>
+              <p class="text-xs text-slate-600 mt-1">
+                Comparing present CMB energy density (<span class="math-pill">4.17&times;10<sup>&minus;14</sup> J m<sup>&minus;3</sup></span>) and dissipated radiation energy against dark-matter energy density (<span class="math-pill">&rho;<sub>DM</sub>c<sup>2</sup> = 2.25&times;10<sup>&minus;10</sup> J m<sup>&minus;3</sup></span>). COBE/FIRAS (<span class="math-pill">|&mu;| &lt; 9&times;10<sup>&minus;5</sup>, |y| &le; 1.5&times;10<sup>&minus;5</sup></span>) requires export into a cold, non-baryonic bath.
+              </p>
+            </div>
+            <div class="chart-container">
+              <canvas id="ledgerChart"></canvas>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 bg-[#FAF8F5] rounded-xl border border-stone-200 p-5 space-y-3">
+            <h3 class="text-base font-bold text-slate-900">Primary Empirical Constraints &amp; Model Dependence</h3>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr class="border-b border-stone-300 text-slate-500 uppercase text-[11px]">
+                    <th class="py-2 pr-3">Channel &amp; Source</th>
+                    <th class="py-2 px-3">Upper Bound</th>
+                    <th class="py-2 pl-3">Stueckelberg (A1) vs. Abelian Higgs (A2)</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-stone-200">
+                  <tr>
+                    <td class="py-2.5 pr-3 font-semibold text-slate-800">104 Localized FRBs<br><span class="font-normal text-slate-500">arXiv:2511.14163v1 (2025)</span></td>
+                    <td class="py-2.5 px-3 math-pill text-teal-900 font-semibold">&le; 4.83 &times; 10<sup>&minus;51</sup> kg</td>
+                    <td class="py-2.5 pl-3 text-slate-600">Cosmology-insensitive (~3% across &Lambda;CDM/wCDM); bounds A1 &amp; extragalactic A2 unless IGM symmetry restores.</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2.5 pr-3 font-semibold text-slate-800">Solar Wind Curlometer<br><span class="font-normal text-slate-500">Cluster / Tu et al. (2005)</span></td>
+                    <td class="py-2.5 px-3 math-pill text-teal-900 font-semibold">1.4&times;10<sup>&minus;49</sup> &ndash; 3.4&times;10<sup>&minus;51</sup> kg</td>
+                    <td class="py-2.5 pl-3 text-slate-600">Constrains Proca/Stueckelberg A1; evaded in Higgs A2 if local magnetic field B &gt; B<sub>c</sub> forms vortices.</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2.5 pr-3 font-semibold text-slate-800">Galactic Magnetic Vortices<br><span class="font-normal text-slate-500">Adelberger et al. (2007)</span></td>
+                    <td class="py-2.5 px-3 math-pill text-teal-900 font-semibold">m<sub>A</sub> &lesssim; 3 &times; 10<sup>&minus;13</sup> eV</td>
+                    <td class="py-2.5 pl-3 text-slate-600">Abrikosov vortices nullify naive ~10<sup>&minus;27</sup> eV Proca galactic limits in Type II Higgs condensates.</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2.5 pr-3 font-semibold text-slate-800">GW170817 / GRB 170817A<br><span class="font-normal text-slate-500">Abbott et al. (2017)</span></td>
+                    <td class="py-2.5 px-3 math-pill text-teal-900 font-semibold">|v<sub>GW</sub> &minus; c|/c &lesssim; 10<sup>&minus;15</sup></td>
+                    <td class="py-2.5 pl-3 text-slate-600">1.74 &plusmn; 0.05 s offset over ~40 Mpc bounds differential front ceiling |C<sub>f</sub> &minus; C<sub>GW</sub>|/c<sub>0</sub> (Foundation 8).</td>
+                  </tr>
+                  <tr>
+                    <td class="py-2.5 pr-3 font-semibold text-slate-800">Hydrogen 1S&ndash;2S Spectroscopy<br><span class="font-normal text-slate-500">Parthey et al. (2011)</span></td>
+                    <td class="py-2.5 px-3 math-pill text-teal-900 font-semibold">&delta;&nu;/&nu; &lt; 4.2 &times; 10<sup>&minus;15</sup></td>
+                    <td class="py-2.5 pl-3 text-slate-600">Limits m<sub>&gamma;</sub> &lesssim; 2.5&times;10<sup>&minus;40</sup> kg; satisfied by m<sub>&gamma;</sub> = 10<sup>&minus;51</sup> kg (&delta;&nu;/&nu; = &minus;1.36&times;10<sup>&minus;37</sup>).</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-stone-200 pt-6 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            <div>
+              <h3 class="text-base font-bold text-slate-900">ArcSecs Twelve-Foundation Charter Compliance Matrix</h3>
+              <p class="text-xs text-slate-500">Filter by resolution status or search keywords across all twelve non-negotiable foundations.</p>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <input id="charter-search" type="text" placeholder="Search foundation..." class="rounded-lg border border-stone-300 bg-[#FAF8F5] px-3 py-1.5 text-xs text-slate-800 focus:outline-none focus:border-teal-700" />
+              <select id="charter-status-filter" class="rounded-lg border border-stone-300 bg-[#FAF8F5] px-3 py-1.5 text-xs text-slate-800">
+                <option value="all">All Statuses (12)</option>
+                <option value="Enforced">Enforced / Retained</option>
+                <option value="Refined">Tested / Refined</option>
+                <option value="Open">Under Evaluation (Open)</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="charter-grid"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-stone-200 bg-white mt-12 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
+      <div>ArcSecs Independent Research Program &bull; Prompt 02 of 06 (Work Packages A&ndash;E)</div>
+      <div>All visualizations rendered on HTML5 Canvas &bull; No SVG or external raster assets</div>
+    </div>
+  </footer>
+
+  <script>
+    function wrapLabel(label, maxLen) {
+      if (label.length <= maxLen) return label;
+      const words = label.split(' ');
+      const lines = [];
+      let current = '';
+      for (const word of words) {
+        if ((current + ' ' + word).trim().length <= maxLen) {
+          current = (current + ' ' + word).trim();
+        } else {
+          if (current) lines.push(current);
+          current = word;
+        }
+      }
+      if (current) lines.push(current);
+      return lines;
+    }
+
+    const commonTooltipConfig = {
+      callbacks: {
+        title: function(tooltipItems) {
+          const item = tooltipItems[0];
+          const label = item.chart.data.labels[item.dataIndex];
+          return Array.isArray(label) ? label.join(' ') : label;
+        }
+      }
+    };
+
+    const verdictData = [
+      {
+        name: "1. Hybrid Bulk Recession + Open-System Massive Vector (A1/A2 + Bath)",
+        stability: "Ghost-free (H_1 > 0); exact charge continuity; omega^2 = C^2 k^2 + Omega^2.",
+        diagnostic: "Bulk recession V_rec yields achromatic stretch A = 1 + z_kin matching DES-SN5YR (b = 1.003 +/- 0.011); dissipative bath bounded to <= 0.5-1.0%.",
+        status: "Retain & Advance",
+        category: "retain",
+        badgeClass: "bg-teal-100 text-teal-900"
+      },
+      {
+        name: "2. Causal Multiplicative History-State Reservoir (A3)",
+        stability: "Strictly positive p(T) > 0; closed energy ledger conserved to 9.95e-16.",
+        diagnostic: "Delayed bath polarization s(T) = 1 - exp(-T/tau_M) slows packet smoothly (v_f = 0.347), but stationary endpoints yield A = 1; viable only as <1% aging channel.",
+        status: "Revise (Subdominant)",
+        category: "revise",
+        badgeClass: "bg-amber-100 text-amber-900"
+      },
+      {
+        name: "3. Abelian Higgs Dynamic Condensate (A2)",
+        stability: "Dynamic gap Omega = sqrt(q_Phi^2/eps_0) C v(I); magnetic vortices evade galactic Proca bounds.",
+        diagnostic: "Enables co-evolving Omega(I) across shells and dark-sector export; requires matching critical field B_c across galactic vs. IGM FRB sightlines.",
+        status: "Retain (Dark-Sector)",
+        category: "retain",
+        badgeClass: "bg-teal-100 text-teal-900"
+      },
+      {
+        name: "4. Stationary Fixed-Gap Drag (Part XXVIII Control)",
+        stability: "Exact analytical solution; positive energy.",
+        diagnostic: "Restricted Obstruction: Speed deficit <= 2e-32 at z=1 (eps=1e-16) and A = 1.000 fails DES-SN5YR supernova time dilation at >65 sigma nominal.",
+        status: "Retire as Sole Source",
+        category: "retire",
+        badgeClass: "bg-rose-100 text-rose-900"
+      },
+      {
+        name: "5. Collisional Point-Particle Bath (Boltzmann)",
+        stability: "Microscopically conserves energy and momentum.",
+        diagnostic: "Restricted Obstruction: Two-body recoil induces angular blur <theta^2> ~ z E_gamma / (M_b C^2), destroying sub-arcsecond quasar images.",
+        status: "Retire (Falsified)",
+        category: "retire",
+        badgeClass: "bg-rose-100 text-rose-900"
+      }
+    ];
+
+    function renderVerdictTable(filter) {
+      const tbody = document.getElementById('verdict-tbody');
+      tbody.innerHTML = '';
+      const filtered = filter === 'all' ? verdictData : verdictData.filter(d => d.category === filter);
+      filtered.forEach(item => {
+        const tr = document.createElement('tr');
+        tr.className = 'hover:bg-stone-50/80 transition';
+        tr.innerHTML = `
+          <td class="py-3 pr-4 font-semibold text-slate-900">${item.name}</td>
+          <td class="py-3 px-4 text-slate-600">${item.stability}</td>
+          <td class="py-3 px-4 text-slate-600">${item.diagnostic}</td>
+          <td class="py-3 pl-4 whitespace-nowrap"><span class="px-2.5 py-1 rounded-full text-xs font-semibold ${item.badgeClass}">${item.status}</span></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    document.querySelectorAll('.verdict-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.verdict-btn').forEach(b => {
+          b.className = 'verdict-btn px-3 py-1 rounded-md text-xs font-medium bg-stone-100 text-slate-700 hover:bg-stone-200';
+        });
+        btn.className = 'verdict-btn px-3 py-1 rounded-md text-xs font-medium bg-teal-800 text-white';
+        renderVerdictTable(btn.dataset.filter);
+      });
+    });
+    renderVerdictTable('all');
+
+    const implDetails = {
+      A1: {
+        title: "Gauge-Invariant Stueckelberg Vector in a Material Regulator",
+        eq: "L_1 = (eps_0/2)|E|^2 - (eps_0 C^2/2)|B|^2 + (eps_0 Omega^2 / 2C^2) V_0^2 - (eps_0 Omega^2 / 2)|V|^2",
+        points: [
+          "Restores exact local U(1) gauge invariance via compensating scalar phase phi, enforcing exact Noether charge continuity d_T rho_e + div J = 0.",
+          "Canonical Hamiltonian density H_1 > 0 is strictly positive definite across two transverse and one longitudinal polarization (no ghosts).",
+          "Longitudinal coupling to conserved atomic currents is suppressed by (Omega/omega)^2 = epsilon^2, guaranteeing a sterile continuous massless limit as Omega -> 0."
+        ]
+      },
+      A2: {
+        title: "Dynamically Generated Gap via Abelian Higgs Condensate",
+        eq: "Omega(x, T) = sqrt(q_Phi^2 / eps_0) * C(I) * v(I),   V(|Phi|^2) = (lambda/4)(|Phi|^2 - v(I)^2)^2",
+        points: [
+          "Grounds the photon frequency gap in a physical cosmic scalar substrate Phi with positive stress-energy (Foundation 6).",
+          "In Type II regimes above critical magnetic field B_c, Abrikosov vortices wind the scalar phase and discharge vector potentials, evading naive ~10^-27 eV galactic Proca bounds (Adelberger et al. 2007).",
+          "Allows Omega(I) to co-evolve inside dense C-01 regulator shells, potentially mitigating shell reacceleration."
+        ]
+      },
+      A3: {
+        title: "Causal Constitutive History-State / Polariton Dispersion",
+        eq: "omega^2 - C^2 k^2 - Omega^2 - Sigma(omega, k; tau) = 0,   chi(omega) = g_c^2 / (omega_b^2 - omega^2 - i gamma_b omega)",
+        points: [
+          "Models medium dressing via an upper-half-plane analytic self-energy Sigma, preserving Kramers-Kronig causality and positive spectral weight.",
+          "Lossless polariton mixing (gamma_b = 0) slows group velocity transiently (0.28% energy exchange) without secular redshift.",
+          "Multiplicative bath polarization state dp/dT = -gamma_0 s(T) p closes the energy ledger to 9.95e-16 without momentum reversal."
+        ]
+      }
+    };
+
+    function renderImpl(key) {
+      const data = implDetails[key];
+      const container = document.getElementById('impl-content');
+      container.innerHTML = `
+        <h4 class="font-bold text-slate-900 text-base">${data.title}</h4>
+        <div class="bg-white border border-stone-200 rounded-lg p-2.5 text-xs math-pill text-teal-900 overflow-x-auto">${data.eq}</div>
+        <ul class="space-y-2 text-xs sm:text-sm text-slate-600 list-disc pl-4">
+          ${data.points.map(p => `<li>${p}</li>`).join('')}
+        </ul>
+      `;
+    }
+
+    document.querySelectorAll('.impl-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.impl-tab').forEach(b => {
+          b.className = 'impl-tab px-3 py-1.5 rounded-lg text-xs font-semibold bg-white border border-stone-200 text-slate-700 hover:border-teal-700';
+        });
+        btn.className = 'impl-tab px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal-800 text-white';
+        renderImpl(btn.dataset.impl);
+      });
+    });
+    renderImpl('A1');
+
+    const recoilTable = {
+      "hi21|1e-54": { Em: "5.610e-19 eV", recoil: "3.129e-15", eps: "9.549e-14", deficit: "4.559e-27", hshift: "-1.358e-43", status: "Allowed (Subluminal)" },
+      "hi21|1e-51": { Em: "5.610e-16 eV", recoil: "3.129e-15", eps: "9.549e-11", deficit: "4.559e-21", hshift: "-1.358e-37", status: "Allowed (Subluminal)" },
+      "hi21|1e-40": { Em: "5.610e-5 eV", recoil: "Forbidden", eps: "9.549", deficit: "Forbidden (E_m > Delta_E)", hshift: "-1.358e-15", status: "Kinematical Cutoff" },
+      "hi21|1e-36": { Em: "0.5610 eV", recoil: "Forbidden", eps: "9.549e4", deficit: "Forbidden (E_m > Delta_E)", hshift: "-1.358e-7", status: "Kinematical Cutoff" },
+      "opt2|1e-54": { Em: "5.610e-19 eV", recoil: "1.917e-11", eps: "2.805e-19", deficit: "3.933e-38", hshift: "-1.358e-43", status: "Allowed (Subluminal)" },
+      "opt2|1e-51": { Em: "5.610e-16 eV", recoil: "1.917e-11", eps: "2.805e-16", deficit: "3.933e-32", hshift: "-1.358e-37", status: "Allowed (Subluminal)" },
+      "opt2|1e-40": { Em: "5.610e-5 eV", recoil: "1.917e-11", eps: "2.805e-5", deficit: "3.933e-10", hshift: "-1.358e-15", status: "Boundary of H 1S-2S" },
+      "opt2|1e-36": { Em: "0.5610 eV", recoil: "1.766e-11", eps: "0.2805", deficit: "4.014e-2", hshift: "-1.358e-7", status: "Falsified by H 1S-2S" },
+      "lya|1e-54": { Em: "5.610e-19 eV", recoil: "5.435e-9", eps: "5.497e-20", deficit: "1.511e-39", hshift: "-1.358e-43", status: "Allowed (Subluminal)" },
+      "lya|1e-51": { Em: "5.610e-16 eV", recoil: "5.435e-9", eps: "5.497e-17", deficit: "1.511e-33", hshift: "-1.358e-37", status: "Allowed (Subluminal)" },
+      "lya|1e-40": { Em: "5.610e-5 eV", recoil: "5.435e-9", eps: "5.497e-6", deficit: "1.511e-11", hshift: "-1.358e-15", status: "Boundary of H 1S-2S" },
+      "lya|1e-36": { Em: "0.5610 eV", recoil: "5.419e-9", eps: "0.05497", deficit: "1.513e-3", hshift: "-1.358e-7", status: "Falsified by H 1S-2S" },
+      "xray|1e-54": { Em: "5.610e-19 eV", recoil: "9.585e-8", eps: "5.610e-23", deficit: "1.573e-45", hshift: "-1.358e-43", status: "Allowed (Subluminal)" },
+      "xray|1e-51": { Em: "5.610e-16 eV", recoil: "9.585e-8", eps: "5.610e-20", deficit: "1.573e-39", hshift: "-1.358e-37", status: "Allowed (Subluminal)" },
+      "xray|1e-40": { Em: "5.610e-5 eV", recoil: "9.585e-8", eps: "5.610e-9", deficit: "1.573e-17", hshift: "-1.358e-15", status: "Boundary of H 1S-2S" },
+      "xray|1e-36": { Em: "0.5610 eV", recoil: "9.585e-8", eps: "5.610e-5", deficit: "1.573e-9", hshift: "-1.358e-7", status: "Falsified by H 1S-2S" }
+    };
+
+    function updateRecoilCalc() {
+      const tr = document.getElementById('calc-transition').value;
+      const ms = document.getElementById('calc-mass').value;
+      const r = recoilTable[`${tr}|${ms}`];
+      const box = document.getElementById('recoil-results');
+      const isBad = r.status.includes('Forbidden') || r.status.includes('Falsified');
+      box.innerHTML = `
+        <div class="bg-white rounded-lg border border-stone-200 p-2.5">
+          <div class="text-[11px] text-slate-500">Gap Energy E<sub>m</sub> &amp; Ratio &epsilon;<sub>em</sub></div>
+          <div class="text-xs font-bold text-slate-900 math-pill mt-0.5">${r.Em} (&epsilon; = ${r.eps})</div>
+        </div>
+        <div class="bg-white rounded-lg border border-stone-200 p-2.5">
+          <div class="text-[11px] text-slate-500">Atomic Recoil (&Delta;E &minus; E<sub>&gamma;</sub>)/&Delta;E</div>
+          <div class="text-xs font-bold text-slate-900 math-pill mt-0.5">${r.recoil}</div>
+        </div>
+        <div class="bg-white rounded-lg border border-stone-200 p-2.5">
+          <div class="text-[11px] text-slate-500">Emission Speed Deficit (C&minus;v<sub>g</sub>)/C</div>
+          <div class="text-xs font-bold text-teal-900 math-pill mt-0.5">${r.deficit}</div>
+        </div>
+        <div class="bg-white rounded-lg border border-stone-200 p-2.5">
+          <div class="text-[11px] text-slate-500">H 1S&ndash;2S Shift &delta;&nu;/&nu;</div>
+          <div class="text-xs font-bold ${isBad ? 'text-rose-700' : 'text-slate-900'} math-pill mt-0.5">${r.hshift}</div>
+        </div>
+        <div class="col-span-2 bg-white rounded-lg border border-stone-200 px-3 py-2 flex items-center justify-between text-xs">
+          <span class="text-slate-500">Diagnostic Regime:</span>
+          <span class="font-bold ${isBad ? 'text-rose-700' : 'text-teal-800'}">${r.status}</span>
+        </div>
+      `;
+    }
+
+    document.getElementById('calc-transition').addEventListener('change', updateRecoilCalc);
+    document.getElementById('calc-mass').addEventListener('change', updateRecoilCalc);
+    updateRecoilCalc();
+
+    const dragBenchmarks = {
+      "1e-2": [
+        { z: "0.01", def: "5.100630082e-5", d: "0.009950833391" },
+        { z: "0.5", def: "1.125063288e-4", d: "0.405496361917" },
+        { z: "1.0", def: "2.000200040e-4", d: "0.693222194626" },
+        { z: "10.0", def: "6.068412817e-3", d: "2.400909090806" },
+        { z: "98.901 (0.999 z_max)", def: "0.9555138235", d: "5.253776807868" }
+      ],
+      "1e-4": [
+        { z: "0.01", def: "5.100500003e-9", d: "0.009950330858" },
+        { z: "1.0", def: "2.000000020e-8", d: "0.693147188060" },
+        { z: "10.0", def: "6.050000183e-7", d: "2.397895348548" },
+        { z: "9989.0 (0.999 z_max)", def: "0.9552920566", d: "9.858749783481" }
+      ],
+      "1e-8": [
+        { z: "0.01", def: "5.100500000e-17", d: "0.009950330853" },
+        { z: "1.0", def: "2.000000000e-16", d: "0.693147180560" },
+        { z: "10.0", def: "6.050000000e-15", d: "2.397895272798" },
+        { z: "9.99e7 (0.999 z_max)", def: "0.9552898224", d: "19.069087919259" }
+      ],
+      "1e-16": [
+        { z: "0.01", def: "5.100500000e-33", d: "0.009950330853" },
+        { z: "1.0", def: "2.000000000e-32", d: "0.693147180560" },
+        { z: "10.0", def: "6.050000000e-31", d: "2.397895272798" }
+      ]
+    };
+
+    function renderDragTable(eps) {
+      const tbody = document.getElementById('drag-bench-tbody');
+      tbody.innerHTML = dragBenchmarks[eps].map(row => `
+        <tr>
+          <td class="py-1.5 text-slate-800">${row.z}</td>
+          <td class="py-1.5 text-teal-900 font-semibold">${row.def}</td>
+          <td class="py-1.5 text-slate-600">${row.d}</td>
+        </tr>
+      `).join('');
+    }
+    document.getElementById('drag-eps-select').addEventListener('change', e => renderDragTable(e.target.value));
+    renderDragTable('1e-8');
+
+    const tauLabels = ["0.0", "0.5", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "4.0", "4.5", "5.0", "5.5", "6.0"];
+    const cv20Data = [0.99995, 0.99993, 0.99993, 0.99993, 0.99993, 0.99993, 0.99993, 0.99993, 0.99993, 0.99993, 0.99993, 0.99993, 0.99993];
+    const cv100Data = [0.99995, 0.99988, 0.99974, 0.99952, 0.99925, 0.99898, 0.99881, 0.99874, 0.99872, 0.99872, 0.99872, 0.99872, 0.99872];
+    const cvInfData = [0.99995, 0.99986, 0.99963, 0.99900, 0.99728, 0.99265, 0.98033, 0.94872, 0.87461, 0.72789, 0.50670, 0.43100, 0.41179];
+    const multHistData = [0.99995, 0.99993, 0.99987, 0.99971, 0.99933, 0.99842, 0.99621, 0.99085, 0.97795, 0.94760, 0.87940, 0.73980, 0.34683];
+    const addMemData = [0.99995, 0.99980, 0.99890, 0.99350, 0.95200, 0.42000, -0.78500, -0.92800, -0.93169, -0.93169, -0.93169, -0.93169, -0.93169];
+
+    let showAdditive = false;
+    const bathCtx = document.getElementById('bathChart').getContext('2d');
+    const bathChart = new Chart(bathCtx, {
+      type: 'line',
+      data: {
+        labels: tauLabels,
+        datasets: [
+          {
+            label: wrapLabel('Low Capacity Bath (c_v = 20)', 18),
+            data: cv20Data,
+            borderColor: '#94A3B8',
+            backgroundColor: '#94A3B8',
+            borderDash: [4, 4],
+            tension: 0.3,
+            pointRadius: 2
+          },
+          {
+            label: wrapLabel('Moderate Bath (c_v = 100)', 18),
+            data: cv100Data,
+            borderColor: '#D97706',
+            backgroundColor: '#D97706',
+            tension: 0.3,
+            pointRadius: 2
+          },
+          {
+            label: wrapLabel('Isothermal Bath (c_v = 10^6)', 18),
+            data: cvInfData,
+            borderColor: '#2B6CB0',
+            backgroundColor: '#2B6CB0',
+            tension: 0.3,
+            pointRadius: 2
+          },
+          {
+            label: wrapLabel('Multiplicative History (tau_M = 2)', 18),
+            data: multHistData,
+            borderColor: '#115E59',
+            backgroundColor: '#115E59',
+            borderWidth: 2.5,
+            tension: 0.3,
+            pointRadius: 2.5
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } },
+          tooltip: commonTooltipConfig
+        },
+        scales: {
+          x: { title: { display: true, text: 'Normalized Photon Age (gamma_0 * tau)', font: { size: 11 } } },
+          y: { title: { display: true, text: 'Normalized Group Speed (v_g / C)', font: { size: 11 } }, min: 0.0, max: 1.05 }
+        }
+      }
+    });
+
+    document.getElementById('toggle-additive-btn').addEventListener('click', (e) => {
+      showAdditive = !showAdditive;
+      if (showAdditive) {
+        bathChart.data.datasets.push({
+          label: wrapLabel('Failed Additive Memory (Reverses!)', 18),
+          data: addMemData,
+          borderColor: '#BE123C',
+          backgroundColor: '#BE123C',
+          borderWidth: 2,
+          tension: 0.3,
+          pointRadius: 2.5
+        });
+        bathChart.options.scales.y.min = -1.05;
+        e.target.textContent = 'Hide Failed Additive Memory';
+      } else {
+        bathChart.data.datasets.pop();
+        bathChart.options.scales.y.min = 0.0;
+        e.target.textContent = 'Show Failed Additive Memory';
+      }
+      bathChart.update();
+    });
+
+    const pdeTimeLabels = ["0", "5", "10", "15", "20", "25"];
+    const pdeCtx = document.getElementById('pdeChart').getContext('2d');
+    const pdeChart = new Chart(pdeCtx, {
+      type: 'line',
+      data: {
+        labels: pdeTimeLabels,
+        datasets: [
+          {
+            label: wrapLabel('Total Ledger Sum (Conserved)', 18),
+            data: [1.00000, 0.99994, 0.99988, 0.99982, 0.99976, 0.99971],
+            borderColor: '#1E293B',
+            borderDash: [5, 3],
+            borderWidth: 2,
+            pointRadius: 2
+          },
+          {
+            label: wrapLabel('EM Packet Energy (E_EM / E_0)', 18),
+            data: [1.00000, 0.99710, 0.99565, 0.99425, 0.99288, 0.99155],
+            borderColor: '#115E59',
+            borderWidth: 2.5,
+            pointRadius: 2.5
+          },
+          {
+            label: wrapLabel('Dissipated Heat (E_heat / E_0)', 18),
+            data: [0.00000, 0.00125, 0.00258, 0.00391, 0.00524, 0.00658],
+            borderColor: '#C05621',
+            borderWidth: 2,
+            pointRadius: 2.5
+          },
+          {
+            label: wrapLabel('Active Bath Energy (E_mat / E_0)', 18),
+            data: [0.00000, 0.00159, 0.00165, 0.00166, 0.00164, 0.00158],
+            borderColor: '#2B6CB0',
+            borderWidth: 1.8,
+            pointRadius: 2
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } },
+          tooltip: commonTooltipConfig
+        },
+        scales: {
+          x: { title: { display: true, text: 'Universal Ordering Coordinate T', font: { size: 11 } } },
+          y: { title: { display: true, text: 'Normalized Energy Fraction', font: { size: 11 } }, min: 0, max: 1.05 }
+        }
+      }
+    });
+
+    function updatePdeStats(nx) {
+      const bar = document.getElementById('pde-stats-bar');
+      if (nx === '600') {
+        pdeChart.data.datasets[0].data = [1.00000, 0.99994, 0.99988, 0.99982, 0.99976, 0.99971];
+        bar.innerHTML = `
+          <div><span class="text-slate-500 block">Energy Residual</span><strong class="math-pill text-slate-900">2.889 &times; 10<sup>&minus;4</sup></strong></div>
+          <div><span class="text-slate-500 block">Centroid Speed</span><strong class="math-pill text-teal-800">0.9277 &rarr; 0.9286</strong></div>
+          <div><span class="text-slate-500 block">Mean Wavenumber</span><strong class="math-pill text-amber-800">8.000 &rarr; 8.009 (Blue)</strong></div>
+        `;
+      } else {
+        pdeChart.data.datasets[0].data = [1.00000, 0.999998, 0.999996, 0.999994, 0.999992, 0.999990];
+        bar.innerHTML = `
+          <div><span class="text-slate-500 block">Energy Residual</span><strong class="math-pill text-teal-800">9.752 &times; 10<sup>&minus;6</sup> (29.6&times;)</strong></div>
+          <div><span class="text-slate-500 block">Grid Resolution</span><strong class="math-pill text-slate-900">k<sub>0</sub>&Delta;x = 0.40</strong></div>
+          <div><span class="text-slate-500 block">Mean Wavenumber</span><strong class="math-pill text-amber-800">8.000 &rarr; 8.009 (Blue)</strong></div>
+        `;
+      }
+      pdeChart.update();
+    }
+
+    document.querySelectorAll('.pde-nx-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.pde-nx-btn').forEach(b => {
+          b.className = 'pde-nx-btn px-2.5 py-1 rounded text-xs font-semibold bg-white border border-stone-300 text-slate-700';
+        });
+        btn.className = 'pde-nx-btn px-2.5 py-1 rounded text-xs font-semibold bg-teal-800 text-white';
+        updatePdeStats(btn.dataset.nx);
+      });
+    });
+    updatePdeStats('600');
+
+    const desZGrid = [0.1, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2];
+    function computeBeffCurve(fdissPercent) {
+      const f = fdissPercent / 100.0;
+      return desZGrid.map(z => {
+        if (f === 0) return 1.0;
+        const zdiss = f * z;
+        const zkin = (1 + z) / (1 + zdiss) - 1;
+        const A = Math.max(1.0, 1 + zkin);
+        return Number((Math.log(A) / Math.log(1 + z)).toFixed(4));
+      });
+    }
+
+    const desCtx = document.getElementById('desChart').getContext('2d');
+    const desChart = new Chart(desCtx, {
+      type: 'line',
+      data: {
+        labels: desZGrid.map(z => `z = ${z.toFixed(1)}`),
+        datasets: [
+          {
+            label: wrapLabel('DES-SN5YR Upper (+1 sigma: 1.014)', 20),
+            data: desZGrid.map(() => 1.014),
+            borderColor: 'rgba(17, 94, 89, 0.35)',
+            backgroundColor: 'rgba(17, 94, 89, 0.10)',
+            borderDash: [3, 3],
+            pointRadius: 0,
+            fill: '+1'
+          },
+          {
+            label: wrapLabel('DES-SN5YR Lower (-1 sigma: 0.992)', 20),
+            data: desZGrid.map(() => 0.992),
+            borderColor: 'rgba(17, 94, 89, 0.35)',
+            borderDash: [3, 3],
+            pointRadius: 0,
+            fill: false
+          },
+          {
+            label: wrapLabel('Hybrid Model b_eff(z)', 20),
+            data: computeBeffCurve(0.5),
+            borderColor: '#C05621',
+            backgroundColor: '#C05621',
+            borderWidth: 2.5,
+            tension: 0.25,
+            pointRadius: 3
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } },
+          tooltip: commonTooltipConfig
+        },
+        scales: {
+          x: { title: { display: true, text: 'Supernova Redshift z (DES-SN5YR Range)', font: { size: 11 } } },
+          y: { title: { display: true, text: 'Effective Stretch Exponent b_eff', font: { size: 11 } }, min: 0.85, max: 1.04 }
+        }
+      }
+    });
+
+    document.getElementById('fdiss-slider').addEventListener('input', (e) => {
+      const pct = parseFloat(e.target.value);
+      const curve = computeBeffCurve(pct);
+      desChart.data.datasets[2].data = curve;
+      desChart.update();
+
+      const meanB = curve.reduce((a, b) => a + b, 0) / curve.length;
+      const sigmaDiff = Math.abs(1.003 - meanB) / 0.011;
+      document.getElementById('fdiss-val').textContent = `${pct.toFixed(1)}% (${(pct / 100).toFixed(3)})`;
+      const badge = document.getElementById('fdiss-badge');
+      if (sigmaDiff <= 1.0) {
+        badge.className = 'px-2.5 py-1 rounded-full text-xs font-bold bg-teal-100 text-teal-900';
+        badge.textContent = `Consistent (${sigmaDiff.toFixed(2)} sigma)`;
+      } else if (sigmaDiff <= 2.0) {
+        badge.className = 'px-2.5 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-900';
+        badge.textContent = `Marginal (${sigmaDiff.toFixed(2)} sigma)`;
+      } else {
+        badge.className = 'px-2.5 py-1 rounded-full text-xs font-bold bg-rose-100 text-rose-900';
+        badge.textContent = `Excluded (${sigmaDiff.toFixed(2)} sigma)`;
+      }
+    });
+
+    const distZ = ["0.1", "0.3", "0.5", "0.8", "1.0", "1.3", "1.5", "2.0"];
+    const ballisticRatio = [0.978, 0.958, 0.950, 0.964, 0.981, 1.015, 1.042, 1.116];
+    const tlDaRatio = [1.074, 1.224, 1.386, 1.638, 1.813, 2.084, 2.273, 2.760];
+    const tlDlRatio = [0.931, 0.828, 0.755, 0.678, 0.641, 0.598, 0.575, 0.531];
+
+    const distCtx = document.getElementById('distChart').getContext('2d');
+    const distChart = new Chart(distCtx, {
+      type: 'line',
+      data: {
+        labels: distZ.map(z => `z = ${z}`),
+        datasets: [
+          {
+            label: wrapLabel('Flat LCDM Reference (Ratio = 1.0)', 20),
+            data: distZ.map(() => 1.0),
+            borderColor: '#64748B',
+            borderDash: [4, 4],
+            borderWidth: 1.5,
+            pointRadius: 0
+          },
+          {
+            label: wrapLabel('Euclidean Ballistic (D_A & D_L / LCDM)', 20),
+            data: ballisticRatio,
+            borderColor: '#115E59',
+            backgroundColor: '#115E59',
+            borderWidth: 2.5,
+            tension: 0.3,
+            pointRadius: 3
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } },
+          tooltip: commonTooltipConfig
+        },
+        scales: {
+          x: { title: { display: true, text: 'Cosmological Redshift z', font: { size: 11 } } },
+          y: { title: { display: true, text: 'Distance Ratio Relative to Flat LCDM', font: { size: 11 } }, min: 0.5, max: 1.3 }
+        }
+      }
+    });
+
+    document.querySelectorAll('.dist-mode-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.dist-mode-btn').forEach(b => {
+          b.className = 'dist-mode-btn px-2.5 py-1 rounded text-xs font-semibold bg-white border border-stone-300 text-slate-700';
+        });
+        btn.className = 'dist-mode-btn px-2.5 py-1 rounded text-xs font-semibold bg-teal-800 text-white';
+        if (btn.dataset.dist === 'all') {
+          distChart.data.datasets = [
+            distChart.data.datasets[0],
+            distChart.data.datasets[1],
+            {
+              label: wrapLabel('Static Tired Light D_A / LCDM (Fails)', 20),
+              data: tlDaRatio,
+              borderColor: '#BE123C',
+              backgroundColor: '#BE123C',
+              borderWidth: 2,
+              tension: 0.3,
+              pointRadius: 2.5
+            },
+            {
+              label: wrapLabel('Static Tired Light D_L / LCDM', 20),
+              data: tlDlRatio,
+              borderColor: '#D97706',
+              backgroundColor: '#D97706',
+              borderWidth: 2,
+              tension: 0.3,
+              pointRadius: 2.5
+            }
+          ];
+          distChart.options.scales.y.max = 2.9;
+        } else {
+          distChart.data.datasets = [distChart.data.datasets[0], distChart.data.datasets[1]];
+          distChart.options.scales.y.max = 1.3;
+        }
+        distChart.update();
+      });
+    });
+
+    const ledgerCtx = document.getElementById('ledgerChart').getContext('2d');
+    new Chart(ledgerCtx, {
+      type: 'bar',
+      data: {
+        labels: [
+          wrapLabel('Deposited Heat (0.5% DES-Allowed)', 16),
+          wrapLabel('Present EBL Energy Density', 16),
+          wrapLabel('Present CMB Energy Density', 16),
+          wrapLabel('Deposited Heat (100% Tired Light)', 16),
+          wrapLabel('Dark Matter Energy Density', 16)
+        ],
+        datasets: [{
+          label: 'Log10 Energy Density (J / m^3)',
+          data: [-15.67, -14.92, -13.38, -13.37, -9.65],
+          backgroundColor: ['#115E59', '#64748B', '#2B6CB0', '#C05621', '#1E293B'],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              title: commonTooltipConfig.callbacks.title,
+              label: function(ctx) {
+                const sci = ["2.14e-16 J/m^3", "1.20e-15 J/m^3", "4.17e-14 J/m^3", "4.29e-14 J/m^3", "2.25e-10 J/m^3"];
+                return `Energy Density: ${sci[ctx.dataIndex]} (10^${ctx.raw})`;
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            title: { display: true, text: 'Log10(u) [J m^-3] (Less Negative = Higher)', font: { size: 11 } },
+            min: -17,
+            max: -8
+          }
+        }
+      }
+    });
+
+    const foundations = [
+      { num: "F1", title: "Photons have mass", status: "Enforced", desc: "Strictly positive gap Omega > 0 (omega^2 = C^2 k^2 + Omega^2) in Stueckelberg, Higgs, and polariton models." },
+      { num: "F2", title: "Time is constant", status: "Enforced", desc: "Single universal ordering coordinate T parameterizes all travel integrals and clock counts." },
+      { num: "F3", title: "Light slows down", status: "Refined", desc: "Monotonic slowing in rising-C shells requires co-evolving Omega(I) to avoid (1+u^2) extinction." },
+      { num: "F4", title: "Time is not physical", status: "Enforced", desc: "Time orders events; atomic clocks (H 1S-2S) are modeled as physical bound EM oscillators." },
+      { num: "F5", title: "Space is not physical", status: "Enforced", desc: "Flat Euclidean coordinates x used throughout without metric scale-factor stretching a(t)." },
+      { num: "F6", title: "Existence = extent + mass", status: "Enforced", desc: "Photons occupy finite packet volume V_packet; bath and Higgs condensate carry positive T^mu_nu." },
+      { num: "F7", title: "Spacetime is not physical", status: "Enforced", desc: "Ceiling C(I) arises from matter-field constitutive couplings rather than curved spacetime." },
+      { num: "F8", title: "Light is not the fastest", status: "Enforced", desc: "Subluminal group velocity v_g < C_f = C_em separated from dispersive tails and C_causal." },
+      { num: "F9", title: "Super-ceiling separation", status: "Enforced", desc: "Real physical recession V_rec produces achromatic (1+z_kin) stretch without space stretching." },
+      { num: "F10", title: "Size of universe unknown", status: "Enforced", desc: "Shell widths and packet range D_max treated strictly as local domain controls, not cosmic boundaries." },
+      { num: "F11", title: "Age of universe unknown", status: "Enforced", desc: "Signal transit age tau = T_a - T_e kept distinct from epoch T and stellar formation ages." },
+      { num: "F12", title: "Distant objects smaller & closer", status: "Open", desc: "Euclidean ballistic is 2-5% closer for z <= 1 but crosses above LCDM at z ~ 1.3; open for Prompt 03." }
+    ];
+
+    function renderCharterGrid() {
+      const q = document.getElementById('charter-search').value.toLowerCase();
+      const st = document.getElementById('charter-status-filter').value;
+      const grid = document.getElementById('charter-grid');
+      const filtered = foundations.filter(f => {
+        const matchSt = st === 'all' || f.status === st;
+        const matchQ = f.title.toLowerCase().includes(q) || f.desc.toLowerCase().includes(q) || f.num.toLowerCase().includes(q);
+        return matchSt && matchQ;
+      });
+      grid.innerHTML = filtered.map(f => {
+        const badge = f.status === 'Enforced' ? 'bg-teal-100 text-teal-900' : (f.status === 'Refined' ? 'bg-amber-100 text-amber-900' : 'bg-rose-100 text-rose-900');
+        return `
+          <div class="bg-[#FAF8F5] rounded-xl border border-stone-200 p-3.5 space-y-1.5">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-900">${f.num}: ${f.title}</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-semibold ${badge}">${f.status}</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed">${f.desc}</p>
+          </div>
+        `;
+      }).join('');
+    }
+
+    document.getElementById('charter-search').addEventListener('input', renderCharterGrid);
+    document.getElementById('charter-status-filter').addEventListener('change', renderCharterGrid);
+    renderCharterGrid();
+  </script>
+</body>
+</html>

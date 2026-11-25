@@ -1,0 +1,69 @@
+{
+  "disclosure": "Synthetic nonrelativistic test only; no actual cosmic bubble observed.",
+  "events": {
+    "internal_only": [
+      {
+        "time": 0.0,
+        "event": "launch",
+        "carrier": "internal_packet",
+        "origin": "internal_source",
+        "source_recoil_velocity": -0.02,
+        "reserve_spent": 0.404
+      },
+      {
+        "time": 0.0,
+        "event": "ready",
+        "energy": 4.128512,
+        "momentum": -3.2128
+      },
+      {
+        "time": 5.0,
+        "event": "contact",
+        "carrier": "internal_packet",
+        "target": "receiver",
+        "receiver_velocity_after": 0.25,
+        "carrier_velocity_after": -1.7499999999999998
+      }
+    ],
+    "with_exterior": [
+      {
+        "time": 0.0,
+        "event": "launch",
+        "carrier": "internal_packet",
+        "origin": "internal_source",
+        "source_recoil_velocity": -0.02,
+        "reserve_spent": 0.404
+      },
+      {
+        "time": 0.0,
+        "event": "launch",
+        "carrier": "exterior_packet",
+        "origin": "external_bubble_candidate",
+        "source_recoil_velocity": -0.07200000000000001,
+        "reserve_spent": 0.32128000000000007
+      },
+      {
+        "time": 0.0,
+        "event": "ready",
+        "energy": 4.128512,
+        "momentum": -3.2128000000000005
+      },
+      {
+        "time": 5.0,
+        "event": "contact",
+        "carrier": "internal_packet",
+        "target": "receiver",
+        "receiver_velocity_after": 0.25,
+        "carrier_velocity_after": -1.7499999999999998
+      },
+      {
+        "time": 8.261802575107296,
+        "event": "contact",
+        "carrier": "exterior_packet",
+        "target": "receiver",
+        "receiver_velocity_after": 0.014050632911392368,
+        "carrier_velocity_after": 2.3440506329113924
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "page_count": 476,
+  "trim_inches": [
+    6.14,
+    9.21
+  ],
+  "review_start_page": 347,
+  "review_end_page": 475,
+  "trailing_blank_pages": 1,
+  "source_pages_preserved": 129,
+  "minimum_gutter_inches": 0.625,
+  "minimum_outer_inches": 0.25,
+  "all_fonts_embedded": true,
+  "margin_violations": 0,
+  "replacement_characters_detected": 0,
+  "image_instances": 40,
+  "minimum_effective_raster_ppi": 300.0,
+  "images_under_300_ppi": 0,
+  "source_sha256": "e714e97fbd4c7995b20950edef386c56ae637c5226935000b6ee7e16af624fbf",
+  "interior_sha256": "1ca7c03f31608081135face95588d9405b0b54ad8e0245816f7f73d4557becd5",
+  "review_source_version": "6.0",
+  "protected_render_identical_pages": 129,
+  "previous_main_book_test_count": 451,
+  "publication_credits": "Machine Intelligence and Michael Joseph Kappel",
+  "acknowledgment": "Gary Lyon Otto",
+  "selected_print_ink": "black",
+  "cover_template_verified": false
+}

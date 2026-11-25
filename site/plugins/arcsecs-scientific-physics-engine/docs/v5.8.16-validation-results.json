@@ -1,0 +1,21 @@
+{
+  "packageVersion": "5.8.27",
+  "packageFilename": "arcsecs-v5.8.27-evidence-bundle-integrity-labels-reviewer-signoff-package.zip",
+  "validatedUtc": "2026-06-02T00:00:00.000Z",
+  "results": [
+    { "command": "find assets/js -name '*.js' -print0 | xargs -0 -n1 node --check", "status": "passed" },
+    { "command": "php -l arcsecs-scientific-physics-engine.php", "status": "passed" },
+    { "command": "find includes -name '*.php' -print0 | xargs -0 -n1 php -l", "status": "passed" },
+    { "command": "npm run build", "status": "passed" },
+    { "command": "npm run lint", "status": "passed" },
+    { "command": "npm run test:js", "status": "passed", "details": "44 Node tests passed" },
+    { "command": "npm run test:php", "status": "passed" },
+    { "command": "npm test", "status": "passed" },
+    { "command": "npm run test:e2e", "status": "not-run", "details": "No tests/e2e directory exists; no heavy browser-test dependency was added." }
+  ],
+  "knownLimitations": [
+    "Live WordPress browser verification is still required after deployment.",
+    "Integrity labels are local metadata, not cryptographic signatures or proof of physics.",
+    "Core runtime physics was not changed."
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "version": "5.8.27",
+  "packageName": "arcsecs-v5.8.27-evidence-bundle-integrity-labels-reviewer-signoff-package.zip",
+  "generatedUtc": "2026-06-02T00:00:00.000Z",
+  "commands": [
+    {
+      "command": "find assets/js -name '*.js' -print0 | xargs -0 -n1 node --check",
+      "result": "passed"
+    },
+    {
+      "command": "php -l arcsecs-scientific-physics-engine.php",
+      "result": "passed"
+    },
+    {
+      "command": "find includes -name '*.php' -print0 | xargs -0 -n1 php -l",
+      "result": "passed"
+    },
+    {
+      "command": "npm run build",
+      "result": "passed"
+    },
+    {
+      "command": "npm run lint",
+      "result": "passed"
+    },
+    {
+      "command": "npm run test:js",
+      "result": "passed",
+      "summary": "27 tests passed"
+    },
+    {
+      "command": "npm run test:php",
+      "result": "passed"
+    },
+    {
+      "command": "npm test",
+      "result": "passed"
+    },
+    {
+      "command": "unzip -t arcsecs-v5.8.27-evidence-bundle-integrity-labels-reviewer-signoff-package.zip",
+      "result": "passed"
+    },
+    {
+      "command": "ZIP package identity check",
+      "result": "passed"
+    }
+  ],
+  "notRun": [
+    {
+      "command": "npm run test:e2e",
+      "reason": "No tests/e2e directory is present and no heavy browser dependency was added."
+    }
+  ]
+}

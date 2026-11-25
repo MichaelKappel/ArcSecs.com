@@ -1,0 +1,22 @@
+{
+  "title": "BEYOND SPACETIME",
+  "subtitle": "A Physical-First Investigation into the Nature of the Universe",
+  "research_program": "ArcSecs",
+  "trim_inches": [
+    6.14,
+    9.21
+  ],
+  "protected_final_section": "review6-original.pdf",
+  "cover_artwork": "front-cover-art.png",
+  "author_credits": [
+    "Machine Intelligence",
+    "Michael Joseph Kappel"
+  ],
+  "acknowledgment": "Gary Lyon Otto \u2014 variable speed of light (VSL)",
+  "current_print_master": "book.pdf",
+  "current_kindle": "book.epub",
+  "print_ink": "black",
+  "paper": "white",
+  "page_count": 476,
+  "cover_template_verified": false
+}

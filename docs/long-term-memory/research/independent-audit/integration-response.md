@@ -1,0 +1,15 @@
+# Independent audit integration — BEYOND SPACETIME
+
+24 November 2026. Current print master: 432 pages; 6.14 × 9.21 inches, no bleed. Main book and divider pages 1–345, alignment blank 346, protected Review 4.0 pages 347–431, trailing blank 432. Review internal page n maps to hardcover n+346.
+
+## Completed
+- Integrated the independent audit as a linked main-book research section and updated native `.uai` records; original independent audit ZIP preserved exactly. The audit examined 111 pages of selected text, 317 automated-only pages and two blanks, with 16 visual samples. It is not an exhaustive audit.
+- Reexecuted the audit's 21-case calculation with output-only corrections: actual arrival and integration end time separate, held-wall mass represented by null, strict JSON. All 21 case statuses and seven numerical outputs per case agree to regression tolerance. Twenty arrive, one remains incomplete. Full original source retained in ZIP.
+- Assigned stable cross-reference IDs AGE-S, AGE-H and AGE-V, without merging the scientific mechanisms or authorizing changes to the protected review. Added a shared acceptance contract and contributor corrections (SCI-001, PUB-003).
+- Indexed 32 numbered main-book bibliography records and added an anchor crosswalk. This is not a complete reference verification or deduplication. The two source-report inventories are distinct; document-level matching remains pending.
+- Regenerated 17 plots at 450 source DPI from native generators, data or equations (14 previously deficient raster placements, plus three companion plots). Replaced the undocumented additional bubble-wall curve with only the specified pressure/tension model and updated caption. Historical graphic preserved inside the original audit PDF. No earlier mathematical expressions removed. All 40 raster placements are at least 299.9 effective PPI; the rounded minimum is 300.0. Automated checks found no margin violations or corrupted replacement characters. Targeted visual samples inspected; a full-size grayscale proof remains pending.
+- All 85 protected review pages are text-preserved and raster-identical above external folio; 102 navigation links retained. Original Review 3.0 and Review 4.0 files, 41 reports and totem unchanged.
+- 447 existing tests and 4 new regression checks passed. The observed local package versions and script hash are recorded, not a complete environment lock.
+
+## Remaining
+Publisher-approved author/contributor attribution, rights, imprint and ISBN; full 432-page hardcover wrap for selected ink/paper; AI-content disclosure as applicable; KDP Previewer and physical proof. Full scientific bibliography and primary-source object dossier verification, complete native Review 4.0 reproduction, common physical mechanism and observational calibration remain open. SCI-001 and PUB-003 remain in the protected review until its contributor provides an authorized replacement. Previous DOCX/EPUB are historical main-only files, not the current print master. No new theoretical chapter or measured result is claimed.

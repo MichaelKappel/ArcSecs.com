@@ -1,0 +1,4 @@
+Source:  2101 math expressions, 39 figures, 164 unique equation tags, 33 valid internal links
+DOCX: XML, metadata, figures and math passed
+EPUB: XML, metadata, figures and math passed; local links passed
+PDF: 232 pages, zero scanned replacement glyphs, zero text blocks outside page boundaries, 94 bookmarks

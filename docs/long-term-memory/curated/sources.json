@@ -1,0 +1,72 @@
+[
+  {
+    "id": "C01-M",
+    "filename": "Deriving the Local Light-Speed Ceiling Mechanisms and Models(1).md",
+    "lines": 58,
+    "sha256": "dd0f018e2ab33aa026e528c9b558b90199c07374e29d71a247c81bbbcd711530",
+    "bytes": 13759
+  },
+  {
+    "id": "C01-H",
+    "filename": "arcsecs_c_01_interactive_research_explorer(1).html",
+    "lines": 1333,
+    "sha256": "6d5503295e571c279e5879d8b6926c9c55265261acdc292bdf4e2777ce7c014d",
+    "bytes": 94305
+  },
+  {
+    "id": "P-M",
+    "filename": "Positive-Mass Photons Emission, Aging, Redshift, and Energy Transfer(1).md",
+    "lines": 101,
+    "sha256": "82c326029fbd3da49bd0584e7eb2a63f30e4a7ada833d98ce1e4cfc3505bb23f",
+    "bytes": 22398
+  },
+  {
+    "id": "P-H",
+    "filename": "positive_mass_photons_interactive_research_explorer(1).html",
+    "lines": 1133,
+    "sha256": "a5ee0c87f7c32ae67aa5565a6b344f22bb616fc7473e466ae305d1facf7adaae",
+    "bytes": 71456
+  },
+  {
+    "id": "T-M",
+    "filename": "Constant Time(1).md",
+    "lines": 104,
+    "sha256": "08fa55cbf6b93c46a38249c0d40b91731d9399dab312bda773d9e5a6c2059fe2",
+    "bytes": 24309
+  },
+  {
+    "id": "D-M",
+    "filename": "Astronomical Distances(1).md",
+    "lines": 79,
+    "sha256": "224529f1fb12e7aa961594f7c064c74c08ee77436b8864ae9c7594d0f7a6d757",
+    "bytes": 17152
+  },
+  {
+    "id": "D-H",
+    "filename": "arcsecs_report_04_interactive_explorer(1).html",
+    "lines": 1329,
+    "sha256": "910d77f95907784413a100631be1a43ed699c410d2c1ff4e4a873a3e7fbfdc16",
+    "bytes": 80494
+  },
+  {
+    "id": "B-M",
+    "filename": "Bubble Universes and Cosmic Domains Theory and Observational Tests(1).md",
+    "lines": 60,
+    "sha256": "25dc367aea3e740f0184554e312e995ec18c167775c965385ff9c362f890c364",
+    "bytes": 12963
+  },
+  {
+    "id": "G-M",
+    "filename": "Relational Gravity, Dark Sector, and Inertia(1).md",
+    "lines": 27,
+    "sha256": "3c267c983b67349e1850b8763dbad437a36822216f3351f99aa97f6f1fb11222",
+    "bytes": 12931
+  },
+  {
+    "id": "G-H",
+    "filename": "arcsecs_relational_gravity_interactive_explorer(1).html",
+    "lines": 1077,
+    "sha256": "6463f0877357315178c063f72dde99a43966d6b657073370d4a22f252520844e",
+    "bytes": 69298
+  }
+]

@@ -1,0 +1,6 @@
+audit_id,main_book_id,relationship,status
+R-A01,Anchor LMC,Pietrzynski et al. 2019,Auditor checked publisher abstract; no independent fit
+R-A02,Anchor NGC 4258,Reid et al. 2019,Auditor checked abstract; no independent fit
+R-A03,S02,DES timing,Auditor checked abstract; no raw data fit
+R-A04,S05,GW170817/GRB 170817A,Auditor checked primary abstract; conditional interval
+R-A05/R-A06,WOH G64 dossier,Competing spectral interpretations,Publisher search results only; primary data pending

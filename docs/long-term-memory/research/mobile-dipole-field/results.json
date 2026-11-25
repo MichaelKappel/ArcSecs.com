@@ -1,0 +1,74 @@
+[
+  {
+    "case": "baseline",
+    "energy_drift": 4.559797964850635e-11,
+    "momentum_drift": 6.586120537832585e-13,
+    "final_center1": 1.8190567942746583,
+    "final_center2": 4.385637816994868,
+    "peak_receiver_q": 0.05207970119710087,
+    "calibration_ratio_initial": 1.00282534289354,
+    "calibration_ratio_final": 0.999807844919608,
+    "initial_energy": 0.09131410712244474,
+    "initial_momentum": 0.208
+  },
+  {
+    "case": "no_excitation",
+    "energy_drift": 8.535634634304507e-13,
+    "momentum_drift": 4.191091917959966e-15,
+    "final_center1": 1.8167349190891293,
+    "final_center2": 4.385241922772431,
+    "peak_receiver_q": 0.0,
+    "calibration_ratio_initial": 1.0,
+    "calibration_ratio_final": 0.9999498858767707,
+    "initial_energy": 0.019449407544200416,
+    "initial_momentum": 0.208
+  },
+  {
+    "case": "no_radiation",
+    "energy_drift": 1.4058929987983587e-10,
+    "momentum_drift": 2.019467926217544e-12,
+    "final_center1": 1.8167886622452998,
+    "final_center2": 4.385130655709845,
+    "peak_receiver_q": 0.0,
+    "calibration_ratio_initial": 1.00282534289354,
+    "calibration_ratio_final": 1.0011455781596907,
+    "initial_energy": 0.09131410712244474,
+    "initial_momentum": 0.208
+  },
+  {
+    "case": "no_screening",
+    "energy_drift": 6.60212560390756e-11,
+    "momentum_drift": 6.19754247921378e-13,
+    "final_center1": 1.8180408263816004,
+    "final_center2": 4.386478716580802,
+    "peak_receiver_q": 0.04869056749419296,
+    "calibration_ratio_initial": 1.0046876677147976,
+    "calibration_ratio_final": 1.0012528601877406,
+    "initial_energy": 0.07988089350502899,
+    "initial_momentum": 0.208
+  },
+  {
+    "case": "stationary_centers_initially",
+    "energy_drift": 5.768431411309235e-11,
+    "momentum_drift": 1.1986359170837457e-13,
+    "final_center1": 1.4801245537286436,
+    "final_center2": 4.529899097856506,
+    "peak_receiver_q": 0.06618786337392094,
+    "calibration_ratio_initial": 1.00282534289354,
+    "calibration_ratio_final": 0.9991973111037598,
+    "initial_energy": 0.08528210712244473,
+    "initial_momentum": 0.0
+  },
+  {
+    "case": "higher_fourier_resolution",
+    "energy_drift": 6.108064503812605e-11,
+    "momentum_drift": 9.167944181598386e-13,
+    "final_center1": 1.8190567985683568,
+    "final_center2": 4.385637812792933,
+    "peak_receiver_q": 0.05207970016033697,
+    "calibration_ratio_initial": 1.00282534301595,
+    "calibration_ratio_final": 0.9998078449773321,
+    "initial_energy": 0.09131410694570445,
+    "initial_momentum": 0.208
+  }
+]

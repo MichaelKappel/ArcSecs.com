@@ -1,0 +1,2 @@
+# Review edition 3.0 changes
+Preserved Review 2 source and unchanged charter; integrated Part XXXI finite-capacity irreversible dressing and recoil, new equations, 42-run numerical benchmark, figures, updated conclusion, evidence ledger and reproducibility directions. Added research-08.uai and distributed updates across six branch cards, decision ledger, startup and handoff. No remote writeback or external observational fitting.

@@ -1,0 +1,166 @@
+{
+  "generatedAtUtc": "2026-06-01T04:05:33Z",
+  "version": "5.8.10",
+  "results": [
+    {
+      "command": "npm run build",
+      "returncode": 0,
+      "output_tail": "\n> arcsecs-scientific-physics-engine@5.8.10 build\n> tsc --noEmit --project tsconfig.json\n\n"
+    },
+    {
+      "command": "npm run lint",
+      "returncode": 0,
+      "output_tail": "\n> arcsecs-scientific-physics-engine@5.8.10 lint\n> node --test tests/js/source-quality.test.js\n\nTAP version 13\n# Subtest: source quality forbids jQuery and explicit any in runtime and contracts\nok 1 - source quality forbids jQuery and explicit any in runtime and contracts\n  ---\n  duration_ms: 6.696908\n  type: 'test'\n  ...\n# Subtest: source quality keeps v5.8.10 package identity aligned\nok 2 - source quality keeps v5.8.10 package identity aligned\n  ---\n  duration_ms: 0.648876\n  type: 'test'\n  ...\n1..2\n# tests 2\n# suites 0\n# pass 2\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 92.481037\n"
+    },
+    {
+      "command": "node --test tests/js/v169-space-travel-mission-calibration-lab.test.js",
+      "returncode": 0,
+      "output_tail": "ements package identity and keeps shortcode registered\nok 1 - v5.8.10 increments package identity and keeps shortcode registered\n  ---\n  duration_ms: 0.844888\n  type: 'test'\n  ...\n# Subtest: v5.8.10 exposes Mission Calibration Lab helpers\nok 2 - v5.8.10 exposes Mission Calibration Lab helpers\n  ---\n  duration_ms: 0.117775\n  type: 'test'\n  ...\n# Subtest: v5.8.10 calibration clamps unsafe inputs and remains finite\nok 3 - v5.8.10 calibration clamps unsafe inputs and remains finite\n  ---\n  duration_ms: 1.101715\n  type: 'test'\n  ...\n# Subtest: v5.8.10 calibration changes distance, speed, and density evidence\nok 4 - v5.8.10 calibration changes distance, speed, and density evidence\n  ---\n  duration_ms: 7.085683\n  type: 'test'\n  ...\n# Subtest: v5.8.10 export contains calibration state and evidence\nok 5 - v5.8.10 export contains calibration state and evidence\n  ---\n  duration_ms: 29.850466\n  type: 'test'\n  ...\n# Subtest: v5.8.10 shortcode UI contains calibration controls and telemetry cards\nok 6 - v5.8.10 shortcode UI contains calibration controls and telemetry cards\n  ---\n  duration_ms: 0.690434\n  type: 'test'\n  ...\n# Subtest: v5.8.10 TypeScript contracts include calibration exports\nok 7 - v5.8.10 TypeScript contracts include calibration exports\n  ---\n  duration_ms: 0.259971\n  type: 'test'\n  ...\n# Subtest: v5.8.10 avoids explicit any, jQuery, and risky page-creation hooks\nok 8 - v5.8.10 avoids explicit any, jQuery, and risky page-creation hooks\n  ---\n  duration_ms: 1.419691\n  type: 'test'\n  ...\n1..8\n# tests 8\n# suites 0\n# pass 8\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 133.85747\n"
+    },
+    {
+      "command": "node --test tests/js/v168-space-travel-parsec-mission-game.test.js",
+      "returncode": 0,
+      "output_tail": " 3 - v5.8.10 dense region has stronger tradeoff than void corridor\n  ---\n  duration_ms: 1.873007\n  type: 'test'\n  ...\n# Subtest: v5.8.10 void region preserves velocity better than dense region during coast\nok 4 - v5.8.10 void region preserves velocity better than dense region during coast\n  ---\n  duration_ms: 45.641765\n  type: 'test'\n  ...\n# Subtest: v5.8.10 parsec navigation, surface density, route mix, and wavefront tracker update during mission\nok 5 - v5.8.10 parsec navigation, surface density, route mix, and wavefront tracker update during mission\n  ---\n  duration_ms: 33.784441\n  type: 'test'\n  ...\n# Subtest: v5.8.10 gravity baseline and photon lag remain deterministic and density sensitive\nok 6 - v5.8.10 gravity baseline and photon lag remain deterministic and density sensitive\n  ---\n  duration_ms: 24.917221\n  type: 'test'\n  ...\n# Subtest: v5.8.10 export contains required evidence contract and no non-finite numbers\nok 7 - v5.8.10 export contains required evidence contract and no non-finite numbers\n  ---\n  duration_ms: 24.079114\n  type: 'test'\n  ...\n# Subtest: v5.8.10 tap-to-target, autopilot, mobile controls, and falsification UI are present\nok 8 - v5.8.10 tap-to-target, autopilot, mobile controls, and falsification UI are present\n  ---\n  duration_ms: 0.893704\n  type: 'test'\n  ...\n# Subtest: v5.8.10 avoids explicit any, jQuery, and risky page-creation hooks\nok 9 - v5.8.10 avoids explicit any, jQuery, and risky page-creation hooks\n  ---\n  duration_ms: 1.572502\n  type: 'test'\n  ...\n1..9\n# tests 9\n# suites 0\n# pass 9\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 240.97435\n"
+    },
+    {
+      "command": "node --test tests/js/v167-space-travel-propulsion-mode-lab.test.js",
+      "returncode": 0,
+      "output_tail": " duration_ms: 0.989126\n  type: 'test'\n  ...\n# Subtest: v5.8.10 exposes propulsion mode helpers and mode catalog\nok 2 - v5.8.10 exposes propulsion mode helpers and mode catalog\n  ---\n  duration_ms: 0.324614\n  type: 'test'\n  ...\n# Subtest: v5.8.10 locked future placeholders remain inactive and labeled\nok 3 - v5.8.10 locked future placeholders remain inactive and labeled\n  ---\n  duration_ms: 0.951593\n  type: 'test'\n  ...\n# Subtest: v5.8.10 active modes produce distinct fuel, risk, curvature, and turbulence models\nok 4 - v5.8.10 active modes produce distinct fuel, risk, curvature, and turbulence models\n  ---\n  duration_ms: 1.56568\n  type: 'test'\n  ...\n# Subtest: v5.8.10 propulsion mode changes finite mission state and export payload\nok 5 - v5.8.10 propulsion mode changes finite mission state and export payload\n  ---\n  duration_ms: 41.884118\n  type: 'test'\n  ...\n# Subtest: v5.8.10 replay trail includes propulsion mode evidence fields\nok 6 - v5.8.10 replay trail includes propulsion mode evidence fields\n  ---\n  duration_ms: 21.749667\n  type: 'test'\n  ...\n# Subtest: v5.8.10 shortcode UI contains propulsion selector, active modes, locked placeholders, and telemetry cards\nok 7 - v5.8.10 shortcode UI contains propulsion selector, active modes, locked placeholders, and telemetry cards\n  ---\n  duration_ms: 0.862164\n  type: 'test'\n  ...\n# Subtest: v5.8.10 avoids risky runtime changes and jQuery\nok 8 - v5.8.10 avoids risky runtime changes and jQuery\n  ---\n  duration_ms: 1.307104\n  type: 'test'\n  ...\n1..8\n# tests 8\n# suites 0\n# pass 8\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 165.125539\n"
+    },
+    {
+      "command": "node --test tests/js/v166-space-travel-distance-speed-scale.test.js",
+      "returncode": 0,
+      "output_tail": "TAP version 13\n# Subtest: v5.8.10 increments package identity and keeps shortcode registered\nok 1 - v5.8.10 increments package identity and keeps shortcode registered\n  ---\n  duration_ms: 0.959838\n  type: 'test'\n  ...\n# Subtest: v5.8.10 exposes distance and speed scale helpers\nok 2 - v5.8.10 exposes distance and speed scale helpers\n  ---\n  duration_ms: 0.198685\n  type: 'test'\n  ...\n# Subtest: v5.8.10 distance and speed scale remains finite while moving\nok 3 - v5.8.10 distance and speed scale remains finite while moving\n  ---\n  duration_ms: 46.916307\n  type: 'test'\n  ...\n# Subtest: v5.8.10 export payload includes labeled distance/speed scale and validation row\nok 4 - v5.8.10 export payload includes labeled distance/speed scale and validation row\n  ---\n  duration_ms: 19.012651\n  type: 'test'\n  ...\n# Subtest: v5.8.10 replay trail includes distance and speed fields\nok 5 - v5.8.10 replay trail includes distance and speed fields\n  ---\n  duration_ms: 18.729334\n  type: 'test'\n  ...\n# Subtest: v5.8.10 shortcode UI contains distance and speed scale cards\nok 6 - v5.8.10 shortcode UI contains distance and speed scale cards\n  ---\n  duration_ms: 0.807901\n  type: 'test'\n  ...\n# Subtest: v5.8.10 avoids risky runtime changes and jQuery\nok 7 - v5.8.10 avoids risky runtime changes and jQuery\n  ---\n  duration_ms: 1.360847\n  type: 'test'\n  ...\n1..7\n# tests 7\n# suites 0\n# pass 7\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 184.833487\n"
+    },
+    {
+      "command": "node --test tests/js/v165-space-travel-teleparallel-torsion-route-curvature.test.js",
+      "returncode": 0,
+      "output_tail": "d\n  ---\n  duration_ms: 0.881199\n  type: 'test'\n  ...\n# Subtest: v5.8.10 exposes teleparallel torsion and route curvature helpers\nok 2 - v5.8.10 exposes teleparallel torsion and route curvature helpers\n  ---\n  duration_ms: 0.126077\n  type: 'test'\n  ...\n# Subtest: v5.8.10 torsion field and route curvature remain finite during Grand Tour\nok 3 - v5.8.10 torsion field and route curvature remain finite during Grand Tour\n  ---\n  duration_ms: 54.28381\n  type: 'test'\n  ...\n# Subtest: v5.8.10 torsion shear region produces measurable torsion or curvature\nok 4 - v5.8.10 torsion shear region produces measurable torsion or curvature\n  ---\n  duration_ms: 0.369713\n  type: 'test'\n  ...\n# Subtest: v5.8.10 export payload includes teleparallel torsion and route curvature evidence\nok 5 - v5.8.10 export payload includes teleparallel torsion and route curvature evidence\n  ---\n  duration_ms: 24.297989\n  type: 'test'\n  ...\n# Subtest: v5.8.10 replay trail includes torsion and curvature fields\nok 6 - v5.8.10 replay trail includes torsion and curvature fields\n  ---\n  duration_ms: 18.239872\n  type: 'test'\n  ...\n# Subtest: v5.8.10 shortcode UI contains torsion vector and curvature inspector controls and cards\nok 7 - v5.8.10 shortcode UI contains torsion vector and curvature inspector controls and cards\n  ---\n  duration_ms: 1.068147\n  type: 'test'\n  ...\n# Subtest: v5.8.10 avoids risky runtime changes and jQuery\nok 8 - v5.8.10 avoids risky runtime changes and jQuery\n  ---\n  duration_ms: 1.314273\n  type: 'test'\n  ...\n1..8\n# tests 8\n# suites 0\n# pass 8\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 203.112236\n"
+    },
+    {
+      "command": "node --test tests/js/v164-space-travel-dynamic-proca-psf-lensing.test.js",
+      "returncode": 0,
+      "output_tail": "red\n  ---\n  duration_ms: 1.033515\n  type: 'test'\n  ...\n# Subtest: v5.8.10 exposes dynamic Proca and PSF/lensing helpers\nok 2 - v5.8.10 exposes dynamic Proca and PSF/lensing helpers\n  ---\n  duration_ms: 0.158432\n  type: 'test'\n  ...\n# Subtest: v5.8.10 dynamic Proca field and PSF state remain finite during Grand Tour\nok 3 - v5.8.10 dynamic Proca field and PSF state remain finite during Grand Tour\n  ---\n  duration_ms: 54.300539\n  type: 'test'\n  ...\n# Subtest: v5.8.10 stronger Proca samples produce finite optical turbulence and lensing values\nok 4 - v5.8.10 stronger Proca samples produce finite optical turbulence and lensing values\n  ---\n  duration_ms: 0.380735\n  type: 'test'\n  ...\n# Subtest: v5.8.10 export payload includes dynamic Proca, PSF/lensing, evidence, and validation\nok 5 - v5.8.10 export payload includes dynamic Proca, PSF/lensing, evidence, and validation\n  ---\n  duration_ms: 24.950659\n  type: 'test'\n  ...\n# Subtest: v5.8.10 replay trail includes dynamic Proca and PSF fields\nok 6 - v5.8.10 replay trail includes dynamic Proca and PSF fields\n  ---\n  duration_ms: 17.127661\n  type: 'test'\n  ...\n# Subtest: v5.8.10 shortcode UI contains Proca and PSF/lensing controls and telemetry cards\nok 7 - v5.8.10 shortcode UI contains Proca and PSF/lensing controls and telemetry cards\n  ---\n  duration_ms: 1.03584\n  type: 'test'\n  ...\n# Subtest: v5.8.10 avoids risky runtime changes and jQuery\nok 8 - v5.8.10 avoids risky runtime changes and jQuery\n  ---\n  duration_ms: 1.293423\n  type: 'test'\n  ...\n1..8\n# tests 8\n# suites 0\n# pass 8\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 198.186705\n"
+    },
+    {
+      "command": "node --test tests/js/v163-space-travel-relational-coordinate-middleware.test.js",
+      "returncode": 0,
+      "output_tail": "TAP version 13\n# Subtest: v5.8.10 increments package identity and keeps shortcode registered\nok 1 - v5.8.10 increments package identity and keeps shortcode registered\n  ---\n  duration_ms: 0.812526\n  type: 'test'\n  ...\n# Subtest: v5.8.10 exposes relational coordinate middleware helpers\nok 2 - v5.8.10 exposes relational coordinate middleware helpers\n  ---\n  duration_ms: 0.182549\n  type: 'test'\n  ...\n# Subtest: v5.8.10 relational coordinate state remains finite during Grand Tour\nok 3 - v5.8.10 relational coordinate state remains finite during Grand Tour\n  ---\n  duration_ms: 47.119278\n  type: 'test'\n  ...\n# Subtest: v5.8.10 export payload includes relational and instrument-mask coordinate layers\nok 4 - v5.8.10 export payload includes relational and instrument-mask coordinate layers\n  ---\n  duration_ms: 19.429194\n  type: 'test'\n  ...\n# Subtest: v5.8.10 replay trail includes relational arcsecond fields\nok 5 - v5.8.10 replay trail includes relational arcsecond fields\n  ---\n  duration_ms: 20.211254\n  type: 'test'\n  ...\n# Subtest: v5.8.10 shortcode UI contains relational coordinate telemetry cards\nok 6 - v5.8.10 shortcode UI contains relational coordinate telemetry cards\n  ---\n  duration_ms: 0.651485\n  type: 'test'\n  ...\n# Subtest: v5.8.10 avoids risky runtime changes and jQuery\nok 7 - v5.8.10 avoids risky runtime changes and jQuery\n  ---\n  duration_ms: 1.162427\n  type: 'test'\n  ...\n1..7\n# tests 7\n# suites 0\n# pass 7\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 187.975818\n"
+    },
+    {
+      "command": "node --test tests/js/v162-space-travel-evidence-ledger.test.js",
+      "returncode": 0,
+      "output_tail": "TAP version 13\n# Subtest: v5.8.10 increments package identity and keeps shortcode registered\nok 1 - v5.8.10 increments package identity and keeps shortcode registered\n  ---\n  duration_ms: 0.859392\n  type: 'test'\n  ...\n# Subtest: v5.8.10 exposes evidence ledger and replay inspector helpers\nok 2 - v5.8.10 exposes evidence ledger and replay inspector helpers\n  ---\n  duration_ms: 0.222245\n  type: 'test'\n  ...\n# Subtest: v5.8.10 evidence ledger stays finite and gains rows during Grand Tour\nok 3 - v5.8.10 evidence ledger stays finite and gains rows during Grand Tour\n  ---\n  duration_ms: 57.85989\n  type: 'test'\n  ...\n# Subtest: v5.8.10 replay inspector selects a finite replay frame\nok 4 - v5.8.10 replay inspector selects a finite replay frame\n  ---\n  duration_ms: 19.750824\n  type: 'test'\n  ...\n# Subtest: v5.8.10 export payload includes evidence ledger and replay inspector state\nok 5 - v5.8.10 export payload includes evidence ledger and replay inspector state\n  ---\n  duration_ms: 15.897381\n  type: 'test'\n  ...\n# Subtest: v5.8.10 shortcode UI contains Evidence Ledger and Replay Inspector controls\nok 6 - v5.8.10 shortcode UI contains Evidence Ledger and Replay Inspector controls\n  ---\n  duration_ms: 0.724246\n  type: 'test'\n  ...\n# Subtest: v5.8.10 avoids risky runtime changes and jQuery\nok 7 - v5.8.10 avoids risky runtime changes and jQuery\n  ---\n  duration_ms: 1.272651\n  type: 'test'\n  ...\n1..7\n# tests 7\n# suites 0\n# pass 7\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 189.785575\n"
+    },
+    {
+      "command": "node --test tests/js/v161-space-travel-replay-challenge.test.js",
+      "returncode": 0,
+      "output_tail": "TAP version 13\n# Subtest: v5.8.10 increments package identity and keeps shortcode registered\nok 1 - v5.8.10 increments package identity and keeps shortcode registered\n  ---\n  duration_ms: 0.914147\n  type: 'test'\n  ...\n# Subtest: v5.8.10 exposes Grand Tour Challenge and replay/challenge helpers\nok 2 - v5.8.10 exposes Grand Tour Challenge and replay/challenge helpers\n  ---\n  duration_ms: 0.288253\n  type: 'test'\n  ...\n# Subtest: v5.8.10 records replay trail frames and finite challenge state during Grand Tour\nok 3 - v5.8.10 records replay trail frames and finite challenge state during Grand Tour\n  ---\n  duration_ms: 52.516777\n  type: 'test'\n  ...\n# Subtest: v5.8.10 export payload includes replay and challenge evidence\nok 4 - v5.8.10 export payload includes replay and challenge evidence\n  ---\n  duration_ms: 20.74672\n  type: 'test'\n  ...\n# Subtest: v5.8.10 shortcode UI contains Grand Tour, challenge, replay, and trail controls\nok 5 - v5.8.10 shortcode UI contains Grand Tour, challenge, replay, and trail controls\n  ---\n  duration_ms: 0.816217\n  type: 'test'\n  ...\n# Subtest: v5.8.10 avoids risky runtime changes and jQuery\nok 6 - v5.8.10 avoids risky runtime changes and jQuery\n  ---\n  duration_ms: 1.285237\n  type: 'test'\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 171.429808\n"
+    },
+    {
+      "command": "node --test tests/js/v160-space-travel-mission-objective-scorecard.test.js",
+      "returncode": 0,
+      "output_tail": "TAP version 13\n# Subtest: v5.8.10 increments package identity and keeps shortcode registered\nok 1 - v5.8.10 increments package identity and keeps shortcode registered\n  ---\n  duration_ms: 0.994073\n  type: 'test'\n  ...\n# Subtest: v5.8.10 exposes mission objective scorecard helpers\nok 2 - v5.8.10 exposes mission objective scorecard helpers\n  ---\n  duration_ms: 0.321796\n  type: 'test'\n  ...\n# Subtest: v5.8.10 scorecard remains finite during guided demo playback\nok 3 - v5.8.10 scorecard remains finite during guided demo playback\n  ---\n  duration_ms: 50.210046\n  type: 'test'\n  ...\n# Subtest: v5.8.10 export payload includes mission objective scorecard and validation row\nok 4 - v5.8.10 export payload includes mission objective scorecard and validation row\n  ---\n  duration_ms: 16.538414\n  type: 'test'\n  ...\n# Subtest: v5.8.10 shortcode UI contains mission objective HUD fields\nok 5 - v5.8.10 shortcode UI contains mission objective HUD fields\n  ---\n  duration_ms: 0.674539\n  type: 'test'\n  ...\n# Subtest: v5.8.10 avoids risky runtime changes and jQuery\nok 6 - v5.8.10 avoids risky runtime changes and jQuery\n  ---\n  duration_ms: 1.230144\n  type: 'test'\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 175.224922\n"
+    },
+    {
+      "command": "node --test tests/js/v159-space-travel-guided-mission-director.test.js",
+      "returncode": 0,
+      "output_tail": "TAP version 13\n# Subtest: v5.8.10 increments package identity and keeps shortcode registered\nok 1 - v5.8.10 increments package identity and keeps shortcode registered\n  ---\n  duration_ms: 0.796334\n  type: 'test'\n  ...\n# Subtest: v5.8.10 exposes guided mission demo presets and selector UI\nok 2 - v5.8.10 exposes guided mission demo presets and selector UI\n  ---\n  duration_ms: 0.931943\n  type: 'test'\n  ...\n# Subtest: v5.8.10 guided demo moves ship and records finite director state\nok 3 - v5.8.10 guided demo moves ship and records finite director state\n  ---\n  duration_ms: 41.880487\n  type: 'test'\n  ...\n# Subtest: v5.8.10 multi-messenger guided demo triggers a signal event\nok 4 - v5.8.10 multi-messenger guided demo triggers a signal event\n  ---\n  duration_ms: 0.765717\n  type: 'test'\n  ...\n# Subtest: v5.8.10 export payload includes demoDirector state and validation row\nok 5 - v5.8.10 export payload includes demoDirector state and validation row\n  ---\n  duration_ms: 11.757508\n  type: 'test'\n  ...\n# Subtest: v5.8.10 avoids risky runtime changes and jQuery\nok 6 - v5.8.10 avoids risky runtime changes and jQuery\n  ---\n  duration_ms: 1.286663\n  type: 'test'\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 150.605027\n"
+    },
+    {
+      "command": "node --test tests/js/v158-space-travel-multi-messenger-wavefront.test.js",
+      "returncode": 0,
+      "output_tail": "ackage identity and keeps shortcode registered\n  ---\n  duration_ms: 0.80032\n  type: 'test'\n  ...\n# Subtest: v5.8.10 defines GravityWavefront, PhotonWavefront, MultiMessengerEvent, and WavefrontTelemetry structures\nok 2 - v5.8.10 defines GravityWavefront, PhotonWavefront, MultiMessengerEvent, and WavefrontTelemetry structures\n  ---\n  duration_ms: 0.195128\n  type: 'test'\n  ...\n# Subtest: v5.8.10 gravity arrival precedes photon arrival and photon energy stays non-negative\nok 3 - v5.8.10 gravity arrival precedes photon arrival and photon energy stays non-negative\n  ---\n  duration_ms: 32.500669\n  type: 'test'\n  ...\n# Subtest: v5.8.10 photon delay increases with substrate density through refractive index scaling\nok 4 - v5.8.10 photon delay increases with substrate density through refractive index scaling\n  ---\n  duration_ms: 0.546585\n  type: 'test'\n  ...\n# Subtest: v5.8.10 export payload contains multi-messenger events and wavefront telemetry\nok 5 - v5.8.10 export payload contains multi-messenger events and wavefront telemetry\n  ---\n  duration_ms: 5.407444\n  type: 'test'\n  ...\n# Subtest: v5.8.10 shortcode UI includes signal trigger and multi-messenger telemetry cards\nok 6 - v5.8.10 shortcode UI includes signal trigger and multi-messenger telemetry cards\n  ---\n  duration_ms: 0.710894\n  type: 'test'\n  ...\n# Subtest: v5.8.10 avoids out-of-scope risky runtime changes and jQuery\nok 7 - v5.8.10 avoids out-of-scope risky runtime changes and jQuery\n  ---\n  duration_ms: 1.276521\n  type: 'test'\n  ...\n1..7\n# tests 7\n# suites 0\n# pass 7\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 134.1172\n"
+    },
+    {
+      "command": "node --check assets/js/arcsecs-space-travel-simulation.js",
+      "returncode": 0,
+      "output_tail": ""
+    },
+    {
+      "command": "node --check assets/js/arcsecs-dark-matter-drive-simulator.js",
+      "returncode": 0,
+      "output_tail": ""
+    },
+    {
+      "command": "node --check assets/js/arcsecs-physics-engine.js",
+      "returncode": 0,
+      "output_tail": ""
+    },
+    {
+      "command": "node --check assets/js/arcsecs-physics-worker.js",
+      "returncode": 0,
+      "output_tail": ""
+    },
+    {
+      "command": "node --check assets/js/arcsecs-dark-matter-drive-compute-worker.js",
+      "returncode": 0,
+      "output_tail": ""
+    },
+    {
+      "command": "php -l arcsecs-scientific-physics-engine.php",
+      "returncode": 0,
+      "output_tail": "No syntax errors detected in arcsecs-scientific-physics-engine.php\n"
+    },
+    {
+      "command": "php -l includes/class-arcsecs-physics-engine-plugin.php",
+      "returncode": 0,
+      "output_tail": "No syntax errors detected in includes/class-arcsecs-physics-engine-plugin.php\n"
+    },
+    {
+      "command": "php -l includes/class-arcsecs-physics-engine-activator.php",
+      "returncode": 0,
+      "output_tail": "No syntax errors detected in includes/class-arcsecs-physics-engine-activator.php\n"
+    },
+    {
+      "command": "php -l includes/class-arcsecs-physics-engine-shortcodes.php",
+      "returncode": 0,
+      "output_tail": "No syntax errors detected in includes/class-arcsecs-physics-engine-shortcodes.php\n"
+    },
+    {
+      "command": "node --test tests/space-travel-mission-calibration-validation.js",
+      "returncode": 0,
+      "output_tail": "TAP version 13\n# Subtest: mission calibration changes safe scale controls and exports evidence\nok 1 - mission calibration changes safe scale controls and exports evidence\n  ---\n  duration_ms: 46.068022\n  type: 'test'\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 1\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 149.42935\n"
+    },
+    {
+      "command": "node --test tests/space-travel-parsec-navigation-validation.js",
+      "returncode": 0,
+      "output_tail": "TAP version 13\n# Subtest: parsec navigation helpers and state remain finite\nok 1 - parsec navigation helpers and state remain finite\n  ---\n  duration_ms: 37.28613\n  type: 'test'\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 1\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 145.353322\n"
+    },
+    {
+      "command": "node --test tests/space-travel-wavefront-propagation-validation.js",
+      "returncode": 0,
+      "output_tail": "TAP version 13\n# Subtest: wavefront propagation keeps gravity stable and photon finite\nok 1 - wavefront propagation keeps gravity stable and photon finite\n  ---\n  duration_ms: 39.962567\n  type: 'test'\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 1\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 142.899062\n"
+    },
+    {
+      "command": "node --test tests/space-travel-region-tradeoff-validation.js",
+      "returncode": 0,
+      "output_tail": "TAP version 13\n# Subtest: dense and void regions create distinct tradeoffs\nok 1 - dense and void regions create distinct tradeoffs\n  ---\n  duration_ms: 2.25211\n  type: 'test'\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 1\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 103.252334\n"
+    },
+    {
+      "command": "node --test tests/space-travel-export-schema-validation.js",
+      "returncode": 0,
+      "output_tail": "TAP version 13\n# Subtest: export schema contains required v5.8.10 contract fields\nok 1 - export schema contains required v5.8.10 contract fields\n  ---\n  duration_ms: 45.494939\n  type: 'test'\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 1\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 141.192699\n"
+    },
+    {
+      "command": "node --test tests/space-travel-mobile-controls-validation.js",
+      "returncode": 0,
+      "output_tail": "TAP version 13\n# Subtest: mobile and tap controls are present\nok 1 - mobile and tap controls are present\n  ---\n  duration_ms: 5.270779\n  type: 'test'\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 1\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 100.625127\n"
+    },
+    {
+      "command": "node --test tests/package-version-identity-validation.js",
+      "returncode": 0,
+      "output_tail": "TAP version 13\n# Subtest: package identity is v5.8.10 everywhere critical\nok 1 - package identity is v5.8.10 everywhere critical\n  ---\n  duration_ms: 1.035517\n  type: 'test'\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 1\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 92.902159\n"
+    }
+  ],
+  "namedValidationScriptsAdded": [
+    "tests/space-travel-mission-calibration-validation.js",
+    "tests/space-travel-parsec-navigation-validation.js",
+    "tests/space-travel-wavefront-propagation-validation.js",
+    "tests/space-travel-region-tradeoff-validation.js",
+    "tests/space-travel-export-schema-validation.js",
+    "tests/space-travel-mobile-controls-validation.js",
+    "tests/package-version-identity-validation.js"
+  ],
+  "updatedAtUtc": "2026-06-01T04:05:51Z"
+}

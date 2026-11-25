@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArcSecs: Relational Gravity, Massive-Radiation Capture &amp; Dark-Sector Ledger</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background-color: #FAF8F5;
+      color: #1E293B;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    .chart-container {
+      position: relative;
+      width: 100%;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 290px;
+      max-height: 360px;
+    }
+    @media (min-width: 768px) {
+      .chart-container {
+        height: 330px;
+      }
+    }
+    .math-pill {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+    .tab-active {
+      border-bottom: 2px solid #0F766E;
+      color: #0F766E;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-teal-100 selection:text-teal-900">
+
+<!-- Chosen Palette: Warm Alabaster & Slate Harmony (#FAF8F5 canvas, #FFFFFF/#F3EFEA cards, #1E293B slate ink, #0F766E deep teal primary accent, #B45309 amber revision accent, #BE123C muted crimson retirement accent) -->
+
+<!-- Application Structure Plan: Rather than mirroring the linear academic report chapters, the SPA is architected as an interactive scientific decision & simulation workbench organized into five task-oriented sections: (1) Executive Program Verdict & Architecture Comparator (synthesizing the Retain M1 / Revise C-01 / Retire M2 decision and comparing candidate frameworks side-by-side); (2) Charter Compliance & C-01 Regulator Lab (filtering the 12 ArcSecs foundations and interactively testing hollow-shell screening vs. Cassini/Th-229 clock bounds); (3) Compact-Object Capture & Outward-Climb Simulator (interactive mass-gap parameter explorer, Foundation 3 speed divergence plot, and Foundation 12 quasar scaling calculator); (4) Cosmic Dark-Sector Ledger & Dynamics Confrontation (logarithmic cosmic energy density audit, interactive SPARC rotation curve vs. Bullet Cluster obstruction visualizer, and dark-sector propulsion calculator); and (5) Empirical Benchmark & Cross-Prompt Handoff Ledger. This structure prioritizes rapid synthesis of core conclusions followed by hands-on parameter exploration of every quantitative constraint. -->
+
+<!-- Visualization & Content Choices:
+1. Model Architecture Matrix (HTML Grid + JS Toggle) -> Goal: Compare M1, M2, and Baryons-Only Yukawa across 6 physical tests -> Justification: Immediately clarifies why M1 succeeds while M2 is retired.
+2. Charter Compliance Table (Filterable HTML Table + JS) -> Goal: Organize & filter the 12 ArcSecs Foundations -> Justification: Enables rapid auditing of stipulated constraints vs. derived mathematical boundaries.
+3. Hollow-Shell C-01 Screening Profile (Chart.js Line Chart + Toggle) -> Goal: Visualize WP-B radial field psi(r) across R1=0.6, R2=1.0 for k_out=0.2 vs k_out=1e-6 -> Justification: Demonstrates Newton's shell cancellation with nonzero interior regulator amplitude.
+4. Solar & Nuclear Clock Exclusion Chart (Chart.js Horizontal Bar Chart) -> Goal: Compare C-01 modulation limits across Solar Limb Cassini (1.422e-10) and Earth-Orbit Th-229/Sr-87 (1.695e-20) -> Justification: Visually proves why local C_em variations are excluded.
+5. Massive-Photon Capture & Photon Sphere Explorer (Chart.js Dual-Axis Line Chart + Interactive Slider) -> Goal: Show r_ph/r_s and b_phys,crit/r_s growth across gap ratio mu = 0..0.95 -> Justification: Links Proca photon mass to EHT shadow observables.
+6. Foundation 3 Outward-Climb Monotonicity Chart (Chart.js Line Chart) -> Goal: Contrast decreasing v_loc/c0 vs. increasing v_coord/c0 at mu=0.5 -> Justification: Illuminates the radial escape monotonicity tension.
+7. Cosmic Energy-Density Shortfall Chart (Chart.js Log Bar Chart) -> Goal: Compare u_DM (1264.41 eV/cm3) against baryons, CMB, EBL, and stopped photon remnants (<=4.107e-16) -> Justification: Makes the 19-order-of-magnitude photon-remnant shortfall unmistakable.
+8. Spiral Rotation Curve & Bullet Cluster Diagnostic (Chart.js Line Chart + Toggle) -> Goal: Compare Newtonian baryons vs. Yukawa-boosted curve (1-35 kpc) alongside Bullet Cluster 8-sigma gas/BCG offset -> Justification: Shows why rotation curves alone cannot rescue baryons-only modified gravity.
+9. Propulsion Momentum-Exchange Calculator (Interactive Sliders + Live Metrics) -> Goal: Compute F_max and P_flux across collector area and relative velocity -> Justification: Lets users test the sub-nanonewton propulsion bound directly.
+-->
+
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+  <header class="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-3">
+          <span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-teal-800 text-amber-50 font-bold text-lg shadow-sm">⚛</span>
+          <div>
+            <span class="font-bold text-slate-900 tracking-tight text-base sm:text-lg block leading-none">ArcSecs Investigation</span>
+            <span class="text-xs text-slate-500 tracking-wide">Relational Gravity, Capture &amp; Dark-Sector Ledger</span>
+          </div>
+        </div>
+        <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+          <a href="#verdict" class="hover:text-teal-700 transition-colors">Program Verdict</a>
+          <a href="#charter-c01" class="hover:text-teal-700 transition-colors">Charter &amp; C-01 Lab</a>
+          <a href="#capture-wp-c" class="hover:text-teal-700 transition-colors">Capture &amp; Horizons</a>
+          <a href="#dark-ledger" class="hover:text-teal-700 transition-colors">Dark Ledger &amp; Propulsion</a>
+          <a href="#benchmarks" class="hover:text-teal-700 transition-colors">Benchmarks &amp; Handoff</a>
+        </nav>
+        <button id="mobileMenuBtn" class="md:hidden px-3 py-1.5 rounded-md border border-stone-300 text-slate-700 text-sm font-medium bg-white">
+          Menu ▾
+        </button>
+      </div>
+      <div id="mobileMenu" class="hidden md:hidden pb-3 pt-1 border-t border-stone-200 space-y-1 text-sm">
+        <a href="#verdict" class="block py-1.5 px-2 rounded hover:bg-stone-100 text-slate-700">1. Program Verdict &amp; Models</a>
+        <a href="#charter-c01" class="block py-1.5 px-2 rounded hover:bg-stone-100 text-slate-700">2. Charter &amp; C-01 Regulator Lab</a>
+        <a href="#capture-wp-c" class="block py-1.5 px-2 rounded hover:bg-stone-100 text-slate-700">3. Compact-Object Capture</a>
+        <a href="#dark-ledger" class="block py-1.5 px-2 rounded hover:bg-stone-100 text-slate-700">4. Dark-Sector Ledger &amp; Propulsion</a>
+        <a href="#benchmarks" class="block py-1.5 px-2 rounded hover:bg-stone-100 text-slate-700">5. Benchmarks &amp; Handoff</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-14">
+
+    <section id="verdict" class="space-y-6">
+      <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-sm">
+        <div class="flex flex-wrap items-center gap-2 mb-3">
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-teal-50 text-teal-800 border border-teal-200">Conditional Audit: Work Packages A–E</span>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-stone-100 text-slate-700 border border-stone-200">Non-Fabric Flat Coordinates (T, x)</span>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-50 text-amber-800 border border-amber-200">Proca Photon Ω &gt; 0</span>
+        </div>
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-3">
+          Relational Gravitational Interactions, Massive-Radiation Capture, and the Physical Dark-Sector Ledger
+        </h1>
+        <p class="text-slate-600 text-base leading-relaxed max-w-4xl">
+          This interactive synthesis audits physical, non-fabric gravitational and optical field architectures constrained by the twelve ArcSecs foundations and the C-01 mass–inertia regulation hypothesis. Use the executive decision banners, quantitative structural bounds, and interactive model comparator below to inspect why flat-coordinate spin-2 gravity (<strong class="text-slate-800">Model M1</strong>) succeeds across empirical benchmarks while standalone scalar–vector gravity (<strong class="text-slate-800">Model M2</strong>) and photon-remnant dark matter are mathematically excluded.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+          <div class="rounded-xl bg-teal-50/70 border border-teal-200 p-4">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs font-bold uppercase tracking-wider text-teal-800">Retain Architecture</span>
+              <span class="text-teal-700 font-bold">✓ M1</span>
+            </div>
+            <h2 class="font-bold text-slate-900 text-base mb-1">Flat-Coordinate Spin-2 + Proca + Cold Bath</h2>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Retarded rank-2 field <span class="math-pill">h_ab</span> (<span class="math-pill">C_h = c₀</span>, <span class="math-pill">γ = β = 1</span>) coupled universally to total stress-energy reproduces Solar System, pulsar, GW170817, and EHT shadow observations without curved spacetime fabric.
+            </p>
+          </div>
+
+          <div class="rounded-xl bg-amber-50/70 border border-amber-200 p-4">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-800">Revise Implementation</span>
+              <span class="text-amber-700 font-bold">⚠ C-01 / F3</span>
+            </div>
+            <h2 class="font-bold text-slate-900 text-base mb-1">Super-Galactic C-01 &amp; Drag-Dominated F3</h2>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Cassini and <span class="math-pill">²²⁹ᵐTh/⁸⁷Sr</span> clocks force local <span class="math-pill">|δC_em/c₀| &lt; 1.70×10⁻²⁰</span>. Foundation 3 (<span class="math-pill">dv_γ/dT ≤ 0</span>) must be restricted to secular bath drag rather than static potential-well climbs.
+            </p>
+          </div>
+
+          <div class="rounded-xl bg-rose-50/70 border border-rose-200 p-4">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs font-bold uppercase tracking-wider text-rose-800">Retire Hypotheses</span>
+              <span class="text-rose-700 font-bold">✕ M2 / Remnants</span>
+            </div>
+            <h2 class="font-bold text-slate-900 text-base mb-1">Standalone M2 &amp; Photon-Remnant DM</h2>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Scalar–vector M2 fails Cassini, MICROSCOPE WEP, and GWTC-3 tensor polarizations. Stopped CMB photons (<span class="math-pill">m_γ &lt; 10⁻¹⁸ eV</span>) supply <span class="math-pill">≤ 3.25×10⁻¹⁹</span> of required dark matter.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-6 pt-6 border-t border-stone-200">
+          <div class="p-3.5 rounded-xl bg-[#FAF8F5] border border-stone-200">
+            <div class="text-xs text-slate-500 font-medium">Orbital Clock Ceiling (|δC_em/c₀|)</div>
+            <div class="text-xl sm:text-2xl font-bold text-slate-900 mt-1 math-pill">&lt; 1.70×10⁻²⁰</div>
+            <div class="text-xs text-amber-700 mt-1">²²⁹ᵐTh/⁸⁷Sr at 10⁻¹⁶ floor</div>
+          </div>
+          <div class="p-3.5 rounded-xl bg-[#FAF8F5] border border-stone-200">
+            <div class="text-xs text-slate-500 font-medium">EHT Shadow Prediction (M87*)</div>
+            <div class="text-xl sm:text-2xl font-bold text-slate-900 mt-1 math-pill">39.69 µas</div>
+            <div class="text-xs text-teal-700 mt-1">Matches EHT ~40 µas (Sgr A*: 50.35 µas)</div>
+          </div>
+          <div class="p-3.5 rounded-xl bg-[#FAF8F5] border border-stone-200">
+            <div class="text-xs text-slate-500 font-medium">Photon Remnant DM Fraction</div>
+            <div class="text-xl sm:text-2xl font-bold text-slate-900 mt-1 math-pill">≤ 3.25×10⁻¹⁹</div>
+            <div class="text-xs text-rose-700 mt-1">19 orders below 1264.41 eV cm⁻³</div>
+          </div>
+          <div class="p-3.5 rounded-xl bg-[#FAF8F5] border border-stone-200">
+            <div class="text-xs text-slate-500 font-medium">Max Dark-Sector Thrust (100 m²)</div>
+            <div class="text-xl sm:text-2xl font-bold text-slate-900 mt-1 math-pill">5.18×10⁻⁹ N</div>
+            <div class="text-xs text-slate-600 mt-1">Sub-nanonewton elastic limit</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-sm">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-5">
+          <div>
+            <h2 class="text-xl font-bold text-slate-900">Candidate Architecture Comparison Matrix</h2>
+            <p class="text-sm text-slate-600 mt-1">Select a candidate field formulation to inspect its mathematical obstruction profile and empirical survival status.</p>
+          </div>
+          <div class="inline-flex rounded-lg bg-stone-100 p-1 border border-stone-200 self-start">
+            <button data-model="M1" class="model-btn px-3 py-1.5 rounded-md text-xs font-semibold bg-white text-teal-800 shadow-sm">Model M1 (Retained)</button>
+            <button data-model="M2" class="model-btn px-3 py-1.5 rounded-md text-xs font-semibold text-slate-600 hover:text-slate-900">Model M2 (Retired)</button>
+            <button data-model="YUK" class="model-btn px-3 py-1.5 rounded-md text-xs font-semibold text-slate-600 hover:text-slate-900">Baryons-Only Yukawa</button>
+          </div>
+        </div>
+
+        <div id="modelDetailCard" class="rounded-xl bg-[#FAF8F5] border border-stone-200 p-5 transition-all">
+        </div>
+      </div>
+    </section>
+
+    <section id="charter-c01" class="space-y-6">
+      <div class="border-l-4 border-teal-700 pl-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-teal-800">Work Packages A &amp; B</span>
+        <h2 class="text-2xl font-bold text-slate-900 mt-0.5">Charter Compliance Audit &amp; C-01 Regulator Lab</h2>
+        <p class="text-sm text-slate-600 mt-1 max-w-4xl">
+          Every mathematical derivation treats the twelve ArcSecs foundations as stipulated boundary conditions. Below, filter the complete Foundation Compliance Matrix and explore two decisive Work Package B numerical results: how a distant hollow mass shell sets a nonzero interior C-01 regulator without interior forces, and why Solar System optical and nuclear clock tests exclude local <span class="math-pill">C_em</span> variations.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-sm">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+          <h3 class="text-lg font-bold text-slate-900">Twelve ArcSecs Foundations Compliance Ledger</h3>
+          <div class="flex flex-wrap gap-2">
+            <button data-filter="ALL" class="f-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-teal-800 text-white">All (12)</button>
+            <button data-filter="Complies" class="f-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-stone-100 text-slate-700 hover:bg-stone-200">Complies (9)</button>
+            <button data-filter="Conditional" class="f-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-stone-100 text-slate-700 hover:bg-stone-200">Conditional (2)</button>
+            <button data-filter="Partial" class="f-filter-btn px-3 py-1 rounded-full text-xs font-semibold bg-stone-100 text-slate-700 hover:bg-stone-200">Partial (1)</button>
+          </div>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-full divide-y divide-stone-200 text-sm">
+            <thead class="bg-[#FAF8F5] text-slate-700 text-xs uppercase tracking-wider">
+              <tr>
+                <th class="px-3 py-3 text-left font-semibold">Foundation</th>
+                <th class="px-3 py-3 text-left font-semibold">Stipulated Constraint</th>
+                <th class="px-3 py-3 text-left font-semibold">Model M1 Implementation</th>
+                <th class="px-3 py-3 text-left font-semibold">Audit Status &amp; Bound</th>
+              </tr>
+            </thead>
+            <tbody id="foundationsTbody" class="divide-y divide-stone-200 bg-white">
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">Hollow-Shell C-01 Regulator Mechanism</h3>
+                <p class="text-xs text-slate-500 mt-0.5">Exact 4-boundary solution across shell <span class="math-pill">R₁ = 0.6, R₂ = 1.0</span> (<span class="math-pill">k_in = 2.5, S₀ = 1.0</span>)</p>
+              </div>
+              <div class="inline-flex rounded-lg bg-stone-100 p-1 border border-stone-200 shrink-0">
+                <button id="shellLongBtn" class="px-2.5 py-1 rounded text-xs font-semibold bg-white text-teal-800 shadow-sm">k_out = 10⁻⁶</button>
+                <button id="shellShortBtn" class="px-2.5 py-1 rounded text-xs font-semibold text-slate-600">k_out = 0.2</button>
+              </div>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              Toggle the exterior inverse range <span class="math-pill">k_out</span>. When <span class="math-pill">k_out → 0</span>, Newton's shell theorem holds inside the cavity (<span class="math-pill">|dψ/dr| = 9.714×10⁻¹⁵</span>) while maintaining a uniform nonzero interior field (<span class="math-pill">ψ(0) = 0.111601</span>) that fixes the background propagation ceiling <span class="math-pill">C_em(I_bg) = c₀</span>.
+            </p>
+          </div>
+          <div class="chart-container">
+            <canvas id="shellChart"></canvas>
+          </div>
+          <div id="shellReadout" class="mt-3 p-3 rounded-lg bg-[#FAF8F5] border border-stone-200 text-xs text-slate-700 flex flex-wrap justify-between gap-2">
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900">Solar &amp; Nuclear Clock Exclusion Bounds</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Log₁₀ upper limits on fractional speed modulation <span class="math-pill">|δC_em / c₀|</span></p>
+            <p class="text-xs text-slate-600 leading-relaxed mt-2 mb-4">
+              While the solar-limb gravitational potential is <span class="math-pill">ε_☉ = 2.123×10⁻⁶</span>, Cassini Shapiro delay (<span class="math-pill">|γ - 1| &lt; 6.70×10⁻⁵</span> at 2σ) bounds solar-limb C-01 speed shifts below <span class="math-pill">1.422×10⁻¹⁰</span>. Earth's orbital eccentricity (<span class="math-pill">ΔU_⊕/c₀² = 3.299×10⁻¹⁰</span>) paired with <span class="math-pill">²²⁹ᵐTh/⁸⁷Sr</span> sensitivity (<span class="math-pill">K_α ≈ 5900</span>) tightens local modulation to <span class="math-pill">1.695×10⁻²⁰</span>.
+            </p>
+          </div>
+          <div class="chart-container">
+            <canvas id="exclusionChart"></canvas>
+          </div>
+          <div class="mt-3 p-3 rounded-lg bg-amber-50/70 border border-amber-200 text-xs text-amber-900">
+            <strong>Structural Consequence:</strong> The C-01 regulator <span class="math-pill">I(T,x)</span> must either vary solely on multi-megaparsec scales or decouple from local fine-structure variations <span class="math-pill">α_EM</span>.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="capture-wp-c" class="space-y-6">
+      <div class="border-l-4 border-teal-700 pl-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-teal-800">Work Package C</span>
+        <h2 class="text-2xl font-bold text-slate-900 mt-0.5">Compact-Object Capture, Horizon Physics &amp; Quasar Scaling</h2>
+        <p class="text-sm text-slate-600 mt-1 max-w-4xl">
+          In the strong-field static limit of Model M1, massive Proca photons (<span class="math-pill">μ = Ω/ω = m_γ c₀²/E</span>) exhibit mass-dependent photon spheres and capture cross-sections, diverge between local clock speed and global coordinate speed during radial escape, and test Foundation 12 quasar distance scaling.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900">Proca Photon Sphere &amp; Capture Cross-Section</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Interactive sweep across dimensionless photon mass-gap ratio <span class="math-pill">μ = Ω / ω</span></p>
+            <div class="mt-3 mb-4 p-3 rounded-xl bg-[#FAF8F5] border border-stone-200">
+              <div class="flex items-center justify-between text-xs font-semibold text-slate-700 mb-1.5">
+                <span>Select Gap Ratio <span class="math-pill">μ = m_γ c₀² / E</span>:</span>
+                <span id="muLabel" class="math-pill text-teal-800 bg-teal-50 px-2 py-0.5 rounded border border-teal-200">μ = 0.00 (Zero-Gap Limit)</span>
+              </div>
+              <input id="muSlider" type="range" min="0" max="5" step="1" value="0" class="w-full accent-teal-700 cursor-pointer" />
+              <div class="grid grid-cols-3 gap-2 mt-3 text-center">
+                <div class="bg-white p-2 rounded border border-stone-200">
+                  <div class="text-[11px] text-slate-500">Photon Sphere <span class="math-pill">r_ph / r_s</span></div>
+                  <div id="rPhVal" class="font-bold text-sm text-slate-900 math-pill mt-0.5">1.50000</div>
+                </div>
+                <div class="bg-white p-2 rounded border border-stone-200">
+                  <div class="text-[11px] text-slate-500">Capture <span class="math-pill">b_phys,crit / r_s</span></div>
+                  <div id="bCritVal" class="font-bold text-sm text-teal-800 math-pill mt-0.5">2.59808</div>
+                </div>
+                <div class="bg-white p-2 rounded border border-stone-200">
+                  <div class="text-[11px] text-slate-500">M87* / Sgr A* Shadow</div>
+                  <div id="shadowVal" class="font-bold text-sm text-slate-900 math-pill mt-0.5">39.69 / 50.35 µas</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chart-container">
+            <canvas id="captureChart"></canvas>
+          </div>
+          <p class="text-xs text-slate-500 mt-3">
+            At <span class="math-pill">≥ 100 MHz</span> and Ryutov's limit <span class="math-pill">m_γ &lt; 10⁻¹⁸ eV</span>, <span class="math-pill">μ ≲ 2.4×10⁻¹²</span>, keeping EHT shadow deviations below <span class="math-pill">O(μ²) ≲ 10⁻²³</span>.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900">Foundation 3 Outward-Climb Monotonicity Audit</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Local clock group speed <span class="math-pill">v_loc / c₀</span> vs. global coordinate speed <span class="math-pill">v_coord / c₀</span> at <span class="math-pill">μ = 0.5</span></p>
+            <p class="text-xs text-slate-600 leading-relaxed mt-2 mb-4">
+              Along an outward radial escape trajectory (<span class="math-pill">r/r_s = 1.05 → 100</span>), local static-clock speed <span class="math-pill">v_loc</span> decreases (<span class="math-pill">0.994 → 0.867</span>) as kinetic energy converts into gravitational potential, whereas global bookkeeping speed <span class="math-pill">dr/dT</span> strictly <strong>increases</strong> (<span class="math-pill">0.047 → 0.859</span>) as gravitational retardation diminishes outward.
+            </p>
+          </div>
+          <div class="chart-container">
+            <canvas id="climbChart"></canvas>
+          </div>
+          <div class="mt-3 p-3 rounded-lg bg-amber-50/70 border border-amber-200 text-xs text-amber-900">
+            <strong>Monotonicity Diagnosis:</strong> Foundation 3 (<span class="math-pill">dv_γ/dT ≤ 0</span>) cannot hold in static gravitational climbs and applies only to asymptotic propagation dominated by secular bath drag.
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-sm">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900">Foundation 12 Quasar Distance &amp; Eddington Mass Scaling Explorer</h3>
+            <p class="text-xs text-slate-600 mt-0.5">Test how actual-to-reference distance ratio <span class="math-pill">f_D = D_act / D_ref &lt; 1</span> rescales luminosity, Eddington mass, and BLR reverberation lags.</p>
+          </div>
+          <div class="flex items-center gap-3 bg-[#FAF8F5] px-4 py-2 rounded-xl border border-stone-200">
+            <label for="fdSlider" class="text-xs font-semibold text-slate-700 whitespace-nowrap">Distance Ratio <span class="math-pill">f_D</span>:</label>
+            <input id="fdSlider" type="range" min="0.20" max="1.00" step="0.05" value="0.50" class="w-36 sm:w-44 accent-teal-700 cursor-pointer" />
+            <span id="fdVal" class="math-pill text-sm font-bold text-teal-800 w-12 text-right">0.50</span>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="p-4 rounded-xl bg-[#FAF8F5] border border-stone-200">
+            <div class="text-xs text-slate-500">True Luminosity (<span class="math-pill">L_act / L_ref = f_D²</span>)</div>
+            <div id="lActVal" class="text-xl font-bold text-slate-900 math-pill mt-1">0.250×</div>
+            <div class="text-xs text-slate-500 mt-1">From observed flux <span class="math-pill">F = L/(4πD²)</span></div>
+          </div>
+          <div class="p-4 rounded-xl bg-[#FAF8F5] border border-stone-200">
+            <div class="text-xs text-slate-500">Eddington Mass (<span class="math-pill">M_Edd / M_ref = f_D²</span>)</div>
+            <div id="mEddVal" class="text-xl font-bold text-teal-800 math-pill mt-1">0.250×</div>
+            <div class="text-xs text-slate-500 mt-1">Capture radius <span class="math-pill">r_s</span> scales identically</div>
+          </div>
+          <div class="p-4 rounded-xl bg-[#FAF8F5] border border-stone-200">
+            <div class="text-xs text-slate-500">Single-Epoch <span class="math-pill">R_BLR ∝ L⁰·⁵</span></div>
+            <div id="rBlrLumVal" class="text-xl font-bold text-slate-900 math-pill mt-1">0.500×</div>
+            <div class="text-xs text-slate-500 mt-1">Scales linearly with <span class="math-pill">f_D</span></div>
+          </div>
+          <div class="p-4 rounded-xl bg-[#FAF8F5] border border-stone-200">
+            <div class="text-xs text-slate-500">Reverberation Lag <span class="math-pill">c₀ τ_lag</span></div>
+            <div class="text-xl font-bold text-amber-800 math-pill mt-1">1.000× (Invariant)</div>
+            <div class="text-xs text-slate-500 mt-1">Independent of <span class="math-pill">D_L</span>; decisive empirical test</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dark-ledger" class="space-y-6">
+      <div class="border-l-4 border-teal-700 pl-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-teal-800">Work Packages D &amp; E</span>
+        <h2 class="text-2xl font-bold text-slate-900 mt-0.5">Cosmic Energy-Budget Ledger, Galaxy/Cluster Dynamics &amp; Propulsion</h2>
+        <p class="text-sm text-slate-600 mt-1 max-w-4xl">
+          Boltzmann radiation-bath accounting tests whether decelerated massive-photon remnants can supply cosmic dark matter, while spiral disk rotation curves and Bullet Cluster weak lensing test baryons-only modified gravity. Finally, Work Package E bounds closed- and open-system dark-sector propulsion.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-sm flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-slate-900">Cosmic Energy-Density Ledger (Log₁₀ eV cm⁻³)</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Comparison against Planck 2018 reference dark-matter density (<span class="math-pill">u_DM = 1264.41 eV cm⁻³</span>)</p>
+            <p class="text-xs text-slate-600 leading-relaxed mt-2 mb-4">
+              Even if every present CMB photon (<span class="math-pill">n_CMB = 410.7 cm⁻³</span>) slowed completely to rest at Ryutov's upper mass limit (<span class="math-pill">10⁻¹⁸ eV</span>), the resulting rest-mass remnant density (<span class="math-pill">≤ 4.107×10⁻¹⁶ eV cm⁻³</span>) falls short of <span class="math-pill">u_DM</span> by more than 19 orders of magnitude.
+            </p>
+          </div>
+          <div class="chart-container">
+            <canvas id="budgetChart"></canvas>
+          </div>
+          <div class="mt-3 p-3 rounded-lg bg-rose-50/70 border border-rose-200 text-xs text-rose-900">
+            <strong>Verdict:</strong> Stopped photon remnants are ruled out as dark matter (<span class="math-pill">u_rem / u_DM ≤ 3.25×10⁻¹⁹</span>). A cold (<span class="math-pill">w ≈ 0</span>), non-radiative dark bath is mandatory.
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-2">
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">Spiral Disk Rotation vs. Bullet Cluster Offset</h3>
+                <p class="text-xs text-slate-500 mt-0.5">Representative SPARC disk (<span class="math-pill">M_★ = 5×10¹⁰ M_☉, M_gas = 10¹⁰ M_☉</span>)</p>
+              </div>
+              <button id="toggleYukawaBtn" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal-800 text-white shadow-sm hover:bg-teal-900 transition-colors">
+                Yukawa Boost: ON
+              </button>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+              A tuned Yukawa boost (<span class="math-pill">ℓ = 15 kpc, α_G = 3.5</span>) flattens the outer spiral curve from <span class="math-pill">88.5</span> to <span class="math-pill">162.4 km s⁻¹</span> at 35 kpc, yet fails in merging cluster <strong>1E 0657-558</strong> (<span class="math-pill">z = 0.296</span>), where weak-lensing peaks align with subdominant galaxies rather than the ~85% X-ray plasma (<span class="math-pill">8σ</span> offset).
+            </p>
+          </div>
+          <div class="chart-container">
+            <canvas id="rotationChart"></canvas>
+          </div>
+          <div class="mt-3 p-3 rounded-lg bg-[#FAF8F5] border border-stone-200 text-xs text-slate-700">
+            <strong>Bullet Cluster Obstruction:</strong> Any force law sourced strictly by baryons places lensing peaks on the dominant X-ray gas, falsifying baryons-only modified gravity.
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-sm">
+        <div class="mb-4">
+          <h3 class="text-lg font-bold text-slate-900">Work Package E: Open Environmental Dark-Sector Propulsion Calculator</h3>
+          <p class="text-xs text-slate-600 mt-1">
+            Closed-system inertia modulation yields zero net thrust by Noether momentum conservation (<span class="math-pill">∂_a T^ab_tot = 0</span>). Evaluate the conservative elastic upper bound (<span class="math-pill">F_max = 2 ρ_DM,loc A_eff v_rel²</span>) for an open collector sweeping local Milky Way dark-sector density (<span class="math-pill">ρ_DM,loc = 5.348×10⁻²² kg m⁻³</span>).
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div class="space-y-4 bg-[#FAF8F5] p-4 rounded-xl border border-stone-200">
+            <div>
+              <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                <span>Effective Collector Area <span class="math-pill">A_eff</span> [m²]</span>
+                <span id="areaVal" class="math-pill text-teal-800">100 m²</span>
+              </div>
+              <input id="areaSlider" type="range" min="10" max="10000" step="10" value="100" class="w-full accent-teal-700 cursor-pointer" />
+            </div>
+            <div>
+              <div class="flex justify-between text-xs font-semibold text-slate-700 mb-1">
+                <span>Relative Halo Speed <span class="math-pill">v_rel</span> [km s⁻¹]</span>
+                <span id="velVal" class="math-pill text-teal-800">220 km s⁻¹</span>
+              </div>
+              <input id="velSlider" type="range" min="50" max="600" step="10" value="220" class="w-full accent-teal-700 cursor-pointer" />
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div class="p-4 rounded-xl bg-[#FAF8F5] border border-stone-200">
+              <div class="text-xs text-slate-500">Max Elastic Thrust <span class="math-pill">F_max</span></div>
+              <div id="fMaxVal" class="text-lg font-bold text-slate-900 math-pill mt-1">5.177×10⁻⁹ N</div>
+              <div class="text-[11px] text-slate-500 mt-1">Ideal reflection (<span class="math-pill">η_p = 2</span>)</div>
+            </div>
+            <div class="p-4 rounded-xl bg-[#FAF8F5] border border-stone-200">
+              <div class="text-xs text-slate-500">Intercepted Flux <span class="math-pill">P_flux</span></div>
+              <div id="pFluxVal" class="text-lg font-bold text-slate-900 math-pill mt-1">2.847×10⁻⁴ W</div>
+              <div class="text-[11px] text-slate-500 mt-1"><span class="math-pill">½ ρ A v³</span></div>
+            </div>
+            <div class="p-4 rounded-xl bg-[#FAF8F5] border border-stone-200">
+              <div class="text-xs text-slate-500">Photon Rocket Power</div>
+              <div id="pRadVal" class="text-lg font-bold text-teal-800 math-pill mt-1">1.552 W</div>
+              <div class="text-[11px] text-slate-500 mt-1"><span class="math-pill">P_rad = F_max c₀</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="benchmarks" class="space-y-6">
+      <div class="border-l-4 border-teal-700 pl-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-teal-800">Empirical Audit &amp; Cross-Prompt Interface</span>
+        <h2 class="text-2xl font-bold text-slate-900 mt-0.5">Observational Benchmark Verification &amp; Program Handoff</h2>
+        <p class="text-sm text-slate-600 mt-1 max-w-4xl">
+          Inspect the peer-reviewed empirical benchmarks reproduced by Model M1 and review the exported mathematical interface variables handed off to Prompts 01, 03, 04, and 06.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-sm">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+          <h3 class="text-lg font-bold text-slate-900">Model M1 Empirical Benchmark Audit</h3>
+          <input id="benchSearch" type="text" placeholder="Filter observable or source (e.g., Cassini, EHT, GW170817)..." class="px-3 py-1.5 rounded-lg border border-stone-300 text-xs w-full sm:w-72 focus:outline-none focus:border-teal-700" />
+        </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-full divide-y divide-stone-200 text-sm">
+            <thead class="bg-[#FAF8F5] text-slate-700 text-xs uppercase tracking-wider">
+              <tr>
+                <th class="px-3 py-3 text-left font-semibold">Observable Benchmark</th>
+                <th class="px-3 py-3 text-left font-semibold">Primary Literature Value</th>
+                <th class="px-3 py-3 text-left font-semibold">Model M1 Prediction</th>
+                <th class="px-3 py-3 text-left font-semibold">Residual / Audit Status</th>
+              </tr>
+            </thead>
+            <tbody id="benchTbody" class="divide-y divide-stone-200 bg-white">
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-sm">
+        <h3 class="text-lg font-bold text-slate-900 mb-3">Downstream Handoff Interface (Prompts 01, 03, 04, 06)</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="handoffGrid">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-stone-200 bg-white mt-12 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500">
+      <div>ArcSecs Conditional Theoretical Investigation • Verified deterministically via SymPy / SciPy / NumPy</div>
+      <div>Decision: Retain M1 • Revise C-01 &amp; F3 • Retire Standalone M2 &amp; Photon-Remnant DM</div>
+    </div>
+  </footer>
+
+  <script>
+    const wrapLabel = (str) => {
+      if (str.length <= 16) return str;
+      const words = str.split(' ');
+      const lines = [];
+      let current = '';
+      for (const w of words) {
+        if ((current + ' ' + w).trim().length <= 16) {
+          current = (current + ' ' + w).trim();
+        } else {
+          if (current) lines.push(current);
+          current = w;
+        }
+      }
+      if (current) lines.push(current);
+      return lines;
+    };
+
+    const modelsData = {
+      M1: {
+        title: "Model M1: Flat-Coordinate Spin-2 Field + Screened C-01 Regulator + Proca Photon + Cold Bath",
+        badge: "RETAINED CANDIDATE",
+        badgeClass: "bg-teal-100 text-teal-900 border-teal-300",
+        summary: "Formulates gravity as a local, retarded symmetric rank-2 field h_ab propagating at C_h = c₀ on flat mathematical bookkeeping coordinates (T, x), coupled universally to total conserved stress-energy alongside an independent C-01 scalar regulator I and Proca photon (Ω > 0).",
+        checks: [
+          { label: "Solar Light Deflection & Shapiro", status: "PASS", detail: "γ = β = 1 recovers 1.751243 arcsec and 238.95 µs within Cassini 1σ." },
+          { label: "Weak Equivalence Principle", status: "PASS", detail: "Tree-level universal stress-energy coupling gives η = 0 (MICROSCOPE < 10⁻¹⁵)." },
+          { label: "GW Speed & Polarizations", status: "PASS", detail: "Propagates +, × tensor modes at C_h = c₀, matching GW170817 and GWTC-3." },
+          { label: "Retarded Orbital Aberration", status: "PASS", detail: "Gravitomagnetic h_0i currents cancel O(v/c₀) torque; 2.5PN matches Double Pulsar." }
+        ]
+      },
+      M2: {
+        title: "Model M2: Screened Scalar–Vector Mediator Theory (No Spin-2 Field h_ab)",
+        badge: "RETIRED — MATHEMATICAL OBSTRUCTION",
+        badgeClass: "bg-rose-100 text-rose-900 border-rose-300",
+        summary: "Attempts to build gravity from an attractive Yukawa scalar φ and repulsive Proca vector V_a coupled to baryon current J^a_B without a rank-2 tensor field. Fails three independent empirical tests simultaneously.",
+        checks: [
+          { label: "Light Bending & Shapiro Delay", status: "FAIL", detail: "Photons have zero baryon charge; scalar γ_PPN = (1-ω)/(2+ω) requires ω > 9000, killing scalar gravity." },
+          { label: "Weak Equivalence Principle", status: "FAIL", detail: "Coupling V_a to baryon number B induces ~10⁻³ composition-dependent Ti/Pt acceleration differences." },
+          { label: "GWTC-3 Tensor Polarizations", status: "FAIL", detail: "Pure scalar or vector wave modes are strongly disfavored by LIGO/Virgo/KAGRA GWTC-3." },
+          { label: "Yukawa Control Utility", status: "CONTROL", detail: "Retained solely as a parameterized fifth-force benchmark in galactic rotation tests." }
+        ]
+      },
+      YUK: {
+        title: "Baryons-Only Modified Gravity (Yukawa Fifth-Force Boost without Cold Dark Sector)",
+        badge: "RETIRED — CLUSTER LENSING FAILURE",
+        badgeClass: "bg-rose-100 text-rose-900 border-rose-300",
+        summary: "Adds a Yukawa gravitational boost G_eff(r) = G[1 + α_G(1 - (1+r/ℓ)e^(-r/ℓ))] sourced strictly by baryonic mass (stars + gas) without an independent cold dark fluid.",
+        checks: [
+          { label: "Spiral Disk Rotation Curves", status: "PASS", detail: "ℓ = 15 kpc, α_G = 3.5 flattens outer spiral velocity from 88.5 to 162.4 km s⁻¹ at 35 kpc." },
+          { label: "Bullet Cluster (1E 0657-558)", status: "FAIL", detail: "X-ray gas (~85% baryons) lags galaxies, yet weak lensing peaks on galaxies at 8σ significance." },
+          { label: "Cosmic Dark-Matter Density", status: "FAIL", detail: "Baryons (235.71 eV cm⁻³) plus photon remnants (≤ 4.11×10⁻¹⁶) cannot supply 1264.41 eV cm⁻³." },
+          { label: "Required Resolution", status: "REVISION", detail: "Requires an independent cold (w ≈ 0), collisionless dark bath ρ_dark coupled via h_ab." }
+        ]
+      }
+    };
+
+    function renderModelCard(key) {
+      const m = modelsData[key];
+      const container = document.getElementById('modelDetailCard');
+      container.innerHTML = `
+        <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+          <h3 class="font-bold text-slate-900 text-base">${m.title}</h3>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-bold border ${m.badgeClass}">${m.badge}</span>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">${m.summary}</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          ${m.checks.map(c => {
+            const pillColor = c.status === 'PASS' ? 'bg-teal-100 text-teal-800' : (c.status === 'FAIL' ? 'bg-rose-100 text-rose-800' : 'bg-amber-100 text-amber-800');
+            return `
+              <div class="bg-white p-3 rounded-lg border border-stone-200">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-semibold text-xs text-slate-800">${c.label}</span>
+                  <span class="px-2 py-0.5 rounded text-[10px] font-bold ${pillColor}">${c.status}</span>
+                </div>
+                <p class="text-xs text-slate-600 leading-snug">${c.detail}</p>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      `;
+    }
+
+    document.querySelectorAll('.model-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.model-btn').forEach(b => {
+          b.classList.remove('bg-white', 'text-teal-800', 'shadow-sm');
+          b.classList.add('text-slate-600');
+        });
+        btn.classList.add('bg-white', 'text-teal-800', 'shadow-sm');
+        btn.classList.remove('text-slate-600');
+        renderModelCard(btn.dataset.model);
+      });
+    });
+    renderModelCard('M1');
+
+    const foundationsData = [
+      { id: "1. Photons have mass", constraint: "Strictly positive mass or gap Ω > 0", impl: "Proca Lagrangian with m_γ = ħΩ/c₀² > 0", status: "Complies", detail: "Ryutov bound m_γ < 10⁻¹⁸ eV gives μ ≲ 2.4×10⁻¹² at ≥ 100 MHz." },
+      { id: "2. Time is constant", constraint: "Single universal ordering coordinate T", impl: "Universal flat-coordinate parameter T; dynamic clock rates", status: "Complies", detail: "Physical clock transitions shift via h_ab-coupled Hamiltonians." },
+      { id: "3. Light slows over time", constraint: "Positive speed, non-increasing with age", impl: "Secular bath drag plus local ceiling C_em(I)", status: "Conditional", detail: "Outward climb from compact wells increases dr/dT unless drag dominates." },
+      { id: "4. Time is not physical", constraint: "T is ordering 'When,' not a substance", impl: "T enters derivatives ∂_T only; clocks are oscillators", status: "Complies", detail: "No material time fluid introduced." },
+      { id: "5. Space is not physical", constraint: "Coordinates locate objects; no stretching", impl: "Flat ℝ³ bookkeeping x; physical fields occupy x", status: "Complies", detail: "Metric-like couplings summarize local interaction fields." },
+      { id: "6. Extent and mass", constraint: "Everything physically existing has extent & mass", impl: "Matter, h_ab, I, and bath carry T⁰⁰/c₀² > 0", status: "Partial", detail: "Continuum fields carry distributed energy density without unique particle mass." },
+      { id: "7. Spacetime not physical", constraint: "(T, x) is mathematical bookkeeping only", impl: "Spin-2 field h_ab(T, x) acts as retarded force field", status: "Complies", detail: "Reproduces relativistic trajectories without fabric ontology." },
+      { id: "8. Light not the fastest", constraint: "Distinguish slowed photons, fronts & ceiling", impl: "v_g(ω) < C_em(I) ≤ C_causal", status: "Complies", detail: "GW170817 pins C_h ≈ c₀ to ~10⁻¹⁵; hidden causal ceiling allowed." },
+      { id: "9. Super-ceiling separation", constraint: "Separation rate V_sep can exceed C_causal", impl: "Single-frame speeds < C_causal; closing up to 2C_causal", status: "Complies", detail: "Avoids additive 4c₀ single-photon claims." },
+      { id: "10. Size is unknown", constraint: "No fixed cosmic radius, wall, or mass assumed", impl: "Bubble radius R_bub treated solely as boundary parameter", status: "Complies", detail: "Hollow-shell C-01 test decouples interior ceiling from wall radius." },
+      { id: "11. Age is unknown", constraint: "Domain elapsed time ≠ total history", impl: "Separates photon age ΔT_γ, object age & domain epoch", status: "Complies", detail: "Preserves stellar and nuclear lower age bounds." },
+      { id: "12. Distant objects closer", constraint: "Test if D_L, D_A, M_Edd are overestimated", impl: "Conditional scaling D_act = f_D D_ref (f_D < 1)", status: "Conditional", detail: "Predicts M_Edd ∝ f_D², testable via AGN reverberation lags." }
+    ];
+
+    function renderFoundations(filter = 'ALL') {
+      const tbody = document.getElementById('foundationsTbody');
+      const rows = filter === 'ALL' ? foundationsData : foundationsData.filter(f => f.status === filter);
+      tbody.innerHTML = rows.map(f => {
+        const badge = f.status === 'Complies'
+          ? 'bg-teal-50 text-teal-800 border-teal-200'
+          : (f.status === 'Conditional' ? 'bg-amber-50 text-amber-800 border-amber-200' : 'bg-stone-100 text-slate-700 border-stone-300');
+        return `
+          <tr class="hover:bg-[#FAF8F5] transition-colors">
+            <td class="px-3 py-2.5 font-semibold text-slate-900 whitespace-nowrap">${f.id}</td>
+            <td class="px-3 py-2.5 text-slate-600">${f.constraint}</td>
+            <td class="px-3 py-2.5 text-slate-700 math-pill text-xs">${f.impl}</td>
+            <td class="px-3 py-2.5">
+              <span class="inline-block px-2 py-0.5 rounded text-[11px] font-semibold border ${badge} mb-1">${f.status}</span>
+              <div class="text-xs text-slate-600">${f.detail}</div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    document.querySelectorAll('.f-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.f-filter-btn').forEach(b => {
+          b.classList.remove('bg-teal-800', 'text-white');
+          b.classList.add('bg-stone-100', 'text-slate-700');
+        });
+        btn.classList.add('bg-teal-800', 'text-white');
+        btn.classList.remove('bg-stone-100', 'text-slate-700');
+        renderFoundations(btn.dataset.filter);
+      });
+    });
+    renderFoundations('ALL');
+
+    function solveHollowShell(kOut) {
+      const R1 = 0.6, R2 = 1.0, kIn = 2.5, S0 = 1.0;
+      const psi0 = S0 / (kIn * kIn);
+      const A = [
+        [Math.sinh(kOut * R1), -Math.sinh(kIn * R1), -Math.cosh(kIn * R1), 0],
+        [kOut * Math.cosh(kOut * R1), -kIn * Math.cosh(kIn * R1), -kIn * Math.sinh(kIn * R1), 0],
+        [0, Math.sinh(kIn * R2), Math.cosh(kIn * R2), -1],
+        [0, kIn * Math.cosh(kIn * R2), kIn * Math.sinh(kIn * R2), kOut]
+      ];
+      const b = [psi0 * R1, psi0, -psi0 * R2, -psi0];
+      const n = 4;
+      for (let i = 0; i < n; i++) {
+        let maxRow = i;
+        for (let k = i + 1; k < n; k++) if (Math.abs(A[k][i]) > Math.abs(A[maxRow][i])) maxRow = k;
+        [A[i], A[maxRow]] = [A[maxRow], A[i]];
+        [b[i], b[maxRow]] = [b[maxRow], b[i]];
+        for (let k = i + 1; k < n; k++) {
+          const factor = A[k][i] / A[i][i];
+          for (let j = i; j < n; j++) A[k][j] -= factor * A[i][j];
+          b[k] -= factor * b[i];
+        }
+      }
+      const x = new Array(n).fill(0);
+      for (let i = n - 1; i >= 0; i--) {
+        let sum = b[i];
+        for (let j = i + 1; j < n; j++) sum -= A[i][j] * x[j];
+        x[i] = sum / A[i][i];
+      }
+      const [C1, A2, B2, D3] = x;
+      const rVals = [];
+      const psiVals = [];
+      for (let i = 0; i <= 50; i++) {
+        const r = i * 0.04;
+        rVals.push(r.toFixed(2));
+        let val = 0;
+        if (r < R1) {
+          val = r === 0 ? C1 * kOut : C1 * Math.sinh(kOut * r) / r;
+        } else if (r <= R2) {
+          val = psi0 + (A2 * Math.sinh(kIn * r) + B2 * Math.cosh(kIn * r)) / r;
+        } else {
+          val = D3 * Math.exp(-kOut * (r - R2)) / r;
+        }
+        psiVals.push(val);
+      }
+      return { rVals, psiVals };
+    }
+
+    const shellCtx = document.getElementById('shellChart').getContext('2d');
+    const initialShell = solveHollowShell(1e-6);
+    const shellChart = new Chart(shellCtx, {
+      type: 'line',
+      data: {
+        labels: initialShell.rVals,
+        datasets: [{
+          label: 'Regulator Profile ψ(r)',
+          data: initialShell.psiVals,
+          borderColor: '#0F766E',
+          backgroundColor: 'rgba(15, 118, 110, 0.12)',
+          fill: true,
+          borderWidth: 2.5,
+          pointRadius: 0,
+          tension: 0.25
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: true, labels: { boxWidth: 12, font: { size: 11 } } },
+          tooltip: {
+            callbacks: {
+              title: (items) => `Radius r = ${items[0].label} (Shell: 0.60–1.00)`,
+              label: (item) => `ψ(r) = ${Number(item.raw).toFixed(6)}`
+            }
+          }
+        },
+        scales: {
+          x: { title: { display: true, text: 'Normalized Radius r', font: { size: 11 } }, ticks: { maxTicksLimit: 8, font: { size: 10 } } },
+          y: { title: { display: true, text: 'Field Amplitude ψ(r)', font: { size: 11 } }, min: 0, max: 0.14, ticks: { font: { size: 10 } } }
+        }
+      }
+    });
+
+    function updateShellMode(isLong) {
+      const kOut = isLong ? 1e-6 : 0.2;
+      const res = solveHollowShell(kOut);
+      shellChart.data.datasets[0].data = res.psiVals;
+      shellChart.data.datasets[0].borderColor = isLong ? '#0F766E' : '#B45309';
+      shellChart.data.datasets[0].backgroundColor = isLong ? 'rgba(15, 118, 110, 0.12)' : 'rgba(180, 83, 9, 0.12)';
+      shellChart.update();
+
+      const readout = document.getElementById('shellReadout');
+      if (isLong) {
+        readout.innerHTML = `
+          <span><strong>Interior ψ(0):</strong> <span class="math-pill text-teal-800">0.111601</span></span>
+          <span><strong>Cavity Gradient dψ/dr(0.3):</strong> <span class="math-pill text-teal-800">9.714×10⁻¹⁵</span> (Zero Force)</span>
+        `;
+      } else {
+        readout.innerHTML = `
+          <span><strong>Interior ψ(0):</strong> <span class="math-pill text-amber-800">0.105957</span></span>
+          <span><strong>Cavity Gradient dψ/dr(0.3):</strong> <span class="math-pill text-rose-700">4.2398×10⁻⁴</span> (Spurious Force)</span>
+        `;
+      }
+    }
+
+    document.getElementById('shellLongBtn').addEventListener('click', (e) => {
+      e.target.classList.add('bg-white', 'text-teal-800', 'shadow-sm');
+      e.target.classList.remove('text-slate-600');
+      const other = document.getElementById('shellShortBtn');
+      other.classList.remove('bg-white', 'text-amber-800', 'shadow-sm');
+      other.classList.add('text-slate-600');
+      updateShellMode(true);
+    });
+    document.getElementById('shellShortBtn').addEventListener('click', (e) => {
+      e.target.classList.add('bg-white', 'text-amber-800', 'shadow-sm');
+      e.target.classList.remove('text-slate-600');
+      const other = document.getElementById('shellLongBtn');
+      other.classList.remove('bg-white', 'text-teal-800', 'shadow-sm');
+      other.classList.add('text-slate-600');
+      updateShellMode(false);
+    });
+    updateShellMode(true);
+
+    const exclCtx = document.getElementById('exclusionChart').getContext('2d');
+    new Chart(exclCtx, {
+      type: 'bar',
+      data: {
+        labels: [
+          wrapLabel('Solar Limb Potential ε_☉'),
+          wrapLabel('Earth Seasonal Swing ΔU_⊕/c₀²'),
+          wrapLabel('Cassini 2σ Max |δC_em/c₀|'),
+          wrapLabel('Th-229 / Sr-87 Clock Max |δC_em/c₀|')
+        ],
+        datasets: [{
+          label: 'Log₁₀ Dimensionless Magnitude',
+          data: [-5.673, -9.482, -9.847, -19.771],
+          backgroundColor: ['#64748B', '#94A3B8', '#B45309', '#0F766E'],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: (item) => {
+                const exact = ['2.123×10⁻⁶', '3.299×10⁻¹⁰', '< 1.422×10⁻¹⁰', '< 1.695×10⁻²⁰'];
+                return `Value: ${exact[item.dataIndex]} (10^${item.raw.toFixed(2)})`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: { title: { display: true, text: 'Log₁₀ Scale (Dimensionless)', font: { size: 11 } }, min: -22, max: -4, ticks: { font: { size: 10 } } },
+          y: { ticks: { font: { size: 10 } } }
+        }
+      }
+    });
+
+    const captureTable = [
+      { mu: "0.00", label: "μ = 0.00 (Zero-Gap Limit)", rPh: 1.50000, bTilde: 2.59808, bPhys: 2.59808, m87: "39.69", sgra: "50.35" },
+      { mu: "0.10", label: "μ = 0.10", rPh: 1.50168, bTilde: 2.59374, bPhys: 2.60680, m87: "39.82", sgra: "50.52" },
+      { mu: "0.30", label: "μ = 0.30", rPh: 1.51580, bTilde: 2.55840, bPhys: 2.68193, m87: "40.97", sgra: "51.97" },
+      { mu: "0.50", label: "μ = 0.50", rPh: 1.54858, bTilde: 2.48396, bPhys: 2.86823, m87: "43.82", sgra: "55.58" },
+      { mu: "0.80", label: "μ = 0.80", rPh: 1.67345, bTilde: 2.27299, bPhys: 3.78832, m87: "57.87", sgra: "73.41" },
+      { mu: "0.95", label: "μ = 0.95 (Near-Threshold)", rPh: 1.85684, bTilde: 2.08808, bPhys: 6.68721, m87: "102.16", sgra: "129.59" }
+    ];
+
+    const capCtx = document.getElementById('captureChart').getContext('2d');
+    const capChart = new Chart(capCtx, {
+      type: 'line',
+      data: {
+        labels: captureTable.map(d => `μ=${d.mu}`),
+        datasets: [
+          {
+            label: 'Critical Impact b_phys,crit / r_s',
+            data: captureTable.map(d => d.bPhys),
+            borderColor: '#0F766E',
+            backgroundColor: '#0F766E',
+            yAxisID: 'y',
+            borderWidth: 2.5,
+            pointRadius: [6, 3, 3, 3, 3, 3]
+          },
+          {
+            label: 'Photon Sphere r_ph / r_s',
+            data: captureTable.map(d => d.rPh),
+            borderColor: '#B45309',
+            backgroundColor: '#B45309',
+            yAxisID: 'y1',
+            borderDash: [5, 4],
+            borderWidth: 2,
+            pointRadius: [6, 3, 3, 3, 3, 3]
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { labels: { boxWidth: 12, font: { size: 11 } } }
+        },
+        scales: {
+          y: { type: 'linear', position: 'left', title: { display: true, text: 'b_phys,crit / r_s', font: { size: 11 } }, ticks: { font: { size: 10 } } },
+          y1: { type: 'linear', position: 'right', grid: { drawOnChartArea: false }, title: { display: true, text: 'r_ph / r_s', font: { size: 11 } }, min: 1.4, max: 2.0, ticks: { font: { size: 10 } } }
+        }
+      }
+    });
+
+    document.getElementById('muSlider').addEventListener('input', (e) => {
+      const idx = parseInt(e.target.value, 10);
+      const item = captureTable[idx];
+      document.getElementById('muLabel').textContent = item.label;
+      document.getElementById('rPhVal').textContent = item.rPh.toFixed(5);
+      document.getElementById('bCritVal').textContent = item.bPhys.toFixed(5);
+      document.getElementById('shadowVal').textContent = `${item.m87} / ${item.sgra} µas`;
+      capChart.data.datasets[0].pointRadius = captureTable.map((_, i) => i === idx ? 7 : 3);
+      capChart.data.datasets[1].pointRadius = captureTable.map((_, i) => i === idx ? 7 : 3);
+      capChart.update();
+    });
+
+    const climbCtx = document.getElementById('climbChart').getContext('2d');
+    new Chart(climbCtx, {
+      type: 'line',
+      data: {
+        labels: ['1.05 r_s', '1.50 r_s', '3.00 r_s', '10.0 r_s', '100 r_s'],
+        datasets: [
+          {
+            label: 'Local Clock Speed v_loc / c₀ (Decreases)',
+            data: [0.99403, 0.95743, 0.91287, 0.88034, 0.86747],
+            borderColor: '#0F766E',
+            backgroundColor: '#0F766E',
+            borderWidth: 2.5,
+            pointRadius: 4
+          },
+          {
+            label: 'Global Coordinate Speed (dr/dT) / c₀ (Increases)',
+            data: [0.04733, 0.31914, 0.60858, 0.79231, 0.85879],
+            borderColor: '#BE123C',
+            backgroundColor: '#BE123C',
+            borderWidth: 2.5,
+            pointRadius: 4
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { labels: { boxWidth: 12, font: { size: 11 } } }
+        },
+        scales: {
+          y: { title: { display: true, text: 'Normalized Speed (v / c₀)', font: { size: 11 } }, min: 0, max: 1.05, ticks: { font: { size: 10 } } }
+        }
+      }
+    });
+
+    document.getElementById('fdSlider').addEventListener('input', (e) => {
+      const fD = parseFloat(e.target.value);
+      const fD2 = fD * fD;
+      document.getElementById('fdVal').textContent = fD.toFixed(2);
+      document.getElementById('lActVal').textContent = `${fD2.toFixed(3)}×`;
+      document.getElementById('mEddVal').textContent = `${fD2.toFixed(3)}×`;
+      document.getElementById('rBlrLumVal').textContent = `${fD.toFixed(3)}×`;
+    });
+
+    const budgetCtx = document.getElementById('budgetChart').getContext('2d');
+    new Chart(budgetCtx, {
+      type: 'bar',
+      data: {
+        labels: [
+          wrapLabel('Required Dark Matter u_DM'),
+          wrapLabel('3000K CMB Bath Loss'),
+          wrapLabel('Baryonic Matter u_b'),
+          wrapLabel('Present CMB (2.7255 K)'),
+          wrapLabel('10% Baryon Nuclear Yield'),
+          wrapLabel('Total Extragalactic EBL'),
+          wrapLabel('Stopped CMB Photon Remnants')
+        ],
+        datasets: [{
+          label: 'Log₁₀ Energy Density [eV cm⁻³]',
+          data: [3.102, 2.457, 2.372, -0.584, -0.783, -1.850, -15.386],
+          backgroundColor: ['#0F766E', '#B45309', '#475569', '#64748B', '#94A3B8', '#CBD5E1', '#BE123C'],
+          borderRadius: 5
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: (item) => {
+                const exact = ['1264.41 eV cm⁻³', '~286.6 eV cm⁻³', '235.71 eV cm⁻³', '0.2606 eV cm⁻³', '0.165 eV cm⁻³', '0.01413 eV cm⁻³', '≤ 4.107×10⁻¹⁶ eV cm⁻³'];
+                return `Energy Density: ${exact[item.dataIndex]}`;
+              }
+            }
+          }
+        },
+        scales: {
+          x: { title: { display: true, text: 'Log₁₀(u [eV cm⁻³])', font: { size: 11 } }, min: -17, max: 4, ticks: { font: { size: 10 } } },
+          y: { ticks: { font: { size: 10 } } }
+        }
+      }
+    });
+
+    const rotCtx = document.getElementById('rotationChart').getContext('2d');
+    const radiiLabels = ['1.0 kpc', '2.0 kpc', '4.0 kpc', '8.0 kpc', '15.0 kpc', '25.0 kpc', '35.0 kpc'];
+    const vBaryData = [77.5, 119.1, 159.9, 171.2, 141.0, 106.9, 88.5];
+    const vYukData = [77.8, 120.8, 168.0, 199.1, 195.7, 176.9, 162.4];
+    const rotChart = new Chart(rotCtx, {
+      type: 'line',
+      data: {
+        labels: radiiLabels,
+        datasets: [
+          {
+            label: 'Newtonian Baryons Only [km s⁻¹]',
+            data: vBaryData,
+            borderColor: '#64748B',
+            backgroundColor: '#64748B',
+            borderDash: [5, 4],
+            borderWidth: 2,
+            pointRadius: 4
+          },
+          {
+            label: 'Yukawa-Boosted (ℓ=15 kpc, α_G=3.5) [km s⁻¹]',
+            data: vYukData,
+            borderColor: '#0F766E',
+            backgroundColor: '#0F766E',
+            borderWidth: 2.5,
+            pointRadius: 4
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { labels: { boxWidth: 12, font: { size: 11 } } }
+        },
+        scales: {
+          y: { title: { display: true, text: 'Circular Velocity V_c [km s⁻¹]', font: { size: 11 } }, min: 50, max: 220, ticks: { font: { size: 10 } } }
+        }
+      }
+    });
+
+    let yukawaOn = true;
+    document.getElementById('toggleYukawaBtn').addEventListener('click', (e) => {
+      yukawaOn = !yukawaOn;
+      rotChart.data.datasets[1].hidden = !yukawaOn;
+      rotChart.update();
+      e.target.textContent = yukawaOn ? 'Yukawa Boost: ON' : 'Yukawa Boost: OFF';
+      e.target.className = yukawaOn
+        ? 'px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal-800 text-white shadow-sm hover:bg-teal-900 transition-colors'
+        : 'px-3 py-1.5 rounded-lg text-xs font-semibold bg-stone-200 text-slate-800 shadow-sm hover:bg-stone-300 transition-colors';
+    });
+
+    function updatePropulsion() {
+      const rho = 5.348e-22;
+      const c0 = 299792458.0;
+      const A = parseFloat(document.getElementById('areaSlider').value);
+      const vKm = parseFloat(document.getElementById('velSlider').value);
+      const v = vKm * 1000.0;
+      document.getElementById('areaVal').textContent = `${A.toLocaleString()} m²`;
+      document.getElementById('velVal').textContent = `${vKm} km s⁻¹`;
+
+      const fMax = 2.0 * rho * A * v * v;
+      const pFlux = 0.5 * rho * A * Math.pow(v, 3);
+      const pRad = fMax * c0;
+
+      document.getElementById('fMaxVal').textContent = `${fMax.toExponential(3)} N`;
+      document.getElementById('pFluxVal').textContent = `${pFlux.toExponential(3)} W`;
+      document.getElementById('pRadVal').textContent = `${pRad.toFixed(3)} W`;
+    }
+    document.getElementById('areaSlider').addEventListener('input', updatePropulsion);
+    document.getElementById('velSlider').addEventListener('input', updatePropulsion);
+    updatePropulsion();
+
+    const benchmarksData = [
+      { obs: "Solar-limb light deflection", lit: "Cassini γ = 1 + (2.1 ± 2.3)×10⁻⁵ (Bertotti et al. 2003)", pred: "1.751243 arcsec (ε_☉ = 2.122567×10⁻⁶)", status: "Consistent within 1σ; Proca shift < 10⁻²⁴" },
+      { obs: "Grazing 2-way Shapiro delay", lit: "Cassini γ - 1 = (2.1 ± 2.3)×10⁻⁵", pred: "238.95 µs (1 AU–Sun–1 AU grazing)", status: "Consistent; δn_C01 < 1.422×10⁻¹⁰" },
+      { obs: "Mercury perihelion advance", lit: "575.3100 ± 0.0015 \"/cy total; 42.9799 \"/cy GR residual", pred: "42.9819 arcsec/cy", status: "Matches residual within 0.002 \"/cy (~4.6×10⁻⁵)" },
+      { obs: "WEP differential acceleration", lit: "η(Ti, Pt) = [-1.5 ± 2.3 ± 1.5]×10⁻¹⁵ (MICROSCOPE)", pred: "η = 0 at tree level (universal h_ab coupling)", status: "Consistent; requires I-baryon coupling < 10⁻¹⁵" },
+      { obs: "Gravitational redshift (Galileo)", lit: "α_LPI = (+0.19 ± 2.48)×10⁻⁵ (Delva et al. 2018)", pred: "α_LPI = 0 (clock oscillator shift via h_00)", status: "Consistent within 0.08σ" },
+      { obs: "Double Pulsar orbital decay", lit: "Ṗ_b / Ṗ_b,GR = 1 ± 1.3×10⁻⁴ (Kramer et al. 2021)", pred: "Quadrupole radiation in h_ab equals GR to 2.5PN", status: "Consistent within 0.013%" },
+      { obs: "GW170817 differential speed", lit: "Δt = 1.74 ± 0.05 s at 40 Mpc; -3×10⁻¹⁵ bound", pred: "C_h = C_em(I_bg) = c₀", status: "Consistent; 1 GHz Proca delay ≤ 1.204×10⁻¹⁰ s" },
+      { obs: "GWTC-3 polarization modes", lit: "Pure scalar/vector disfavored vs +, × modes", pred: "Pure +, × tensor modes from Fierz–Pauli h_ab", status: "Consistent; rules out standalone M2" },
+      { obs: "EHT Horizon Shadows", lit: "M87*: ~40–42 µas; Sgr A*: 51.8 ± 2.3 µas", pred: "M87*: 39.69 µas; Sgr A*: 50.35 µas", status: "Consistent with VLBI ring diameter scales" }
+    ];
+
+    function renderBenchmarks(query = '') {
+      const q = query.toLowerCase().trim();
+      const filtered = q ? benchmarksData.filter(b => b.obs.toLowerCase().includes(q) || b.lit.toLowerCase().includes(q) || b.status.toLowerCase().includes(q)) : benchmarksData;
+      document.getElementById('benchTbody').innerHTML = filtered.map(b => `
+        <tr class="hover:bg-[#FAF8F5]">
+          <td class="px-3 py-2.5 font-semibold text-slate-900">${b.obs}</td>
+          <td class="px-3 py-2.5 text-slate-600">${b.lit}</td>
+          <td class="px-3 py-2.5 text-slate-800 math-pill text-xs">${b.pred}</td>
+          <td class="px-3 py-2.5 text-teal-800 font-medium text-xs">${b.status}</td>
+        </tr>
+      `).join('');
+    }
+    document.getElementById('benchSearch').addEventListener('input', (e) => renderBenchmarks(e.target.value));
+    renderBenchmarks();
+
+    const handoffData = [
+      { sym: "a_M1(x)", form: "-∇Φ_N + O(ε²)", target: "Prompts 03, 04, 06", note: "Weak-field spin-2 acceleration sourced by total ρ_b + ρ_dark." },
+      { sym: "θ_defl(b, ω)", form: "(4GM / c₀²b)[1 + Ω² / (2(ω² - Ω²))]", target: "Prompts 01, 04", note: "Proca dispersion < 10⁻²⁴ at ≥ 100 MHz." },
+      { sym: "Δν / ν (clock)", form: "ΔΦ_N / c₀² (|δC_em/c₀| < 1.7×10⁻²⁰)", target: "Prompts 01, 03", note: "Species-universal; bounded by Galileo & ²²⁹ᵐTh/⁸⁷Sr." },
+      { sym: "b_phys,crit(μ)", form: "min (r/√(1-μ²)) √((1-r_s/r)⁻¹ - μ²)", target: "Prompts 03, 04", note: "Yields 2.598 r_s at μ → 0." },
+      { sym: "w_bath, u_rem,max", form: "w_bath ≈ 0; u_rem,max ≤ 4.11×10⁻¹⁶ eV cm⁻³", target: "Prompts 03, 06", note: "Excludes photon-remnant DM under m_γ < 10⁻¹⁸ eV." },
+      { sym: "F_env,max(A_eff)", form: "2 ρ_DM,loc A_eff v_rel² = 5.18×10⁻⁹ N", target: "Prompt 06", note: "Elastic upper bound at A_eff = 100 m², v_rel = 220 km s⁻¹." }
+    ];
+    document.getElementById('handoffGrid').innerHTML = handoffData.map(h => `
+      <div class="p-4 rounded-xl bg-[#FAF8F5] border border-stone-200">
+        <div class="flex items-center justify-between mb-1">
+          <span class="font-bold text-sm text-teal-800 math-pill">${h.sym}</span>
+          <span class="px-2 py-0.5 rounded bg-white border border-stone-200 text-[11px] font-semibold text-slate-700">${h.target}</span>
+        </div>
+        <div class="text-xs font-semibold text-slate-800 math-pill my-1.5">${h.form}</div>
+        <p class="text-xs text-slate-600">${h.note}</p>
+      </div>
+    `).join('');
+
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

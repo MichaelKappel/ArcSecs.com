@@ -1,0 +1,130 @@
+{
+  "cases": [
+    {
+      "name": "baseline",
+      "parameters": {
+        "length": 10.0,
+        "wave_shell": 1,
+        "sigma": 0.48,
+        "m_positive": 3.0,
+        "m_negative": 1.0,
+        "charge_magnitude": 2.0,
+        "spring": 2.8,
+        "permittivity": 1.0,
+        "light_speed": 1.0,
+        "scalar_speed": 0.85,
+        "scalar_mass": 1.15,
+        "scalar_source": 0.24,
+        "scalar_screen": 0.55,
+        "duration": 10.0,
+        "steps": 161
+      },
+      "excitation": 0.32
+    },
+    {
+      "name": "unexcited_source",
+      "parameters": {
+        "length": 10.0,
+        "wave_shell": 1,
+        "sigma": 0.48,
+        "m_positive": 3.0,
+        "m_negative": 1.0,
+        "charge_magnitude": 2.0,
+        "spring": 2.8,
+        "permittivity": 1.0,
+        "light_speed": 1.0,
+        "scalar_speed": 0.85,
+        "scalar_mass": 1.15,
+        "scalar_source": 0.24,
+        "scalar_screen": 0.55,
+        "duration": 10.0,
+        "steps": 161
+      },
+      "excitation": 0.0
+    },
+    {
+      "name": "no_electric_charge",
+      "parameters": {
+        "length": 10.0,
+        "wave_shell": 1,
+        "sigma": 0.48,
+        "m_positive": 3.0,
+        "m_negative": 1.0,
+        "charge_magnitude": 0.0,
+        "spring": 2.8,
+        "permittivity": 1.0,
+        "light_speed": 1.0,
+        "scalar_speed": 0.85,
+        "scalar_mass": 1.15,
+        "scalar_source": 0.24,
+        "scalar_screen": 0.55,
+        "duration": 10.0,
+        "steps": 161
+      },
+      "excitation": 0.32
+    },
+    {
+      "name": "no_scalar_coupling",
+      "parameters": {
+        "length": 10.0,
+        "wave_shell": 1,
+        "sigma": 0.48,
+        "m_positive": 3.0,
+        "m_negative": 1.0,
+        "charge_magnitude": 2.0,
+        "spring": 2.8,
+        "permittivity": 1.0,
+        "light_speed": 1.0,
+        "scalar_speed": 0.85,
+        "scalar_mass": 1.15,
+        "scalar_source": 0.0,
+        "scalar_screen": 0.0,
+        "duration": 10.0,
+        "steps": 161
+      },
+      "excitation": 0.32
+    },
+    {
+      "name": "baseline_short_for_resolution",
+      "parameters": {
+        "length": 10.0,
+        "wave_shell": 1,
+        "sigma": 0.48,
+        "m_positive": 3.0,
+        "m_negative": 1.0,
+        "charge_magnitude": 2.0,
+        "spring": 2.8,
+        "permittivity": 1.0,
+        "light_speed": 1.0,
+        "scalar_speed": 0.85,
+        "scalar_mass": 1.15,
+        "scalar_source": 0.24,
+        "scalar_screen": 0.55,
+        "duration": 4.0,
+        "steps": 81
+      },
+      "excitation": 0.32
+    },
+    {
+      "name": "larger_mode_shell",
+      "parameters": {
+        "length": 10.0,
+        "wave_shell": 2,
+        "sigma": 0.48,
+        "m_positive": 3.0,
+        "m_negative": 1.0,
+        "charge_magnitude": 2.0,
+        "spring": 2.8,
+        "permittivity": 1.0,
+        "light_speed": 1.0,
+        "scalar_speed": 0.85,
+        "scalar_mass": 1.15,
+        "scalar_source": 0.24,
+        "scalar_screen": 0.55,
+        "duration": 4.0,
+        "steps": 81
+      },
+      "excitation": 0.32
+    }
+  ]
+}

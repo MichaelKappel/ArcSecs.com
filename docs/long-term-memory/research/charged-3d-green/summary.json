@@ -1,0 +1,12 @@
+{
+  "reference_cutoff": 12,
+  "comparison_cutoff": 10,
+  "n_frequencies": 9,
+  "max_complex_absolute_difference": 1.0919239199002541e-10,
+  "max_relative_complex_difference": 1.3989083231018122e-06,
+  "max_constraint_residual": 2.2933113318686046e-16,
+  "physical_source_width_held_fixed": 1.5,
+  "physical_receiver_width_held_fixed": 1.3,
+  "no_gravity_or_3d_quantum_atom": true,
+  "no_autonomous_energy_momentum_claim": true
+}

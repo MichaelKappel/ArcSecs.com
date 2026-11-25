@@ -1,0 +1,59 @@
+{
+  "packageVersion": "5.8.36",
+  "packageFile": "arcsecs-v5.8.36-viewport-scrollbar-accessibility-fix-package.zip",
+  "validationStatus": "passed",
+  "commands": [
+    {
+      "command": "find assets/js -name '*.js' -print0 | xargs -0 -n1 node --check",
+      "result": "passed"
+    },
+    {
+      "command": "php -l arcsecs-scientific-physics-engine.php",
+      "result": "passed"
+    },
+    {
+      "command": "find includes -name '*.php' -print0 | xargs -0 -n1 php -l",
+      "result": "passed"
+    },
+    {
+      "command": "npm run build",
+      "result": "passed"
+    },
+    {
+      "command": "npm run lint",
+      "result": "passed"
+    },
+    {
+      "command": "npm run test:js",
+      "result": "passed",
+      "tests": 174
+    },
+    {
+      "command": "npm run test:php",
+      "result": "passed"
+    },
+    {
+      "command": "npm test",
+      "result": "passed"
+    },
+    {
+      "command": "unzip -t arcsecs-v5.8.36-viewport-scrollbar-accessibility-fix-package.zip",
+      "result": "pending-after-zip"
+    },
+    {
+      "command": "ZIP package identity check",
+      "result": "pending-after-zip"
+    }
+  ],
+  "notRun": [
+    {
+      "command": "npm run test:e2e",
+      "reason": "No tests/e2e directory exists; no heavy browser dependency was added."
+    }
+  ],
+  "coreRuntimePhysicsChanged": false,
+  "contactPageDeploymentQa": true,
+  "darkMatterDriveActivationPageContentRestored": true,
+  "publishingAutomationAdded": false,
+  "remoteFetchingAdded": false
+}

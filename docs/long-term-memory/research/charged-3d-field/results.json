@@ -1,0 +1,134 @@
+[
+  {
+    "case": "baseline",
+    "energy_relative_drift": 5.037055332638778e-09,
+    "momentum_absolute_drift": 3.502862210466601e-12,
+    "peak_receiver_separation": 0.0370931381329301,
+    "peak_transverse_field": 0.2322986924734513,
+    "max_charge_continuity_residual": 1.3877787807814457e-17,
+    "max_gauss_residual": 5.204170427930421e-18,
+    "initial_energy": 0.13965531457528593,
+    "final_energy": 0.13965531450277258,
+    "initial_momentum": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "final_momentum": [
+      -2.0818714590795095e-14,
+      -3.716824618265127e-14,
+      -5.085125029391513e-15
+    ],
+    "modes": 13
+  },
+  {
+    "case": "unexcited_source",
+    "energy_relative_drift": 1.1589482283818693e-13,
+    "momentum_absolute_drift": 1.6647073045076847e-18,
+    "peak_receiver_separation": 4.440892098508558e-15,
+    "peak_transverse_field": 2.261791860128604e-15,
+    "max_charge_continuity_residual": 2.936661969511565e-20,
+    "max_gauss_residual": 4.930380657631324e-32,
+    "initial_energy": -0.007356813424125332,
+    "final_energy": -0.007356813424125571,
+    "initial_momentum": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "final_momentum": [
+      -1.2398692312183017e-19,
+      -8.881212878303156e-21,
+      3.716396748944555e-19
+    ],
+    "modes": 13
+  },
+  {
+    "case": "no_electric_charge",
+    "energy_relative_drift": 1.1473017243979033e-08,
+    "momentum_absolute_drift": 1.2292992510419504e-15,
+    "peak_receiver_separation": 2.1684044095944933e-19,
+    "peak_transverse_field": 0.0,
+    "max_charge_continuity_residual": 0.0,
+    "max_gauss_residual": 0.0,
+    "initial_energy": 0.1381876279219836,
+    "final_energy": 0.13818762774662968,
+    "initial_momentum": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "final_momentum": [
+      -8.37932637027237e-18,
+      -7.61273084806289e-16,
+      5.870306916153255e-17
+    ],
+    "modes": 13
+  },
+  {
+    "case": "no_scalar_coupling",
+    "energy_relative_drift": 4.33241715373839e-09,
+    "momentum_absolute_drift": 3.710107878943471e-12,
+    "peak_receiver_separation": 0.03708832083081818,
+    "peak_transverse_field": 0.23231001811774735,
+    "max_charge_continuity_residual": 1.3877787807814457e-17,
+    "max_gauss_residual": 5.204170427930421e-18,
+    "initial_energy": 0.146994353319969,
+    "final_energy": 0.1469943532475105,
+    "initial_momentum": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "final_momentum": [
+      -1.8711188197809148e-14,
+      -3.79737169172497e-14,
+      -5.197096008754953e-15
+    ],
+    "modes": 13
+  },
+  {
+    "case": "baseline_short_for_resolution",
+    "energy_relative_drift": 5.339129638751492e-09,
+    "momentum_absolute_drift": 3.764770366276708e-12,
+    "peak_receiver_separation": 0.021155884819679987,
+    "peak_transverse_field": 0.23229964950817317,
+    "max_charge_continuity_residual": 1.3877787807814457e-17,
+    "max_gauss_residual": 5.204170427930421e-18,
+    "initial_energy": 0.13965531457528593,
+    "final_energy": 0.1396553145450722,
+    "initial_momentum": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "final_momentum": [
+      9.259086553026208e-17,
+      1.8939252835296905e-13,
+      7.109981006725441e-15
+    ],
+    "modes": 13
+  },
+  {
+    "case": "larger_mode_shell",
+    "energy_relative_drift": 3.2405512105160843e-09,
+    "momentum_absolute_drift": 1.923170810820924e-11,
+    "peak_receiver_separation": 0.015908755624216904,
+    "peak_transverse_field": 0.4377640943632778,
+    "max_charge_continuity_residual": 2.0816681711721685e-17,
+    "max_gauss_residual": 1.0408340855860843e-17,
+    "initial_energy": 0.12494387540299036,
+    "final_energy": 0.12494387538326407,
+    "initial_momentum": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "final_momentum": [
+      -4.891781966477604e-14,
+      9.044492585430497e-13,
+      1.1478529715266972e-14
+    ],
+    "modes": 62
+  }
+]

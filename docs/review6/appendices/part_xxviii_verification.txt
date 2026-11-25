@@ -1,0 +1,4 @@
+Executed exact-distance vs quadrature comparisons: 19
+Maximum absolute discrepancy: 5.32907e-15
+Energy-ledger arithmetic and stationary pulse separation assertions passed.
+The bath ledger is a bookkeeping identity, not an independently simulated field.

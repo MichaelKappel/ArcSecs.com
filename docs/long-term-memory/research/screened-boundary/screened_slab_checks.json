@@ -1,0 +1,38 @@
+{
+  "parameters": {
+    "L": 8.0,
+    "R": 1.0,
+    "N": 801,
+    "kappa": 1.0,
+    "m2": 1.0,
+    "g": 2.0,
+    "rho_in": 20.0,
+    "rho_out": 0.0,
+    "f": 1.0,
+    "a": 0.35,
+    "b": 1.65,
+    "eps0": 1.0,
+    "mu0": 1.0,
+    "D": 0.0
+  },
+  "result": {
+    "max_residual": 8.140155216551648e-13,
+    "iterations": 1,
+    "psi_center": 0.02482796555199407,
+    "psi_edge": 0.15594725938412635,
+    "psi_exterior": 1.0,
+    "energy": -6.190881613360814,
+    "dx": 0.02,
+    "static_cross_boundary_ledger": {
+      "S_transport": 1.0,
+      "z_spec": -0.49470882116204284,
+      "alpha_ratio": 1.8848755969162223,
+      "screening_residual": 0.14222512792425043
+    },
+    "fraction_center_to_exterior": 0.02482796555199407,
+    "speed_center_to_outer": 2.6516233423043447,
+    "alpha_center_to_outer": 0.5305389924067478,
+    "max_analytic_error": 0.00022731750493917846,
+    "assumption": "static fixed matter density, 1D slab, dimensionless toy"
+  }
+}

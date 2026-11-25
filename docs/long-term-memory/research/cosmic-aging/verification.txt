@@ -1,0 +1,5 @@
+Drag quadrature max absolute discrepancy: 4.34374758385e-15
+Shell quadrature max relative discrepancy: 1.89886488506e-13
+Arrival derivative max absolute discrepancy: 7.77968800492e-11
+Moving endpoints example: (1.4840764351985065, 1.1145172970762691, 0.9905535828071407)
+Shell exit bound sqrt(2): 1.41421356237

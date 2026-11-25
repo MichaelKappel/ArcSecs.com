@@ -1,0 +1,19 @@
+id,type,category,status
+ARC-T01,Entity,physical,ArcSecs proposed ontology
+ARC-T02,Composite,physical,ArcSecs proposed ontology
+ARC-T03,Excitation,physical,ArcSecs proposed ontology
+ARC-T04,FieldState,physical,ArcSecs proposed ontology
+ARC-T05,Source,physical,ArcSecs proposed ontology
+ARC-T06,Receiver,physical,ArcSecs proposed ontology
+ARC-T07,InteractionEvent,process,ArcSecs proposed ontology
+ARC-T08,MassType,attribute,ArcSecs proposed ontology
+ARC-T09,Energy,attribute,ArcSecs proposed ontology
+ARC-T10,Momentum,attribute,ArcSecs proposed ontology
+ARC-T11,OccupiedRegion,attribute,ArcSecs proposed ontology
+ARC-T12,Uncertainty,epistemic,ArcSecs proposed ontology
+ARC-T13,LocationRelation,relational,ArcSecs proposed ontology
+ARC-T14,SequenceRelation,relational,ArcSecs proposed ontology
+ARC-T15,Observer,physical,ArcSecs proposed ontology
+ARC-T16,MeasurementApparatus,physical,ArcSecs proposed ontology
+ARC-T17,Observable,epistemic,ArcSecs proposed ontology
+ARC-T18,Inference,epistemic,ArcSecs proposed ontology

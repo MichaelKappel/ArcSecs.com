@@ -1,0 +1,22 @@
+Review 4.0 final PDF preflight
+Pages: 85
+Page dimensions: 442.08 x 663.12 pt (6.14 x 9.21 in)
+Mirrored margin scan: 0 out-of-bound text spans (3 pt numerical tolerance)
+Replacement characters: 0
+Raster image occurrences: 0
+Overfull LaTeX boxes: 0
+Pages with fewer than 400 extracted characters: []
+Font report:
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+ANHICZ+DejaVuSerif                   CID TrueType      Identity-H       yes yes yes      4  0
+TYEHOE+DejaVuSerif-Bold              CID TrueType      Identity-H       yes yes yes      6  0
+YYDXOT+DejaVuSerif-Italic            CID TrueType      Identity-H       yes yes yes    116  0
+TVSUUX+LMMono10-Regular-Identity-H   CID Type 0C       Identity-H       yes yes yes    118  0
+KHPWFP+LatinModernMath-Regular-Identity-H CID Type 0C       Identity-H       yes yes yes    126  0
+BMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    192  0
+BMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    304  0
+BMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    323  0
+BMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    348  0
+
+Representative pages visually inspected during final layout review. No KDP upload, physical proof, or cover inspection.

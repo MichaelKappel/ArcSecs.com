@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.6/theme.json",
+  "version": 3,
+  "settings": {
+    "layout": {
+      "contentSize": "860px",
+      "wideSize": "1180px"
+    },
+    "color": {
+      "palette": [
+        { "slug": "arcsecs-bg", "color": "#020713", "name": "ArcSecs Deep Space" },
+        { "slug": "arcsecs-text", "color": "#edf5ff", "name": "ArcSecs Starlight" },
+        { "slug": "arcsecs-blue", "color": "#62ccff", "name": "ArcSecs Signal Blue" },
+        { "slug": "arcsecs-red", "color": "#ff2a3d", "name": "ArcSecs Redshift" },
+        { "slug": "arcsecs-gold", "color": "#ffd37b", "name": "ArcSecs Gold" }
+      ]
+    }
+  },
+  "styles": {
+    "color": { "background": "#020713", "text": "#edf5ff" },
+    "typography": { "fontFamily": "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }
+  }
+}

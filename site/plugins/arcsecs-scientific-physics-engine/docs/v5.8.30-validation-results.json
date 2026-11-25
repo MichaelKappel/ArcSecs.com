@@ -1,0 +1,61 @@
+{
+  "version": "5.8.36",
+  "package": "arcsecs-v5.8.36-contact-page-live-polish-footer-link-seo-aeo-package.zip",
+  "label": "Public Publishing Evidence Archive Index and Reviewer Retrieval Notes",
+  "generatedUtc": "2026-06-02T17:30:00Z",
+  "runtimePhysicsChanged": false,
+  "results": [
+    {
+      "command": "find assets/js -name \"*.js\" -print0 | xargs -0 -n1 node --check",
+      "result": "passed"
+    },
+    {
+      "command": "php -l arcsecs-scientific-physics-engine.php",
+      "result": "passed"
+    },
+    {
+      "command": "find includes -name \"*.php\" -print0 | xargs -0 -n1 php -l",
+      "result": "passed"
+    },
+    {
+      "command": "npm run build",
+      "result": "passed"
+    },
+    {
+      "command": "npm run lint",
+      "result": "passed"
+    },
+    {
+      "command": "npm run test:js",
+      "result": "passed",
+      "details": "163 Node tests passed"
+    },
+    {
+      "command": "npm run test:php",
+      "result": "passed"
+    },
+    {
+      "command": "npm test",
+      "result": "passed"
+    },
+    {
+      "command": "unzip -t arcsecs-v5.8.36-contact-page-live-polish-footer-link-seo-aeo-package.zip",
+      "result": "pending until package creation"
+    },
+    {
+      "command": "ZIP package identity check",
+      "result": "pending until package creation"
+    }
+  ],
+  "notRun": [
+    {
+      "command": "npm run test:e2e",
+      "reason": "No tests/e2e directory exists; no heavy browser-test dependency was added."
+    }
+  ],
+  "knownLimitations": [
+    "Core runtime physics was not changed.",
+    "The plugin does not publish pages, create WordPress content, inject schema, fetch/crawl links, validate routes, call remote services, or perform publishing automation.",
+    "Human review sign-off is local inert JSON review metadata only."
+  ]
+}

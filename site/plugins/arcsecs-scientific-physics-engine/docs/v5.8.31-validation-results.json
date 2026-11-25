@@ -1,0 +1,49 @@
+{
+  "packageVersion": "5.8.36",
+  "featureLabel": "Public Publishing Evidence Archive Index and Reviewer Retrieval Notes",
+  "generatedUtc": "2026-06-02T17:18:38Z",
+  "commands": [
+    {
+      "command": "find assets/js -name '*.js' -print0 | xargs -0 -n1 node --check",
+      "result": "passed"
+    },
+    {
+      "command": "php -l arcsecs-scientific-physics-engine.php",
+      "result": "passed"
+    },
+    {
+      "command": "find includes -name '*.php' -print0 | xargs -0 -n1 php -l",
+      "result": "passed"
+    },
+    {
+      "command": "npm run build",
+      "result": "passed"
+    },
+    {
+      "command": "npm run lint",
+      "result": "passed"
+    },
+    {
+      "command": "npm run test:js",
+      "result": "passed",
+      "details": "164 Node tests passed"
+    },
+    {
+      "command": "npm run test:php",
+      "result": "passed"
+    },
+    {
+      "command": "npm test",
+      "result": "passed"
+    },
+    {
+      "command": "unzip -t arcsecs-v5.8.36-contact-page-live-polish-footer-link-seo-aeo-package.zip",
+      "result": "pending"
+    },
+    {
+      "command": "ZIP package identity check",
+      "result": "pending"
+    }
+  ],
+  "status": "validation-passed-before-zip"
+}

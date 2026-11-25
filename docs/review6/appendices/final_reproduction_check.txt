@@ -1,0 +1,11 @@
+Executed Review6 forward and escape scripts in separate working copy. Numerical outputs compared with archived data. No source or publication PDF changed.
+review6_summary.json: byte-identical
+review6_escape_summary.json: byte-identical
+review6_regression.csv: byte-identical
+review6_mediator_scan.csv: byte-identical
+review6_coherent_aperture.csv: byte-identical
+review6_coherent_cells.csv: byte-identical
+review6_coherent_detuning.csv: byte-identical
+review6_coherent_timing.csv: byte-identical
+review6_detector_control.csv: byte-identical
+review6_escape.csv: byte-identical

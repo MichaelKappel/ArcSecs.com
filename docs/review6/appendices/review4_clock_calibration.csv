@@ -1,0 +1,7 @@
+C_ratio,mass_law,mass_ratio,atomic_frequency_ratio,bohr_radius_ratio,photon_frequency_ratio,z_spec
+1.0,fixed_mass,1.0,1.0,1.0,1.0,0.0
+1.0,binding_compensated,1.0,1.0,1.0,1.0,0.0
+0.8,fixed_mass,1.0,0.6400000000000001,1.25,0.8,-0.19999999999999984
+0.8,binding_compensated,1.5624999999999998,1.0,0.8,0.8,0.25
+0.5,fixed_mass,1.0,0.25,2.0,0.5,-0.5
+0.5,binding_compensated,4.0,1.0,0.5,0.5,1.0

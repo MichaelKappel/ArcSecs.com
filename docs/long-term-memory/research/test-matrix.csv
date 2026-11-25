@@ -1,0 +1,10 @@
+test_id,mission,hypothesis,parameters,observables,datasets,pass_fail_logic
+PHOTON01,01,vacuum photon rest mass,proca parameter m_gamma,dispersion beyond measured plasma,PDG and multi-frequency transients,confidence interval includes/excludes zero under independently justified nuisance model
+CLOCK01,02,universal rate scaling,species ratio epsilon_ij,differential nuclear optical clock rate,optical clocks plus unstable particle lifetime,held-out ratio deviates from or equals universal prediction
+COSMIC01,03,photometric foreground error,proper motion and spectroscopy,higher purity of high-z candidate classification,Capotauro plus blinded JWST catalogs,confirmed high-z versus Galactic source classification
+TL01,04,physical photon energy loss,energy transfer alpha,joint redshift and time stretch,DES SN 1504 and COBE FIRAS,locked model reproduces full observations or fails
+GRAV01,05,relational gravity,force kernel and PPN parameters,solar deflection and pulsar timing,"Cassini, GW170817",predeclared anomalous residual survives null
+DARK01,06,unified dark dynamics,acceleration law and capture eta,galaxy/cluster plus measurable thrust,"SPARC, merging clusters, LZ",one model generalizes and capture measurable
+BUB01,07,outside bubble pressure,wall tension sigma and dP,bubble expansion response,numerical lab analog and CMB bounds,conserved evolution plus unique boundary signature
+BUB02,08,bubble births and recycling,lambda mu,independent domain collision features,"CMB, cosmic chronometers",beyond-null predictive signature
+BUB03,09,bubble collision signatures,CMB template A,correlated temperature and polarization,Planck with injection controls,global corrected significance and independent validation

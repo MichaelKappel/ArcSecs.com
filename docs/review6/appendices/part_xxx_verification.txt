@@ -1,0 +1,5 @@
+16 endpoint identities; 4 independent ODE trajectory/analytic comparisons; 4 energy ledger comparisons; 4 reachability comparisons.
+Max rapidity discrepancy = 4.18932e-12
+Max energy ledger discrepancy = 8.71858e-12
+Example epsilon=0.1, C1/C0=1.2: gamma_min=19.8997487, gamma_cross_max=3.28345468
+All assertions passed. No observational fit.

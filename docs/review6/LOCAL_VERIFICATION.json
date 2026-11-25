@@ -1,0 +1,60 @@
+{
+  "source_files": 18,
+  "source_hashes_match_master": true,
+  "runs": [
+    {
+      "script": "review6_forward.py",
+      "exit_code": 0,
+      "stderr_tail": "/tmp/tmp6daf_9hn/run/code/review6_forward.py:38: IntegrationWarning: The maximum number of subdivisions (500) has been achieved.\n  If increasing the limit yields no improvement it is advised to analyze \n  the integrand in order to determine the difficulties.  If the position of a \n  local difficulty can be determined (singularity, discontinuity) one will \n  probably gain from splitting up the interval and calling the integrator \n  on the subranges.  Perhaps a special-purpose integrator should be used.\n  integ=lambda f,lo=0,hi=upper:quad(f,lo,hi,epsabs=1e-32,epsrel=eps,limit=500)[0]\n"
+    },
+    {
+      "script": "review6_escape.py",
+      "exit_code": 0,
+      "stderr_tail": ""
+    }
+  ],
+  "archived_output_comparisons": [
+    {
+      "path": "appendices/review6_coherent_aperture.csv",
+      "byte_identical": true
+    },
+    {
+      "path": "appendices/review6_coherent_cells.csv",
+      "byte_identical": true
+    },
+    {
+      "path": "appendices/review6_coherent_detuning.csv",
+      "byte_identical": true
+    },
+    {
+      "path": "appendices/review6_coherent_timing.csv",
+      "byte_identical": true
+    },
+    {
+      "path": "appendices/review6_detector_control.csv",
+      "byte_identical": true
+    },
+    {
+      "path": "appendices/review6_escape.csv",
+      "byte_identical": true
+    },
+    {
+      "path": "appendices/review6_escape_summary.json",
+      "byte_identical": true
+    },
+    {
+      "path": "appendices/review6_mediator_scan.csv",
+      "byte_identical": true
+    },
+    {
+      "path": "appendices/review6_regression.csv",
+      "byte_identical": true
+    },
+    {
+      "path": "appendices/review6_summary.json",
+      "byte_identical": true
+    }
+  ],
+  "forward_regression_rows": 137,
+  "scope": "Same archived scripts rerun in a disposable copy; no independent rederivation or empirical validation."
+}

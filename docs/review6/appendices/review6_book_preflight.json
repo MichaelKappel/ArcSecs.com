@@ -1,0 +1,76 @@
+{
+  "file": "BEYOND_SPACETIME_Review5_2026-11-24_KDP_Hardcover_Interior(2).pdf",
+  "sha256": "5325af746f78fa3452f84ebc64e2d16950bd353898b87c2499d40c50277412b8",
+  "physical_pages": 456,
+  "blank_pages": [
+    346,
+    456
+  ],
+  "protected_first": 347,
+  "protected_last": 455,
+  "standalone_pages": 109,
+  "text_mismatch_pages": [],
+  "geometry_warnings": [],
+  "margin_warnings": [],
+  "low_ppi": [],
+  "replacement_character_pages": [],
+  "unembedded_fonts": [],
+  "dominant_character_font_sizes": [
+    [
+      10.9,
+      717041
+    ],
+    [
+      13.1,
+      25664
+    ],
+    [
+      12.0,
+      9874
+    ],
+    [
+      9.2,
+      5450
+    ],
+    [
+      10.0,
+      5439
+    ],
+    [
+      8.0,
+      3853
+    ],
+    [
+      14.3,
+      1920
+    ],
+    [
+      7.6,
+      1075
+    ],
+    [
+      9.7,
+      379
+    ],
+    [
+      9.8,
+      379
+    ]
+  ],
+  "raster_placements": 40,
+  "minimum_ppi": 299.998034384149,
+  "visual_sample_pages": [
+    10,
+    128,
+    139,
+    263,
+    342,
+    343,
+    344,
+    345,
+    346,
+    347,
+    415,
+    455
+  ]
+}

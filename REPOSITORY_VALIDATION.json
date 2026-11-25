@@ -1,0 +1,61 @@
+{
+  "source_archives": {
+    "BEYOND_SPACETIME_Unified_Master_AI_Distribution_2026-11-25.zip": "cc9a82b5eeb0b87493985c39ea2095e77df91a3a4114fc07354e33717eaa3853",
+    "ArcSecs-Theme.zip": "c84740de494f071ed605ccdcc4eb920c76c7712189d96c2421ec0f087edceb1c",
+    "arcsecs-scientific-physics-engine.zip": "d849c161afda286f99a7a1ac76eb9bef4cb3d4def1104bcb327e54d6abdab9d1",
+    "ArcSecs_GitHub_Review6_Starter_DRAFT.zip": "c9de7f1df9f5fe6d6ba0880a6df67c6be798a4924612c3e181d662996e48798a"
+  },
+  "source_files_copied": 1603,
+  "source_files_modified": [
+    "docs/README.md",
+    "docs/long-term-memory/reports/R30.md",
+    "docs/long-term-memory/reports/R31.md",
+    "docs/review6/README.md",
+    "site/theme/arcsecs-v5/public-root/llms.txt",
+    "site/theme/arcsecs-v5/template-parts/home-showcase.php",
+    "site/theme/arcsecs-v5/template-parts/arcsecs-research-hub.php",
+    "site/theme/arcsecs-v5/functions.php"
+  ],
+  "excluded_counts": {
+    "private memory, operational file or opaque archive": 182,
+    "private project management record": 25,
+    "old full-master verifier or memory audit": 7,
+    "internal provenance or distribution-planning branch": 36,
+    "private commercial production materials (current cover copied separately)": 15,
+    "private master restore/validation tool": 3,
+    "theme memory exports or duplicate handoff fragments": 15,
+    "memory validation metadata": 1
+  },
+  "numbered_reports": 41,
+  "protected_review_sha256": "e714e97fbd4c7995b20950edef386c56ae637c5226935000b6ee7e16af624fbf",
+  "book_and_protected_paper_byte_identical": true,
+  "largest_file_bytes": 20804176,
+  "memory_paths_or_nested_archives": 0,
+  "public_release_approved": false,
+  "github_uploaded": false,
+  "php_syntax_files_passed": 78,
+  "typescript_no_emit": "pass",
+  "plugin_js_tests": {
+    "passed": 106,
+    "failed": 58,
+    "total": 164,
+    "original_archive_passed": 120,
+    "original_archive_failed": 65,
+    "original_archive_total": 185
+  },
+  "theme_php_tests": {
+    "passed": 7,
+    "failed": 37,
+    "original_archive_passed": 7,
+    "original_archive_failed": 37
+  },
+  "plugin_php_tests": {
+    "passed": 0,
+    "failed": 2,
+    "reason": "version expectations 5.8.36 vs PHP header 3.135.0"
+  },
+  "text_secret_pattern_scan": "no matches after removing four signed URL query strings in R30/R31; heuristic scan of common text extensions only, not a complete privacy or binary-content audit",
+  "live_wordpress": "not tested",
+  "full_science_test_suite": "not rerun for this filtered repo; some original tests reference private master memory",
+  "release_gate": "private staging only; outstanding rights, KDP Select, third-party review and site runtime tests"
+}

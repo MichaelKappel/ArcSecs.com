@@ -1,0 +1,431 @@
+pdf_page,printed_page,section,review_status,rendered_visual_sample,recalculation,issues,remaining,text_chars
+1,,main book,targeted text inspected (not exhaustive),True,,,Full-size visual proof and exhaustive scientific/reference verification still required,277
+2,2,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1971
+3,3,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1930
+4,4,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2262
+5,5,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2106
+6,6,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2386
+7,7,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,236
+8,8,main book,targeted text inspected (not exhaustive),False,,PUB-001,Full-size visual proof and exhaustive scientific/reference verification still required,1841
+9,9,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,928
+10,10,main book,targeted text inspected (not exhaustive),True,,,Full-size visual proof and exhaustive scientific/reference verification still required,1531
+11,11,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2255
+12,12,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2234
+13,13,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2202
+14,14,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2059
+15,15,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2129
+16,16,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2379
+17,17,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1765
+18,18,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2074
+19,19,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1971
+20,20,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1886
+21,21,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1842
+22,22,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2327
+23,23,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2407
+24,24,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2396
+25,25,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2364
+26,26,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1797
+27,27,main book,targeted text inspected (not exhaustive),True,TOF integral,,Full-size visual proof and exhaustive scientific/reference verification still required,1839
+28,28,main book,targeted text inspected (not exhaustive),False,,DEV-007,Full-size visual proof and exhaustive scientific/reference verification still required,1988
+29,29,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,527
+30,30,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2423
+31,31,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2318
+32,32,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2319
+33,33,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2437
+34,34,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2318
+35,35,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2325
+36,36,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1988
+37,37,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1971
+38,38,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2294
+39,39,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2367
+40,40,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2004
+41,41,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2229
+42,42,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2332
+43,43,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1835
+44,44,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1887
+45,45,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1909
+46,46,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2363
+47,47,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2307
+48,48,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2407
+49,49,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2345
+50,50,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2383
+51,51,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2413
+52,52,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2135
+53,53,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2338
+54,54,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2367
+55,55,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1474
+56,56,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2200
+57,57,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2227
+58,58,main book,targeted text inspected (not exhaustive),False,,DEV-001;DEV-002;DEV-004,Full-size visual proof and exhaustive scientific/reference verification still required,1821
+59,59,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2161
+60,60,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2400
+61,61,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2388
+62,62,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2220
+63,63,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2215
+64,64,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2363
+65,65,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1314
+66,66,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1974
+67,67,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2329
+68,68,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2400
+69,69,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2461
+70,70,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2452
+71,71,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2312
+72,72,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2389
+73,73,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2465
+74,74,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2279
+75,75,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2390
+76,76,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2490
+77,77,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,538
+78,78,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2046
+79,79,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2208
+80,80,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2218
+81,81,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2304
+82,82,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1886
+83,83,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2291
+84,84,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2235
+85,85,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2264
+86,86,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2101
+87,87,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2115
+88,88,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2255
+89,89,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2314
+90,90,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2100
+91,91,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2147
+92,92,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2192
+93,93,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1845
+94,94,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2252
+95,95,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2058
+96,96,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2079
+97,97,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2179
+98,98,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2179
+99,99,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2322
+100,100,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2117
+101,101,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2233
+102,102,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2099
+103,103,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2266
+104,104,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2118
+105,105,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2095
+106,106,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2174
+107,107,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2234
+108,108,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2246
+109,109,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1926
+110,110,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2256
+111,111,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2183
+112,112,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2294
+113,113,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2026
+114,114,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2085
+115,115,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2298
+116,116,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2252
+117,117,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2178
+118,118,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2068
+119,119,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1478
+120,120,main book,targeted text inspected (not exhaustive),True,,DEV-003,Full-size visual proof and exhaustive scientific/reference verification still required,1499
+121,121,main book,targeted text inspected (not exhaustive),False,,DEV-003,Full-size visual proof and exhaustive scientific/reference verification still required,1136
+122,122,main book,targeted text inspected (not exhaustive),False,OF derivatives,DEV-003,Full-size visual proof and exhaustive scientific/reference verification still required,1456
+123,123,main book,targeted text inspected (not exhaustive),True,six z=1 rows and quadrature,DEV-003,Full-size visual proof and exhaustive scientific/reference verification still required,1772
+124,124,main book,targeted text inspected (not exhaustive),False,,DEV-003,Full-size visual proof and exhaustive scientific/reference verification still required,527
+125,125,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2260
+126,126,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1704
+127,127,main book,targeted text inspected (not exhaustive),False,,PUB-002,Full-size visual proof and exhaustive scientific/reference verification still required,1527
+128,128,main book,targeted text inspected (not exhaustive),True,tidal tensor,PUB-002,Full-size visual proof and exhaustive scientific/reference verification still required,1426
+129,129,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1716
+130,130,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1924
+131,131,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2214
+132,132,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2150
+133,133,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2428
+134,134,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2382
+135,135,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1872
+136,136,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1662
+137,137,main book,targeted text inspected (not exhaustive),False,,PUB-002,Full-size visual proof and exhaustive scientific/reference verification still required,1273
+138,138,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2030
+139,139,main book,targeted text inspected (not exhaustive),False,tidal eigenvalues,PUB-002,Full-size visual proof and exhaustive scientific/reference verification still required,1339
+140,140,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1866
+141,141,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1215
+142,142,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2276
+143,143,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2170
+144,144,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1467
+145,145,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1799
+146,146,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1649
+147,147,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2011
+148,148,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2181
+149,149,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2184
+150,150,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1777
+151,151,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2049
+152,152,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1541
+153,153,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2318
+154,154,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2303
+155,155,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1932
+156,156,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1476
+157,157,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1864
+158,158,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1335
+159,159,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1375
+160,160,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2374
+161,161,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2334
+162,162,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2143
+163,163,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1515
+164,164,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1845
+165,165,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1571
+166,166,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2303
+167,167,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2376
+168,168,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2063
+169,169,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1815
+170,170,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1716
+171,171,main book,automated extraction/geometry only,False,,PUB-002,Full-size visual proof and exhaustive scientific/reference verification still required,1160
+172,172,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1686
+173,173,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1658
+174,174,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2297
+175,175,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2181
+176,176,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1547
+177,177,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1043
+178,178,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1761
+179,179,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1273
+180,180,main book,automated extraction/geometry only,False,,PUB-002,Full-size visual proof and exhaustive scientific/reference verification still required,131
+181,181,main book,automated extraction/geometry only,False,,PUB-002,Full-size visual proof and exhaustive scientific/reference verification still required,1445
+182,182,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2103
+183,183,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1910
+184,184,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1094
+185,185,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1276
+186,186,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1742
+187,187,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,472
+188,188,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1092
+189,189,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,797
+190,190,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2066
+191,191,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2180
+192,192,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1756
+193,193,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1176
+194,194,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1496
+195,195,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1033
+196,196,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,166
+197,197,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2237
+198,198,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2054
+199,199,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1608
+200,200,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1666
+201,201,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1991
+202,202,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1581
+203,203,main book,automated extraction/geometry only,False,,PUB-002,Full-size visual proof and exhaustive scientific/reference verification still required,131
+204,204,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1353
+205,205,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1338
+206,206,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1959
+207,207,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1546
+208,208,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1580
+209,209,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1052
+210,210,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1199
+211,211,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2015
+212,212,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1589
+213,213,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1956
+214,214,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1858
+215,215,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1621
+216,216,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1360
+217,217,main book,automated extraction/geometry only,False,,PUB-002,Full-size visual proof and exhaustive scientific/reference verification still required,1012
+218,218,main book,automated extraction/geometry only,False,,PUB-002,Full-size visual proof and exhaustive scientific/reference verification still required,897
+219,219,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2040
+220,220,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2311
+221,221,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1695
+222,222,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1594
+223,223,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1465
+224,224,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1975
+225,225,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2021
+226,226,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,180
+227,227,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1398
+228,228,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2084
+229,229,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2216
+230,230,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1639
+231,231,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1669
+232,232,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1686
+233,233,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1175
+234,234,main book,automated extraction/geometry only,False,,PUB-002,Full-size visual proof and exhaustive scientific/reference verification still required,1330
+235,235,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1446
+236,236,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2134
+237,237,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1888
+238,238,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1080
+239,239,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1671
+240,240,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1955
+241,241,main book,automated extraction/geometry only,False,,PUB-002,Full-size visual proof and exhaustive scientific/reference verification still required,1027
+242,242,main book,automated extraction/geometry only,False,,PUB-002,Full-size visual proof and exhaustive scientific/reference verification still required,126
+243,243,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2382
+244,244,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2017
+245,245,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1388
+246,246,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1204
+247,247,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1899
+248,248,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,913
+249,249,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1336
+250,250,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1897
+251,251,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1586
+252,252,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,31
+253,253,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2124
+254,254,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1891
+255,255,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,910
+256,256,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1062
+257,257,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2174
+258,258,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2141
+259,259,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1908
+260,260,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2212
+261,261,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2091
+262,262,main book,targeted text inspected (not exhaustive),False,bath bound,,Full-size visual proof and exhaustive scientific/reference verification still required,1438
+263,263,main book,targeted text inspected (not exhaustive),False,70-digit bath bound,,Full-size visual proof and exhaustive scientific/reference verification still required,1828
+264,264,main book,targeted text inspected (not exhaustive),True,,,Full-size visual proof and exhaustive scientific/reference verification still required,1003
+265,265,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1618
+266,266,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1051
+267,267,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1998
+268,268,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1631
+269,269,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2248
+270,270,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,51
+271,271,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1825
+272,272,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1956
+273,273,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2085
+274,274,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2172
+275,275,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1921
+276,276,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2071
+277,277,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1764
+278,278,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1875
+279,279,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2179
+280,280,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2000
+281,281,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2058
+282,282,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1954
+283,283,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1848
+284,284,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1966
+285,285,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2087
+286,286,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1336
+287,287,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1601
+288,288,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1568
+289,289,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,846
+290,290,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1044
+291,291,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1115
+292,292,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2038
+293,293,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2028
+294,294,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2086
+295,295,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2092
+296,296,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2409
+297,297,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1931
+298,298,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2129
+299,299,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1818
+300,300,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2052
+301,301,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1862
+302,302,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2056
+303,303,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1837
+304,304,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2029
+305,305,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2220
+306,306,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1858
+307,307,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1622
+308,308,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2078
+309,309,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2203
+310,310,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1567
+311,311,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1373
+312,312,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1698
+313,313,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2159
+314,314,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1938
+315,315,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1549
+316,316,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2107
+317,317,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1914
+318,318,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2137
+319,319,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1471
+320,320,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1952
+321,321,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1972
+322,322,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1840
+323,323,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1281
+324,324,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1583
+325,325,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2152
+326,326,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2076
+327,327,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1685
+328,328,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1619
+329,329,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2107
+330,330,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1499
+331,331,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1757
+332,332,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2023
+333,333,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1968
+334,334,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2002
+335,335,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2170
+336,336,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2104
+337,337,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1848
+338,338,main book,targeted text inspected (not exhaustive),True,,,Full-size visual proof and exhaustive scientific/reference verification still required,2421
+339,339,main book,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1158
+340,340,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,862
+341,341,main book,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1460
+342,342,main book,targeted text inspected (not exhaustive),True,,DEV-009,Full-size visual proof and exhaustive scientific/reference verification still required,1263
+343,343,main book,targeted text inspected (not exhaustive),True,,,Full-size visual proof and exhaustive scientific/reference verification still required,640
+344,,blank,blank verified,True,,,None for blank page,0
+345,1,protected review,targeted text inspected (not exhaustive),True,,PUB-001,Full-size visual proof and exhaustive scientific/reference verification still required,888
+346,2,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1672
+347,3,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1695
+348,4,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,658
+349,5,protected review,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1966
+350,6,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1810
+351,7,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1729
+352,8,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1923
+353,9,protected review,automated extraction/geometry only,False,,DEV-001,Full-size visual proof and exhaustive scientific/reference verification still required,1714
+354,10,protected review,automated extraction/geometry only,False,,DEV-001,Full-size visual proof and exhaustive scientific/reference verification still required,1734
+355,11,protected review,targeted text inspected (not exhaustive),False,,DEV-001,Full-size visual proof and exhaustive scientific/reference verification still required,1169
+356,12,protected review,automated extraction/geometry only,False,,DEV-001,Full-size visual proof and exhaustive scientific/reference verification still required,922
+357,13,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1409
+358,14,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1383
+359,15,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1105
+360,16,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1582
+361,17,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1689
+362,18,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1596
+363,19,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1895
+364,20,protected review,targeted text inspected (not exhaustive),False,,DEV-004,Full-size visual proof and exhaustive scientific/reference verification still required,1640
+365,21,protected review,targeted text inspected (not exhaustive),False,,DEV-004,Full-size visual proof and exhaustive scientific/reference verification still required,1569
+366,22,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1561
+367,23,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1928
+368,24,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1907
+369,25,protected review,targeted text inspected (not exhaustive),False,,DEV-003,Full-size visual proof and exhaustive scientific/reference verification still required,1486
+370,26,protected review,targeted text inspected (not exhaustive),False,bounded velocity,DEV-003,Full-size visual proof and exhaustive scientific/reference verification still required,1592
+371,27,protected review,targeted text inspected (not exhaustive),False,bounded derivative,DEV-003,Full-size visual proof and exhaustive scientific/reference verification still required,1520
+372,28,protected review,targeted text inspected (not exhaustive),False,selected bounded benchmark,DEV-003,Full-size visual proof and exhaustive scientific/reference verification still required,1124
+373,29,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,953
+374,30,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1512
+375,31,protected review,targeted text inspected (not exhaustive),False,,DEV-007,Full-size visual proof and exhaustive scientific/reference verification still required,1686
+376,32,protected review,targeted text inspected (not exhaustive),False,,DEV-007,Full-size visual proof and exhaustive scientific/reference verification still required,1778
+377,33,protected review,targeted text inspected (not exhaustive),False,,DEV-007,Full-size visual proof and exhaustive scientific/reference verification still required,1227
+378,34,protected review,targeted text inspected (not exhaustive),False,,DEV-007,Full-size visual proof and exhaustive scientific/reference verification still required,1776
+379,35,protected review,targeted text inspected (not exhaustive),False,,DEV-007,Full-size visual proof and exhaustive scientific/reference verification still required,1753
+380,36,protected review,targeted text inspected (not exhaustive),False,,DEV-007,Full-size visual proof and exhaustive scientific/reference verification still required,1702
+381,37,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1264
+382,38,protected review,targeted text inspected (not exhaustive),False,,DEV-002,Full-size visual proof and exhaustive scientific/reference verification still required,1415
+383,39,protected review,targeted text inspected (not exhaustive),False,,DEV-001;DEV-002,Full-size visual proof and exhaustive scientific/reference verification still required,1365
+384,40,protected review,targeted text inspected (not exhaustive),False,,DEV-002,Full-size visual proof and exhaustive scientific/reference verification still required,1398
+385,41,protected review,targeted text inspected (not exhaustive),False,,DEV-002,Full-size visual proof and exhaustive scientific/reference verification still required,1445
+386,42,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1164
+387,43,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1307
+388,44,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1152
+389,45,protected review,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1657
+390,46,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1463
+391,47,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1067
+392,48,protected review,targeted text inspected (not exhaustive),False,fixed-gap endpoint,,Full-size visual proof and exhaustive scientific/reference verification still required,1299
+393,49,protected review,targeted text inspected (not exhaustive),False,drag limits,,Full-size visual proof and exhaustive scientific/reference verification still required,1390
+394,50,protected review,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1494
+395,51,protected review,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1614
+396,52,protected review,targeted text inspected (not exhaustive),False,ODE and energy ledger,DEV-005,Full-size visual proof and exhaustive scientific/reference verification still required,1227
+397,53,protected review,targeted text inspected (not exhaustive),False,ODE and momentum ledger,DEV-005,Full-size visual proof and exhaustive scientific/reference verification still required,1272
+398,54,protected review,targeted text inspected (not exhaustive),False,speed derivative,DEV-005,Full-size visual proof and exhaustive scientific/reference verification still required,1284
+399,55,protected review,targeted text inspected (not exhaustive),False,initial conditions and ODE,DEV-005,Full-size visual proof and exhaustive scientific/reference verification still required,1438
+400,56,protected review,targeted text inspected (not exhaustive),True,baseline,DEV-005;DEV-008,Full-size visual proof and exhaustive scientific/reference verification still required,1594
+401,57,protected review,targeted text inspected (not exhaustive),False,sensitivity rows,DEV-005,Full-size visual proof and exhaustive scientific/reference verification still required,1048
+402,58,protected review,automated extraction/geometry only,False,,DEV-005,Full-size visual proof and exhaustive scientific/reference verification still required,1829
+403,59,protected review,targeted text inspected (not exhaustive),False,,DEV-005,Full-size visual proof and exhaustive scientific/reference verification still required,1942
+404,60,protected review,targeted text inspected (not exhaustive),False,finite-wall equations,DEV-005,Full-size visual proof and exhaustive scientific/reference verification still required,1306
+405,61,protected review,targeted text inspected (not exhaustive),False,finite-wall runs,DEV-005,Full-size visual proof and exhaustive scientific/reference verification still required,1016
+406,62,protected review,targeted text inspected (not exhaustive),True,,DEV-005,Full-size visual proof and exhaustive scientific/reference verification still required,1249
+407,63,protected review,targeted text inspected (not exhaustive),False,refined and RK45 subset,DEV-005,Full-size visual proof and exhaustive scientific/reference verification still required,1401
+408,64,protected review,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1011
+409,65,protected review,targeted text inspected (not exhaustive),True,,DEV-006,Full-size visual proof and exhaustive scientific/reference verification still required,1586
+410,66,protected review,targeted text inspected (not exhaustive),False,two-body kinematics,DEV-006,Full-size visual proof and exhaustive scientific/reference verification still required,1602
+411,67,protected review,targeted text inspected (not exhaustive),False,two scattering angles,DEV-006,Full-size visual proof and exhaustive scientific/reference verification still required,1877
+412,68,protected review,targeted text inspected (not exhaustive),False,,DEV-006,Full-size visual proof and exhaustive scientific/reference verification still required,1012
+413,69,protected review,targeted text inspected (not exhaustive),False,bath deficit,SCI-001;DEV-006;DEV-010,Full-size visual proof and exhaustive scientific/reference verification still required,2055
+414,70,protected review,targeted text inspected (not exhaustive),False,,DEV-006;DEV-008,Full-size visual proof and exhaustive scientific/reference verification still required,1827
+415,71,protected review,targeted text inspected (not exhaustive),False,tidal tensor,PUB-003;DEV-011,Full-size visual proof and exhaustive scientific/reference verification still required,1796
+416,72,protected review,targeted text inspected (not exhaustive),False,remnant fraction,DEV-011,Full-size visual proof and exhaustive scientific/reference verification still required,1875
+417,73,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1562
+418,74,protected review,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1015
+419,75,protected review,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1424
+420,76,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1557
+421,77,protected review,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1164
+422,78,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,859
+423,79,protected review,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,885
+424,80,protected review,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,844
+425,81,protected review,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1517
+426,82,protected review,targeted text inspected (not exhaustive),False,,,Full-size visual proof and exhaustive scientific/reference verification still required,2020
+427,83,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1627
+428,84,protected review,automated extraction/geometry only,False,,,Full-size visual proof and exhaustive scientific/reference verification still required,1799
+429,85,protected review,targeted text inspected (not exhaustive),True,,DEV-009,Full-size visual proof and exhaustive scientific/reference verification still required,1902
+430,,blank,blank verified,False,,,None for blank page,0

@@ -1,0 +1,16 @@
+# ArcSecs / BEYOND SPACETIME
+
+Independent, human-directed and AI-assisted physical-first research. Proposed mechanisms are hypotheses, not experimentally established alternatives to mainstream physics.
+
+## Website
+- Research hub: https://arcsecs.com/arcsecs-research-hub/
+- Scientific physics-engine demo: https://arcsecs.com/arcsecs-physics-engine-demo/
+- Cosmology comparison: https://arcsecs.com/standard-cosmology-vs-arcsecs/
+- Research library: https://arcsecs.com/research-library/
+
+## Publication
+- BEYOND SPACETIME — A Physical-First Investigation into the Nature of the Universe
+- Scientific Review 6.0: ArcSecs: A Physical-Process Research Program for Photon Propagation, Cosmic Distance, and Relational Inertia
+- ORCID: https://orcid.org/0009-0003-3889-1400
+
+Only publicly released and rights-cleared materials are eligible for reuse under their applicable licenses. Private project memory is not part of this repository. Crawler access alone does not confer rights or guarantee model training.

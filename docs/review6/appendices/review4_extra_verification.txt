@@ -1,0 +1,49 @@
+48 algebra/dataset regression assertions passed. These are not independent physical experiments.
+PASS R5 C=0.5, tau=1.1: residual=2.499e-12, tolerance=2e-09
+PASS R6 equality C=0.5, tau=1.1: residual=-5.551e-17, tolerance=1e-13
+PASS R5 C=0.5, tau=1.5: residual=-3.443e-12, tolerance=2e-09
+PASS R6 equality C=0.5, tau=1.5: residual=0, tolerance=1e-13
+PASS R5 C=0.5, tau=2.0: residual=-9.396e-12, tolerance=2e-09
+PASS R6 equality C=0.5, tau=2.0: residual=-5.551e-17, tolerance=1e-13
+PASS R5 C=0.5, tau=4.0: residual=-7.237e-12, tolerance=2e-09
+PASS R6 equality C=0.5, tau=4.0: residual=0, tolerance=1e-13
+PASS R5 C=0.8, tau=1.1: residual=1.421e-13, tolerance=2e-09
+PASS R6 equality C=0.8, tau=1.1: residual=-1.11e-16, tolerance=1e-13
+PASS R5 C=0.8, tau=1.5: residual=8.105e-15, tolerance=2e-09
+PASS R6 equality C=0.8, tau=1.5: residual=0, tolerance=1e-13
+PASS R5 C=0.8, tau=2.0: residual=-2.546e-11, tolerance=2e-09
+PASS R6 equality C=0.8, tau=2.0: residual=-1.11e-16, tolerance=1e-13
+PASS R5 C=0.8, tau=4.0: residual=-1.233e-11, tolerance=2e-09
+PASS R6 equality C=0.8, tau=4.0: residual=0, tolerance=1e-13
+PASS R5 C=1.0, tau=1.1: residual=-6.439e-10, tolerance=2e-09
+PASS R6 equality C=1.0, tau=1.1: residual=0, tolerance=1e-13
+PASS R5 C=1.0, tau=1.5: residual=4.441e-11, tolerance=2e-09
+PASS R6 equality C=1.0, tau=1.5: residual=0, tolerance=1e-13
+PASS R5 C=1.0, tau=2.0: residual=-1.554e-10, tolerance=2e-09
+PASS R6 equality C=1.0, tau=2.0: residual=0, tolerance=1e-13
+PASS R5 C=1.0, tau=4.0: residual=0, tolerance=2e-09
+PASS R6 equality C=1.0, tau=4.0: residual=-1.11e-16, tolerance=1e-13
+PASS clock ratio calibration: residual=0, tolerance=1e-12
+PASS photon counting: residual=-5.684e-14, tolerance=1e-10
+PASS different energy standards: residual=-2.842e-14, tolerance=1e-10
+PASS tidal acceleration sign: residual=3.961e-10, tolerance=1e-08
+PASS review4_wall_extrema.csv row 0 endpoint ledger: residual=-5.637e-12, tolerance=2e-07
+PASS review4_wall_extrema.csv row 1 endpoint ledger: residual=2.098e-13, tolerance=2e-07
+PASS review4_wall_extrema.csv row 2 endpoint ledger: residual=-1.671e-11, tolerance=2e-07
+PASS review4_wall_extrema.csv row 3 endpoint ledger: residual=1.289e-09, tolerance=2e-07
+PASS review4_wall_extrema.csv row 4 endpoint ledger: residual=-6.181e-12, tolerance=2e-07
+PASS review4_wall_extrema.csv row 5 endpoint ledger: residual=-1.386e-13, tolerance=2e-07
+PASS review4_wall_extrema.csv row 6 endpoint ledger: residual=3.461e-11, tolerance=2e-07
+PASS review4_wall_extrema.csv row 7 endpoint ledger: residual=2.733e-11, tolerance=2e-07
+PASS review4_wall_extrema.csv row 8 endpoint ledger: residual=-3.469e-11, tolerance=2e-07
+PASS review4_wall_extrema.csv row 9 endpoint ledger: residual=-1.11e-16, tolerance=2e-07
+PASS review4_wall_extrema.csv row 10 endpoint ledger: residual=9.209e-12, tolerance=2e-07
+PASS review4_wall_extrema.csv row 11 endpoint ledger: residual=7.9e-12, tolerance=2e-07
+PASS review4_recoil.csv row 0 endpoint ledger: residual=1.163e-12, tolerance=2e-07
+PASS review4_recoil.csv row 1 endpoint ledger: residual=7.916e-13, tolerance=2e-07
+PASS review4_recoil.csv row 2 endpoint ledger: residual=1.525e-12, tolerance=2e-07
+PASS review4_recoil.csv row 3 endpoint ledger: residual=-1.339e-12, tolerance=2e-07
+PASS review4_recoil.csv row 4 endpoint ledger: residual=1.332e-14, tolerance=2e-07
+PASS charter: ArcSecs_Scientific_Paper_Review_4.md: residual=0, tolerance=0
+PASS charter: .uai/constraints.uai: residual=0, tolerance=0
+PASS charter: .uai/memory.uai: residual=0, tolerance=0

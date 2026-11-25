@@ -1,0 +1,138 @@
+test,passed
+"probability (1e-06, 0.5, 0.1, 10.0)",True
+"probability (1e-06, 0.5, 0.1, 1.0)",True
+"probability (1e-06, 0.5, 0.1, 0.1)",True
+"probability (1e-06, 0.5, 0.1, 0.01)",True
+"probability (1e-06, 0.5, 0.1, 0.001)",True
+"probability (1e-06, 0.5, 0.1, 0.0001)",True
+"probability (1e-06, 0.5, 0.1, 1e-05)",True
+"probability (1e-06, 0.5, 0.1, 1e-06)",True
+"probability (1e-06, 0.5, 0.1, 1e-07)",True
+"probability (1e-06, 0.5, 0.1, 1e-08)",True
+"probability (1e-06, 0.1, 0.01, 10.0)",True
+"probability (1e-06, 0.1, 0.01, 1.0)",True
+"probability (1e-06, 0.1, 0.01, 0.1)",True
+"probability (1e-06, 0.1, 0.01, 0.01)",True
+"probability (1e-06, 0.1, 0.01, 0.001)",True
+"probability (1e-06, 0.1, 0.01, 0.0001)",True
+"probability (1e-06, 0.1, 0.01, 1e-05)",True
+"probability (1e-06, 0.1, 0.01, 1e-06)",True
+"probability (1e-06, 0.1, 0.01, 1e-07)",True
+"probability (1e-06, 0.1, 0.01, 1e-08)",True
+"probability (1e-06, 0.01, 0.001, 10.0)",True
+"probability (1e-06, 0.01, 0.001, 1.0)",True
+"probability (1e-06, 0.01, 0.001, 0.1)",True
+"probability (1e-06, 0.01, 0.001, 0.01)",True
+"probability (1e-06, 0.01, 0.001, 0.001)",True
+"probability (1e-06, 0.01, 0.001, 0.0001)",True
+"probability (1e-06, 0.01, 0.001, 1e-05)",True
+"probability (1e-06, 0.01, 0.001, 1e-06)",True
+"probability (1e-06, 0.01, 0.001, 1e-07)",True
+"probability (1e-06, 0.01, 0.001, 1e-08)",True
+"probability (1e-06, 0.001, 0.0001, 10.0)",True
+"probability (1e-06, 0.001, 0.0001, 1.0)",True
+"probability (1e-06, 0.001, 0.0001, 0.1)",True
+"probability (1e-06, 0.001, 0.0001, 0.01)",True
+"probability (1e-06, 0.001, 0.0001, 0.001)",True
+"probability (1e-06, 0.001, 0.0001, 0.0001)",True
+"probability (1e-06, 0.001, 0.0001, 1e-05)",True
+"probability (1e-06, 0.001, 0.0001, 1e-06)",True
+"probability (1e-06, 0.001, 0.0001, 1e-07)",True
+"probability (1e-06, 0.001, 0.0001, 1e-08)",True
+"probability (1e-06, 1e-05, 1e-06, 10.0)",True
+"probability (1e-06, 1e-05, 1e-06, 1.0)",True
+"probability (1e-06, 1e-05, 1e-06, 0.1)",True
+"probability (1e-06, 1e-05, 1e-06, 0.01)",True
+"probability (1e-06, 1e-05, 1e-06, 0.001)",True
+"probability (1e-06, 1e-05, 1e-06, 0.0001)",True
+"probability (1e-06, 1e-05, 1e-06, 1e-05)",True
+"probability (1e-06, 1e-05, 1e-06, 1e-06)",True
+"probability (1e-06, 1e-05, 1e-06, 1e-07)",True
+"probability (1e-06, 1e-05, 1e-06, 1e-08)",True
+"probability (0.1, 0.10001, 1e-06, 10.0)",True
+"probability (0.1, 0.10001, 1e-06, 1.0)",True
+"probability (0.1, 0.10001, 1e-06, 0.1)",True
+"probability (0.1, 0.10001, 1e-06, 0.01)",True
+"probability (0.1, 0.10001, 1e-06, 0.001)",True
+"probability (0.1, 0.10001, 1e-06, 0.0001)",True
+"probability (0.1, 0.10001, 1e-06, 1e-05)",True
+"probability (0.1, 0.10001, 1e-06, 1e-06)",True
+"probability (0.1, 0.10001, 1e-06, 1e-07)",True
+"probability (0.1, 0.10001, 1e-06, 1e-08)",True
+"probability (0.1, 0.1, 0.0, 10.0)",True
+"probability (0.1, 0.1, 0.0, 1.0)",True
+"probability (0.1, 0.1, 0.0, 0.1)",True
+"probability (0.1, 0.1, 0.0, 0.01)",True
+"probability (0.1, 0.1, 0.0, 0.001)",True
+"probability (0.1, 0.1, 0.0, 0.0001)",True
+"probability (0.1, 0.1, 0.0, 1e-05)",True
+"probability (0.1, 0.1, 0.0, 1e-06)",True
+"probability (0.1, 0.1, 0.0, 1e-07)",True
+"probability (0.1, 0.1, 0.0, 1e-08)",True
+contact cross section reproduces Review 5,True
+contact cone reproduces Review 5,True
+endothermic reference transfer floor,True
+"quadrature refinement (0.5, 0.0)",True
+"quadrature refinement (0.5, 10.0)",True
+"quadrature refinement (0.01, 1e-08)",True
+"quadrature refinement (1e-05, 1e-08)",True
+"quadrature refinement (0.1, 1e-08)",True
+collinear phase match energy,True
+collinear phase match momentum,True
+collinear positive-gap slowing,True
+reservoir group causal,True
+finite collinear transverse vertex,True
+Gaussian 90% aperture target,True
+"unitarity (1, 1, 0.0)",True
+"finite capacity (1, 1, 0.0)",True
+"closed Hamiltonian energy (1, 1, 0.0)",True
+"analytic Rabi benchmark (1, 0.0)",True
+"unitarity (1, 1, 0.02)",True
+"finite capacity (1, 1, 0.02)",True
+"closed Hamiltonian energy (1, 1, 0.02)",True
+"analytic Rabi benchmark (1, 0.02)",True
+"unitarity (1, 1, 0.1)",True
+"finite capacity (1, 1, 0.1)",True
+"closed Hamiltonian energy (1, 1, 0.1)",True
+"analytic Rabi benchmark (1, 0.1)",True
+"unitarity (1, 16, 0.0)",True
+"finite capacity (1, 16, 0.0)",True
+"closed Hamiltonian energy (1, 16, 0.0)",True
+"analytic Rabi benchmark (16, 0.0)",True
+"unitarity (1, 16, 0.02)",True
+"finite capacity (1, 16, 0.02)",True
+"closed Hamiltonian energy (1, 16, 0.02)",True
+"analytic Rabi benchmark (16, 0.02)",True
+"unitarity (1, 16, 0.1)",True
+"finite capacity (1, 16, 0.1)",True
+"closed Hamiltonian energy (1, 16, 0.1)",True
+"analytic Rabi benchmark (16, 0.1)",True
+"unitarity (4, 2, 0.0)",True
+"finite capacity (4, 2, 0.0)",True
+"closed Hamiltonian energy (4, 2, 0.0)",True
+"unitarity (4, 2, 0.02)",True
+"finite capacity (4, 2, 0.02)",True
+"closed Hamiltonian energy (4, 2, 0.02)",True
+"unitarity (4, 2, 0.1)",True
+"finite capacity (4, 2, 0.1)",True
+"closed Hamiltonian energy (4, 2, 0.1)",True
+"unitarity (4, 4, 0.0)",True
+"finite capacity (4, 4, 0.0)",True
+"closed Hamiltonian energy (4, 4, 0.0)",True
+"unitarity (4, 4, 0.02)",True
+"finite capacity (4, 4, 0.02)",True
+"closed Hamiltonian energy (4, 4, 0.02)",True
+"unitarity (4, 4, 0.1)",True
+"finite capacity (4, 4, 0.1)",True
+"closed Hamiltonian energy (4, 4, 0.1)",True
+"unitarity (8, 16, 0.0)",True
+"finite capacity (8, 16, 0.0)",True
+"closed Hamiltonian energy (8, 16, 0.0)",True
+"unitarity (8, 16, 0.02)",True
+"finite capacity (8, 16, 0.02)",True
+"closed Hamiltonian energy (8, 16, 0.02)",True
+"unitarity (8, 16, 0.1)",True
+"finite capacity (8, 16, 0.1)",True
+"closed Hamiltonian energy (8, 16, 0.1)",True
+on-resonance full single photon conversion,True
+fixed momentum incompatible with rising C for R5 endpoints,True

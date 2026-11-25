@@ -1,0 +1,49 @@
+{
+  "packageVersion": "5.8.36",
+  "packageFile": "arcsecs-v5.8.36-contact-page-live-polish-footer-link-seo-aeo-package.zip",
+  "featureLabel": "Contact Page Live Verification Notes and Theme Footer Handoff",
+  "commands": [
+    {
+      "command": "find assets/js -name '*.js' -print0 | xargs -0 -n1 node --check",
+      "status": "passed"
+    },
+    {
+      "command": "php -l arcsecs-scientific-physics-engine.php",
+      "status": "passed"
+    },
+    {
+      "command": "find includes -name '*.php' -print0 | xargs -0 -n1 php -l",
+      "status": "passed"
+    },
+    {
+      "command": "npm run build",
+      "status": "passed"
+    },
+    {
+      "command": "npm run lint",
+      "status": "passed"
+    },
+    {
+      "command": "npm run test:js",
+      "status": "passed",
+      "detail": "166 Node tests passed"
+    },
+    {
+      "command": "npm run test:php",
+      "status": "passed"
+    },
+    {
+      "command": "npm test",
+      "status": "passed"
+    }
+  ],
+  "notRun": [
+    {
+      "command": "npm run test:e2e",
+      "reason": "No tests/e2e directory exists; no heavy dependency added."
+    }
+  ],
+  "coreRuntimePhysicsChanged": false,
+  "contactPageSeoAeoCleanup": true,
+  "finalized": true
+}

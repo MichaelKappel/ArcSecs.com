@@ -1,0 +1,24 @@
+# Review 4.0: durable local conversion and calibration research
+
+## Authority and scope
+The exact 12 principles printed on book page 10 are stored in constraints.uai and authoritative_charter.md. The technical interpretations follow separately. C-01's owner clarification is unchanged: explain why newly emitted light starts at the locally established maximum, not faster and then slowing to it; collective matter/gravity/inertia is the proposed physical regulator. No exact finite-energy positive-gap group packet at the characteristic has yet been derived. Front speed is not group speed.
+
+## Moving matter
+Review 4.0 R1-R6: finite ballistic congruence r=B T tanh(eta), tau=T/cosh(eta), conserved q=tau p for homogeneous free propagation. B is an assumed all-sector bound in the control; C<=B. v=(u+w)/(1+uw/B^2) rather than Galilean addition. In the free fixed-gap control dY/dln(tau)=(w/B) w^2(1/C^2-1/B^2)/(1-w^2/B^2), so common-frame acceleration is positive when C<B even while medium-relative speed decreases. At C=B common speed constant. Required additional fractional momentum loss lambda_p >= w^2(1/C^2-1/B^2)/(1-w^2/C^2) for common-frame nonincrease. This condition must follow from actual reciprocal exchange, never a speed clamp. The ballistic matter and clock law is a control, not a derivation of all C-01 matter dynamics. Finite domain, positive initial tau, explicit no-wall-crossing boundary.
+
+## Clock and optical calibration
+At matched impedance, r=C/C_ref, fixed charge and Planck constant, reduced mass ratio f_m gives atomic gross frequency f_m*r^2 and Bohr length 1/(f_m*r). Fixed mass at r=.5 yields frequency .25; photon phase ratio .5 then yields blueshift relative to the clock. Compensating f_m=r^-2 is unproved and changes rulers. Nuclear and decay response needs its own common matter action. For source/receiver rates r_e,r_a, A_c=(r_a/r_e)*A_T. O1 physical flux=Le*Tsurv/(4*pi*DG^2*ZE*Ac); numerical source/receiver energy unit ratio e_e/e_a multiplies flux if not converted. Spectral ratio needs phase and detector calibration. Do not use arbitrary distance compression. O2 directional Jacobi result DA=B*tau_e*sinh(eta), DG=B*tau_a*sinh(eta) for isotropic ballistic benchmark; all distances independent definitions.
+
+## History, recoil and local interaction
+Retain XXXI exact derivative and finite capacity condition. Finite wall x-X, Xdot=W/Mw, Wdot=E_x. E+P^2/(2M)+Q+W^2/(2Mw) and p+P+W conserved. Wall is rigid, not a solved field. New two-vector Stueckelberg and two-reservoir-field action g_b phi0 phi1 F0.F1 admits reversible branch-changing local collision. Require stable bounded mixing, full constrained principal symbol, microscopic rates, bath transport, emission/detection and finite capacity. Positive bare mass m0 distinct from hypothetical dressed branch m1. 112 kinematic grid combinations, 98 allowed. For E=1,m0=1e-6,m1=.5,M=100,delta=.1 forward event E'=.8996826713,v'=.83134846; oblique theta_cm=.1 gives lab angle 5.66173 degrees and transverse-input longitudinal weight .050386; not integrated probabilities. Reverse reactions and detailed balance remain required. Chapter 30S scalar emission is not the same mechanism; high precision beta upper deficit is 1e-16 in selected small-gap case.
+
+## Verified numerical controls and evidence class
+New fixed-wall DOP853 baseline and refinement, RK45 control, extrema search at dense subintervals and wall joins. 12 runs: 10 arrived, one threshold stop, one timeout. 42 historical records remain separate. Endpoint max discrepancy 1.848e-11. Finite-wall 4 distinct masses plus refined run; numerical residuals <=1.53e-12 energy and 7.78e-16 momentum. Eight directional Jacobi cases <=5.80e-13. 61 automated assertions in first script; no interpretation as independent experiments. Extrema search is not interval proof. All are restricted dimensionless controls; no physical observation fit or microscopic closure.
+
+## Regression gates
+Do not reintroduce stationary tired light as sole explanation, instantaneous regulator, Galilean super-ceiling propagation, artificial clamping, assumed universal clock compensation, slider distance compression, or unaccounted energy reservoirs. Correct tidal convention T_ij=-d_i d_j Phi. Infinite spatial domain of finite uniform density, never infinite matter density.
+
+## Next assignment
+Derive a bounded local matter-regulator-vector-bath action with resolved source/detector. Solve interacting causal PDE, compute actual branch transition kernels, detailed balance, spectral/angle/polarization transport, and extract coarse-grained history law with finite capacity and backreaction. Use R6/H1-H5, prior XXX/XXXI bounds and numerical controls, calibration and distance forward model. Require a common parameter set and independent observational anchors.
+
+See the canonical manuscript for the full equations and discussion; code and datasets are under code/ and appendices/.

@@ -1,0 +1,47 @@
+{
+  "pdf_sha256": "e714e97fbd4c7995b20950edef386c56ae637c5226935000b6ee7e16af624fbf",
+  "physical_pages": 129,
+  "trim_pts": [
+    442.08,
+    663.12
+  ],
+  "blank_pages": [],
+  "KDP_301_500_page_margin_warnings": [],
+  "minimum_actual_text_bbox_clearance_pts": {
+    "inside": 51.545196533203125,
+    "outside": 44.345184326171875,
+    "top_or_bottom": 49.2218017578125
+  },
+  "nominal_footer_glyph_allowance_note": "129 page-number glyph boxes extend about 2.6 pt into nominal 0.72 in bottom margin, but satisfy actual KDP no-bleed minimum 18 pt.",
+  "geometry_warnings": [],
+  "raster_placements": 0,
+  "replacement_chars": [],
+  "unembedded_fonts": [],
+  "overfull_boxes": [],
+  "visual_sample_pages": [
+    1,
+    4,
+    5,
+    6,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    129
+  ]
+}

@@ -1,0 +1,30 @@
+Review 5.0 standalone PDF print preflight
+Pages: 109
+Trim: 442.08 x 663.12 pt (6.14 x 9.21 inches)
+No bleed; intended mirrored inner 0.75 in / outer 0.65 in; top 0.68 in / bottom 0.72 in; 11 pt body.
+Nonconforming page geometry: []
+Text-span margin warnings (2.5 pt glyph allowance): 0
+[]
+Raster placements and effective PPI: []
+Fonts not embedded: 0
+Replacement characters in extracted text: []
+LaTeX overfull boxes: 0
+Visual: sampled contact sheet of 16 rendered pages; not physical proof.
+Final assembled book pagination/parity, cover, publishing attribution/rights/ISBN, KDP upload and physical proof must be handled by publisher.
+
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+IXCKOS+DejaVuSerif                   CID TrueType      Identity-H       yes yes yes      4  0
+MUGICW+DejaVuSerif-Bold              CID TrueType      Identity-H       yes yes yes      6  0
+ZLTCIL+DejaVuSerif-Italic            CID TrueType      Identity-H       yes yes yes    129  0
+YAPDQC+LMMono10-Regular-Identity-H   CID Type 0C       Identity-H       yes yes yes    134  0
+XKNYXB+LatinModernMath-Regular-Identity-H CID Type 0C       Identity-H       yes yes yes    139  0
+BMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    205  0
+BMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    320  0
+BMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    339  0
+BMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    365  0
+BMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    411  0
+GCWXDV+DejaVuSans-Oblique            CID TrueType      Identity-H       yes yes yes    442  0
+BMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    449  0
+GCWXDV+DejaVuSans-Oblique            CID TrueType      Identity-H       yes yes yes    471  0
+BMQQDV+DejaVuSans                    CID TrueType      Identity-H       yes yes yes    478  0

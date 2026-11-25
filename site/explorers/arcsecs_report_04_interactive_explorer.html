@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArcSecs Research Report 04: 3D Optical Transport & Extreme-Object Explorer</title>
+  <!-- Chosen Palette: Warm Alabaster & Deep Teal Scientific Harmony (#FAF9F6 background, #FFFFFF card surfaces, #1E293B slate ink, #0F766E deep teal primary accent, #B45309 warm amber secondary highlight) -->
+  <!-- Application Structure Plan: Designed as a task-oriented, six-module interactive scientific workspace rather than a static linear paper. Top navigation allows seamless jumping between: (1) Executive Synthesis & Program Decision (core verdict + filterable Evidence Ledger), (2) 1 Mpc Transport Lab (real-time interactive solver for the C-01 sign-reversal integral vs. retired slowing models), (3) Cosmological Distance Benchmarks (z = 0.5 to 14.18 comparison of Planck LambdaCDM, Static Tired-Light, and Entrained C-01 + 3D Lensing), (4) Distance Ladder & Cohort Vetting (8-rung anchor stability + Capotauro brown dwarf vs. GN-z11/GS-z14-0 separation), (5) Extreme-Object Sensitivity Lab (interactive dossiers for WOH G64, HV 888, HV 11423, M31 LGGS, Holmberg 15A, Phoenix A, and TON 618 comparing hypothetical distance scaling against true astrophysical uncertainties), and (6) Charter Compliance Matrix (filterable 12 Foundations + C-01 audit). This architecture prioritizes active hypothesis testing and clear visual separation of verified data from model-dependent inferences. -->
+  <!-- Visualization & Content Choices:
+    1. 1 Mpc TOF Sign-Reversal Explorer -> Goal: Compare & Change -> Interactive Chart.js Line Plot + Real-Time Parameter Sliders (eta_c, gamma_age*tau_0, v_a/c_0) -> Users manipulate C-01 early emission ceiling vs. post-emission aging to observe the exact sign reversal at eta_c = gamma_age*tau_0 -> Chart.js Canvas.
+    2. Cosmological Distance Comparison (z = 0.5 - 14.1793) -> Goal: Compare -> Interactive Grouped/Line Chart.js Plot with Toggleable Metric (D_A, D_L, D_now/D_C) & Lensing Magnification (mu) -> Visualizes why static tired-light overshoots LambdaCDM by 1.386x-17.753x while entrained C-01 preserves the high-z turnover -> Chart.js Canvas.
+    3. Extreme-Object Sensitivity Chart -> Goal: Compare & Inform -> Dynamic Horizontal Range/Bar Chart.js Plot paired with Object Dossier Cards & Distance Ratio Slider (0.25x - 1.20x) -> Contrasts hypothetical distance-ratio scaling against dominant astrophysical uncertainties (dust geometry, triaxial orbits, virial calibration) -> Chart.js Canvas.
+    4. Distance Ladder & Charter Matrix -> Goal: Organize -> Interactive HTML/Tailwind Cards & Filterable Tables with Unicode indicators -> Cleanly separates Local Group anchors (<1% shift) from high-z probes without SVG/Mermaid. -->
+  <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <style>
+    body {
+      background-color: #FAF9F6;
+      color: #1E293B;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .chart-container {
+      position: relative;
+      width: 100%;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+      height: 300px;
+      max-height: 380px;
+    }
+    @media (min-width: 768px) {
+      .chart-container {
+        height: 350px;
+      }
+    }
+    .nav-pill.active {
+      background-color: #0F766E;
+      color: #FFFFFF;
+      border-color: #0F766E;
+    }
+    .math-font {
+      font-family: "Cambria Math", "Times New Roman", Times, serif;
+    }
+    .mono-font {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-teal-100 selection:text-teal-900">
+
+  <header class="sticky top-0 z-40 bg-[#FAF9F6]/95 backdrop-blur border-b border-stone-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="inline-block px-2 py-0.5 text-xs font-semibold tracking-wider uppercase bg-teal-100 text-teal-800 rounded">ArcSecs Report 04 / 06</span>
+            <span class="text-xs text-stone-500 mono-font">R³ × T Euclidean Framework</span>
+          </div>
+          <h1 class="text-lg sm:text-xl font-bold text-slate-900 tracking-tight mt-0.5">
+            3D Optical Transport, Distance-Ladder Anchors &amp; Extreme-Object Corrections
+          </h1>
+        </div>
+        <nav aria-label="Primary Sections" class="flex flex-wrap gap-1.5" id="main-nav">
+          <button type="button" data-target="sec-decision" class="nav-pill active px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg border border-stone-300 bg-white text-slate-700 hover:bg-stone-100 transition">1. Decision &amp; Ledger</button>
+          <button type="button" data-target="sec-onempc" class="nav-pill px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg border border-stone-300 bg-white text-slate-700 hover:bg-stone-100 transition">2. 1 Mpc Transport Lab</button>
+          <button type="button" data-target="sec-cosmo" class="nav-pill px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg border border-stone-300 bg-white text-slate-700 hover:bg-stone-100 transition">3. Cosmological Distances</button>
+          <button type="button" data-target="sec-ladder" class="nav-pill px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg border border-stone-300 bg-white text-slate-700 hover:bg-stone-100 transition">4. Anchors &amp; Cohorts</button>
+          <button type="button" data-target="sec-objects" class="nav-pill px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg border border-stone-300 bg-white text-slate-700 hover:bg-stone-100 transition">5. Extreme Objects</button>
+          <button type="button" data-target="sec-charter" class="nav-pill px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg border border-stone-300 bg-white text-slate-700 hover:bg-stone-100 transition">6. Charter Matrix</button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <!-- SECTION 1: PROGRAM DECISION & EVIDENCE LEDGER -->
+    <section id="sec-decision" class="scroll-mt-24 space-y-6">
+      <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-sm">
+        <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6">
+          <div class="space-y-3 max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-900 text-xs font-semibold">
+              <span>⚡ FORMAL PROGRAM DECISION: REVISE MECHANISM</span>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-900">Executive Synthesis &amp; Mechanistic Verdict</h2>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+              This section synthesizes the core mathematical and observational findings of Report 04. Under the twelve non-negotiable ArcSecs foundations and the <strong>C-01 Cosmological Mass–Inertia Regulation</strong> framework, distant astronomical objects can appear systematically farther, larger, and more luminous than physical reality <em>only</em> when optical transport preserves local geometric anchors, reproduces Type Ia supernova light-curve stretch <span class="math-font">A(z) ≈ 1 + z</span>, maintains near-unit distance duality <span class="math-font">η(z) ≈ 1</span>, and reproduces the high-redshift turnover of angular-diameter distance <span class="math-font">D<sub>A</sub>(z)</span>.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 gap-3 shrink-0">
+            <div class="p-3.5 rounded-xl bg-stone-50 border border-stone-200">
+              <div class="text-xs text-slate-500 font-medium">Static TL D<sub>A</sub> Overshoot</div>
+              <div class="text-lg font-bold text-amber-700 mono-font mt-0.5">1.386× – 17.75×</div>
+              <div class="text-[11px] text-slate-500">Retired (z = 0.5–14.18)</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-stone-50 border border-stone-200">
+              <div class="text-xs text-slate-500 font-medium">Optical Mass Drag</div>
+              <div class="text-lg font-bold text-slate-800 mono-font mt-0.5">O(10⁻³⁷)</div>
+              <div class="text-[11px] text-slate-500">PDG m<sub>γ</sub> &lt; 10⁻¹⁸ eV</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-teal-50/70 border border-teal-200">
+              <div class="text-xs text-teal-800 font-medium">LMC Anchor Precision</div>
+              <div class="text-lg font-bold text-teal-900 mono-font mt-0.5">49.59 ± 0.55 kpc</div>
+              <div class="text-[11px] text-teal-700">&lt;0.001% transport shift</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-teal-50/70 border border-teal-200">
+              <div class="text-xs text-teal-800 font-medium">Active Candidate</div>
+              <div class="text-lg font-bold text-teal-900 mt-0.5">Entrained C-01</div>
+              <div class="text-[11px] text-teal-700">+ 3D Lensing &amp; Cohorts</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 pt-6 border-t border-stone-100">
+          <div class="p-4 rounded-xl bg-amber-50/50 border border-amber-200/80">
+            <h3 class="text-sm font-bold text-amber-950 flex items-center gap-2">
+              <span>✕ Retired Mechanisms (Proven Obstructions)</span>
+            </h3>
+            <ul class="mt-2.5 space-y-1.5 text-xs sm:text-sm text-slate-700">
+              <li><strong>Stationary post-emission aging:</strong> Forces arrival stretch <span class="math-font">A = dT<sub>a</sub>/dT<sub>e</sub> = 1</span> identically, falsified by SN Ia time dilation.</li>
+              <li><strong>Static tired-light &amp; bounded speed:</strong> Inflates <span class="math-font">D<sub>A</sub></span> monotonically without turnover, overshooting ΛCDM by up to 17.753× at z = 14.1793.</li>
+              <li><strong>Standalone fixed-gap photon drag:</strong> Within PDG bounds (<span class="math-font">m<sub>γ</sub> &lt; 1.5×10⁻⁵⁴ kg</span>), optical slowing is negligible (<span class="math-font">Δv/c₀ &lt; 10⁻³⁶</span>).</li>
+              <li><strong>Unentrained ballistic recession:</strong> Lacks <span class="math-font">(1+z)⁻¹</span> emission-distance compression, failing high-z <span class="math-font">D<sub>A</sub></span> turnover.</li>
+            </ul>
+          </div>
+          <div class="p-4 rounded-xl bg-teal-50/50 border border-teal-200/80">
+            <h3 class="text-sm font-bold text-teal-950 flex items-center gap-2">
+              <span>✓ Retained Active Candidate Architecture</span>
+            </h3>
+            <ul class="mt-2.5 space-y-1.5 text-xs sm:text-sm text-slate-700">
+              <li><strong>3D Entrained C-01 Outflow:</strong> Matter and regulator <span class="math-font">I(x, T)</span> move via <span class="math-font">u<sub>m</sub> = H<sub>phys</sub>(T)x</span> in Euclidean <span class="math-font">ℝ³</span> with constant ordering time <span class="math-font">T</span>.</li>
+              <li><strong>Exact Duality &amp; Turnover:</strong> Recovers <span class="math-font">D<sub>A</sub> = D<sub>e</sub> = S(T<sub>e</sub>)χ<sub>e</sub></span>, <span class="math-font">D<sub>G</sub> = S(T<sub>e</sub>)⁻¹D<sub>A</sub></span>, exact Tolman scaling <span class="math-font">SB<sub>a</sub>/SB<sub>e</sub> = η⁻²(1+z)⁻⁴</span>, and high-z <span class="math-font">D<sub>A</sub></span> turnover.</li>
+              <li><strong>3D Lensing &amp; Cohort Vetting:</strong> Separates foreground lensing magnification (<span class="math-font">μ &gt; 1</span>) and brown-dwarf contaminants (Capotauro) from intrinsic high-z sizing.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Separate Evidence Ledger -->
+        <div class="mt-6 pt-6 border-t border-stone-200">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+            <div>
+              <h3 class="text-base font-bold text-slate-900">Audit Evidence Ledger</h3>
+              <p class="text-xs text-slate-500">Filter claims by epistemic verification status across the report.</p>
+            </div>
+            <div class="flex flex-wrap gap-1.5" id="ledger-filters">
+              <button type="button" data-ledger="all" class="ledger-btn px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-800 text-white">All Domains</button>
+              <button type="button" data-ledger="verified" class="ledger-btn px-2.5 py-1 text-xs font-semibold rounded-md bg-stone-100 text-slate-700 hover:bg-stone-200">Verified / Executed</button>
+              <button type="button" data-ledger="inference" class="ledger-btn px-2.5 py-1 text-xs font-semibold rounded-md bg-stone-100 text-slate-700 hover:bg-stone-200">Model Inference</button>
+              <button type="button" data-ledger="open" class="ledger-btn px-2.5 py-1 text-xs font-semibold rounded-md bg-stone-100 text-slate-700 hover:bg-stone-200">Open / Unverified</button>
+            </div>
+          </div>
+          <div class="overflow-x-auto rounded-xl border border-stone-200">
+            <table class="min-w-full divide-y divide-stone-200 text-xs sm:text-sm">
+              <thead class="bg-stone-50 text-slate-700">
+                <tr>
+                  <th class="px-4 py-2.5 text-left font-semibold">Domain</th>
+                  <th class="px-4 py-2.5 text-left font-semibold">Verified Observation / Executed Result</th>
+                  <th class="px-4 py-2.5 text-left font-semibold">Model-Dependent Inference</th>
+                  <th class="px-4 py-2.5 text-left font-semibold">Speculative / Open Hypothesis</th>
+                </tr>
+              </thead>
+              <tbody id="ledger-tbody" class="divide-y divide-stone-100 bg-white"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: WORK PACKAGE A — 1 MPC STATIONARY TRANSPORT LAB -->
+    <section id="sec-onempc" class="scroll-mt-24 space-y-6">
+      <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-sm">
+        <div class="max-w-3xl mb-6">
+          <span class="text-xs font-semibold uppercase tracking-wider text-teal-700">Work Package A • Time-of-Flight Calibration</span>
+          <h2 class="text-2xl font-bold text-slate-900 mt-1">1 Mpc Stationary Transport &amp; C-01 Sign-Reversal Lab</h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
+            To isolate photon-speed kinematics from cosmic expansion, this laboratory evaluates a stationary source and receiver separated by exact Euclidean distance <span class="math-font">D = 1.0 Mpc</span> (baseline light-travel time <span class="math-font">τ₀ = 3.261564 Myr</span>). Interact with the controls below to test how pure post-emission slowing models always overestimate time-of-flight distance (<span class="math-font">D<sub>TOF</sub> / D &gt; 1</span>), whereas an epoch-coupled <strong>C-01 regulator</strong> with an elevated early emission ceiling <span class="math-font">C<sub>em</sub>(T<sub>e</sub>) &gt; c₀</span> reverses the sign when <span class="math-font">η<sub>c</sub> &gt; γ<sub>age</sub>τ₀</span>.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Interactive Controls -->
+          <div class="lg:col-span-5 space-y-5 bg-stone-50 p-5 rounded-xl border border-stone-200">
+            <div>
+              <div class="flex justify-between items-center mb-1">
+                <label for="slider-etac" class="text-xs font-bold text-slate-800">C-01 Epoch Ceiling Coupling (<span class="math-font">η<sub>c</sub></span>)</label>
+                <span id="val-etac" class="mono-font text-xs font-bold px-2 py-0.5 rounded bg-teal-100 text-teal-900">1.00</span>
+              </div>
+              <input id="slider-etac" type="range" min="0" max="2.5" step="0.05" value="1.00" class="w-full accent-teal-700 cursor-pointer" />
+              <p class="text-[11px] text-slate-500 mt-1">Sets elevated past emission ceiling: <span class="math-font">C<sub>em</sub>(T<sub>e</sub>) = c₀(1 + η<sub>c</sub>τ/τ₀)</span>.</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between items-center mb-1">
+                <label for="slider-gamma" class="text-xs font-bold text-slate-800">Post-Emission Aging (<span class="math-font">γ<sub>age</sub>τ₀</span>)</label>
+                <span id="val-gamma" class="mono-font text-xs font-bold px-2 py-0.5 rounded bg-stone-200 text-slate-800">0.20</span>
+              </div>
+              <input id="slider-gamma" type="range" min="0.05" max="1.0" step="0.05" value="0.20" class="w-full accent-teal-700 cursor-pointer" />
+              <p class="text-[11px] text-slate-500 mt-1">Foundation 3 decay rate over travel duration <span class="math-font">τ₀ = 3.262 Myr</span>.</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between items-center mb-1">
+                <label for="slider-va" class="text-xs font-bold text-slate-800">Arrival Speed Ratio (<span class="math-font">v<sub>a</sub> / c₀</span> for Pure Slowing)</label>
+                <span id="val-va" class="mono-font text-xs font-bold px-2 py-0.5 rounded bg-amber-100 text-amber-900">0.50</span>
+              </div>
+              <input id="slider-va" type="range" min="0.25" max="0.98" step="0.01" value="0.50" class="w-full accent-amber-700 cursor-pointer" />
+              <p class="text-[11px] text-slate-500 mt-1">Compare Exponential, Linear Bounded, and Asymptotic Floor (<span class="math-font">0.2c₀</span>) controls.</p>
+            </div>
+
+            <!-- Live Readout Box -->
+            <div class="p-4 rounded-xl bg-white border border-stone-200 space-y-2.5">
+              <div class="text-xs font-bold uppercase tracking-wider text-slate-500">Live Quadrature Solution (1 Mpc)</div>
+              <div class="grid grid-cols-2 gap-2 text-xs">
+                <div class="p-2 rounded bg-stone-50">
+                  <span class="text-slate-500 block">C-01 D<sub>TOF</sub> / D<sub>true</sub></span>
+                  <span id="out-c01-ratio" class="mono-font text-base font-bold text-teal-800">0.772901</span>
+                </div>
+                <div class="p-2 rounded bg-stone-50">
+                  <span class="text-slate-500 block">TOF Error Sign</span>
+                  <span id="out-c01-sign" class="text-xs font-bold text-teal-700">Negative (Underestimates D)</span>
+                </div>
+                <div class="p-2 rounded bg-stone-50">
+                  <span class="text-slate-500 block">Emission Speed v<sub>e</sub>/c₀</span>
+                  <span id="out-c01-ve" class="mono-font font-semibold text-slate-800">1.7729</span>
+                </div>
+                <div class="p-2 rounded bg-stone-50">
+                  <span class="text-slate-500 block">Arrival Speed v<sub>a</sub>/c₀</span>
+                  <span id="out-c01-va" class="mono-font font-semibold text-slate-800">0.8568</span>
+                </div>
+              </div>
+              <div class="pt-2 border-t border-stone-100 text-xs text-slate-600 flex justify-between">
+                <span>Exponential Slowing D<sub>TOF</sub>/D:</span>
+                <span id="out-exp-ratio" class="mono-font font-bold text-amber-800">1.386294</span>
+              </div>
+              <div class="text-xs text-slate-600 flex justify-between">
+                <span>Linear Bounded D<sub>TOF</sub>/D:</span>
+                <span id="out-lin-ratio" class="mono-font font-bold text-amber-800">1.333333</span>
+              </div>
+              <div class="text-xs text-slate-600 flex justify-between">
+                <span>Asymptotic Floor (0.2c₀) D<sub>TOF</sub>/D:</span>
+                <span id="out-asy-ratio" class="mono-font font-bold text-amber-800">1.408902</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chart Container -->
+          <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
+            <div class="p-4 rounded-xl border border-stone-200 bg-white">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="text-sm font-bold text-slate-800">C-01 Coupled D<sub>TOF</sub> / D<sub>true</sub> Across Epoch Coupling η<sub>c</sub></h3>
+                <span class="text-[11px] text-slate-500">Dashed line = exact balance (1.000)</span>
+              </div>
+              <div class="chart-container">
+                <canvas id="chart-onempc"></canvas>
+              </div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-stone-50 border border-stone-200 text-xs text-slate-600 leading-relaxed">
+              <strong>Key Takeaway:</strong> Pure post-emission slowing delays photon arrival, forcing <span class="math-font">D<sub>TOF</sub> &gt; D<sub>true</sub></span> whenever travel time <span class="math-font">τ</span> is measured directly. Even fixed-gap massive-photon drag at the PDG limit (<span class="math-font">ε = 5×10⁻¹⁹</span>) yields <span class="math-font">D<sub>TOF</sub>/D = 1.000000</span> (<span class="math-font">&lt;10⁻³⁶</span> shift). Only when past emission ceilings exceed post-emission aging (<span class="math-font">η<sub>c</sub> &gt; γ<sub>age</sub>τ₀</span>) does <span class="math-font">D<sub>TOF</sub>/D</span> drop below unity—yet extragalactic distances are inferred from angular sizes (<span class="math-font">D<sub>A</sub></span>) and fluxes (<span class="math-font">D<sub>L</sub></span>), requiring the 3D entrained outflow tested next.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: COSMOLOGICAL DISTANCE BENCHMARKS -->
+    <section id="sec-cosmo" class="scroll-mt-24 space-y-6">
+      <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-sm">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-6">
+          <div class="max-w-3xl">
+            <span class="text-xs font-semibold uppercase tracking-wider text-teal-700">Work Packages A &amp; B • Redshift z = 0.50 to 14.1793</span>
+            <h2 class="text-2xl font-bold text-slate-900 mt-1">Cosmological Distance Audit &amp; 3D Lensing Modulation</h2>
+            <p class="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
+              This module compares Planck 2018 flat ΛCDM baselines (<span class="math-font">H₀ = 67.4 km/s/Mpc, Ω<sub>m</sub> = 0.315</span>) against retired static tired-light (<span class="math-font">D<sub>A</sub><sup>TL</sup> = D<sub>H</sub> ln(1+z)</span>) and the active <strong>Entrained C-01 Outflow</strong> across five benchmark redshifts, including GN-z11 (<span class="math-font">z = 10.603</span>) and JADES-GS-z14-0 (<span class="math-font">z = 14.1793</span>). Adjust the foreground lensing magnification <span class="math-font">μ</span> and C-01 high-z compression factor to see how individual sightlines compress <span class="math-font">D<sub>A</sub> = D<sub>A</sub><sup>bg</sup> / √μ</span> while preserving the high-z turnover.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button type="button" data-cosmo-mode="DA" class="cosmo-mode-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-teal-700 text-white">Angular Diameter D<sub>A</sub> (Mpc)</button>
+            <button type="button" data-cosmo-mode="RATIO" class="cosmo-mode-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-stone-100 text-slate-700 hover:bg-stone-200">Ratio D<sub>A</sub> / D<sub>A</sub><sup>ref</sup></button>
+            <button type="button" data-cosmo-mode="DL" class="cosmo-mode-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-stone-100 text-slate-700 hover:bg-stone-200">Luminosity D<sub>L</sub> (Mpc)</button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <div class="lg:col-span-4 space-y-4 bg-stone-50 p-5 rounded-xl border border-stone-200">
+            <div>
+              <div class="flex justify-between items-center mb-1">
+                <label for="slider-mu" class="text-xs font-bold text-slate-800">3D Sightline Lensing Magnification (<span class="math-font">μ</span>)</label>
+                <span id="val-mu" class="mono-font text-xs font-bold px-2 py-0.5 rounded bg-teal-100 text-teal-900">1.00×</span>
+              </div>
+              <input id="slider-mu" type="range" min="1.0" max="4.0" step="0.1" value="1.0" class="w-full accent-teal-700 cursor-pointer" />
+              <p class="text-[11px] text-slate-500 mt-1">Foreground halo convergence compresses <span class="math-font">D<sub>A</sub> = D<sub>A</sub><sup>bg</sup>/√μ</span> without violating global energy conservation.</p>
+            </div>
+
+            <div>
+              <div class="flex justify-between items-center mb-1">
+                <label for="slider-c01-highz" class="text-xs font-bold text-slate-800">C-01 High-z Ceiling Compression (<span class="math-font">δ<sub>C01</sub></span>)</label>
+                <span id="val-c01-highz" class="mono-font text-xs font-bold px-2 py-0.5 rounded bg-teal-100 text-teal-900">0.00</span>
+              </div>
+              <input id="slider-c01-highz" type="range" min="0.0" max="0.45" step="0.05" value="0.0" class="w-full accent-teal-700 cursor-pointer" />
+              <p class="text-[11px] text-slate-500 mt-1">Models high-z <span class="math-font">C<sub>em</sub>(T<sub>e</sub>)</span> evolution (<span class="math-font">z &gt; 2</span>), bounded to &lt;5% at <span class="math-font">z ≤ 2</span> by SN Ia + DESI BAO.</p>
+            </div>
+
+            <div class="p-3.5 rounded-lg bg-white border border-stone-200 text-xs space-y-1.5">
+              <div class="font-bold text-slate-800">Exact Obstruction Theorem</div>
+              <p class="text-slate-600 leading-relaxed">
+                Global reductions in <span class="math-font">D<sub>A</sub>(z)</span> and <span class="math-font">D<sub>L</sub>(z)</span> cannot exceed a few percent at <span class="math-font">z ≲ 1–2</span> without C-01 intrinsic luminosity evolution (<span class="math-font">ξ<sub>L</sub> &lt; 1</span>) or mode conversion (<span class="math-font">𝒯<sub>cal</sub> &lt; 1</span>), both tightly bounded by Pantheon+ SNe and Tolman surface brightness.
+              </p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-8">
+            <div class="p-4 rounded-xl border border-stone-200 bg-white">
+              <div class="chart-container">
+                <canvas id="chart-cosmo"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benchmark Table -->
+        <div class="mt-6 overflow-x-auto rounded-xl border border-stone-200">
+          <table class="min-w-full divide-y divide-stone-200 text-xs sm:text-sm">
+            <thead class="bg-stone-50 text-slate-700">
+              <tr>
+                <th class="px-3 py-2.5 text-left font-semibold">Benchmark Redshift z</th>
+                <th class="px-3 py-2.5 text-right font-semibold">ΛCDM D<sub>C</sub> (Mpc)</th>
+                <th class="px-3 py-2.5 text-right font-semibold">ΛCDM D<sub>A</sub><sup>ref</sup> (Mpc)</th>
+                <th class="px-3 py-2.5 text-right font-semibold">ΛCDM D<sub>L</sub><sup>ref</sup> (Mpc)</th>
+                <th class="px-3 py-2.5 text-right font-semibold">Static TL D<sub>A</sub> (Mpc)</th>
+                <th class="px-3 py-2.5 text-right font-semibold">Static D<sub>A</sub><sup>TL</sup>/D<sub>A</sub><sup>ref</sup></th>
+                <th class="px-3 py-2.5 text-right font-semibold text-teal-800">Active C-01 D<sub>A</sub> (Mpc)</th>
+              </tr>
+            </thead>
+            <tbody id="cosmo-tbody" class="divide-y divide-stone-100 bg-white mono-font"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: DISTANCE LADDER ANCHORS & COHORT SEPARATION -->
+    <section id="sec-ladder" class="scroll-mt-24 space-y-6">
+      <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-sm">
+        <div class="max-w-3xl mb-6">
+          <span class="text-xs font-semibold uppercase tracking-wider text-teal-700">Work Package C • Geometric Anchors &amp; Vetting</span>
+          <h2 class="text-2xl font-bold text-slate-900 mt-1">Independently Anchored Distance Ladder &amp; High-z Cohorts</h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
+            Any valid transport law must leave Local Group geometric anchors invariant to better than 1% while separating foreground substellar contaminants from spectroscopically verified high-redshift galaxies. Click any rung of the 8-tier calibration hierarchy to inspect its measurement basis and permitted C-01 shift, and review the cohort contrast between the misclassified brown dwarf <strong>Capotauro</strong> and ALMA/JWST galaxies <strong>GN-z11</strong> and <strong>JADES-GS-z14-0</strong>.
+          </p>
+        </div>
+
+        <!-- Interactive 8-Rung Hierarchy -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8">
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-2.5" id="rung-grid"></div>
+          <div class="lg:col-span-5 bg-stone-50 rounded-xl border border-stone-200 p-5 flex flex-col justify-between" id="rung-detail-panel">
+            <div>
+              <div class="flex items-center justify-between">
+                <span id="rung-badge" class="px-2.5 py-0.5 text-xs font-bold rounded bg-teal-100 text-teal-900">Rung 3 • LMC Geometric Anchor</span>
+                <span id="rung-shift" class="mono-font text-xs font-semibold text-teal-700">Max shift: &lt;10⁻⁵</span>
+              </div>
+              <h3 id="rung-title" class="text-lg font-bold text-slate-900 mt-2">Large Magellanic Cloud (20 Late-Type DEBs)</h3>
+              <p id="rung-value" class="mono-font text-sm font-bold text-slate-800 mt-1">49.59 ± 0.09 (stat) ± 0.54 (syst) kpc (1.10%)</p>
+              <p id="rung-desc" class="text-xs sm:text-sm text-slate-600 mt-3 leading-relaxed">
+                Pietrzyński et al. (2019) combine orbital radial velocities with empirical surface-brightness-color relations (0.8% angular precision). Over the 162 kyr light-travel time, any cosmological drift in C_em (~10⁻¹⁰ yr⁻¹) shifts distance by less than 1.6 × 10⁻⁵, locking the LMC anchor against cosmological transport revisions.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-200 text-xs text-slate-500">
+              <strong>Zero-Point Propagation:</strong> The ±0.547 kpc LMC error propagates directly into ±8.4 kpc of M31's ±11 kpc Cepheid uncertainty (Li et al. 2021), which agrees within 1σ with independent M31 DEBs (772 ± 44 kpc).
+            </div>
+          </div>
+        </div>
+
+        <!-- Cohort Separation Cards -->
+        <div class="pt-6 border-t border-stone-200">
+          <h3 class="text-base font-bold text-slate-900 mb-3">Cohort Separation: Foreground Brown Dwarfs vs. Verified High-Redshift Galaxies</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="p-4 rounded-xl bg-amber-50/60 border border-amber-200">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase text-amber-900">Foreground Substellar Cohort</span>
+                <span class="px-2 py-0.5 text-[11px] font-bold bg-amber-200/80 text-amber-950 rounded">730 ± 110 pc</span>
+              </div>
+              <h4 class="text-base font-bold text-slate-900 mt-1.5">Capotauro (CEERS U-100588)</h4>
+              <p class="text-xs text-slate-700 mt-2 leading-relaxed">
+                Initially proposed as a <span class="math-font">z ≃ 32</span> Lyman-break candidate due to deep H₂O, CH₄, and NH₃ absorption at 3.5 µm. Multi-epoch JWST/NIRCam astrometry (Liu et al. 2026) revealed a <strong>&gt;6σ proper motion of 0.132 ± 0.020 arcsec</strong> over 3.5 yr, confirming a Galactic Y1.0 ± 0.5 brown dwarf (<span class="math-font">T<sub>eff</sub> ≈ 350 K</span>).
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-teal-50/50 border border-teal-200">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase text-teal-900">Verified High-z Cohort</span>
+                <span class="px-2 py-0.5 text-[11px] font-bold bg-teal-200/80 text-teal-950 rounded">z<sub>spec</sub> = 10.603</span>
+              </div>
+              <h4 class="text-base font-bold text-slate-900 mt-1.5">GN-z11 (JADES NIRSpec)</h4>
+              <p class="text-xs text-slate-700 mt-2 leading-relaxed">
+                Confirmed by Bunker et al. (2023) via multi-line JWST/NIRSpec emission and Lyα break at <span class="math-font">z = 10.603</span>. Identical fractional frequency shifts across multiple atomic and ionic transitions rule out foreground substellar atmospheres, making GN-z11 a direct probe of <span class="math-font">D<sub>A</sub>(z)</span> and <span class="math-font">D<sub>L</sub>(z)</span>.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-teal-50/50 border border-teal-200">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold uppercase text-teal-900">Verified High-z Cohort</span>
+                <span class="px-2 py-0.5 text-[11px] font-bold bg-teal-200/80 text-teal-950 rounded">z<sub>spec</sub> = 14.1793</span>
+              </div>
+              <h4 class="text-base font-bold text-slate-900 mt-1.5">JADES-GS-z14-0 (JWST + ALMA)</h4>
+              <p class="text-xs text-slate-700 mt-2 leading-relaxed">
+                Rest-UV spectroscopy (<span class="math-font">z = 14.178</span>) is corroborated by an ALMA far-IR <strong>[O III] 88 µm line detection at z = 14.1793 ± 0.0007</strong> (Carniani et al. 2025; Schouws et al. 2025). At <span class="math-font">r<sub>1/2</sub> = 0.079 arcsec</span>, its Planck radius is <span class="math-font">260 ± 20 pc</span>, directly sensitive to C-01 transport and lensing magnification <span class="math-font">μ</span>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: EXTREME-OBJECT DOSSIERS & SENSITIVITY LAB -->
+    <section id="sec-objects" class="scroll-mt-24 space-y-6">
+      <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-sm">
+        <div class="max-w-3xl mb-6">
+          <span class="text-xs font-semibold uppercase tracking-wider text-teal-700">Work Package D • Stellar &amp; Ultramassive Black Hole Audit</span>
+          <h2 class="text-2xl font-bold text-slate-900 mt-1">Extreme-Object Dossiers &amp; Distance-Ratio Sensitivity Lab</h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
+            Explore how hypothetical distance scaling (<span class="math-font">f<sub>D</sub> ∈ [0.25×, 1.20×]</span>) affects inferred stellar radii (<span class="math-font">R ∝ D<sub>L</sub></span>), luminosities (<span class="math-font">L ∝ D<sub>L</sub>²</span>), and black-hole masses (<span class="math-font">M<sub>BH</sub> ∝ D<sub>A</sub></span> or <span class="math-font">D<sub>L</sub>²ᵃ</span>) versus the <strong>actual range permitted by observations</strong>. For Local Group stars (WOH G64, HV 888, HV 11423) and low-to-intermediate-z black holes (Holmberg 15A, Phoenix A), astrophysical modeling systematics dominate over cosmological distance shifts; only high-z quasar <strong>TON 618</strong> (<span class="math-font">z = 2.219</span>) exhibits strong sensitivity to cosmological <span class="math-font">D<sub>L</sub>(z)</span> and lensing <span class="math-font">μ</span>.
+          </p>
+        </div>
+
+        <!-- Object Selector Buttons -->
+        <div class="flex flex-wrap gap-2 mb-6" id="object-selector"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          <!-- Dossier Card & Slider -->
+          <div class="lg:col-span-5 bg-stone-50 rounded-xl border border-stone-200 p-5 space-y-4">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <span id="obj-category" class="px-2 py-0.5 text-[11px] font-bold uppercase rounded bg-teal-100 text-teal-900">LMC Red Supergiant</span>
+                <h3 id="obj-name" class="text-xl font-bold text-slate-900 mt-1">WOH G64 (IRAS 04553–6825)</h3>
+              </div>
+              <span id="obj-z" class="mono-font text-xs font-semibold px-2.5 py-1 rounded bg-white border border-stone-200 text-slate-700">D₀ = 49.59 kpc</span>
+            </div>
+
+            <p id="obj-summary" class="text-xs sm:text-sm text-slate-600 leading-relaxed"></p>
+
+            <div class="p-3.5 rounded-lg bg-amber-50/80 border border-amber-200 text-xs">
+              <span class="font-bold text-amber-950 block">Dominant Physical Driver &amp; Permitted Range:</span>
+              <span id="obj-driver" class="text-slate-700 mt-1 block"></span>
+            </div>
+
+            <!-- Interactive Hypothetical Distance Multiplier -->
+            <div class="pt-3 border-t border-stone-200">
+              <div class="flex justify-between items-center mb-1">
+                <label for="slider-fd" class="text-xs font-bold text-slate-800">Hypothetical Distance Scale (<span class="math-font">f<sub>D</sub></span>)</label>
+                <span id="val-fd" class="mono-font text-xs font-bold px-2 py-0.5 rounded bg-slate-800 text-white">1.00× (Baseline)</span>
+              </div>
+              <input id="slider-fd" type="range" min="0.25" max="1.20" step="0.05" value="1.00" class="w-full accent-teal-700 cursor-pointer" />
+              <div class="flex justify-between text-[10px] text-slate-400 mono-font mt-0.5">
+                <span>0.25×</span>
+                <span>0.50×</span>
+                <span>0.80×</span>
+                <span>1.00×</span>
+                <span>1.20×</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2 text-center">
+              <div class="p-2.5 rounded-lg bg-white border border-stone-200">
+                <span class="text-[11px] text-slate-500 block">Scaled D<sub>A</sub></span>
+                <span id="obj-scaled-da" class="mono-font text-xs sm:text-sm font-bold text-slate-800">49.59 kpc</span>
+              </div>
+              <div class="p-2.5 rounded-lg bg-white border border-stone-200">
+                <span class="text-[11px] text-slate-500 block">Scaled D<sub>L</sub></span>
+                <span id="obj-scaled-dl" class="mono-font text-xs sm:text-sm font-bold text-slate-800">49.59 kpc</span>
+              </div>
+              <div class="p-2.5 rounded-lg bg-teal-50 border border-teal-200">
+                <span id="obj-scaled-qty-label" class="text-[11px] text-teal-800 block">Scaled Radius</span>
+                <span id="obj-scaled-qty" class="mono-font text-xs sm:text-sm font-bold text-teal-950">1540 R☉</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sensitivity Chart -->
+          <div class="lg:col-span-7 space-y-4">
+            <div class="p-4 rounded-xl border border-stone-200 bg-white">
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
+                <h3 id="obj-chart-title" class="text-sm font-bold text-slate-800">Hypothetical Distance Scaling vs. Literature Model Spread</h3>
+                <span class="text-[11px] text-slate-500">Teal = Hypothetical f<sub>D</sub> • Amber = Published Model Spread</span>
+              </div>
+              <div class="chart-container">
+                <canvas id="chart-objects"></canvas>
+              </div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-stone-50 border border-stone-200 text-xs text-slate-600 leading-relaxed">
+              <strong>Evidence Gap &amp; Calibration Note:</strong> For M31 candidate <span class="mono-font">LGGS J004520.67+414717.3</span>, no primary spectroscopic or photometric entry appears in the indexed review sources; normalized <span class="math-font">R/R₀</span> scaling is shown pending Gaia DR3 radial-velocity membership confirmation. For <strong>Phoenix A</strong> (<span class="math-font">z = 0.59732</span>), no direct dynamical black-hole mass exists—values span indirect cooling-flow feedback estimates (<span class="math-font">12.6 × 10⁹ M☉</span>) to extreme low-efficiency calorimeter scenarios (<span class="math-font">100 × 10⁹ M☉</span>).
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: CHARTER COMPLIANCE MATRIX (12 FOUNDATIONS + C-01) -->
+    <section id="sec-charter" class="scroll-mt-24 space-y-6">
+      <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-sm">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+          <div class="max-w-3xl">
+            <span class="text-xs font-semibold uppercase tracking-wider text-teal-700">Foundational Governance</span>
+            <h2 class="text-2xl font-bold text-slate-900 mt-1">Charter Compliance Matrix (12 Foundations + C-01)</h2>
+            <p class="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
+              Every mathematical equation in Report 04 is audited against the twelve non-negotiable ArcSecs physical foundations and the C-01 Mass–Inertia Regulation mandate. Filter by audit status to inspect how restricted obstructions (such as stationary photon aging or fixed-gap optical drag) are isolated and resolved.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 shrink-0" id="charter-filters">
+            <button type="button" data-status="all" class="charter-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-teal-700 text-white">All (13)</button>
+            <button type="button" data-status="obstruction" class="charter-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-stone-100 text-slate-700 hover:bg-stone-200">With Restricted Obstructions</button>
+            <button type="button" data-status="direct" class="charter-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-stone-100 text-slate-700 hover:bg-stone-200">Direct Compliant</button>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto rounded-xl border border-stone-200">
+          <table class="min-w-full divide-y divide-stone-200 text-xs sm:text-sm">
+            <thead class="bg-stone-50 text-slate-700">
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold w-56">Foundation / Mandate</th>
+                <th class="px-4 py-3 text-left font-semibold">Physical Role</th>
+                <th class="px-4 py-3 text-left font-semibold">Mathematical Implementation</th>
+                <th class="px-4 py-3 text-left font-semibold">Status &amp; Restricted Obstructions</th>
+              </tr>
+            </thead>
+            <tbody id="charter-tbody" class="divide-y divide-stone-100 bg-white"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-stone-200 bg-white py-6 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+      <div>ArcSecs Independent Research Program • Report 04 of 06 Interactive Synthesis</div>
+      <div class="mono-font">SI Calibration: c₀ = 299,792,458 m/s • H₀ = 67.4 km/s/Mpc • Ωₘ = 0.315</div>
+    </div>
+  </footer>
+
+  <script>
+    const c0 = 299792458.0;
+    const Mpc = 3.0856775814913673e22;
+    const tau0 = Mpc / c0;
+
+    function wrapLabel(str, maxLen = 16) {
+      if (str.length <= maxLen) return str;
+      const words = str.split(' ');
+      const lines = [];
+      let current = '';
+      for (const word of words) {
+        if ((current + ' ' + word).trim().length <= maxLen) {
+          current = (current + ' ' + word).trim();
+        } else {
+          if (current) lines.push(current);
+          current = word;
+        }
+      }
+      if (current) lines.push(current);
+      return lines;
+    }
+
+    const commonTooltipOptions = {
+      backgroundColor: '#1E293B',
+      titleFont: { size: 12, weight: 'bold' },
+      bodyFont: { size: 12 },
+      padding: 10,
+      cornerRadius: 8,
+      callbacks: {
+        title: function(items) {
+          const raw = items[0].label;
+          return Array.isArray(raw) ? raw.join(' ') : raw;
+        }
+      }
+    };
+
+    const ledgerData = [
+      {
+        domain: "Distance Anchors",
+        type: "verified",
+        verified: "LMC 49.59 ± 0.55 kpc (20 DEBs); SMC 62.44 ± 0.94 kpc; M31 761 ± 11 kpc (Cepheids) & 772 ± 44 kpc (DEBs).",
+        inference: "Propagation of ±1.10% LMC zero-point into ±8.4 kpc of M31 Cepheid uncertainty and Hubble-flow H₀.",
+        open: "Cosmological variation of emission ceiling C_em over <3 Myr Local Group lookback scales."
+      },
+      {
+        domain: "Photon Mass Gap",
+        type: "verified",
+        verified: "m_γ < 1 × 10⁻¹⁸ eV/c₀² (PDG solar-wind MHD); m_γ ≲ 2.2 × 10⁻¹⁴ eV/c₀² (FRB 121102 at z = 0.19273).",
+        inference: "Negligible optical group-velocity slowing (v_a/c₀ = 1 − O(10⁻³⁷)) under standalone fixed-gap drag.",
+        open: "Longitudinal Proca mode conversion into a dark bath sector."
+      },
+      {
+        domain: "1 Mpc & Static Controls",
+        type: "verified",
+        verified: "Executed quadrature: Exp D_TOF/D = 1.386294 at v_a = 0.5c₀; Static TL D_A/D_A^ref = 1.386–17.753 (z = 0.5–14.18).",
+        inference: "C-01 sign reversal D_TOF/D = 0.643–0.888 when early ceiling dominates aging (η_c > γ_age τ₀).",
+        open: "Microphysical derivation of η_c from cosmic bubble wall/interior mass distribution."
+      },
+      {
+        domain: "High-z Cohorts",
+        type: "inference",
+        verified: "Capotauro proper motion 0.132 ± 0.020 arcsec (>6σ, 730 pc Y1 brown dwarf); GN-z11 z=10.603; GS-z14-0 z=14.1793.",
+        inference: "JADES-GS-z14-0 physical half-light radius 260 ± 20 pc under Planck 2018 ΛCDM parameters.",
+        open: "3D halo lensing magnification ⟨μ⟩ or C-01 reduction of GS-z14-0 physical D_A at z > 10."
+      },
+      {
+        domain: "Extreme Objects",
+        type: "open",
+        verified: "WOH G64 VLTI torus ~2 × 1.5 mas; Holmberg 15A triaxial mass 21.6 (+2.3/-2.8) × 10⁹ M☉; TON 618 z = 2.219.",
+        inference: "Phoenix A 10¹⁰–10¹¹ M☉ model spread (no direct measurement); TON 618 40.7–66 × 10⁹ M☉ virial spread.",
+        open: "Primary catalog parameters for M31 candidate LGGS J004520.67+414717.3 (absent in indexed sources)."
+      }
+    ];
+
+    function renderLedger(filter) {
+      const tbody = document.getElementById('ledger-tbody');
+      const rows = filter === 'all' ? ledgerData : ledgerData.filter(d => d.type === filter);
+      tbody.innerHTML = rows.map(r => `
+        <tr class="hover:bg-stone-50/80 transition">
+          <td class="px-4 py-3 font-bold text-slate-900 whitespace-nowrap">${r.domain}</td>
+          <td class="px-4 py-3 text-slate-700">${r.verified}</td>
+          <td class="px-4 py-3 text-slate-600">${r.inference}</td>
+          <td class="px-4 py-3 text-amber-900 bg-amber-50/30">${r.open}</td>
+        </tr>
+      `).join('');
+    }
+
+    document.querySelectorAll('.ledger-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.ledger-btn').forEach(b => {
+          b.classList.remove('bg-slate-800', 'text-white');
+          b.classList.add('bg-stone-100', 'text-slate-700');
+        });
+        btn.classList.remove('bg-stone-100', 'text-slate-700');
+        btn.classList.add('bg-slate-800', 'text-white');
+        renderLedger(btn.dataset.ledger);
+      });
+    });
+    renderLedger('all');
+
+    // SECTION 2: 1 MPC CALCULATOR & CHART
+    function solveC01Coupled(eta_c, gammaTau0) {
+      const gamma = gammaTau0 / tau0;
+      const t_scale = tau0;
+      function dist(tau) {
+        if (tau <= 0) return 0;
+        const u = gamma * tau;
+        const phi = u < 1e-7 ? 1 - u / 2 + (u * u) / 6 : (1 - Math.exp(-u)) / u;
+        return c0 * tau * (1 + (eta_c / gammaTau0 - 1) * (1 - phi));
+      }
+      let lo = 0, hi = 10 * tau0;
+      for (let i = 0; i < 60; i++) {
+        const mid = 0.5 * (lo + hi);
+        if (dist(mid) < Mpc) lo = mid;
+        else hi = mid;
+      }
+      const tau = 0.5 * (lo + hi);
+      return {
+        dtofOverD: (c0 * tau) / Mpc,
+        veOverC0: 1 + eta_c * (tau / t_scale),
+        vaOverC0: Math.exp(-gamma * tau)
+      };
+    }
+
+    let oneMpcChart = null;
+    function updateOneMpcLab() {
+      const eta_c = parseFloat(document.getElementById('slider-etac').value);
+      const gammaTau0 = parseFloat(document.getElementById('slider-gamma').value);
+      const va = parseFloat(document.getElementById('slider-va').value);
+
+      document.getElementById('val-etac').textContent = eta_c.toFixed(2);
+      document.getElementById('val-gamma').textContent = gammaTau0.toFixed(2);
+      document.getElementById('val-va').textContent = va.toFixed(2);
+
+      const res = solveC01Coupled(eta_c, gammaTau0);
+      document.getElementById('out-c01-ratio').textContent = res.dtofOverD.toFixed(6);
+      document.getElementById('out-c01-ve').textContent = res.veOverC0.toFixed(4);
+      document.getElementById('out-c01-va').textContent = res.vaOverC0.toFixed(4);
+
+      const signEl = document.getElementById('out-c01-sign');
+      if (Math.abs(res.dtofOverD - 1.0) < 0.001) {
+        signEl.textContent = "Zero (Exact Balance)";
+        signEl.className = "text-xs font-bold text-slate-700";
+      } else if (res.dtofOverD < 1.0) {
+        signEl.textContent = "Negative (Underestimates D)";
+        signEl.className = "text-xs font-bold text-teal-700";
+      } else {
+        signEl.textContent = "Positive (Overestimates D)";
+        signEl.className = "text-xs font-bold text-amber-700";
+      }
+
+      const expRatio = -Math.log(va) / (1 - va);
+      const linRatio = 2 / (1 + va);
+      const vInf = 0.2;
+      const asyRatio = va > vInf
+        ? (-Math.log((va - vInf) / (1 - vInf))) / ((1 - vInf) * (1 - (va - vInf) / (1 - vInf)) - vInf * Math.log((va - vInf) / (1 - vInf)))
+        : NaN;
+
+      document.getElementById('out-exp-ratio').textContent = expRatio.toFixed(6);
+      document.getElementById('out-lin-ratio').textContent = linRatio.toFixed(6);
+      document.getElementById('out-asy-ratio').textContent = isNaN(asyRatio) ? "N/A (v_a ≤ 0.2)" : asyRatio.toFixed(6);
+
+      const etaGrid = [];
+      const c01Curve = [];
+      const balanceLine = [];
+      const expLine = [];
+      for (let e = 0; e <= 2.501; e += 0.1) {
+        etaGrid.push(e.toFixed(1));
+        c01Curve.push(solveC01Coupled(e, gammaTau0).dtofOverD);
+        balanceLine.push(1.0);
+        expLine.push(expRatio);
+      }
+
+      if (!oneMpcChart) {
+        const ctx = document.getElementById('chart-onempc').getContext('2d');
+        oneMpcChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: etaGrid,
+            datasets: [
+              {
+                label: 'C-01 Coupled D_TOF / D',
+                data: c01Curve,
+                borderColor: '#0F766E',
+                backgroundColor: 'rgba(15, 118, 110, 0.12)',
+                borderWidth: 3,
+                tension: 0.25,
+                fill: true,
+                pointRadius: 2
+              },
+              {
+                label: 'Exponential Slowing (at v_a/c₀)',
+                data: expLine,
+                borderColor: '#B45309',
+                borderWidth: 2,
+                borderDash: [4, 4],
+                pointRadius: 0
+              },
+              {
+                label: 'Exact Balance (D_TOF = D)',
+                data: balanceLine,
+                borderColor: '#64748B',
+                borderWidth: 1.5,
+                borderDash: [6, 4],
+                pointRadius: 0
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { position: 'top', labels: { boxWidth: 12, font: { size: 11 } } },
+              tooltip: commonTooltipOptions
+            },
+            scales: {
+              x: { title: { display: true, text: 'C-01 Epoch Coupling η_c', font: { size: 11, weight: 'bold' } } },
+              y: { title: { display: true, text: 'Inferred Ratio D_TOF / D_true', font: { size: 11, weight: 'bold' } }, min: 0.5, max: 2.0 }
+            }
+          }
+        });
+      } else {
+        oneMpcChart.data.datasets[0].data = c01Curve;
+        oneMpcChart.data.datasets[1].data = expLine;
+        oneMpcChart.update();
+      }
+    }
+
+    ['slider-etac', 'slider-gamma', 'slider-va'].forEach(id => {
+      document.getElementById(id).addEventListener('input', updateOneMpcLab);
+    });
+    updateOneMpcLab();
+
+    // SECTION 3: COSMOLOGICAL BENCHMARKS
+    const cosmoBenchmarks = [
+      { label: "z = 0.50", z: 0.5, DC: 1951.387, DA: 1300.925, DL: 2927.08, tlb: 5.210, DA_TL: 1803.49, ratioTL: 1.386 },
+      { label: "z = 1.00", z: 1.0, DC: 3401.263, DA: 1700.631, DL: 6802.53, tlb: 7.951, DA_TL: 3083.09, ratioTL: 1.813 },
+      { label: "z = 3.00", z: 3.0, DC: 6506.062, DA: 1626.516, DL: 26024.25, tlb: 11.654, DA_TL: 6166.18, ratioTL: 3.791 },
+      { label: "z = 10.603 (GN-z11)", z: 10.603, DC: 9759.478, DA: 841.117, DL: 113239.22, tlb: 13.360, DA_TL: 10903.12, ratioTL: 12.963 },
+      { label: "z = 14.179 (GS-z14-0)", z: 14.1793, DC: 10344.113, DA: 681.462, DL: 157016.39, tlb: 13.505, DA_TL: 12098.15, ratioTL: 17.753 }
+    ];
+
+    let cosmoMode = 'DA';
+    let cosmoChart = null;
+
+    function updateCosmoSection() {
+      const mu = parseFloat(document.getElementById('slider-mu').value);
+      const deltaC01 = parseFloat(document.getElementById('slider-c01-highz').value);
+      document.getElementById('val-mu').textContent = mu.toFixed(2) + '×';
+      document.getElementById('val-c01-highz').textContent = deltaC01.toFixed(2);
+
+      const tbody = document.getElementById('cosmo-tbody');
+      const activeDA = [];
+      const refDA = [];
+      const tlDA = [];
+      const activeRatio = [];
+      const tlRatio = [];
+      const refDL = [];
+      const activeDL = [];
+      const tlDL = [];
+
+      tbody.innerHTML = cosmoBenchmarks.map(b => {
+        const highZFactor = b.z <= 2 ? (1 - 0.03 * (deltaC01 / 0.45)) : (1 - deltaC01 * (Math.log(1 + b.z) / Math.log(15.18)));
+        const c01DA = (b.DA * highZFactor) / Math.sqrt(mu);
+        const c01DL = (b.DL * highZFactor) / Math.sqrt(mu);
+        const tlLum = b.DA_TL * Math.pow(1 + b.z, 2);
+
+        activeDA.push(c01DA);
+        refDA.push(b.DA);
+        tlDA.push(b.DA_TL);
+        activeRatio.push(c01DA / b.DA);
+        tlRatio.push(b.ratioTL);
+        refDL.push(b.DL);
+        activeDL.push(c01DL);
+        tlDL.push(tlLum);
+
+        return `
+          <tr class="hover:bg-stone-50">
+            <td class="px-3 py-2.5 font-sans font-semibold text-slate-900">${b.label}</td>
+            <td class="px-3 py-2.5 text-right text-slate-600">${b.DC.toFixed(1)}</td>
+            <td class="px-3 py-2.5 text-right font-semibold text-slate-800">${b.DA.toFixed(1)}</td>
+            <td class="px-3 py-2.5 text-right text-slate-600">${b.DL.toFixed(0)}</td>
+            <td class="px-3 py-2.5 text-right text-amber-800">${b.DA_TL.toFixed(1)}</td>
+            <td class="px-3 py-2.5 text-right font-semibold text-amber-700">${b.ratioTL.toFixed(3)}×</td>
+            <td class="px-3 py-2.5 text-right font-bold text-teal-800 bg-teal-50/40">${c01DA.toFixed(1)}</td>
+          </tr>
+        `;
+      }).join('');
+
+      const labels = cosmoBenchmarks.map(b => wrapLabel(b.label, 14));
+      let datasets = [];
+      let yTitle = '';
+
+      if (cosmoMode === 'DA') {
+        yTitle = 'Angular-Diameter Distance D_A (Mpc)';
+        datasets = [
+          { label: 'Planck 2018 ΛCDM D_A^ref', data: refDA, borderColor: '#334155', backgroundColor: '#334155', borderWidth: 2.5, tension: 0.25 },
+          { label: 'Active Entrained C-01 (+ Lensing μ)', data: activeDA, borderColor: '#0F766E', backgroundColor: '#0F766E', borderWidth: 3, tension: 0.25 },
+          { label: 'Static Tired-Light D_A^TL (Retired)', data: tlDA, borderColor: '#B45309', backgroundColor: '#B45309', borderWidth: 2, borderDash: [5, 4], tension: 0.25 }
+        ];
+      } else if (cosmoMode === 'RATIO') {
+        yTitle = 'Ratio D_A / D_A^ref';
+        datasets = [
+          { label: 'Static Tired-Light Ratio (1.386× – 17.75×)', data: tlRatio, borderColor: '#B45309', backgroundColor: '#B45309', borderWidth: 2.5, borderDash: [5, 4], tension: 0.25 },
+          { label: 'Active C-01 / ΛCDM Ratio', data: activeRatio, borderColor: '#0F766E', backgroundColor: '#0F766E', borderWidth: 3, tension: 0.25 }
+        ];
+      } else {
+        yTitle = 'Luminosity Distance D_L (Mpc)';
+        datasets = [
+          { label: 'Planck 2018 ΛCDM D_L^ref', data: refDL, borderColor: '#334155', backgroundColor: '#334155', borderWidth: 2.5, tension: 0.25 },
+          { label: 'Active Entrained C-01 D_L', data: activeDL, borderColor: '#0F766E', backgroundColor: '#0F766E', borderWidth: 3, tension: 0.25 },
+          { label: 'Static TL (1+z)² D_A^TL', data: tlDL, borderColor: '#B45309', backgroundColor: '#B45309', borderWidth: 2, borderDash: [5, 4], tension: 0.25 }
+        ];
+      }
+
+      if (!cosmoChart) {
+        const ctx = document.getElementById('chart-cosmo').getContext('2d');
+        cosmoChart = new Chart(ctx, {
+          type: 'line',
+          data: { labels, datasets },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { position: 'top', labels: { boxWidth: 12, font: { size: 11 } } },
+              tooltip: commonTooltipOptions
+            },
+            scales: {
+              y: { title: { display: true, text: yTitle, font: { size: 11, weight: 'bold' } }, beginAtZero: true }
+            }
+          }
+        });
+      } else {
+        cosmoChart.data.datasets = datasets;
+        cosmoChart.options.scales.y.title.text = yTitle;
+        cosmoChart.update();
+      }
+    }
+
+    document.querySelectorAll('.cosmo-mode-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.cosmo-mode-btn').forEach(b => {
+          b.classList.remove('bg-teal-700', 'text-white');
+          b.classList.add('bg-stone-100', 'text-slate-700');
+        });
+        btn.classList.remove('bg-stone-100', 'text-slate-700');
+        btn.classList.add('bg-teal-700', 'text-white');
+        cosmoMode = btn.dataset.cosmoMode;
+        updateCosmoSection();
+      });
+    });
+    ['slider-mu', 'slider-c01-highz'].forEach(id => {
+      document.getElementById(id).addEventListener('input', updateCosmoSection);
+    });
+    updateCosmoSection();
+
+    // SECTION 4: DISTANCE LADDER 8 RUNGS
+    const rungs = [
+      {
+        num: 1, name: "Solar System Radar", badge: "Rung 1 • Local Unit Anchor",
+        value: "1 au = 1.495978707 × 10¹¹ m", shift: "Max shift: 0%",
+        desc: "Radar and spacecraft ranging calibrate local present-day ceiling C_em(T_now) = c₀ and solar Newtonian potential Φ (δn ~ 10⁻⁸–10⁻⁶ near the Sun)."
+      },
+      {
+        num: 2, name: "Milky Way Parallaxes", badge: "Rung 2 • Gaia Astrometry",
+        value: "Sub-mas trigonometric parallax (ϖ = b / D_par)", shift: "Max shift: < 10⁻⁶",
+        desc: "Purely geometric baseline triangulation independent of redshift z; altered only if transverse regulator gradients ∫∇_⊥n ds mimic parallax."
+      },
+      {
+        num: 3, name: "LMC Geometric Anchor", badge: "Rung 3 • 20 Late-Type DEBs",
+        value: "49.59 ± 0.09 (stat) ± 0.54 (syst) kpc (1.10%)", shift: "Max shift: < 10⁻⁵",
+        desc: "Pietrzyński et al. (2019) combine orbital radial velocities with empirical surface-brightness-color relations (0.8% angular precision). Over 162 kyr travel time, C_em drift is <1.6 × 10⁻⁵."
+      },
+      {
+        num: 4, name: "SMC Geometric Anchor", badge: "Rung 4 • Late-Type DEBs",
+        value: "62.44 ± 0.47 (stat) ± 0.81 (syst) kpc (1.50%)", shift: "Max shift: < 10⁻⁵",
+        desc: "Graczyk et al. (2020) combine 10 new DEBs with 5 prior systems (μ = 18.977 mag), resolving ~1.5 kpc line-of-sight depth scatter."
+      },
+      {
+        num: 5, name: "M31 (Andromeda)", badge: "Rung 5 • HST Cepheids + DEBs",
+        value: "761 ± 11 kpc (Cepheids) / 772 ± 44 kpc (DEB)", shift: "Max shift: < 10⁻⁴",
+        desc: "Li et al. (2021) HST NIR Cepheids inherit the ±1.1% LMC zero-point (±8.4 kpc correlated error) and agree within 1σ with independent M31 DEBs and TRGB."
+      },
+      {
+        num: 6, name: "Hubble Flow SNe Ia", badge: "Rung 6 • Pantheon+ (0.01 < z < 2.3)",
+        value: "Standardized m_B(z) & stretch s_i = A(z)/(1+z)", shift: "Bounded (~1–5%)",
+        desc: "Calibrated via Cepheids/TRGB; tightly constrains D_L^eff(z) = D_G √(Z_E A / (𝒯_cal ξ_L)) and arrival stretch A(z) ≈ 1+z."
+      },
+      {
+        num: 7, name: "DESI 2024 BAO", badge: "Rung 7 • z_eff = 0.295 – 2.330",
+        value: "12 dimensionless D_M/r_d, D_H/r_d, D_V/r_d points", shift: "Sensitive to H_phys & r_BAO",
+        desc: "Adame et al. (2025) BAO ratios constrain H_phys,0 r_BAO, requiring local anchors plus a microphysical C-01 correlation ruler r_BAO."
+      },
+      {
+        num: 8, name: "High-z JWST + ALMA", badge: "Rung 8 • z > 10 Spectroscopic",
+        value: "GN-z11 (10.603) & JADES-GS-z14-0 (14.1793)", shift: "Primary C-01 leverage",
+        desc: "Multi-line UV/FIR spectroscopy confirms extragalactic status; angular sizes θ_1/2 = 2R_half/D_A(z) offer the strongest leverage for C-01 vs ΛCDM."
+      }
+    ];
+
+    const rungGrid = document.getElementById('rung-grid');
+    function selectRung(idx) {
+      const r = rungs[idx];
+      document.querySelectorAll('.rung-card').forEach((card, i) => {
+        if (i === idx) {
+          card.classList.add('border-teal-600', 'bg-teal-50/70', 'ring-1', 'ring-teal-600');
+          card.classList.remove('border-stone-200', 'bg-white');
+        } else {
+          card.classList.remove('border-teal-600', 'bg-teal-50/70', 'ring-1', 'ring-teal-600');
+          card.classList.add('border-stone-200', 'bg-white');
+        }
+      });
+      document.getElementById('rung-badge').textContent = r.badge;
+      document.getElementById('rung-shift').textContent = r.shift;
+      document.getElementById('rung-title').textContent = r.name;
+      document.getElementById('rung-value').textContent = r.value;
+      document.getElementById('rung-desc').textContent = r.desc;
+    }
+
+    rungGrid.innerHTML = rungs.map((r, idx) => `
+      <button type="button" onclick="selectRung(${idx})" class="rung-card text-left p-3 rounded-xl border border-stone-200 bg-white hover:border-teal-400 transition">
+        <div class="flex items-center justify-between text-[11px] font-bold text-teal-800">
+          <span>RUNG ${r.num}</span>
+          <span class="mono-font text-slate-400">${r.shift.replace('Max shift: ', '')}</span>
+        </div>
+        <div class="text-sm font-bold text-slate-900 mt-0.5">${r.name}</div>
+        <div class="text-[11px] text-slate-500 truncate mt-0.5">${r.value}</div>
+      </button>
+    `).join('');
+    selectRung(2);
+
+    // SECTION 5: EXTREME-OBJECT DOSSIERS & SENSITIVITY LAB
+    const extremeObjects = [
+      {
+        id: "woh_g64",
+        name: "WOH G64 (IRAS 04553–6825)",
+        category: "LMC Red Supergiant / Binary",
+        zLabel: "D₀ = 49.59 kpc",
+        unitDist: "kpc",
+        DA0: 49.59,
+        DL0: 49.59,
+        qtyName: "Radius",
+        qtyUnit: "R☉",
+        baseVal: 1540,
+        scalePower: 1,
+        litMin: 800,
+        litMax: 1788,
+        litLabel: "Literature Spread (800–1788 R☉)",
+        summary: "Confirmed LMC member (RV 285–294 km/s). Levesque et al. (2009) derived R = 1540 ± 77 R☉ (1527 R☉ at 49.59 kpc) accounting for an asymmetric dusty torus resolved in 2024 by VLTI/GRAVITY (~2 × 1.5 mas). Active 2024–2026 debate centers on yellow hypergiant transition vs. binary tidal stretching.",
+        driver: "Circumstellar dust torus geometry & binary companion state (~800–1788 R☉), NOT the 1.1% LMC distance uncertainty."
+      },
+      {
+        id: "hv_888",
+        name: "HV 888 (WOH S140)",
+        category: "LMC M4 Ia Supergiant",
+        zLabel: "D₀ = 49.59 kpc",
+        unitDist: "kpc",
+        DA0: 49.59,
+        DL0: 49.59,
+        qtyName: "Radius",
+        qtyUnit: "R☉",
+        baseVal: 1374,
+        scalePower: 1,
+        litMin: 1353,
+        litMax: 1509,
+        litLabel: "T_eff Scale Spread (1353–1509 R☉)",
+        summary: "M4 Ia supergiant in the LMC with log(L/L☉) = 5.48 ± 0.04 (Davies et al. 2018). Calibrated radii range from 1374 R☉ (T_eff ≈ 3650 K) to 1509 R☉ (Gaia DR3 T_eff scale).",
+        driver: "Effective-temperature calibration scale (~3400–3650 K) dominates over the 1.1% LMC DEB anchor uncertainty."
+      },
+      {
+        id: "hv_11423",
+        name: "HV 11423 (PMMR 114)",
+        category: "SMC Unstable Supergiant",
+        zLabel: "D₀ = 62.44 kpc",
+        unitDist: "kpc",
+        DA0: 62.44,
+        DL0: 62.44,
+        qtyName: "Radius",
+        qtyUnit: "R☉",
+        baseVal: 1086,
+        scalePower: 1,
+        litMin: 960,
+        litMax: 1220,
+        litLabel: "K0–M5 Excursion Spread (960–1220 R☉)",
+        summary: "SMC supergiant (D_SMC = 62.44 ± 0.94 kpc) exhibiting dramatic spectral excursions between K0/1 I and M4.5/5 I (ΔV ~ 2 mag), yielding 1060–1220 R☉ from spectral fitting vs. 960–1000 R☉ from (V−K).",
+        driver: "Intrinsic photospheric instability (T_eff shifting 3500–4300 K) dominates over the 1.5% SMC distance error."
+      },
+      {
+        id: "m31_lggs",
+        name: "LGGS J004520.67+414717.3",
+        category: "M31 Candidate (Evidence Gap)",
+        zLabel: "D₀ = 761 kpc",
+        unitDist: "kpc",
+        DA0: 761.0,
+        DL0: 761.0,
+        qtyName: "Normalized R/R₀",
+        qtyUnit: "R₀",
+        baseVal: 1.00,
+        scalePower: 1,
+        litMin: 0.985,
+        litMax: 1.015,
+        litLabel: "M31 Anchor Uncertainty (±1.5%)",
+        summary: "Evidence gap: No primary spectroscopic, photometric, or radius record for LGGS J004520.67+414717.3 appears in the indexed review sources. Normalized R/R₀ sensitivity is anchored to M31 at 761 ± 11 kpc.",
+        driver: "Missing primary catalog entry; radial-velocity confirmation required to rule out foreground Milky Way dwarf status."
+      },
+      {
+        id: "holmberg_15a",
+        name: "Holmberg 15A (Abell 85 BCG)",
+        category: "Low-z Ultramassive Black Hole",
+        zLabel: "z = 0.055359",
+        unitDist: "Mpc",
+        DA0: 230.24,
+        DL0: 256.43,
+        qtyName: "M_BH",
+        qtyUnit: "10⁹ M☉",
+        baseVal: 21.6,
+        scalePower: 1,
+        litMin: 21.6,
+        litMax: 40.0,
+        litLabel: "Triaxial (21.6B) vs Axisym (40B)",
+        summary: "Using VLT/MUSE axisymmetric orbit modeling, Mehrgan et al. (2019) derived (40 ± 8) × 10⁹ M☉. In 2025, Liepold, Ma & Walsh combined Keck KCWI data with triaxial orbit modeling to revise the mass down by 46% to 21.6 (+2.3/-2.8) × 10⁹ M☉.",
+        driver: "Triaxial vs. axisymmetric orbital geometry (−46% revision) dwarfs cosmological distance differences (<3% at z = 0.0554)."
+      },
+      {
+        id: "phoenix_a",
+        name: "Phoenix A (SPT-CL J2344–4243)",
+        category: "Intermediate-z BCG Proxy",
+        zLabel: "z = 0.597320",
+        unitDist: "Mpc",
+        DA0: 1420.60,
+        DL0: 3624.60,
+        qtyName: "M_BH Proxy",
+        qtyUnit: "10⁹ M☉",
+        baseVal: 12.6,
+        scalePower: 1,
+        litMin: 12.6,
+        litMax: 100.0,
+        litLabel: "Feedback (12.6B) vs Scenario (100B)",
+        summary: "Crucially, Phoenix A has NO direct dynamical or lensing black-hole mass measurement. Estimates span ~1.0–2.0 × 10¹⁰ M☉ (JWST/Chandra cooling-flow feedback) up to ~10¹¹ M☉ (Brockamp et al. 2016 low-efficiency accretion simulation scenario).",
+        driver: "Factor-of-10 astrophysical proxy spread (no direct dynamical measurement) dominates over ~2–5% BAO/SN distance bounds."
+      },
+      {
+        id: "ton_618",
+        name: "TON 618 (FBQS J122824.9+312837)",
+        category: "High-z Hyperluminous Quasar",
+        zLabel: "z = 2.219",
+        unitDist: "Mpc",
+        DA0: 1745.00,
+        DL0: 18081.40,
+        qtyName: "Virial M_BH",
+        qtyUnit: "10⁹ M☉",
+        baseVal: 40.7,
+        scalePower: 1,
+        litMin: 16.5,
+        litMax: 66.0,
+        litLabel: "Virial Calibration Spread (~4×)",
+        summary: "Hyperluminous quasar at z = 2.219 with single-epoch virial estimates of 66 × 10⁹ M☉ (Shemmer et al. 2004, Hβ) and 40.7 × 10⁹ M☉ (Ge et al. 2019). With M_BH ∝ D_L^(2a) (linear in D_L for a = 0.5), TON 618 is the sole black hole in this cohort directly sensitive to cosmological D_L(z) and foreground lensing μ.",
+        driver: "Directly sensitive to cosmological D_L(z), lensing μ^(-1/2), and ~4× single-epoch virial factor f calibration spread."
+      }
+    ];
+
+    let activeObjIdx = 0;
+    let objChart = null;
+
+    function updateObjectLab() {
+      const obj = extremeObjects[activeObjIdx];
+      const fd = parseFloat(document.getElementById('slider-fd').value);
+
+      document.querySelectorAll('.obj-btn').forEach((b, i) => {
+        if (i === activeObjIdx) {
+          b.classList.add('bg-teal-700', 'text-white', 'border-teal-700');
+          b.classList.remove('bg-white', 'text-slate-700', 'border-stone-300');
+        } else {
+          b.classList.remove('bg-teal-700', 'text-white', 'border-teal-700');
+          b.classList.add('bg-white', 'text-slate-700', 'border-stone-300');
+        }
+      });
+
+      document.getElementById('obj-category').textContent = obj.category;
+      document.getElementById('obj-name').textContent = obj.name;
+      document.getElementById('obj-z').textContent = obj.zLabel;
+      document.getElementById('obj-summary').textContent = obj.summary;
+      document.getElementById('obj-driver').textContent = obj.driver;
+
+      document.getElementById('val-fd').textContent = fd.toFixed(2) + (Math.abs(fd - 1.0) < 0.01 ? '× (Baseline)' : '×');
+
+      const scaledDA = obj.DA0 * fd;
+      const scaledDL = obj.DL0 * fd;
+      const scaledQty = obj.baseVal * Math.pow(fd, obj.scalePower);
+
+      document.getElementById('obj-scaled-da').textContent = scaledDA.toFixed(2) + ' ' + obj.unitDist;
+      document.getElementById('obj-scaled-dl').textContent = scaledDL.toFixed(2) + ' ' + obj.unitDist;
+      document.getElementById('obj-scaled-qty-label').textContent = 'Scaled ' + obj.qtyName;
+      document.getElementById('obj-scaled-qty').textContent = scaledQty.toFixed(2) + ' ' + obj.qtyUnit;
+
+      const ratios = [0.25, 0.50, 0.80, 1.00, 1.20];
+      const labels = ['0.25× D', '0.50× D', '0.80× D', '1.00× Base', '1.20× D', wrapLabel(obj.litLabel, 16)];
+      const barData = ratios.map(r => obj.baseVal * Math.pow(r, obj.scalePower));
+      barData.push(obj.litMax);
+
+      const bgColors = ratios.map(r => Math.abs(r - fd) < 0.03 ? '#0F766E' : 'rgba(15, 118, 110, 0.35)');
+      bgColors.push('#D97706');
+
+      if (!objChart) {
+        const ctx = document.getElementById('chart-objects').getContext('2d');
+        objChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels,
+            datasets: [{
+              label: `${obj.qtyName} (${obj.qtyUnit})`,
+              data: barData,
+              backgroundColor: bgColors,
+              borderRadius: 6
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: commonTooltipOptions
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                title: { display: true, text: `${obj.qtyName} (${obj.qtyUnit})`, font: { size: 11, weight: 'bold' } }
+              }
+            }
+          }
+        });
+      } else {
+        objChart.data.labels = labels;
+        objChart.data.datasets[0].label = `${obj.qtyName} (${obj.qtyUnit})`;
+        objChart.data.datasets[0].data = barData;
+        objChart.data.datasets[0].backgroundColor = bgColors;
+        objChart.options.scales.y.title.text = `${obj.qtyName} (${obj.qtyUnit})`;
+        objChart.update();
+      }
+    }
+
+    const objSelector = document.getElementById('object-selector');
+    objSelector.innerHTML = extremeObjects.map((o, i) => `
+      <button type="button" onclick="activeObjIdx=${i}; updateObjectLab();" class="obj-btn px-3 py-1.5 text-xs font-semibold rounded-lg border border-stone-300 bg-white text-slate-700 hover:bg-stone-100 transition">
+        ${o.name.split(' (')[0]}
+      </button>
+    `).join('');
+
+    document.getElementById('slider-fd').addEventListener('input', updateObjectLab);
+    updateObjectLab();
+
+    // SECTION 6: CHARTER COMPLIANCE MATRIX
+    const charterData = [
+      {
+        id: "1. Photons have mass",
+        type: "obstruction",
+        role: "Massive Proca/regulator EM sector with positive gap Ω > 0",
+        math: "ω² = C_em² k² + Ω²; m_γ = ħΩ/c₀² < 1.5×10⁻⁵⁴ kg (PDG) & 3.9×10⁻⁵⁰ kg (FRB 121102)",
+        status: "Compliant; fixed-gap drag alone gives v_a/c₀ ≈ 1 − O(10⁻³⁷) at optical frequencies, requiring C-01 coupling."
+      },
+      {
+        id: "2. Time is constant",
+        type: "direct",
+        role: "Single universal ordering coordinate T with uniform rate dT/dT = 1",
+        math: "Oscillator rates ω_clk(I, u) vary dynamically; clock counts integrate ∫ω_clk dT",
+        status: "Compliant; kinematic/regulator clock shifts derived via γ_clk and arrival stretch A = dT_a/dT_e."
+      },
+      {
+        id: "3. Light slows down over time",
+        type: "obstruction",
+        role: "Post-emission speed non-increasing (dv_γ/dT ≤ 0) from C_em(x_e, T_e)",
+        math: "v_γ(T; T_e) = C_em(T) exp[−γ_age(T − T_e)], depositing energy into bath/regulator",
+        status: "Compliant; stationary age loss gives A = 1 (falsified by SN Ia stretch), motivating coupled C-01 + outflow."
+      },
+      {
+        id: "4. Time is not physical",
+        type: "direct",
+        role: "Ordering parameter ('When') only; no material time fluid",
+        math: "Atomic/decay clocks modeled as physical systems in T; d/dT denotes dynamical evolution",
+        status: "Compliant."
+      },
+      {
+        id: "5. Space is not physical",
+        type: "direct",
+        role: "Flat Euclidean ℝ³ bookkeeping manifold ('Where'); no stretching fabric",
+        math: "Global coordinates x ∈ ℝ³; physical fields I(x, T), ρ(x, T) reside in space",
+        status: "Compliant."
+      },
+      {
+        id: "6. Existence requires extent & mass",
+        type: "direct",
+        role: "Defined mass-energy ledger across matter, radiation, regulator I, and bath",
+        math: "T^μν_tot = T^μν_m + T^μν_γ + T^μν_I + T^μν_bath conserved globally in ℝ³",
+        status: "Compliant; classical field rest-mass ledger flagged as open microphysical item."
+      },
+      {
+        id: "7. Spacetime is not physical",
+        type: "direct",
+        role: "Combined (x, T) used strictly as descriptive/comparison tool",
+        math: "Reference ΛCDM metrics used for comparison only; lensing derived via ∇Φ and ∇n_eff",
+        status: "Compliant."
+      },
+      {
+        id: "8. Light is not the fastest",
+        type: "direct",
+        role: "Distinguish slowed photons v_γ, EM front C_em, and causal ceiling C_causal",
+        math: "0 < v_γ(T) ≤ C_em(T) ≤ C_causal(T)",
+        status: "Compliant; massive packet v_g < C_em does not itself establish a super-front signal."
+      },
+      {
+        id: "9. Separation faster than causality",
+        type: "direct",
+        role: "Coordinate separation rates V_sep can exceed C_causal without fabric stretch",
+        math: "Real object velocities u_m(x, T) = H_phys(T)x in ℝ³",
+        status: "Compliant; distinguishes V_sep, frame velocity u, and local signal speed."
+      },
+      {
+        id: "10. Size of universe unknown",
+        type: "direct",
+        role: "Separate observable reach, modeled bubble R_bub, and greater cosmos",
+        math: "Finite simulation domain R_sim treated strictly as numerical boundary control",
+        status: "Compliant."
+      },
+      {
+        id: "11. Age of universe unknown",
+        type: "direct",
+        role: "Distinguish signal travel age τ, object age t_obj, bubble age, and total history",
+        math: "Stellar/nuclear age constraints preserved; older objects may predate local epoch",
+        status: "Compliant; constrains stationary D_A bounds."
+      },
+      {
+        id: "12. Distant objects smaller & closer",
+        type: "obstruction",
+        role: "Seek dynamical/optical mechanisms yielding D_actual < D_ref without violating anchors",
+        math: "Tested across 1 Mpc TOF, 3D lensing, C-01 outflow, ξ_L, and cohort classification",
+        status: "Conditionally active; low-z reduction bounded to a few percent by SN+BAO+Tolman unless ξ_L < 1."
+      },
+      {
+        id: "C-01. Mass–Inertia Regulation",
+        type: "direct",
+        role: "Collective mass/bubble field I(x, T) sets local emission ceiling C_em(x, T)",
+        math: "C_em(T) = c₀ [I(T_now)/I(T)]^β_I; dimensionless ratios C_em(T_e)/c₀ are physical",
+        status: "Compliant; symmetric shell zero-force resolved via collective scalar-inertia potential I."
+      }
+    ];
+
+    function renderCharter(filter) {
+      const tbody = document.getElementById('charter-tbody');
+      const rows = filter === 'all' ? charterData : charterData.filter(c => c.type === filter);
+      tbody.innerHTML = rows.map(c => {
+        const isObs = c.type === 'obstruction';
+        return `
+          <tr class="hover:bg-stone-50/80 transition">
+            <td class="px-4 py-3 font-bold text-slate-900">${c.id}</td>
+            <td class="px-4 py-3 text-slate-700">${c.role}</td>
+            <td class="px-4 py-3 mono-font text-xs text-slate-600">${c.math}</td>
+            <td class="px-4 py-3 ${isObs ? 'text-amber-900 bg-amber-50/40 font-medium' : 'text-teal-900'}">${c.status}</td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    document.querySelectorAll('.charter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.charter-btn').forEach(b => {
+          b.classList.remove('bg-teal-700', 'text-white');
+          b.classList.add('bg-stone-100', 'text-slate-700');
+        });
+        btn.classList.remove('bg-stone-100', 'text-slate-700');
+        btn.classList.add('bg-teal-700', 'text-white');
+        renderCharter(btn.dataset.status);
+      });
+    });
+    renderCharter('all');
+
+    // Smooth Navigation Highlighting
+    const navButtons = document.querySelectorAll('.nav-pill');
+    navButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        navButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const target = document.getElementById(btn.dataset.target);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

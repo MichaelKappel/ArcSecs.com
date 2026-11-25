@@ -1,0 +1,624 @@
+[
+  {
+    "topic": "ceiling",
+    "id": "C01-01",
+    "status": "candidate",
+    "refs": [
+      [
+        "C01-M",
+        5,
+        15
+      ],
+      [
+        "C01-H",
+        697,
+        704
+      ]
+    ],
+    "title": "Constitutive origin of a local emission characteristic",
+    "body": "Use a physical regulator I sourced by matter, not an independently stretching location label. With epsilon(I)=epsilon_* sqrt(1+alpha I^2), mu(I)=mu_* sqrt(1+alpha I^2), the transverse characteristic C=C_*/sqrt(1+alpha I^2), C_*=1/sqrt(epsilon_* mu_*), and impedance Z=sqrt(mu/epsilon)=Z_* follow algebraically. These are candidate coefficients, not a derivation of the numerical SI speed from cosmic matter. Match massive-vector coefficients separately; see Chapter 30L and 30Q."
+  },
+  {
+    "topic": "ceiling",
+    "id": "C01-02",
+    "status": "candidate",
+    "refs": [
+      [
+        "C01-M",
+        23,
+        27
+      ],
+      [
+        "C01-H",
+        699,
+        710
+      ]
+    ],
+    "title": "Finite-range causal collective inertia",
+    "body": "Use (C_I^(-2) d_T^2 - Laplacian + lambda^(-2)) I=g rho_src with retarded conditions and specified physical sources. Its static Yukawa Green function is a useful boundary control. C_I is a distinct characteristic. Test inertia as an independent response M_0(I)=m_*(C_*/C)^p (p=1 or 2 in the supplied model); the corresponding local particle Lagrangian is -M_0 C^2 sqrt(1-v^2/C^2) for |v|<C. At fixed I the low-speed kinetic coefficient is M_0; the variable I also contributes forces. Do not equate this ansatz to proven mechanical inertia or use an instantaneous kernel for evolving matter."
+  },
+  {
+    "topic": "ceiling",
+    "id": "C01-03",
+    "status": "conditional analytic",
+    "refs": [
+      [
+        "C01-H",
+        741,
+        742
+      ],
+      [
+        "C01-H",
+        699,
+        708
+      ]
+    ],
+    "title": "Shell and void response",
+    "body": "For a static thin shell of mass M and radius R with q=R/lambda, I(0)=g M exp(-q)/(4 pi R). Interior ratio I(r)/I(0)=sinh(q r/R)/(q r/R); exterior ratio sinh(q)/q * exp[-q(r/R-1)]/(r/R). A finite nonzero interior regulator can coexist with zero Newtonian shell force; a finite-range regulator can have an interior gradient. In a uniform reference density the void-center fractional removed response is 1-(1+s)exp(-s), s=b/lambda. These results were independently checked in book 30R, not a detection of a wall. For irregular shells use zero-padded/open-boundary convolution with independent spherical and resolution checks; the explorer reports FFT results but supplies no underlying solver run record."
+  },
+  {
+    "topic": "ceiling",
+    "id": "C01-04",
+    "status": "analytic and test gate",
+    "refs": [
+      [
+        "C01-H",
+        134,
+        136
+      ],
+      [
+        "C01-H",
+        589,
+        591
+      ],
+      [
+        "C01-H",
+        727,
+        733
+      ],
+      [
+        "C01-H",
+        740,
+        748
+      ]
+    ],
+    "title": "Separate characteristic, group and causal speeds",
+    "body": "For omega^2=C^2 k^2+Omega^2 with Omega>0, v_g=C sqrt(1-Omega^2/omega^2), v_phase=omega/k, C_front=C; a finite-frequency group packet is strictly below the characteristic. C_causal is the largest relevant characteristic of coupled sectors, not a synonym for the electromagnetic front. A static profile conserves coordinate frequency; increasing C at fixed Omega increases group speed. Keep the local ceiling and the age-dependent transport mechanism distinct. Check local clock ratios, anisotropy, Cassini and multimessenger lags; these constrain couplings, not a declaration about physical time. Chapter 30Q demonstrates that matched local polarization dispersion does not imply matched boundary transmission."
+  },
+  {
+    "topic": "ceiling",
+    "id": "C01-05",
+    "status": "test design",
+    "refs": [
+      [
+        "C01-M",
+        13,
+        15
+      ],
+      [
+        "C01-M",
+        46,
+        56
+      ],
+      [
+        "C01-H",
+        602,
+        688
+      ]
+    ],
+    "title": "Operational calibration and void experiment",
+    "body": "Compare two bands, arrival phases, physical clocks and a separate signal channel across density profiles; preregister source emission lag, plasma dispersion, line-of-sight mass, clock calibration and held-out sightlines. The fixed SI numerical c0 is a unit reference. A common change in all dimensional standards need not be observable. Vacuum-polarization analogies are optional motivation only, not verified photon hopping. Report actual parameters and tests; the explorer likelihood graphics are not independent datasets."
+  },
+  {
+    "topic": "photons",
+    "id": "P-01",
+    "status": "corrected analytic",
+    "refs": [
+      [
+        "P-M",
+        7,
+        15
+      ],
+      [
+        "P-H",
+        569,
+        585
+      ]
+    ],
+    "title": "Gauge-consistent positive-gap photon architecture",
+    "body": "Keep Stueckelberg A1 and a separately developed environmental Higgs A2 as candidates, not observed rest mass. Correct the Markdown dispersion typo: u=Cp/E_m, E=sqrt(C^2 p^2+E_m^2); v_g=C u/sqrt(1+u^2), v_phase=C sqrt(1+u^2)/u for u>0. Use the gauge-invariant combinations and full matched coefficients in Chapter 30L, with two transverse and one longitudinal mode for a positive gap. Positivity of a mass coefficient alone is not a ghost/stability proof. Distinguish fixed gap, fixed invariant mass, and effective medium gap. In the regulator law I denotes the matter-sourced field, not photon intensity by default."
+  },
+  {
+    "topic": "photons",
+    "id": "P-02",
+    "status": "candidate",
+    "refs": [
+      [
+        "P-H",
+        580,
+        586
+      ],
+      [
+        "P-M",
+        11,
+        13
+      ]
+    ],
+    "title": "Environmental gap and phase-dependent limits",
+    "body": "A physical charged condensate with a local potential of the form lambda_phi (|Phi|^2-v(I)^2)^2/4 is worth developing. Derive the full gauge-covariant kinetic term, gap normalization, stress-energy and stability; environmental phases may change the applicability of uniform Proca bounds, but do not automatically evade them. Use a fixed charge current, independent scalar dynamics and a matching static force-range calculation before predicting spectroscopy."
+  },
+  {
+    "topic": "photons",
+    "id": "P-03",
+    "status": "corrected analytic",
+    "refs": [
+      [
+        "P-H",
+        622,
+        640
+      ],
+      [
+        "P-M",
+        76,
+        90
+      ]
+    ],
+    "title": "Atomic recoil and independent force-range test",
+    "body": "For an excited emitter at rest of mass M_i decaying into final mass M_f and a massive vector of mass m_gamma, assuming common constant C and relativistic two-body kinematics, E_gamma=(M_i^2-M_f^2+m_gamma^2)C^2/(2 M_i). Emission requires M_i>=M_f+m_gamma. Recoil is carried by the final atom; detector absorption needs an analogous ledger. In the matched model ell_Y=C/Omega= hbar/(m_gamma C), and leading hydrogen 1S-2S fractional correction is -6(a_B/ell_Y)^2 in weak screening with fixed matter parameters. The order-1/ell constant potential offset cancels in a line difference. Leading fixed-gap radio group delay scales as frequency^(-2), not frequency^(-1); plasma and mass terms must be separated. Correct kg/eV conversion: 10^(-18) eV/c^2 is approximately 1.783e-54 kg, and ell_Y approximately 1.973e11 m at c0, not necessarily larger than all cosmic distances. The explorer numerical table is not an independent atomic fit."
+  },
+  {
+    "topic": "photons",
+    "id": "P-04",
+    "status": "candidate with acceptance gate",
+    "refs": [
+      [
+        "P-M",
+        19,
+        25
+      ],
+      [
+        "P-H",
+        498,
+        519
+      ],
+      [
+        "P-H",
+        588,
+        593
+      ]
+    ],
+    "title": "Reciprocal aging and causal memory",
+    "body": "Advance a weak bath coupled to the massive vector and physical matter, with local energy and momentum transfer, finite capacity, temperature-dependent absorption/emission, and a causal susceptibility. The explorer suggests chi(omega)=g_c^2/(omega_b^2-omega^2-i gamma_b omega) for exp(-i omega T); a passive damped oscillator can be a retarded response with gamma_b>=0. Derive spectral positivity, noise and reciprocal coupling from an action or controlled open-system limit. A bounded multiplicative history rate dp/dT=-gamma_0 s(T)p with s(T)=1-exp(-T/tau_M) keeps p positive for p0>0, but positivity alone does not prove monotone group speed in varying C, physical dissipation, or time stretch. No independent long-term drag mechanism established."
+  },
+  {
+    "topic": "photons",
+    "id": "P-05",
+    "status": "test design",
+    "refs": [
+      [
+        "P-H",
+        800,
+        867
+      ],
+      [
+        "P-M",
+        69,
+        74
+      ],
+      [
+        "P-M",
+        94,
+        98
+      ]
+    ],
+    "title": "Transport diagnostics and closed ledger",
+    "body": "Track wave energy, recipient excitation, heat, particle recoil, boundary flux and total momentum separately. Require centroid speed, spectrum, image angle and polarization at multiple resolutions and fixed physical source width. The HTML arrays at lines 800-867 are hard-coded display values, not evidence of executed PDE convergence; do not promote their claimed drift or blue-shift as new results. Use the actual Chapter 30S bath-recoil solver and 30P/30Q controls. Quantify energy deposition and cosmological redshift/time-stretch jointly; no automatic identification of deposited energy with dark matter."
+  },
+  {
+    "topic": "clocks",
+    "id": "T-01",
+    "status": "research premise and observable",
+    "refs": [
+      [
+        "T-M",
+        5,
+        19
+      ],
+      [
+        "C01-H",
+        726,
+        728
+      ],
+      [
+        "D-H",
+        1212,
+        1224
+      ]
+    ],
+    "title": "Universal ordering and physical clock response",
+    "body": "T is the proposed constant ordering coordinate (When); x labels Where. A local physical clock records N_j=integral nu_j(x,v,T)dT; for radians divide phase by 2 pi. Reproduce measured rate ratios for optical, microwave, nuclear and unstable-particle clocks. A preferred coordinate alone does not imply an experimentally detectable preferred frame; detection depends on the constitutive dynamics. Do not treat coordinate choice as a derived clock mechanism. Standard relativistic predictions are comparison controls, not an ontological command to discard the charter."
+  },
+  {
+    "topic": "clocks",
+    "id": "T-02",
+    "status": "test design",
+    "refs": [
+      [
+        "T-M",
+        21,
+        33
+      ],
+      [
+        "T-M",
+        69,
+        81
+      ],
+      [
+        "G-M",
+        5,
+        7
+      ]
+    ],
+    "title": "Inherited motion and relational inertia",
+    "body": "Uniform inherited motion need not register as proper acceleration. Model how changes of distant sources arrive through a retarded field and couple to matter, not instantaneous global feedback. Use frame-dragging, equivalence, orientation and velocity-dependent clock comparisons to bound the coupling. Sciama-style inertia is a motivation, not a measurement. Derive an observable clock/cavity or matter response before proposing a rest-frame detector."
+  },
+  {
+    "topic": "clocks",
+    "id": "T-03",
+    "status": "analytic and test gate",
+    "refs": [
+      [
+        "T-M",
+        35,
+        53
+      ],
+      [
+        "P-H",
+        87,
+        94
+      ],
+      [
+        "P-H",
+        498,
+        514
+      ],
+      [
+        "P-M",
+        51,
+        67
+      ]
+    ],
+    "title": "Moving sources plus weak transport aging",
+    "body": "Prioritize a hybrid model in which physical recession produces arrival stretch while a physically justified bath contributes a separately computed propagation-energy shift. Stationary identical packets at stationary endpoints have dT_a/dT_e=1, regardless of energy loss. If stable clock standards and an assumed kinematic sector give A=1+z_kin, with (1+z)=(1+z_kin)(1+z_diss), then A=(1+z)/(1+z_diss). The effective exponent is ln A/ln(1+z); use the DES time-stretch likelihood, not a universal fixed 0.5–1% fraction copied from an explorer. The latter requires a specific redshift/fraction model, covariance and confidence level. 30R derives moving-endpoint timing; 30S tests microscopic recoil. For one-dimensional forward propagation in a common coordinate frame, let signed source and receiver velocities be w_e and w_a (positive toward the receiver). On a smooth ray family satisfying x_r(T_a)-x_e(T_e)=integral from T_e to T_a of v(T;T_e)dT, implicit differentiation gives A=[v(T_e;T_e)-w_e-integral of partial_(T_e) v(T;T_e)dT]/[v(T_a;T_e)-w_a], provided the denominator is nonzero and the same arrival branch is followed. For an age-only speed law v(T-T_e), A=(v_arr-w_e)/(v_arr-w_a); for a common absolute-time law v(T), A=(v_emit-w_e)/(v_arr-w_a). Physical clock interval ratio multiplies A by nu_receiver/nu_emitter; spectral frequency instead follows local phase rate omega-k dot w and clock calibration. These are distinct observables. Do not multiply energy loss by an independent arrival factor without deriving it. The original pulse formula and assertion of verified DES agreement are not promoted."
+  },
+  {
+    "topic": "clocks",
+    "id": "T-04",
+    "status": "definitions and test design",
+    "refs": [
+      [
+        "T-M",
+        55,
+        67
+      ],
+      [
+        "T-M",
+        73,
+        75
+      ],
+      [
+        "C01-H",
+        708,
+        710
+      ]
+    ],
+    "title": "Different causal reaches",
+    "body": "Keep packet reach, electromagnetic front reach, all-sector causal reach, observed survey reach and total domain size/age distinct. Integrate actual characteristics in the selected model and include endpoint motion. GW/EM arrival lags combine intrinsic emission timing and travel delays; they are not a master clock nor proof of a gravitational signal traveling faster. Test achromatic source light-curve stretch and frequency-dependent delays separately."
+  },
+  {
+    "topic": "distances",
+    "id": "D-01",
+    "status": "corrected analytic",
+    "refs": [
+      [
+        "D-M",
+        3,
+        18
+      ],
+      [
+        "D-M",
+        31,
+        34
+      ]
+    ],
+    "title": "Distance modulus, dust and signed distance ratio",
+    "body": "For calibrated luminosity and extinction A_lambda, m-M=5 log10(D_L/10 pc)+A_lambda. One Mpc gives 25 mag without extinction. Ignoring positive extinction overestimates distance by 10^(A_lambda/5). For two moduli on the same calibration, D_method/D_anchor=10^[(mu_method-mu_anchor)/5]; signed ratio is this minus one (not the linearized modulus difference except at small offsets). Use 3D dust, extinction law, blending and metallicity as explicit nuisance variables, not a universal propagation correction."
+  },
+  {
+    "topic": "distances",
+    "id": "D-02",
+    "status": "source-reported anchors",
+    "refs": [
+      [
+        "D-M",
+        22,
+        29
+      ],
+      [
+        "D-H",
+        897,
+        920
+      ],
+      [
+        "D-H",
+        575,
+        581
+      ]
+    ],
+    "title": "Independent geometry and local calibration",
+    "body": "Retain Gaia parallax/zero-point, detached eclipsing binaries and water megamasers as distinct anchor methods. Source-reported LMC 49.59 kpc (0.09 stat, 0.54 syst) and NGC 4258 7.576 Mpc (0.082 stat, 0.076 syst) are literature lookup targets; SMC and M31 cross-checks remain useful. Do not import explorer \"maximum shift\" values as measured bounds. Calibrate radar, parallax, binary dynamics and maser observables under the proposed field theory. Large distance corrections must preserve independent geometry."
+  },
+  {
+    "topic": "distances",
+    "id": "D-03",
+    "status": "repaired candidate",
+    "refs": [
+      [
+        "D-H",
+        176,
+        228
+      ],
+      [
+        "D-H",
+        641,
+        662
+      ]
+    ],
+    "title": "One Mpc sign reversal with consistent endpoint velocities",
+    "body": "The supplied JavaScript distance integral is D/(c0 tau0)=x+(eta/g-1)[x-(1-exp(-g x))/g], x=tau/tau0, g=gamma tau0. It does NOT integrate the separately displayed emission/arrival speeds. A consistent interpretation uses lookback s from arrival and v(s)/c0=1+(eta/g-1)(1-exp(-g s/tau0)), 0<=s<=tau: arrival is c0 and emission is v(tau). For eta>g, speed is larger in the past and decreases toward arrival, so D_TOF/D<1; eta=g gives equality; eta<g reverses the sign and is not an aging solution. This repairs the kinematic illustration only, not the source-independent physical propagation law. Fixed initial speed c0 with subsequent slowing gives the opposite TOF sign. No distance or light travel age is inferred from redshift alone."
+  },
+  {
+    "topic": "distances",
+    "id": "D-04",
+    "status": "candidate and derivation gate",
+    "refs": [
+      [
+        "D-H",
+        129,
+        134
+      ],
+      [
+        "D-H",
+        279,
+        308
+      ],
+      [
+        "D-H",
+        840,
+        852
+      ],
+      [
+        "D-H",
+        1260,
+        1277
+      ]
+    ],
+    "title": "Entrained 3D physical outflow",
+    "body": "Explore physical positions x=S(T) chi and velocity u_m=(dot S/S)x, where S labels trajectories rather than a material spatial substrate. For an explicitly assumed entrained propagation law dx/dT=u_m+C(T)n in a homogeneous model, dchi/dT=C(T)n/S(T). The comoving coordinate path is integral C/S dT. Derive emission and arrival angle maps, matter-clock conversions and phase transport from an action before identifying D_A=S_e chi, D_G=S_a chi, A=1+z, or conventional duality. These identities may be recovered only under additional endpoint and redshift assumptions. Do not reuse chart ratios, imposed high-z compression or a reference LambdaCDM curve as independent predictions."
+  },
+  {
+    "topic": "distances",
+    "id": "D-05",
+    "status": "conditional analytic",
+    "refs": [
+      [
+        "D-H",
+        292,
+        308
+      ],
+      [
+        "D-M",
+        47,
+        55
+      ],
+      [
+        "D-H",
+        132,
+        134
+      ]
+    ],
+    "title": "Lensing and flux must be paired",
+    "body": "For a specified magnification mu and unchanged source, effective angular-area distance scales as D_A/sqrt(mu); flux increases by mu, with effective luminosity distance D_L/sqrt(mu) if emitted luminosity is fixed. Magnification is sightline-specific and selection-biased; it is not a universal smaller-object correction. Use the 30R/Part XXVI two-direction optical ledger: F=L_e T_surv/(4 pi D_G^2 Z_E A). Derive both directional Jacobi maps, source and receiver rates and extinction. Jointly test surface brightness, flux, angle and arrival time."
+  },
+  {
+    "topic": "distances",
+    "id": "D-06",
+    "status": "conditional sensitivity and source leads",
+    "refs": [
+      [
+        "D-H",
+        375,
+        390
+      ],
+      [
+        "D-H",
+        988,
+        1096
+      ],
+      [
+        "G-H",
+        324,
+        325
+      ]
+    ],
+    "title": "Extreme objects and classification controls",
+    "body": "Keep WOH G64, HV 888, HV 11423, the M31 candidate, Holmberg 15A, Phoenix A and TON 618 as individual dossiers, not a single correction factor. WOH G64 has dust/temperature/geometry sensitivity; HV objects require temperature, extinction and membership; M31 candidate lacks verified primary parameters in the explorer; Holmberg 15A dynamical mass depends on orbit modeling; Phoenix A indirect masses are not direct measurements; TON 618 virial calibration and luminosity are model-dependent. At fixed temperature and bolometric flux, R_star scales with D_L and L with D_L^2. A virial mass with R_BLR proportional to L^a scales with D_L^(2a) at fixed velocity and calibration; an Eddington-luminosity mass scales with D_L^2 only if Eddington ratio is fixed. Foreground dwarf contamination must be separated from spectroscopically verified high-redshift galaxies; proper motion and spectra are independent checks. Do not import unverified object masses or revised classifications without primary-source validation."
+  },
+  {
+    "topic": "distances",
+    "id": "D-07",
+    "status": "test design",
+    "refs": [
+      [
+        "D-M",
+        57,
+        74
+      ],
+      [
+        "D-H",
+        305,
+        308
+      ]
+    ],
+    "title": "Covariance-aware distance inference",
+    "body": "Build a data vector of raw angles, fluxes, calibrated magnitudes, parallaxes, line spectra and time delays. Fit physical parameters and shared calibration nuisance terms with a documented covariance, holdout sample and same observables for the control. The Markdown claims a completed ladder fit, posterior chains and code not supplied in this intake. Do not use its claimed H0 posterior or residual scatter as a verified result. A smaller inferred size is conditional on independently constrained distance and object model, not a predetermined fit outcome."
+  },
+  {
+    "topic": "bubbles",
+    "id": "B-01",
+    "status": "candidate and control",
+    "refs": [
+      [
+        "B-M",
+        3,
+        15
+      ],
+      [
+        "B-M",
+        17,
+        28
+      ]
+    ],
+    "title": "Physical domains and wall geometry",
+    "body": "Investigate finite-width matter/field domains, cavity and exterior densities, pressure, wall inertia and retarded attractive/tidal couplings as physical structures. Circular overlap is a geometry toy, not a collision solver. Inflationary collision templates are comparison models; do not import material spacetime into ArcSecs or infer a physical wall from the observable horizon. Use Chapters 30A-30D and 30R as existing source-field controls."
+  },
+  {
+    "topic": "bubbles",
+    "id": "B-02",
+    "status": "test design",
+    "refs": [
+      [
+        "B-M",
+        30,
+        38
+      ],
+      [
+        "B-M",
+        40,
+        49
+      ]
+    ],
+    "title": "Blinded multi-channel domain search",
+    "body": "Use a predicted angular template, amplitude/radius, foreground masks, temperature and E-mode polarization, large-scale structure and possibly 21-cm or gravitational signals. Joint correlations and null injections help reject chance alignments; account for look-elsewhere trials and selection. CMB circle and polarization patterns are candidate-model dependent, not unique evidence of another domain. Published null searches are constraints to retain; no neighboring bubble detection is established in the supplied material."
+  },
+  {
+    "topic": "bubbles",
+    "id": "B-03",
+    "status": "open research",
+    "refs": [
+      [
+        "B-M",
+        46,
+        57
+      ],
+      [
+        "C01-H",
+        741,
+        748
+      ]
+    ],
+    "title": "Domain dynamics and causal exchange",
+    "body": "Test finite wall inertia, energy and momentum flux, source recoil, stability and retarded exterior forces before asserting birth, death or collisions of domains. Use the finite-range regulator as one independently specified field, not an automatic gravity or aging mechanism. Separate total unknown cosmic size and age from observable reach and stellar ages. Cross-probe predictions must follow from the same wall parameters, with simulation and survey controls."
+  },
+  {
+    "topic": "gravity",
+    "id": "G-01",
+    "status": "candidate",
+    "refs": [
+      [
+        "G-M",
+        3,
+        7
+      ],
+      [
+        "G-H",
+        517,
+        527
+      ]
+    ],
+    "title": "Retarded spin-2 physical interaction (M1)",
+    "body": "Retain M1 as the gravity architecture to investigate: symmetric rank-2 field h_ab on mathematical labels (T,x), universal coupling to total conserved stress-energy, with a distinct screened regulator and positive-gap photon sector. The explorer lists leading PPN, tensor-wave and equivalence controls. These are targets or inherited weak-field results, not a completed alternative gravity theory. Derive consistent nonlinear self-coupling, constraints, positive propagating degrees of freedom, matter clock response, conservation and observable predictions; if mathematically equivalent to metric gravity in a regime, say so. No material spacetime substance is required as an ontological interpretation."
+  },
+  {
+    "topic": "gravity",
+    "id": "G-02",
+    "status": "test design",
+    "refs": [
+      [
+        "G-M",
+        13,
+        23
+      ],
+      [
+        "G-H",
+        524,
+        527
+      ],
+      [
+        "G-H",
+        546,
+        551
+      ]
+    ],
+    "title": "Gravity and dark-sector discrimination",
+    "body": "Use the same total source ledger for solar bending, Shapiro delay, equivalence tests, orbital losses, tensor polarization, rotation curves and merging-cluster lensing. A candidate cold component must have independently derived stress, phase-space dynamics, clustering and lensing; adding a fit function to baryons is not sufficient. M1 and a cold reservoir are candidates, not mandatory established entities. Source-provided PASS/FAIL labels are not substitutes for quantitative reruns or primary measurements."
+  },
+  {
+    "topic": "gravity",
+    "id": "G-03",
+    "status": "conditional analytic",
+    "refs": [
+      [
+        "G-H",
+        273,
+        325
+      ],
+      [
+        "G-H",
+        596,
+        607
+      ]
+    ],
+    "title": "Capture, escape and local versus coordinate velocities",
+    "body": "Investigate positive-gap capture through a defined gravitational Hamiltonian and calibrated observers. Distinguish local group speed, coordinate trajectory speed, phase, critical impact parameter, and observed shadow/emission geometry. A local outward-climb speed and a coordinate speed need not have the same derivative. Reproduce the conventional compact-object control before claiming a new horizon or altered capture radius. Do not use a calculated shadow scale as an independent mass measurement."
+  },
+  {
+    "topic": "gravity",
+    "id": "G-04",
+    "status": "candidate with acceptance gate",
+    "refs": [
+      [
+        "G-M",
+        9,
+        13
+      ],
+      [
+        "G-M",
+        19,
+        21
+      ],
+      [
+        "G-H",
+        361,
+        410
+      ],
+      [
+        "P-H",
+        95,
+        99
+      ]
+    ],
+    "title": "Energy recipient and momentum exchange",
+    "body": "Account for deposited radiation with explicit receiver degrees of freedom, density, pressure, recoil and energy source. Distinguish rest energy of stopped packets, transferred energy and an independently sourced cold component. A present-day radiation density is not an integrated historical energy ledger. Any dark-sector or propulsion application requires actual flux, collection cross-section, interaction and reaction momentum plus power and losses; no claimed propulsion performance is promoted."
+  }
+]

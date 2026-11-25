@@ -1,0 +1,13 @@
+check,computed,expected,status
+1 Mpc modulus,25.0,25,PASS
+exponential TOF at r=0.5,1.3862943611198906,1.3862943611198906,PASS
+fixed packet moving source arrival map,1.625,1.625,PASS
+mass conversion kg,1.7826619216278978e-54,1.782661921e-54,PASS
+optical group deficit 500 THz,1.16933439549011e-37,1.16e-37..1.18e-37,PASS
+fixed gap deficit z=1,1.9999999999999998e-32,2e-32,PASS
+CMB remnant ratio,3.2481552660924856e-19,3.25e-19,PASS
+ideal collector force,5.1768639999999995e-09,5.176864e-09,PASS
+Yukawa central integral q=0.01,0.9933582668053178,0.9933582668031349,PASS
+Yukawa central integral q=0.1,0.9357680320888937,0.9357680320888793,PASS
+Yukawa central integral q=1,0.5284822353142308,0.5284822353142307,PASS
+Yukawa central integral q=10,0.019990012015452252,0.019990012015452256,PASS

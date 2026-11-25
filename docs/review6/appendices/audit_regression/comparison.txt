@@ -1,0 +1,1 @@
+21 case outcomes reproduced; max absolute endpoint difference 0 across ['arrival_time', 'speed', 'retained', 'gap', 'heat', 'recoil', 'wall_recoil']. Same supplied independent implementation; not another independently designed experiment.

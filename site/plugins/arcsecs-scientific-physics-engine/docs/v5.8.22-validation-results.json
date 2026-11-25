@@ -1,0 +1,56 @@
+{
+  "version": "5.8.27",
+  "package": "arcsecs-v5.8.27-public-demo-page-assembly-copy-review-bundle-package.zip",
+  "feature": "Public Demo Page Assembly Checklist and Copy Review Bundle",
+  "generatedUtc": "2026-06-02T16:09:29.168631+00:00",
+  "validation": "source validations passed; ZIP validations pending final package build",
+  "commands": [
+    {
+      "command": "find assets/js -name '*.js' -print0 | xargs -0 -n1 node --check",
+      "result": "passed"
+    },
+    {
+      "command": "php -l arcsecs-scientific-physics-engine.php",
+      "result": "passed"
+    },
+    {
+      "command": "find includes -name '*.php' -print0 | xargs -0 -n1 php -l",
+      "result": "passed"
+    },
+    {
+      "command": "npm run build",
+      "result": "passed"
+    },
+    {
+      "command": "npm run lint",
+      "result": "passed"
+    },
+    {
+      "command": "npm run test:js",
+      "result": "passed",
+      "details": "91 Node tests passed"
+    },
+    {
+      "command": "npm run test:php",
+      "result": "passed"
+    },
+    {
+      "command": "npm test",
+      "result": "passed"
+    },
+    {
+      "command": "unzip -t arcsecs-v5.8.27-public-demo-page-assembly-copy-review-bundle-package.zip",
+      "result": "pending until final ZIP check"
+    },
+    {
+      "command": "ZIP package identity check",
+      "result": "pending until final ZIP check"
+    }
+  ],
+  "notRun": [
+    {
+      "command": "npm run test:e2e",
+      "reason": "No tests/e2e directory exists; no heavy browser-test dependency was added."
+    }
+  ]
+}

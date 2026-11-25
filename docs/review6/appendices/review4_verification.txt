@@ -1,0 +1,62 @@
+Automated regression assertions; not independent physical experiments. Adaptive extrema searches are not rigorous interval certificates.
+PASS wall ledger 0
+PASS wall ledger 1
+PASS wall ledger 2
+PASS wall ledger 3
+PASS wall ledger 4
+PASS wall ledger 5
+PASS wall ledger 6
+PASS wall ledger 7
+PASS wall ledger 8
+PASS wall ledger 9
+PASS wall ledger 10
+PASS wall ledger 11
+PASS baseline arrives and searched max derivative negative
+PASS two independent algorithms agree at baseline endpoint
+PASS negative control reaccelerates
+PASS timeout explicitly classified
+PASS threshold stop explicitly classified
+PASS linear strong-drag stop
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS bounded flow quadrature and ceiling
+PASS nonentrained vacuum limit common speed constant
+PASS slower medium can still accelerate common speed
+PASS clock stretch finite difference
+PASS binary channel energy conservation
+PASS both allowed and closed channels
+PASS equilibrium balances forward reverse
+PASS impedance matched fixed mass gives blueshift
+PASS high precision bath upper deficit

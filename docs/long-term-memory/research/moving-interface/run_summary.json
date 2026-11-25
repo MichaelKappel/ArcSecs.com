@@ -1,0 +1,194 @@
+{
+  "status": "synthetic dimensionless closed collective-coordinate system, NOT measured data",
+  "parameters": {
+    "length": 32.0,
+    "nodes": 128,
+    "chi": 1.0,
+    "kappa": 0.8,
+    "scalar_mass_sq": 1.0,
+    "scalar_background": 1.0,
+    "coupling_density": 3.0,
+    "density_peak": 4.0,
+    "slab_sigma": 1.0,
+    "a": 0.12,
+    "b": 0.18,
+    "slab_mass": 70.0,
+    "pulse_center": -10.0,
+    "pulse_sigma": 1.8,
+    "pulse_k": 2.5,
+    "pulse_amplitude": 0.12,
+    "t_final": 18.0
+  },
+  "runs": {
+    "moving_plus": {
+      "max_relative_energy_drift": 3.748402233067101e-11,
+      "max_absolute_momentum_drift": 1.7586234690725178e-09,
+      "first": {
+        "E_total": 2.4844527847321456,
+        "E_em": 0.12288691159175272,
+        "E_scalar": 2.318690873140393,
+        "E_matter": 0.04287500000000001,
+        "P_total": 2.608546189617728,
+        "P_field": 0.15854618961772782,
+        "P_matter": 2.45,
+        "slab_x": 0.0,
+        "slab_v": 0.035,
+        "center_psi": 0.08274665299399656
+      },
+      "last": {
+        "E_total": 2.4844527846654545,
+        "E_em": 0.12233741164875442,
+        "E_scalar": 2.3191593708425895,
+        "E_matter": 0.04295600217411038,
+        "P_total": 2.608546187886846,
+        "P_field": 0.15623293212700062,
+        "P_matter": 2.4523132557598455,
+        "slab_x": 0.6315153036893277,
+        "slab_v": 0.03503304651085493,
+        "center_psi": 0.08377405796871697
+      },
+      "ray": {
+        "initial_x": -7.5,
+        "final_x": 8.67707323672957,
+        "final_log_frequency_ratio": -0.005794572118215809,
+        "final_frequency_ratio": 0.9942221840342671
+      }
+    },
+    "stationary": {
+      "max_relative_energy_drift": 6.053401333688689e-11,
+      "max_absolute_momentum_drift": 1.804517174575082e-09,
+      "first": {
+        "E_total": 2.4413016527652327,
+        "E_em": 0.12288691159175272,
+        "E_scalar": 2.31841474117348,
+        "E_matter": 0.0,
+        "P_total": 0.14276722007984693,
+        "P_field": 0.14276722007984693,
+        "P_matter": 0.0,
+        "slab_x": 0.0,
+        "slab_v": 0.0,
+        "center_psi": 0.08274665299399656
+      },
+      "last": {
+        "E_total": 2.441301652704879,
+        "E_em": 0.12241476566500029,
+        "E_scalar": 2.3188868629667345,
+        "E_matter": 2.407314422394605e-08,
+        "P_total": 0.14276721836329473,
+        "P_field": 0.14093139696910834,
+        "P_matter": 0.0018358213941863863,
+        "slab_x": 0.0014268639648832295,
+        "slab_v": 2.6226019916948376e-05,
+        "center_psi": 0.08222947872211428
+      },
+      "ray": {
+        "initial_x": -7.5,
+        "final_x": 8.65198378546888,
+        "final_log_frequency_ratio": -0.005887376627304244,
+        "final_frequency_ratio": 0.9941299200138778
+      }
+    },
+    "moving_minus": {
+      "max_relative_energy_drift": 7.989968247513296e-11,
+      "max_absolute_momentum_drift": 1.864359777670188e-09,
+      "first": {
+        "E_total": 2.4844527847321456,
+        "E_em": 0.12288691159175272,
+        "E_scalar": 2.318690873140393,
+        "E_matter": 0.04287500000000001,
+        "P_total": -2.323011749458034,
+        "P_field": 0.12698825054196605,
+        "P_matter": -2.45,
+        "slab_x": 0.0,
+        "slab_v": -0.035,
+        "center_psi": 0.08274665299399656
+      },
+      "last": {
+        "E_total": 2.48445278469181,
+        "E_em": 0.12246802709126459,
+        "E_scalar": 2.3191558473376848,
+        "E_matter": 0.04282891026286025,
+        "P_total": -2.323011751263124,
+        "P_field": 0.12567104501744678,
+        "P_matter": -2.4486827962805706,
+        "slab_x": -0.6286550907265328,
+        "slab_v": -0.03498118280400815,
+        "center_psi": 0.08338850062665834
+      },
+      "ray": {
+        "initial_x": -7.5,
+        "final_x": 8.628472229047896,
+        "final_log_frequency_ratio": -0.005938787574895906,
+        "final_frequency_ratio": 0.9940788121664234
+      }
+    },
+    "no_light": {
+      "max_relative_energy_drift": 5.340580884568024e-14,
+      "max_absolute_momentum_drift": 1.808331262509455e-12,
+      "first": {
+        "E_total": 2.361565873140393,
+        "E_em": 0.0,
+        "E_scalar": 2.318690873140393,
+        "E_matter": 0.04287500000000001,
+        "P_total": 2.465778969537881,
+        "P_field": 0.015778969537880893,
+        "P_matter": 2.45,
+        "slab_x": 0.0,
+        "slab_v": 0.035,
+        "center_psi": 0.08274665299399656
+      },
+      "last": {
+        "E_total": 2.3615658731403584,
+        "E_em": 0.0,
+        "E_scalar": 2.3186910604722093,
+        "E_matter": 0.04287481266814915,
+        "P_total": 2.4657789695378685,
+        "P_field": 0.015784321882310527,
+        "P_matter": 2.449994647655558,
+        "slab_x": 0.6299985052374071,
+        "slab_v": 0.03499992353793654,
+        "center_psi": 0.08341892089351029
+      },
+      "ray": {
+        "initial_x": -7.5,
+        "final_x": 8.678456573652504,
+        "final_log_frequency_ratio": 2.6452943489491422e-05,
+        "final_frequency_ratio": 1.0000264532933716
+      }
+    },
+    "static_no_light": {
+      "max_relative_energy_drift": 1.9154864829115264e-16,
+      "max_absolute_momentum_drift": 9.948218046165542e-16,
+      "first": {
+        "E_total": 2.31841474117348,
+        "E_em": 0.0,
+        "E_scalar": 2.31841474117348,
+        "E_matter": 0.0,
+        "P_total": 0.0,
+        "P_field": -0.0,
+        "P_matter": 0.0,
+        "slab_x": 0.0,
+        "slab_v": 0.0,
+        "center_psi": 0.08274665299399656
+      },
+      "last": {
+        "E_total": 2.31841474117348,
+        "E_em": 0.0,
+        "E_scalar": 2.31841474117348,
+        "E_matter": 1.5200863591233413e-33,
+        "P_total": -8.164205718108694e-16,
+        "P_field": -1.2777361799115143e-15,
+        "P_matter": 4.613156081006449e-16,
+        "slab_x": -1.1853613683907434e-16,
+        "slab_v": 6.590222972866355e-18,
+        "center_psi": 0.08274665299510747
+      },
+      "ray": {
+        "initial_x": -7.5,
+        "final_x": 8.653419840428644,
+        "final_log_frequency_ratio": -1.2164779924448161e-11,
+        "final_frequency_ratio": 0.9999999999878352
+      }
+    }
+  }
+}

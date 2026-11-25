@@ -1,0 +1,166 @@
+{
+  "baseline": {
+    "K": 10,
+    "N": 96,
+    "length": 6.283185307179586,
+    "sigma": 0.32,
+    "scalar_bg": 0.1,
+    "scalar_mass2": 1.4,
+    "scalar_speed2": 0.8,
+    "electric_response": 0.28,
+    "magnetic_response": 0.17,
+    "spring": 4.8,
+    "spring_scalar": 0.7,
+    "screen": 2.4,
+    "charge": 0.45,
+    "internal_mass": 1.0,
+    "center_mass": 13.0,
+    "duration": 12.0,
+    "output_count": 301
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "parameters": {
+        "K": 10,
+        "N": 96,
+        "length": 6.283185307179586,
+        "sigma": 0.32,
+        "scalar_bg": 0.1,
+        "scalar_mass2": 1.4,
+        "scalar_speed2": 0.8,
+        "electric_response": 0.28,
+        "magnetic_response": 0.17,
+        "spring": 4.8,
+        "spring_scalar": 0.7,
+        "screen": 2.4,
+        "charge": 0.45,
+        "internal_mass": 1.0,
+        "center_mass": 13.0,
+        "duration": 12.0,
+        "output_count": 301
+      },
+      "initial_controls": {}
+    },
+    {
+      "name": "no_excitation",
+      "parameters": {
+        "K": 10,
+        "N": 96,
+        "length": 6.283185307179586,
+        "sigma": 0.32,
+        "scalar_bg": 0.1,
+        "scalar_mass2": 1.4,
+        "scalar_speed2": 0.8,
+        "electric_response": 0.28,
+        "magnetic_response": 0.17,
+        "spring": 4.8,
+        "spring_scalar": 0.7,
+        "screen": 2.4,
+        "charge": 0.45,
+        "internal_mass": 1.0,
+        "center_mass": 13.0,
+        "duration": 12.0,
+        "output_count": 301
+      },
+      "initial_controls": {
+        "excit": 0.0
+      }
+    },
+    {
+      "name": "no_radiation",
+      "parameters": {
+        "K": 10,
+        "N": 96,
+        "length": 6.283185307179586,
+        "sigma": 0.32,
+        "scalar_bg": 0.1,
+        "scalar_mass2": 1.4,
+        "scalar_speed2": 0.8,
+        "electric_response": 0.28,
+        "magnetic_response": 0.17,
+        "spring": 4.8,
+        "spring_scalar": 0.7,
+        "screen": 2.4,
+        "charge": 0.0,
+        "internal_mass": 1.0,
+        "center_mass": 13.0,
+        "duration": 12.0,
+        "output_count": 301
+      },
+      "initial_controls": {}
+    },
+    {
+      "name": "no_screening",
+      "parameters": {
+        "K": 10,
+        "N": 96,
+        "length": 6.283185307179586,
+        "sigma": 0.32,
+        "scalar_bg": 0.1,
+        "scalar_mass2": 1.4,
+        "scalar_speed2": 0.8,
+        "electric_response": 0.28,
+        "magnetic_response": 0.17,
+        "spring": 4.8,
+        "spring_scalar": 0.7,
+        "screen": 0.0,
+        "charge": 0.45,
+        "internal_mass": 1.0,
+        "center_mass": 13.0,
+        "duration": 12.0,
+        "output_count": 301
+      },
+      "initial_controls": {}
+    },
+    {
+      "name": "stationary_centers_initially",
+      "parameters": {
+        "K": 10,
+        "N": 96,
+        "length": 6.283185307179586,
+        "sigma": 0.32,
+        "scalar_bg": 0.1,
+        "scalar_mass2": 1.4,
+        "scalar_speed2": 0.8,
+        "electric_response": 0.28,
+        "magnetic_response": 0.17,
+        "spring": 4.8,
+        "spring_scalar": 0.7,
+        "screen": 2.4,
+        "charge": 0.45,
+        "internal_mass": 1.0,
+        "center_mass": 13.0,
+        "duration": 12.0,
+        "output_count": 301
+      },
+      "initial_controls": {
+        "speed1": 0.0,
+        "speed2": 0.0
+      }
+    },
+    {
+      "name": "higher_fourier_resolution",
+      "parameters": {
+        "K": 14,
+        "N": 112,
+        "length": 6.283185307179586,
+        "sigma": 0.32,
+        "scalar_bg": 0.1,
+        "scalar_mass2": 1.4,
+        "scalar_speed2": 0.8,
+        "electric_response": 0.28,
+        "magnetic_response": 0.17,
+        "spring": 4.8,
+        "spring_scalar": 0.7,
+        "screen": 2.4,
+        "charge": 0.45,
+        "internal_mass": 1.0,
+        "center_mass": 13.0,
+        "duration": 12.0,
+        "output_count": 301
+      },
+      "initial_controls": {}
+    }
+  ]
+}
