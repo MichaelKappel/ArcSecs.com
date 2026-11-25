@@ -1,16 +1,9 @@
-# GitHub import (private first)
+# Maintaining the public ArcSecs repository
 
-Create a new **private**, empty repository `ArcSecs` under `MichaelKappel` at https://github.com/new. Do not add a README, license or .gitignore on the site: these are supplied in the working tree. From the extracted repository root:
+Repository: https://github.com/MichaelKappel/ArcSecs.com (public).
 
-```sh
-git init -b main
-git add .
-git status --short
-git commit -m "Stage integrated ArcSecs research, book and website"
-git remote add origin https://github.com/MichaelKappel/ArcSecs.git
-git push -u origin main
-```
+Use GitHub Desktop to clone, pull, edit, review diffs, commit and push. Do not force-push. Keep local credentials, private memory and unpublished backups outside the repository. Review staged changes and history for sensitive material; .gitignore is not a security boundary.
 
-Authenticate with GitHub CLI or GitHub Desktop if necessary; never put a token in the repository. If a repository already contains commits, clone it and copy the package into a new branch rather than force-pushing. GitHub Desktop can also add the extracted folder as a local repository and publish privately.
+For a versioned release, use GitHub Releases, select the intended commit or branch, create an immutable-purpose version tag, and describe the scientific and software versions separately. See RELEASE_NOTES.md for proposed first public release notes. Link an actual Zenodo DOI only after it exists.
 
-Before changing visibility to public, confirm the rights and KDP exclusivity review, audit third-party content and remove any non-cleared artifacts. Do not assign a blanket license. Link the final Zenodo DOI and create a versioned release only when the approved record exists.
+Generate a current SHA-256 manifest using tools/git_snapshot_sha256.py from a local clone; the original staging checksums are historical. GitHub Pages cannot execute WordPress PHP; use a separate tested WordPress deployment.

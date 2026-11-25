@@ -1,8 +1,7 @@
 # BEYOND SPACETIME — Review 6.0
 
-- [Hardcover interior](book.pdf): acknowledged 476-page print master, 6.14 × 9.21 inches.
-- [Kindle EPUB](book.epub): reflowable edition.
-- [Editable manuscript](book.md) and [cover](front-cover.jpg).
-- [Protected original scientific ending](review6-original.pdf): 129 pages; identical to the original scientific review.
+Free publication: [476-page PDF](book.pdf), [EPUB](book.epub), [editable Markdown](book.md), [cover](front-cover.jpg) and [original 129-page scientific ending](review6-original.pdf).
 
-Cover credit: Machine Intelligence and Michael Joseph Kappel. Gary Lyon Otto is acknowledged for VSL ideas. This is private staging, not authorization to release the commercial book electronically. Kindle conversion and exact black-ink cover template approval remain pending. The DOCX is a retained editable source; consult the Markdown/PDF for the latest acknowledged edition.
+Book credits: Machine Intelligence and Michael Joseph Kappel. Gary Lyon Otto is acknowledged for VSL ideas. Original rights-controlled literary content is dedicated under CC0 1.0 Universal; see [licensing scope](../LICENSE.md). [Buy on Amazon](https://www.amazon.com/dp/B0HST2C7LK/) for optional support.
+
+The PDF is the acknowledged print master (6.14 x 9.21 inches). Kindle conversion and exact black-ink cover template approval were not verified during original staging. The DOCX is a retained editable source; consult Markdown/PDF for the latest acknowledged edition. The research premises are not established experimental findings.
