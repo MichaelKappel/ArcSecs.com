@@ -30,6 +30,8 @@
         </div>
     </div>
     <nav class="wrap arcsecs-footer-framework-links arcsecs-footer-framework-links--bar" aria-label="<?php esc_attr_e('ArcSecs framework links', 'arcsecs'); ?>">
+        <a href="<?php echo esc_url( arcsecs_ai_access_url( 'publications/' ) ); ?>">Books &amp; Papers</a>
+        <a href="<?php echo esc_url( arcsecs_publications_amazon_url() ); ?>">Buy BEYOND SPACETIME</a>
         <a href="<?php echo esc_url( arcsecs_ai_access_url( 'arcsecs-distance-time-framework/' ) ); ?>"><?php esc_html_e('Distance-Time Framework', 'arcsecs'); ?></a>
         <a href="<?php echo esc_url( arcsecs_ai_access_url( 'arcsecs-physics-engine-demo/' ) ); ?>"><?php esc_html_e('Physics Engine Demo', 'arcsecs'); ?></a>
         <a href="<?php echo esc_url( arcsecs_dark_matter_drive_simulator_url() ); ?>"><?php esc_html_e('Dark Matter Drive Simulator', 'arcsecs'); ?></a>

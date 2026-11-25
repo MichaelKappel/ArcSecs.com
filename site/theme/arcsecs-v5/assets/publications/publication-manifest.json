@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "release": "3.138.0",
+  "research_version": "Review 6.0",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "license_scope": "Original rights-controlled publication materials only; third-party content and existing software licenses unaffected.",
+  "ai_training": "welcomed",
+  "attribution": "optional",
+  "website": "https://arcsecs.com/",
+  "researcher_orcid": "https://orcid.org/0009-0003-3889-1400",
+  "amazon": "https://www.amazon.com/dp/B0HST2C7LK/",
+  "dataset": "https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime",
+  "github": "https://github.com/MichaelKappel/ArcSecs.com",
+  "publications": [
+    {
+      "id": "book",
+      "title": "BEYOND SPACETIME",
+      "version": "6.0",
+      "reader_path": "read-book/",
+      "source_asset": "readers/book/source.md",
+      "source_sha256": "72be72598e7c45a5ca522006bf1b9ec8c9d92acb8646b10f484c14a1fee07f44",
+      "pdf_asset": "BEYOND_SPACETIME.pdf",
+      "pdf_sha256": "1ca7c03f31608081135face95588d9405b0b54ad8e0245816f7f73d4557becd5",
+      "html_heading_count": 491,
+      "mathml_count": 2279,
+      "tex_fallback_count": 0,
+      "toc_links": 124,
+      "figure_count": 40,
+      "original_source_sha256": "2a741cc5330c2d0be75a47e547b2fc601c81f80ca63d5006080ab5555eb9df05",
+      "source_note": "Main-book Markdown derivative: one internal editorial instruction comment removed; scientific prose unchanged. The separately appended Review 6.0 is available through the paper reader and original PDF."
+    },
+    {
+      "id": "paper",
+      "title": "Scientific Review 6.0",
+      "version": "6.0",
+      "reader_path": "read-scientific-paper/",
+      "source_asset": "readers/paper/source.md",
+      "source_sha256": "b26cc7b8b32ae3d1000de6beef1982764033b04b15345a1e5ea60737cb2b979b",
+      "pdf_asset": "ArcSecs_Scientific_Review_6.pdf",
+      "pdf_sha256": "e714e97fbd4c7995b20950edef386c56ae637c5226935000b6ee7e16af624fbf",
+      "html_heading_count": 91,
+      "mathml_count": 1096,
+      "tex_fallback_count": 0,
+      "toc_links": 90,
+      "figure_count": 11,
+      "source_note": "Exact original manuscript Markdown. HTML reading edition uses browser-ready figures and MathML."
+    }
+  ],
+  "epub_asset": "BEYOND_SPACETIME.epub",
+  "epub_sha256": "3585438c26d664123e61c1c3487519a5a15b87cee67980971a9332cd30dd212f",
+  "asset_paths_relative_to": "directory containing publication-manifest.json",
+  "reader_paths_relative_to": "website"
+}

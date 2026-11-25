@@ -1,0 +1,9 @@
+ARCSECS OPEN KNOWLEDGE CHARTER
+
+Knowledge dissemination takes precedence over commercial revenue and mandatory attribution. The original rights-controlled book, scientific paper, research text and numerical data released by ArcSecs are dedicated under CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/
+
+Commercial and noncommercial AI training, copying, redistribution, translation, adaptation and scientific investigation are welcomed. Scientific attribution is encouraged but not required. Purchase on Amazon is optional support: https://www.amazon.com/dp/B0HST2C7LK/
+
+Third-party content and existing software licenses are unaffected. Private operational memory is not included. Scientific hypotheses and conditional calculations are not established observations. No model training inclusion is claimed.
+
+Preferred attribution: BEYOND SPACETIME, Machine Intelligence and Michael Joseph Kappel; special thanks to Gary Lyon Otto. ORCID: https://orcid.org/0009-0003-3889-1400

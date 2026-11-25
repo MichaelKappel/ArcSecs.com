@@ -3,8 +3,8 @@ Theme Name: ArcSecs V5
 Theme URI: https://arcsecs.com/
 Author: ArcSecs
 Author URI: https://arcsecs.com/
-Description: A refined ArcSecs cosmic magazine theme with integrated AI/crawler access, robots.txt, llms.txt, ArcSecs sitemap endpoints, bundled theme-local imagery, and preserved project handoff memory.
-Version: 3.135.0
+Description: A refined ArcSecs cosmic magazine theme with integrated AI/crawler access, robots.txt, llms.txt, ArcSecs sitemap endpoints, bundled theme-local imagery, and integrated book and scientific publication discovery.
+Version: 3.138.0
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 7.4
@@ -5506,3 +5506,60 @@ figure { margin: 2rem 0; }
     overflow-x: auto;
   }
 }
+
+/* Publications catalog — 3.138.0. Scoped to preserve existing routes. */
+.arcsecs-publications { padding-block: clamp(2rem,6vw,5rem); }
+.arcsecs-publications h1 { font-size: clamp(2.5rem,6.2vw,5rem); line-height:1.06; letter-spacing:-.035em; margin:.7rem 0 1.2rem; }
+.arcsecs-publications h2,.arcsecs-pub-feature h2 { color:var(--text); font-size:clamp(1.65rem,3vw,2.7rem); line-height:1.15; margin:.5rem 0 .8rem; }
+.arcsecs-publications h3 { margin:0 0 .7rem; font-size:1.16rem; }
+.arcsecs-publications p,.arcsecs-pub-feature p { color:var(--muted); line-height:1.72; margin:.7rem 0; }
+.arcsecs-pub-heading { max-width:850px; margin-bottom:2.3rem; }
+.arcsecs-pub-jump,.arcsecs-pub-actions { display:flex; flex-wrap:wrap; align-items:center; gap:.75rem; margin-top:1.3rem; }
+.arcsecs-pub-jump a { color:var(--blue-2); text-decoration:underline; text-underline-offset:4px; padding:.4rem 0; margin-right:1.1rem; }
+.arcsecs-pub-feature,.arcsecs-pub-book { display:grid; grid-template-columns:minmax(110px,230px) minmax(0,1fr); align-items:center; gap:clamp(1.3rem,4vw,3.5rem); border:1px solid var(--line-strong); background:linear-gradient(120deg,rgba(24,43,72,.85),rgba(5,14,30,.94)); border-radius:22px; padding:clamp(1.25rem,4vw,2.7rem); }
+.arcsecs-pub-feature { margin-block:2rem; }
+.arcsecs-pub-feature img,.arcsecs-pub-cover img { display:block; max-width:100%; height:auto; border-radius:4px; box-shadow:0 15px 35px #0008; }
+.arcsecs-pub-book { grid-template-columns:minmax(160px,320px) minmax(0,1fr); }
+.arcsecs-pub-cover { align-self:start; }
+.arcsecs-pub-subtitle { color:var(--gold)!important; font-size:clamp(1rem,2vw,1.32rem); }
+.arcsecs-pub-muted { font-size:.9rem; color:var(--muted)!important; }
+.arcsecs-pub-facts { display:grid; grid-template-columns:repeat(auto-fit,minmax(100px,1fr)); gap:1rem; padding-block:1rem; border-block:1px solid var(--line); margin:1.3rem 0; }
+.arcsecs-pub-facts dt { color:var(--muted); font-size:.75rem; text-transform:uppercase; letter-spacing:.06em; }
+.arcsecs-pub-facts dd { margin:.3rem 0 0; font-weight:650; }
+.arcsecs-pub-section { padding:clamp(1.3rem,4vw,2.8rem); margin-top:2rem; background:var(--panel); border:1px solid var(--line); border-radius:22px; scroll-margin-top:100px; }
+.arcsecs-pub-book { scroll-margin-top:100px; }
+.arcsecs-pub-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin-top:1.3rem; }
+.arcsecs-pub-grid>div { background:var(--panel-soft); border:1px solid var(--line); border-radius:12px; padding:1.25rem; min-width:0; overflow-wrap:anywhere; }
+.arcsecs-pub-grid a,.arcsecs-publications p a { color:var(--blue-2); text-decoration:underline; text-underline-offset:3px; }
+.arcsecs-pub-contents { margin-top:1.4rem; border-top:1px solid var(--line); padding-top:1.2rem; }
+.arcsecs-pub-contents summary { color:var(--blue-2); cursor:pointer; font-weight:650; padding:.4rem 0; }
+.arcsecs-pub-contents ol { columns:2; padding-left:1.5rem; color:var(--muted); }
+.arcsecs-pub-contents li { break-inside:avoid; padding:.25rem 0; }
+.arcsecs-pub-boundary { border-left:3px solid var(--gold); background:var(--panel-soft); padding:1.1rem; margin-top:1.4rem; line-height:1.6; }
+.arcsecs-pub-support { background:linear-gradient(125deg,rgba(44,34,20,.72),rgba(10,20,40,.92)); }
+.arcsecs-pub-actions a { white-space:normal; text-align:center; }
+.arcsecs-publications a:focus-visible,.arcsecs-pub-feature a:focus-visible,.arcsecs-pub-contents summary:focus-visible { outline:2px solid var(--gold); outline-offset:4px; }
+@media(max-width:760px){.arcsecs-pub-grid{grid-template-columns:1fr}.arcsecs-pub-book{grid-template-columns:1fr}.arcsecs-pub-cover{max-width:240px;margin:auto}.arcsecs-pub-feature{grid-template-columns:100px minmax(0,1fr);gap:1rem}.arcsecs-pub-contents ol{columns:1}}
+@media(max-width:440px){.arcsecs-pub-feature{grid-template-columns:1fr}.arcsecs-pub-cover-link{max-width:150px}.arcsecs-pub-actions a{width:100%}}
+
+/* Accessible, server-rendered long-form reading editions. */
+.arcsecs-reader{max-width:1050px;padding-block:clamp(1.5rem,5vw,4rem);min-width:0}
+.arcsecs-reader-intro{border:1px solid var(--line);background:var(--panel);border-radius:18px;padding:clamp(1rem,4vw,2rem);margin-bottom:2rem}
+.arcsecs-reader-intro h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.15;margin:.6rem 0}
+.arcsecs-reader-body{line-height:1.75;font-size:clamp(1rem,1.35vw,1.13rem);overflow-wrap:anywhere;min-width:0}
+.arcsecs-reader-body h1,.arcsecs-reader-body h2,.arcsecs-reader-body h3,.arcsecs-reader-body h4{line-height:1.22;margin:2rem 0 .85rem;scroll-margin-top:6rem}
+.arcsecs-reader-body h1{font-size:clamp(1.65rem,3.2vw,2.6rem)}
+.arcsecs-reader-body h2{font-size:clamp(1.35rem,2.6vw,2rem)}
+.arcsecs-reader-body h3{font-size:1.3rem}
+.arcsecs-reader-body p{margin:.85rem 0}.arcsecs-reader-body img{display:block;max-width:100%;height:auto;margin:auto;background:white;border-radius:6px}
+.arcsecs-reader-body figure{margin:1.5rem 0}.arcsecs-reader-body figcaption{font-size:.9rem;color:var(--muted)}
+.arcsecs-reader-body table{display:block;max-width:100%;overflow-x:auto;border-collapse:collapse;margin:1.2rem 0}
+.arcsecs-reader-body th,.arcsecs-reader-body td{border:1px solid var(--line);padding:.6rem;text-align:left;vertical-align:top}
+.arcsecs-reader-body pre,.arcsecs-reader-body math[display="block"],.arcsecs-reader-body .math.display{display:block;max-width:100%;overflow-x:auto;padding:.65rem 0}
+.arcsecs-reader-body a,.arcsecs-reader-intro p a{color:var(--blue-2);text-decoration:underline;text-underline-offset:3px}
+.arcsecs-reader-toc{border:1px solid var(--line);border-radius:12px;padding:1rem 1.3rem;background:var(--panel-soft);margin-bottom:2rem}
+.arcsecs-reader-toc ul{padding-left:1.3rem}.arcsecs-reader-toc li{margin:.22rem 0}
+.arcsecs-reader a:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+@media print{.arcsecs-reader-intro .arcsecs-pub-actions,.arcsecs-reader-toc{display:none}.arcsecs-reader{max-width:none}.arcsecs-reader-body{color:#111;background:#fff}}
+
+.arcsecs-reader-toc .arcsecs-toc-level-2{margin-left:1.3rem}.arcsecs-reader-toc .arcsecs-toc-level-1{font-weight:650;margin-top:.5rem}

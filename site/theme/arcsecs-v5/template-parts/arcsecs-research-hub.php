@@ -98,8 +98,8 @@ $path_cards = array(
             <div class="research-hub-hero__copy">
                 <div class="eyebrow">Start Here</div>
                 <h1 id="research-hub-title">The ArcSecs Research Hub</h1>
-                <p class="research-hub-hero__subtitle">A guided path through speculative cosmology, cosmic anomalies, simulation experiments, and AI-readable project memory.</p>
-                <p>ArcSecs is easier to understand when the site has a deliberate path: first learn the premise, then compare the frameworks, inspect the anomalies, run the demo, and finally review the handoff memory that keeps the project coherent across updates.</p>
+                <p class="research-hub-hero__subtitle">A guided path through speculative cosmology, cosmic anomalies, simulation experiments, and AI-readable scientific publications.</p>
+                <p>ArcSecs is easier to understand when the site has a deliberate path: first learn the premise, then compare the frameworks, inspect the anomalies, run the demo, and finally read the published research and datasets.</p>
                 <p class="research-hub-disclaimer"><strong>Scientific boundary:</strong> ArcSecs is experimental and speculative. The hub separates mainstream cosmology, observational pressure points, and ArcSecs hypotheses so visitors can challenge the model instead of just absorbing it.</p>
                 <div class="hero-actions research-hub-hero__actions">
                     <a class="arcsecs-button" href="#path-cards">Choose a path</a>
@@ -134,11 +134,12 @@ $path_cards = array(
         </div>
     </nav>
 
+    <?php get_template_part( 'template-parts/publications-feature' ); ?>
     <section id="primary-path" class="research-hub-section research-hub-primary-path wrap" aria-labelledby="research-hub-primary-path-title">
         <div class="research-hub-section__heading">
             <div class="eyebrow">Primary path</div>
             <h2 id="research-hub-primary-path-title">The eight-step ArcSecs reading path.</h2>
-            <p>Follow this order when the site feels too technical. It moves from premise to comparison, then evidence, then simulation, then source and memory.</p>
+            <p>Follow this order when the site feels too technical. It moves from premise to comparison, then evidence, then simulation, then scientific publications.</p>
         </div>
         <div class="research-hub-stepper" aria-label="Recommended ArcSecs reading path">
             <a href="#new-to-arcsecs"><span>01</span><strong>Start Here</strong><em>Learn the premise</em></a>
@@ -214,8 +215,8 @@ $path_cards = array(
     <section id="researcher-tools" class="research-hub-section wrap" aria-labelledby="researcher-tools-title">
         <div class="research-hub-section__heading">
             <div class="eyebrow">For AI / Researchers</div>
-            <h2 id="researcher-tools-title">Machine-readable paths and project memory.</h2>
-            <p>The public routes tell crawlers and researchers where the readable pages live. The package memory tells future AI/code agents what changed, why it changed, and which files preserve short-term versus long-term project context.</p>
+            <h2 id="researcher-tools-title">Machine-readable paths and public research.</h2>
+            <p>The public routes tell crawlers and researchers where the readable pages live. The publication catalog connects the book, scientific review, researcher identity, and structured datasets. Private operational memory is not distributed.</p>
         </div>
         <div class="research-hub-tool-grid">
             <a href="<?php echo esc_url( $ai_summary_url ); ?>"><strong>AI summary</strong><span>Physics Engine Demo context and route explanation.</span></a>

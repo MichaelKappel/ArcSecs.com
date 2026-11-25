@@ -1,3 +1,6 @@
+ArcSecs V5 3.138.0 — Open Knowledge reading editions
+Full HTML reading editions at /read-book/ and /read-scientific-paper/, source Markdown, MathML, scoped CC0 charter and machine-readable manifest. /publications/ route, book cover, Amazon purchase links, bundled free PDF/EPUB/paper and optional URL overrides, scholarly metadata and AI discovery links. See docs/publications-install.md.
+
 ArcSecs V5
 
 This version refines the ArcSecs theme with:

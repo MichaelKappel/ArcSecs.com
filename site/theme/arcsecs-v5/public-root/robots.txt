@@ -1,26 +1,11 @@
-# ArcSecs.com public crawler policy
-# Use this physical root file if WordPress virtual robots.txt is bypassed by the host.
-
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: GPTBot
-Allow: /
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
+# Install at web root only if the production site is intended to be public.
 User-agent: *
 Disallow: /wp-admin/
 Allow: /wp-admin/admin-ajax.php
+Disallow: /.uai/
+Disallow: /private/
+Disallow: /wp-content/uploads/private/
+Disallow: /wp-login.php
 Allow: /
-
-Sitemap: https://arcsecs.com/sitemap.xml
 Sitemap: https://arcsecs.com/wp-sitemap.xml
 Sitemap: https://arcsecs.com/arcsecs-sitemap.xml

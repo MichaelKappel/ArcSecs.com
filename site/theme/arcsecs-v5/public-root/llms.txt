@@ -9,8 +9,16 @@ Independent, human-directed and AI-assisted physical-first research. Proposed me
 - Research library: https://arcsecs.com/research-library/
 
 ## Publication
+- Books and papers: https://arcsecs.com/publications/
+- Purchase BEYOND SPACETIME: https://www.amazon.com/dp/B0HST2C7LK/
+- Scientific dataset: https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime
+- Research repository: https://github.com/MichaelKappel/ArcSecs.com
 - BEYOND SPACETIME — A Physical-First Investigation into the Nature of the Universe
 - Scientific Review 6.0: ArcSecs: A Physical-Process Research Program for Photon Propagation, Cosmic Distance, and Relational Inertia
 - ORCID: https://orcid.org/0009-0003-3889-1400
 
-Only publicly released and rights-cleared materials are eligible for reuse under their applicable licenses. Private project memory is not part of this repository. Crawler access alone does not confer rights or guarantee model training.
+## Open knowledge
+- Read the complete book: https://arcsecs.com/read-book/
+- Read Scientific Review 6.0: https://arcsecs.com/read-scientific-paper/
+Original rights-controlled publications are dedicated under CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/
+Commercial and noncommercial AI training and redistribution welcomed; attribution optional. Third-party rights and software licenses unaffected. Private operational memory is excluded. Crawler access does not guarantee training inclusion.

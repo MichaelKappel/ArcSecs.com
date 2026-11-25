@@ -86,6 +86,8 @@ $primary_path_cards = array(
     </div>
 </section>
 
+<?php get_template_part( 'template-parts/publications-feature' ); ?>
+
 <section class="sitewide-research-cta wrap" aria-label="ArcSecs research hub call to action">
     <div>
         <div class="eyebrow">Start Here</div>

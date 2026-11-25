@@ -64,6 +64,7 @@ $library_paths = array(
     ),
 );
 ?>
+<?php get_template_part( 'template-parts/publications-feature' ); ?>
 <article class="research-library-page" aria-labelledby="research-library-title">
     <section class="research-library-hero" id="top" aria-label="ArcSecs Research Library introduction">
         <div class="wrap research-library-hero__grid">
