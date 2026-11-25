@@ -1,15 +1,17 @@
-# Release review — private draft
+# Public release review — November 25, 2026
 
-- Confirm KDP Select status and electronic distribution rights for the full book and overlapping paper. No full-text public posting until resolved.
-- Review all third-party images, datasets, citations and historical reports for redistribution rights; do not assume a citation constitutes permission.
-- Verify human rights/contributor authority and preserve AI contribution disclosure. ORCID supplied by investigator; profile ownership not independently authenticated here.
-- Preserve existing theme/plugin GPL-2.0-or-later notices; no new license for book, paper, datasets or research software assigned.
-- Do not expose `.uai` records, private instructions, credentials, deployment logs, or opaque backups. File-path filtering is not a complete secret or rights audit; review text and assets before any public release.
-- Recheck website endpoints and crawler policies on staging. No automatic publishing, repository visibility change, or deployment.
-- Review scientific claims and distinguish assumptions, simulations and external observations.
+The investigator confirmed distribution rights and directed unrestricted dissemination of original rights-controlled scientific and literary material. GitHub visibility is public. See LICENSE.md and OPEN_KNOWLEDGE_CHARTER.md. This is not an independent legal audit or a waiver of third-party rights.
 
-See `REPOSITORY_VALIDATION.json` and `SOURCE_PROVENANCE.csv` for verified file integrity and testing scope.
+## Current verification
 
-## Validation details
+- The pre-documentation public snapshot at commit 4c88e1d5f8af6b471cd1e3fbe489810af7808e07 contains 1,699 tracked files. Reconstruction from the original repository and cumulative theme archives reproduced its exact Git tree e9909c3ee0671dc589c73d0b2a0de397cf00e096.
+- Filename scan found no .uai/.uaix memory files or common credential filenames. This does not certify file contents, binaries, history, Actions logs or third-party rights.
+- Theme header 3.138.0 and plugin header 3.135.0 both declare GPL-2.0-or-later.
+- Original book and paper contents were not modified by the documentation update. Preserve hypotheses, negative controls and scientific limitations.
+- Full secret/history audit, third-party review and live WordPress/browser tests remain outstanding. No new scientific or runtime test suite was run in this documentation update.
 
-PHP syntax: 78 files passed; TypeScript `tsc --noEmit` passed. Plugin JS suite: 106 passed, 58 failed (original supplied ZIP: 120 passed, 65 failed). Theme PHP tests: 7 passed, 37 failed, identical aggregate to original archive. Plugin PHP tests: both fail version expectations. Missing upstream docs, differing package and PHP version labels, and intentionally omitted memory prevent a full green suite. No live WordPress integration test performed. Two historical reports had temporary signed download query parameters removed (four URLs); original copies remain in private master. Common text credential patterns yielded no matches afterward; binaries and all third-party rights remain unaudited.
+## Historical validation
+
+REPOSITORY_VALIDATION.json and REPOSITORY_SHA256SUMS.txt describe the original private staging archive, not the current main branch. SOURCE_PROVENANCE.csv records original preparation provenance. Keep these files as historical records. See tools/git_snapshot_sha256.py to generate a current manifest from committed Git blobs.
+
+The original staging tests recorded PHP syntax 78 files passed, TypeScript no-emit passed, plugin JS 106 passed/58 failed, theme PHP 7 passed/37 failed, plugin PHP 0 passed/2 failed (version expectations). Four signed URL query strings were removed from two historical reports before staging. The previous scan was heuristic. Existing failures and incomplete validation are not resolved by public visibility.

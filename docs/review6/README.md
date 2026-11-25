@@ -5,3 +5,7 @@ The original paper is preserved unchanged in PDF, Markdown and LaTeX. Its figure
 From this directory, use an isolated environment: `python -m pip install -r requirements.txt`, then `python code/review6_forward.py` and `python code/review6_escape.py` in a disposable working copy. These regenerate outputs. Original reproduced verification is in `LOCAL_VERIFICATION.json`; three extreme elastic rows had recorded quadrature warnings. `bash code/build_review6.sh` requires Pandoc and XeLaTeX. The scientific model controls are conditional synthetic calculations, not observations or a validated replacement cosmology.
 
 Original full-master restoration/verification is not applicable here; use the repository checksum manifest.
+
+## Related Zenodo record
+
+[Zenodo record 24543781](https://zenodo.org/records/24543781) — link supplied by the investigator for the scientific publication. Consult the record for its registered citation and DOI; the deposit metadata has not been independently verified during this update.
