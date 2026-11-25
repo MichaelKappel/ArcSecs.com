@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this research software, cite the versioned release and original scientific paper when available."
+title: "ArcSecs — BEYOND SPACETIME research repository"
+authors:
+  - family-names: Kappel
+    given-names: Michael Joseph
+    orcid: "https://orcid.org/0009-0003-3889-1400"
+version: "6.0.0-draft"
+url: "https://arcsecs.com/"
+abstract: "Independent human-directed, AI-assisted scientific research and computational visualization. Machine Intelligence is credited in the book; hypotheses and numerical controls are not experimental validation."
