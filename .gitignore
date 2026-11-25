@@ -1,0 +1,22 @@
+# Private agent state and local credentials
+.uai/
+*.uai
+*.uai.*
+.uaix/
+*.uaix
+.env
+.env.*
+wp-config.php
+*.pem
+*.key
+error_log
+*.log
+node_modules/
+__pycache__/
+.pytest_cache/
+.venv/
+.DS_Store
+*.zip
+
+!docs/review6/appendices/**/*.log
+!docs/long-term-memory/research/editorial-audit/tests.log
