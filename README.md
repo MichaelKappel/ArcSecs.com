@@ -34,3 +34,7 @@ The twelve foundations are stipulated premises. The research investigates unconv
 Public since November 25, 2026. Distribution rights were confirmed by the investigator. The original private staging validation and checksum files are historical records, not verification of the current branch. See the release review for outstanding privacy, third-party rights and runtime testing limits. Private operational memory is outside the intended release scope.
 
 See [GitHub maintenance](GITHUB_SETUP.md) and [website installation](OPEN_KNOWLEDGE_UPDATE_README.md). GitHub Pages does not execute WordPress PHP.
+
+## Related Zenodo record
+
+[Zenodo record 24543781](https://zenodo.org/records/24543781) — link supplied by the investigator for the scientific publication. Consult the record for its registered citation and DOI; the deposit metadata has not been independently verified during this update.

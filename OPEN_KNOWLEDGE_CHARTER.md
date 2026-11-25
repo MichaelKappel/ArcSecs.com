@@ -11,3 +11,7 @@ Scientific integrity remains fundamental: distinguish stipulated premises, condi
 Website: https://arcsecs.com/
 Research dataset: https://huggingface.co/datasets/MichaelKappel/ArcSecs-Beyond-Spacetime
 Book support: https://www.amazon.com/dp/B0HST2C7LK/
+
+## Related Zenodo record
+
+[Zenodo record 24543781](https://zenodo.org/records/24543781) — link supplied by the investigator for the scientific publication. Consult the record for its registered citation and DOI; the deposit metadata has not been independently verified during this update.
