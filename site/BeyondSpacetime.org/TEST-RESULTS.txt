@@ -1,0 +1,227 @@
+BeyondSpacetime.org v1.2.0 — release verification
+
+PHP scientific/content tests: 78 passed, 0 failed
+PHP route/API tests: 92 passed, 0 failed
+Native geometry Node tests: 29 passed, 0 failed
+
+Isolated Chromium: 21 page/viewport render checks (home, hub and five scenes at 390, 768, 1440 px), 15 scene recalculations and JSON downloads, rotation/zoom/reset and opt-in timeline controls, no uncaught page errors, all three widths passed. Forced Canvas fallback test passed separately. Direct navigation blocked; harness inlined actual PHP HTML/CSS/JS and bridged requests to local PHP. All graphics tested via Canvas fallback; actual WebGL rendering and hardware performance not verified. HTTP tests verify no-JS POST and initial video isolation. Older interactive browser workflows not rerun comprehensively. Live hosting, video playback, external links, SEO indexing, accessibility/security/load audits and full AG-UI interoperability not verified.
+
+PASS photon-aging default deterministic finite series
+PASS photon-aging rejects unknown and invalid bounds
+PASS clocks default deterministic finite series
+PASS clocks rejects unknown and invalid bounds
+PASS big-bang default deterministic finite series
+PASS big-bang rejects unknown and invalid bounds
+PASS recession default deterministic finite series
+PASS recession rejects unknown and invalid bounds
+PASS bubble default deterministic finite series
+PASS bubble rejects unknown and invalid bounds
+PASS shell default deterministic finite series
+PASS shell rejects unknown and invalid bounds
+PASS population default deterministic finite series
+PASS population rejects unknown and invalid bounds
+PASS distance default deterministic finite series
+PASS distance rejects unknown and invalid bounds
+PASS outflow default deterministic finite series
+PASS outflow rejects unknown and invalid bounds
+PASS drive default deterministic finite series
+PASS drive rejects unknown and invalid bounds
+PASS escape default deterministic finite series
+PASS escape rejects unknown and invalid bounds
+PASS parallax default deterministic finite series
+PASS parallax rejects unknown and invalid bounds
+PASS tides default deterministic finite series
+PASS tides rejects unknown and invalid bounds
+PASS photon massless loss leaves speed unchanged
+PASS tiny photon gap stable deficit
+PASS zero drag conserves initial energy
+PASS equal rate clocks, rest comparator
+PASS SR 0.6 speed ratio
+PASS FLRW age scales inversely with H0
+PASS FLRW default age reasonable
+PASS zero acceleration recession null
+PASS positive linear recession analytic
+PASS book bubble threshold
+PASS book bubble inward and outward
+PASS negative pressure no positive threshold
+PASS shell no-regulator limit
+PASS shell reacceleration and Newtonian null
+PASS population absorbing zero and deterministic seed
+PASS population rejects noninteger seed
+PASS distance two null biases
+PASS distance independent log and extinction reference
+PASS outflow zero-gap conventional ratios
+PASS outflow book finite gap result
+PASS outflow forbidden branch
+PASS drive zero capture removes reaction thrust
+PASS drive power cap and radiator
+PASS escape zero loss conservation
+PASS escape critical conversion nondecreasing
+PASS escape negative control coherent backconversion
+PASS every content reference and related concept resolves
+PASS parallax one AU and one arcsecond
+PASS parallax known baseline and proper motion
+PASS tidal trace and eigenvalues
+PASS tidal null
+PASS comparison preset valid photon-aging
+PASS comparison preset valid clocks
+PASS comparison preset valid big-bang
+PASS comparison preset valid recession
+PASS comparison preset valid bubble
+PASS comparison preset valid shell
+PASS comparison preset valid population
+PASS comparison preset valid distance
+PASS comparison preset valid outflow
+PASS comparison preset valid drive
+PASS comparison preset valid escape
+PASS comparison preset valid parallax
+PASS comparison preset valid tides
+PASS identical parameters give zero numerical deltas
+PASS atlas endpoints and glossary links
+PASS learning paths refer to known topics
+PASS scene binding photon
+PASS scene binding bubbles
+PASS scene binding expansion
+PASS scene binding hot-big-bang
+PASS scene binding propulsion
+78 passed, 0 failed
+PASS photon finite geometry 0
+PASS photon finite geometry 0.125
+PASS photon finite geometry 0.5
+PASS photon finite geometry 1
+PASS bubbles finite geometry 0
+PASS bubbles finite geometry 0.125
+PASS bubbles finite geometry 0.5
+PASS bubbles finite geometry 1
+PASS expansion finite geometry 0
+PASS expansion finite geometry 0.125
+PASS expansion finite geometry 0.5
+PASS expansion finite geometry 1
+PASS hot-big-bang finite geometry 0
+PASS hot-big-bang finite geometry 0.125
+PASS hot-big-bang finite geometry 0.5
+PASS hot-big-bang finite geometry 1
+PASS propulsion finite geometry 0
+PASS propulsion finite geometry 0.125
+PASS propulsion finite geometry 0.5
+PASS propulsion finite geometry 1
+PASS massless photon travels full reference path
+PASS positive gap slower than reference path
+PASS zero progression
+PASS zero acceleration keeps geometry fixed
+PASS positive recession moves points
+PASS bubble threshold omits arrows
+PASS zero capture hides flow arrows
+PASS scale factor endpoint
+PASS projection finite in portrait landscape and zoom
+29 passed, 0 failed
+PASS route /
+PASS route /concepts/
+PASS route /labs/
+PASS route /methods/
+PASS route /agents/
+PASS route /about/
+PASS route /learn/
+PASS route /atlas/
+PASS route /glossary/
+PASS route /compare/
+PASS route /learn/first-contact/
+PASS route /learn/light-and-measurement/
+PASS route /learn/greater-cosmos/
+PASS route /learn/engineering/
+PASS route /explore/
+PASS route /explore/photon/
+PASS route /explore/bubbles/
+PASS route /explore/expansion/
+PASS route /explore/hot-big-bang/
+PASS route /explore/propulsion/
+PASS route /concepts/physical-first/
+PASS route /concepts/foundations/
+PASS route /concepts/photon-mass/
+PASS route /concepts/light-history/
+PASS route /concepts/clocks/
+PASS route /concepts/cosmic-evolution/
+PASS route /concepts/bubble-universes/
+PASS route /concepts/distances/
+PASS route /concepts/gravity/
+PASS route /concepts/dark-matter-drive/
+PASS route /concepts/evidence/
+PASS route /labs/photon-aging/
+PASS route /labs/clocks/
+PASS route /labs/big-bang/
+PASS route /labs/recession/
+PASS route /labs/bubble/
+PASS route /labs/shell/
+PASS route /labs/population/
+PASS route /labs/distance/
+PASS route /labs/outflow/
+PASS route /labs/drive/
+PASS route /labs/escape/
+PASS route /labs/parallax/
+PASS route /labs/tides/
+PASS sitemap unique complete
+PASS robots and machine guide
+PASS status /app/models.php
+PASS status /app/topics.json
+PASS status /tests/models-test.php
+PASS status /unknown/
+PASS status /api/unknown/
+PASS status /api/ag-ui/
+PASS status /api/v1/experiment/
+PASS status /concepts
+PASS invalid JSON model 0
+PASS invalid JSON model 1
+PASS invalid JSON model 2
+PASS invalid JSON model 3
+PASS invalid JSON model 4
+PASS bad request body 0
+PASS bad request body 1
+PASS wrong content type
+PASS API matches PHP photon-aging
+PASS API matches PHP clocks
+PASS API matches PHP big-bang
+PASS API matches PHP recession
+PASS API matches PHP bubble
+PASS API matches PHP shell
+PASS API matches PHP population
+PASS API matches PHP distance
+PASS API matches PHP outflow
+PASS API matches PHP drive
+PASS API matches PHP escape
+PASS API matches PHP parallax
+PASS API matches PHP tides
+PASS AG-UI topic
+PASS AG-UI experiment
+PASS no JavaScript form calculation
+PASS favicon ICO signature
+PASS compass PNG signature
+PASS comparison API and delta
+PASS comparison rejects invalid cases
+PASS comparison no JS form
+PASS catalog expanded machine discovery
+PASS featured video is local until activation
+PASS video frame permission confined to homepage
+PASS immersive catalog binds all five scenes
+PASS immersive page no JS calculation
+PASS immersive invalid parameters rejected
+PASS immersive hub disallows POST
+PASS immersive canonical redirect
+PASS native renderer assets
+92 passed, 0 failed
+
+PHP syntax:
+No syntax errors detected in ./router.php
+No syntax errors detected in ./index.php
+No syntax errors detected in ./app/render.php
+No syntax errors detected in ./app/explore.php
+No syntax errors detected in ./app/models.php
+No syntax errors detected in ./app/learning.php
+No syntax errors detected in ./tests/http-test.php
+No syntax errors detected in ./tests/models-test.php
+
+JavaScript syntax:
+PASS assets/explore-core.js
+PASS assets/explore.js
+PASS assets/learning.js
+PASS assets/site.js
+PASS tests/explore-test.js

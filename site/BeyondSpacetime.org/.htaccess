@@ -1,0 +1,17 @@
+DirectoryIndex index.php
+Options -Indexes
+RewriteEngine On
+# Never expose internal content/configuration or test files.
+RewriteRule ^(?:app|tests)(?:/|$) - [F,L,NC]
+RewriteRule ^(?:router\.php|README\.md|DEPLOYMENT\.md|LICENSE\.md|TEST-RESULTS\.txt|SHA256SUMS\.txt)$ - [F,L,NC]
+RewriteRule ^\.(?!well-known/) - [F,L]
+# Route the public discovery resources, API and all clean page paths through PHP.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L,QSA]
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|svg|webp|png|ico)$">
+    Header set Cache-Control "public, max-age=86400"
+    Header set X-Content-Type-Options "nosniff"
+  </FilesMatch>
+</IfModule>
