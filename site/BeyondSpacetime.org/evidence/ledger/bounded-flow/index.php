@@ -1,0 +1,2 @@
+<?php
+declare(strict_types=1);require dirname(__DIR__, 2).'/_lib/site.php';$requested=parse_url($_SERVER['REQUEST_URI']??'',PHP_URL_PATH);if(!in_array($requested,['/evidence/ledger/bounded-flow/','/evidence/ledger/bounded-flow/index.php'],true)){security();http_response_code(404);exit('Not found');}if(!in_array($_SERVER['REQUEST_METHOD']??'GET',['GET','HEAD'],true)){security();http_response_code(405);header('Allow: GET, HEAD');exit;}record_page('bounded-flow');

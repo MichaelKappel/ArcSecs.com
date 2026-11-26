@@ -1,0 +1,232 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Beyond Spacetime physical-process and remote synchronization calculations",
+    "version": "2.5.0",
+    "description": "Read-only synthetic model predictions. Candidate rates are stipulated; this API does not establish a physical universal time or feasible travel."
+  },
+  "servers": [
+    {
+      "url": "https://beyondspacetime.org"
+    }
+  ],
+  "paths": {
+    "/universal-time/process-api/": {
+      "get": {
+        "operationId": "calculatePhysicalProcess",
+        "parameters": [
+          {
+            "name": "model",
+            "in": "query",
+            "description": "Omit model and all parameters to retrieve model definitions.",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "rates",
+                "synchronization"
+              ]
+            }
+          },
+          {
+            "name": "hours",
+            "in": "query",
+            "description": "Common reference interval (hours); only valid for model rates.",
+            "schema": {
+              "type": "number",
+              "default": 6,
+              "minimum": 0.1,
+              "maximum": 48
+            }
+          },
+          {
+            "name": "height",
+            "in": "query",
+            "description": "Height difference (m); only valid for model rates.",
+            "schema": {
+              "type": "number",
+              "default": 1000,
+              "minimum": -10000,
+              "maximum": 10000
+            }
+          },
+          {
+            "name": "speed",
+            "in": "query",
+            "description": "Relative speed (m/s); only valid for model rates.",
+            "schema": {
+              "type": "number",
+              "default": 7500,
+              "minimum": 0,
+              "maximum": 3000000
+            }
+          },
+          {
+            "name": "alpha_a",
+            "in": "query",
+            "description": "Transition A gravity response; only valid for model rates.",
+            "schema": {
+              "type": "number",
+              "default": 1,
+              "minimum": 0,
+              "maximum": 2
+            }
+          },
+          {
+            "name": "eta_a",
+            "in": "query",
+            "description": "Transition A motion response; only valid for model rates.",
+            "schema": {
+              "type": "number",
+              "default": 1,
+              "minimum": 0,
+              "maximum": 2
+            }
+          },
+          {
+            "name": "alpha_b",
+            "in": "query",
+            "description": "Transition B gravity response; only valid for model rates.",
+            "schema": {
+              "type": "number",
+              "default": 1,
+              "minimum": 0,
+              "maximum": 2
+            }
+          },
+          {
+            "name": "eta_b",
+            "in": "query",
+            "description": "Transition B motion response; only valid for model rates.",
+            "schema": {
+              "type": "number",
+              "default": 1,
+              "minimum": 0,
+              "maximum": 2
+            }
+          },
+          {
+            "name": "alpha_decay",
+            "in": "query",
+            "description": "Decay gravity response; only valid for model rates.",
+            "schema": {
+              "type": "number",
+              "default": 1,
+              "minimum": 0,
+              "maximum": 2
+            }
+          },
+          {
+            "name": "eta_decay",
+            "in": "query",
+            "description": "Decay motion response; only valid for model rates.",
+            "schema": {
+              "type": "number",
+              "default": 1,
+              "minimum": 0,
+              "maximum": 2
+            }
+          },
+          {
+            "name": "half_life",
+            "in": "query",
+            "description": "Reference half-life (hours); only valid for model rates.",
+            "schema": {
+              "type": "number",
+              "default": 6,
+              "minimum": 0.1,
+              "maximum": 48
+            }
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "description": "True remote clock offset (s); only valid for model synchronization.",
+            "schema": {
+              "type": "number",
+              "default": 2,
+              "minimum": -100,
+              "maximum": 100
+            }
+          },
+          {
+            "name": "outbound",
+            "in": "query",
+            "description": "Outbound signal delay (s); only valid for model synchronization.",
+            "schema": {
+              "type": "number",
+              "default": 3,
+              "minimum": 0,
+              "maximum": 3600
+            }
+          },
+          {
+            "name": "return",
+            "in": "query",
+            "description": "Return signal delay (s); only valid for model synchronization.",
+            "schema": {
+              "type": "number",
+              "default": 5,
+              "minimum": 0,
+              "maximum": 3600
+            }
+          },
+          {
+            "name": "turnaround",
+            "in": "query",
+            "description": "Remote turnaround (s); only valid for model synchronization.",
+            "schema": {
+              "type": "number",
+              "default": 1,
+              "minimum": 0,
+              "maximum": 600
+            }
+          },
+          {
+            "name": "deadline",
+            "in": "query",
+            "description": "Home deadline after first transmission (s); only valid for model synchronization.",
+            "schema": {
+              "type": "number",
+              "default": 60,
+              "minimum": 1,
+              "maximum": 14400
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Deterministic numerical result or model definitions",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid parameters",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "error"
+                  ],
+                  "properties": {
+                    "error": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Unsupported method"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+/* Scoped offline shell. No API, navigation outside /offline/, or remote caching. */
+'use strict';
+const CACHE='bsp-offline-2.2.1';
+const PATHS=['/offline/','/offline/index.html','/offline/manifest.webmanifest','/offline/assets/compass.png','/offline/assets/icon-192.png','/offline/assets/icon-512.png','/offline/assets/offline.css','/offline/assets/catalog.js','/offline/assets/solver.js','/offline/assets/offline.js'];
+const allowed=new Set(PATHS.map(p=>new URL(p,self.location.origin).href));
+self.addEventListener('install',event=>event.waitUntil((async()=>{const cache=await caches.open(CACHE);try{await cache.addAll(PATHS.map(p=>new Request(p,{cache:'reload',credentials:'same-origin',redirect:'error'})));}catch(e){await caches.delete(CACHE);throw e;}})()));
+self.addEventListener('activate',event=>event.waitUntil((async()=>{for(const name of await caches.keys())if(name.startsWith('bsp-offline-')&&name!==CACHE)await caches.delete(name);await self.clients.claim();})()));
+self.addEventListener('message',event=>{if(event.data?.type==='APPLY_UPDATE')event.waitUntil(self.skipWaiting());if(event.data?.type==='CHECK_CACHE')event.waitUntil((async()=>{const cache=await caches.open(CACHE);const hits=await Promise.all(PATHS.map(p=>cache.match(p)));event.ports[0]?.postMessage({version:CACHE,ready:hits.every(Boolean),total:PATHS.length,cached:hits.filter(Boolean).length});})());});
+self.addEventListener('fetch',event=>{const req=event.request;if(req.method!=='GET'||!allowed.has(req.url))return;event.respondWith((async()=>{const cache=await caches.open(CACHE),cached=await cache.match(req);if(cached)return cached;try{return await fetch(req);}catch{return new Response('Offline package incomplete. Reconnect and prepare offline again.',{status:503,headers:{'Content-Type':'text/plain; charset=utf-8'}});}})());});

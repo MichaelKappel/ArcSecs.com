@@ -1,0 +1,19 @@
+BeyondSpacetime.org v1.7.0 — Scientific Discovery Timeline
+
+Install the cumulative add-on into the existing site document root after backing it up. The smaller timeline-only package requires the existing v1.6.0 cumulative modules (particularly the research CSS, evidence compass artwork, foundation and evidence pages). The original v1.2.0 root website is not included or reconstructed. All 115 previous files remain unchanged. Nothing is automatically deployed.
+
+Add a root navigation link: Research Timeline → /timeline/. Submit /timeline/sitemap.xml or reference it in robots.txt, retaining the existing sitemaps. The module provides 63 canonical indexable pages; filter/compare query pages are noindex. /timeline/compare/ is a utility requiring two record IDs. No root menu or sitemap was overwritten. The website uses native PHP 8.1+, HTML, CSS and JS; no additional runtime libraries, external services or database.
+
+Apache: allow real directories and directory index.php through the existing root rewrite configuration. Retain timeline/.htaccess and timeline/_lib/.htaccess; verify that /timeline/_lib/model.php returns 403 or 404. Nginx/custom hosts must explicitly deny all _lib paths and configure directory index.php. Configure HTTPS, server limits, private error logging, correct static MIME types and access controls at host level. Do not expose the development server or ZIP archives in a public document root.
+
+Acceptance:
+- /timeline/ has 61 entries in four distinct tracks: 41 numbered reports, six manuscript editions, seven literature references, seven model/verification milestones. Original report headings, source file hashes, scope and limitations appear in detail pages. Report sequence is not dated chronology. Review dates and reference years are source-derived. Milestone dates are associated review dates, not discovery dates. Prior editions link to the current ArcSecs reader as a gateway, not a claimed exact archived edition URL.
+- Filter by track, branch, classification and search. The full initial list supports immediate client-side filtering; Apply filters submits the server-side equivalent. On an already filtered page use Apply filters to change the server-side subset. Select or pin two records, inspect the comparison and export their JSON. No-JS forms and links work on the server. This compares source contexts, not physical quantities.
+- /timeline/api/ is read-only GET/HEAD. Optional q (160 bytes), track, branch, status; id for one record; a and b for a pair. Invalid filters or pair return 400, missing record 404, POST 405. /timeline/catalog.json exposes all records. No new AG-UI solver: the existing /research/api/ remains the calculation/event service.
+- Verify live ArcSecs and literature links, navigation, actual mobile device layouts, production HTTP/CSP and search indexing. Local checks are not full accessibility, security or load certification. No external references were independently reverified. No private memory or complete research documents included in the new module.
+
+Local tests from the extracted site root:
+  php timeline/_lib/tests.php
+  php -S 127.0.0.1:8157 timeline/_lib/dev-router.php
+  python3 timeline/_lib/http-test.py http://127.0.0.1:8157
+The Python HTTP test is optional tooling; no Python runtime is needed by the site.

@@ -1,0 +1,3 @@
+'use strict';
+// Only exports server-computed results. No external translation or calculation service.
+(()=>{const button=document.getElementById('gexport'),source=document.getElementById('gresult');if(!button||!source)return;button.hidden=false;button.addEventListener('click',()=>{const result=JSON.parse(source.textContent),blob=new Blob([JSON.stringify(result,null,2)+'\n'],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`foundation-${result.lesson}-${result.language}.json`;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);});})();

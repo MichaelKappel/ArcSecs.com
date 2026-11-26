@@ -1,0 +1,135 @@
+BeyondSpacetime.org v1.6.0 — actual local verification
+
+PHP 8.4.24. New scientific tests and HTTP tests below; prior scientific suites rerun. Browser tests used isolated HTML rendering of actual local PHP responses (CSS and JS injected), not live production navigation. No new cross-model fit, new AG-UI protocol, or empirical validation claimed.
+
+PASS preset light
+PASS preset clocks
+PASS preset escape
+PASS preset wall
+PASS preset distance
+PASS preset age
+PASS preset anchors
+PASS all-model sweep foundation:photon-mass gap
+PASS all-model sweep foundation:constant-time rate
+PASS all-model sweep foundation:constant-time beta
+PASS all-model sweep foundation:constant-time duration
+PASS all-model sweep foundation:constant-time ratio
+PASS all-model sweep foundation:light-slowing gap
+PASS all-model sweep foundation:light-slowing drag
+PASS all-model sweep foundation:light-slowing duration
+PASS all-model sweep foundation:when period
+PASS all-model sweep foundation:when delay
+PASS all-model sweep foundation:where dx
+PASS all-model sweep foundation:where dy
+PASS all-model sweep foundation:where shift
+PASS all-model sweep foundation:physical-existence energy
+PASS all-model sweep foundation:physical-existence angle
+PASS all-model sweep foundation:spacetime beta
+PASS all-model sweep foundation:spacetime duration
+PASS all-model sweep foundation:fastest-signal fraction
+PASS all-model sweep foundation:fastest-signal distance
+PASS all-model sweep foundation:separation beta
+PASS all-model sweep foundation:cosmic-size reach
+PASS all-model sweep foundation:cosmic-size domain
+PASS all-model sweep foundation:cosmic-age h0
+PASS all-model sweep foundation:cosmic-age matter
+PASS all-model sweep foundation:distance-inference actual
+PASS all-model sweep foundation:distance-inference extinction
+PASS all-model sweep evidence:escape ratio
+PASS all-model sweep evidence:escape duration
+PASS all-model sweep evidence:wall loggap
+PASS all-model sweep evidence:wall ceiling
+PASS all-model sweep evidence:anchors percent
+PASS massless group speed stays unity
+PASS clock pair exact rest and speed response
+PASS escape fixed comparator unchanged
+PASS wall illustrative conflict
+PASS distance signed bias
+PASS anchor zero reference
+PASS zero probe width yields null slope
+PASS clipped probe
+PASS max samples
+PASS reject schema
+PASS reject model
+PASS reject parameter
+PASS reject start
+PASS reject end
+PASS reject samples
+PASS reject metric
+PASS reject reference_metric
+PASS reject reference_mode
+PASS reject probe
+PASS reject half_width
+PASS reject candidate
+PASS reject reference
+PASS reject fake_results
+PASS reject descending range
+PASS reject paired metric unequal inputs
+PASS reject paired metric fixed comparator
+PASS reject categorical metric
+65 passed, 0 failed
+PASS catalog 15 models, 7 presets
+PASS page /model-comparison/
+PASS page /model-comparison/protocol/
+PASS page /model-comparison/?preset=light
+PASS page /model-comparison/?preset=clocks
+PASS page /model-comparison/?preset=escape
+PASS page /model-comparison/?preset=wall
+PASS page /model-comparison/?preset=distance
+PASS page /model-comparison/?preset=age
+PASS page /model-comparison/?preset=anchors
+PASS API and replay light
+PASS no JS form light
+PASS API and replay clocks
+PASS no JS form clocks
+PASS API and replay escape
+PASS no JS form escape
+PASS API and replay wall
+PASS no JS form wall
+PASS API and replay distance
+PASS no JS form distance
+PASS API and replay age
+PASS no JS form age
+PASS API and replay anchors
+PASS no JS form anchors
+PASS reject samples
+PASS reject metric
+PASS reject start
+PASS reject schema
+PASS reject probe
+PASS reject reference
+PASS HTTP /model-comparison/_lib/model.php
+PASS HTTP /model-comparison/missing/
+PASS HTTP /model-comparison/sitemap.xml
+PASS HTTP /model-comparison/assets/comparison.js
+PASS HTTP /model-comparison/assets/comparison.css
+PASS reject wrong content type
+PASS reject oversized request
+PASS reject invalid JSON
+PASS reject unsupported method
+PASS live catalog agrees with static
+PASS preserved route /foundations/
+PASS preserved route /evidence/
+PASS preserved route /research/
+PASS preserved route /research/presets/
+PASS preserved route /research/protocol/
+45 passed, 0 failed
+PASS viewport 390
+PASS viewport 768
+PASS viewport 1440
+PASS 9 responsive renders, 18 exports, 6 import/recalculation and malformed-import checks
+
+foundations regression: 61 passed, 0 failed
+evidence regression: 47 passed, 0 failed
+research regression: 48 passed, 0 failed
+
+No syntax errors detected in model-comparison/api/index.php
+No syntax errors detected in model-comparison/index.php
+No syntax errors detected in model-comparison/protocol/index.php
+No syntax errors detected in model-comparison/_lib/dev-router.php
+No syntax errors detected in model-comparison/_lib/site.php
+No syntax errors detected in model-comparison/_lib/tests.php
+No syntax errors detected in model-comparison/_lib/model.php
+PASS comparison.js syntax
+
+Previous release file preservation: 98/98 byte-for-byte identical to v1.5.0 archive.

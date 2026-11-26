@@ -1,0 +1,138 @@
+BeyondSpacetime.org v1.3.0 — standalone additive foundation module
+Exact 12 charter statements verified against Review 6.0 printed p6.
+61 model checks and 63 HTTP checks passed.
+39 isolated render checks; 36 server-backed reference calculations; 24 downloads.
+Browser harness used actual PHP HTML with local CSS/JS/assets inlined and an HTTP fetch bridge. It did not test production routing or actual CSP enforcement. Private-library denial was checked against a temporary local dev router; the supplied Apache .htaccess must be verified on the target host. Prior complete site not available; no regression claim for old features.
+
+PASS photon-mass default schema and finite values
+PASS photon-mass all parameter corners
+PASS photon-mass rejects unknown, null and out of range
+PASS photon-mass reference case
+PASS constant-time default schema and finite values
+PASS constant-time all parameter corners
+PASS constant-time rejects unknown, null and out of range
+PASS constant-time reference case
+PASS light-slowing default schema and finite values
+PASS light-slowing all parameter corners
+PASS light-slowing rejects unknown, null and out of range
+PASS light-slowing reference case
+PASS when default schema and finite values
+PASS when all parameter corners
+PASS when rejects unknown, null and out of range
+PASS when reference case
+PASS where default schema and finite values
+PASS where all parameter corners
+PASS where rejects unknown, null and out of range
+PASS where reference case
+PASS physical-existence default schema and finite values
+PASS physical-existence all parameter corners
+PASS physical-existence rejects unknown, null and out of range
+PASS physical-existence reference case
+PASS spacetime default schema and finite values
+PASS spacetime all parameter corners
+PASS spacetime rejects unknown, null and out of range
+PASS spacetime reference case
+PASS fastest-signal default schema and finite values
+PASS fastest-signal all parameter corners
+PASS fastest-signal rejects unknown, null and out of range
+PASS fastest-signal reference case
+PASS separation default schema and finite values
+PASS separation all parameter corners
+PASS separation rejects unknown, null and out of range
+PASS separation reference case
+PASS cosmic-size default schema and finite values
+PASS cosmic-size all parameter corners
+PASS cosmic-size rejects unknown, null and out of range
+PASS cosmic-size reference case
+PASS cosmic-age default schema and finite values
+PASS cosmic-age all parameter corners
+PASS cosmic-age rejects unknown, null and out of range
+PASS cosmic-age reference case
+PASS distance-inference default schema and finite values
+PASS distance-inference all parameter corners
+PASS distance-inference rejects unknown, null and out of range
+PASS distance-inference reference case
+PASS zero-gap massless reference
+PASS clock SR 0.6c factor
+PASS massless drag speed and transfer ledger
+PASS stationary pulse interval
+PASS origin invariance
+PASS two-photon parallel and opposite
+PASS SR proper time at 0.8c
+PASS equal-speed arrival null
+PASS separation and local relative velocity distinct
+PASS finite reach and accessible volume
+PASS matter-Lambda age inverse H0
+PASS distance bias signed and null
+PASS twelve exact-numbered charter records
+61 passed, 0 failed
+
+PASS canonical route /foundations/
+PASS valid JSON-LD /foundations/
+PASS canonical route /foundations/photon-mass/
+PASS valid JSON-LD /foundations/photon-mass/
+PASS canonical route /foundations/constant-time/
+PASS valid JSON-LD /foundations/constant-time/
+PASS canonical route /foundations/light-slowing/
+PASS valid JSON-LD /foundations/light-slowing/
+PASS canonical route /foundations/when/
+PASS valid JSON-LD /foundations/when/
+PASS canonical route /foundations/where/
+PASS valid JSON-LD /foundations/where/
+PASS canonical route /foundations/physical-existence/
+PASS valid JSON-LD /foundations/physical-existence/
+PASS canonical route /foundations/spacetime/
+PASS valid JSON-LD /foundations/spacetime/
+PASS canonical route /foundations/fastest-signal/
+PASS valid JSON-LD /foundations/fastest-signal/
+PASS canonical route /foundations/separation/
+PASS valid JSON-LD /foundations/separation/
+PASS canonical route /foundations/cosmic-size/
+PASS valid JSON-LD /foundations/cosmic-size/
+PASS canonical route /foundations/cosmic-age/
+PASS valid JSON-LD /foundations/cosmic-age/
+PASS canonical route /foundations/distance-inference/
+PASS valid JSON-LD /foundations/distance-inference/
+PASS reference API photon-mass
+PASS no JS form photon-mass
+PASS reference API constant-time
+PASS no JS form constant-time
+PASS reference API light-slowing
+PASS no JS form light-slowing
+PASS reference API when
+PASS no JS form when
+PASS reference API where
+PASS no JS form where
+PASS reference API physical-existence
+PASS no JS form physical-existence
+PASS reference API spacetime
+PASS no JS form spacetime
+PASS reference API fastest-signal
+PASS no JS form fastest-signal
+PASS reference API separation
+PASS no JS form separation
+PASS reference API cosmic-size
+PASS no JS form cosmic-size
+PASS reference API cosmic-age
+PASS no JS form cosmic-age
+PASS reference API distance-inference
+PASS no JS form distance-inference
+PASS invalid input {'foundation': 'unknown'}
+PASS invalid input {'foundation': 'photon-mass', 'parameters': {'gap': None}}
+PASS invalid input {'foundation': 'photon-mass', 'parameters': {'gap': 1}}
+PASS invalid input {'foundation': 'photon-mass', 'parameters': {'unknown': 1}}
+PASS invalid JSON
+PASS oversize body
+PASS wrong method
+PASS invalid HTML form
+PASS private library denied by dev test router
+PASS AG-UI event sequence
+PASS AG-UI state value
+PASS sitemap 13 pages
+PASS catalog 12 records
+63 passed, 0 failed
+
+PASS viewport 390
+PASS viewport 768
+PASS viewport 1440
+PASS 39 isolated render checks, 36 server-backed control calculations, 24 exports; no uncaught page errors

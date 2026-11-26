@@ -1,0 +1,276 @@
+BeyondSpacetime.org v1.8.0 — release verification
+
+114 localized scientific/content checks; 92 HTTP checks; earlier five suites: 61 + 47 + 48 + 65 + 248 = 469 checks. 194 prior files preserved byte-for-byte. 21 isolated Chromium renders at 390/768/1440 px and six JSON downloads. Isolated render uses actual server HTML and inlined local CSS/JS; direct browser navigation was not tested. All 36 localized form POSTs and API outputs verified through actual local HTTP. No independent translation review, production hosting, root navigation integration, live external links, crawl/indexing, full security or accessibility audit. No earlier browser workflows rerun.
+
+PASS en coverage
+PASS en photon-mass localized metadata and numeric identity
+PASS en photon-mass control and parameter endpoints
+PASS en photon-mass invalid input
+PASS en constant-time localized metadata and numeric identity
+PASS en constant-time control and parameter endpoints
+PASS en constant-time invalid input
+PASS en light-slowing localized metadata and numeric identity
+PASS en light-slowing control and parameter endpoints
+PASS en light-slowing invalid input
+PASS en when localized metadata and numeric identity
+PASS en when control and parameter endpoints
+PASS en when invalid input
+PASS en where localized metadata and numeric identity
+PASS en where control and parameter endpoints
+PASS en where invalid input
+PASS en physical-existence localized metadata and numeric identity
+PASS en physical-existence control and parameter endpoints
+PASS en physical-existence invalid input
+PASS en spacetime localized metadata and numeric identity
+PASS en spacetime control and parameter endpoints
+PASS en spacetime invalid input
+PASS en fastest-signal localized metadata and numeric identity
+PASS en fastest-signal control and parameter endpoints
+PASS en fastest-signal invalid input
+PASS en separation localized metadata and numeric identity
+PASS en separation control and parameter endpoints
+PASS en separation invalid input
+PASS en cosmic-size localized metadata and numeric identity
+PASS en cosmic-size control and parameter endpoints
+PASS en cosmic-size invalid input
+PASS en cosmic-age localized metadata and numeric identity
+PASS en cosmic-age control and parameter endpoints
+PASS en cosmic-age invalid input
+PASS en distance-inference localized metadata and numeric identity
+PASS en distance-inference control and parameter endpoints
+PASS en distance-inference invalid input
+PASS es coverage
+PASS es photon-mass localized metadata and numeric identity
+PASS es photon-mass control and parameter endpoints
+PASS es photon-mass invalid input
+PASS es constant-time localized metadata and numeric identity
+PASS es constant-time control and parameter endpoints
+PASS es constant-time invalid input
+PASS es light-slowing localized metadata and numeric identity
+PASS es light-slowing control and parameter endpoints
+PASS es light-slowing invalid input
+PASS es when localized metadata and numeric identity
+PASS es when control and parameter endpoints
+PASS es when invalid input
+PASS es where localized metadata and numeric identity
+PASS es where control and parameter endpoints
+PASS es where invalid input
+PASS es physical-existence localized metadata and numeric identity
+PASS es physical-existence control and parameter endpoints
+PASS es physical-existence invalid input
+PASS es spacetime localized metadata and numeric identity
+PASS es spacetime control and parameter endpoints
+PASS es spacetime invalid input
+PASS es fastest-signal localized metadata and numeric identity
+PASS es fastest-signal control and parameter endpoints
+PASS es fastest-signal invalid input
+PASS es separation localized metadata and numeric identity
+PASS es separation control and parameter endpoints
+PASS es separation invalid input
+PASS es cosmic-size localized metadata and numeric identity
+PASS es cosmic-size control and parameter endpoints
+PASS es cosmic-size invalid input
+PASS es cosmic-age localized metadata and numeric identity
+PASS es cosmic-age control and parameter endpoints
+PASS es cosmic-age invalid input
+PASS es distance-inference localized metadata and numeric identity
+PASS es distance-inference control and parameter endpoints
+PASS es distance-inference invalid input
+PASS fr coverage
+PASS fr photon-mass localized metadata and numeric identity
+PASS fr photon-mass control and parameter endpoints
+PASS fr photon-mass invalid input
+PASS fr constant-time localized metadata and numeric identity
+PASS fr constant-time control and parameter endpoints
+PASS fr constant-time invalid input
+PASS fr light-slowing localized metadata and numeric identity
+PASS fr light-slowing control and parameter endpoints
+PASS fr light-slowing invalid input
+PASS fr when localized metadata and numeric identity
+PASS fr when control and parameter endpoints
+PASS fr when invalid input
+PASS fr where localized metadata and numeric identity
+PASS fr where control and parameter endpoints
+PASS fr where invalid input
+PASS fr physical-existence localized metadata and numeric identity
+PASS fr physical-existence control and parameter endpoints
+PASS fr physical-existence invalid input
+PASS fr spacetime localized metadata and numeric identity
+PASS fr spacetime control and parameter endpoints
+PASS fr spacetime invalid input
+PASS fr fastest-signal localized metadata and numeric identity
+PASS fr fastest-signal control and parameter endpoints
+PASS fr fastest-signal invalid input
+PASS fr separation localized metadata and numeric identity
+PASS fr separation control and parameter endpoints
+PASS fr separation invalid input
+PASS fr cosmic-size localized metadata and numeric identity
+PASS fr cosmic-size control and parameter endpoints
+PASS fr cosmic-size invalid input
+PASS fr cosmic-age localized metadata and numeric identity
+PASS fr cosmic-age control and parameter endpoints
+PASS fr cosmic-age invalid input
+PASS fr distance-inference localized metadata and numeric identity
+PASS fr distance-inference control and parameter endpoints
+PASS fr distance-inference invalid input
+PASS English charter exact
+PASS Unsupported language rejected
+PASS Unsupported model rejected
+114 passed, 0 failed
+PASS 43 unique canonical URLs
+PASS route metadata and reciprocal alternates /global/
+PASS route metadata and reciprocal alternates /global/en/
+PASS route metadata and reciprocal alternates /global/en/glossary/
+PASS route metadata and reciprocal alternates /global/en/photon-mass/
+PASS route metadata and reciprocal alternates /global/en/constant-time/
+PASS route metadata and reciprocal alternates /global/en/light-slowing/
+PASS route metadata and reciprocal alternates /global/en/when/
+PASS route metadata and reciprocal alternates /global/en/where/
+PASS route metadata and reciprocal alternates /global/en/physical-existence/
+PASS route metadata and reciprocal alternates /global/en/spacetime/
+PASS route metadata and reciprocal alternates /global/en/fastest-signal/
+PASS route metadata and reciprocal alternates /global/en/separation/
+PASS route metadata and reciprocal alternates /global/en/cosmic-size/
+PASS route metadata and reciprocal alternates /global/en/cosmic-age/
+PASS route metadata and reciprocal alternates /global/en/distance-inference/
+PASS route metadata and reciprocal alternates /global/es/
+PASS route metadata and reciprocal alternates /global/es/glossary/
+PASS route metadata and reciprocal alternates /global/es/photon-mass/
+PASS route metadata and reciprocal alternates /global/es/constant-time/
+PASS route metadata and reciprocal alternates /global/es/light-slowing/
+PASS route metadata and reciprocal alternates /global/es/when/
+PASS route metadata and reciprocal alternates /global/es/where/
+PASS route metadata and reciprocal alternates /global/es/physical-existence/
+PASS route metadata and reciprocal alternates /global/es/spacetime/
+PASS route metadata and reciprocal alternates /global/es/fastest-signal/
+PASS route metadata and reciprocal alternates /global/es/separation/
+PASS route metadata and reciprocal alternates /global/es/cosmic-size/
+PASS route metadata and reciprocal alternates /global/es/cosmic-age/
+PASS route metadata and reciprocal alternates /global/es/distance-inference/
+PASS route metadata and reciprocal alternates /global/fr/
+PASS route metadata and reciprocal alternates /global/fr/glossary/
+PASS route metadata and reciprocal alternates /global/fr/photon-mass/
+PASS route metadata and reciprocal alternates /global/fr/constant-time/
+PASS route metadata and reciprocal alternates /global/fr/light-slowing/
+PASS route metadata and reciprocal alternates /global/fr/when/
+PASS route metadata and reciprocal alternates /global/fr/where/
+PASS route metadata and reciprocal alternates /global/fr/physical-existence/
+PASS route metadata and reciprocal alternates /global/fr/spacetime/
+PASS route metadata and reciprocal alternates /global/fr/fastest-signal/
+PASS route metadata and reciprocal alternates /global/fr/separation/
+PASS route metadata and reciprocal alternates /global/fr/cosmic-size/
+PASS route metadata and reciprocal alternates /global/fr/cosmic-age/
+PASS route metadata and reciprocal alternates /global/fr/distance-inference/
+PASS en photon-mass no-JS form, API and source identity
+PASS en constant-time no-JS form, API and source identity
+PASS en light-slowing no-JS form, API and source identity
+PASS en when no-JS form, API and source identity
+PASS en where no-JS form, API and source identity
+PASS en physical-existence no-JS form, API and source identity
+PASS en spacetime no-JS form, API and source identity
+PASS en fastest-signal no-JS form, API and source identity
+PASS en separation no-JS form, API and source identity
+PASS en cosmic-size no-JS form, API and source identity
+PASS en cosmic-age no-JS form, API and source identity
+PASS en distance-inference no-JS form, API and source identity
+PASS es photon-mass no-JS form, API and source identity
+PASS es constant-time no-JS form, API and source identity
+PASS es light-slowing no-JS form, API and source identity
+PASS es when no-JS form, API and source identity
+PASS es where no-JS form, API and source identity
+PASS es physical-existence no-JS form, API and source identity
+PASS es spacetime no-JS form, API and source identity
+PASS es fastest-signal no-JS form, API and source identity
+PASS es separation no-JS form, API and source identity
+PASS es cosmic-size no-JS form, API and source identity
+PASS es cosmic-age no-JS form, API and source identity
+PASS es distance-inference no-JS form, API and source identity
+PASS fr photon-mass no-JS form, API and source identity
+PASS fr constant-time no-JS form, API and source identity
+PASS fr light-slowing no-JS form, API and source identity
+PASS fr when no-JS form, API and source identity
+PASS fr where no-JS form, API and source identity
+PASS fr physical-existence no-JS form, API and source identity
+PASS fr spacetime no-JS form, API and source identity
+PASS fr fastest-signal no-JS form, API and source identity
+PASS fr separation no-JS form, API and source identity
+PASS fr cosmic-size no-JS form, API and source identity
+PASS fr cosmic-age no-JS form, API and source identity
+PASS fr distance-inference no-JS form, API and source identity
+PASS status /global/_lib/translations.json
+PASS status /global/_lib/site.php
+PASS status /global/api/?language=zz
+PASS status /global/api/?lesson=nope
+PASS invalid POST 400
+PASS invalid POST 400
+PASS invalid POST 400
+PASS invalid POST 413
+PASS wrong content type
+PASS POST hub rejected
+PASS invalid localized form
+PASS API method rejected
+92 passed, 0 failed
+PASS viewport 390
+PASS viewport 768
+PASS viewport 1440
+PASS 21 responsive renders; 6 JSON export checks
+
+foundations regression: 61 passed, 0 failed
+
+evidence regression: 47 passed, 0 failed
+
+research regression: 48 passed, 0 failed
+
+model-comparison regression: 65 passed, 0 failed
+
+timeline regression: 248 passed
+
+Syntax checks:
+No syntax errors detected in global/api/index.php
+No syntax errors detected in global/es/cosmic-size/index.php
+No syntax errors detected in global/es/when/index.php
+No syntax errors detected in global/es/photon-mass/index.php
+No syntax errors detected in global/es/index.php
+No syntax errors detected in global/es/cosmic-age/index.php
+No syntax errors detected in global/es/distance-inference/index.php
+No syntax errors detected in global/es/constant-time/index.php
+No syntax errors detected in global/es/separation/index.php
+No syntax errors detected in global/es/where/index.php
+No syntax errors detected in global/es/spacetime/index.php
+No syntax errors detected in global/es/glossary/index.php
+No syntax errors detected in global/es/physical-existence/index.php
+No syntax errors detected in global/es/light-slowing/index.php
+No syntax errors detected in global/es/fastest-signal/index.php
+No syntax errors detected in global/index.php
+No syntax errors detected in global/fr/cosmic-size/index.php
+No syntax errors detected in global/fr/when/index.php
+No syntax errors detected in global/fr/photon-mass/index.php
+No syntax errors detected in global/fr/index.php
+No syntax errors detected in global/fr/cosmic-age/index.php
+No syntax errors detected in global/fr/distance-inference/index.php
+No syntax errors detected in global/fr/constant-time/index.php
+No syntax errors detected in global/fr/separation/index.php
+No syntax errors detected in global/fr/where/index.php
+No syntax errors detected in global/fr/spacetime/index.php
+No syntax errors detected in global/fr/glossary/index.php
+No syntax errors detected in global/fr/physical-existence/index.php
+No syntax errors detected in global/fr/light-slowing/index.php
+No syntax errors detected in global/fr/fastest-signal/index.php
+No syntax errors detected in global/en/cosmic-size/index.php
+No syntax errors detected in global/en/when/index.php
+No syntax errors detected in global/en/photon-mass/index.php
+No syntax errors detected in global/en/index.php
+No syntax errors detected in global/en/cosmic-age/index.php
+No syntax errors detected in global/en/distance-inference/index.php
+No syntax errors detected in global/en/constant-time/index.php
+No syntax errors detected in global/en/separation/index.php
+No syntax errors detected in global/en/where/index.php
+No syntax errors detected in global/en/spacetime/index.php
+No syntax errors detected in global/en/glossary/index.php
+No syntax errors detected in global/en/physical-existence/index.php
+No syntax errors detected in global/en/light-slowing/index.php
+No syntax errors detected in global/en/fastest-signal/index.php
+No syntax errors detected in global/_lib/dev-router.php
+No syntax errors detected in global/_lib/site.php
+No syntax errors detected in global/_lib/tests.php
+PASS global.js

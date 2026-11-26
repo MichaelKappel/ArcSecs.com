@@ -1,0 +1,1653 @@
+{
+  "schema": "beyondspacetime.timeline.v1",
+  "version": "1.7.0",
+  "scope": "Source-grounded educational index of the supplied November 24 research archive. Report sequence is not chronology. External references were transcribed from Review 6.0 and not independently reverified. Source hashes identify supplied files; live source URLs may refer to later versions.",
+  "tracks": {
+    "references": "Historical literature",
+    "reports": "Numbered working reports",
+    "reviews": "Manuscript editions",
+    "milestones": "Model and verification milestones"
+  },
+  "statuses": {
+    "reference": "Literature reference",
+    "working-report": "Working research record",
+    "edition": "Manuscript edition",
+    "obstruction": "Restricted model obstruction",
+    "conditional": "Conditional mathematical result",
+    "verification": "Reported numerical verification"
+  },
+  "records": [
+    {
+      "id": "r01",
+      "title": "Physical light and photon mass",
+      "track": "reports",
+      "branch": "Light",
+      "status": "working-report",
+      "summary": "Distinguish measured energy and momentum from a proposed positive invariant photon mass.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R01.md",
+        "sha256": "3d0d073dc97e8078d304091ec512916963afe6e9ea1465b685916ca20950ba18",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R01.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/ceiling/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/photon-mass/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 1,
+      "original_title": "Physical Light and the Photon Mass Research Program"
+    },
+    {
+      "id": "r02",
+      "title": "Constant time and clocks",
+      "track": "reports",
+      "branch": "Clocks",
+      "status": "working-report",
+      "summary": "Separate counted physical processes from a stipulated common progression parameter; require a discriminating clock prediction.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R02.md",
+        "sha256": "dafa93a71162a937c1973353cf8efd9cafeb17f39bdbb91fec2f45e1854f0e8e",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R02.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/moving-endpoints/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/constant-time/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 2,
+      "original_title": "Constant Time and the Physical Process Interpretation of Clocks"
+    },
+    {
+      "id": "r03",
+      "title": "Cosmic duration and geometric distance",
+      "track": "reports",
+      "branch": "Distances",
+      "status": "working-report",
+      "summary": "Separate inferred hot-phase age from total cosmic history; preserve geometric and multimessenger calibrators.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R03.md",
+        "sha256": "7548606e97e3feba8d0cdcf7033868aad72cbd211b74e68f5a4fcc3223a55b04",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R03.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/anchor-lmc/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/cosmic-age/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 3,
+      "original_title": "The Unknown Total Cosmos: Cosmic Age and Geometric Distance"
+    },
+    {
+      "id": "r04",
+      "title": "Microscopic photon energy transfer",
+      "track": "reports",
+      "branch": "Light",
+      "status": "working-report",
+      "summary": "Specify a recipient of lost energy, momentum balance and timing/optical predictions.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R04.md",
+        "sha256": "41ef87eaa1934f6edf4bda7d1ff13e3dfcaa7110eec0b043737d3b826b600685",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R04.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/contact-scattering/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/light-slowing/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 4,
+      "original_title": "Tired Light and Microscopic Photon-Energy Transfer"
+    },
+    {
+      "id": "r05",
+      "title": "Relational gravity and inertia",
+      "track": "reports",
+      "branch": "Gravity",
+      "status": "working-report",
+      "summary": "Require one physical interaction to reproduce precision gravity benchmarks rather than relying on a material-fabric metaphor.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R05.md",
+        "sha256": "03714e1119c58680c2deca1eddc16177563dc1cec6ff9600bca47d082ba1703f",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R05.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/common-field/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/spacetime/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 5,
+      "original_title": "Relational Gravity, Field Mechanisms and Cosmic Inertia"
+    },
+    {
+      "id": "r06",
+      "title": "Dark-sector dynamics and propulsion",
+      "track": "reports",
+      "branch": "Engineering",
+      "status": "working-report",
+      "summary": "Retain galaxy, cluster and lensing observations while investigating conditional substrate capture and reaction-mass accounting.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R06.md",
+        "sha256": "991f34632d50314ea75a57aa58c3778ee4c80c7e4cdd239b9ca0a26b4acc1117",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R06.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/joint-fit/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/physical-existence/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 6,
+      "original_title": "Dark Sector Anomalies, Relational Dynamics and Propulsion"
+    },
+    {
+      "id": "r07",
+      "title": "Cosmic boundary forces",
+      "track": "reports",
+      "branch": "Domains",
+      "status": "working-report",
+      "summary": "Investigate physical pressure and external field influences at a hypothetical domain wall.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R07.md",
+        "sha256": "0d1c99287f20fee3bc17e7708a11b5999e86503ecf288978433aaf5aca7c6c15",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R07.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/shell-void/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/cosmic-size/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 7,
+      "original_title": "Cosmic Bubble Boundaries, Pressure and Exterior Influences"
+    },
+    {
+      "id": "r08",
+      "title": "Greater cosmos chronology",
+      "track": "reports",
+      "branch": "Domains",
+      "status": "working-report",
+      "summary": "Investigate domain birth, growth, collision and termination without equating a parent age to a hot-phase age.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R08.md",
+        "sha256": "41c945974ba7b514732151e72b574da4c906287fae0f86bf5cc2d5832315bc0f",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R08.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/causal-reach/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/cosmic-age/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 8,
+      "original_title": "The Greater Cosmos: Bubble Birth, Death and Cosmic Chronology"
+    },
+    {
+      "id": "r09",
+      "title": "Searches for other domains",
+      "track": "reports",
+      "branch": "Domains",
+      "status": "working-report",
+      "summary": "Require specified observable signatures, null controls and falsifiable searches for hypothetical external domains.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R09.md",
+        "sha256": "86dd8b269ab3408abd6ddf4f56a82c8415034496f1aac568570c078540cfcd9f",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R09.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/joint-fit/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/cosmic-size/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 9,
+      "original_title": "Searching for Observable Traces of Other Cosmic Domains"
+    },
+    {
+      "id": "r10",
+      "title": "Physics engine demo design",
+      "track": "reports",
+      "branch": "Methods",
+      "status": "working-report",
+      "summary": "Restored design study: expose the model, units, conservation and test targets in simulation software.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R10.md",
+        "sha256": "7ac261bdef455eacf9b1653ac31550e26d942102213584d2f17a37cb57971089",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R10.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/regression-137/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/light-slowing/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 10,
+      "original_title": "Report 10 — Full-Depth ArcSecs Annotated Research Working Edition"
+    },
+    {
+      "id": "r11",
+      "title": "Warp bubbles and real space travel",
+      "track": "reports",
+      "branch": "Engineering",
+      "status": "working-report",
+      "summary": "Restored travel study: distinguish speculative propulsion and local information transport from coordinate descriptions.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R11.md",
+        "sha256": "0bbd7a7444a9e7c8d5ad3b306976d3547541855da51671118324cc8f50f93274",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R11.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/causal-reach/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/separation/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 11,
+      "original_title": "Report 11 — Full-Depth ArcSecs Annotated Research Working Edition"
+    },
+    {
+      "id": "r12",
+      "title": "Theory defense and scientific testing",
+      "track": "reports",
+      "branch": "Methods",
+      "status": "working-report",
+      "summary": "Restored methodological argument: evaluate alternatives by discriminating tests rather than rhetoric.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R12.md",
+        "sha256": "1cc73ed64683896ca105ad34cbc0f3a39546cc24dde268658539d10f0a0b7326",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R12.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/joint-fit/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/spacetime/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 12,
+      "original_title": "Report 12 — Full-Depth ArcSecs Annotated Research Working Edition"
+    },
+    {
+      "id": "r13",
+      "title": "Arcseconds, light-years and variable speed",
+      "track": "reports",
+      "branch": "Distances",
+      "status": "working-report",
+      "summary": "Restored distance study: keep angular geometry, length units and propagation assumptions separate.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R13.md",
+        "sha256": "829b0b3735a5f425d3f7a4308943e4e17a94a303a8b745ed1320ec04326cf494",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R13.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/optical-map/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/distance-inference/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 13,
+      "original_title": "Report 13 — Full-Depth ArcSecs Annotated Research Working Edition"
+    },
+    {
+      "id": "r14",
+      "title": "Tired-light simulation software",
+      "track": "reports",
+      "branch": "Light",
+      "status": "working-report",
+      "summary": "Restored software study: define physical transfer laws and compare timing, spectral and image predictions.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R14.md",
+        "sha256": "b368f50dfa29789c28291c4a2f1762fca75252a2850f033103ab9a2538e75159",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R14.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/fixed-gap-drag/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/light-slowing/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 14,
+      "original_title": "Report 14 — Full-Depth ArcSecs Annotated Research Working Edition"
+    },
+    {
+      "id": "r15",
+      "title": "Machian inertia and navigation",
+      "track": "reports",
+      "branch": "Gravity",
+      "status": "working-report",
+      "summary": "Restored navigation study: account for cosmic matter and field contributions before claiming a reduction of inertia.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R15.md",
+        "sha256": "9295e6e141c0d8535cb662ae23296ee806446d3adb9a452aab5ce08f1728119c",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R15.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/common-field/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/separation/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 15,
+      "original_title": "Report 15 — Full-Depth ArcSecs Annotated Research Working Edition"
+    },
+    {
+      "id": "r16",
+      "title": "Machine-speed constitutional governance",
+      "track": "reports",
+      "branch": "Methods",
+      "status": "working-report",
+      "summary": "A governance and research-methodology study; explicitly outside the scope of physical-cosmology evidence.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R16.md",
+        "sha256": "6f2da5d51f8334c47bab3cae7ecd8f59aa1fc8bf0e0f186b2313fb4f2d702c55",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R16.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/charter/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 16,
+      "original_title": "Report 16 — Full-Depth ArcSecs Annotated Research Working Edition"
+    },
+    {
+      "id": "r17",
+      "title": "Testing proposed speed limits",
+      "track": "reports",
+      "branch": "Gravity",
+      "status": "working-report",
+      "summary": "Restored speed-limit study: distinguish separation, material transport and local signals.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R17.md",
+        "sha256": "85a4f39a382e2132f5798700e9637fdc4715cdabb9195a7d1e82b8e448142399",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R17.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/causal-reach/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/fastest-signal/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 17,
+      "original_title": "Report 17 — Full-Depth ArcSecs Annotated Research Working Edition"
+    },
+    {
+      "id": "r18",
+      "title": "Parsecs, speed and area",
+      "track": "reports",
+      "branch": "Distances",
+      "status": "working-report",
+      "summary": "Restored measurement study: preserve geometric calibration and dimensional consistency.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R18.md",
+        "sha256": "a433a31456d9003ca6a659e85d5a9adb25d345c4f033a23200ab1c820161b31c",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R18.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/optical-map/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/distance-inference/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 18,
+      "original_title": "Report 18 — Full-Depth ArcSecs Annotated Research Working Edition"
+    },
+    {
+      "id": "r19",
+      "title": "Responding to tired-light objections",
+      "track": "reports",
+      "branch": "Light",
+      "status": "working-report",
+      "summary": "Restored advocacy study: retain the observational objections as quantitative requirements on a candidate mechanism.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R19.md",
+        "sha256": "ddc265495dd2117e7348f73000eb785981bcfab039ef478c637b9011c231aa7b",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R19.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/joint-fit/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/light-slowing/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 19,
+      "original_title": "Report 19 — Full-Depth ArcSecs Annotated Research Working Edition"
+    },
+    {
+      "id": "r20",
+      "title": "Dark Matter Drive design",
+      "track": "reports",
+      "branch": "Engineering",
+      "status": "working-report",
+      "summary": "Restored propulsion study: require measured capture, thrust, supplied energy and waste heat.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R20.md",
+        "sha256": "0eef37af2263b137ebf18929de01800748dcb0880cd8c8e73c077558c3e56836",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R20.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/joint-fit/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/physical-existence/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 20,
+      "original_title": "Report 20 — Full-Depth ArcSecs Annotated Research Working Edition"
+    },
+    {
+      "id": "r21",
+      "title": "Tired-light cosmology enhancements",
+      "track": "reports",
+      "branch": "Light",
+      "status": "working-report",
+      "summary": "Restored cosmology study: distinguish phenomenological redshift fits from a calibrated physical transport law.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R21.md",
+        "sha256": "0264cdda214aeebc906de8e3f184bec70b40bcf17800c5f6eb0bed1ab1443cf8",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R21.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/optical-map/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/light-slowing/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 21,
+      "original_title": "Report 21 — Full-Depth ArcSecs Annotated Research Working Edition"
+    },
+    {
+      "id": "r22",
+      "title": "Tired-light physics engine exploration",
+      "track": "reports",
+      "branch": "Methods",
+      "status": "working-report",
+      "summary": "Restored simulation investigation: evaluate physical assumptions with bounded numerical controls.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R22.md",
+        "sha256": "59590d5858f1e6dbc543e2db26aabf59c200d457d7c348acd05599e9395c4656",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R22.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/regression-137/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/light-slowing/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 22,
+      "original_title": "Report 22 — Full-Depth ArcSecs Annotated Research Working Edition"
+    },
+    {
+      "id": "r23",
+      "title": "Tired light versus light speed",
+      "track": "reports",
+      "branch": "Light",
+      "status": "working-report",
+      "summary": "Restored study: distinguish energy loss, group velocity and causal speed; retain empirical constraints.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R23.md",
+        "sha256": "bfc08ebfbf3b28b1756fb231b3605217deeb0f5d81ca98f883fd5e72faed5351",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R23.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/ceiling/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/fastest-signal/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 23,
+      "original_title": "Report 23 — Full-Depth ArcSecs Annotated Research Working Edition"
+    },
+    {
+      "id": "r24",
+      "title": "Tired light without a spacetime substrate",
+      "track": "reports",
+      "branch": "Methods",
+      "status": "working-report",
+      "summary": "Restored simulation study: compare a physical-first implementation with measured optical and gravitational benchmarks.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R24.md",
+        "sha256": "2269cf6b248b6736e7f2cfd9dc9276a2d55fad22c6449224209987e0ff353a9f",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R24.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/joint-fit/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/spacetime/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 24,
+      "original_title": "Report 24 — Full-Depth ArcSecs Annotated Research Working Edition"
+    },
+    {
+      "id": "r25",
+      "title": "Physical photon capture and horizons",
+      "track": "reports",
+      "branch": "Gravity",
+      "status": "working-report",
+      "summary": "Investigate finite crossing durations and coordinate-infinity distinctions without treating coordinates as a physical mechanism.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R25.md",
+        "sha256": "43035980fc6e4c513d126cb746d8115a458c066f21498b5bb13cb172778dfad6",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R25.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/causal-reach/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/spacetime/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 25,
+      "original_title": "Black-Hole Event Horizons Without Physical Spacetime: Physical Photon Capture, Finite Crossing Durations, and Coordinate-Infinity Audits in the ArcSecs Framework"
+    },
+    {
+      "id": "r26",
+      "title": "Clock, motion and decay model",
+      "track": "reports",
+      "branch": "Clocks",
+      "status": "working-report",
+      "summary": "Develop a quantitative physical-process account that must reproduce differential clock and decay measurements.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R26.md",
+        "sha256": "1841901520b9b23bbcb6d447fcf5031f38b228b8f97f275ba444cac90aa5791f",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R26.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/moving-endpoints/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/constant-time/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 26,
+      "original_title": "Constant Universal Time: Toward a Quantitative Physical-Process Account of Clocks, Motion, and Decay"
+    },
+    {
+      "id": "r27",
+      "title": "Geometry-first astronomical audit",
+      "track": "reports",
+      "branch": "Distances",
+      "status": "working-report",
+      "summary": "Use independently calibrated geometric anchors to assess the proposed closer-and-smaller interpretation.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R27.md",
+        "sha256": "4cf76ae4ab6c7e672e4056431dca02c4ef6fe52bff2aaede59eb95df0f8139e2",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R27.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/anchor-ngc/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/distance-inference/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 27,
+      "original_title": "Are Distant Objects Closer and Smaller? An Independent Geometry-First Astronomical Audit"
+    },
+    {
+      "id": "r28",
+      "title": "Superluminal separation and causality",
+      "track": "reports",
+      "branch": "Gravity",
+      "status": "working-report",
+      "summary": "Differentiate common-frame separation rates from local relativistic relative velocity and causal propagation.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R28.md",
+        "sha256": "c1ecce6255fcfedc5252b7a317844a599db9fbcb985ce5e733445672626aa0a5",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R28.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/causal-reach/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/separation/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 28,
+      "original_title": "Superluminal Separation and Causality: Testable Relational Motion Beyond a Universal Light Ceiling"
+    },
+    {
+      "id": "r29",
+      "title": "Atomic clocks and particle decay",
+      "track": "reports",
+      "branch": "Clocks",
+      "status": "working-report",
+      "summary": "Investigate clock and decay response across physical processes rather than fitting just one clock.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R29.md",
+        "sha256": "a8886a11d6b9ceeaeab2e019b2b5e27b5c5af6230c080b67dee339e96e965b23",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R29.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/moving-endpoints/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/constant-time/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 29,
+      "original_title": "Is Time Fundamentally Constant? A Physical-Process Model of Atomic Clocks, Optical Transitions, and Particle Decay"
+    },
+    {
+      "id": "r30",
+      "title": "Operational mass and rest-mass limits",
+      "track": "reports",
+      "branch": "Light",
+      "status": "working-report",
+      "summary": "The source audit distinguishes photon energy, momentum and bending from an upper limit on invariant rest mass; no positive mass measurement follows.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R30.md",
+        "sha256": "ec2e85a1318127a0442ac3c04bac9460612ecff064a139f0a84ddf13c6517103",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R30.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/ceiling/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/photon-mass/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 30,
+      "original_title": "Operational Mass, Gravitational Coupling, and Empirical Limits on Nonzero Photon Rest Mass: An Independent ArcSecs Investigation"
+    },
+    {
+      "id": "r31",
+      "title": "Gravitational action on light",
+      "track": "reports",
+      "branch": "Gravity",
+      "status": "working-report",
+      "summary": "The editorial audit retains measured deflection and radio delay separately from the proposed interaction law and asks for a distinct rest-mass test.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R31.md",
+        "sha256": "de8a116dc85c5fa9fb3160ee74861d3c2cd4723fea296a259630a8a9558867fd",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R31.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/multimessenger/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/photon-mass/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 31,
+      "original_title": "Independent ArcSecs Research Commission 11: Gravitational Action on Light, Operational Mass Vocabulary, and Multi-Frequency Rest-Mass Discriminants"
+    },
+    {
+      "id": "r32",
+      "title": "Cosmic chronometers and high-redshift candidates",
+      "track": "reports",
+      "branch": "Distances",
+      "status": "working-report",
+      "summary": "Distinguish model-dependent cosmic age, calibration and candidate identification from confirmed measurements.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R32.md",
+        "sha256": "191dc18aa5fa6f9d58f76b3127802d18554224226c17005a7da5fdb7facb5a3d",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R32.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/anchor-lmc/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/cosmic-age/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 32,
+      "original_title": "How Old Is the Universe? Independent Cosmic Chronometers, Distance Calibration, and JWST False High-Redshift Candidates"
+    },
+    {
+      "id": "r33",
+      "title": "Falsifiable search for other bubbles",
+      "track": "reports",
+      "branch": "Domains",
+      "status": "working-report",
+      "summary": "Specify tests and statistical controls for external-domain effects without assuming detection.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R33.md",
+        "sha256": "aa404b0f04124e85101e79e9d9572743d2380ced4d128df818a62ed774110fe2",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R33.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/joint-fit/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/cosmic-size/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 33,
+      "original_title": "Mission 09 Technical Report: Can We Detect Other Cosmic Bubbles? A Falsifiable, Test-Driven Search for External-Domain Effects Under the ArcSecs Framework"
+    },
+    {
+      "id": "r34",
+      "title": "Exterior environment and boundary growth",
+      "track": "reports",
+      "branch": "Domains",
+      "status": "working-report",
+      "summary": "Investigate exterior pressure and interactions as possible boundary drivers; require explicit dynamics.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R34.md",
+        "sha256": "5716cc982ecbb41d9909a851f218d4fc7106e97e02faa3bc18d40d1a3c1a1c87",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R34.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/shell-void/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/cosmic-size/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 34,
+      "original_title": "External Influence and Boundary Physics in ArcSecs Cosmology: Can an Exterior Environment Drive Universe-Scale Bubble Growth?"
+    },
+    {
+      "id": "r35",
+      "title": "Physical-field gravity precision audit",
+      "track": "reports",
+      "branch": "Gravity",
+      "status": "working-report",
+      "summary": "Separate the measured precision benchmarks from the inference of a Machian kernel or proposed physical field.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R35.md",
+        "sha256": "cf597c15dfe0d0524d7ce02b42c75ab5d937762376619b7824988ee060ffd1c1",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R35.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/common-field/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/spacetime/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 35,
+      "original_title": "Relational, Physical-Field Gravity Without a Spacetime Fabric: Precision Benchmark Audit, Machian Kernel Analysis, and Empirical Falsification Framework"
+    },
+    {
+      "id": "r36",
+      "title": "Physical energy loss versus expansion redshift",
+      "track": "reports",
+      "branch": "Light",
+      "status": "working-report",
+      "summary": "Test energy loss against timing, optics and calibrated astronomical observations.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R36.md",
+        "sha256": "69d090ee2cb8bb4b665a51df075a9082d859ffde63ec09cd30b98a4e7cff6cbf",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R36.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/optical-map/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/light-slowing/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 36,
+      "original_title": "Can a Physical Photon-Energy-Loss Mechanism Replace or Supplement Expanding-Space Redshift?"
+    },
+    {
+      "id": "r37",
+      "title": "Baryon dynamics and capture propulsion",
+      "track": "reports",
+      "branch": "Engineering",
+      "status": "working-report",
+      "summary": "Investigate dark-sector observations and conditional capture feasibility without treating substrate capture as demonstrated.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R37.md",
+        "sha256": "61fc064d5308066f494832e9b601c545e14e8e1080ae6c11e3701e13194904a3",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R37.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/joint-fit/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/physical-existence/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 37,
+      "original_title": "Relational Baryon Dynamics, Dark-Sector Observables, and Substrate-Capture Propulsion Feasibility under the ArcSecs Framework"
+    },
+    {
+      "id": "r38",
+      "title": "Physical reality without a spacetime substrate",
+      "track": "reports",
+      "branch": "Methods",
+      "status": "working-report",
+      "summary": "Preserve the physical-first premises and distinguish observations from source-dependent field assumptions.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R38.md",
+        "sha256": "823301599dde0d01209e808c67c54d11ad394266e3c6193ce678fc0708baec41",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R38.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/charter/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/spacetime/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 38,
+      "original_title": "ArcSecs editorial intake R38 — Physical Reality Without a Spacetime Substrate"
+    },
+    {
+      "id": "r39",
+      "title": "Photon momentum exchange and source recoil",
+      "track": "reports",
+      "branch": "Gravity",
+      "status": "working-report",
+      "summary": "Develop a synthetic weak-field interaction and source-backreaction control; no new experimental measurement.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R39.md",
+        "sha256": "aa04c5206d4b676d66bdd456f1189e369aaf291d6ca3a7b694bcf61852f321d8",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R39.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/finite-source/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/photon-mass/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 39,
+      "original_title": "ArcSecs Research Report R39 — Photon Momentum Exchange, Source Recoil, and Physical-Field Gravity"
+    },
+    {
+      "id": "r40",
+      "title": "Finite-speed carrier and external-bubble tests",
+      "track": "reports",
+      "branch": "Domains",
+      "status": "working-report",
+      "summary": "Investigate finite-speed physical carriers and source recoil using synthetic internal bookkeeping tests.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R40.md",
+        "sha256": "dea9fce8ae00f87d214be35c321d4b7be66d683ad817a147024b1f203824a18c",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R40.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/causal-reach/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/separation/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 40,
+      "original_title": "R40 — Finite-Speed Physical Carrier, Source Recoil, and External-Bubble Interaction Tests"
+    },
+    {
+      "id": "r41",
+      "title": "Source-anchored attractive fields",
+      "track": "reports",
+      "branch": "Domains",
+      "status": "working-report",
+      "summary": "Investigate causal propagation and an exterior-bubble interaction candidate with companion derivations and synthetic data.",
+      "limitation": "Historical working record; not peer-reviewed or a demonstration of physical truth. Later review corrections take precedence. Report numbering is archival order, not discovery date.",
+      "source": {
+        "path": "ArcSecs/docs/long-term-memory/reports/R41.md",
+        "sha256": "799be08a5233b765b89eae9c7b5c4740ee2356aa3a0f152674a471c304358532",
+        "url": "https://github.com/MichaelKappel/ArcSecs.com/blob/main/docs/long-term-memory/reports/R41.md"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/causal-reach/"
+        },
+        {
+          "label": "Related foundation",
+          "url": "/foundations/cosmic-size/"
+        }
+      ],
+      "date": null,
+      "date_note": "Report sequence; no first-publication date established.",
+      "edition": 41,
+      "original_title": "R41 — Source-Anchored Attractive Fields, Causal Propagation, and an Exterior Bubble Candidate"
+    },
+    {
+      "id": "review-1",
+      "title": "Review 1.0 — Initial integrated review",
+      "track": "reviews",
+      "branch": "Integration",
+      "status": "edition",
+      "summary": "Consolidates Parts I–XXVIII and original investigations.",
+      "limitation": "Manuscript edition date, not an independently validated discovery or publication date. Historical versions are retained in the source archive.",
+      "source": {
+        "path": "docs/prior-review/ArcSecs_Full_Scientific_Paper.md",
+        "sha256": "a62045e810b813b4769a1808a2173adde7a16967e619202fcff5b9f01204360e",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/charter/"
+        }
+      ],
+      "date": "2026-11-23",
+      "date_note": "Date printed in manuscript metadata.",
+      "edition": 1
+    },
+    {
+      "id": "review-2",
+      "title": "Review 2.0 — Six branches and fixed-gap wall bound",
+      "track": "reviews",
+      "branch": "Integration",
+      "status": "edition",
+      "summary": "Integrates Part XXIX branches; Part XXX adds endpoint inequality and constant-drag feasibility (28 conditional checks in revision log).",
+      "limitation": "Manuscript edition date, not an independently validated discovery or publication date. Historical versions are retained in the source archive.",
+      "source": {
+        "path": "docs/prior-review/ArcSecs_Scientific_Paper_Review_2.md",
+        "sha256": "affb2fca87a72e887e5732cfbb6bbfb5fbde4aa5a043428e91e8239f31f1a6af",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/wall-bound/"
+        }
+      ],
+      "date": "2026-11-23",
+      "date_note": "Date printed in manuscript metadata.",
+      "edition": 2
+    },
+    {
+      "id": "review-3",
+      "title": "Review 3.0 — Finite-capacity history and recoil",
+      "track": "reviews",
+      "branch": "Integration",
+      "status": "edition",
+      "summary": "Integrates Part XXXI finite-capacity dressing and recoil with a 42-run numerical benchmark.",
+      "limitation": "Manuscript edition date, not an independently validated discovery or publication date. Historical versions are retained in the source archive.",
+      "source": {
+        "path": "historical/ArcSecs_Scientific_Paper_Review_3.md",
+        "sha256": "6b264f64760f8e66d80ed60cf3c2443728ef91460b9991f1c902375cca45998a",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/history-coordinate/"
+        }
+      ],
+      "date": "2026-11-23",
+      "date_note": "Date printed in manuscript metadata.",
+      "edition": 3
+    },
+    {
+      "id": "review-4",
+      "title": "Review 4.0 — Exact charter and local reservoir",
+      "track": "reviews",
+      "branch": "Integration",
+      "status": "edition",
+      "summary": "Preserves the exact charter, distinguishes emission ceiling and signal speeds, extends finite-wall recoil and local reservoir controls.",
+      "limitation": "Manuscript edition date, not an independently validated discovery or publication date. Historical versions are retained in the source archive.",
+      "source": {
+        "path": "historical/review4/ArcSecs_Scientific_Paper_Review_4.md",
+        "sha256": "0f60d9dc6b42611692e251316ca856f423567f137d5c727e56a207bced73350d",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/coupled-modes/"
+        }
+      ],
+      "date": "2026-11-24",
+      "date_note": "Date printed in manuscript metadata.",
+      "edition": 4
+    },
+    {
+      "id": "review-5",
+      "title": "Review 5.0 — Independent audit follow-up",
+      "track": "reviews",
+      "branch": "Integration",
+      "status": "edition",
+      "summary": "Corrects degeneracy accounting and tidal-page references, adds local conversion and static-wall interval certificate; reruns 21 supplied audit cases.",
+      "limitation": "Manuscript edition date, not an independently validated discovery or publication date. Historical versions are retained in the source archive.",
+      "source": {
+        "path": "ArcSecs_Scientific_Paper_Review_5.md",
+        "sha256": "efb95edb7ad155d239f9f7f9c3001aceab99af38550a23d8d38d774d11edd0cc",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/wall-certificate/"
+        }
+      ],
+      "date": "2026-11-24",
+      "date_note": "Date printed in manuscript metadata.",
+      "edition": 5
+    },
+    {
+      "id": "review-6",
+      "title": "Review 6.0 — Forward-coherent conversion",
+      "track": "reviews",
+      "branch": "Integration",
+      "status": "edition",
+      "summary": "Adds Part XXXIV, finite-range exchange and phase matching, and derives the selected-mode escape criterion. The full research charter remains open.",
+      "limitation": "Manuscript edition date, not an independently validated discovery or publication date. Historical versions are retained in the source archive.",
+      "source": {
+        "path": "ArcSecs_Scientific_Paper_Review_6.md",
+        "sha256": "b26cc7b8b32ae3d1000de6beef1982764033b04b15345a1e5ea60737cb2b979b",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/escape-criterion/"
+        }
+      ],
+      "date": "2026-11-24",
+      "date_note": "Date printed in manuscript metadata.",
+      "edition": 6
+    },
+    {
+      "id": "sciama-1953",
+      "title": "Inertia — Sciama",
+      "track": "references",
+      "branch": "Gravity",
+      "status": "reference",
+      "summary": "On the Origin of Inertia. A historical reference for the relational-inertia research discussion.",
+      "limitation": "Bibliographic entry carried forward in Review 6.0, not independently reverified here; does not establish ArcSecs conclusions.",
+      "source": {
+        "path": "ArcSecs_Scientific_Paper_Review_6.md#references-and-source-lineage",
+        "sha256": "b26cc7b8b32ae3d1000de6beef1982764033b04b15345a1e5ea60737cb2b979b",
+        "url": "https://doi.org/10.1093/mnras/113.1.34"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/common-field/"
+        }
+      ],
+      "date": "1953",
+      "date_note": "Publication year as listed in Review 6.0.",
+      "edition": null
+    },
+    {
+      "id": "photon-review-2005",
+      "title": "Photon mass — Tu, Luo and Gillies",
+      "track": "references",
+      "branch": "Light",
+      "status": "reference",
+      "summary": "A literature review of photon-mass research and constraints.",
+      "limitation": "Bibliographic entry carried forward in Review 6.0, not independently reverified here; does not establish ArcSecs conclusions.",
+      "source": {
+        "path": "ArcSecs_Scientific_Paper_Review_6.md#references-and-source-lineage",
+        "sha256": "b26cc7b8b32ae3d1000de6beef1982764033b04b15345a1e5ea60737cb2b979b",
+        "url": "https://doi.org/10.1088/0034-4885/68/1/R02"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/ceiling/"
+        }
+      ],
+      "date": "2005",
+      "date_note": "Publication year as listed in Review 6.0.",
+      "edition": null
+    },
+    {
+      "id": "vortices-2007",
+      "title": "Photon-mass bounds and vortices",
+      "track": "references",
+      "branch": "Light",
+      "status": "reference",
+      "summary": "Adelberger, Dvali and Gruzinov discuss model dependence of a photon-mass bound.",
+      "limitation": "Bibliographic entry carried forward in Review 6.0, not independently reverified here; does not establish ArcSecs conclusions.",
+      "source": {
+        "path": "ArcSecs_Scientific_Paper_Review_6.md#references-and-source-lineage",
+        "sha256": "b26cc7b8b32ae3d1000de6beef1982764033b04b15345a1e5ea60737cb2b979b",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17358459/"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/ceiling/"
+        }
+      ],
+      "date": "2007",
+      "date_note": "Publication year as listed in Review 6.0.",
+      "edition": null
+    },
+    {
+      "id": "lorentz-2015",
+      "title": "Terrestrial Lorentz-symmetry test",
+      "track": "references",
+      "branch": "Light",
+      "status": "reference",
+      "summary": "Nagel and colleagues provide an electrodynamics benchmark carried forward from Part XXVII.",
+      "limitation": "Bibliographic entry carried forward in Review 6.0, not independently reverified here; does not establish ArcSecs conclusions.",
+      "source": {
+        "path": "ArcSecs_Scientific_Paper_Review_6.md#references-and-source-lineage",
+        "sha256": "b26cc7b8b32ae3d1000de6beef1982764033b04b15345a1e5ea60737cb2b979b",
+        "url": "https://doi.org/10.1038/ncomms9174"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/ceiling/"
+        }
+      ],
+      "date": "2015",
+      "date_note": "Publication year as listed in Review 6.0.",
+      "edition": null
+    },
+    {
+      "id": "multimessenger-2017",
+      "title": "GW170817 and GRB 170817A",
+      "track": "references",
+      "branch": "Gravity",
+      "status": "reference",
+      "summary": "A multimessenger arrival-time benchmark for differential propagation, subject to emission and path assumptions.",
+      "limitation": "Bibliographic entry carried forward in Review 6.0, not independently reverified here; does not establish ArcSecs conclusions.",
+      "source": {
+        "path": "ArcSecs_Scientific_Paper_Review_6.md#references-and-source-lineage",
+        "sha256": "b26cc7b8b32ae3d1000de6beef1982764033b04b15345a1e5ea60737cb2b979b",
+        "url": "https://arxiv.org/abs/1710.05834"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/multimessenger/"
+        }
+      ],
+      "date": "2017",
+      "date_note": "Publication year as listed in Review 6.0.",
+      "edition": null
+    },
+    {
+      "id": "lmc-2019",
+      "title": "Large Magellanic Cloud distance anchor",
+      "track": "references",
+      "branch": "Distances",
+      "status": "reference",
+      "summary": "Pietrzyński and colleagues provide a geometric distance calibration used in the review.",
+      "limitation": "Bibliographic entry carried forward in Review 6.0, not independently reverified here; does not establish ArcSecs conclusions.",
+      "source": {
+        "path": "ArcSecs_Scientific_Paper_Review_6.md#references-and-source-lineage",
+        "sha256": "b26cc7b8b32ae3d1000de6beef1982764033b04b15345a1e5ea60737cb2b979b",
+        "url": "https://doi.org/10.1038/s41586-019-0999-4"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/anchor-lmc/"
+        }
+      ],
+      "date": "2019",
+      "date_note": "Publication year as listed in Review 6.0.",
+      "edition": null
+    },
+    {
+      "id": "supernovae-2024",
+      "title": "DES supernova time dilation",
+      "track": "references",
+      "branch": "Distances",
+      "status": "reference",
+      "summary": "The DES study is cited as an arrival-duration constraint for propagation alternatives.",
+      "limitation": "Bibliographic entry carried forward in Review 6.0, not independently reverified here; does not establish ArcSecs conclusions.",
+      "source": {
+        "path": "ArcSecs_Scientific_Paper_Review_6.md#references-and-source-lineage",
+        "sha256": "b26cc7b8b32ae3d1000de6beef1982764033b04b15345a1e5ea60737cb2b979b",
+        "url": "https://arxiv.org/abs/2406.05050"
+      },
+      "related": [
+        {
+          "label": "Related evidence",
+          "url": "/evidence/ledger/optical-map/"
+        }
+      ],
+      "date": "2024",
+      "date_note": "Publication year as listed in Review 6.0.",
+      "edition": null
+    },
+    {
+      "id": "wall-conflict",
+      "title": "Fixed-gap wall obstruction",
+      "track": "milestones",
+      "branch": "Light",
+      "status": "obstruction",
+      "summary": "Review 2 adds a constant-drag feasibility criterion; the illustrative incompatible bounds restrict the specified model family.",
+      "limitation": "Conditional model or reported numerical verification only. No new observational fit or independent physical validation. Scope and unresolved constraints are in the linked ledger.",
+      "source": {
+        "path": "docs/research/08_review_edition_2_change_log.md",
+        "sha256": "177dc1bf9360ee887ec589ac830b0ab5aa1cbd55a794d151c220a4c00868d36e",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      },
+      "related": [
+        {
+          "label": "Read detailed evidence record",
+          "url": "/evidence/ledger/wall-bound/"
+        },
+        {
+          "label": "Associated review edition",
+          "url": "/timeline/record/review-2/"
+        }
+      ],
+      "date": "2026-11-23",
+      "date_note": "Associated manuscript edition date, not date of discovery.",
+      "edition": 2
+    },
+    {
+      "id": "capacity-recoil",
+      "title": "Finite-capacity recoil control",
+      "track": "milestones",
+      "branch": "Light",
+      "status": "conditional",
+      "summary": "Review 3 adds finite-capacity irreversible dressing and recoil; the revision reports 42 numerical benchmark runs.",
+      "limitation": "Conditional model or reported numerical verification only. No new observational fit or independent physical validation. Scope and unresolved constraints are in the linked ledger.",
+      "source": {
+        "path": "docs/research/10_review_edition_3_change_log.md",
+        "sha256": "a79e350a16487d32088771d6cbf0ad6d8ad6071a2658eeea8fbdee061d0a4b16",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      },
+      "related": [
+        {
+          "label": "Read detailed evidence record",
+          "url": "/evidence/ledger/history-coordinate/"
+        },
+        {
+          "label": "Associated review edition",
+          "url": "/timeline/record/review-3/"
+        }
+      ],
+      "date": "2026-11-23",
+      "date_note": "Associated manuscript edition date, not date of discovery.",
+      "edition": 3
+    },
+    {
+      "id": "static-certificate",
+      "title": "Static-wall interval certificate",
+      "track": "milestones",
+      "branch": "Light",
+      "status": "verification",
+      "summary": "Review 5 reports a continuous interval-comparison certificate for the static reference and reruns all 21 independent audit cases.",
+      "limitation": "Conditional model or reported numerical verification only. No new observational fit or independent physical validation. Scope and unresolved constraints are in the linked ledger.",
+      "source": {
+        "path": "docs/research/14_review5_revision_log.md",
+        "sha256": "dceb21d15f792cd01a329449f976c31d0d3878865b81fc2f707d27f8d06bad31",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      },
+      "related": [
+        {
+          "label": "Read detailed evidence record",
+          "url": "/evidence/ledger/wall-certificate/"
+        },
+        {
+          "label": "Associated review edition",
+          "url": "/timeline/record/review-5/"
+        }
+      ],
+      "date": "2026-11-24",
+      "date_note": "Associated manuscript edition date, not date of discovery.",
+      "edition": 5
+    },
+    {
+      "id": "finite-range-obstruction",
+      "title": "Finite-range forward-conversion obstruction",
+      "track": "milestones",
+      "branch": "Light",
+      "status": "obstruction",
+      "summary": "Review 6 reports cone acceptance no larger than 9.325403e-11 for the central reference kernel; three ultra-long-range elastic rows retain quadrature warnings.",
+      "limitation": "Conditional model or reported numerical verification only. No new observational fit or independent physical validation. Scope and unresolved constraints are in the linked ledger.",
+      "source": {
+        "path": "docs/research/16_review6_revision_log.md",
+        "sha256": "17b151f00a11c20fda86587f0b7ad4073e767e638f0b03df9097f1cbb7cfa37c",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      },
+      "related": [
+        {
+          "label": "Read detailed evidence record",
+          "url": "/evidence/ledger/finite-range/"
+        },
+        {
+          "label": "Associated review edition",
+          "url": "/timeline/record/review-6/"
+        }
+      ],
+      "date": "2026-11-24",
+      "date_note": "Associated manuscript edition date, not date of discovery.",
+      "edition": 6
+    },
+    {
+      "id": "phase-matched",
+      "title": "Phase-matched collective conversion",
+      "track": "milestones",
+      "branch": "Light",
+      "status": "conditional",
+      "summary": "Review 6 derives collinear phase matching into a slower positive-gap branch, with conditional coherence and aperture requirements and finite-cell reverse conversion.",
+      "limitation": "Conditional model or reported numerical verification only. No new observational fit or independent physical validation. Scope and unresolved constraints are in the linked ledger.",
+      "source": {
+        "path": "docs/research/16_review6_revision_log.md",
+        "sha256": "17b151f00a11c20fda86587f0b7ad4073e767e638f0b03df9097f1cbb7cfa37c",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      },
+      "related": [
+        {
+          "label": "Read detailed evidence record",
+          "url": "/evidence/ledger/phase-match/"
+        },
+        {
+          "label": "Associated review edition",
+          "url": "/timeline/record/review-6/"
+        }
+      ],
+      "date": "2026-11-24",
+      "date_note": "Associated manuscript edition date, not date of discovery.",
+      "edition": 6
+    },
+    {
+      "id": "escape-threshold",
+      "title": "Escape criterion κ/G ≥ 4",
+      "track": "milestones",
+      "branch": "Light",
+      "status": "conditional",
+      "summary": "Review 6 derives monotonic total converted population for the specified outgoing-channel model at κ ≥ 4G; six cases compared against DOP853.",
+      "limitation": "Conditional model or reported numerical verification only. No new observational fit or independent physical validation. Scope and unresolved constraints are in the linked ledger.",
+      "source": {
+        "path": "docs/research/16_review6_revision_log.md",
+        "sha256": "17b151f00a11c20fda86587f0b7ad4073e767e638f0b03df9097f1cbb7cfa37c",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      },
+      "related": [
+        {
+          "label": "Read detailed evidence record",
+          "url": "/evidence/ledger/escape-criterion/"
+        },
+        {
+          "label": "Associated review edition",
+          "url": "/timeline/record/review-6/"
+        }
+      ],
+      "date": "2026-11-24",
+      "date_note": "Associated manuscript edition date, not date of discovery.",
+      "edition": 6
+    },
+    {
+      "id": "forward-regression",
+      "title": "137 forward-model assertions",
+      "track": "milestones",
+      "branch": "Methods",
+      "status": "verification",
+      "summary": "The Review 6 log reports all 137 assertions passed; refined escape maximum discrepancy 1.54e-13. Earlier certificate and audit cases were retained, not rerun in this edition.",
+      "limitation": "Conditional model or reported numerical verification only. No new observational fit or independent physical validation. Scope and unresolved constraints are in the linked ledger.",
+      "source": {
+        "path": "docs/research/16_review6_revision_log.md",
+        "sha256": "17b151f00a11c20fda86587f0b7ad4073e767e638f0b03df9097f1cbb7cfa37c",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      },
+      "related": [
+        {
+          "label": "Read detailed evidence record",
+          "url": "/evidence/ledger/regression-137/"
+        },
+        {
+          "label": "Associated review edition",
+          "url": "/timeline/record/review-6/"
+        }
+      ],
+      "date": "2026-11-24",
+      "date_note": "Associated manuscript edition date, not date of discovery.",
+      "edition": 6
+    }
+  ]
+}

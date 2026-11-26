@@ -1,0 +1,715 @@
+{
+  "version": "1.4.0",
+  "source": {
+    "title": "ArcSecs Scientific Review 6.0",
+    "date": "2026-11-24",
+    "sha256": "e714e97fbd4c7995b20950edef386c56ae637c5226935000b6ee7e16af624fbf",
+    "url": "https://arcsecs.com/read-scientific-paper/",
+    "page_convention": "Printed manuscript page numbers, same as physical PDF page numbers.",
+    "scope": "Curated original summaries of selected source findings. Not a full literature review or new physical validation."
+  },
+  "statuses": {
+    "premise": "Research premise",
+    "conditional": "Conditional result",
+    "verification": "Reported numerical verification",
+    "obstruction": "Restricted model obstruction",
+    "reference": "Reported external reference",
+    "open": "Open research gate"
+  },
+  "records": [
+    {
+      "id": "charter",
+      "title": "The twelve foundations",
+      "branch": "Charter",
+      "status": "premise",
+      "phase": "§2",
+      "pages": [
+        6,
+        7
+      ],
+      "finding": "The twelve statements define the investigator’s research charter.",
+      "limitation": "A declared premise is not an empirical result.",
+      "next_test": "Test concrete implementations against independent observations.",
+      "gates": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "foundations": [],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "ceiling",
+      "title": "C-01: emission ceiling",
+      "branch": "Light",
+      "status": "open",
+      "phase": "§3",
+      "pages": [
+        8,
+        9,
+        10
+      ],
+      "finding": "The origin of the local emission ceiling is a research objective; distinguish characteristic, group and front speeds.",
+      "limitation": "No calibrated mechanism fixes the observed ceiling.",
+      "next_test": "Derive a causal finite-source response with calibrated matter standards.",
+      "gates": [
+        "A",
+        "B",
+        "D"
+      ],
+      "foundations": [
+        "photon-mass",
+        "fastest-signal",
+        "separation"
+      ],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "common-field",
+      "title": "Screened common-field obstruction",
+      "branch": "Fields",
+      "status": "obstruction",
+      "phase": "Part IX / §5 / §17",
+      "pages": [
+        16,
+        17,
+        119
+      ],
+      "finding": "A-05c did not identify a stable joint parameter regime satisfying slowing, atomic spectra, lensing and multimessenger constraints.",
+      "limitation": "Restricted to the investigated model family; not a general no-go theorem.",
+      "next_test": "Derive a revised coupling and evaluate all constraints jointly.",
+      "gates": [
+        "A",
+        "B",
+        "D",
+        "F"
+      ],
+      "foundations": [
+        "light-slowing",
+        "spacetime"
+      ],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "finite-source",
+      "title": "Finite-source screening",
+      "branch": "Fields",
+      "status": "conditional",
+      "phase": "Parts XII–XIV / §17",
+      "pages": [
+        119
+      ],
+      "finding": "Finite-size suppression is weaker than the local-equilibrium estimate suggests.",
+      "limitation": "Conditional bounds and illustrative numerical results, not measured field screening.",
+      "next_test": "Solve finite 3D sources with shared atomic calibration.",
+      "gates": [
+        "A",
+        "B"
+      ],
+      "foundations": [
+        "spacetime"
+      ],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "recession-law",
+      "title": "Early recession-distance candidate",
+      "branch": "Cosmology",
+      "status": "obstruction",
+      "phase": "Parts XV–XVII / §17",
+      "pages": [
+        119
+      ],
+      "finding": "Early recession-plus-slowing distance candidates encounter high-redshift size and drift tension.",
+      "limitation": "Failure of these implementations does not establish an alternative distance law.",
+      "next_test": "Fit held-out angle, timing, flux and spectrum data with shared parameters.",
+      "gates": [
+        "E",
+        "F"
+      ],
+      "foundations": [
+        "distance-inference",
+        "cosmic-age"
+      ],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "coupled-modes",
+      "title": "Conservative mode coupling and massive-vector sector",
+      "branch": "Light",
+      "status": "conditional",
+      "phase": "Parts XVIII–XX / §17",
+      "pages": [
+        120
+      ],
+      "finding": "Restricted analytical and numerical demonstrations include scalar coupling, Stueckelberg/Yukawa response and atomic shifts.",
+      "limitation": "Not a measured photon rest mass or complete matter theory.",
+      "next_test": "Predict static range, longitudinal modes and atomic spectra with one parameter set.",
+      "gates": [
+        "A",
+        "D"
+      ],
+      "foundations": [
+        "photon-mass"
+      ],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "moving-endpoints",
+      "title": "Moving atomic endpoints",
+      "branch": "Motion",
+      "status": "conditional",
+      "phase": "Parts XXI–XXII / §17",
+      "pages": [
+        120
+      ],
+      "finding": "Autonomous one-dimensional separation and moving atomic endpoints give selected spectra dominated by motion.",
+      "limitation": "Dimensionless toy, not calibrated cosmology.",
+      "next_test": "Derive coupled source motion and detector response.",
+      "gates": [
+        "D",
+        "F"
+      ],
+      "foundations": [
+        "when",
+        "constant-time"
+      ],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "causal-reach",
+      "title": "Packet reach versus causal reach",
+      "branch": "Light",
+      "status": "conditional",
+      "phase": "Parts XXIII–XXIV / §17",
+      "pages": [
+        120
+      ],
+      "finding": "Packet reach and causal reach differ; bounded scalar energy prevents eternal zero speed in the stated model.",
+      "limitation": "A group-velocity result does not determine the signal front.",
+      "next_test": "Derive stable characteristic and front behavior from the full local theory.",
+      "gates": [
+        "A",
+        "C"
+      ],
+      "foundations": [
+        "fastest-signal",
+        "light-slowing"
+      ],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "optical-map",
+      "title": "Reciprocal optical maps",
+      "branch": "Distances",
+      "status": "obstruction",
+      "phase": "Part XXVI / §17",
+      "pages": [
+        120
+      ],
+      "finding": "The static and axisymmetric optical audit finds a brightness-factor tension despite reciprocal maps and weak spherical defocusing.",
+      "limitation": "No fitted cosmology or universal distance correction.",
+      "next_test": "Predict luminosity and angular distances with one transport model.",
+      "gates": [
+        "E",
+        "F"
+      ],
+      "foundations": [
+        "distance-inference"
+      ],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "shell-void",
+      "title": "C-01 shell and void control",
+      "branch": "Domains",
+      "status": "obstruction",
+      "phase": "Part XXVII / §17",
+      "pages": [
+        120
+      ],
+      "finding": "The candidate mass-sourced regulator yields a wave-speed law but fails monotone aging across the shell.",
+      "limitation": "No detected cosmic wall; Newtonian shell force and regulator response are separate.",
+      "next_test": "Develop a causal gap-history and recoil mechanism.",
+      "gates": [
+        "B",
+        "C",
+        "G"
+      ],
+      "foundations": [
+        "light-slowing",
+        "cosmic-size"
+      ],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "fixed-gap-drag",
+      "title": "Passive fixed-gap drag",
+      "branch": "Light",
+      "status": "obstruction",
+      "phase": "Part XXVIII / §9",
+      "pages": [
+        43,
+        44,
+        121
+      ],
+      "finding": "For the stationary fixed-gap benchmark, modest redshift gives tiny speed change; identical stationary emission intervals are not stretched by the aging law.",
+      "limitation": "Restricted fixed-gap, stationary-endpoint result.",
+      "next_test": "Test a moving-endpoint or derived dynamical transport model against spectrum and timing together.",
+      "gates": [
+        "C",
+        "D",
+        "E"
+      ],
+      "foundations": [
+        "photon-mass",
+        "light-slowing",
+        "when"
+      ],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "wall-bound",
+      "title": "Fixed-gap wall energy bound",
+      "branch": "Domains",
+      "status": "conditional",
+      "phase": "Part XXX / §10.3",
+      "pages": [
+        46,
+        47,
+        48
+      ],
+      "finding": "For a gap fraction 10⁻¹⁶ and a 10% ceiling increase, the maximum retained energy fraction for nonincreasing endpoint speed is about 2.4004 × 10⁻¹⁶.",
+      "limitation": "Necessary endpoint bound only; not a sufficient pathwise criterion.",
+      "next_test": "Check energy retention and continuous trajectory sign together.",
+      "gates": [
+        "C",
+        "G"
+      ],
+      "foundations": [
+        "light-slowing"
+      ],
+      "workbench": "wall",
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "wall-crossing",
+      "title": "Linear-wall constant-drag conflict",
+      "branch": "Domains",
+      "status": "obstruction",
+      "phase": "Part XXX / §10.4",
+      "pages": [
+        48,
+        49
+      ],
+      "finding": "At gap fraction 0.1 and ceiling ratio 1.2, entry monotonicity requires drag ≥ 19.89975, whereas positive-speed traversal requires drag < 3.28345.",
+      "limitation": "This rules out the selected constant-drag control, not all environmental models.",
+      "next_test": "Derive and test a variable gap or history mechanism.",
+      "gates": [
+        "C",
+        "G"
+      ],
+      "foundations": [
+        "light-slowing"
+      ],
+      "workbench": "wall",
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "history-coordinate",
+      "title": "Finite-capacity history coordinate",
+      "branch": "Light",
+      "status": "conditional",
+      "phase": "Part XXXI / §11 / §18",
+      "pages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        123
+      ],
+      "finding": "A selected reduced wall model adds a history coordinate with recoil, heat and wall-reaction ledgers, permitting a different crossing behavior.",
+      "limitation": "Finite capacity and emission-energy dependence prevent a universal solution.",
+      "next_test": "Derive microscopic dynamics with a causal receiver, not a stipulated history rate.",
+      "gates": [
+        "A",
+        "C",
+        "G"
+      ],
+      "foundations": [
+        "light-slowing"
+      ],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "bounded-flow",
+      "title": "Bounded flow and reversible conversion",
+      "branch": "Motion",
+      "status": "conditional",
+      "phase": "Part XXXII / Review 4.0",
+      "pages": [
+        122,
+        123,
+        124
+      ],
+      "finding": "Reduced controls include bounded flow, calibration, finite wall recoil and reversible local conversion.",
+      "limitation": "Not one unified physical or observationally fitted theory.",
+      "next_test": "Couple the models and calibrate independent source and receiver standards.",
+      "gates": [
+        "A",
+        "D",
+        "F",
+        "G"
+      ],
+      "foundations": [
+        "separation",
+        "constant-time"
+      ],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "contact-scattering",
+      "title": "Contact conversion loses narrow-beam transport",
+      "branch": "Light",
+      "status": "obstruction",
+      "phase": "Part XXXIII / §14.8",
+      "pages": [
+        93,
+        94,
+        122
+      ],
+      "finding": "One-arcsecond idealized aperture accepts about 1.44456 × 10⁻¹³ of converted packets in the selected contact reference.",
+      "limitation": "Conditional acceptance after conversion, not an astronomical optical depth or luminosity-distance fit.",
+      "next_test": "Derive forward transport, actual detection and angular diffusion.",
+      "gates": [
+        "C",
+        "E"
+      ],
+      "foundations": [
+        "light-slowing",
+        "distance-inference"
+      ],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "wall-certificate",
+      "title": "Continuous static-wall certificate",
+      "branch": "Domains",
+      "status": "verification",
+      "phase": "Part XXXIII / §14.6",
+      "pages": [
+        90,
+        91
+      ],
+      "finding": "The fine interval enclosure reports an upper derivative bound −0.05341 in the rising wall and a path speed lower bound 0.81507.",
+      "limitation": "Only the original static reduced trajectory and parameter case; not an all-frequency or astronomical proof.",
+      "next_test": "Independently verify intervals and extend to derived moving-wall dynamics.",
+      "gates": [
+        "C",
+        "G"
+      ],
+      "foundations": [
+        "light-slowing"
+      ],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "anchor-lmc",
+      "title": "LMC geometric anchor",
+      "branch": "Distances",
+      "status": "reference",
+      "phase": "§14.8",
+      "pages": [
+        94,
+        95
+      ],
+      "finding": "Review 6.0 reports the literature eclipsing-binary distance 49.59 kpc, statistical 0.09 and systematic 0.54 kpc.",
+      "limitation": "Specific calibrated inference; quadrature arithmetic is not a new joint fit.",
+      "next_test": "Preserve raw anchor observations and recalibrate any candidate correction.",
+      "gates": [
+        "D",
+        "E",
+        "F"
+      ],
+      "foundations": [
+        "distance-inference"
+      ],
+      "workbench": "anchors",
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "anchor-ngc",
+      "title": "NGC 4258 geometric anchor",
+      "branch": "Distances",
+      "status": "reference",
+      "phase": "§14.8",
+      "pages": [
+        94,
+        95
+      ],
+      "finding": "Review 6.0 reports the literature maser distance 7.576 Mpc, statistical 0.082 and systematic 0.076 Mpc.",
+      "limitation": "No universal downward rescaling is inferred.",
+      "next_test": "Recover the maser geometry with shared calibrated parameters.",
+      "gates": [
+        "D",
+        "E",
+        "F"
+      ],
+      "foundations": [
+        "distance-inference"
+      ],
+      "workbench": "anchors",
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "finite-range",
+      "title": "Finite-range forward-transfer obstruction",
+      "branch": "Light",
+      "status": "obstruction",
+      "phase": "Part XXXIV / §15.2",
+      "pages": [
+        98,
+        99,
+        100,
+        101
+      ],
+      "finding": "Large gap conversion has a nonzero forward-transfer floor; the near-degenerate example gives cone fraction about 0.8844 and mean retained energy 0.9999989997.",
+      "limitation": "Born-level selected cases; near-degenerate transfer is minute and repeated scattering is unsolved.",
+      "next_test": "Derive material structure factors, cumulative angular diffusion and optical depth.",
+      "gates": [
+        "A",
+        "C",
+        "E"
+      ],
+      "foundations": [
+        "photon-mass",
+        "light-slowing"
+      ],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "phase-match",
+      "title": "Collinear phase-matched reservoir",
+      "branch": "Light",
+      "status": "conditional",
+      "phase": "Part XXXIV / §15.3–15.5",
+      "pages": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107
+      ],
+      "finding": "A selected coherent reservoir mode permits collinear phase-matched conversion, while finite-cell coupling has detuning and reverse-transition controls.",
+      "limitation": "Coherence, material structure and physical rates are not derived or calibrated.",
+      "next_test": "Derive a causal spatial reservoir and its spectral density.",
+      "gates": [
+        "A",
+        "C",
+        "E"
+      ],
+      "foundations": [
+        "light-slowing"
+      ],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "escape-criterion",
+      "title": "Escape-assisted population criterion",
+      "branch": "Light",
+      "status": "conditional",
+      "phase": "Part XXXIV / §15.6, K11–K13",
+      "pages": [
+        107,
+        108,
+        109,
+        110
+      ],
+      "finding": "For the resonant selected-mode Markov model, κ ≥ 4G ensures nondecreasing total converted population.",
+      "limitation": "Not a theorem of continuous slowing of individual photons; no incoming reservoir excitation assumed.",
+      "next_test": "Derive a multimode reservoir with reverse channels and detector calibration.",
+      "gates": [
+        "A",
+        "C",
+        "D"
+      ],
+      "foundations": [
+        "photon-mass",
+        "light-slowing"
+      ],
+      "workbench": "escape",
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "escape-verification",
+      "title": "Escape analytical-versus-ODE comparison",
+      "branch": "Light",
+      "status": "verification",
+      "phase": "Part XXXIV / §15.6",
+      "pages": [
+        109
+      ],
+      "finding": "Six escape ratios 0, 1, 2, 4, 8, 16 at G=0.04 agree to maximum sampled absolute difference 1.54 × 10⁻¹³ after solver refinement.",
+      "limitation": "Reported source comparison, not newly replicated here or physical validation.",
+      "next_test": "Reproduce the full archived calculations and derive rates from material dynamics.",
+      "gates": [
+        "A",
+        "C"
+      ],
+      "foundations": [
+        "light-slowing"
+      ],
+      "workbench": "escape",
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "regression-137",
+      "title": "Review 6.0 numerical checks and warnings",
+      "branch": "Methods",
+      "status": "verification",
+      "phase": "§15.9",
+      "pages": [
+        113,
+        114
+      ],
+      "finding": "The forward script records 137 regression assertions. Three extreme elastic rows triggered quadrature warnings for small moment integrals; one selected refinement also warns.",
+      "limitation": "The checks are not experiments; warned rows are illustrative, not precision-certified.",
+      "next_test": "Retain warnings, reproduce the source archive, test nonperturbative limits.",
+      "gates": [
+        "A",
+        "C",
+        "E"
+      ],
+      "foundations": [],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "multimessenger",
+      "title": "Gravitational versus electromagnetic timing",
+      "branch": "Fields",
+      "status": "reference",
+      "phase": "§16.1",
+      "pages": [
+        116
+      ],
+      "finding": "Review 6.0 quotes the published GW170817/GRB 170817A differential speed constraint of approximately −3 × 10⁻¹⁵ to +7 × 10⁻¹⁶.",
+      "limitation": "Depends on emission-time and propagation assumptions; not a direct isotropic coordinate-speed bound.",
+      "next_test": "Predict arrival lags with source, detector, clock and field parameters.",
+      "gates": [
+        "B",
+        "D",
+        "F"
+      ],
+      "foundations": [
+        "fastest-signal",
+        "constant-time"
+      ],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    },
+    {
+      "id": "joint-fit",
+      "title": "Unified observational completion",
+      "branch": "Methods",
+      "status": "open",
+      "phase": "§16.2–16.3 / §18",
+      "pages": [
+        117,
+        118,
+        119,
+        124
+      ],
+      "finding": "No common calibrated observationally successful implementation is demonstrated in Review 6.0.",
+      "limitation": "Passing restricted numerical controls does not establish an alternative cosmology.",
+      "next_test": "Use held-out shared-parameter optical, timing, geometric and clock tests.",
+      "gates": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "foundations": [],
+      "workbench": null,
+      "source_url": "https://arcsecs.com/read-scientific-paper/"
+    }
+  ],
+  "gates": [
+    {
+      "id": "A",
+      "title": "Local dynamics",
+      "deliverable": "Action or explicit balance laws and characteristics",
+      "pass_condition": "Stable causal dynamics, conserved energy and momentum, positive mass.",
+      "status": "Completion not established in Review 6.0"
+    },
+    {
+      "id": "B",
+      "title": "C-01",
+      "deliverable": "Finite 3D sources and clock/ruler response",
+      "pass_condition": "Derive emission ceiling with consistent local and cosmic responses.",
+      "status": "Completion not established in Review 6.0"
+    },
+    {
+      "id": "C",
+      "title": "Aging",
+      "deliverable": "Dynamic gap/history and bath solver",
+      "pass_condition": "Nonincreasing pathwise speed, nonnegative reservoir energy, correct dispersion.",
+      "status": "Completion not established in Review 6.0"
+    },
+    {
+      "id": "D",
+      "title": "Emission and timing",
+      "deliverable": "Recoil, phase and packet arrival maps",
+      "pass_condition": "Predict atomic/nuclear standards, source motion and timing.",
+      "status": "Completion not established in Review 6.0"
+    },
+    {
+      "id": "E",
+      "title": "3D optics",
+      "deliverable": "Forward/reverse ray bundles and radiative transfer",
+      "pass_condition": "Joint angle, flux, pulse and spectrum prediction with anchor recovery.",
+      "status": "Completion not established in Review 6.0"
+    },
+    {
+      "id": "F",
+      "title": "Cosmology",
+      "deliverable": "Physical trajectories and independent likelihood",
+      "pass_condition": "Shared parameters and held-out distance/structure tests.",
+      "status": "Completion not established in Review 6.0"
+    },
+    {
+      "id": "G",
+      "title": "Boundaries",
+      "deliverable": "Dynamic wall and search templates",
+      "pass_condition": "Correlated signals and trials-corrected validation.",
+      "status": "Completion not established in Review 6.0"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Beyond Spacetime Semantic Knowledge Graph",
+    "version": "2.4.0",
+    "description": "Read-only editorial relationships and source catalog provenance. No scientific entailment or empirical validation."
+  },
+  "servers": [
+    {
+      "url": "https://beyondspacetime.org"
+    }
+  ],
+  "paths": {
+    "/knowledge-graph/api/": {
+      "get": {
+        "operationId": "retrieveGraph",
+        "summary": "Retrieve graph summary, search, node neighborhood, or bounded path",
+        "parameters": [
+          {
+            "name": "action",
+            "in": "query",
+            "required": false,
+            "description": "Select a response mode. Default summary. Other query fields are restricted to their declared mode.",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "summary",
+                "search",
+                "node",
+                "path"
+              ],
+              "default": "summary"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "description": "Search: literal Unicode text, up to 180 UTF-8 bytes.",
+            "schema": {
+              "type": "string",
+              "maxLength": 180
+            }
+          },
+          {
+            "name": "kind",
+            "in": "query",
+            "required": false,
+            "description": "Search: record type.",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "",
+                "archive",
+                "comparison",
+                "design",
+                "evidence",
+                "experiment",
+                "foundation",
+                "gate",
+                "glossary",
+                "investigation",
+                "lesson",
+                "model",
+                "module",
+                "premise",
+                "time",
+                "timeline",
+                "visualization"
+              ]
+            }
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": false,
+            "description": "Search: record language.",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "",
+                "en",
+                "es",
+                "fr"
+              ]
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "description": "Search: page number (18 records per page).",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 1000
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "description": "Node: record ID; path: starting record ID. Required in these modes.",
+            "schema": {
+              "type": "string",
+              "maxLength": 180
+            }
+          },
+          {
+            "name": "predicate",
+            "in": "query",
+            "required": false,
+            "description": "Node: filter incident relationships by type.",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "",
+                "contains",
+                "explainsPremise",
+                "usesModel",
+                "relatesFoundation",
+                "addressesGate",
+                "hasWorkbench",
+                "examinesEvidence",
+                "referencesRecord",
+                "adaptsLesson",
+                "languageVariant",
+                "definesForLesson",
+                "archivedSource"
+              ]
+            }
+          },
+          {
+            "name": "to",
+            "in": "query",
+            "required": false,
+            "description": "Path: destination ID, required.",
+            "schema": {
+              "type": "string",
+              "maxLength": 180
+            }
+          },
+          {
+            "name": "structural",
+            "in": "query",
+            "required": false,
+            "description": "Path: include editorial membership and archive relationships. Default 0.",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "0",
+                "1"
+              ],
+              "default": "0"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Graph response; action-specific fields are documented in the method page.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "schema",
+                    "version",
+                    "action"
+                  ],
+                  "properties": {
+                    "schema": {
+                      "const": "beyondspacetime.graph.response.v1"
+                    },
+                    "version": {
+                      "const": "2.2.0"
+                    },
+                    "action": {
+                      "type": "string",
+                      "enum": [
+                        "summary",
+                        "search",
+                        "node",
+                        "path"
+                      ]
+                    }
+                  },
+                  "additionalProperties": true
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid or incompatible query parameters"
+          },
+          "404": {
+            "description": "Record ID not found"
+          }
+        }
+      }
+    }
+  }
+}

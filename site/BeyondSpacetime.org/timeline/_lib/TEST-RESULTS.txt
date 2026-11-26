@@ -1,0 +1,416 @@
+BeyondSpacetime.org v1.7.0 — Local release verification
+
+248 catalog/schema/link/filter checks; 78 HTTP checks; 61 source hashes reverified against supplied archive bytes; 115 previous files compared byte-for-byte. Four earlier scientific suites passed: 61 + 47 + 48 + 65. Browser: 15 responsive render checks at 390, 768, 1440 px; 3 filter/pin/export workflows; no uncaught JS errors. Isolated Chromium used actual local PHP HTML and injected local CSS/JS, not production navigation. No live external-link verification, production hosting test, search indexing, full accessibility, load or security audit.
+
+PASS 61 unique IDs
+PASS 41 report records
+PASS 6 editions
+PASS 7 reference records
+PASS 7 milestones
+PASS numbered archive sequence
+PASS combined filter
+PASS empty filter
+PASS obstructions retained
+PASS comparison stable order
+PASS duplicate comparison rejected
+PASS invalid comparison rejected
+PASS invalid track rejected
+PASS long search rejected
+PASS array search rejected
+PASS invalid status rejected
+PASS first archive boundary
+PASS last archive boundary
+PASS schema r01
+PASS date policy r01
+PASS related route r01 /evidence/ledger/ceiling/
+PASS related route r01 /foundations/photon-mass/
+PASS schema r02
+PASS date policy r02
+PASS related route r02 /evidence/ledger/moving-endpoints/
+PASS related route r02 /foundations/constant-time/
+PASS schema r03
+PASS date policy r03
+PASS related route r03 /evidence/ledger/anchor-lmc/
+PASS related route r03 /foundations/cosmic-age/
+PASS schema r04
+PASS date policy r04
+PASS related route r04 /evidence/ledger/contact-scattering/
+PASS related route r04 /foundations/light-slowing/
+PASS schema r05
+PASS date policy r05
+PASS related route r05 /evidence/ledger/common-field/
+PASS related route r05 /foundations/spacetime/
+PASS schema r06
+PASS date policy r06
+PASS related route r06 /evidence/ledger/joint-fit/
+PASS related route r06 /foundations/physical-existence/
+PASS schema r07
+PASS date policy r07
+PASS related route r07 /evidence/ledger/shell-void/
+PASS related route r07 /foundations/cosmic-size/
+PASS schema r08
+PASS date policy r08
+PASS related route r08 /evidence/ledger/causal-reach/
+PASS related route r08 /foundations/cosmic-age/
+PASS schema r09
+PASS date policy r09
+PASS related route r09 /evidence/ledger/joint-fit/
+PASS related route r09 /foundations/cosmic-size/
+PASS schema r10
+PASS date policy r10
+PASS related route r10 /evidence/ledger/regression-137/
+PASS related route r10 /foundations/light-slowing/
+PASS schema r11
+PASS date policy r11
+PASS related route r11 /evidence/ledger/causal-reach/
+PASS related route r11 /foundations/separation/
+PASS schema r12
+PASS date policy r12
+PASS related route r12 /evidence/ledger/joint-fit/
+PASS related route r12 /foundations/spacetime/
+PASS schema r13
+PASS date policy r13
+PASS related route r13 /evidence/ledger/optical-map/
+PASS related route r13 /foundations/distance-inference/
+PASS schema r14
+PASS date policy r14
+PASS related route r14 /evidence/ledger/fixed-gap-drag/
+PASS related route r14 /foundations/light-slowing/
+PASS schema r15
+PASS date policy r15
+PASS related route r15 /evidence/ledger/common-field/
+PASS related route r15 /foundations/separation/
+PASS schema r16
+PASS date policy r16
+PASS related route r16 /evidence/ledger/charter/
+PASS schema r17
+PASS date policy r17
+PASS related route r17 /evidence/ledger/causal-reach/
+PASS related route r17 /foundations/fastest-signal/
+PASS schema r18
+PASS date policy r18
+PASS related route r18 /evidence/ledger/optical-map/
+PASS related route r18 /foundations/distance-inference/
+PASS schema r19
+PASS date policy r19
+PASS related route r19 /evidence/ledger/joint-fit/
+PASS related route r19 /foundations/light-slowing/
+PASS schema r20
+PASS date policy r20
+PASS related route r20 /evidence/ledger/joint-fit/
+PASS related route r20 /foundations/physical-existence/
+PASS schema r21
+PASS date policy r21
+PASS related route r21 /evidence/ledger/optical-map/
+PASS related route r21 /foundations/light-slowing/
+PASS schema r22
+PASS date policy r22
+PASS related route r22 /evidence/ledger/regression-137/
+PASS related route r22 /foundations/light-slowing/
+PASS schema r23
+PASS date policy r23
+PASS related route r23 /evidence/ledger/ceiling/
+PASS related route r23 /foundations/fastest-signal/
+PASS schema r24
+PASS date policy r24
+PASS related route r24 /evidence/ledger/joint-fit/
+PASS related route r24 /foundations/spacetime/
+PASS schema r25
+PASS date policy r25
+PASS related route r25 /evidence/ledger/causal-reach/
+PASS related route r25 /foundations/spacetime/
+PASS schema r26
+PASS date policy r26
+PASS related route r26 /evidence/ledger/moving-endpoints/
+PASS related route r26 /foundations/constant-time/
+PASS schema r27
+PASS date policy r27
+PASS related route r27 /evidence/ledger/anchor-ngc/
+PASS related route r27 /foundations/distance-inference/
+PASS schema r28
+PASS date policy r28
+PASS related route r28 /evidence/ledger/causal-reach/
+PASS related route r28 /foundations/separation/
+PASS schema r29
+PASS date policy r29
+PASS related route r29 /evidence/ledger/moving-endpoints/
+PASS related route r29 /foundations/constant-time/
+PASS schema r30
+PASS date policy r30
+PASS related route r30 /evidence/ledger/ceiling/
+PASS related route r30 /foundations/photon-mass/
+PASS schema r31
+PASS date policy r31
+PASS related route r31 /evidence/ledger/multimessenger/
+PASS related route r31 /foundations/photon-mass/
+PASS schema r32
+PASS date policy r32
+PASS related route r32 /evidence/ledger/anchor-lmc/
+PASS related route r32 /foundations/cosmic-age/
+PASS schema r33
+PASS date policy r33
+PASS related route r33 /evidence/ledger/joint-fit/
+PASS related route r33 /foundations/cosmic-size/
+PASS schema r34
+PASS date policy r34
+PASS related route r34 /evidence/ledger/shell-void/
+PASS related route r34 /foundations/cosmic-size/
+PASS schema r35
+PASS date policy r35
+PASS related route r35 /evidence/ledger/common-field/
+PASS related route r35 /foundations/spacetime/
+PASS schema r36
+PASS date policy r36
+PASS related route r36 /evidence/ledger/optical-map/
+PASS related route r36 /foundations/light-slowing/
+PASS schema r37
+PASS date policy r37
+PASS related route r37 /evidence/ledger/joint-fit/
+PASS related route r37 /foundations/physical-existence/
+PASS schema r38
+PASS date policy r38
+PASS related route r38 /evidence/ledger/charter/
+PASS related route r38 /foundations/spacetime/
+PASS schema r39
+PASS date policy r39
+PASS related route r39 /evidence/ledger/finite-source/
+PASS related route r39 /foundations/photon-mass/
+PASS schema r40
+PASS date policy r40
+PASS related route r40 /evidence/ledger/causal-reach/
+PASS related route r40 /foundations/separation/
+PASS schema r41
+PASS date policy r41
+PASS related route r41 /evidence/ledger/causal-reach/
+PASS related route r41 /foundations/cosmic-size/
+PASS schema review-1
+PASS date policy review-1
+PASS related route review-1 /evidence/ledger/charter/
+PASS schema review-2
+PASS date policy review-2
+PASS related route review-2 /evidence/ledger/wall-bound/
+PASS schema review-3
+PASS date policy review-3
+PASS related route review-3 /evidence/ledger/history-coordinate/
+PASS schema review-4
+PASS date policy review-4
+PASS related route review-4 /evidence/ledger/coupled-modes/
+PASS schema review-5
+PASS date policy review-5
+PASS related route review-5 /evidence/ledger/wall-certificate/
+PASS schema review-6
+PASS date policy review-6
+PASS related route review-6 /evidence/ledger/escape-criterion/
+PASS schema sciama-1953
+PASS date policy sciama-1953
+PASS related route sciama-1953 /evidence/ledger/common-field/
+PASS schema photon-review-2005
+PASS date policy photon-review-2005
+PASS related route photon-review-2005 /evidence/ledger/ceiling/
+PASS schema vortices-2007
+PASS date policy vortices-2007
+PASS related route vortices-2007 /evidence/ledger/ceiling/
+PASS schema lorentz-2015
+PASS date policy lorentz-2015
+PASS related route lorentz-2015 /evidence/ledger/ceiling/
+PASS schema multimessenger-2017
+PASS date policy multimessenger-2017
+PASS related route multimessenger-2017 /evidence/ledger/multimessenger/
+PASS schema lmc-2019
+PASS date policy lmc-2019
+PASS related route lmc-2019 /evidence/ledger/anchor-lmc/
+PASS schema supernovae-2024
+PASS date policy supernovae-2024
+PASS related route supernovae-2024 /evidence/ledger/optical-map/
+PASS schema wall-conflict
+PASS date policy wall-conflict
+PASS related route wall-conflict /evidence/ledger/wall-bound/
+PASS related route wall-conflict /timeline/record/review-2/
+PASS schema capacity-recoil
+PASS date policy capacity-recoil
+PASS related route capacity-recoil /evidence/ledger/history-coordinate/
+PASS related route capacity-recoil /timeline/record/review-3/
+PASS schema static-certificate
+PASS date policy static-certificate
+PASS related route static-certificate /evidence/ledger/wall-certificate/
+PASS related route static-certificate /timeline/record/review-5/
+PASS schema finite-range-obstruction
+PASS date policy finite-range-obstruction
+PASS related route finite-range-obstruction /evidence/ledger/finite-range/
+PASS related route finite-range-obstruction /timeline/record/review-6/
+PASS schema phase-matched
+PASS date policy phase-matched
+PASS related route phase-matched /evidence/ledger/phase-match/
+PASS related route phase-matched /timeline/record/review-6/
+PASS schema escape-threshold
+PASS date policy escape-threshold
+PASS related route escape-threshold /evidence/ledger/escape-criterion/
+PASS related route escape-threshold /timeline/record/review-6/
+PASS schema forward-regression
+PASS date policy forward-regression
+PASS related route forward-regression /evidence/ledger/regression-137/
+PASS related route forward-regression /timeline/record/review-6/
+248 passed
+PASS 63 canonical sitemap routes
+PASS /timeline/
+PASS /timeline/method/
+PASS /timeline/record/r01/
+PASS /timeline/record/r02/
+PASS /timeline/record/r03/
+PASS /timeline/record/r04/
+PASS /timeline/record/r05/
+PASS /timeline/record/r06/
+PASS /timeline/record/r07/
+PASS /timeline/record/r08/
+PASS /timeline/record/r09/
+PASS /timeline/record/r10/
+PASS /timeline/record/r11/
+PASS /timeline/record/r12/
+PASS /timeline/record/r13/
+PASS /timeline/record/r14/
+PASS /timeline/record/r15/
+PASS /timeline/record/r16/
+PASS /timeline/record/r17/
+PASS /timeline/record/r18/
+PASS /timeline/record/r19/
+PASS /timeline/record/r20/
+PASS /timeline/record/r21/
+PASS /timeline/record/r22/
+PASS /timeline/record/r23/
+PASS /timeline/record/r24/
+PASS /timeline/record/r25/
+PASS /timeline/record/r26/
+PASS /timeline/record/r27/
+PASS /timeline/record/r28/
+PASS /timeline/record/r29/
+PASS /timeline/record/r30/
+PASS /timeline/record/r31/
+PASS /timeline/record/r32/
+PASS /timeline/record/r33/
+PASS /timeline/record/r34/
+PASS /timeline/record/r35/
+PASS /timeline/record/r36/
+PASS /timeline/record/r37/
+PASS /timeline/record/r38/
+PASS /timeline/record/r39/
+PASS /timeline/record/r40/
+PASS /timeline/record/r41/
+PASS /timeline/record/review-1/
+PASS /timeline/record/review-2/
+PASS /timeline/record/review-3/
+PASS /timeline/record/review-4/
+PASS /timeline/record/review-5/
+PASS /timeline/record/review-6/
+PASS /timeline/record/sciama-1953/
+PASS /timeline/record/photon-review-2005/
+PASS /timeline/record/vortices-2007/
+PASS /timeline/record/lorentz-2015/
+PASS /timeline/record/multimessenger-2017/
+PASS /timeline/record/lmc-2019/
+PASS /timeline/record/supernovae-2024/
+PASS /timeline/record/wall-conflict/
+PASS /timeline/record/capacity-recoil/
+PASS /timeline/record/static-certificate/
+PASS /timeline/record/finite-range-obstruction/
+PASS /timeline/record/phase-matched/
+PASS /timeline/record/escape-threshold/
+PASS /timeline/record/forward-regression/
+PASS API archive filter
+PASS API individual
+PASS API comparison
+PASS /timeline/api/?id=no-such
+PASS /timeline/api/?track=invalid
+PASS /timeline/api/?q%5B%5D=x
+PASS /timeline/api/?a=review-5&b=review-5
+PASS /timeline/_lib/model.php
+PASS /timeline/record/no-such/
+PASS API POST denied
+PASS no-JS filter
+PASS no-JS comparison
+PASS escaped input
+PASS invalid HTML pair rejected
+78 passed
+PASS viewport 390
+PASS viewport 768
+PASS viewport 1440
+PASS 15 responsive renders; 3 filter/pin/export workflows
+foundations:
+61 passed, 0 failed
+evidence:
+47 passed, 0 failed
+research:
+48 passed, 0 failed
+model-comparison:
+65 passed, 0 failed
+
+Syntax checks
+No syntax errors detected in timeline/compare/index.php
+No syntax errors detected in timeline/api/index.php
+No syntax errors detected in timeline/method/index.php
+No syntax errors detected in timeline/index.php
+No syntax errors detected in timeline/record/r35/index.php
+No syntax errors detected in timeline/record/r07/index.php
+No syntax errors detected in timeline/record/r20/index.php
+No syntax errors detected in timeline/record/r24/index.php
+No syntax errors detected in timeline/record/r34/index.php
+No syntax errors detected in timeline/record/r23/index.php
+No syntax errors detected in timeline/record/r39/index.php
+No syntax errors detected in timeline/record/finite-range-obstruction/index.php
+No syntax errors detected in timeline/record/r28/index.php
+No syntax errors detected in timeline/record/r09/index.php
+No syntax errors detected in timeline/record/r05/index.php
+No syntax errors detected in timeline/record/r19/index.php
+No syntax errors detected in timeline/record/review-6/index.php
+No syntax errors detected in timeline/record/phase-matched/index.php
+No syntax errors detected in timeline/record/r33/index.php
+No syntax errors detected in timeline/record/static-certificate/index.php
+No syntax errors detected in timeline/record/r16/index.php
+No syntax errors detected in timeline/record/r02/index.php
+No syntax errors detected in timeline/record/r26/index.php
+No syntax errors detected in timeline/record/capacity-recoil/index.php
+No syntax errors detected in timeline/record/r13/index.php
+No syntax errors detected in timeline/record/photon-review-2005/index.php
+No syntax errors detected in timeline/record/r01/index.php
+No syntax errors detected in timeline/record/r40/index.php
+No syntax errors detected in timeline/record/r37/index.php
+No syntax errors detected in timeline/record/r38/index.php
+No syntax errors detected in timeline/record/r10/index.php
+No syntax errors detected in timeline/record/r25/index.php
+No syntax errors detected in timeline/record/r11/index.php
+No syntax errors detected in timeline/record/r14/index.php
+No syntax errors detected in timeline/record/r30/index.php
+No syntax errors detected in timeline/record/lmc-2019/index.php
+No syntax errors detected in timeline/record/r04/index.php
+No syntax errors detected in timeline/record/r03/index.php
+No syntax errors detected in timeline/record/escape-threshold/index.php
+No syntax errors detected in timeline/record/review-3/index.php
+No syntax errors detected in timeline/record/review-5/index.php
+No syntax errors detected in timeline/record/multimessenger-2017/index.php
+No syntax errors detected in timeline/record/review-1/index.php
+No syntax errors detected in timeline/record/r36/index.php
+No syntax errors detected in timeline/record/r27/index.php
+No syntax errors detected in timeline/record/wall-conflict/index.php
+No syntax errors detected in timeline/record/review-2/index.php
+No syntax errors detected in timeline/record/r17/index.php
+No syntax errors detected in timeline/record/lorentz-2015/index.php
+No syntax errors detected in timeline/record/r08/index.php
+No syntax errors detected in timeline/record/r15/index.php
+No syntax errors detected in timeline/record/r41/index.php
+No syntax errors detected in timeline/record/forward-regression/index.php
+No syntax errors detected in timeline/record/r29/index.php
+No syntax errors detected in timeline/record/r12/index.php
+No syntax errors detected in timeline/record/sciama-1953/index.php
+No syntax errors detected in timeline/record/review-4/index.php
+No syntax errors detected in timeline/record/r31/index.php
+No syntax errors detected in timeline/record/r18/index.php
+No syntax errors detected in timeline/record/r21/index.php
+No syntax errors detected in timeline/record/r06/index.php
+No syntax errors detected in timeline/record/r32/index.php
+No syntax errors detected in timeline/record/vortices-2007/index.php
+No syntax errors detected in timeline/record/r22/index.php
+No syntax errors detected in timeline/record/supernovae-2024/index.php
+No syntax errors detected in timeline/_lib/dev-router.php
+No syntax errors detected in timeline/_lib/site.php
+No syntax errors detected in timeline/_lib/tests.php
+No syntax errors detected in timeline/_lib/model.php
+JS syntax passed

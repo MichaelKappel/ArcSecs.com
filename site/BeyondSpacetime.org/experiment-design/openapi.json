@@ -1,0 +1,377 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Beyond Spacetime experiment design API",
+    "version": "2.3.0",
+    "description": "Deterministic conditional numerical protocols. Parameter/metric compatibility, byte limits, control requirements and seal consistency are enforced server-side. No trusted timestamp or empirical validation."
+  },
+  "servers": [
+    {
+      "url": "https://beyondspacetime.org"
+    }
+  ],
+  "paths": {
+    "/experiment-design/api/": {
+      "get": {
+        "summary": "Read model and preset catalog",
+        "responses": {
+          "200": {
+            "description": "Catalog",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Seal or run a numerical protocol",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "required": [
+                      "action",
+                      "protocol"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "action": {
+                        "const": "seal"
+                      },
+                      "protocol": {
+                        "$ref": "#/components/schemas/Protocol"
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "required": [
+                      "action",
+                      "sealed"
+                    ],
+                    "additionalProperties": false,
+                    "properties": {
+                      "action": {
+                        "const": "run"
+                      },
+                      "sealed": {
+                        "type": "object",
+                        "required": [
+                          "schema",
+                          "protocol",
+                          "provenance",
+                          "notice",
+                          "seal_sha256"
+                        ],
+                        "properties": {
+                          "schema": {
+                            "const": "beyondspacetime.sealed-protocol.v1"
+                          },
+                          "protocol": {
+                            "$ref": "#/components/schemas/Protocol"
+                          },
+                          "provenance": {
+                            "type": "object"
+                          },
+                          "notice": {
+                            "type": "string"
+                          },
+                          "seal_sha256": {
+                            "type": "string",
+                            "pattern": "^[a-f0-9]{64}$"
+                          }
+                        }
+                      },
+                      "expected_sha256": {
+                        "type": "string",
+                        "pattern": "^[a-f0-9]{64}$"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sealed object or recomputed result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request, protocol or seal",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Method not allowed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Calculation failed",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Protocol": {
+        "type": "object",
+        "required": [
+          "schema",
+          "title",
+          "model",
+          "variable",
+          "metric",
+          "direction",
+          "cases",
+          "criteria",
+          "uncertainty",
+          "notes",
+          "evidence",
+          "gates"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "schema": {
+            "const": "beyondspacetime.experiment-design.v1"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 160
+          },
+          "model": {
+            "type": "string",
+            "enum": [
+              "foundation:photon-mass",
+              "foundation:constant-time",
+              "foundation:light-slowing",
+              "foundation:when",
+              "foundation:where",
+              "foundation:physical-existence",
+              "foundation:spacetime",
+              "foundation:fastest-signal",
+              "foundation:separation",
+              "foundation:cosmic-size",
+              "foundation:cosmic-age",
+              "foundation:distance-inference",
+              "evidence:escape",
+              "evidence:wall",
+              "evidence:anchors"
+            ]
+          },
+          "variable": {
+            "type": "string"
+          },
+          "metric": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "direction": {
+            "enum": [
+              "increase",
+              "decrease"
+            ]
+          },
+          "cases": {
+            "type": "object",
+            "required": [
+              "reference",
+              "candidate",
+              "negative",
+              "positive"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "reference": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "number"
+                }
+              },
+              "candidate": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "number"
+                }
+              },
+              "negative": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "number"
+                }
+              },
+              "positive": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "criteria": {
+            "type": "object",
+            "required": [
+              "support",
+              "reject",
+              "negative_tolerance",
+              "positive_minimum"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "support": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000000000.0
+              },
+              "reject": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000000000.0
+              },
+              "negative_tolerance": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000000000.0
+              },
+              "positive_minimum": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000000000.0
+              }
+            }
+          },
+          "uncertainty": {
+            "type": "object",
+            "required": [
+              "numerical",
+              "calibration",
+              "other"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "numerical": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000000000.0
+              },
+              "calibration": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000000000.0
+              },
+              "other": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1000000000.0
+              }
+            }
+          },
+          "notes": {
+            "type": "object",
+            "required": [
+              "question",
+              "hypothesis",
+              "alternative",
+              "negative_control",
+              "positive_control",
+              "measurement_plan",
+              "confounders",
+              "stopping_rule"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "question": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 600
+              },
+              "hypothesis": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1500
+              },
+              "alternative": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1500
+              },
+              "negative_control": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1500
+              },
+              "positive_control": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1500
+              },
+              "measurement_plan": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1500
+              },
+              "confounders": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1500
+              },
+              "stopping_rule": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 1500
+              }
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 26
+          },
+          "gates": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "maxItems": 7
+          }
+        }
+      }
+    }
+  }
+}

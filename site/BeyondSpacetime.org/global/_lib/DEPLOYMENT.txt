@@ -1,0 +1,21 @@
+BeyondSpacetime.org v1.8.0 — Global Scientific Education Edition
+
+Install the cumulative add-on in the existing domain document root after backing it up. The smaller Global-only package requires the earlier foundations and research modules. The original v1.2.0 root website is unavailable and is not reconstructed or replaced. No existing file is changed by this module. Nothing has been deployed to production.
+
+Add a Global Learning menu link: /global/. Add /global/sitemap.xml to Search Console or robots.txt without removing previous sitemaps. 43 canonical pages: a language selector, three localized hubs, 36 lesson pages and three glossaries. Each localized page declares its language and self-canonical URL, reciprocal en/es/fr alternates and an English x-default. English original foundation pages remain unchanged and are linked as primary companion material, not incorrectly asserted as reciprocal hreflang members. No automatic locale redirect. Translations are AI-assisted educational paraphrases, not independently reviewed editions of the book. The exact English charter statement remains visible with each translation. No claim of translation of all earlier modules.
+
+Native PHP 8.1+ and HTML/CSS/JS only. Forms recalculate on the server, even with JavaScript disabled; JavaScript enables JSON downloads. Localized display fields do not replace or modify the raw foundation result. Numerical inputs use HTML number fields and the solver's unchanged parameter schema. Numeric exports retain the solver's units and precision; visual output uses a consistent decimal point. No external translation or AI runtime, cookies, tracking or database added.
+
+Endpoints:
+GET /global/catalog.json — all languages, lesson relationships, exact English premises, parameter schemas, formulas, glossary and source links.
+GET /global/api/?language=es — selected language lesson/glossary catalog.
+GET /global/api/?language=fr&lesson=separation — localized lesson and exact English premise.
+POST /global/api/ — Content-Type: application/json, e.g. {"language":"es","lesson":"separation","parameters":{"beta":0.9}}. Response includes original_result (unchanged solver result), display (localized metric labels, series, units and limitation), source and English lesson URL. Errors: 400 malformed/invalid, 404 unknown GET lesson, 405 unsupported method, 413 body over 32 KB, 415 wrong media type. This is native JSON, not a new AG-UI protocol. Existing /research/api/ AG-UI remains intact.
+
+Apache: retain global/.htaccess and global/_lib/.htaccess. Configure real-directory routing, DirectoryIndex index.php and disallow access to _lib. Nginx and custom hosting must explicitly block all _lib directories. Verify /global/_lib/translations.json returns 403 or 404. Root routing, HTTPS, favicon, actual ArcSecs links, security policy compatibility, crawler access and search indexing need live verification. Confirm translations with qualified native-language scientific reviewers before representing them as authoritative. No full security/accessibility or performance certification.
+
+Local tests from extracted site root:
+  php global/_lib/tests.php
+  php -S 127.0.0.1:8158 global/_lib/dev-router.php
+  python3 global/_lib/http-test.py http://127.0.0.1:8158
+PHP built-in server is for development only. Python is optional test tooling, not a runtime dependency.

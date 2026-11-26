@@ -1,0 +1,24 @@
+BEYOND SPACETIME — v1.3.0 / TWELVE FOUNDATIONS EXPERIENCE
+Additive root deployment (not a full replacement for v1.2.0)
+
+1. Back up your current site. Extract the Add-On ZIP into the existing BeyondSpacetime.org document root, so foundations/index.php exists directly below that root. The archive contains only the new foundations/ directory. It does not overwrite the current homepage, existing assets, favicon, router, labs, video, or agent interface. If a foundations/ directory already exists, back it up before extraction.
+2. Verify https://beyondspacetime.org/foundations/ and /foundations/photon-mass/. Requirements: PHP 8.1+ with JSON, Apache 2.4 with DirectoryIndex index.php and allowed .htaccess access restrictions. The existing Apache front-controller must pass real files and directories through. If the host uses Nginx or a custom front controller, configure it to execute the actual foundation index.php files and deny access to /foundations/_lib/; do not serve PHP source. This configuration must be checked by the host. The prior site source was not available for integrated tests.
+3. Test /foundations/_lib/lessons.json and /foundations/_lib/tests.php: they must return 403 or 404. If access restrictions fail, fix hosting before publishing. Verify HTTPS, mobile layout, calculation, exports, and all ArcSecs links. The ZIP and release notes should not remain in the public document root.
+4. Integrate navigation: in the existing site's menu add a Foundations link with href="/foundations/". In the previous version's PHP app/render.php navigation array, the new item would be '/foundations/'=>'Foundations'. Add the same link to the homepage or existing /concepts/foundations/ page. This is a suggested edit, not an automatically applied patch; inspect your installed template first.
+5. Submit https://beyondspacetime.org/foundations/sitemap.xml separately in Google Search Console and Bing Webmaster Tools. Optionally add a second Sitemap: https://beyondspacetime.org/foundations/sitemap.xml line in your existing robots.txt output. The original root sitemap/catalog/llms.txt are not changed by this add-on. The foundation pages are server-rendered with canonical URLs, individual titles/descriptions and visible LearningResource/Breadcrumb structured metadata. No indexing or AI training inclusion is guaranteed.
+
+Machine access:
+GET /foundations/catalog.json — all 12 exact premises, interpretations, parameter bounds, source links.
+GET /foundations/api/ — endpoint documentation.
+POST /foundations/api/ with Content-Type: application/json:
+{"foundation":"photon-mass","parameters":{"gap":0}}
+Returns complete selected and reference results, with metric units, assumptions, source and rows.
+POST /foundations/api/ with Content-Type: application/json:
+{"threadId":"demo","runId":"run-1","messages":[],"state":{"foundation":"separation","parameters":{"beta":0.9}}}
+Returns a bounded server-sent event sequence RUN_STARTED, TEXT_MESSAGE_START, TEXT_MESSAGE_CONTENT, TEXT_MESSAGE_END, STATE_SNAPSHOT, RUN_FINISHED. This is a deterministic AG-UI event subset, not a conversational LLM, a full protocol implementation, or a certification. The earlier main API is unchanged. Server/proxy buffering may affect streaming.
+
+Scientific source: ArcSecs Scientific Review 6.0, §2, printed pp. 6–7; twelve exact statements transcribed and compared to the archived book's charter. The lessons contain original explanatory and computational teaching controls, not the complete book or paper, and do not make claims of empirical validation. The age control uses a flat matter–Lambda analytic reference without radiation. Browser progress is local storage only, when available. No external libraries or tracking are added by this module.
+
+Tests: php foundations/_lib/tests.php from the document root (CLI only). Production hosting, cross-navigation progress persistence, external link checks and comprehensive accessibility/security/load audits are not verified. The existing website's features have not been retested because its prior generated release could not be recovered in the current session or found in Dropbox by filename. Supply the previous full root ZIP for a merged release with main navigation, sitemap, discovery metadata and all older regression tests.
+
+Cumulative v1.4.0 bundle: foundation navigation now links to /evidence/. See evidence/_lib/DEPLOYMENT.txt for this additional module.

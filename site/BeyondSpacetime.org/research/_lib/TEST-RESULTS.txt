@@ -1,0 +1,170 @@
+BeyondSpacetime.org v1.5.0 — release test results
+
+New native model tests: 48 passed, 0 failed
+New HTTP/API tests: 44 passed, 0 failed
+Prior foundations tests: 61 passed, 0 failed
+Prior evidence tests: 47 passed, 0 failed
+46 prior module route checks passed
+
+Isolated browser checks (actual PHP HTML and responses, fragmented SSE response bridge; not live production streaming):
+PASS viewport 390
+PASS viewport 768
+PASS viewport 1440
+PASS 9 responsive renders; 6 SSE result/replay runs; 9 exports; builder and malformed import checks at all three widths
+
+Final change after browser pass: description-only correction to the light preset; model and HTTP tests rerun. All original 80 cumulative source files byte-identical. No full original root site, live hosting, production SSE transport, external links, indexing, empirical validation, security/load or accessibility certification claimed.
+
+PASS native solver parity foundation:photon-mass
+PASS native solver parity foundation:constant-time
+PASS native solver parity foundation:light-slowing
+PASS native solver parity foundation:when
+PASS native solver parity foundation:where
+PASS native solver parity foundation:physical-existence
+PASS native solver parity foundation:spacetime
+PASS native solver parity foundation:fastest-signal
+PASS native solver parity foundation:separation
+PASS native solver parity foundation:cosmic-size
+PASS native solver parity foundation:cosmic-age
+PASS native solver parity foundation:distance-inference
+PASS native solver parity evidence:escape
+PASS native solver parity evidence:wall
+PASS native solver parity evidence:anchors
+PASS preset deterministic light
+PASS preset deterministic escape
+PASS preset deterministic wall
+PASS preset deterministic distances
+PASS preset deterministic clocks
+PASS normalize default parameters and evidence ordering
+PASS only same-model differences
+PASS numeric delta and categorical omission
+PASS critical escape versus reversible null
+PASS wall conflict not hidden
+PASS auto linked records and gates retain source status
+PASS provenance source hashes
+PASS one to eight cases allowed
+PASS step callback exact order
+PASS reject wrong schema
+PASS reject wrong title
+PASS reject wrong question
+PASS reject wrong cases
+PASS reject wrong evidence
+PASS reject unknown model
+PASS reject unknown parameter
+PASS reject null parameter
+PASS reject string numeric
+PASS reject outside bounds
+PASS reject nine cases
+PASS reject empty cases
+PASS reject forged results
+PASS reject unknown evidence
+PASS reject object evidence
+PASS reject control characters
+PASS reject oversize title
+PASS reject invalid case label
+PASS reject list parameters
+48 passed, 0 failed
+PASS /research/
+PASS /research/presets/
+PASS /research/protocol/
+PASS public catalog
+PASS live catalog matches static
+PASS three sitemap routes
+PASS protected or unknown /research/_lib/model.php
+PASS protected or unknown /research/_lib/tests.php
+PASS protected or unknown /evidence/_lib/ledger.json
+PASS protected or unknown /foundations/_lib/lessons.json
+PASS protected or unknown /research/not-a-page/
+PASS asset or previous hub /research/assets/research.js
+PASS asset or previous hub /research/assets/research.css
+PASS asset or previous hub /foundations/
+PASS asset or previous hub /evidence/
+PASS preset light
+PASS execute light
+PASS preset escape
+PASS execute escape
+PASS preset wall
+PASS execute wall
+PASS preset distances
+PASS execute distances
+PASS preset clocks
+PASS execute clocks
+PASS replay same hash
+PASS replay wrong hash
+PASS no-JS form output
+PASS no-JS JSON download
+PASS user content escaped
+PASS invalid API b'{'
+PASS invalid API b'[]'
+PASS invalid API b'{}'
+PASS invalid API b'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+PASS invalid API b'{"plan":{"schema":"fake"}}'
+PASS invalid API b'{"plan": {"schema": "beyondspacetime.resea'
+PASS invalid API b'{"plan": {"schema": "beyondspacetime.resea'
+PASS invalid API b'{"threadId": "<bad>", "runId": "r", "messa'
+PASS wrong content type
+PASS wrong API method
+PASS read-only presets
+PASS SSE event sequence
+PASS SSE step pairing
+PASS SSE result parity and replay
+44 passed, 0 failed
+PASS https://beyondspacetime.org/foundations/
+PASS https://beyondspacetime.org/foundations/photon-mass/
+PASS https://beyondspacetime.org/foundations/constant-time/
+PASS https://beyondspacetime.org/foundations/light-slowing/
+PASS https://beyondspacetime.org/foundations/when/
+PASS https://beyondspacetime.org/foundations/where/
+PASS https://beyondspacetime.org/foundations/physical-existence/
+PASS https://beyondspacetime.org/foundations/spacetime/
+PASS https://beyondspacetime.org/foundations/fastest-signal/
+PASS https://beyondspacetime.org/foundations/separation/
+PASS https://beyondspacetime.org/foundations/cosmic-size/
+PASS https://beyondspacetime.org/foundations/cosmic-age/
+PASS https://beyondspacetime.org/foundations/distance-inference/
+PASS https://beyondspacetime.org/evidence/
+PASS https://beyondspacetime.org/evidence/ledger/
+PASS https://beyondspacetime.org/evidence/gates/
+PASS https://beyondspacetime.org/evidence/workbench/
+PASS https://beyondspacetime.org/evidence/ledger/charter/
+PASS https://beyondspacetime.org/evidence/ledger/ceiling/
+PASS https://beyondspacetime.org/evidence/ledger/common-field/
+PASS https://beyondspacetime.org/evidence/ledger/finite-source/
+PASS https://beyondspacetime.org/evidence/ledger/recession-law/
+PASS https://beyondspacetime.org/evidence/ledger/coupled-modes/
+PASS https://beyondspacetime.org/evidence/ledger/moving-endpoints/
+PASS https://beyondspacetime.org/evidence/ledger/causal-reach/
+PASS https://beyondspacetime.org/evidence/ledger/optical-map/
+PASS https://beyondspacetime.org/evidence/ledger/shell-void/
+PASS https://beyondspacetime.org/evidence/ledger/fixed-gap-drag/
+PASS https://beyondspacetime.org/evidence/ledger/wall-bound/
+PASS https://beyondspacetime.org/evidence/ledger/wall-crossing/
+PASS https://beyondspacetime.org/evidence/ledger/history-coordinate/
+PASS https://beyondspacetime.org/evidence/ledger/bounded-flow/
+PASS https://beyondspacetime.org/evidence/ledger/contact-scattering/
+PASS https://beyondspacetime.org/evidence/ledger/wall-certificate/
+PASS https://beyondspacetime.org/evidence/ledger/anchor-lmc/
+PASS https://beyondspacetime.org/evidence/ledger/anchor-ngc/
+PASS https://beyondspacetime.org/evidence/ledger/finite-range/
+PASS https://beyondspacetime.org/evidence/ledger/phase-match/
+PASS https://beyondspacetime.org/evidence/ledger/escape-criterion/
+PASS https://beyondspacetime.org/evidence/ledger/escape-verification/
+PASS https://beyondspacetime.org/evidence/ledger/regression-137/
+PASS https://beyondspacetime.org/evidence/ledger/multimessenger/
+PASS https://beyondspacetime.org/evidence/ledger/joint-fit/
+PASS https://beyondspacetime.org/evidence/workbench/escape/
+PASS https://beyondspacetime.org/evidence/workbench/wall/
+PASS https://beyondspacetime.org/evidence/workbench/anchors/
+46 prior module route checks passed
+
+PHP syntax:
+No syntax errors detected in research/api/index.php
+No syntax errors detected in research/presets/index.php
+No syntax errors detected in research/index.php
+No syntax errors detected in research/protocol/index.php
+No syntax errors detected in research/_lib/dev-router.php
+No syntax errors detected in research/_lib/site.php
+No syntax errors detected in research/_lib/tests.php
+No syntax errors detected in research/_lib/model.php
+
+JavaScript syntax:
+PASS research.js

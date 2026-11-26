@@ -1,0 +1,126 @@
+BeyondSpacetime.org v2.3.0 — Scientific Experiment Design Studio
+Verified local Apache 2.4.68 + PHP 8.4.24. 15 unchanged calculation models; 5 worked designs. Four cases per study; source-bound local protocol seal; no empirical or independent preregistration certification.
+
+New design tests: 117 scientific/protocol checks and 113 HTTP checks. All 5 no-JS seal/run forms, JSON/CSV downloads, replay and tamper rejection checked. Model parity verified against original solvers. Four possible decision outcomes exercised. Graph: 290 nodes, 768 relationships, 12 types, 9 catalog snapshots, no unresolved declared links. Museum 211 entries, 10 exhibits, 174 canonical pages. Crawl 456 distinct targets, 352 fragments, no issues or link failures. 18 responsive browser renders, nine import checks. Browser checks used isolated rendering of actual Apache responses, not real navigation/CSP. Existing quality numerical audit rerun (960 configurations, 1930 independent checks). Existing solver and offline module bytes preserved. Initial graph regression had a hard-coded page count from the older smaller catalog; corrected test to derive pages from API, final graph test passed. No actual external links, production TLS, video playback, PWA installation, full WCAG audit, penetration test or load tests verified. User-defined uncertainty budgets are not confidence intervals.
+
+Final automated suite total: 6913 successful checks (excludes separate browser and crawl counts).
+
+=== evidence/_lib/tests.php
+47 passed, 0 failed
+=== experiment-design/_lib/tests.php
+117 passed, 0 failed
+=== foundations/_lib/tests.php
+61 passed, 0 failed
+=== global/_lib/tests.php
+114 passed, 0 failed
+=== model-comparison/_lib/tests.php
+65 passed, 0 failed
+=== research/_lib/tests.php
+48 passed, 0 failed
+=== timeline/_lib/tests.php
+248 passed
+=== museum/_lib/quality-science.php
+960 configurations; 1930 passed, 0 failed
+=== offline/_lib/test.js
+187 passed, 0 failed
+=== offline/_lib/sw-test.js
+8 passed, 0 failed
+=== offline/_lib/setup-test.js
+4 passed, 0 failed
+=== visualizations/_lib/geometry-test.js
+179 passed
+=== evidence/_lib/http-test.py
+PASS invalid API b'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+PASS wrong content type
+PASS read-only ledger
+PASS record lookup
+PASS AG-UI lifecycle
+PASS catalog consistency
+57 passed, 0 failed
+=== experiment-design/_lib/http-test.py
+PASS private _lib/
+PASS private _lib/.htaccess
+PASS PATH_INFO denied
+PASS API PATH_INFO denied
+PASS unknown route
+PASS method page GET only
+113 passed, 0 failed
+=== global/_lib/http-test.py
+PASS invalid POST 400
+PASS invalid POST 413
+PASS wrong content type
+PASS POST hub rejected
+PASS invalid localized form
+PASS API method rejected
+92 passed, 0 failed
+=== model-comparison/_lib/http-test.py
+PASS live catalog agrees with static
+PASS preserved route /foundations/
+PASS preserved route /evidence/
+PASS preserved route /research/
+PASS preserved route /research/presets/
+PASS preserved route /research/protocol/
+45 passed, 0 failed
+=== offline/_lib/http-test.py
+PASS private test directory denied
+PASS canonical and no-JS index
+PASS manifest scope
+PASS previous global route
+PASS previous research route
+PASS previous timeline route
+16 passed, 0 failed
+=== research/_lib/http-test.py
+PASS wrong content type
+PASS wrong API method
+PASS read-only presets
+PASS SSE event sequence
+PASS SSE step pairing
+PASS SSE result parity and replay
+44 passed, 0 failed
+=== timeline/_lib/http-test.py
+PASS /timeline/record/no-such/
+PASS API POST denied
+PASS no-JS filter
+PASS no-JS comparison
+PASS escaped input
+PASS invalid HTML pair rejected
+78 passed
+=== museum/_lib/test.py
+PASS record target /visualizations/cosmic-domains/
+PASS record target /visualizations/distance/
+PASS record target /visualizations/escape/
+PASS record target /visualizations/photon/
+PASS record target /visualizations/separation/
+PASS record target /visualizations/wall/
+418 passed, 0 failed; 174 distinct canonical sitemap pages
+=== visualizations/_lib/test.py
+PASS bad API ?scene=photon&p=x
+PASS bad API ?scene=photon&p%5Bgap%5D%5B%5D=0
+PASS bad API ?scene=photon&p%5Bgap%5D=NaN
+PASS API rejects POST
+PASS protected source
+PASS museum visual filter
+245 passed
+=== knowledge-graph/_lib/test.py (final, pagination regression now derives page count from API)
+2524 passed, 0 failed
+=== museum/_lib/quality-http.py
+PASS /offline/manifest.webmanifest MIME
+PASS service worker revalidation
+PASS conditional graph request
+PASS timeline empty comparison chooser
+PASS timeline explicit invalid pair rejected
+PASS genuine standalone 404
+273 passed, 0 failed
+=== museum/_lib/quality-crawl.py
+Fragment references 352
+Pages 174 unique 174 targets 456 p50 1.84 p95 3.48
+issues 0
+
+link failures 0
+
+
+Browser checks:
+PASS viewport 390
+PASS viewport 768
+PASS viewport 1440
+18 responsive renders; 9 import checks passed

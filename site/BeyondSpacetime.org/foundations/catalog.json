@@ -1,0 +1,678 @@
+{
+  "schema": "beyondspacetime.foundations.catalog.v1",
+  "version": "1.3.0",
+  "source": "https://arcsecs.com/read-scientific-paper/",
+  "experimentEndpoint": "https://beyondspacetime.org/foundations/api/",
+  "lessons": [
+    {
+      "slug": "photon-mass",
+      "title": "Light, energy and invariant mass",
+      "answer": "Light has measurable energy and momentum. A nonzero invariant photon rest mass is a separate hypothesis, not a consequence of radiation pressure or gravity.",
+      "explorer": "A mirror moves when it receives momentum from light. This is a direct physical interaction even when the light has zero invariant mass. Think of a gap in the energy–momentum relation as a proposed extra property, not a new name for the energy already carried by light.",
+      "standard": "Maxwell electrodynamics and the standard photon describe zero invariant mass. A positive invariant mass would change the dispersion relation and can introduce additional polarization and electrostatic screening constraints.",
+      "candidate": "Review 6.0 §5.2 treats a positive frequency gap in a candidate sector. Here C and initial energy are normalized to one, so a gap fraction g yields group speed √(1−g²). A photon carrying energy is not proof of a positive gap.",
+      "equation": "E² = C²p² + Eₘ²;  v_g/C = √(1−g²),  g = Eₘ/E",
+      "params": [
+        {
+          "key": "gap",
+          "label": "Rest-energy fraction",
+          "default": 0.2,
+          "min": 0,
+          "max": 0.95,
+          "step": 0.01,
+          "unit": ""
+        }
+      ],
+      "series": [
+        "Group speed / C",
+        "Momentum C / E"
+      ],
+      "xLabel": "Rest-energy fraction",
+      "control": {
+        "gap": 0
+      },
+      "challenge": "Choose g=0. The speed and normalized momentum both return one.",
+      "observation": "Compare dispersion, static electric forces, polarization and emission/receiver spectra using shared parameters. A bound on rest mass is not a detection.",
+      "limitation": "Single fixed-energy dispersion control. Does not derive the gap, its origin or an astronomical drag law.",
+      "quiz": "Does transferring momentum establish invariant photon mass? No; the massless reference transfers momentum too.",
+      "topic": "photon-mass",
+      "lab": "photon-aging",
+      "reference": "Review 6.0 §5.2; book Chapter 30L",
+      "number": 1,
+      "statement": "Photons have mass.",
+      "epistemic_status": "charter_premise",
+      "model_status": "conditional_educational_control",
+      "url": "https://beyondspacetime.org/foundations/photon-mass/",
+      "source": {
+        "title": "ArcSecs Scientific Review 6.0",
+        "section": "§2, printed pp. 6–7; Review 6.0 §5.2; book Chapter 30L",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      }
+    },
+    {
+      "slug": "constant-time",
+      "title": "One progression, different clock readings",
+      "answer": "The proposed universal progression T is a research choice. Different measured clock counts must be explained; identical progression does not establish a detectable absolute clock.",
+      "explorer": "Two clocks can accumulate different numbers of ticks during the same specified coordinate interval. A change in a physical clock rate is an observable; interpreting that change requires a model of the clock and the comparison protocol.",
+      "standard": "Special relativity predicts proper time along an inertial trajectory. Atomic clocks, particle lifetimes and gravitational time comparisons constrain any alternative account.",
+      "candidate": "ArcSecs uses T and a process rate ν(T); a candidate must derive each physical rate and reproduce the complete set of comparisons, not just choose a rate that fits one clock.",
+      "equation": "N_A = ν_A T; N_B = ν_B T; N_SR = ν_A T√(1−β²)",
+      "params": [
+        {
+          "key": "rate",
+          "label": "Reference rate",
+          "default": 1,
+          "min": 0.1,
+          "max": 5,
+          "step": 0.1,
+          "unit": "Hz"
+        },
+        {
+          "key": "beta",
+          "label": "Relative speed / c",
+          "default": 0.6,
+          "min": 0,
+          "max": 0.99,
+          "step": 0.01,
+          "unit": ""
+        },
+        {
+          "key": "duration",
+          "label": "Coordinate interval",
+          "default": 10,
+          "min": 1,
+          "max": 60,
+          "step": 1,
+          "unit": "s"
+        },
+        {
+          "key": "ratio",
+          "label": "Candidate B/A rate",
+          "default": 0.8,
+          "min": 0.1,
+          "max": 2,
+          "step": 0.05,
+          "unit": ""
+        }
+      ],
+      "series": [
+        "Reference counts",
+        "Candidate counts",
+        "SR comparator counts"
+      ],
+      "xLabel": "Coordinate interval (s)",
+      "control": {
+        "beta": 0,
+        "ratio": 1
+      },
+      "challenge": "At β=0 and equal rates all three traces coincide.",
+      "observation": "Compare clock technologies and moving-particle lifetimes using the same specified physical rate law.",
+      "limitation": "Constant stipulated rates; the SR comparator is an inertial control, not a derivation of preferred time.",
+      "quiz": "Can a fitted clock-rate ratio by itself distinguish two theories? No; an independently predicted difference is needed.",
+      "topic": "clocks",
+      "lab": "clocks",
+      "reference": "Review 6.0 §5.3; book Chapter 25",
+      "number": 2,
+      "statement": "Time is constant.",
+      "epistemic_status": "charter_premise",
+      "model_status": "conditional_educational_control",
+      "url": "https://beyondspacetime.org/foundations/constant-time/",
+      "source": {
+        "title": "ArcSecs Scientific Review 6.0",
+        "section": "§2, printed pp. 6–7; Review 6.0 §5.3; book Chapter 25",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      }
+    },
+    {
+      "slug": "light-slowing",
+      "title": "Distinguishing energy loss from slowing",
+      "answer": "Energy, frequency and group speed are distinct. A fixed-gap drag model permits energy loss with very little speed change, and the zero-gap limit does not slow at all.",
+      "explorer": "Imagine comparing two light packets at emission and reception. A spectral shift measures a frequency ratio relative to standards. A travel-time experiment measures a different quantity. Both must be predicted before claiming that a packet slowed.",
+      "standard": "Redshifts arise in standard physics from relative motion, gravitational conditions and cosmological evolution. Propagation in media can alter group speed; a spectral shift alone does not identify a mechanism.",
+      "candidate": "The fixed-gap momentum-loss control in the book is an explicitly phenomenological branch. Review 6.0 also studies conversion and energy transfer; a stationary loss law alone does not generate observed arrival stretching.",
+      "equation": "p = p₀ exp(−γT); E = √(p²+g²); v_g = p/E",
+      "params": [
+        {
+          "key": "gap",
+          "label": "Rest-energy fraction",
+          "default": 0.1,
+          "min": 0,
+          "max": 0.9,
+          "step": 0.01,
+          "unit": ""
+        },
+        {
+          "key": "drag",
+          "label": "Momentum-loss rate",
+          "default": 0.3,
+          "min": 0,
+          "max": 2,
+          "step": 0.05,
+          "unit": ""
+        },
+        {
+          "key": "duration",
+          "label": "Progression interval",
+          "default": 5,
+          "min": 0.1,
+          "max": 20,
+          "step": 0.1,
+          "unit": ""
+        }
+      ],
+      "series": [
+        "Energy / initial",
+        "Group speed / C",
+        "Transferred energy"
+      ],
+      "xLabel": "Progression T",
+      "control": {
+        "gap": 0,
+        "drag": 0.5
+      },
+      "challenge": "Set gap to zero and positive drag. Energy falls, but speed stays one.",
+      "observation": "Identify the energy recipient and test pulse stretching, image blur, spectral noise and independent timing.",
+      "limitation": "Normalized fixed C, initial E=1, drag imposed rather than derived. No microscopic bath or universal cosmology.",
+      "quiz": "Does a red spectrum prove that the received photon moved more slowly? No.",
+      "topic": "light-history",
+      "lab": "photon-aging",
+      "reference": "Review 6.0 Parts XXXIII–XXXIV; book Chapter 30R",
+      "number": 3,
+      "statement": "Light slows down over time.",
+      "epistemic_status": "charter_premise",
+      "model_status": "conditional_educational_control",
+      "url": "https://beyondspacetime.org/foundations/light-slowing/",
+      "source": {
+        "title": "ArcSecs Scientific Review 6.0",
+        "section": "§2, printed pp. 6–7; Review 6.0 Parts XXXIII–XXXIV; book Chapter 30R",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      }
+    },
+    {
+      "slug": "when",
+      "title": "Time as event ordering",
+      "answer": "The charter treats When as a relation between events. That ontological choice must be distinguished from measured duration and relativistic proper time.",
+      "explorer": "A source emits repeated pulses. A receiver records their arrival intervals. If every pulse takes the same travel time, all arrivals are shifted by that delay but the intervals remain unchanged.",
+      "standard": "In relativity, proper time is measurable along a worldline; coordinate times describe events in chosen frames. Neither requires a flowing material.",
+      "candidate": "The physical-first account models ordered source events, transport and receiver counts separately. A variable transit delay can change arrival intervals, but an identical delay cannot.",
+      "equation": "t_emit(n)=nP; t_arr(n)=nP+L/C; Δt_arr=P",
+      "params": [
+        {
+          "key": "period",
+          "label": "Emission interval",
+          "default": 2,
+          "min": 0.1,
+          "max": 10,
+          "step": 0.1,
+          "unit": "s"
+        },
+        {
+          "key": "delay",
+          "label": "Fixed transit delay",
+          "default": 5,
+          "min": 0,
+          "max": 20,
+          "step": 0.1,
+          "unit": "s"
+        }
+      ],
+      "series": [
+        "Emission time",
+        "Arrival time"
+      ],
+      "xLabel": "Pulse index",
+      "control": {
+        "delay": 0
+      },
+      "challenge": "Increase the fixed delay. The two lines remain parallel.",
+      "observation": "Measure a series of pulses with calibrated endpoint clocks; vary transit conditions independently.",
+      "limitation": "Stationary endpoints, constant transit delay, identical clock units; not a synchronization theory or a full redshift model.",
+      "quiz": "Does a five-second fixed transit delay stretch a two-second pulse interval? No; it shifts all arrivals equally.",
+      "topic": "clocks",
+      "lab": "clocks",
+      "reference": "Review 6.0 §2.1 and §5.3",
+      "number": 4,
+      "statement": "Time does not physically exist; it is the “When.”",
+      "epistemic_status": "charter_premise",
+      "model_status": "conditional_educational_control",
+      "url": "https://beyondspacetime.org/foundations/when/",
+      "source": {
+        "title": "ArcSecs Scientific Review 6.0",
+        "section": "§2, printed pp. 6–7; Review 6.0 §2.1 and §5.3",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      }
+    },
+    {
+      "slug": "where",
+      "title": "Space as measurable relations",
+      "answer": "Relative position, separation and geometry are measurable. The choice not to call space a material does not remove geometric laws.",
+      "explorer": "Move a coordinate origin on a map: two objects keep the same physical separation even though both coordinates change. In a model, specify what is invariant under a coordinate change.",
+      "standard": "Euclidean geometry is a useful local approximation; relativistic geometry predicts measured trajectories and timing in its domain. Coordinates themselves are not material objects.",
+      "candidate": "ArcSecs treats Where as relative arrangement. Physical states and interactions must give coordinate-independent predictions for actual rulers and other instruments.",
+      "equation": "d = √((x₂−x₁)²+(y₂−y₁)²)",
+      "params": [
+        {
+          "key": "dx",
+          "label": "Horizontal separation",
+          "default": 3,
+          "min": 0,
+          "max": 10,
+          "step": 0.1,
+          "unit": ""
+        },
+        {
+          "key": "dy",
+          "label": "Vertical separation",
+          "default": 4,
+          "min": 0,
+          "max": 10,
+          "step": 0.1,
+          "unit": ""
+        },
+        {
+          "key": "shift",
+          "label": "Common origin offset",
+          "default": 2,
+          "min": -10,
+          "max": 10,
+          "step": 0.1,
+          "unit": ""
+        }
+      ],
+      "series": [
+        "Object A x",
+        "Object B x",
+        "Separation"
+      ],
+      "xLabel": "Common offset",
+      "control": {
+        "shift": 0
+      },
+      "challenge": "Change the origin offset. The distance remains √(3²+4²)=5 at the defaults.",
+      "observation": "Repeat ranging with different reference origins and compare invariant separations in the declared measurement regime.",
+      "limitation": "Flat two-dimensional geometry; not a model of curved geometry, cosmological distance or absolute coordinates.",
+      "quiz": "Does changing the origin change the measured distance between two fixed objects? No.",
+      "topic": "physical-first",
+      "lab": "parallax",
+      "reference": "Review 6.0 §2.1; book foundations interpretation",
+      "number": 5,
+      "statement": "Space does not physically exist; it is the “Where.”",
+      "epistemic_status": "charter_premise",
+      "model_status": "conditional_educational_control",
+      "url": "https://beyondspacetime.org/foundations/where/",
+      "source": {
+        "title": "ArcSecs Scientific Review 6.0",
+        "section": "§2, printed pp. 6–7; Review 6.0 §2.1; book foundations interpretation",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      }
+    },
+    {
+      "slug": "physical-existence",
+      "title": "Physical attributes and system mass",
+      "answer": "Physical states carry measurable energy and momentum, but energy-equivalent mass, invariant mass and geometric extent are distinct quantities.",
+      "explorer": "Two beams of light can each carry energy and momentum. Their combined system can have nonzero invariant mass if they travel in opposite directions, even if neither individual photon has invariant mass.",
+      "standard": "For a system, invariant mass is defined by total four-momentum. A field state need not have a rigid classical boundary or nonzero individual rest mass.",
+      "candidate": "The charter asks for a physical inventory. Its technical interpretation requires defining mass and extent operationally before proposing an invariant mass for every entity. This control uses the standard massless two-photon reference.",
+      "equation": "M²c⁴ = 2E₁E₂(1−cos θ)",
+      "params": [
+        {
+          "key": "energy",
+          "label": "Equal photon energy",
+          "default": 1,
+          "min": 0.1,
+          "max": 10,
+          "step": 0.1,
+          "unit": "normalized"
+        },
+        {
+          "key": "angle",
+          "label": "Angle between momenta",
+          "default": 180,
+          "min": 0,
+          "max": 180,
+          "step": 1,
+          "unit": "deg"
+        }
+      ],
+      "series": [
+        "System rest energy Mc²"
+      ],
+      "xLabel": "Angle (degrees)",
+      "control": {
+        "angle": 0
+      },
+      "challenge": "Compare parallel beams with opposing beams. Parallel beams give zero system invariant mass.",
+      "observation": "Measure total energy and vector momentum of a closed system; distinguish the aggregate invariant from constituent invariant masses.",
+      "limitation": "Two massless packets of equal energy; no localization measurement or proof that every entity has a sharp size.",
+      "quiz": "Do two individually massless photons necessarily form a massless system? No, the result depends on their total momentum.",
+      "topic": "physical-first",
+      "lab": "photon-aging",
+      "reference": "Review 6.0 §2 and §5.2",
+      "number": 6,
+      "statement": "All that physically exists at any moment occupies area and has mass at that moment.",
+      "epistemic_status": "charter_premise",
+      "model_status": "conditional_educational_control",
+      "url": "https://beyondspacetime.org/foundations/physical-existence/",
+      "source": {
+        "title": "ArcSecs Scientific Review 6.0",
+        "section": "§2, printed pp. 6–7; Review 6.0 §2 and §5.2",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      }
+    },
+    {
+      "slug": "spacetime",
+      "title": "Geometry versus a literal fabric",
+      "answer": "Relativistic geometry is a successful predictive framework. Rejecting a literal fabric metaphor does not reject measured proper times, trajectories or gravity.",
+      "explorer": "Two ideal inertial clock rates can be compared in a chosen reference frame. A calculation can describe the measured ratio without treating time as a material flowing at a different speed.",
+      "standard": "The standard inertial proper-time factor is √(1−β²). General relativity extends the predictions to gravity using a dynamical metric.",
+      "candidate": "The research seeks physical interaction laws that recover the same predictions and offer independently discriminating tests. The standard factor here is a comparator, not a proposed alternative mechanism.",
+      "equation": "Δτ/Δt = √(1−β²)",
+      "params": [
+        {
+          "key": "beta",
+          "label": "Relative speed / c",
+          "default": 0.8,
+          "min": 0,
+          "max": 0.99,
+          "step": 0.01,
+          "unit": ""
+        },
+        {
+          "key": "duration",
+          "label": "Reference interval",
+          "default": 10,
+          "min": 1,
+          "max": 60,
+          "step": 1,
+          "unit": "s"
+        }
+      ],
+      "series": [
+        "Proper interval (s)",
+        "Coordinate interval (s)"
+      ],
+      "xLabel": "Relative speed / c",
+      "control": {
+        "beta": 0
+      },
+      "challenge": "At rest, proper and reference intervals agree; at β=0.8 the ratio is 0.6.",
+      "observation": "Compare precision clock measurements, orbital effects, gravitational waves and light deflection with a derived alternative law.",
+      "limitation": "Inertial special-relativity reference only. No gravitational metric calculation or replacement theory is supplied.",
+      "quiz": "Does successful geometry imply a rubber-like spacetime material? No; the model predicts measurements, not a literal sheet.",
+      "topic": "gravity",
+      "lab": "clocks",
+      "reference": "Review 6.0 §2.1 and §5.3",
+      "number": 7,
+      "statement": "Spacetime does not physically exist.",
+      "epistemic_status": "charter_premise",
+      "model_status": "conditional_educational_control",
+      "url": "https://beyondspacetime.org/foundations/spacetime/",
+      "source": {
+        "title": "ArcSecs Scientific Review 6.0",
+        "section": "§2, printed pp. 6–7; Review 6.0 §2.1 and §5.3",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      }
+    },
+    {
+      "slug": "fastest-signal",
+      "title": "Group speed and causal speed",
+      "answer": "A field characteristic may be faster than a slow massive packet without exceeding the local causal maximum. No controllable faster-than-light signal is demonstrated.",
+      "explorer": "Compare a slower packet with a reference front launched from the same point. The front can arrive first without either crossing the specified maximum speed.",
+      "standard": "In standard vacuum relativity c is the local causal speed. Group speed and front speed in dispersive media are distinct. A closing rate is not a local information speed.",
+      "candidate": "C-01 separates the emission ceiling, electromagnetic front, all-sector causal characteristic, packet group speed and separation rate. The research requires a derived ordering and physical signal protocol.",
+      "equation": "t_packet = D/v_g; t_front = D/C; Δt = D(1/v_g−1/C)",
+      "params": [
+        {
+          "key": "fraction",
+          "label": "Packet speed / C",
+          "default": 0.7,
+          "min": 0.05,
+          "max": 1,
+          "step": 0.01,
+          "unit": ""
+        },
+        {
+          "key": "distance",
+          "label": "Path length / C",
+          "default": 10,
+          "min": 0.1,
+          "max": 30,
+          "step": 0.1,
+          "unit": "time units"
+        }
+      ],
+      "series": [
+        "Packet arrival time",
+        "Reference arrival time"
+      ],
+      "xLabel": "Distance / C",
+      "control": {
+        "fraction": 1
+      },
+      "challenge": "Set packet speed equal to the reference front; the arrival difference vanishes.",
+      "observation": "Test actual signal fronts with independently synchronized endpoints and an explicitly stated causal theory.",
+      "limitation": "Normalized stationary paths; the front is a specified reference, not an experimentally detected new faster field.",
+      "quiz": "Does a front overtaking a slower packet prove faster-than-causal communication? No.",
+      "topic": "gravity",
+      "lab": "shell",
+      "reference": "Review 6.0 §3.1–3.3, C-01",
+      "number": 8,
+      "statement": "Light is not the fastest thing in the universe.",
+      "epistemic_status": "charter_premise",
+      "model_status": "conditional_educational_control",
+      "url": "https://beyondspacetime.org/foundations/fastest-signal/",
+      "source": {
+        "title": "ArcSecs Scientific Review 6.0",
+        "section": "§2, printed pp. 6–7; Review 6.0 §3.1–3.3, C-01",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      }
+    },
+    {
+      "slug": "separation",
+      "title": "Closing and separation rates versus causality",
+      "answer": "Coordinate separation rates may exceed a local light-speed benchmark; this does not imply that one body or signal travels locally faster than c.",
+      "explorer": "In a common reference frame two ships move oppositely at 0.9c. Their separation changes at 1.8c. An observer on either ship measures the other using relativistic velocity addition, not simple subtraction in the common frame.",
+      "standard": "Special relativity gives relative speed 2β/(1+β²) times c for opposite equal speeds in one inertial frame. Cosmological recession is a distinct large-scale quantity.",
+      "candidate": "Review 6.0 C-01 uses this two-spacecraft thought experiment to separate inherited motion and emission. It expressly does not demonstrate single-photon superluminal motion.",
+      "equation": "V_sep/C = 2β; v_rel/C = 2β/(1+β²)",
+      "params": [
+        {
+          "key": "beta",
+          "label": "Each ship speed / C",
+          "default": 0.9,
+          "min": 0,
+          "max": 0.99,
+          "step": 0.01,
+          "unit": ""
+        }
+      ],
+      "series": [
+        "Common-frame separation rate / C",
+        "SR measured relative speed / C",
+        "Local benchmark"
+      ],
+      "xLabel": "Each ship speed / C",
+      "control": {
+        "beta": 0
+      },
+      "challenge": "Increase β past 0.5. Separation exceeds one while measured relative speed remains below one.",
+      "observation": "Measure signal arrival and relative velocity with the appropriate clocks and frame transformations.",
+      "limitation": "Equal opposite inertial velocities, not a cosmological metric or a superluminal communication mechanism.",
+      "quiz": "Is a 1.8c closing rate a measurement of one signal moving at 1.8c? No.",
+      "topic": "gravity",
+      "lab": "recession",
+      "reference": "Review 6.0 §3.1–3.3; C-01",
+      "number": 9,
+      "statement": "Things move apart from each other faster than causality; time, space, or spacetime cannot be physically stretched because they are not physical substances to stretch.",
+      "epistemic_status": "charter_premise",
+      "model_status": "conditional_educational_control",
+      "url": "https://beyondspacetime.org/foundations/separation/",
+      "source": {
+        "title": "ArcSecs Scientific Review 6.0",
+        "section": "§2, printed pp. 6–7; Review 6.0 §3.1–3.3; C-01",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      }
+    },
+    {
+      "slug": "cosmic-size",
+      "title": "Observable reach and total cosmic extent",
+      "answer": "A finite causal reach does not determine the total physical extent of the universe. The observable horizon is not necessarily a material wall.",
+      "explorer": "In a toy stationary world, a signal traveling at constant speed can reach a finite radius in a finite time. A hypothetical boundary beyond that radius is not detectable by this particular experiment.",
+      "standard": "Cosmological particle horizons depend on the expansion history and differ from Hubble radius and event horizon. Observations constrain curvature and accessible structure, not every possible parent domain.",
+      "candidate": "ArcSecs considers the total cosmos separately from the observed domain. A real boundary or outside region would require a field/interface model and observational signature.",
+      "equation": "R_reach = C T; observed fraction = min(1,(R_reach/R_domain)³)",
+      "params": [
+        {
+          "key": "reach",
+          "label": "Signal reach",
+          "default": 4,
+          "min": 0.1,
+          "max": 10,
+          "step": 0.1,
+          "unit": "normalized"
+        },
+        {
+          "key": "domain",
+          "label": "Assumed domain radius",
+          "default": 8,
+          "min": 0.1,
+          "max": 20,
+          "step": 0.1,
+          "unit": "normalized"
+        }
+      ],
+      "series": [
+        "Accessible volume fraction"
+      ],
+      "xLabel": "Assumed spherical radius",
+      "control": {
+        "domain": 4
+      },
+      "challenge": "Increase the assumed domain radius at fixed reach. The accessible fraction decreases without changing the reach.",
+      "observation": "Use independent observations of curvature, topology, sky signatures and causal histories; a domain boundary needs separate evidence.",
+      "limitation": "Stationary Euclidean centered sphere with prescribed reach; not a calculation of the actual observable universe or its size.",
+      "quiz": "Does seeing only a finite region establish a physical edge? No.",
+      "topic": "bubble-universes",
+      "lab": "bubble",
+      "reference": "Review 6.0 §2; book Chapter 26 and Chapters 30–32",
+      "number": 10,
+      "statement": "The size of the universe is unknown.",
+      "epistemic_status": "charter_premise",
+      "model_status": "conditional_educational_control",
+      "url": "https://beyondspacetime.org/foundations/cosmic-size/",
+      "source": {
+        "title": "ArcSecs Scientific Review 6.0",
+        "section": "§2, printed pp. 6–7; Review 6.0 §2; book Chapter 26 and Chapters 30–32",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      }
+    },
+    {
+      "slug": "cosmic-age",
+      "title": "Modeled cosmic age and total history",
+      "answer": "The conventional cosmic age is an inference from a calibrated expansion history. The duration of all hypothetical physical reality is a different, unanswered question.",
+      "explorer": "The time since a specified early phase can be estimated from the rate of evolution. An unobserved earlier phase is not automatically ruled out by that calculation, nor is it established by proposing it.",
+      "standard": "A flat matter–Λ reference gives a calculable expansion age for specified H₀ and matter fraction. The full standard inference includes radiation, observational constraints and uncertainties.",
+      "candidate": "The research distinguishes an age inferred for our domain from an unknown parent history. It retains the hot Big Bang as a possible physical history and requires independent chronometers.",
+      "equation": "t₀ = 2 asinh(√((1−Ωm)/Ωm))/(3 H₀√(1−Ωm))",
+      "params": [
+        {
+          "key": "h0",
+          "label": "Hubble constant",
+          "default": 70,
+          "min": 45,
+          "max": 95,
+          "step": 1,
+          "unit": "km/s/Mpc"
+        },
+        {
+          "key": "matter",
+          "label": "Matter fraction",
+          "default": 0.3,
+          "min": 0.05,
+          "max": 0.95,
+          "step": 0.01,
+          "unit": ""
+        }
+      ],
+      "series": [
+        "Model age (Gyr)"
+      ],
+      "xLabel": "Hubble constant (km/s/Mpc)",
+      "control": {
+        "h0": 67.4,
+        "matter": 0.315
+      },
+      "challenge": "Change H₀ while holding Ωm fixed. The model age scales inversely with H₀.",
+      "observation": "Compare cosmic expansion fits with stellar and other physical age indicators, using the same model assumptions and uncertainties.",
+      "limitation": "Flat matter–Λ reference, radiation omitted for this analytic lesson; no data fit or inference about all reality.",
+      "quiz": "Does this model age determine the age of a hypothetical parent cosmos? No.",
+      "topic": "cosmic-evolution",
+      "lab": "big-bang",
+      "reference": "Review 6.0 §2; book Chapter 26",
+      "number": 11,
+      "statement": "The age of the universe is unknown.",
+      "epistemic_status": "charter_premise",
+      "model_status": "conditional_educational_control",
+      "url": "https://beyondspacetime.org/foundations/cosmic-age/",
+      "source": {
+        "title": "ArcSecs Scientific Review 6.0",
+        "section": "§2, printed pp. 6–7; Review 6.0 §2; book Chapter 26",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      }
+    },
+    {
+      "slug": "distance-inference",
+      "title": "When astronomical distances and sizes can change",
+      "answer": "Distance corrections are testable and can have either sign. The charter’s smaller-and-closer premise must not become an assumed correction for every object.",
+      "explorer": "A source dimmed by dust may appear farther away if the dust is ignored. A separate geometric parallax measurement can test that inference. At fixed small angular extent the inferred physical size scales with distance.",
+      "standard": "Geometric anchors, calibrated candles, rulers, spectroscopy and time intervals give complementary constraints. A reclassified foreground object does not invalidate the distances of spectroscopically confirmed galaxies.",
+      "candidate": "ArcSecs calls for geometric-first audits and joint fits, with positive and negative controls. This lesson isolates an unmodeled extinction term and a calibrated distance.",
+      "equation": "D_inferred/D = 10^(A/5); size ratio = distance ratio (fixed small angle)",
+      "params": [
+        {
+          "key": "actual",
+          "label": "Calibrated distance",
+          "default": 1,
+          "min": 0.1,
+          "max": 10,
+          "step": 0.1,
+          "unit": "Mpc"
+        },
+        {
+          "key": "extinction",
+          "label": "Unmodeled attenuation",
+          "default": 0.5,
+          "min": -1,
+          "max": 3,
+          "step": 0.05,
+          "unit": "mag"
+        }
+      ],
+      "series": [
+        "Inferred distance (Mpc)",
+        "Calibrated distance (Mpc)"
+      ],
+      "xLabel": "Signed magnitude bias",
+      "control": {
+        "extinction": 0
+      },
+      "challenge": "Set the bias to zero for equality; negative signed calibration bias gives the opposite direction.",
+      "observation": "Compare geometric anchors, extinction, flux, angles, spectra and arrival intervals with shared parameters and held-out observations.",
+      "limitation": "Signed magnitude offset is a sensitivity control; negative values model calibration/brightening bias, not physical negative dust extinction. No universal correction or astronomical fit.",
+      "quiz": "Does one smaller-and-closer reclassification prove every distance is too large? No.",
+      "topic": "distances",
+      "lab": "distance",
+      "reference": "Review 6.0 §2; book Chapter 26 and distance audit",
+      "number": 12,
+      "statement": "Objects in the universe are smaller and closer than they appear.",
+      "epistemic_status": "charter_premise",
+      "model_status": "conditional_educational_control",
+      "url": "https://beyondspacetime.org/foundations/distance-inference/",
+      "source": {
+        "title": "ArcSecs Scientific Review 6.0",
+        "section": "§2, printed pp. 6–7; Review 6.0 §2; book Chapter 26 and distance audit",
+        "url": "https://arcsecs.com/read-scientific-paper/"
+      }
+    }
+  ]
+}

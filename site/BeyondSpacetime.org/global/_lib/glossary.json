@@ -1,0 +1,158 @@
+{
+  "en": [
+    {
+      "term": "Invariant mass",
+      "definition": "Mass defined by the total energy–momentum invariant, not simply energy divided by c².",
+      "lesson": "photon-mass"
+    },
+    {
+      "term": "Group speed",
+      "definition": "Rate of propagation of a wave-packet envelope in a specified dispersion law. Distinct from signal-front speed.",
+      "lesson": "light-slowing"
+    },
+    {
+      "term": "Proper time",
+      "definition": "Time measured by an ideal clock along its worldline in relativity.",
+      "lesson": "constant-time"
+    },
+    {
+      "term": "Universal progression T",
+      "definition": "Proposed common evolution parameter; not an experimentally established absolute clock.",
+      "lesson": "when"
+    },
+    {
+      "term": "Causal front",
+      "definition": "Leading boundary of a causal disturbance in a specified theory, not necessarily the group speed.",
+      "lesson": "fastest-signal"
+    },
+    {
+      "term": "Separation rate",
+      "definition": "Rate of change of distance under a specified coordinate convention; not automatically a local relative speed.",
+      "lesson": "separation"
+    },
+    {
+      "term": "Observable horizon",
+      "definition": "Limit of causal accessibility determined by the assumed cosmic history, not necessarily a physical wall.",
+      "lesson": "cosmic-size"
+    },
+    {
+      "term": "Hubble constant",
+      "definition": "Present expansion-rate parameter in a conventional cosmological model.",
+      "lesson": "cosmic-age"
+    },
+    {
+      "term": "Distance bias",
+      "definition": "Difference between an inferred and calibrated distance under declared assumptions. It can have either sign.",
+      "lesson": "distance-inference"
+    },
+    {
+      "term": "Negative control",
+      "definition": "Specified model condition expected to remove an effect or reveal a failure; passing it is not empirical validation.",
+      "lesson": "spacetime"
+    }
+  ],
+  "es": [
+    {
+      "term": "Masa invariante",
+      "definition": "Masa definida por el invariante de energía y momento totales, no simplemente energía dividida por c².",
+      "lesson": "photon-mass"
+    },
+    {
+      "term": "Velocidad de grupo",
+      "definition": "Velocidad de propagación de la envolvente de un paquete de ondas en una relación de dispersión dada. Distinta de la velocidad del frente.",
+      "lesson": "light-slowing"
+    },
+    {
+      "term": "Tiempo propio",
+      "definition": "Tiempo medido por un reloj ideal a lo largo de su línea de universo en relatividad.",
+      "lesson": "constant-time"
+    },
+    {
+      "term": "Progresión universal T",
+      "definition": "Parámetro común de evolución propuesto; no es un reloj absoluto establecido experimentalmente.",
+      "lesson": "when"
+    },
+    {
+      "term": "Frente causal",
+      "definition": "Límite delantero de una perturbación causal en una teoría dada, no necesariamente la velocidad de grupo.",
+      "lesson": "fastest-signal"
+    },
+    {
+      "term": "Tasa de separación",
+      "definition": "Variación de distancia por unidad de tiempo según una convención de coordenadas; no equivale necesariamente a una velocidad relativa local.",
+      "lesson": "separation"
+    },
+    {
+      "term": "Horizonte observable",
+      "definition": "Límite de accesibilidad causal determinado por la historia cósmica supuesta, no necesariamente una pared física.",
+      "lesson": "cosmic-size"
+    },
+    {
+      "term": "Constante de Hubble",
+      "definition": "Parámetro de la tasa de expansión actual en un modelo cosmológico convencional.",
+      "lesson": "cosmic-age"
+    },
+    {
+      "term": "Sesgo de distancia",
+      "definition": "Diferencia entre una distancia inferida y otra calibrada bajo supuestos declarados. Puede tener ambos signos.",
+      "lesson": "distance-inference"
+    },
+    {
+      "term": "Control negativo",
+      "definition": "Condición especificada del modelo que debe eliminar un efecto o revelar un fallo; superarlo no es una validación empírica.",
+      "lesson": "spacetime"
+    }
+  ],
+  "fr": [
+    {
+      "term": "Masse invariante",
+      "definition": "Masse définie par l’invariant énergie-impulsion total, et non simplement par l’énergie divisée par c².",
+      "lesson": "photon-mass"
+    },
+    {
+      "term": "Vitesse de groupe",
+      "definition": "Vitesse de propagation de l’enveloppe d’un paquet d’ondes pour une dispersion donnée. Distincte de la vitesse du front.",
+      "lesson": "light-slowing"
+    },
+    {
+      "term": "Temps propre",
+      "definition": "Temps mesuré par une horloge idéale le long de sa ligne d’univers en relativité.",
+      "lesson": "constant-time"
+    },
+    {
+      "term": "Progression universelle T",
+      "definition": "Paramètre commun d’évolution proposé ; pas une horloge absolue établie expérimentalement.",
+      "lesson": "when"
+    },
+    {
+      "term": "Front causal",
+      "definition": "Limite avant d’une perturbation causale dans une théorie donnée, distincte en général de la vitesse de groupe.",
+      "lesson": "fastest-signal"
+    },
+    {
+      "term": "Taux de séparation",
+      "definition": "Variation de distance par unité de temps selon une convention de coordonnées ; pas nécessairement une vitesse relative locale.",
+      "lesson": "separation"
+    },
+    {
+      "term": "Horizon observable",
+      "definition": "Limite d’accessibilité causale déterminée par l’histoire cosmique supposée, pas nécessairement une paroi physique.",
+      "lesson": "cosmic-size"
+    },
+    {
+      "term": "Constante de Hubble",
+      "definition": "Paramètre du taux d’expansion actuel dans un modèle cosmologique conventionnel.",
+      "lesson": "cosmic-age"
+    },
+    {
+      "term": "Biais de distance",
+      "definition": "Différence entre une distance inférée et une distance calibrée sous des hypothèses déclarées. Peut être de signe positif ou négatif.",
+      "lesson": "distance-inference"
+    },
+    {
+      "term": "Contrôle négatif",
+      "definition": "Condition spécifiée du modèle censée supprimer un effet ou révéler un échec ; la réussir ne constitue pas une validation empirique.",
+      "lesson": "spacetime"
+    }
+  ]
+}

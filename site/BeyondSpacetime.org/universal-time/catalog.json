@@ -1,0 +1,196 @@
+{
+  "schema": "beyondspacetime.universal-time.catalog.v1",
+  "version": "2.5.0",
+  "stance": "Universal temporal progression is postulated to be consistent everywhere; gravity, motion and environmental conditions can affect physical processes, not progression itself under the premise. No independently established absolute clock or simultaneity mechanism is claimed.",
+  "charter": [
+    "Time is constant.",
+    "Time does not physically exist; it is the “When.”"
+  ],
+  "records": [
+    {
+      "id": "dinner",
+      "title": "The dinner deadline: universal progression and local physical change",
+      "summary": "Two travelers share a departure and reunion event while clocks and biological processes accumulate different amounts of change in the stipulated universal-time model.",
+      "url": "/universal-time/dinner/",
+      "status": "Conditional thought experiment",
+      "foundations": [
+        "constant-time",
+        "when",
+        "spacetime"
+      ],
+      "gates": [
+        "A",
+        "D"
+      ],
+      "source": "https://arcsecs.com/read-scientific-paper/",
+      "keywords": "dinner absolute time clockless progression biological aging gravity velocity home clock"
+    },
+    {
+      "id": "benchmarks",
+      "title": "Measured atomic-clock differences: gravitational redshift benchmarks",
+      "summary": "Compare a published signed frequency-gradient measurement with the conventional prediction and a freely stipulated candidate multiplier. Keep observations distinct from interpretation.",
+      "url": "/universal-time/benchmarks/",
+      "status": "Published observation and conditional comparison",
+      "foundations": [
+        "constant-time",
+        "when"
+      ],
+      "gates": [
+        "A",
+        "D"
+      ],
+      "source": "https://pubmed.ncbi.nlm.nih.gov/37573452/",
+      "keywords": "atomic clock relativity gravitational redshift optical clock uncertainty NIST JILA Zheng"
+    },
+    {
+      "id": "rates",
+      "title": "Gravity, motion and physical process rates",
+      "summary": "Compare candidate transition and decay responses with a conventional weak-field clock reference while holding common progression fixed.",
+      "url": "/universal-time/rates/",
+      "status": "Conditional educational rate comparison",
+      "foundations": [
+        "constant-time",
+        "when",
+        "spacetime"
+      ],
+      "gates": [
+        "A",
+        "D"
+      ],
+      "source": "https://arcsecs.com/read-scientific-paper/",
+      "keywords": "atomic transition particle decay gravity velocity clock differential process rate"
+    },
+    {
+      "id": "synchronization",
+      "title": "Remote synchronization and the dinner deadline",
+      "summary": "Four-timestamp communication exchange illustrates asymmetric delay bias and a home-clock deadline without deriving global simultaneity.",
+      "url": "/universal-time/synchronization/",
+      "status": "Conditional timing control",
+      "foundations": [
+        "constant-time",
+        "when",
+        "separation"
+      ],
+      "gates": [
+        "A",
+        "D"
+      ],
+      "source": "https://arcsecs.com/read-scientific-paper/",
+      "keywords": "clock synchronization two way exchange asymmetric signal delay dinner causal ordering"
+    }
+  ],
+  "models": {
+    "dinner": {
+      "parameters": [
+        {
+          "key": "duration",
+          "label": "Home deadline, hours after noon",
+          "default": 6,
+          "min": 1,
+          "max": 24,
+          "step": 0.25
+        },
+        {
+          "key": "outbound_fraction",
+          "label": "Fraction of interval in first environment",
+          "default": 0.5,
+          "min": 0,
+          "max": 1,
+          "step": 0.05
+        },
+        {
+          "key": "clock_out",
+          "label": "First environment clock rate / home rate",
+          "default": 0.5,
+          "min": 0.05,
+          "max": 2,
+          "step": 0.05
+        },
+        {
+          "key": "clock_back",
+          "label": "Second environment clock rate / home rate",
+          "default": 0.5,
+          "min": 0.05,
+          "max": 2,
+          "step": 0.05
+        },
+        {
+          "key": "bio_out",
+          "label": "First environment biological process rate / reference",
+          "default": 0.5,
+          "min": 0.05,
+          "max": 2,
+          "step": 0.05
+        },
+        {
+          "key": "bio_back",
+          "label": "Second environment biological process rate / reference",
+          "default": 0.5,
+          "min": 0.05,
+          "max": 2,
+          "step": 0.05
+        }
+      ],
+      "limitation": "Universal progression and the reunion schedule are stipulated. Rates are illustrative independent inputs, not derived from gravity, velocity, or biology. No travel dynamics, remote synchronization or biological aging law is solved. The home deadline is operationally defined by a reference clock; both relativity and this model allow reunion with different accumulated clock readings.",
+      "source": "https://arcsecs.com/read-scientific-paper/"
+    },
+    "benchmark": {
+      "parameters": [
+        {
+          "key": "multiplier",
+          "label": "Candidate multiplier of published relativistic gradient",
+          "default": 1,
+          "min": -1,
+          "max": 3,
+          "step": 0.01
+        }
+      ],
+      "limitation": "The multiplier is a freely stipulated comparison, not an ArcSecs-derived prediction. Published statistical and systematic uncertainties are combined in quadrature solely as an illustrative scale assuming independence; the residual is not a p-value, a new fit, or a test of universal time itself. The sign follows the authors’ reported gradient convention.",
+      "source": "https://pubmed.ncbi.nlm.nih.gov/37573452/"
+    }
+  },
+  "observations": [
+    {
+      "id": "chou-2010",
+      "title": "Optical clocks and relativity",
+      "year": 2010,
+      "doi": "10.1126/science.1192720",
+      "url": "https://www.nist.gov/news-events/news/2010/09/nist-pair-aluminum-atomic-clocks-reveal-einsteins-relativity-personal-scale",
+      "summary": "Aluminum-ion optical clock comparisons resolved gravitational frequency differences for a 33 cm change in elevation, and motion-related frequency changes. This record supplies context, not a digitized measurement series.",
+      "kind": "published experimental context"
+    },
+    {
+      "id": "bothwell-2022",
+      "title": "Resolving the gravitational redshift across a millimetre-scale atomic sample",
+      "year": 2022,
+      "doi": "10.1038/s41586-021-04349-7",
+      "url": "https://www.nist.gov/publications/resolving-gravitational-redshift-across-millimetre-scale-atomic-sample",
+      "summary": "A frequency gradient was resolved within an ultracold strontium ensemble. The reported fractional frequency measurement uncertainty reached 7.6 × 10⁻²¹; this is a precision figure, not the measured gradient.",
+      "kind": "published measurement context",
+      "fractional_frequency_measurement_uncertainty": 7.6e-21
+    },
+    {
+      "id": "clock-network-2023",
+      "title": "A lab-based test of the gravitational redshift with a miniature clock network",
+      "year": 2023,
+      "doi": "10.1038/s41467-023-40629-8",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37573452/",
+      "summary": "The authors report a signed gradient of −12.4 ± 0.7 (statistical) ± 2.5 (systematic), in units of 10⁻¹⁹/cm, with a relativistic reference of −10.9 in the same units.",
+      "kind": "published numerical benchmark",
+      "unit": "10^-19/cm",
+      "measured": -12.4,
+      "statistical_uncertainty": 0.7,
+      "systematic_uncertainty": 2.5,
+      "reference": -10.9
+    }
+  ],
+  "additionalCalculations": {
+    "endpoint": "/universal-time/process-api/",
+    "openapi": "/universal-time/process-openapi.json",
+    "models": [
+      "rates",
+      "synchronization"
+    ],
+    "scope": "Separate conditional educational controls; original dinner and benchmark API remains unchanged."
+  }
+}

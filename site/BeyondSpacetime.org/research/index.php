@@ -1,0 +1,1 @@
+<?php declare(strict_types=1);if(!in_array(parse_url($_SERVER['REQUEST_URI']??'',PHP_URL_PATH),['/research/','/research/index.php'],true)){http_response_code(404);exit('Not found');}require __DIR__.'/_lib/site.php';\BSPResearch\workspace();

@@ -1,0 +1,31 @@
+BeyondSpacetime.org v1.4.0 — Scientific Evidence Explorer
+
+ADDITIVE RELEASE, not a full replacement website. No root homepage, favicon, existing video, or simulator is included or overwritten. The v1.2.0 root archive is not available in this session. The existing v1.3.0 foundations module is available separately and can optionally be installed together with this evidence module.
+
+INSTALL
+1. Back up the website, especially any existing evidence/ or foundations/ directory. Extract the ZIP contents directly into the existing domain document root. evidence/index.php must be in the real evidence/ directory. The optional cumulative ZIP adds foundations/ as well. Do not leave ZIPs in the public document root.
+2. PHP 8.1+ with JSON; Apache 2.4 with DirectoryIndex index.php, directory listing disabled and .htaccess access-control permitted. The existing root rewrite must pass actual files and directories through. For Nginx/custom routers, configure PHP index routing and deny /evidence/_lib/ (also /foundations/_lib/ when installed). Verify server configuration; do not expose PHP or test source.
+3. Verify /evidence/, /evidence/ledger/, /evidence/gates/, /evidence/workbench/escape/, /evidence/catalog.json. /evidence/_lib/ledger.json and /evidence/_lib/tests.php must return 403 or 404. Verify HTTPS and live external links.
+4. Add a navigation item Evidence Explorer -> /evidence/ in the existing root navigation template. In the old app/render.php array, add '/evidence/'=>'Evidence Explorer'. Keep /methods/ as the existing methods guide. Link the new center from the homepage, foundations, labs and agent guide. These root edits are NOT applied. In the cumulative package the foundations navigation adds an Evidence link only. Back up customized foundation pages before replacing them.
+5. Submit /evidence/sitemap.xml independently; optionally add Sitemap: https://beyondspacetime.org/evidence/sitemap.xml to the existing robots.txt output. The main sitemap and main catalog/llms.txt have not been modified. The evidence module has 33 indexable canonical pages, structured WebPage/BreadcrumbList data, and an openly accessible catalog. Filtered search pages are noindex. No indexing or model-training inclusion is guaranteed.
+
+MACHINE ACCESS
+GET /evidence/catalog.json — 26 curated records with source pages, status, gates, related foundations, workbench metadata and source PDF SHA-256.
+GET /evidence/api/ — request examples and parameter bounds.
+POST /evidence/api/ with Content-Type: application/json
+  {"record":"wall-crossing"}
+  {"workbench":"escape","parameters":{"ratio":4,"duration":12}}
+  {"workbench":"wall","parameters":{"loggap":-16,"ceiling":1.1}}
+  {"workbench":"anchors","parameters":{"percent":5}}
+AG-UI-shaped request:
+  {"threadId":"demo","runId":"run-1","messages":[],"state":{"workbench":"escape","parameters":{"ratio":4}}}
+Limited deterministic SSE sequence: RUN_STARTED, TEXT_MESSAGE_START, TEXT_MESSAGE_CONTENT, TEXT_MESSAGE_END, STATE_SNAPSHOT, RUN_FINISHED. Not a general LLM or a full protocol conformance claim. The older agent endpoint remains unchanged. Proxy buffering may affect streaming.
+
+SCIENCE
+Records are original educational summaries of Scientific Review 6.0 (2026-11-24), including its §17 evidence ledger, §16 acceptance gates and selected technical results. Source page numbers identify the supplied manuscript; URLs point to the existing ArcSecs paper reader, not verified section anchors. Reported external reference values are not independently rechecked in this release. No new empirical findings are claimed. The three numerical controls implement stated equations independently; they do not rerun the full original archive. No private .uai memory, manuscripts or book files are included. No new blanket rights declaration for other ArcSecs materials is made.
+
+LOCAL TESTS (from the root containing evidence/)
+php evidence/_lib/tests.php
+php -S 127.0.0.1:8124 evidence/_lib/dev-router.php
+In a second terminal: python3 evidence/_lib/http-test.py http://127.0.0.1:8124
+Python is only for optional tests, not production. Development router simulates private directory denial; production Apache/Nginx access controls, root integration, live links, accessibility/security/load audits and full AG-UI compatibility are unverified. Browser render harness used actual PHP HTML with inlined local assets, not direct live hosting.

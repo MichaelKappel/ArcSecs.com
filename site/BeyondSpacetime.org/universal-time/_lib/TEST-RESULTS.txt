@@ -1,0 +1,87 @@
+BeyondSpacetime.org v2.4.0 — Universal Time & Clock Benchmarks
+Local Apache 2.4.68 and PHP 8.4.24.
+New model checks: 567. New HTTP checks: 41. Museum regression: 427. Graph regression: 2557. Earlier scientific/geometry/offline/cache suites and independent scientific audit: 3008 checks. Total 6600 checks. Separate crawl: 177 canonical pages, 462 distinct internal targets, 355 fragment references, zero issues and zero failed links. 9 responsive renders, 6 sample-scrub checks, 12 exports. 227 PHP files syntax-checked in the cumulative source. All JavaScript files passed syntax. The initial Apache render detected a PHP function-name collision in chart rendering; fixed and rechecked complete HTML. No comprehensive re-run of all older module HTTP or interactive browser suites. Browser checks are isolated rendering of actual Apache responses, not actual production navigation. External source abstracts and institutional summaries retrieved; no raw measurement series or independent observational fit. Nature/PMC full text access restricted. No live installation, PWA reload, production performance, security or accessibility certification.
+Prior protected model/offline/lesson source files: 28/28 byte-identical.
+
+=== evidence/_lib/tests.php
+47 passed, 0 failed
+=== experiment-design/_lib/tests.php
+117 passed, 0 failed
+=== foundations/_lib/tests.php
+61 passed, 0 failed
+=== global/_lib/tests.php
+114 passed, 0 failed
+=== model-comparison/_lib/tests.php
+65 passed, 0 failed
+=== research/_lib/tests.php
+48 passed, 0 failed
+=== timeline/_lib/tests.php
+248 passed
+=== universal-time/_lib/tests.php
+567 passed, 0 failed
+=== museum/_lib/quality-science.php
+960 configurations; 1930 passed, 0 failed
+=== offline/_lib/test.js
+187 passed, 0 failed
+=== offline/_lib/sw-test.js
+8 passed, 0 failed
+=== offline/_lib/setup-test.js
+4 passed, 0 failed
+=== visualizations/_lib/geometry-test.js
+179 passed
+
+PASS /universal-time/ complete
+PASS /universal-time/ canonical
+PASS /universal-time/ CSP
+PASS /universal-time/ local JS
+PASS /universal-time/dinner/ complete
+PASS /universal-time/dinner/ canonical
+PASS /universal-time/dinner/ CSP
+PASS /universal-time/dinner/ local JS
+PASS /universal-time/benchmarks/ complete
+PASS /universal-time/benchmarks/ canonical
+PASS /universal-time/benchmarks/ CSP
+PASS /universal-time/benchmarks/ local JS
+PASS dinner form/API parity 
+PASS dinner source hash
+PASS dinner API not cached
+PASS dinner form/API parity duration=8&clock_out=0.5&clock_back=1&bio_out=0.25&bio_back=2
+PASS dinner source hash
+PASS dinner API not cached
+PASS dinner parameter variant noindex
+PASS benchmark form/API parity 
+PASS benchmark source hash
+PASS benchmark API not cached
+PASS benchmark form/API parity multiplier=0
+PASS benchmark source hash
+PASS benchmark API not cached
+PASS benchmark parameter variant noindex
+PASS reject ?model=bad
+PASS reject ?model=dinner&duration=0
+PASS reject ?model=dinner&clock_out%5B%5D=1
+PASS reject ?model=benchmark&multiplier=4
+PASS reject ?model%5B%5D=dinner
+PASS reject ?model=dinner&unknown=1
+PASS reject ?duration=3
+PASS invalid form status
+PASS read-only method
+PASS hidden file denied
+PASS internal model denied
+PASS unexpected path denied
+PASS catalog parity
+PASS museum record discovery
+PASS graph node discovery
+41 passed, 0 failed
+
+Museum: 427 passed, 0 failed; 177 distinct canonical sitemap pages
+Graph: 2557 passed, 0 failed
+Fragment references 355
+Pages 177 unique 177 targets 462 p50 1.58 p95 4.25
+issues 0
+
+link failures 0
+
+PASS viewport 390
+PASS viewport 768
+PASS viewport 1440
+9 responsive renders; 6 sample-scrub checks; 12 export checks passed

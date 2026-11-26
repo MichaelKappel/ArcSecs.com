@@ -1,0 +1,28 @@
+BeyondSpacetime.org v1.6.0 — Scientific Model Comparison Center
+
+INSTALLATION
+Recommended: BeyondSpacetime.org-v1.6.0-Cumulative-Add-On.zip. This contains the unchanged v1.5.0 cumulative release (98 files) plus model-comparison/. This is NOT a full root replacement: the original v1.2.0 root archive is not available. It does not replace the existing homepage, video, favicon, root menu, root sitemap or original 3D simulations. The smaller comparison-only archive requires the prior v1.5.0 Foundations, Evidence and Research modules. Back up the existing website; extract the selected ZIP contents directly into its document root. Do not leave the ZIP publicly accessible.
+
+PHP 8.1+ with JSON; no database, framework, external AI or additional runtime libraries. The comparison module reuses the existing foundation and evidence solver files through the research catalog and the existing research CSS/compass artwork. Existing Apache root rewrite rules must allow real directories and files. Enable DirectoryIndex index.php, Options -Indexes and Require all denied in each _lib directory. Nginx/custom hosting: explicitly deny /model-comparison/_lib/ and the previous three modules' _lib directories; route directory index.php through PHP. Verify internal file protection before public deployment. Use host HTTPS, body/resource limits, rate limiting, private PHP errors and logs outside the web root. Maximum JSON body 64 KiB, maximum 65 sweep samples; server may execute two solver cases per sample. Do not expose the local development server.
+
+INTEGRATION
+Add Model Comparison → /model-comparison/ in the existing root menu. Add relevant links from the homepage and earlier modules if desired; the earlier 98 files remain untouched. Submit /model-comparison/sitemap.xml or reference it in robots.txt; keep the previous sitemaps. Clean directory URLs, canonical metadata, Open Graph and breadcrumb JSON-LD are provided. Preset query and POST result pages are noindex. No claim of search placement, AI citation or training inclusion.
+
+ACCEPTANCE
+- /model-comparison/ renders a default photon comparison and seven selectable guided investigations. /model-comparison/protocol/ documents the interface. /model-comparison/catalog.json lists all 15 existing models and numeric metrics. The visible editor builds a JSON plan; raw JSON remains editable without JavaScript and POST recalculates the server-rendered results.
+- Candidate and reference may share the swept parameter (matched) or the reference can be held fixed. All 15 solvers support numeric single-metric sweeps. Different metric labels are permitted only for three explicitly defined same-model observable pairs with identical parameters: candidate/SR clock counts, minimum entry/strict maximum crossing drag, inferred/calibrated distance. No automatic cross-model comparison or observational fit is implemented.
+- Use 3–65 uniform samples, bounded start/end, probe center and half-width. Charts share the observable axis for both branches; the delta chart has a separate vertical scale. Delta is candidate minus reference. Probe values are calculated exactly; the interval may be clipped at sweep boundaries. Secant slope is null for zero width. This is deterministic sensitivity, not a confidence interval, uncertainty propagation, likelihood or statistical test. All model limits and source references are retained.
+- Export result JSON, numeric CSV or recipe JSON. Import a recipe or result: only the recipe is used, numerical outputs ignored; submit to recalculate. The API can additionally compare an expected digest. Hash matching verifies reproducibility in a matching PHP/source environment, not authenticity or physical truth. No empirical validation or scientific gate completion inferred.
+- GET /model-comparison/api/ returns catalog. POST JSON {"plan":<recipe>,"expected_sha256":<optional result digest>} returns {"result":...,"replay_match":...}. Invalid input 400, wrong method 405, unexpected solver failure 500. No new AG-UI endpoint: the v1.5.0 multi-case AG-UI workspace and event interface are preserved at /research/api/. No persistent sessions, accounts or external calls.
+- Test phone, tablet and desktop, actual form submission, downloads, import, keyboard navigation, production CSP, live links, and protected paths. The isolated browser test used actual PHP responses with local assets injected; real production navigation and hosting were not tested. Full accessibility, security, load and external link audits remain outstanding.
+
+LOCAL CHECKS
+From the extracted document root:
+  php foundations/_lib/tests.php
+  php evidence/_lib/tests.php
+  php research/_lib/tests.php
+  php model-comparison/_lib/tests.php
+  php -S 127.0.0.1:8156 model-comparison/_lib/dev-router.php
+From another terminal:
+  python3 model-comparison/_lib/http-test.py http://127.0.0.1:8156
+Python is used for optional tests, not the website. See TEST-RESULTS.txt for observed checks. The prior full root website cannot be regression-tested without its source archive.

@@ -1,0 +1,44 @@
+# Beyond Spacetime digital science museum
+
+> Original educational companion to ArcSecs. Premises, conditional mathematics, computational verification and empirical evidence are distinct. No claim of model-training inclusion or observational validation.
+
+## Unified discovery
+- [Museum](https://beyondspacetime.org/museum/)
+- [Search](https://beyondspacetime.org/museum/search/)
+- [Structured index](https://beyondspacetime.org/museum/catalog.json)
+- [Search API and guide](https://beyondspacetime.org/museum/guide/)
+- [Sitemap index](https://beyondspacetime.org/museum/sitemap-index.xml)
+
+## Existing scientific modules
+- [Foundations](https://beyondspacetime.org/foundations/catalog.json)
+- [Evidence](https://beyondspacetime.org/evidence/catalog.json)
+- [Research execution protocol](https://beyondspacetime.org/research/protocol/)
+- [Comparison models](https://beyondspacetime.org/model-comparison/catalog.json)
+- [Research history](https://beyondspacetime.org/timeline/catalog.json)
+- [Multilingual learning](https://beyondspacetime.org/global/catalog.json)
+- [Offline learning studio](https://beyondspacetime.org/offline/)
+
+- [Interactive visual science](https://beyondspacetime.org/visualizations/catalog.json)
+
+- [Semantic graph](https://beyondspacetime.org/knowledge-graph/)
+- [JSON-LD graph](https://beyondspacetime.org/knowledge-graph/graph.jsonld)
+- [Graph API description](https://beyondspacetime.org/knowledge-graph/openapi.json)
+
+- [Experiment design](https://beyondspacetime.org/experiment-design/)
+- [Protocol schema and catalog](https://beyondspacetime.org/experiment-design/catalog.json)
+- [Design API documentation](https://beyondspacetime.org/experiment-design/openapi.json)
+
+- [Universal time clarification](https://beyondspacetime.org/universal-time/)
+- [Dinner and clock benchmark catalog](https://beyondspacetime.org/universal-time/catalog.json)
+- [Read-only numerical API](https://beyondspacetime.org/universal-time/api/)
+
+- [Physical process-rate reference and candidate controls](https://beyondspacetime.org/universal-time/rates/)
+- [Remote synchronization and the dinner deadline](https://beyondspacetime.org/universal-time/synchronization/)
+- [Physical process calculation API](https://beyondspacetime.org/universal-time/process-api/)
+- [Physical process OpenAPI](https://beyondspacetime.org/universal-time/process-openapi.json)
+
+## Authoritative publication sources
+- [Book](https://arcsecs.com/read-book/)
+- [Scientific paper](https://arcsecs.com/read-scientific-paper/)
+- [Research repository](https://github.com/MichaelKappel/ArcSecs.com)
+- [Researcher ORCID](https://orcid.org/0009-0003-3889-1400)

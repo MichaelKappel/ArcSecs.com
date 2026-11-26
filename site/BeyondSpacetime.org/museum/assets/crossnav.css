@@ -1,0 +1,2 @@
+.museum-crossnav{border-block:1px solid #2b425b;background:#0b192a;color:#dcebf9;padding:.5rem 1rem;display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;justify-content:center;font: .82rem/1.5 system-ui,sans-serif}.museum-crossnav a{color:#91dcff;text-decoration:none;white-space:nowrap}.museum-crossnav a:hover,.museum-crossnav a:focus-visible{text-decoration:underline}.museum-crossnav a[aria-current]{color:#ffd086;font-weight:700}
+@media(max-width:650px){.museum-crossnav{justify-content:flex-start;gap:.45rem .8rem}}

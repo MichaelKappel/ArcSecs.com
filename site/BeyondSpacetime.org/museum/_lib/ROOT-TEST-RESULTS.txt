@@ -1,0 +1,2303 @@
+BeyondSpacetime.org v2.5.0 — Full Root Edition
+
+Test environment: local Apache 2.4, PHP 8.4.24, Node and isolated Chromium rendering.
+Regression suites: 4582 passing checks across 23 suites (each exit 0).
+New physical process and synchronization logic: 590 passing checks.
+New root deployment and physical-process HTTP tests: 94 passing checks.
+Museum integration: 432 passing checks.
+Semantic knowledge graph: 2587 passing checks.
+Total automated checks in these suites: 8285; counts refer to assertions, not independent experiments.
+Final canonical crawl: 180 unique pages, 467 local targets, 358 fragment references, zero issues and broken links.
+Browser: 18 isolated responsive renders at 390, 768 and 1440px; 12 sample scrubs, 24 JSON/CSV export checks. Actual PHP responses inlined for browser tests; live navigation and video playback were not tested. The new OpenAPI link was added after the browser run; final HTTP crawl includes it.
+Previous protected scientific solvers and offline public resources: 18 unchanged by SHA-256.
+No claim of empirical validation, full security/accessibility certification, production load test or actual PWA installation.
+Legacy v1.2.0 source was unavailable. This is a complete clean-root installation of the recoverable modules, not an exact restoration of original WebGL scenes or old PHP laboratory APIs. Compatibility redirects provide modern alternatives for selected old page paths; old query contracts are not preserved.
+
+FINAL CRAWL
+Fragment references 358
+Pages 180 unique 180 targets 467 p50 1.41 p95 3.17
+issues 0
+
+link failures 0
+
+
+NEW ROOT/PROCESS HTTP
+PASS actual root homepage
+PASS root opt-in video
+PASS root compass favicon
+PASS root index canonical redirect
+PASS root HEAD
+PASS root method restriction
+PASS root query noindex
+PASS valid ICO
+PASS form/API parity rates 
+PASS solver source hash
+PASS CSP
+PASS API no store
+PASS form/API parity rates speed=0&height=0
+PASS solver source hash
+PASS CSP
+PASS API no store
+PASS parameter variant noindex and no-store
+PASS form/API parity rates height=100&alpha_a=2
+PASS solver source hash
+PASS CSP
+PASS API no store
+PASS parameter variant noindex and no-store
+PASS form/API parity synchronization 
+PASS solver source hash
+PASS CSP
+PASS API no store
+PASS form/API parity synchronization outbound=5&return=5
+PASS solver source hash
+PASS CSP
+PASS API no store
+PASS parameter variant noindex and no-store
+PASS form/API parity synchronization deadline=1&outbound=10&return=10
+PASS solver source hash
+PASS CSP
+PASS API no store
+PASS parameter variant noindex and no-store
+PASS reject model=bad
+PASS reject model=rates&speed=-1
+PASS reject model=rates&alpha_a%5B%5D=1
+PASS reject model=synchronization&return=3601
+PASS reject model%5B%5D=rates
+PASS reject model=rates&unknown=1
+PASS reject speed=3
+PASS read only API
+PASS invalid form
+PASS protected process solver
+PASS protected tests
+PASS protected root config
+PASS compatibility /learn
+PASS compatibility destination /foundations/
+PASS compatibility /atlas
+PASS compatibility destination /knowledge-graph/
+PASS compatibility /concepts
+PASS compatibility destination /foundations/
+PASS compatibility /labs
+PASS compatibility destination /visualizations/
+PASS compatibility /explore
+PASS compatibility destination /visualizations/
+PASS compatibility /agents
+PASS compatibility destination /research/protocol/
+PASS compatibility /compare
+PASS compatibility destination /model-comparison/
+PASS compatibility /methods
+PASS compatibility destination /evidence/gates/
+PASS compatibility /glossary
+PASS compatibility destination /global/en/glossary/
+PASS compatibility /about
+PASS compatibility destination /museum/guide/
+PASS compatibility /explore/photon
+PASS compatibility destination /visualizations/photon/
+PASS compatibility /explore/bubbles
+PASS compatibility destination /visualizations/cosmic-domains/
+PASS compatibility /explore/hot-big-bang
+PASS compatibility destination /visualizations/cosmic-age/
+PASS compatibility /labs/photon-aging
+PASS compatibility destination /visualizations/photon/
+PASS compatibility /labs/clocks
+PASS compatibility destination /visualizations/clocks/
+PASS compatibility /labs/escape
+PASS compatibility destination /evidence/workbench/escape/
+PASS compatibility /concepts/photon-mass
+PASS compatibility destination /foundations/photon-mass/
+PASS compatibility /concepts/clocks
+PASS compatibility destination /universal-time/
+PASS compatibility /concepts/light-history
+PASS compatibility destination /visualizations/photon/
+PASS compatibility /concepts/cosmic-evolution
+PASS compatibility destination /visualizations/cosmic-age/
+PASS compatibility /concepts/bubble-universes
+PASS compatibility destination /visualizations/cosmic-domains/
+PASS compatibility /concepts/distances
+PASS compatibility destination /foundations/distance-inference/
+PASS compatibility /concepts/evidence
+PASS compatibility destination /evidence/
+94 passed, 0 failed
+
+BROWSER
+PASS viewport 390
+PASS viewport 768
+PASS viewport 1440
+18 responsive renders; 12 sample-scrub checks; 24 export checks passed
+
+REGRESSION OUTPUT
+=== evidence/_lib/tests.php
+PASS source and relation charter
+PASS source and relation ceiling
+PASS source and relation common-field
+PASS source and relation finite-source
+PASS source and relation recession-law
+PASS source and relation coupled-modes
+PASS source and relation moving-endpoints
+PASS source and relation causal-reach
+PASS source and relation optical-map
+PASS source and relation shell-void
+PASS source and relation fixed-gap-drag
+PASS source and relation wall-bound
+PASS source and relation wall-crossing
+PASS source and relation history-coordinate
+PASS source and relation bounded-flow
+PASS source and relation contact-scattering
+PASS source and relation wall-certificate
+PASS source and relation anchor-lmc
+PASS source and relation anchor-ngc
+PASS source and relation finite-range
+PASS source and relation phase-match
+PASS source and relation escape-criterion
+PASS source and relation escape-verification
+PASS source and relation regression-137
+PASS source and relation multimessenger
+PASS source and relation joint-fit
+PASS escape conservation 0
+PASS escape conservation 1
+PASS escape conservation 2
+PASS escape conservation 3.999999
+PASS escape conservation 4
+PASS escape conservation 4.000001
+PASS escape conservation 8
+PASS escape conservation 16
+PASS zero escape exact null
+PASS underdamped derivative reversal
+PASS critical analytic solution
+PASS wall review reference
+PASS wall tiny gap bound
+PASS anchor review reference
+PASS anchor zero shift
+PASS finite rows escape
+PASS reject malformed parameters escape
+PASS finite rows wall
+PASS reject malformed parameters wall
+PASS finite rows anchors
+PASS reject malformed parameters anchors
+47 passed, 0 failed
+EXIT=0
+=== experiment-design/_lib/tests.php
+PASS photon deterministic seal
+PASS photon deterministic result
+PASS photon illustrative criteria met
+PASS photon controls
+PASS photon seal digest
+PASS photon result digest
+PASS photon exact solver parity case 1
+PASS photon exact solver parity case 2
+PASS photon exact solver parity case 3
+PASS photon exact solver parity case 4
+PASS photon preserved reference
+PASS escape deterministic seal
+PASS escape deterministic result
+PASS escape illustrative criteria met
+PASS escape controls
+PASS escape seal digest
+PASS escape result digest
+PASS escape exact solver parity case 1
+PASS escape exact solver parity case 2
+PASS escape exact solver parity case 3
+PASS escape exact solver parity case 4
+PASS escape preserved reference
+PASS timing deterministic seal
+PASS timing deterministic result
+PASS timing illustrative criteria met
+PASS timing controls
+PASS timing seal digest
+PASS timing result digest
+PASS timing exact solver parity case 1
+PASS timing exact solver parity case 2
+PASS timing exact solver parity case 3
+PASS timing exact solver parity case 4
+PASS timing preserved reference
+PASS distance deterministic seal
+PASS distance deterministic result
+PASS distance illustrative criteria met
+PASS distance controls
+PASS distance seal digest
+PASS distance result digest
+PASS distance exact solver parity case 1
+PASS distance exact solver parity case 2
+PASS distance exact solver parity case 3
+PASS distance exact solver parity case 4
+PASS distance preserved reference
+PASS geometry deterministic seal
+PASS geometry deterministic result
+PASS geometry illustrative criteria met
+PASS geometry controls
+PASS geometry seal digest
+PASS geometry result digest
+PASS geometry exact solver parity case 1
+PASS geometry exact solver parity case 2
+PASS geometry exact solver parity case 3
+PASS geometry exact solver parity case 4
+PASS geometry preserved reference
+PASS foundation:photon-mass supports four cases
+PASS foundation:photon-mass finite effect
+PASS foundation:constant-time supports four cases
+PASS foundation:constant-time finite effect
+PASS foundation:light-slowing supports four cases
+PASS foundation:light-slowing finite effect
+PASS foundation:when supports four cases
+PASS foundation:when finite effect
+PASS foundation:where supports four cases
+PASS foundation:where finite effect
+PASS foundation:physical-existence supports four cases
+PASS foundation:physical-existence finite effect
+PASS foundation:spacetime supports four cases
+PASS foundation:spacetime finite effect
+PASS foundation:fastest-signal supports four cases
+PASS foundation:fastest-signal finite effect
+PASS foundation:separation supports four cases
+PASS foundation:separation finite effect
+PASS foundation:cosmic-size supports four cases
+PASS foundation:cosmic-size finite effect
+PASS foundation:cosmic-age supports four cases
+PASS foundation:cosmic-age finite effect
+PASS foundation:distance-inference supports four cases
+PASS foundation:distance-inference finite effect
+PASS evidence:escape supports four cases
+PASS evidence:escape finite effect
+PASS evidence:wall supports four cases
+PASS evidence:wall finite effect
+PASS evidence:anchors supports four cases
+PASS evidence:anchors finite effect
+PASS candidate rejection
+PASS inconclusive interval
+PASS negative control precedence
+PASS positive control precedence
+PASS bound included in controls
+PASS edited sealed protocol rejected
+PASS forged provenance rejected
+PASS forged seal rejected
+PASS invalid model
+PASS invalid variable
+PASS invalid metric
+PASS invalid direction
+PASS invalid schema
+PASS negative support
+PASS negative reject
+PASS negative negative_tolerance
+PASS negative positive_minimum
+PASS nonfinite numerical
+PASS nonfinite calibration
+PASS nonfinite other
+PASS overlapping criteria
+PASS candidate confounder
+PASS positive duplicates candidate
+PASS negative changes primary variable
+PASS candidate no change
+PASS missing question
+PASS unknown evidence
+PASS unknown gate
+PASS unknown protocol field
+PASS numeric string rejected
+PASS bound exceeded
+PASS control character
+117 passed, 0 failed
+EXIT=0
+=== foundations/_lib/tests.php
+PASS photon-mass default schema and finite values
+PASS photon-mass all parameter corners
+PASS photon-mass rejects unknown, null and out of range
+PASS photon-mass reference case
+PASS constant-time default schema and finite values
+PASS constant-time all parameter corners
+PASS constant-time rejects unknown, null and out of range
+PASS constant-time reference case
+PASS light-slowing default schema and finite values
+PASS light-slowing all parameter corners
+PASS light-slowing rejects unknown, null and out of range
+PASS light-slowing reference case
+PASS when default schema and finite values
+PASS when all parameter corners
+PASS when rejects unknown, null and out of range
+PASS when reference case
+PASS where default schema and finite values
+PASS where all parameter corners
+PASS where rejects unknown, null and out of range
+PASS where reference case
+PASS physical-existence default schema and finite values
+PASS physical-existence all parameter corners
+PASS physical-existence rejects unknown, null and out of range
+PASS physical-existence reference case
+PASS spacetime default schema and finite values
+PASS spacetime all parameter corners
+PASS spacetime rejects unknown, null and out of range
+PASS spacetime reference case
+PASS fastest-signal default schema and finite values
+PASS fastest-signal all parameter corners
+PASS fastest-signal rejects unknown, null and out of range
+PASS fastest-signal reference case
+PASS separation default schema and finite values
+PASS separation all parameter corners
+PASS separation rejects unknown, null and out of range
+PASS separation reference case
+PASS cosmic-size default schema and finite values
+PASS cosmic-size all parameter corners
+PASS cosmic-size rejects unknown, null and out of range
+PASS cosmic-size reference case
+PASS cosmic-age default schema and finite values
+PASS cosmic-age all parameter corners
+PASS cosmic-age rejects unknown, null and out of range
+PASS cosmic-age reference case
+PASS distance-inference default schema and finite values
+PASS distance-inference all parameter corners
+PASS distance-inference rejects unknown, null and out of range
+PASS distance-inference reference case
+PASS zero-gap massless reference
+PASS clock SR 0.6c factor
+PASS massless drag speed and transfer ledger
+PASS stationary pulse interval
+PASS origin invariance
+PASS two-photon parallel and opposite
+PASS SR proper time at 0.8c
+PASS equal-speed arrival null
+PASS separation and local relative velocity distinct
+PASS finite reach and accessible volume
+PASS matter-Lambda age inverse H0
+PASS distance bias signed and null
+PASS twelve exact-numbered charter records
+61 passed, 0 failed
+EXIT=0
+=== global/_lib/tests.php
+PASS en coverage
+PASS en photon-mass localized metadata and numeric identity
+PASS en photon-mass control and parameter endpoints
+PASS en photon-mass invalid input
+PASS en constant-time localized metadata and numeric identity
+PASS en constant-time control and parameter endpoints
+PASS en constant-time invalid input
+PASS en light-slowing localized metadata and numeric identity
+PASS en light-slowing control and parameter endpoints
+PASS en light-slowing invalid input
+PASS en when localized metadata and numeric identity
+PASS en when control and parameter endpoints
+PASS en when invalid input
+PASS en where localized metadata and numeric identity
+PASS en where control and parameter endpoints
+PASS en where invalid input
+PASS en physical-existence localized metadata and numeric identity
+PASS en physical-existence control and parameter endpoints
+PASS en physical-existence invalid input
+PASS en spacetime localized metadata and numeric identity
+PASS en spacetime control and parameter endpoints
+PASS en spacetime invalid input
+PASS en fastest-signal localized metadata and numeric identity
+PASS en fastest-signal control and parameter endpoints
+PASS en fastest-signal invalid input
+PASS en separation localized metadata and numeric identity
+PASS en separation control and parameter endpoints
+PASS en separation invalid input
+PASS en cosmic-size localized metadata and numeric identity
+PASS en cosmic-size control and parameter endpoints
+PASS en cosmic-size invalid input
+PASS en cosmic-age localized metadata and numeric identity
+PASS en cosmic-age control and parameter endpoints
+PASS en cosmic-age invalid input
+PASS en distance-inference localized metadata and numeric identity
+PASS en distance-inference control and parameter endpoints
+PASS en distance-inference invalid input
+PASS es coverage
+PASS es photon-mass localized metadata and numeric identity
+PASS es photon-mass control and parameter endpoints
+PASS es photon-mass invalid input
+PASS es constant-time localized metadata and numeric identity
+PASS es constant-time control and parameter endpoints
+PASS es constant-time invalid input
+PASS es light-slowing localized metadata and numeric identity
+PASS es light-slowing control and parameter endpoints
+PASS es light-slowing invalid input
+PASS es when localized metadata and numeric identity
+PASS es when control and parameter endpoints
+PASS es when invalid input
+PASS es where localized metadata and numeric identity
+PASS es where control and parameter endpoints
+PASS es where invalid input
+PASS es physical-existence localized metadata and numeric identity
+PASS es physical-existence control and parameter endpoints
+PASS es physical-existence invalid input
+PASS es spacetime localized metadata and numeric identity
+PASS es spacetime control and parameter endpoints
+PASS es spacetime invalid input
+PASS es fastest-signal localized metadata and numeric identity
+PASS es fastest-signal control and parameter endpoints
+PASS es fastest-signal invalid input
+PASS es separation localized metadata and numeric identity
+PASS es separation control and parameter endpoints
+PASS es separation invalid input
+PASS es cosmic-size localized metadata and numeric identity
+PASS es cosmic-size control and parameter endpoints
+PASS es cosmic-size invalid input
+PASS es cosmic-age localized metadata and numeric identity
+PASS es cosmic-age control and parameter endpoints
+PASS es cosmic-age invalid input
+PASS es distance-inference localized metadata and numeric identity
+PASS es distance-inference control and parameter endpoints
+PASS es distance-inference invalid input
+PASS fr coverage
+PASS fr photon-mass localized metadata and numeric identity
+PASS fr photon-mass control and parameter endpoints
+PASS fr photon-mass invalid input
+PASS fr constant-time localized metadata and numeric identity
+PASS fr constant-time control and parameter endpoints
+PASS fr constant-time invalid input
+PASS fr light-slowing localized metadata and numeric identity
+PASS fr light-slowing control and parameter endpoints
+PASS fr light-slowing invalid input
+PASS fr when localized metadata and numeric identity
+PASS fr when control and parameter endpoints
+PASS fr when invalid input
+PASS fr where localized metadata and numeric identity
+PASS fr where control and parameter endpoints
+PASS fr where invalid input
+PASS fr physical-existence localized metadata and numeric identity
+PASS fr physical-existence control and parameter endpoints
+PASS fr physical-existence invalid input
+PASS fr spacetime localized metadata and numeric identity
+PASS fr spacetime control and parameter endpoints
+PASS fr spacetime invalid input
+PASS fr fastest-signal localized metadata and numeric identity
+PASS fr fastest-signal control and parameter endpoints
+PASS fr fastest-signal invalid input
+PASS fr separation localized metadata and numeric identity
+PASS fr separation control and parameter endpoints
+PASS fr separation invalid input
+PASS fr cosmic-size localized metadata and numeric identity
+PASS fr cosmic-size control and parameter endpoints
+PASS fr cosmic-size invalid input
+PASS fr cosmic-age localized metadata and numeric identity
+PASS fr cosmic-age control and parameter endpoints
+PASS fr cosmic-age invalid input
+PASS fr distance-inference localized metadata and numeric identity
+PASS fr distance-inference control and parameter endpoints
+PASS fr distance-inference invalid input
+PASS English charter exact
+PASS Unsupported language rejected
+PASS Unsupported model rejected
+114 passed, 0 failed
+EXIT=0
+=== model-comparison/_lib/tests.php
+PASS preset light
+PASS preset clocks
+PASS preset escape
+PASS preset wall
+PASS preset distance
+PASS preset age
+PASS preset anchors
+PASS all-model sweep foundation:photon-mass gap
+PASS all-model sweep foundation:constant-time rate
+PASS all-model sweep foundation:constant-time beta
+PASS all-model sweep foundation:constant-time duration
+PASS all-model sweep foundation:constant-time ratio
+PASS all-model sweep foundation:light-slowing gap
+PASS all-model sweep foundation:light-slowing drag
+PASS all-model sweep foundation:light-slowing duration
+PASS all-model sweep foundation:when period
+PASS all-model sweep foundation:when delay
+PASS all-model sweep foundation:where dx
+PASS all-model sweep foundation:where dy
+PASS all-model sweep foundation:where shift
+PASS all-model sweep foundation:physical-existence energy
+PASS all-model sweep foundation:physical-existence angle
+PASS all-model sweep foundation:spacetime beta
+PASS all-model sweep foundation:spacetime duration
+PASS all-model sweep foundation:fastest-signal fraction
+PASS all-model sweep foundation:fastest-signal distance
+PASS all-model sweep foundation:separation beta
+PASS all-model sweep foundation:cosmic-size reach
+PASS all-model sweep foundation:cosmic-size domain
+PASS all-model sweep foundation:cosmic-age h0
+PASS all-model sweep foundation:cosmic-age matter
+PASS all-model sweep foundation:distance-inference actual
+PASS all-model sweep foundation:distance-inference extinction
+PASS all-model sweep evidence:escape ratio
+PASS all-model sweep evidence:escape duration
+PASS all-model sweep evidence:wall loggap
+PASS all-model sweep evidence:wall ceiling
+PASS all-model sweep evidence:anchors percent
+PASS massless group speed stays unity
+PASS clock pair exact rest and speed response
+PASS escape fixed comparator unchanged
+PASS wall illustrative conflict
+PASS distance signed bias
+PASS anchor zero reference
+PASS zero probe width yields null slope
+PASS clipped probe
+PASS max samples
+PASS reject schema
+PASS reject model
+PASS reject parameter
+PASS reject start
+PASS reject end
+PASS reject samples
+PASS reject metric
+PASS reject reference_metric
+PASS reject reference_mode
+PASS reject probe
+PASS reject half_width
+PASS reject candidate
+PASS reject reference
+PASS reject fake_results
+PASS reject descending range
+PASS reject paired metric unequal inputs
+PASS reject paired metric fixed comparator
+PASS reject categorical metric
+65 passed, 0 failed
+EXIT=0
+=== research/_lib/tests.php
+PASS native solver parity foundation:photon-mass
+PASS native solver parity foundation:constant-time
+PASS native solver parity foundation:light-slowing
+PASS native solver parity foundation:when
+PASS native solver parity foundation:where
+PASS native solver parity foundation:physical-existence
+PASS native solver parity foundation:spacetime
+PASS native solver parity foundation:fastest-signal
+PASS native solver parity foundation:separation
+PASS native solver parity foundation:cosmic-size
+PASS native solver parity foundation:cosmic-age
+PASS native solver parity foundation:distance-inference
+PASS native solver parity evidence:escape
+PASS native solver parity evidence:wall
+PASS native solver parity evidence:anchors
+PASS preset deterministic light
+PASS preset deterministic escape
+PASS preset deterministic wall
+PASS preset deterministic distances
+PASS preset deterministic clocks
+PASS normalize default parameters and evidence ordering
+PASS only same-model differences
+PASS numeric delta and categorical omission
+PASS critical escape versus reversible null
+PASS wall conflict not hidden
+PASS auto linked records and gates retain source status
+PASS provenance source hashes
+PASS one to eight cases allowed
+PASS step callback exact order
+PASS reject wrong schema
+PASS reject wrong title
+PASS reject wrong question
+PASS reject wrong cases
+PASS reject wrong evidence
+PASS reject unknown model
+PASS reject unknown parameter
+PASS reject null parameter
+PASS reject string numeric
+PASS reject outside bounds
+PASS reject nine cases
+PASS reject empty cases
+PASS reject forged results
+PASS reject unknown evidence
+PASS reject object evidence
+PASS reject control characters
+PASS reject oversize title
+PASS reject invalid case label
+PASS reject list parameters
+48 passed, 0 failed
+EXIT=0
+=== timeline/_lib/tests.php
+PASS 61 unique IDs
+PASS 41 report records
+PASS 6 editions
+PASS 7 reference records
+PASS 7 milestones
+PASS numbered archive sequence
+PASS combined filter
+PASS empty filter
+PASS obstructions retained
+PASS comparison stable order
+PASS duplicate comparison rejected
+PASS invalid comparison rejected
+PASS invalid track rejected
+PASS long search rejected
+PASS array search rejected
+PASS invalid status rejected
+PASS first archive boundary
+PASS last archive boundary
+PASS schema r01
+PASS date policy r01
+PASS related route r01 /evidence/ledger/ceiling/
+PASS related route r01 /foundations/photon-mass/
+PASS schema r02
+PASS date policy r02
+PASS related route r02 /evidence/ledger/moving-endpoints/
+PASS related route r02 /foundations/constant-time/
+PASS schema r03
+PASS date policy r03
+PASS related route r03 /evidence/ledger/anchor-lmc/
+PASS related route r03 /foundations/cosmic-age/
+PASS schema r04
+PASS date policy r04
+PASS related route r04 /evidence/ledger/contact-scattering/
+PASS related route r04 /foundations/light-slowing/
+PASS schema r05
+PASS date policy r05
+PASS related route r05 /evidence/ledger/common-field/
+PASS related route r05 /foundations/spacetime/
+PASS schema r06
+PASS date policy r06
+PASS related route r06 /evidence/ledger/joint-fit/
+PASS related route r06 /foundations/physical-existence/
+PASS schema r07
+PASS date policy r07
+PASS related route r07 /evidence/ledger/shell-void/
+PASS related route r07 /foundations/cosmic-size/
+PASS schema r08
+PASS date policy r08
+PASS related route r08 /evidence/ledger/causal-reach/
+PASS related route r08 /foundations/cosmic-age/
+PASS schema r09
+PASS date policy r09
+PASS related route r09 /evidence/ledger/joint-fit/
+PASS related route r09 /foundations/cosmic-size/
+PASS schema r10
+PASS date policy r10
+PASS related route r10 /evidence/ledger/regression-137/
+PASS related route r10 /foundations/light-slowing/
+PASS schema r11
+PASS date policy r11
+PASS related route r11 /evidence/ledger/causal-reach/
+PASS related route r11 /foundations/separation/
+PASS schema r12
+PASS date policy r12
+PASS related route r12 /evidence/ledger/joint-fit/
+PASS related route r12 /foundations/spacetime/
+PASS schema r13
+PASS date policy r13
+PASS related route r13 /evidence/ledger/optical-map/
+PASS related route r13 /foundations/distance-inference/
+PASS schema r14
+PASS date policy r14
+PASS related route r14 /evidence/ledger/fixed-gap-drag/
+PASS related route r14 /foundations/light-slowing/
+PASS schema r15
+PASS date policy r15
+PASS related route r15 /evidence/ledger/common-field/
+PASS related route r15 /foundations/separation/
+PASS schema r16
+PASS date policy r16
+PASS related route r16 /evidence/ledger/charter/
+PASS schema r17
+PASS date policy r17
+PASS related route r17 /evidence/ledger/causal-reach/
+PASS related route r17 /foundations/fastest-signal/
+PASS schema r18
+PASS date policy r18
+PASS related route r18 /evidence/ledger/optical-map/
+PASS related route r18 /foundations/distance-inference/
+PASS schema r19
+PASS date policy r19
+PASS related route r19 /evidence/ledger/joint-fit/
+PASS related route r19 /foundations/light-slowing/
+PASS schema r20
+PASS date policy r20
+PASS related route r20 /evidence/ledger/joint-fit/
+PASS related route r20 /foundations/physical-existence/
+PASS schema r21
+PASS date policy r21
+PASS related route r21 /evidence/ledger/optical-map/
+PASS related route r21 /foundations/light-slowing/
+PASS schema r22
+PASS date policy r22
+PASS related route r22 /evidence/ledger/regression-137/
+PASS related route r22 /foundations/light-slowing/
+PASS schema r23
+PASS date policy r23
+PASS related route r23 /evidence/ledger/ceiling/
+PASS related route r23 /foundations/fastest-signal/
+PASS schema r24
+PASS date policy r24
+PASS related route r24 /evidence/ledger/joint-fit/
+PASS related route r24 /foundations/spacetime/
+PASS schema r25
+PASS date policy r25
+PASS related route r25 /evidence/ledger/causal-reach/
+PASS related route r25 /foundations/spacetime/
+PASS schema r26
+PASS date policy r26
+PASS related route r26 /evidence/ledger/moving-endpoints/
+PASS related route r26 /foundations/constant-time/
+PASS schema r27
+PASS date policy r27
+PASS related route r27 /evidence/ledger/anchor-ngc/
+PASS related route r27 /foundations/distance-inference/
+PASS schema r28
+PASS date policy r28
+PASS related route r28 /evidence/ledger/causal-reach/
+PASS related route r28 /foundations/separation/
+PASS schema r29
+PASS date policy r29
+PASS related route r29 /evidence/ledger/moving-endpoints/
+PASS related route r29 /foundations/constant-time/
+PASS schema r30
+PASS date policy r30
+PASS related route r30 /evidence/ledger/ceiling/
+PASS related route r30 /foundations/photon-mass/
+PASS schema r31
+PASS date policy r31
+PASS related route r31 /evidence/ledger/multimessenger/
+PASS related route r31 /foundations/photon-mass/
+PASS schema r32
+PASS date policy r32
+PASS related route r32 /evidence/ledger/anchor-lmc/
+PASS related route r32 /foundations/cosmic-age/
+PASS schema r33
+PASS date policy r33
+PASS related route r33 /evidence/ledger/joint-fit/
+PASS related route r33 /foundations/cosmic-size/
+PASS schema r34
+PASS date policy r34
+PASS related route r34 /evidence/ledger/shell-void/
+PASS related route r34 /foundations/cosmic-size/
+PASS schema r35
+PASS date policy r35
+PASS related route r35 /evidence/ledger/common-field/
+PASS related route r35 /foundations/spacetime/
+PASS schema r36
+PASS date policy r36
+PASS related route r36 /evidence/ledger/optical-map/
+PASS related route r36 /foundations/light-slowing/
+PASS schema r37
+PASS date policy r37
+PASS related route r37 /evidence/ledger/joint-fit/
+PASS related route r37 /foundations/physical-existence/
+PASS schema r38
+PASS date policy r38
+PASS related route r38 /evidence/ledger/charter/
+PASS related route r38 /foundations/spacetime/
+PASS schema r39
+PASS date policy r39
+PASS related route r39 /evidence/ledger/finite-source/
+PASS related route r39 /foundations/photon-mass/
+PASS schema r40
+PASS date policy r40
+PASS related route r40 /evidence/ledger/causal-reach/
+PASS related route r40 /foundations/separation/
+PASS schema r41
+PASS date policy r41
+PASS related route r41 /evidence/ledger/causal-reach/
+PASS related route r41 /foundations/cosmic-size/
+PASS schema review-1
+PASS date policy review-1
+PASS related route review-1 /evidence/ledger/charter/
+PASS schema review-2
+PASS date policy review-2
+PASS related route review-2 /evidence/ledger/wall-bound/
+PASS schema review-3
+PASS date policy review-3
+PASS related route review-3 /evidence/ledger/history-coordinate/
+PASS schema review-4
+PASS date policy review-4
+PASS related route review-4 /evidence/ledger/coupled-modes/
+PASS schema review-5
+PASS date policy review-5
+PASS related route review-5 /evidence/ledger/wall-certificate/
+PASS schema review-6
+PASS date policy review-6
+PASS related route review-6 /evidence/ledger/escape-criterion/
+PASS schema sciama-1953
+PASS date policy sciama-1953
+PASS related route sciama-1953 /evidence/ledger/common-field/
+PASS schema photon-review-2005
+PASS date policy photon-review-2005
+PASS related route photon-review-2005 /evidence/ledger/ceiling/
+PASS schema vortices-2007
+PASS date policy vortices-2007
+PASS related route vortices-2007 /evidence/ledger/ceiling/
+PASS schema lorentz-2015
+PASS date policy lorentz-2015
+PASS related route lorentz-2015 /evidence/ledger/ceiling/
+PASS schema multimessenger-2017
+PASS date policy multimessenger-2017
+PASS related route multimessenger-2017 /evidence/ledger/multimessenger/
+PASS schema lmc-2019
+PASS date policy lmc-2019
+PASS related route lmc-2019 /evidence/ledger/anchor-lmc/
+PASS schema supernovae-2024
+PASS date policy supernovae-2024
+PASS related route supernovae-2024 /evidence/ledger/optical-map/
+PASS schema wall-conflict
+PASS date policy wall-conflict
+PASS related route wall-conflict /evidence/ledger/wall-bound/
+PASS related route wall-conflict /timeline/record/review-2/
+PASS schema capacity-recoil
+PASS date policy capacity-recoil
+PASS related route capacity-recoil /evidence/ledger/history-coordinate/
+PASS related route capacity-recoil /timeline/record/review-3/
+PASS schema static-certificate
+PASS date policy static-certificate
+PASS related route static-certificate /evidence/ledger/wall-certificate/
+PASS related route static-certificate /timeline/record/review-5/
+PASS schema finite-range-obstruction
+PASS date policy finite-range-obstruction
+PASS related route finite-range-obstruction /evidence/ledger/finite-range/
+PASS related route finite-range-obstruction /timeline/record/review-6/
+PASS schema phase-matched
+PASS date policy phase-matched
+PASS related route phase-matched /evidence/ledger/phase-match/
+PASS related route phase-matched /timeline/record/review-6/
+PASS schema escape-threshold
+PASS date policy escape-threshold
+PASS related route escape-threshold /evidence/ledger/escape-criterion/
+PASS related route escape-threshold /timeline/record/review-6/
+PASS schema forward-regression
+PASS date policy forward-regression
+PASS related route forward-regression /evidence/ledger/regression-137/
+PASS related route forward-regression /timeline/record/review-6/
+248 passed
+EXIT=0
+=== universal-time/_lib/tests.php
+567 passed, 0 failed
+EXIT=0
+=== museum/_lib/quality-science.php
+Checked 64 bounded configurations: foundation:photon-mass
+Checked 64 bounded configurations: foundation:constant-time
+Checked 64 bounded configurations: foundation:light-slowing
+Checked 64 bounded configurations: foundation:when
+Checked 64 bounded configurations: foundation:where
+Checked 64 bounded configurations: foundation:physical-existence
+Checked 64 bounded configurations: foundation:spacetime
+Checked 64 bounded configurations: foundation:fastest-signal
+Checked 64 bounded configurations: foundation:separation
+Checked 64 bounded configurations: foundation:cosmic-size
+Checked 64 bounded configurations: foundation:cosmic-age
+Checked 64 bounded configurations: foundation:distance-inference
+Checked 64 bounded configurations: evidence:escape
+Checked 64 bounded configurations: evidence:wall
+Checked 64 bounded configurations: evidence:anchors
+RK4 ratio 0 max absolute population difference 3.8458125573015E-12
+RK4 ratio 1 max absolute population difference 4.9704684812468E-13
+RK4 ratio 3.999999 max absolute population difference 6.4170890823334E-13
+RK4 ratio 4 max absolute population difference 6.4126481902349E-13
+RK4 ratio 4.000001 max absolute population difference 6.4637184493677E-13
+RK4 ratio 8 max absolute population difference 3.5266234377218E-12
+RK4 ratio 16 max absolute population difference 1.5232481942462E-11
+960 configurations; 1930 passed, 0 failed
+EXIT=0
+=== offline/_lib/test.js
+PASS PHP/JS parity photon-mass 0
+PASS PHP/JS parity photon-mass 1
+PASS PHP/JS parity photon-mass 2
+PASS PHP/JS parity photon-mass 3
+PASS PHP/JS parity photon-mass 4
+PASS PHP/JS parity photon-mass 5
+PASS PHP/JS parity photon-mass 6
+PASS PHP/JS parity photon-mass 7
+PASS PHP/JS parity photon-mass 8
+PASS PHP/JS parity photon-mass 9
+PASS PHP/JS parity photon-mass 10
+PASS PHP/JS parity photon-mass 11
+PASS PHP/JS parity constant-time 12
+PASS PHP/JS parity constant-time 13
+PASS PHP/JS parity constant-time 14
+PASS PHP/JS parity constant-time 15
+PASS PHP/JS parity constant-time 16
+PASS PHP/JS parity constant-time 17
+PASS PHP/JS parity constant-time 18
+PASS PHP/JS parity constant-time 19
+PASS PHP/JS parity constant-time 20
+PASS PHP/JS parity constant-time 21
+PASS PHP/JS parity constant-time 22
+PASS PHP/JS parity constant-time 23
+PASS PHP/JS parity light-slowing 24
+PASS PHP/JS parity light-slowing 25
+PASS PHP/JS parity light-slowing 26
+PASS PHP/JS parity light-slowing 27
+PASS PHP/JS parity light-slowing 28
+PASS PHP/JS parity light-slowing 29
+PASS PHP/JS parity light-slowing 30
+PASS PHP/JS parity light-slowing 31
+PASS PHP/JS parity light-slowing 32
+PASS PHP/JS parity light-slowing 33
+PASS PHP/JS parity light-slowing 34
+PASS PHP/JS parity light-slowing 35
+PASS PHP/JS parity when 36
+PASS PHP/JS parity when 37
+PASS PHP/JS parity when 38
+PASS PHP/JS parity when 39
+PASS PHP/JS parity when 40
+PASS PHP/JS parity when 41
+PASS PHP/JS parity when 42
+PASS PHP/JS parity when 43
+PASS PHP/JS parity when 44
+PASS PHP/JS parity when 45
+PASS PHP/JS parity when 46
+PASS PHP/JS parity when 47
+PASS PHP/JS parity where 48
+PASS PHP/JS parity where 49
+PASS PHP/JS parity where 50
+PASS PHP/JS parity where 51
+PASS PHP/JS parity where 52
+PASS PHP/JS parity where 53
+PASS PHP/JS parity where 54
+PASS PHP/JS parity where 55
+PASS PHP/JS parity where 56
+PASS PHP/JS parity where 57
+PASS PHP/JS parity where 58
+PASS PHP/JS parity where 59
+PASS PHP/JS parity physical-existence 60
+PASS PHP/JS parity physical-existence 61
+PASS PHP/JS parity physical-existence 62
+PASS PHP/JS parity physical-existence 63
+PASS PHP/JS parity physical-existence 64
+PASS PHP/JS parity physical-existence 65
+PASS PHP/JS parity physical-existence 66
+PASS PHP/JS parity physical-existence 67
+PASS PHP/JS parity physical-existence 68
+PASS PHP/JS parity physical-existence 69
+PASS PHP/JS parity physical-existence 70
+PASS PHP/JS parity physical-existence 71
+PASS PHP/JS parity spacetime 72
+PASS PHP/JS parity spacetime 73
+PASS PHP/JS parity spacetime 74
+PASS PHP/JS parity spacetime 75
+PASS PHP/JS parity spacetime 76
+PASS PHP/JS parity spacetime 77
+PASS PHP/JS parity spacetime 78
+PASS PHP/JS parity spacetime 79
+PASS PHP/JS parity spacetime 80
+PASS PHP/JS parity spacetime 81
+PASS PHP/JS parity spacetime 82
+PASS PHP/JS parity spacetime 83
+PASS PHP/JS parity fastest-signal 84
+PASS PHP/JS parity fastest-signal 85
+PASS PHP/JS parity fastest-signal 86
+PASS PHP/JS parity fastest-signal 87
+PASS PHP/JS parity fastest-signal 88
+PASS PHP/JS parity fastest-signal 89
+PASS PHP/JS parity fastest-signal 90
+PASS PHP/JS parity fastest-signal 91
+PASS PHP/JS parity fastest-signal 92
+PASS PHP/JS parity fastest-signal 93
+PASS PHP/JS parity fastest-signal 94
+PASS PHP/JS parity fastest-signal 95
+PASS PHP/JS parity separation 96
+PASS PHP/JS parity separation 97
+PASS PHP/JS parity separation 98
+PASS PHP/JS parity separation 99
+PASS PHP/JS parity separation 100
+PASS PHP/JS parity separation 101
+PASS PHP/JS parity separation 102
+PASS PHP/JS parity separation 103
+PASS PHP/JS parity separation 104
+PASS PHP/JS parity separation 105
+PASS PHP/JS parity separation 106
+PASS PHP/JS parity separation 107
+PASS PHP/JS parity cosmic-size 108
+PASS PHP/JS parity cosmic-size 109
+PASS PHP/JS parity cosmic-size 110
+PASS PHP/JS parity cosmic-size 111
+PASS PHP/JS parity cosmic-size 112
+PASS PHP/JS parity cosmic-size 113
+PASS PHP/JS parity cosmic-size 114
+PASS PHP/JS parity cosmic-size 115
+PASS PHP/JS parity cosmic-size 116
+PASS PHP/JS parity cosmic-size 117
+PASS PHP/JS parity cosmic-size 118
+PASS PHP/JS parity cosmic-size 119
+PASS PHP/JS parity cosmic-age 120
+PASS PHP/JS parity cosmic-age 121
+PASS PHP/JS parity cosmic-age 122
+PASS PHP/JS parity cosmic-age 123
+PASS PHP/JS parity cosmic-age 124
+PASS PHP/JS parity cosmic-age 125
+PASS PHP/JS parity cosmic-age 126
+PASS PHP/JS parity cosmic-age 127
+PASS PHP/JS parity cosmic-age 128
+PASS PHP/JS parity cosmic-age 129
+PASS PHP/JS parity cosmic-age 130
+PASS PHP/JS parity cosmic-age 131
+PASS PHP/JS parity distance-inference 132
+PASS PHP/JS parity distance-inference 133
+PASS PHP/JS parity distance-inference 134
+PASS PHP/JS parity distance-inference 135
+PASS PHP/JS parity distance-inference 136
+PASS PHP/JS parity distance-inference 137
+PASS PHP/JS parity distance-inference 138
+PASS PHP/JS parity distance-inference 139
+PASS PHP/JS parity distance-inference 140
+PASS PHP/JS parity distance-inference 141
+PASS PHP/JS parity distance-inference 142
+PASS PHP/JS parity distance-inference 143
+PASS reject unknown parameter photon-mass
+PASS reject invalid photon-mass/gap
+PASS reject unknown parameter constant-time
+PASS reject invalid constant-time/rate
+PASS reject invalid constant-time/beta
+PASS reject invalid constant-time/duration
+PASS reject invalid constant-time/ratio
+PASS reject unknown parameter light-slowing
+PASS reject invalid light-slowing/gap
+PASS reject invalid light-slowing/drag
+PASS reject invalid light-slowing/duration
+PASS reject unknown parameter when
+PASS reject invalid when/period
+PASS reject invalid when/delay
+PASS reject unknown parameter where
+PASS reject invalid where/dx
+PASS reject invalid where/dy
+PASS reject invalid where/shift
+PASS reject unknown parameter physical-existence
+PASS reject invalid physical-existence/energy
+PASS reject invalid physical-existence/angle
+PASS reject unknown parameter spacetime
+PASS reject invalid spacetime/beta
+PASS reject invalid spacetime/duration
+PASS reject unknown parameter fastest-signal
+PASS reject invalid fastest-signal/fraction
+PASS reject invalid fastest-signal/distance
+PASS reject unknown parameter separation
+PASS reject invalid separation/beta
+PASS reject unknown parameter cosmic-size
+PASS reject invalid cosmic-size/reach
+PASS reject invalid cosmic-size/domain
+PASS reject unknown parameter cosmic-age
+PASS reject invalid cosmic-age/h0
+PASS reject invalid cosmic-age/matter
+PASS reject unknown parameter distance-inference
+PASS reject invalid distance-inference/actual
+PASS reject invalid distance-inference/extinction
+PASS reject prototype identifiers
+PASS source hash exact
+PASS localized catalog matches original
+PASS original lesson catalog exact
+PASS manifest scope and icons
+187 passed, 0 failed
+EXIT=0
+=== offline/_lib/sw-test.js
+PASS complete atomic install and no implicit update activation
+PASS failed install removes partial new cache, retains prior version
+PASS activate removes old scoped caches only
+PASS all 10 resources available without network
+PASS does not intercept other modules, remote URLs, query strings, non-GET
+PASS cache readiness reflects missing resource
+PASS missing cache resource fails explicitly offline
+PASS manual update activation
+8 passed, 0 failed
+EXIT=0
+=== offline/_lib/setup-test.js
+PASS already active
+PASS redundant install rejects
+PASS missing activation is bounded
+PASS eventual activation
+4 passed, 0 failed
+EXIT=0
+=== visualizations/_lib/geometry-test.js
+PASS photon finite geometry sample 0
+PASS photon deterministic sample 0
+PASS photon finite readout Energy / initial
+PASS photon finite readout Group speed / C
+PASS photon finite readout Transferred energy
+PASS photon finite readout Integrated path fraction
+PASS photon finite geometry sample 50
+PASS photon deterministic sample 50
+PASS photon finite readout Energy / initial
+PASS photon finite readout Group speed / C
+PASS photon finite readout Transferred energy
+PASS photon finite readout Integrated path fraction
+PASS photon finite geometry sample 100
+PASS photon deterministic sample 100
+PASS photon finite readout Energy / initial
+PASS photon finite readout Group speed / C
+PASS photon finite readout Transferred energy
+PASS photon finite readout Integrated path fraction
+PASS photon finite geometry sample 0
+PASS photon deterministic sample 0
+PASS photon finite readout Energy / initial
+PASS photon finite readout Group speed / C
+PASS photon finite readout Transferred energy
+PASS photon finite readout Integrated path fraction
+PASS photon min boundary geometry
+PASS photon max boundary geometry
+PASS clocks finite geometry sample 0
+PASS clocks deterministic sample 0
+PASS clocks finite readout Reference counts
+PASS clocks finite readout Candidate counts
+PASS clocks finite readout SR comparator counts
+PASS clocks finite geometry sample 50
+PASS clocks deterministic sample 50
+PASS clocks finite readout Reference counts
+PASS clocks finite readout Candidate counts
+PASS clocks finite readout SR comparator counts
+PASS clocks finite geometry sample 100
+PASS clocks deterministic sample 100
+PASS clocks finite readout Reference counts
+PASS clocks finite readout Candidate counts
+PASS clocks finite readout SR comparator counts
+PASS clocks finite geometry sample 0
+PASS clocks deterministic sample 0
+PASS clocks finite readout Reference counts
+PASS clocks finite readout Candidate counts
+PASS clocks finite readout SR comparator counts
+PASS clocks min boundary geometry
+PASS clocks max boundary geometry
+PASS separation finite geometry sample 0
+PASS separation deterministic sample 0
+PASS separation finite readout Common-frame separation rate / C
+PASS separation finite readout SR measured relative speed / C
+PASS separation finite readout Local benchmark
+PASS separation finite geometry sample 50
+PASS separation deterministic sample 50
+PASS separation finite readout Common-frame separation rate / C
+PASS separation finite readout SR measured relative speed / C
+PASS separation finite readout Local benchmark
+PASS separation finite geometry sample 100
+PASS separation deterministic sample 100
+PASS separation finite readout Common-frame separation rate / C
+PASS separation finite readout SR measured relative speed / C
+PASS separation finite readout Local benchmark
+PASS separation finite geometry sample 91
+PASS separation deterministic sample 91
+PASS separation finite readout Common-frame separation rate / C
+PASS separation finite readout SR measured relative speed / C
+PASS separation finite readout Local benchmark
+PASS separation min boundary geometry
+PASS separation max boundary geometry
+PASS cosmic-domains finite geometry sample 0
+PASS cosmic-domains deterministic sample 0
+PASS cosmic-domains finite readout Accessible volume fraction
+PASS cosmic-domains finite geometry sample 50
+PASS cosmic-domains deterministic sample 50
+PASS cosmic-domains finite readout Accessible volume fraction
+PASS cosmic-domains finite geometry sample 100
+PASS cosmic-domains deterministic sample 100
+PASS cosmic-domains finite readout Accessible volume fraction
+PASS cosmic-domains finite geometry sample 40
+PASS cosmic-domains deterministic sample 40
+PASS cosmic-domains finite readout Accessible volume fraction
+PASS cosmic-domains min boundary geometry
+PASS cosmic-domains max boundary geometry
+PASS cosmic-age finite geometry sample 0
+PASS cosmic-age deterministic sample 0
+PASS cosmic-age finite readout Model age (Gyr)
+PASS cosmic-age finite geometry sample 50
+PASS cosmic-age deterministic sample 50
+PASS cosmic-age finite readout Model age (Gyr)
+PASS cosmic-age finite geometry sample 100
+PASS cosmic-age deterministic sample 100
+PASS cosmic-age finite readout Model age (Gyr)
+PASS cosmic-age finite geometry sample 50
+PASS cosmic-age deterministic sample 50
+PASS cosmic-age finite readout Model age (Gyr)
+PASS cosmic-age min boundary geometry
+PASS cosmic-age max boundary geometry
+PASS escape finite geometry sample 0
+PASS escape deterministic sample 0
+PASS escape finite readout Incident population
+PASS escape finite readout Local converted
+PASS escape finite readout Escaped population
+PASS escape finite readout Total converted
+PASS escape finite geometry sample 200
+PASS escape deterministic sample 200
+PASS escape finite readout Incident population
+PASS escape finite readout Local converted
+PASS escape finite readout Escaped population
+PASS escape finite readout Total converted
+PASS escape finite geometry sample 400
+PASS escape deterministic sample 400
+PASS escape finite readout Incident population
+PASS escape finite readout Local converted
+PASS escape finite readout Escaped population
+PASS escape finite readout Total converted
+PASS escape finite geometry sample 0
+PASS escape deterministic sample 0
+PASS escape finite readout Incident population
+PASS escape finite readout Local converted
+PASS escape finite readout Escaped population
+PASS escape finite readout Total converted
+PASS escape min boundary geometry
+PASS escape max boundary geometry
+PASS wall finite geometry sample 0
+PASS wall deterministic sample 0
+PASS wall finite readout log₁₀ maximum retained energy
+PASS wall finite geometry sample 100
+PASS wall deterministic sample 100
+PASS wall finite readout log₁₀ maximum retained energy
+PASS wall finite geometry sample 200
+PASS wall deterministic sample 200
+PASS wall finite readout log₁₀ maximum retained energy
+PASS wall finite geometry sample 40
+PASS wall deterministic sample 40
+PASS wall finite readout log₁₀ maximum retained energy
+PASS wall min boundary geometry
+PASS wall max boundary geometry
+PASS distance finite geometry sample 0
+PASS distance deterministic sample 0
+PASS distance finite readout Inferred distance (Mpc)
+PASS distance finite readout Calibrated distance (Mpc)
+PASS distance finite geometry sample 50
+PASS distance deterministic sample 50
+PASS distance finite readout Inferred distance (Mpc)
+PASS distance finite readout Calibrated distance (Mpc)
+PASS distance finite geometry sample 100
+PASS distance deterministic sample 100
+PASS distance finite readout Inferred distance (Mpc)
+PASS distance finite readout Calibrated distance (Mpc)
+PASS distance finite geometry sample 37
+PASS distance deterministic sample 37
+PASS distance finite readout Inferred distance (Mpc)
+PASS distance finite readout Calibrated distance (Mpc)
+PASS distance min boundary geometry
+PASS distance max boundary geometry
+PASS anchors finite geometry sample 0
+PASS anchors deterministic sample 0
+PASS anchors finite readout LMC
+PASS anchors finite readout NGC 4258
+PASS anchors finite geometry sample 75
+PASS anchors deterministic sample 75
+PASS anchors finite readout LMC
+PASS anchors finite readout NGC 4258
+PASS anchors finite geometry sample 150
+PASS anchors deterministic sample 150
+PASS anchors finite readout LMC
+PASS anchors finite readout NGC 4258
+PASS anchors finite geometry sample 25
+PASS anchors deterministic sample 25
+PASS anchors finite readout LMC
+PASS anchors finite readout NGC 4258
+PASS anchors min boundary geometry
+PASS anchors max boundary geometry
+PASS massless path reaches reference endpoint
+PASS positive gap conditional path shorter
+PASS path begins at zero
+PASS reference interpolation
+PASS no extrapolation
+179 passed
+EXIT=0
+=== evidence/_lib/http-test.py
+PASS 33 unique sitemap URLs
+PASS /evidence/
+PASS /evidence/ledger/
+PASS /evidence/gates/
+PASS /evidence/workbench/
+PASS /evidence/ledger/charter/
+PASS /evidence/ledger/ceiling/
+PASS /evidence/ledger/common-field/
+PASS /evidence/ledger/finite-source/
+PASS /evidence/ledger/recession-law/
+PASS /evidence/ledger/coupled-modes/
+PASS /evidence/ledger/moving-endpoints/
+PASS /evidence/ledger/causal-reach/
+PASS /evidence/ledger/optical-map/
+PASS /evidence/ledger/shell-void/
+PASS /evidence/ledger/fixed-gap-drag/
+PASS /evidence/ledger/wall-bound/
+PASS /evidence/ledger/wall-crossing/
+PASS /evidence/ledger/history-coordinate/
+PASS /evidence/ledger/bounded-flow/
+PASS /evidence/ledger/contact-scattering/
+PASS /evidence/ledger/wall-certificate/
+PASS /evidence/ledger/anchor-lmc/
+PASS /evidence/ledger/anchor-ngc/
+PASS /evidence/ledger/finite-range/
+PASS /evidence/ledger/phase-match/
+PASS /evidence/ledger/escape-criterion/
+PASS /evidence/ledger/escape-verification/
+PASS /evidence/ledger/regression-137/
+PASS /evidence/ledger/multimessenger/
+PASS /evidence/ledger/joint-fit/
+PASS /evidence/workbench/escape/
+PASS /evidence/workbench/wall/
+PASS /evidence/workbench/anchors/
+PASS status filter
+PASS empty search
+PASS escaped query
+PASS /evidence/_lib/ledger.json
+PASS /evidence/_lib/tests.php
+PASS /evidence/nonexistent/
+PASS API escape
+PASS form escape
+PASS API wall
+PASS form wall
+PASS API anchors
+PASS form anchors
+PASS invalid API b'{'
+PASS invalid API b'[]'
+PASS invalid API b'{"workbench":"unknown"}'
+PASS invalid API b'{"workbench":"escape","parameters":{"ratio":-'
+PASS invalid API b'{"workbench":"escape","parameters":{"ratio":n'
+PASS invalid API b'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+PASS wrong content type
+PASS read-only ledger
+PASS record lookup
+PASS AG-UI lifecycle
+PASS catalog consistency
+57 passed, 0 failed
+EXIT=0
+=== experiment-design/_lib/http-test.py
+PASS static live catalog exact parity
+PASS all models and worked designs
+PASS /experiment-design/ route metadata
+PASS /experiment-design/ security
+PASS /experiment-design/ HEAD
+PASS /experiment-design/method/ route metadata
+PASS /experiment-design/method/ security
+PASS /experiment-design/method/ HEAD
+PASS /experiment-design/replay/ route metadata
+PASS /experiment-design/replay/ security
+PASS /experiment-design/replay/ HEAD
+PASS custom editor foundation:photon-mass
+PASS custom editor foundation:constant-time
+PASS custom editor foundation:light-slowing
+PASS custom editor foundation:when
+PASS custom editor foundation:where
+PASS custom editor foundation:physical-existence
+PASS custom editor foundation:spacetime
+PASS custom editor foundation:fastest-signal
+PASS custom editor foundation:separation
+PASS custom editor foundation:cosmic-size
+PASS custom editor foundation:cosmic-age
+PASS custom editor foundation:distance-inference
+PASS custom editor evidence:escape
+PASS custom editor evidence:wall
+PASS custom editor evidence:anchors
+PASS photon seal only
+PASS photon execute
+PASS photon exact replay
+PASS photon mismatch replay
+PASS photon form seals
+PASS photon form/API seal parity
+PASS photon POST noindex
+PASS photon no-JS execution chart
+PASS photon save export
+PASS photon save export data
+PASS photon download export
+PASS photon download export data
+PASS photon csv export
+PASS photon csv export data
+PASS tampered seal rejected
+PASS escape seal only
+PASS escape execute
+PASS escape exact replay
+PASS escape mismatch replay
+PASS escape form seals
+PASS escape form/API seal parity
+PASS escape POST noindex
+PASS escape no-JS execution chart
+PASS escape save export
+PASS escape save export data
+PASS escape download export
+PASS escape download export data
+PASS escape csv export
+PASS escape csv export data
+PASS timing seal only
+PASS timing execute
+PASS timing exact replay
+PASS timing mismatch replay
+PASS timing form seals
+PASS timing form/API seal parity
+PASS timing POST noindex
+PASS timing no-JS execution chart
+PASS timing save export
+PASS timing save export data
+PASS timing download export
+PASS timing download export data
+PASS timing csv export
+PASS timing csv export data
+PASS distance seal only
+PASS distance execute
+PASS distance exact replay
+PASS distance mismatch replay
+PASS distance form seals
+PASS distance form/API seal parity
+PASS distance POST noindex
+PASS distance no-JS execution chart
+PASS distance save export
+PASS distance save export data
+PASS distance download export
+PASS distance download export data
+PASS distance csv export
+PASS distance csv export data
+PASS geometry seal only
+PASS geometry execute
+PASS geometry exact replay
+PASS geometry mismatch replay
+PASS geometry form seals
+PASS geometry form/API seal parity
+PASS geometry POST noindex
+PASS geometry no-JS execution chart
+PASS geometry save export
+PASS geometry save export data
+PASS geometry download export
+PASS geometry download export data
+PASS geometry csv export
+PASS geometry csv export data
+PASS bad request 1
+PASS bad request 2
+PASS bad request 2
+PASS bad request 65537
+PASS reject MIME lookalike
+PASS Apache body cap
+PASS reject method
+PASS private .htaccess
+PASS private _lib/model.php
+PASS private _lib/tests.php
+PASS private _lib/
+PASS private _lib/.htaccess
+PASS PATH_INFO denied
+PASS API PATH_INFO denied
+PASS unknown route
+PASS method page GET only
+113 passed, 0 failed
+EXIT=0
+=== global/_lib/http-test.py
+PASS 43 unique canonical URLs
+PASS route metadata and reciprocal alternates /global/
+PASS route metadata and reciprocal alternates /global/en/
+PASS route metadata and reciprocal alternates /global/en/glossary/
+PASS route metadata and reciprocal alternates /global/en/photon-mass/
+PASS route metadata and reciprocal alternates /global/en/constant-time/
+PASS route metadata and reciprocal alternates /global/en/light-slowing/
+PASS route metadata and reciprocal alternates /global/en/when/
+PASS route metadata and reciprocal alternates /global/en/where/
+PASS route metadata and reciprocal alternates /global/en/physical-existence/
+PASS route metadata and reciprocal alternates /global/en/spacetime/
+PASS route metadata and reciprocal alternates /global/en/fastest-signal/
+PASS route metadata and reciprocal alternates /global/en/separation/
+PASS route metadata and reciprocal alternates /global/en/cosmic-size/
+PASS route metadata and reciprocal alternates /global/en/cosmic-age/
+PASS route metadata and reciprocal alternates /global/en/distance-inference/
+PASS route metadata and reciprocal alternates /global/es/
+PASS route metadata and reciprocal alternates /global/es/glossary/
+PASS route metadata and reciprocal alternates /global/es/photon-mass/
+PASS route metadata and reciprocal alternates /global/es/constant-time/
+PASS route metadata and reciprocal alternates /global/es/light-slowing/
+PASS route metadata and reciprocal alternates /global/es/when/
+PASS route metadata and reciprocal alternates /global/es/where/
+PASS route metadata and reciprocal alternates /global/es/physical-existence/
+PASS route metadata and reciprocal alternates /global/es/spacetime/
+PASS route metadata and reciprocal alternates /global/es/fastest-signal/
+PASS route metadata and reciprocal alternates /global/es/separation/
+PASS route metadata and reciprocal alternates /global/es/cosmic-size/
+PASS route metadata and reciprocal alternates /global/es/cosmic-age/
+PASS route metadata and reciprocal alternates /global/es/distance-inference/
+PASS route metadata and reciprocal alternates /global/fr/
+PASS route metadata and reciprocal alternates /global/fr/glossary/
+PASS route metadata and reciprocal alternates /global/fr/photon-mass/
+PASS route metadata and reciprocal alternates /global/fr/constant-time/
+PASS route metadata and reciprocal alternates /global/fr/light-slowing/
+PASS route metadata and reciprocal alternates /global/fr/when/
+PASS route metadata and reciprocal alternates /global/fr/where/
+PASS route metadata and reciprocal alternates /global/fr/physical-existence/
+PASS route metadata and reciprocal alternates /global/fr/spacetime/
+PASS route metadata and reciprocal alternates /global/fr/fastest-signal/
+PASS route metadata and reciprocal alternates /global/fr/separation/
+PASS route metadata and reciprocal alternates /global/fr/cosmic-size/
+PASS route metadata and reciprocal alternates /global/fr/cosmic-age/
+PASS route metadata and reciprocal alternates /global/fr/distance-inference/
+PASS en photon-mass no-JS form, API and source identity
+PASS en constant-time no-JS form, API and source identity
+PASS en light-slowing no-JS form, API and source identity
+PASS en when no-JS form, API and source identity
+PASS en where no-JS form, API and source identity
+PASS en physical-existence no-JS form, API and source identity
+PASS en spacetime no-JS form, API and source identity
+PASS en fastest-signal no-JS form, API and source identity
+PASS en separation no-JS form, API and source identity
+PASS en cosmic-size no-JS form, API and source identity
+PASS en cosmic-age no-JS form, API and source identity
+PASS en distance-inference no-JS form, API and source identity
+PASS es photon-mass no-JS form, API and source identity
+PASS es constant-time no-JS form, API and source identity
+PASS es light-slowing no-JS form, API and source identity
+PASS es when no-JS form, API and source identity
+PASS es where no-JS form, API and source identity
+PASS es physical-existence no-JS form, API and source identity
+PASS es spacetime no-JS form, API and source identity
+PASS es fastest-signal no-JS form, API and source identity
+PASS es separation no-JS form, API and source identity
+PASS es cosmic-size no-JS form, API and source identity
+PASS es cosmic-age no-JS form, API and source identity
+PASS es distance-inference no-JS form, API and source identity
+PASS fr photon-mass no-JS form, API and source identity
+PASS fr constant-time no-JS form, API and source identity
+PASS fr light-slowing no-JS form, API and source identity
+PASS fr when no-JS form, API and source identity
+PASS fr where no-JS form, API and source identity
+PASS fr physical-existence no-JS form, API and source identity
+PASS fr spacetime no-JS form, API and source identity
+PASS fr fastest-signal no-JS form, API and source identity
+PASS fr separation no-JS form, API and source identity
+PASS fr cosmic-size no-JS form, API and source identity
+PASS fr cosmic-age no-JS form, API and source identity
+PASS fr distance-inference no-JS form, API and source identity
+PASS status /global/_lib/translations.json
+PASS status /global/_lib/site.php
+PASS status /global/api/?language=zz
+PASS status /global/api/?lesson=nope
+PASS invalid POST 400
+PASS invalid POST 400
+PASS invalid POST 400
+PASS invalid POST 413
+PASS wrong content type
+PASS POST hub rejected
+PASS invalid localized form
+PASS API method rejected
+92 passed, 0 failed
+EXIT=0
+=== model-comparison/_lib/http-test.py
+PASS catalog 15 models, 7 presets
+PASS page /model-comparison/
+PASS page /model-comparison/protocol/
+PASS page /model-comparison/?preset=light
+PASS page /model-comparison/?preset=clocks
+PASS page /model-comparison/?preset=escape
+PASS page /model-comparison/?preset=wall
+PASS page /model-comparison/?preset=distance
+PASS page /model-comparison/?preset=age
+PASS page /model-comparison/?preset=anchors
+PASS API and replay light
+PASS no JS form light
+PASS API and replay clocks
+PASS no JS form clocks
+PASS API and replay escape
+PASS no JS form escape
+PASS API and replay wall
+PASS no JS form wall
+PASS API and replay distance
+PASS no JS form distance
+PASS API and replay age
+PASS no JS form age
+PASS API and replay anchors
+PASS no JS form anchors
+PASS reject samples
+PASS reject metric
+PASS reject start
+PASS reject schema
+PASS reject probe
+PASS reject reference
+PASS HTTP /model-comparison/_lib/model.php
+PASS HTTP /model-comparison/missing/
+PASS HTTP /model-comparison/sitemap.xml
+PASS HTTP /model-comparison/assets/comparison.js
+PASS HTTP /model-comparison/assets/comparison.css
+PASS reject wrong content type
+PASS reject oversized request
+PASS reject invalid JSON
+PASS reject unsupported method
+PASS live catalog agrees with static
+PASS preserved route /foundations/
+PASS preserved route /evidence/
+PASS preserved route /research/
+PASS preserved route /research/presets/
+PASS preserved route /research/protocol/
+45 passed, 0 failed
+EXIT=0
+=== offline/_lib/http-test.py
+PASS cache resource /offline/
+PASS cache resource /offline/index.html
+PASS cache resource /offline/manifest.webmanifest
+PASS cache resource /offline/assets/compass.png
+PASS cache resource /offline/assets/icon-192.png
+PASS cache resource /offline/assets/icon-512.png
+PASS cache resource /offline/assets/offline.css
+PASS cache resource /offline/assets/catalog.js
+PASS cache resource /offline/assets/solver.js
+PASS cache resource /offline/assets/offline.js
+PASS private test directory denied
+PASS canonical and no-JS index
+PASS manifest scope
+PASS previous global route
+PASS previous research route
+PASS previous timeline route
+16 passed, 0 failed
+EXIT=0
+=== research/_lib/http-test.py
+PASS /research/
+PASS /research/presets/
+PASS /research/protocol/
+PASS public catalog
+PASS live catalog matches static
+PASS three sitemap routes
+PASS protected or unknown /research/_lib/model.php
+PASS protected or unknown /research/_lib/tests.php
+PASS protected or unknown /evidence/_lib/ledger.json
+PASS protected or unknown /foundations/_lib/lessons.json
+PASS protected or unknown /research/not-a-page/
+PASS asset or previous hub /research/assets/research.js
+PASS asset or previous hub /research/assets/research.css
+PASS asset or previous hub /foundations/
+PASS asset or previous hub /evidence/
+PASS preset light
+PASS execute light
+PASS preset escape
+PASS execute escape
+PASS preset wall
+PASS execute wall
+PASS preset distances
+PASS execute distances
+PASS preset clocks
+PASS execute clocks
+PASS replay same hash
+PASS replay wrong hash
+PASS no-JS form output
+PASS no-JS JSON download
+PASS user content escaped
+PASS invalid API b'{'
+PASS invalid API b'[]'
+PASS invalid API b'{}'
+PASS invalid API b'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+PASS invalid API b'{"plan":{"schema":"fake"}}'
+PASS invalid API b'{"plan": {"schema": "beyondspacetime.resea'
+PASS invalid API b'{"plan": {"schema": "beyondspacetime.resea'
+PASS invalid API b'{"threadId": "<bad>", "runId": "r", "messa'
+PASS wrong content type
+PASS wrong API method
+PASS read-only presets
+PASS SSE event sequence
+PASS SSE step pairing
+PASS SSE result parity and replay
+44 passed, 0 failed
+EXIT=0
+=== timeline/_lib/http-test.py
+PASS 63 canonical sitemap routes
+PASS /timeline/
+PASS /timeline/method/
+PASS /timeline/record/r01/
+PASS /timeline/record/r02/
+PASS /timeline/record/r03/
+PASS /timeline/record/r04/
+PASS /timeline/record/r05/
+PASS /timeline/record/r06/
+PASS /timeline/record/r07/
+PASS /timeline/record/r08/
+PASS /timeline/record/r09/
+PASS /timeline/record/r10/
+PASS /timeline/record/r11/
+PASS /timeline/record/r12/
+PASS /timeline/record/r13/
+PASS /timeline/record/r14/
+PASS /timeline/record/r15/
+PASS /timeline/record/r16/
+PASS /timeline/record/r17/
+PASS /timeline/record/r18/
+PASS /timeline/record/r19/
+PASS /timeline/record/r20/
+PASS /timeline/record/r21/
+PASS /timeline/record/r22/
+PASS /timeline/record/r23/
+PASS /timeline/record/r24/
+PASS /timeline/record/r25/
+PASS /timeline/record/r26/
+PASS /timeline/record/r27/
+PASS /timeline/record/r28/
+PASS /timeline/record/r29/
+PASS /timeline/record/r30/
+PASS /timeline/record/r31/
+PASS /timeline/record/r32/
+PASS /timeline/record/r33/
+PASS /timeline/record/r34/
+PASS /timeline/record/r35/
+PASS /timeline/record/r36/
+PASS /timeline/record/r37/
+PASS /timeline/record/r38/
+PASS /timeline/record/r39/
+PASS /timeline/record/r40/
+PASS /timeline/record/r41/
+PASS /timeline/record/review-1/
+PASS /timeline/record/review-2/
+PASS /timeline/record/review-3/
+PASS /timeline/record/review-4/
+PASS /timeline/record/review-5/
+PASS /timeline/record/review-6/
+PASS /timeline/record/sciama-1953/
+PASS /timeline/record/photon-review-2005/
+PASS /timeline/record/vortices-2007/
+PASS /timeline/record/lorentz-2015/
+PASS /timeline/record/multimessenger-2017/
+PASS /timeline/record/lmc-2019/
+PASS /timeline/record/supernovae-2024/
+PASS /timeline/record/wall-conflict/
+PASS /timeline/record/capacity-recoil/
+PASS /timeline/record/static-certificate/
+PASS /timeline/record/finite-range-obstruction/
+PASS /timeline/record/phase-matched/
+PASS /timeline/record/escape-threshold/
+PASS /timeline/record/forward-regression/
+PASS API archive filter
+PASS API individual
+PASS API comparison
+PASS /timeline/api/?id=no-such
+PASS /timeline/api/?track=invalid
+PASS /timeline/api/?q%5B%5D=x
+PASS /timeline/api/?a=review-5&b=review-5
+PASS /timeline/_lib/model.php
+PASS /timeline/record/no-such/
+PASS API POST denied
+PASS no-JS filter
+PASS no-JS comparison
+PASS escaped input
+PASS invalid HTML pair rejected
+78 passed
+EXIT=0
+=== universal-time/_lib/http-test.py
+PASS /universal-time/ complete
+PASS /universal-time/ canonical
+PASS /universal-time/ CSP
+PASS /universal-time/ local JS
+PASS /universal-time/dinner/ complete
+PASS /universal-time/dinner/ canonical
+PASS /universal-time/dinner/ CSP
+PASS /universal-time/dinner/ local JS
+PASS /universal-time/benchmarks/ complete
+PASS /universal-time/benchmarks/ canonical
+PASS /universal-time/benchmarks/ CSP
+PASS /universal-time/benchmarks/ local JS
+PASS dinner form/API parity 
+PASS dinner source hash
+PASS dinner API not cached
+PASS dinner form/API parity duration=8&clock_out=0.5&clock_back=1&bio_out=0.25&bio_back=2
+PASS dinner source hash
+PASS dinner API not cached
+PASS dinner parameter variant noindex
+PASS benchmark form/API parity 
+PASS benchmark source hash
+PASS benchmark API not cached
+PASS benchmark form/API parity multiplier=0
+PASS benchmark source hash
+PASS benchmark API not cached
+PASS benchmark parameter variant noindex
+PASS reject ?model=bad
+PASS reject ?model=dinner&duration=0
+PASS reject ?model=dinner&clock_out%5B%5D=1
+PASS reject ?model=benchmark&multiplier=4
+PASS reject ?model%5B%5D=dinner
+PASS reject ?model=dinner&unknown=1
+PASS reject ?duration=3
+PASS invalid form status
+PASS read-only method
+PASS hidden file denied
+PASS internal model denied
+PASS unexpected path denied
+PASS catalog parity
+PASS museum record discovery
+PASS graph node discovery
+41 passed, 0 failed
+EXIT=0
+=== visualizations/_lib/test.py
+PASS nine scenes
+PASS three time-series scenes
+PASS photon canonical page
+PASS photon server-rendered evidence
+PASS photon playback restricted to time series
+PASS photon frame restriction
+PASS photon API parameters {}
+PASS photon exact solver equivalence
+PASS photon solver hash
+PASS photon shared domain contains both curves
+PASS photon reference overrides
+PASS photon API noindex
+PASS photon API parameters {'gap': 0, 'drag': 0, 'duration': 0.1}
+PASS photon exact solver equivalence
+PASS photon solver hash
+PASS photon shared domain contains both curves
+PASS photon reference overrides
+PASS photon API noindex
+PASS photon API parameters {'gap': 0.9, 'drag': 2, 'duration': 20}
+PASS photon exact solver equivalence
+PASS photon solver hash
+PASS photon shared domain contains both curves
+PASS photon reference overrides
+PASS photon API noindex
+PASS photon no-JS form calculation
+PASS photon unknown parameter rejected
+PASS photon out of range rejected
+PASS photon generated thumbnail
+PASS clocks canonical page
+PASS clocks server-rendered evidence
+PASS clocks playback restricted to time series
+PASS clocks frame restriction
+PASS clocks API parameters {}
+PASS clocks exact solver equivalence
+PASS clocks solver hash
+PASS clocks shared domain contains both curves
+PASS clocks reference overrides
+PASS clocks API noindex
+PASS clocks API parameters {'rate': 0.1, 'beta': 0, 'duration': 1, 'ratio': 0.1}
+PASS clocks exact solver equivalence
+PASS clocks solver hash
+PASS clocks shared domain contains both curves
+PASS clocks reference overrides
+PASS clocks API noindex
+PASS clocks API parameters {'rate': 5, 'beta': 0.99, 'duration': 60, 'ratio': 2}
+PASS clocks exact solver equivalence
+PASS clocks solver hash
+PASS clocks shared domain contains both curves
+PASS clocks reference overrides
+PASS clocks API noindex
+PASS clocks no-JS form calculation
+PASS clocks unknown parameter rejected
+PASS clocks out of range rejected
+PASS clocks generated thumbnail
+PASS separation canonical page
+PASS separation server-rendered evidence
+PASS separation playback restricted to time series
+PASS separation frame restriction
+PASS separation API parameters {}
+PASS separation exact solver equivalence
+PASS separation solver hash
+PASS separation shared domain contains both curves
+PASS separation reference overrides
+PASS separation API noindex
+PASS separation API parameters {'beta': 0}
+PASS separation exact solver equivalence
+PASS separation solver hash
+PASS separation shared domain contains both curves
+PASS separation reference overrides
+PASS separation API noindex
+PASS separation API parameters {'beta': 0.99}
+PASS separation exact solver equivalence
+PASS separation solver hash
+PASS separation shared domain contains both curves
+PASS separation reference overrides
+PASS separation API noindex
+PASS separation no-JS form calculation
+PASS separation unknown parameter rejected
+PASS separation out of range rejected
+PASS separation generated thumbnail
+PASS cosmic-domains canonical page
+PASS cosmic-domains server-rendered evidence
+PASS cosmic-domains playback restricted to time series
+PASS cosmic-domains frame restriction
+PASS cosmic-domains API parameters {}
+PASS cosmic-domains exact solver equivalence
+PASS cosmic-domains solver hash
+PASS cosmic-domains shared domain contains both curves
+PASS cosmic-domains reference overrides
+PASS cosmic-domains API noindex
+PASS cosmic-domains API parameters {'reach': 0.1, 'domain': 0.1}
+PASS cosmic-domains exact solver equivalence
+PASS cosmic-domains solver hash
+PASS cosmic-domains shared domain contains both curves
+PASS cosmic-domains reference overrides
+PASS cosmic-domains API noindex
+PASS cosmic-domains API parameters {'reach': 10, 'domain': 20}
+PASS cosmic-domains exact solver equivalence
+PASS cosmic-domains solver hash
+PASS cosmic-domains shared domain contains both curves
+PASS cosmic-domains reference overrides
+PASS cosmic-domains API noindex
+PASS cosmic-domains no-JS form calculation
+PASS cosmic-domains unknown parameter rejected
+PASS cosmic-domains out of range rejected
+PASS cosmic-domains generated thumbnail
+PASS cosmic-age canonical page
+PASS cosmic-age server-rendered evidence
+PASS cosmic-age playback restricted to time series
+PASS cosmic-age frame restriction
+PASS cosmic-age API parameters {}
+PASS cosmic-age exact solver equivalence
+PASS cosmic-age solver hash
+PASS cosmic-age shared domain contains both curves
+PASS cosmic-age reference overrides
+PASS cosmic-age API noindex
+PASS cosmic-age API parameters {'h0': 45, 'matter': 0.05}
+PASS cosmic-age exact solver equivalence
+PASS cosmic-age solver hash
+PASS cosmic-age shared domain contains both curves
+PASS cosmic-age reference overrides
+PASS cosmic-age API noindex
+PASS cosmic-age API parameters {'h0': 95, 'matter': 0.95}
+PASS cosmic-age exact solver equivalence
+PASS cosmic-age solver hash
+PASS cosmic-age shared domain contains both curves
+PASS cosmic-age reference overrides
+PASS cosmic-age API noindex
+PASS cosmic-age no-JS form calculation
+PASS cosmic-age unknown parameter rejected
+PASS cosmic-age out of range rejected
+PASS cosmic-age generated thumbnail
+PASS escape canonical page
+PASS escape server-rendered evidence
+PASS escape playback restricted to time series
+PASS escape frame restriction
+PASS escape API parameters {}
+PASS escape exact solver equivalence
+PASS escape solver hash
+PASS escape shared domain contains both curves
+PASS escape reference overrides
+PASS escape API noindex
+PASS escape API parameters {'ratio': 0, 'duration': 0.5}
+PASS escape exact solver equivalence
+PASS escape solver hash
+PASS escape shared domain contains both curves
+PASS escape reference overrides
+PASS escape API noindex
+PASS escape API parameters {'ratio': 16, 'duration': 40}
+PASS escape exact solver equivalence
+PASS escape solver hash
+PASS escape shared domain contains both curves
+PASS escape reference overrides
+PASS escape API noindex
+PASS escape no-JS form calculation
+PASS escape unknown parameter rejected
+PASS escape out of range rejected
+PASS escape generated thumbnail
+PASS wall canonical page
+PASS wall server-rendered evidence
+PASS wall playback restricted to time series
+PASS wall frame restriction
+PASS wall API parameters {}
+PASS wall exact solver equivalence
+PASS wall solver hash
+PASS wall shared domain contains both curves
+PASS wall reference overrides
+PASS wall API noindex
+PASS wall API parameters {'loggap': -16, 'ceiling': 1.001}
+PASS wall exact solver equivalence
+PASS wall solver hash
+PASS wall shared domain contains both curves
+PASS wall reference overrides
+PASS wall API noindex
+PASS wall API parameters {'loggap': -0.05, 'ceiling': 2}
+PASS wall exact solver equivalence
+PASS wall solver hash
+PASS wall shared domain contains both curves
+PASS wall reference overrides
+PASS wall API noindex
+PASS wall no-JS form calculation
+PASS wall unknown parameter rejected
+PASS wall out of range rejected
+PASS wall generated thumbnail
+PASS distance canonical page
+PASS distance server-rendered evidence
+PASS distance playback restricted to time series
+PASS distance frame restriction
+PASS distance API parameters {}
+PASS distance exact solver equivalence
+PASS distance solver hash
+PASS distance shared domain contains both curves
+PASS distance reference overrides
+PASS distance API noindex
+PASS distance API parameters {'actual': 0.1, 'extinction': -1}
+PASS distance exact solver equivalence
+PASS distance solver hash
+PASS distance shared domain contains both curves
+PASS distance reference overrides
+PASS distance API noindex
+PASS distance API parameters {'actual': 10, 'extinction': 3}
+PASS distance exact solver equivalence
+PASS distance solver hash
+PASS distance shared domain contains both curves
+PASS distance reference overrides
+PASS distance API noindex
+PASS distance no-JS form calculation
+PASS distance unknown parameter rejected
+PASS distance out of range rejected
+PASS distance generated thumbnail
+PASS anchors canonical page
+PASS anchors server-rendered evidence
+PASS anchors playback restricted to time series
+PASS anchors frame restriction
+PASS anchors API parameters {}
+PASS anchors exact solver equivalence
+PASS anchors solver hash
+PASS anchors shared domain contains both curves
+PASS anchors reference overrides
+PASS anchors API noindex
+PASS anchors API parameters {'percent': 0}
+PASS anchors exact solver equivalence
+PASS anchors solver hash
+PASS anchors shared domain contains both curves
+PASS anchors reference overrides
+PASS anchors API noindex
+PASS anchors API parameters {'percent': 30}
+PASS anchors exact solver equivalence
+PASS anchors solver hash
+PASS anchors shared domain contains both curves
+PASS anchors reference overrides
+PASS anchors API noindex
+PASS anchors no-JS form calculation
+PASS anchors unknown parameter rejected
+PASS anchors out of range rejected
+PASS anchors generated thumbnail
+PASS bad API 
+PASS bad API ?scene=unknown
+PASS bad API ?scene%5B%5D=photon
+PASS bad API ?scene=photon&p=x
+PASS bad API ?scene=photon&p%5Bgap%5D%5B%5D=0
+PASS bad API ?scene=photon&p%5Bgap%5D=NaN
+PASS API rejects POST
+PASS protected source
+PASS museum visual filter
+245 passed
+EXIT=0
+=== museum/_lib/quality-http.py
+PASS /evidence/.htaccess inaccessible
+PASS /evidence/_lib/.htaccess inaccessible
+PASS /evidence/_lib/ inaccessible
+PASS private evidence/_lib/tests.php
+PASS private evidence/_lib/dev-router.php
+PASS private evidence/_lib/http-test.py
+PASS private evidence/_lib/TEST-RESULTS.txt
+PASS private evidence/_lib/ledger.json
+PASS private evidence/_lib/DEPLOYMENT.txt
+PASS private evidence/_lib/.htaccess
+PASS private evidence/_lib/site.php
+PASS private evidence/_lib/SHA256SUMS.txt
+PASS private evidence/_lib/model.php
+PASS evidence PATH_INFO denied
+PASS evidence page available
+PASS evidence exactly one X-Content-Type-Options
+PASS evidence exactly one Referrer-Policy
+PASS evidence exactly one X-Frame-Options
+PASS evidence exactly one Permissions-Policy
+PASS evidence exactly one Content-Security-Policy
+PASS evidence no PHP version header
+PASS evidence frame origin isolated
+PASS evidence HEAD response has no body
+PASS /foundations/.htaccess inaccessible
+PASS /foundations/_lib/.htaccess inaccessible
+PASS /foundations/_lib/ inaccessible
+PASS private foundations/_lib/tests.php
+PASS private foundations/_lib/TEST-RESULTS.txt
+PASS private foundations/_lib/DEPLOYMENT.txt
+PASS private foundations/_lib/.htaccess
+PASS private foundations/_lib/lessons.json
+PASS private foundations/_lib/site.php
+PASS private foundations/_lib/SHA256SUMS.txt
+PASS private foundations/_lib/model.php
+PASS foundations PATH_INFO denied
+PASS foundations page available
+PASS foundations exactly one X-Content-Type-Options
+PASS foundations exactly one Referrer-Policy
+PASS foundations exactly one X-Frame-Options
+PASS foundations exactly one Permissions-Policy
+PASS foundations exactly one Content-Security-Policy
+PASS foundations no PHP version header
+PASS foundations frame origin isolated
+PASS foundations HEAD response has no body
+PASS /global/.htaccess inaccessible
+PASS /global/_lib/.htaccess inaccessible
+PASS /global/_lib/ inaccessible
+PASS private global/_lib/tests.php
+PASS private global/_lib/dev-router.php
+PASS private global/_lib/http-test.py
+PASS private global/_lib/TEST-RESULTS.txt
+PASS private global/_lib/DEPLOYMENT.txt
+PASS private global/_lib/translations.json
+PASS private global/_lib/.htaccess
+PASS private global/_lib/site.php
+PASS private global/_lib/ui.json
+PASS private global/_lib/SHA256SUMS.txt
+PASS private global/_lib/glossary.json
+PASS global PATH_INFO denied
+PASS global page available
+PASS global exactly one X-Content-Type-Options
+PASS global exactly one Referrer-Policy
+PASS global exactly one X-Frame-Options
+PASS global exactly one Permissions-Policy
+PASS global exactly one Content-Security-Policy
+PASS global no PHP version header
+PASS global frame origin isolated
+PASS global HEAD response has no body
+PASS /knowledge-graph/.htaccess inaccessible
+PASS /knowledge-graph/_lib/.htaccess inaccessible
+PASS /knowledge-graph/_lib/ inaccessible
+PASS private knowledge-graph/_lib/browser-test.py
+PASS private knowledge-graph/_lib/.htaccess
+PASS private knowledge-graph/_lib/site.php
+PASS private knowledge-graph/_lib/build-graph.py
+PASS private knowledge-graph/_lib/test.py
+PASS knowledge-graph PATH_INFO denied
+PASS knowledge-graph page available
+PASS knowledge-graph exactly one X-Content-Type-Options
+PASS knowledge-graph exactly one Referrer-Policy
+PASS knowledge-graph exactly one X-Frame-Options
+PASS knowledge-graph exactly one Permissions-Policy
+PASS knowledge-graph exactly one Content-Security-Policy
+PASS knowledge-graph no PHP version header
+PASS knowledge-graph frame origin isolated
+PASS knowledge-graph HEAD response has no body
+PASS /model-comparison/.htaccess inaccessible
+PASS /model-comparison/_lib/.htaccess inaccessible
+PASS /model-comparison/_lib/ inaccessible
+PASS private model-comparison/_lib/tests.php
+PASS private model-comparison/_lib/dev-router.php
+PASS private model-comparison/_lib/http-test.py
+PASS private model-comparison/_lib/TEST-RESULTS.txt
+PASS private model-comparison/_lib/DEPLOYMENT.txt
+PASS private model-comparison/_lib/.htaccess
+PASS private model-comparison/_lib/site.php
+PASS private model-comparison/_lib/SHA256SUMS.txt
+PASS private model-comparison/_lib/model.php
+PASS model-comparison PATH_INFO denied
+PASS model-comparison page available
+PASS model-comparison exactly one X-Content-Type-Options
+PASS model-comparison exactly one Referrer-Policy
+PASS model-comparison exactly one X-Frame-Options
+PASS model-comparison exactly one Permissions-Policy
+PASS model-comparison exactly one Content-Security-Policy
+PASS model-comparison no PHP version header
+PASS model-comparison frame origin isolated
+PASS model-comparison HEAD response has no body
+PASS /museum/.htaccess inaccessible
+PASS /museum/_lib/.htaccess inaccessible
+PASS /museum/_lib/ inaccessible
+PASS private museum/_lib/build-index.py
+PASS private museum/_lib/quality-http.py
+PASS private museum/_lib/dev-router.php
+PASS private museum/_lib/quality-crawl.py
+PASS private museum/_lib/quality-science.php
+PASS private museum/_lib/TEST-RESULTS.txt
+PASS private museum/_lib/QUALITY-RELEASE.txt
+PASS private museum/_lib/DEPLOYMENT.txt
+PASS private museum/_lib/.htaccess
+PASS private museum/_lib/QUALITY-DEPLOYMENT.txt
+PASS private museum/_lib/site.php
+PASS private museum/_lib/SHA256SUMS.txt
+PASS private museum/_lib/legacy.php
+PASS private museum/_lib/test.py
+PASS museum PATH_INFO denied
+PASS museum page available
+PASS museum exactly one X-Content-Type-Options
+PASS museum exactly one Referrer-Policy
+PASS museum exactly one X-Frame-Options
+PASS museum exactly one Permissions-Policy
+PASS museum exactly one Content-Security-Policy
+PASS museum no PHP version header
+PASS museum frame origin isolated
+PASS museum HEAD response has no body
+PASS /offline/.htaccess inaccessible
+PASS /offline/_lib/.htaccess inaccessible
+PASS /offline/_lib/ inaccessible
+PASS private offline/_lib/test.js
+PASS private offline/_lib/sw-test.js
+PASS private offline/_lib/http-test.py
+PASS private offline/_lib/TEST-RESULTS.txt
+PASS private offline/_lib/browser-test.py
+PASS private offline/_lib/fixtures.php
+PASS private offline/_lib/setup-test.js
+PASS private offline/_lib/DEPLOYMENT.txt
+PASS private offline/_lib/.htaccess
+PASS private offline/_lib/SHA256SUMS.txt
+PASS offline PATH_INFO denied
+PASS offline page available
+PASS offline exactly one X-Content-Type-Options
+PASS offline exactly one Referrer-Policy
+PASS offline exactly one X-Frame-Options
+PASS offline exactly one Permissions-Policy
+PASS offline exactly one Content-Security-Policy
+PASS offline no PHP version header
+PASS offline frame origin isolated
+PASS offline HEAD response has no body
+PASS /research/.htaccess inaccessible
+PASS /research/_lib/.htaccess inaccessible
+PASS /research/_lib/ inaccessible
+PASS private research/_lib/tests.php
+PASS private research/_lib/dev-router.php
+PASS private research/_lib/http-test.py
+PASS private research/_lib/TEST-RESULTS.txt
+PASS private research/_lib/DEPLOYMENT.txt
+PASS private research/_lib/.htaccess
+PASS private research/_lib/site.php
+PASS private research/_lib/SHA256SUMS.txt
+PASS private research/_lib/model.php
+PASS research PATH_INFO denied
+PASS research page available
+PASS research exactly one X-Content-Type-Options
+PASS research exactly one Referrer-Policy
+PASS research exactly one X-Frame-Options
+PASS research exactly one Permissions-Policy
+PASS research exactly one Content-Security-Policy
+PASS research no PHP version header
+PASS research frame origin isolated
+PASS research HEAD response has no body
+PASS /timeline/.htaccess inaccessible
+PASS /timeline/_lib/.htaccess inaccessible
+PASS /timeline/_lib/ inaccessible
+PASS private timeline/_lib/tests.php
+PASS private timeline/_lib/dev-router.php
+PASS private timeline/_lib/http-test.py
+PASS private timeline/_lib/TEST-RESULTS.txt
+PASS private timeline/_lib/DEPLOYMENT.txt
+PASS private timeline/_lib/.htaccess
+PASS private timeline/_lib/site.php
+PASS private timeline/_lib/SHA256SUMS.txt
+PASS private timeline/_lib/model.php
+PASS timeline PATH_INFO denied
+PASS timeline page available
+PASS timeline exactly one X-Content-Type-Options
+PASS timeline exactly one Referrer-Policy
+PASS timeline exactly one X-Frame-Options
+PASS timeline exactly one Permissions-Policy
+PASS timeline exactly one Content-Security-Policy
+PASS timeline no PHP version header
+PASS timeline frame origin isolated
+PASS timeline HEAD response has no body
+PASS /visualizations/.htaccess inaccessible
+PASS /visualizations/_lib/.htaccess inaccessible
+PASS /visualizations/_lib/ inaccessible
+PASS private visualizations/_lib/TEST-RESULTS.txt
+PASS private visualizations/_lib/geometry-test.js
+PASS private visualizations/_lib/scenes.php
+PASS private visualizations/_lib/DEPLOYMENT.txt
+PASS private visualizations/_lib/.htaccess
+PASS private visualizations/_lib/site.php
+PASS private visualizations/_lib/SHA256SUMS.txt
+PASS private visualizations/_lib/build-thumbnails.js
+PASS private visualizations/_lib/test.py
+PASS visualizations PATH_INFO denied
+PASS visualizations page available
+PASS visualizations exactly one X-Content-Type-Options
+PASS visualizations exactly one Referrer-Policy
+PASS visualizations exactly one X-Frame-Options
+PASS visualizations exactly one Permissions-Policy
+PASS visualizations exactly one Content-Security-Policy
+PASS visualizations no PHP version header
+PASS visualizations frame origin isolated
+PASS visualizations HEAD response has no body
+PASS /experiment-design/.htaccess inaccessible
+PASS /experiment-design/_lib/.htaccess inaccessible
+PASS /experiment-design/_lib/ inaccessible
+PASS private experiment-design/_lib/tests.php
+PASS private experiment-design/_lib/http-test.py
+PASS private experiment-design/_lib/TEST-RESULTS.txt
+PASS private experiment-design/_lib/browser-test.py
+PASS private experiment-design/_lib/DEPLOYMENT.txt
+PASS private experiment-design/_lib/.htaccess
+PASS private experiment-design/_lib/site.php
+PASS private experiment-design/_lib/model.php
+PASS experiment-design PATH_INFO denied
+PASS experiment-design page available
+PASS experiment-design exactly one X-Content-Type-Options
+PASS experiment-design exactly one Referrer-Policy
+PASS experiment-design exactly one X-Frame-Options
+PASS experiment-design exactly one Permissions-Policy
+PASS experiment-design exactly one Content-Security-Policy
+PASS experiment-design no PHP version header
+PASS experiment-design frame origin isolated
+PASS experiment-design HEAD response has no body
+PASS standalone root config hidden
+PASS museum read-only method error JSON
+PASS knowledge-graph read-only method error JSON
+PASS visualizations read-only method error JSON
+PASS timeline read-only method error JSON
+PASS foundations MIME lookalike rejected
+PASS global MIME lookalike rejected
+PASS foundations malformed JSON rejected
+PASS foundations transport body ceiling
+PASS global malformed JSON rejected
+PASS global transport body ceiling
+PASS research malformed JSON rejected
+PASS research transport body ceiling
+PASS model-comparison malformed JSON rejected
+PASS model-comparison transport body ceiling
+PASS evidence malformed JSON rejected
+PASS evidence transport body ceiling
+PASS /foundations/photon-mass/ invalid POST noncacheable/nonindexable
+PASS /global/es/photon-mass/ invalid POST noncacheable/nonindexable
+PASS /evidence/workbench/escape/ invalid POST noncacheable/nonindexable
+PASS /museum/api/?q=%00 malformed query rejected
+PASS /knowledge-graph/api/?action=search&q=%00 malformed query rejected
+PASS /visualizations/api/?scene=photon&p[gap][]=0 malformed query rejected
+PASS /knowledge-graph/graph.jsonld MIME
+PASS /knowledge-graph/nodes.csv MIME
+PASS /offline/manifest.webmanifest MIME
+PASS service worker revalidation
+PASS conditional graph request
+PASS timeline empty comparison chooser
+PASS timeline explicit invalid pair rejected
+PASS genuine standalone 404
+276 passed, 0 failed
+EXIT=0

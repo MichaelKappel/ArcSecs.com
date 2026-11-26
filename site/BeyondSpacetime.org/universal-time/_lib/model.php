@@ -1,0 +1,14 @@
+<?php
+declare(strict_types=1);
+namespace BSPTime;
+const SCHEMA='beyondspacetime.universal-time.v1';
+function catalog():array {static $c;return $c??=json_decode(file_get_contents(dirname(__DIR__).'/catalog.json'),true,512,JSON_THROW_ON_ERROR);}
+function defaults(string $id):array {if(!isset(catalog()['models'][$id]))throw new \InvalidArgumentException('Unknown model');return array_column(catalog()['models'][$id]['parameters'],'default','key');}
+function calculate(string $id,array $in=[]):array {
+ $m=catalog()['models'][$id]??throw new \InvalidArgumentException('Unknown model');$p=defaults($id);
+ foreach($in as $k=>$v){if(!array_key_exists($k,$p))throw new \InvalidArgumentException('Unknown parameter: '.$k);if(!(is_int($v)||is_float($v)||is_string($v)&&is_numeric($v)))throw new \InvalidArgumentException('Numeric parameters required');$p[$k]=(float)$v;}
+ foreach($m['parameters'] as $s){$v=$p[$s['key']];if(!is_finite($v)||$v<$s['min']||$v>$s['max'])throw new \InvalidArgumentException('Parameter out of bounds: '.$s['key']);}
+ if($id==='dinner'){$T=$p['duration'];$a=$p['outbound_fraction'];$b=$T*$a;$cr=$p['clock_out'];$ct=$p['clock_back'];$br=$p['bio_out'];$bt=$p['bio_back'];$n=$b*$cr+($T-$b)*$ct;$bio=$b*$br+($T-$b)*$bt;$rows=[];for($i=0;$i<=120;$i++){$t=$T*$i/120;$first=min($t,$b);$second=max(0,$t-$b);$rows[]=[$t,$t,$first*$cr+$second*$ct,$first*$br+$second*$bt];}$metrics=['common_interval_hours'=>$T,'home_clock_hours'=>$T,'traveler_clock_hours'=>$n,'biological_equivalent_hours'=>$bio,'traveler_clock_minus_home_hours'=>$n-$T,'home_deadline_hours_after_noon'=>$T];$columns=['Proposed universal progression (h)','Home clock (h)','Traveler clock accumulation (h)','Illustrative biological process equivalent (h)'];}
+ else {$obs=catalog()['observations'][2];$meas=$obs['measured'];$stat=$obs['statistical_uncertainty'];$sys=$obs['systematic_uncertainty'];$reference=$obs['reference'];$unc=hypot($stat,$sys);$prediction=$reference*$p['multiplier'];$metrics=['published_gradient'=>$meas,'published_statistical_uncertainty'=>$stat,'published_systematic_uncertainty'=>$sys,'illustrative_quadrature_uncertainty'=>$unc,'published_relativistic_reference'=>$reference,'stipulated_candidate_prediction'=>$prediction,'candidate_minus_measurement'=>$prediction-$meas,'residual_over_combined_uncertainty'=>($prediction-$meas)/$unc,'reference_residual_over_combined_uncertainty'=>($reference-$meas)/$unc];$rows=[];for($i=0;$i<=100;$i++){$x=-1+4*$i/100;$rows[]=[$x,$reference*$x,$meas,$meas-$unc,$meas+$unc];}$columns=['Stipulated multiplier','Candidate gradient','Measured gradient','Illustrative lower bound','Illustrative upper bound'];}
+ return ['schema'=>SCHEMA,'version'=>'2.4.0','model'=>$id,'parameters'=>$p,'metrics'=>$metrics,'columns'=>$columns,'rows'=>$rows,'limitation'=>$m['limitation'],'source'=>$m['source'],'solver_sha256'=>hash_file('sha256',__FILE__)];
+}

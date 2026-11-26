@@ -1,17 +1,40 @@
-DirectoryIndex index.php
-Options -Indexes
-RewriteEngine On
-# Never expose internal content/configuration or test files.
-RewriteRule ^(?:app|tests)(?:/|$) - [F,L,NC]
-RewriteRule ^(?:router\.php|README\.md|DEPLOYMENT\.md|LICENSE\.md|TEST-RESULTS\.txt|SHA256SUMS\.txt)$ - [F,L,NC]
-RewriteRule ^\.(?!well-known/) - [F,L]
-# Route the public discovery resources, API and all clean page paths through PHP.
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ index.php [L,QSA]
+DirectoryIndex index.php index.html
+Options -Indexes -MultiViews
+ErrorDocument 404 /museum/missing.php
+
+AcceptPathInfo Off
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
+# Compatibility entry points for the new standalone architecture. Temporary redirects:
+# destinations are modern equivalents, not restored legacy implementations.
+<IfModule mod_alias.c>
+ RedirectMatch 302 ^/learn/?$ /foundations/
+ RedirectMatch 302 ^/atlas/?$ /knowledge-graph/
+ RedirectMatch 302 ^/concepts/?$ /foundations/
+ RedirectMatch 302 ^/labs/?$ /visualizations/
+ RedirectMatch 302 ^/explore/?$ /visualizations/
+ RedirectMatch 302 ^/agents/?$ /research/protocol/
+ RedirectMatch 302 ^/compare/?$ /model-comparison/
+ RedirectMatch 302 ^/methods/?$ /evidence/gates/
+ RedirectMatch 302 ^/glossary/?$ /global/en/glossary/
+ RedirectMatch 302 ^/about/?$ /museum/guide/
+ RedirectMatch 302 ^/explore/photon/?$ /visualizations/photon/
+ RedirectMatch 302 ^/explore/bubbles/?$ /visualizations/cosmic-domains/
+ RedirectMatch 302 ^/explore/hot-big-bang/?$ /visualizations/cosmic-age/
+ RedirectMatch 302 ^/labs/photon-aging/?$ /visualizations/photon/
+ RedirectMatch 302 ^/labs/clocks/?$ /visualizations/clocks/
+ RedirectMatch 302 ^/labs/escape/?$ /evidence/workbench/escape/
+ RedirectMatch 302 ^/concepts/photon-mass/?$ /foundations/photon-mass/
+ RedirectMatch 302 ^/concepts/clocks/?$ /universal-time/
+ RedirectMatch 302 ^/concepts/light-history/?$ /visualizations/photon/
+ RedirectMatch 302 ^/concepts/cosmic-evolution/?$ /visualizations/cosmic-age/
+ RedirectMatch 302 ^/concepts/bubble-universes/?$ /visualizations/cosmic-domains/
+ RedirectMatch 302 ^/concepts/distances/?$ /foundations/distance-inference/
+ RedirectMatch 302 ^/concepts/evidence/?$ /evidence/
+</IfModule>
 <IfModule mod_headers.c>
-  <FilesMatch "\.(css|js|svg|webp|png|ico)$">
-    Header set Cache-Control "public, max-age=86400"
-    Header set X-Content-Type-Options "nosniff"
-  </FilesMatch>
+ Header onsuccess unset X-Powered-By
+ Header always unset X-Powered-By
 </IfModule>

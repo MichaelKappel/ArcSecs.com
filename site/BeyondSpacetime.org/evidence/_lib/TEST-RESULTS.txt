@@ -1,0 +1,157 @@
+BeyondSpacetime.org v1.4.0 — local release checks
+
+47 scientific/content regression tests and 57 HTTP checks. 21 isolated browser renders at 390, 768 and 1440 pixels; 3 record-comparison interactions and 18 export checks. PHP development server and local dev router used, not production hosting. Browser harness rendered actual PHP HTML with inlined local assets; live cross-page navigation and actual production Apache/Nginx security not verified. Original main-site v1.2.0 source not available.
+
+PASS source and relation charter
+PASS source and relation ceiling
+PASS source and relation common-field
+PASS source and relation finite-source
+PASS source and relation recession-law
+PASS source and relation coupled-modes
+PASS source and relation moving-endpoints
+PASS source and relation causal-reach
+PASS source and relation optical-map
+PASS source and relation shell-void
+PASS source and relation fixed-gap-drag
+PASS source and relation wall-bound
+PASS source and relation wall-crossing
+PASS source and relation history-coordinate
+PASS source and relation bounded-flow
+PASS source and relation contact-scattering
+PASS source and relation wall-certificate
+PASS source and relation anchor-lmc
+PASS source and relation anchor-ngc
+PASS source and relation finite-range
+PASS source and relation phase-match
+PASS source and relation escape-criterion
+PASS source and relation escape-verification
+PASS source and relation regression-137
+PASS source and relation multimessenger
+PASS source and relation joint-fit
+PASS escape conservation 0
+PASS escape conservation 1
+PASS escape conservation 2
+PASS escape conservation 3.999999
+PASS escape conservation 4
+PASS escape conservation 4.000001
+PASS escape conservation 8
+PASS escape conservation 16
+PASS zero escape exact null
+PASS underdamped derivative reversal
+PASS critical analytic solution
+PASS wall review reference
+PASS wall tiny gap bound
+PASS anchor review reference
+PASS anchor zero shift
+PASS finite rows escape
+PASS reject malformed parameters escape
+PASS finite rows wall
+PASS reject malformed parameters wall
+PASS finite rows anchors
+PASS reject malformed parameters anchors
+47 passed, 0 failed
+PASS 33 unique sitemap URLs
+PASS /evidence/
+PASS /evidence/ledger/
+PASS /evidence/gates/
+PASS /evidence/workbench/
+PASS /evidence/ledger/charter/
+PASS /evidence/ledger/ceiling/
+PASS /evidence/ledger/common-field/
+PASS /evidence/ledger/finite-source/
+PASS /evidence/ledger/recession-law/
+PASS /evidence/ledger/coupled-modes/
+PASS /evidence/ledger/moving-endpoints/
+PASS /evidence/ledger/causal-reach/
+PASS /evidence/ledger/optical-map/
+PASS /evidence/ledger/shell-void/
+PASS /evidence/ledger/fixed-gap-drag/
+PASS /evidence/ledger/wall-bound/
+PASS /evidence/ledger/wall-crossing/
+PASS /evidence/ledger/history-coordinate/
+PASS /evidence/ledger/bounded-flow/
+PASS /evidence/ledger/contact-scattering/
+PASS /evidence/ledger/wall-certificate/
+PASS /evidence/ledger/anchor-lmc/
+PASS /evidence/ledger/anchor-ngc/
+PASS /evidence/ledger/finite-range/
+PASS /evidence/ledger/phase-match/
+PASS /evidence/ledger/escape-criterion/
+PASS /evidence/ledger/escape-verification/
+PASS /evidence/ledger/regression-137/
+PASS /evidence/ledger/multimessenger/
+PASS /evidence/ledger/joint-fit/
+PASS /evidence/workbench/escape/
+PASS /evidence/workbench/wall/
+PASS /evidence/workbench/anchors/
+PASS status filter
+PASS empty search
+PASS escaped query
+PASS /evidence/_lib/ledger.json
+PASS /evidence/_lib/tests.php
+PASS /evidence/nonexistent/
+PASS API escape
+PASS form escape
+PASS API wall
+PASS form wall
+PASS API anchors
+PASS form anchors
+PASS invalid API b'{'
+PASS invalid API b'[]'
+PASS invalid API b'{"workbench":"unknown"}'
+PASS invalid API b'{"workbench":"escape","parameters":{"ratio":-'
+PASS invalid API b'{"workbench":"escape","parameters":{"ratio":n'
+PASS invalid API b'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+PASS wrong content type
+PASS read-only ledger
+PASS record lookup
+PASS AG-UI lifecycle
+PASS catalog consistency
+57 passed, 0 failed
+PASS viewport 390
+PASS viewport 768
+PASS viewport 1440
+PASS 21 isolated render checks, 3 comparison interactions, 18 export checks; no uncaught errors
+
+PHP syntax:
+No syntax errors detected in ./api/index.php
+No syntax errors detected in ./ledger/charter/index.php
+No syntax errors detected in ./ledger/causal-reach/index.php
+No syntax errors detected in ./ledger/recession-law/index.php
+No syntax errors detected in ./ledger/wall-crossing/index.php
+No syntax errors detected in ./ledger/escape-verification/index.php
+No syntax errors detected in ./ledger/contact-scattering/index.php
+No syntax errors detected in ./ledger/wall-certificate/index.php
+No syntax errors detected in ./ledger/fixed-gap-drag/index.php
+No syntax errors detected in ./ledger/wall-bound/index.php
+No syntax errors detected in ./ledger/shell-void/index.php
+No syntax errors detected in ./ledger/regression-137/index.php
+No syntax errors detected in ./ledger/ceiling/index.php
+No syntax errors detected in ./ledger/bounded-flow/index.php
+No syntax errors detected in ./ledger/index.php
+No syntax errors detected in ./ledger/history-coordinate/index.php
+No syntax errors detected in ./ledger/multimessenger/index.php
+No syntax errors detected in ./ledger/moving-endpoints/index.php
+No syntax errors detected in ./ledger/anchor-lmc/index.php
+No syntax errors detected in ./ledger/escape-criterion/index.php
+No syntax errors detected in ./ledger/finite-range/index.php
+No syntax errors detected in ./ledger/phase-match/index.php
+No syntax errors detected in ./ledger/optical-map/index.php
+No syntax errors detected in ./ledger/joint-fit/index.php
+No syntax errors detected in ./ledger/common-field/index.php
+No syntax errors detected in ./ledger/anchor-ngc/index.php
+No syntax errors detected in ./ledger/coupled-modes/index.php
+No syntax errors detected in ./ledger/finite-source/index.php
+No syntax errors detected in ./index.php
+No syntax errors detected in ./gates/index.php
+No syntax errors detected in ./workbench/index.php
+No syntax errors detected in ./workbench/escape/index.php
+No syntax errors detected in ./workbench/wall/index.php
+No syntax errors detected in ./workbench/anchors/index.php
+No syntax errors detected in ./_lib/dev-router.php
+No syntax errors detected in ./_lib/site.php
+No syntax errors detected in ./_lib/tests.php
+No syntax errors detected in ./_lib/model.php
+
+JavaScript syntax:
+PASS

@@ -1,0 +1,239 @@
+BeyondSpacetime.org v1.9.0 — actual release verification
+
+187 numerical/content checks, 8 simulated service-worker cache lifecycle checks, 16 local HTTP checks = 211 new checks. 583 prior module scientific/catalog regression checks passed. 144 of the 187 are full PHP/JS result comparisons.
+
+Browser harness: PASS 12 responsive language/page checks; 108 local reference calculations; 6 exports; 6 import/rejection checks; three notebook rehydration checks (mock storage)
+
+Actual HTTP navigation blocked by browser environment (ERR_BLOCKED_BY_ADMINISTRATOR). Browser tests used isolated HTML and injected local assets with network requests blocked, and mock localStorage. Service-worker tests used a simulated CacheStorage and fetch implementation in Node, not a real installed browser worker. Actual PWA installation, secure-origin registration, persistent cache behavior and airplane-mode reload require live verification. Earlier full HTTP/browser suites not all rerun; prior archives preserved exactly.
+
+PASS PHP/JS parity photon-mass 0
+PASS PHP/JS parity photon-mass 1
+PASS PHP/JS parity photon-mass 2
+PASS PHP/JS parity photon-mass 3
+PASS PHP/JS parity photon-mass 4
+PASS PHP/JS parity photon-mass 5
+PASS PHP/JS parity photon-mass 6
+PASS PHP/JS parity photon-mass 7
+PASS PHP/JS parity photon-mass 8
+PASS PHP/JS parity photon-mass 9
+PASS PHP/JS parity photon-mass 10
+PASS PHP/JS parity photon-mass 11
+PASS PHP/JS parity constant-time 12
+PASS PHP/JS parity constant-time 13
+PASS PHP/JS parity constant-time 14
+PASS PHP/JS parity constant-time 15
+PASS PHP/JS parity constant-time 16
+PASS PHP/JS parity constant-time 17
+PASS PHP/JS parity constant-time 18
+PASS PHP/JS parity constant-time 19
+PASS PHP/JS parity constant-time 20
+PASS PHP/JS parity constant-time 21
+PASS PHP/JS parity constant-time 22
+PASS PHP/JS parity constant-time 23
+PASS PHP/JS parity light-slowing 24
+PASS PHP/JS parity light-slowing 25
+PASS PHP/JS parity light-slowing 26
+PASS PHP/JS parity light-slowing 27
+PASS PHP/JS parity light-slowing 28
+PASS PHP/JS parity light-slowing 29
+PASS PHP/JS parity light-slowing 30
+PASS PHP/JS parity light-slowing 31
+PASS PHP/JS parity light-slowing 32
+PASS PHP/JS parity light-slowing 33
+PASS PHP/JS parity light-slowing 34
+PASS PHP/JS parity light-slowing 35
+PASS PHP/JS parity when 36
+PASS PHP/JS parity when 37
+PASS PHP/JS parity when 38
+PASS PHP/JS parity when 39
+PASS PHP/JS parity when 40
+PASS PHP/JS parity when 41
+PASS PHP/JS parity when 42
+PASS PHP/JS parity when 43
+PASS PHP/JS parity when 44
+PASS PHP/JS parity when 45
+PASS PHP/JS parity when 46
+PASS PHP/JS parity when 47
+PASS PHP/JS parity where 48
+PASS PHP/JS parity where 49
+PASS PHP/JS parity where 50
+PASS PHP/JS parity where 51
+PASS PHP/JS parity where 52
+PASS PHP/JS parity where 53
+PASS PHP/JS parity where 54
+PASS PHP/JS parity where 55
+PASS PHP/JS parity where 56
+PASS PHP/JS parity where 57
+PASS PHP/JS parity where 58
+PASS PHP/JS parity where 59
+PASS PHP/JS parity physical-existence 60
+PASS PHP/JS parity physical-existence 61
+PASS PHP/JS parity physical-existence 62
+PASS PHP/JS parity physical-existence 63
+PASS PHP/JS parity physical-existence 64
+PASS PHP/JS parity physical-existence 65
+PASS PHP/JS parity physical-existence 66
+PASS PHP/JS parity physical-existence 67
+PASS PHP/JS parity physical-existence 68
+PASS PHP/JS parity physical-existence 69
+PASS PHP/JS parity physical-existence 70
+PASS PHP/JS parity physical-existence 71
+PASS PHP/JS parity spacetime 72
+PASS PHP/JS parity spacetime 73
+PASS PHP/JS parity spacetime 74
+PASS PHP/JS parity spacetime 75
+PASS PHP/JS parity spacetime 76
+PASS PHP/JS parity spacetime 77
+PASS PHP/JS parity spacetime 78
+PASS PHP/JS parity spacetime 79
+PASS PHP/JS parity spacetime 80
+PASS PHP/JS parity spacetime 81
+PASS PHP/JS parity spacetime 82
+PASS PHP/JS parity spacetime 83
+PASS PHP/JS parity fastest-signal 84
+PASS PHP/JS parity fastest-signal 85
+PASS PHP/JS parity fastest-signal 86
+PASS PHP/JS parity fastest-signal 87
+PASS PHP/JS parity fastest-signal 88
+PASS PHP/JS parity fastest-signal 89
+PASS PHP/JS parity fastest-signal 90
+PASS PHP/JS parity fastest-signal 91
+PASS PHP/JS parity fastest-signal 92
+PASS PHP/JS parity fastest-signal 93
+PASS PHP/JS parity fastest-signal 94
+PASS PHP/JS parity fastest-signal 95
+PASS PHP/JS parity separation 96
+PASS PHP/JS parity separation 97
+PASS PHP/JS parity separation 98
+PASS PHP/JS parity separation 99
+PASS PHP/JS parity separation 100
+PASS PHP/JS parity separation 101
+PASS PHP/JS parity separation 102
+PASS PHP/JS parity separation 103
+PASS PHP/JS parity separation 104
+PASS PHP/JS parity separation 105
+PASS PHP/JS parity separation 106
+PASS PHP/JS parity separation 107
+PASS PHP/JS parity cosmic-size 108
+PASS PHP/JS parity cosmic-size 109
+PASS PHP/JS parity cosmic-size 110
+PASS PHP/JS parity cosmic-size 111
+PASS PHP/JS parity cosmic-size 112
+PASS PHP/JS parity cosmic-size 113
+PASS PHP/JS parity cosmic-size 114
+PASS PHP/JS parity cosmic-size 115
+PASS PHP/JS parity cosmic-size 116
+PASS PHP/JS parity cosmic-size 117
+PASS PHP/JS parity cosmic-size 118
+PASS PHP/JS parity cosmic-size 119
+PASS PHP/JS parity cosmic-age 120
+PASS PHP/JS parity cosmic-age 121
+PASS PHP/JS parity cosmic-age 122
+PASS PHP/JS parity cosmic-age 123
+PASS PHP/JS parity cosmic-age 124
+PASS PHP/JS parity cosmic-age 125
+PASS PHP/JS parity cosmic-age 126
+PASS PHP/JS parity cosmic-age 127
+PASS PHP/JS parity cosmic-age 128
+PASS PHP/JS parity cosmic-age 129
+PASS PHP/JS parity cosmic-age 130
+PASS PHP/JS parity cosmic-age 131
+PASS PHP/JS parity distance-inference 132
+PASS PHP/JS parity distance-inference 133
+PASS PHP/JS parity distance-inference 134
+PASS PHP/JS parity distance-inference 135
+PASS PHP/JS parity distance-inference 136
+PASS PHP/JS parity distance-inference 137
+PASS PHP/JS parity distance-inference 138
+PASS PHP/JS parity distance-inference 139
+PASS PHP/JS parity distance-inference 140
+PASS PHP/JS parity distance-inference 141
+PASS PHP/JS parity distance-inference 142
+PASS PHP/JS parity distance-inference 143
+PASS reject unknown parameter photon-mass
+PASS reject invalid photon-mass/gap
+PASS reject unknown parameter constant-time
+PASS reject invalid constant-time/rate
+PASS reject invalid constant-time/beta
+PASS reject invalid constant-time/duration
+PASS reject invalid constant-time/ratio
+PASS reject unknown parameter light-slowing
+PASS reject invalid light-slowing/gap
+PASS reject invalid light-slowing/drag
+PASS reject invalid light-slowing/duration
+PASS reject unknown parameter when
+PASS reject invalid when/period
+PASS reject invalid when/delay
+PASS reject unknown parameter where
+PASS reject invalid where/dx
+PASS reject invalid where/dy
+PASS reject invalid where/shift
+PASS reject unknown parameter physical-existence
+PASS reject invalid physical-existence/energy
+PASS reject invalid physical-existence/angle
+PASS reject unknown parameter spacetime
+PASS reject invalid spacetime/beta
+PASS reject invalid spacetime/duration
+PASS reject unknown parameter fastest-signal
+PASS reject invalid fastest-signal/fraction
+PASS reject invalid fastest-signal/distance
+PASS reject unknown parameter separation
+PASS reject invalid separation/beta
+PASS reject unknown parameter cosmic-size
+PASS reject invalid cosmic-size/reach
+PASS reject invalid cosmic-size/domain
+PASS reject unknown parameter cosmic-age
+PASS reject invalid cosmic-age/h0
+PASS reject invalid cosmic-age/matter
+PASS reject unknown parameter distance-inference
+PASS reject invalid distance-inference/actual
+PASS reject invalid distance-inference/extinction
+PASS reject prototype identifiers
+PASS source hash exact
+PASS localized catalog matches original
+PASS original lesson catalog exact
+PASS manifest scope and icons
+187 passed, 0 failed
+PASS complete atomic install and no implicit update activation
+PASS failed install removes partial new cache, retains prior version
+PASS activate removes old scoped caches only
+PASS all 10 resources available without network
+PASS does not intercept other modules, remote URLs, query strings, non-GET
+PASS cache readiness reflects missing resource
+PASS missing cache resource fails explicitly offline
+PASS manual update activation
+8 passed, 0 failed
+PASS cache resource /offline/
+PASS cache resource /offline/index.html
+PASS cache resource /offline/manifest.webmanifest
+PASS cache resource /offline/assets/compass.png
+PASS cache resource /offline/assets/icon-192.png
+PASS cache resource /offline/assets/icon-512.png
+PASS cache resource /offline/assets/offline.css
+PASS cache resource /offline/assets/catalog.js
+PASS cache resource /offline/assets/solver.js
+PASS cache resource /offline/assets/offline.js
+PASS private test directory denied
+PASS canonical and no-JS index
+PASS manifest scope
+PASS previous global route
+PASS previous research route
+PASS previous timeline route
+16 passed, 0 failed
+
+Regression suite totals:
+foundations: 61 passed, 0 failed
+evidence: 47 passed, 0 failed
+research: 48 passed, 0 failed
+model-comparison: 65 passed, 0 failed
+timeline: 248 passed
+global: 114 passed, 0 failed
+
+Syntax checks:
+PASS offline/assets/catalog.js
+PASS offline/assets/offline.js
+PASS offline/assets/solver.js
+PASS offline/sw.js
+PASS offline/_lib/sw-test.js
+PASS offline/_lib/test.js
+No syntax errors detected in offline/_lib/fixtures.php

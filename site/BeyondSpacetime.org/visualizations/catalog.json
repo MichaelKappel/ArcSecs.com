@@ -1,0 +1,351 @@
+{
+    "schema": "beyondspacetime.visualization.catalog.v1",
+    "version": "2.1.0",
+    "scenes": [
+        {
+            "id": "photon",
+            "url": "/visualizations/photon/",
+            "source": "https://arcsecs.com/read-scientific-paper/",
+            "modelUrl": "https://beyondspacetime.org/foundations/light-slowing/",
+            "params": [
+                {
+                    "key": "gap",
+                    "label": "Rest-energy fraction",
+                    "default": 0.1,
+                    "min": 0,
+                    "max": 0.9,
+                    "step": 0.01,
+                    "unit": ""
+                },
+                {
+                    "key": "drag",
+                    "label": "Momentum-loss rate",
+                    "default": 0.3,
+                    "min": 0,
+                    "max": 2,
+                    "step": 0.05,
+                    "unit": ""
+                },
+                {
+                    "key": "duration",
+                    "label": "Progression interval",
+                    "default": 5,
+                    "min": 0.1,
+                    "max": 20,
+                    "step": 0.1,
+                    "unit": ""
+                }
+            ],
+            "title": "Journey of a photon",
+            "model": "foundation:light-slowing",
+            "mode": "time",
+            "question": "Does energy loss necessarily imply significant slowing?",
+            "description": "Watch the conditional fixed-gap packet and the zero-gap reference move along a shared normalized path.",
+            "detail": "The path length is the trapezoidal integral of returned group-speed samples divided by C times the modeled duration. The path is not an astronomical distance; the marker at its right end is a reference, not a modeled detector.",
+            "control": {
+                "gap": 0
+            },
+            "sample": null,
+            "source_label": "Foundation 3 · Review 6.0 Parts XXXIII–XXXIV"
+        },
+        {
+            "id": "clocks",
+            "url": "/visualizations/clocks/",
+            "source": "https://arcsecs.com/read-scientific-paper/",
+            "modelUrl": "https://beyondspacetime.org/foundations/constant-time/",
+            "params": [
+                {
+                    "key": "rate",
+                    "label": "Reference rate",
+                    "default": 1,
+                    "min": 0.1,
+                    "max": 5,
+                    "step": 0.1,
+                    "unit": "Hz"
+                },
+                {
+                    "key": "beta",
+                    "label": "Relative speed / c",
+                    "default": 0.6,
+                    "min": 0,
+                    "max": 0.99,
+                    "step": 0.01,
+                    "unit": ""
+                },
+                {
+                    "key": "duration",
+                    "label": "Coordinate interval",
+                    "default": 10,
+                    "min": 1,
+                    "max": 60,
+                    "step": 1,
+                    "unit": "s"
+                },
+                {
+                    "key": "ratio",
+                    "label": "Candidate B/A rate",
+                    "default": 0.8,
+                    "min": 0.1,
+                    "max": 2,
+                    "step": 0.05,
+                    "unit": ""
+                }
+            ],
+            "title": "Three clocks, one coordinate interval",
+            "model": "foundation:constant-time",
+            "mode": "time",
+            "question": "Can one stipulated clock-rate ratio match all relativistic predictions?",
+            "description": "Watch reference, candidate and special-relativistic clock counts accumulate on one time axis.",
+            "detail": "Each revolution represents one count, not a mechanism inside an actual atomic clock. The candidate rate is stipulated; matching a single relative velocity is not independent validation.",
+            "control": {
+                "beta": 0,
+                "ratio": 1
+            },
+            "sample": null,
+            "source_label": "Foundation 2 · Review 6.0 §5.3"
+        },
+        {
+            "id": "separation",
+            "url": "/visualizations/separation/",
+            "source": "https://arcsecs.com/read-scientific-paper/",
+            "modelUrl": "https://beyondspacetime.org/foundations/separation/",
+            "params": [
+                {
+                    "key": "beta",
+                    "label": "Each ship speed / C",
+                    "default": 0.9,
+                    "min": 0,
+                    "max": 0.99,
+                    "step": 0.01,
+                    "unit": ""
+                }
+            ],
+            "title": "Separation is not signal speed",
+            "model": "foundation:separation",
+            "mode": "sweep",
+            "question": "How can common-frame separation exceed C without superluminal local signals?",
+            "description": "Move along the speed-parameter sweep and compare separation rate with relativistic relative speed.",
+            "detail": "The arrows represent each ship’s speed in the common reference frame, not a trajectory or a signal. The displayed relative speed follows the existing special-relativistic calculation.",
+            "control": {
+                "beta": 0
+            },
+            "sample": "beta",
+            "source_label": "Foundation 9 · Review 6.0 §3.1–3.3"
+        },
+        {
+            "id": "cosmic-domains",
+            "url": "/visualizations/cosmic-domains/",
+            "source": "https://arcsecs.com/read-scientific-paper/",
+            "modelUrl": "https://beyondspacetime.org/foundations/cosmic-size/",
+            "params": [
+                {
+                    "key": "reach",
+                    "label": "Signal reach",
+                    "default": 4,
+                    "min": 0.1,
+                    "max": 10,
+                    "step": 0.1,
+                    "unit": "normalized"
+                },
+                {
+                    "key": "domain",
+                    "label": "Assumed domain radius",
+                    "default": 8,
+                    "min": 0.1,
+                    "max": 20,
+                    "step": 0.1,
+                    "unit": "normalized"
+                }
+            ],
+            "title": "Observable reach and hypothetical cosmic domains",
+            "model": "foundation:cosmic-size",
+            "mode": "sweep",
+            "question": "Does an observable reach establish the total size of the cosmos?",
+            "description": "Compare an illustrative spherical domain with the region accessible to the assumed signal reach.",
+            "detail": "Nested circles show a central cross-section of the assumed spheres; the accessible fraction is a volume ratio, not an area ratio. This is not wall dynamics, a cosmological horizon calculation or evidence for a neighboring universe.",
+            "control": {
+                "domain": 4
+            },
+            "sample": "domain",
+            "source_label": "Foundation 10 · book Chapters 26 and 30–32"
+        },
+        {
+            "id": "cosmic-age",
+            "url": "/visualizations/cosmic-age/",
+            "source": "https://arcsecs.com/read-scientific-paper/",
+            "modelUrl": "https://beyondspacetime.org/foundations/cosmic-age/",
+            "params": [
+                {
+                    "key": "h0",
+                    "label": "Hubble constant",
+                    "default": 70,
+                    "min": 45,
+                    "max": 95,
+                    "step": 1,
+                    "unit": "km/s/Mpc"
+                },
+                {
+                    "key": "matter",
+                    "label": "Matter fraction",
+                    "default": 0.3,
+                    "min": 0.05,
+                    "max": 0.95,
+                    "step": 0.01,
+                    "unit": ""
+                }
+            ],
+            "title": "Age of a reference expansion model",
+            "model": "foundation:cosmic-age",
+            "mode": "sweep",
+            "question": "How do Hubble constant and matter fraction change the modeled age?",
+            "description": "Compare two flat matter–Λ reference age curves over the same Hubble constant range.",
+            "detail": "This is a parameter sweep of a flat matter-plus-Λ age formula, neglecting radiation. It is not an animation of cosmic expansion, a fit to measurements, or the age of a hypothetical parent cosmos. The reference matter fraction is an illustrative comparison value.",
+            "control": {
+                "matter": 0.315
+            },
+            "sample": "h0",
+            "source_label": "Foundation 11 · book Chapter 26"
+        },
+        {
+            "id": "escape",
+            "url": "/visualizations/escape/",
+            "source": "https://arcsecs.com/read-scientific-paper/",
+            "modelUrl": "https://beyondspacetime.org/evidence/workbench/escape/",
+            "params": [
+                {
+                    "key": "ratio",
+                    "label": "Escape ratio κ/G",
+                    "default": 4,
+                    "min": 0,
+                    "max": 16,
+                    "step": 0.1,
+                    "unit": ""
+                },
+                {
+                    "key": "duration",
+                    "label": "Duration GT",
+                    "default": 12,
+                    "min": 0.5,
+                    "max": 40,
+                    "step": 0.5,
+                    "unit": ""
+                }
+            ],
+            "title": "Coherent conversion and escape",
+            "model": "evidence:escape",
+            "mode": "time",
+            "question": "When does total converted population remain monotone?",
+            "description": "Observe the incident, local-converted and escaped populations with the reversible zero-escape reference.",
+            "detail": "The segmented reservoir is a population ledger for the selected-mode solution, not a spatial or individual-photon trajectory. Display geometry clips tiny negative floating-point residuals to zero; raw readouts and exports preserve them.",
+            "control": {
+                "ratio": 0
+            },
+            "sample": null,
+            "source_label": "Review 6.0 §15.6 · K11–K13"
+        },
+        {
+            "id": "wall",
+            "url": "/visualizations/wall/",
+            "source": "https://arcsecs.com/read-scientific-paper/",
+            "modelUrl": "https://beyondspacetime.org/evidence/workbench/wall/",
+            "params": [
+                {
+                    "key": "loggap",
+                    "label": "log₁₀ gap fraction",
+                    "default": -1,
+                    "min": -16,
+                    "max": -0.05,
+                    "step": 0.05,
+                    "unit": ""
+                },
+                {
+                    "key": "ceiling",
+                    "label": "Ceiling ratio s",
+                    "default": 1.2,
+                    "min": 1.001,
+                    "max": 2,
+                    "step": 0.001,
+                    "unit": ""
+                }
+            ],
+            "title": "Can a fixed-gap wall be traversed?",
+            "model": "evidence:wall",
+            "mode": "sweep",
+            "question": "Can the two necessary constant-drag requirements overlap?",
+            "description": "Inspect retention bounds along the ceiling-ratio sweep and the two selected-case drag limits.",
+            "detail": "The curve is log₁₀ of the maximum retained energy fraction. The two selected-case drag limits are separate from the scrubbed sample. A finite interval is necessary, not proof of a physical wall or a complete traversal solution.",
+            "control": {
+                "loggap": -1
+            },
+            "sample": "ceiling",
+            "source_label": "Review 6.0 §10.3–10.4"
+        },
+        {
+            "id": "distance",
+            "url": "/visualizations/distance/",
+            "source": "https://arcsecs.com/read-scientific-paper/",
+            "modelUrl": "https://beyondspacetime.org/foundations/distance-inference/",
+            "params": [
+                {
+                    "key": "actual",
+                    "label": "Calibrated distance",
+                    "default": 1,
+                    "min": 0.1,
+                    "max": 10,
+                    "step": 0.1,
+                    "unit": "Mpc"
+                },
+                {
+                    "key": "extinction",
+                    "label": "Unmodeled attenuation",
+                    "default": 0.5,
+                    "min": -1,
+                    "max": 3,
+                    "step": 0.05,
+                    "unit": "mag"
+                }
+            ],
+            "title": "From light attenuation to distance bias",
+            "model": "foundation:distance-inference",
+            "mode": "sweep",
+            "question": "Can an unmodeled attenuation change inferred distance in either direction?",
+            "description": "Compare calibrated and inferred distance on a shared spatial scale as the attenuation parameter changes.",
+            "detail": "The two rays represent distance estimates for the same object, not two objects or a change in the actual distance. The signed attenuation experiment is conditional; it does not establish a universal distance correction.",
+            "control": {
+                "extinction": 0
+            },
+            "sample": "extinction",
+            "source_label": "Foundation 12 · book Chapter 26"
+        },
+        {
+            "id": "anchors",
+            "url": "/visualizations/anchors/",
+            "source": "https://arcsecs.com/read-scientific-paper/",
+            "modelUrl": "https://beyondspacetime.org/evidence/workbench/anchors/",
+            "params": [
+                {
+                    "key": "percent",
+                    "label": "Downward shift (%)",
+                    "default": 5,
+                    "min": 0,
+                    "max": 30,
+                    "step": 0.1,
+                    "unit": ""
+                }
+            ],
+            "title": "Geometric distance anchors",
+            "model": "evidence:anchors",
+            "mode": "sweep",
+            "question": "How large is a proposed shift relative to quoted anchor uncertainties?",
+            "description": "Compare LMC and NGC 4258 shift-to-uncertainty ratios along a common percentage axis.",
+            "detail": "The bars are magnitudes relative to the combined quoted uncertainties under unchanged calibration. They are not independent Gaussian detection significances, likelihoods or new measurements.",
+            "control": {
+                "percent": 0
+            },
+            "sample": "percent",
+            "source_label": "Review 6.0 §14.8"
+        }
+    ],
+    "api": "https://beyondspacetime.org/visualizations/api/",
+    "scope": "Original educational diagrams driven by existing foundation and evidence solvers. No new empirical findings."
+}

@@ -1,0 +1,20 @@
+BEYOND SPACETIME — v2.5.0 Full Root Edition
+
+INSTALLATION (one ZIP, no earlier packages required)
+1. Back up the entire live document root, including hidden files and hosting configuration. Keep the backup outside the public root. Install this release into a new EMPTY staging document root first. Do not blindly overlay an older root: the supplied .htaccess and index.php replace the old root routing. Keep a separate copy of your original site if you need its original WebGL/legacy PHP simulation routes.
+2. Extract the contents of BeyondSpacetime.org-v2.5.0-Root-Deploy.zip directly into the document root. There is no enclosing directory. index.php, .htaccess, robots.txt, sitemap.xml, llms.txt and favicon.ico are at the root. No Composer, Node, database or WordPress installation is required. PHP 8.1+ 64-bit, Apache 2.4, standard JSON, mod_alias, mod_headers and mod_mime; AllowOverride All or equivalent explicitly permitted directives. Permissions 0644 files / 0755 directories. Remove the uploaded archive from public access.
+3. Configure valid HTTPS, HTTP-to-HTTPS and www-to-apex redirects at your host; disable display_errors and directory listings; use host-level rate limits. Nginx does not read .htaccess: your administrator must implement equivalent restrictions, including deny all _lib directories, hidden files and unexpected PHP PATH_INFO, static MIME/cache headers, body ceilings and legacy route redirects. The supplied configuration is tested on Apache only.
+4. Verify / returns 200 with the new homepage and compass icon. /index.php redirects to /. Test /museum/, /foundations/, /evidence/, /research/, /model-comparison/, /timeline/, /global/, /offline/, /visualizations/, /knowledge-graph/, /experiment-design/, /universal-time/. Test /universal-time/rates/ and /universal-time/synchronization/; verify the API and JSON/CSV exports. Test /museum/_lib/site.php and /.htaccess (403/404), /unknown-page/ (404), /sitemap.xml, /llms.txt and /favicon.ico.
+5. YouTube embeds on the home and museum pages load only after user activation. Verify actual playback. Prepare offline in /offline/ and test installation and reopening in airplane mode on a real HTTPS origin. Existing offline resources and storage keys are unchanged. Verify original external ArcSecs links, accessibility, search indexing and production performance.
+6. After acceptance, switch your hosting document root to the new installation or replace the live files using a backed-up, atomic deployment. Submit https://beyondspacetime.org/sitemap.xml to search engines. Retain the previous installation for rollback.
+
+SCOPE
+Includes all 11 v2.4.0 recoverable exhibits and 180 canonical pages, a new actual root homepage, two additional process experiments and 23 explicit legacy-page compatibility redirects. The original v1.2.0 root source was not found. This is a complete independently deployable site, NOT a byte-for-byte restoration of the earlier WebGL 3D engine, propulsion and physical recession labs, original root APIs, or all old individual pages. Existing native SVG visualizations remain available; /explore/ redirects to the modern visualization gallery. Redirects are temporary and are not guarantees of identical content or parameter compatibility. Original full book/paper stay on ArcSecs.com. Scientific premise and standard physical reference are explicitly distinguished.
+
+TESTS
+PHP: php universal-time/_lib/process-tests.php
+Local Apache: python universal-time/_lib/process-http-test.py http://127.0.0.1:PORT
+python museum/_lib/quality-crawl.py http://127.0.0.1:PORT
+python museum/_lib/test.py http://127.0.0.1:PORT
+python knowledge-graph/_lib/test.py http://127.0.0.1:PORT
+Test tools are not production dependencies. Source inventory is museum/_lib/SHA256SUMS.txt, excluding itself. Historical per-module test notes may describe earlier releases; ROOT-TEST-RESULTS.txt is this release's summary.

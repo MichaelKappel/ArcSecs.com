@@ -1,0 +1,127 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Beyond Spacetime universal time and clock benchmark API",
+    "version": "2.4.0",
+    "description": "Read-only deterministic illustrative calculations; model omitted returns the catalog. Supply only parameters declared for the selected model. No empirical validation or global synchronization claimed."
+  },
+  "servers": [
+    {
+      "url": "https://beyondspacetime.org"
+    }
+  ],
+  "paths": {
+    "/universal-time/api/": {
+      "get": {
+        "parameters": [
+          {
+            "name": "model",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "dinner",
+                "benchmark"
+              ]
+            }
+          },
+          {
+            "name": "duration",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 24,
+              "default": 6
+            },
+            "description": "Home deadline, hours after noon"
+          },
+          {
+            "name": "outbound_fraction",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "default": 0.5
+            },
+            "description": "Fraction of interval in first environment"
+          },
+          {
+            "name": "clock_out",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "minimum": 0.05,
+              "maximum": 2,
+              "default": 0.5
+            },
+            "description": "First environment clock rate / home rate"
+          },
+          {
+            "name": "clock_back",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "minimum": 0.05,
+              "maximum": 2,
+              "default": 0.5
+            },
+            "description": "Second environment clock rate / home rate"
+          },
+          {
+            "name": "bio_out",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "minimum": 0.05,
+              "maximum": 2,
+              "default": 0.5
+            },
+            "description": "First environment biological process rate / reference"
+          },
+          {
+            "name": "bio_back",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "minimum": 0.05,
+              "maximum": 2,
+              "default": 0.5
+            },
+            "description": "Second environment biological process rate / reference"
+          },
+          {
+            "name": "multiplier",
+            "in": "query",
+            "schema": {
+              "type": "number",
+              "minimum": -1,
+              "maximum": 3,
+              "default": 1
+            },
+            "description": "Candidate multiplier of published relativistic gradient"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Catalog or numerical result with rows, metrics, assumptions and solver hash",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid model or parameter"
+          },
+          "405": {
+            "description": "Method not allowed"
+          }
+        }
+      }
+    }
+  }
+}

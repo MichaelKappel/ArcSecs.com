@@ -1,0 +1,2 @@
+<?php
+declare(strict_types=1);require dirname(__DIR__).'/_lib/model.php';require dirname(__DIR__,2).'/museum/_lib/site.php';\BSPMuseum\api_method();try{$p=$_GET;$id=$p['model']??null;unset($p['model']);if($id===null&&$p===[])$r=\BSPTime\catalog();else{if(!is_string($id))throw new InvalidArgumentException('Model must be a string');$r=\BSPTime\calculate($id,$p);}echo \BSPMuseum\j($r);}catch(InvalidArgumentException $e){http_response_code(400);echo \BSPMuseum\j(['error'=>$e->getMessage()]);}
