@@ -1,0 +1,819 @@
+<h2 id="lib-how-old-is-the-universe-independent-cosmic-chronometers-distance-calibration-and-jwst-false-high-redshift-candidates"><strong>How Old Is the Universe? Independent Cosmic Chronometers, Distance Calibration, and JWST False High-Redshift Candidates</strong></h2>
+<blockquote>
+<p><strong>ArcSecs editorial reading key (23 November 2026; R32):</strong> This report develops the ArcSecs physical-first research programme. Instrument readings and published numerical bounds remain distinct from an author’s inference about the underlying cause. Historical relativity-based expressions are comparison benchmarks, <strong>not</strong> the adopted ArcSecs physical mechanism. A failed narrowly specified toy model does not establish that every future nonmetric physical mechanism is impossible. Likewise, an ArcSecs position is not automatically an independently observed result.</p>
+</blockquote>
+<p><strong>Direct observation to preserve:</strong> Measured stellar ages depend on stellar evolution calibration; observed redshift is a wavelength ratio rather than a clock reading for all cosmic history.</p>
+<p><strong>ArcSecs inference to investigate:</strong> Build an independent age lower-bound ledger and propagate calibrated distance uncertainty through competing physical redshift reconstructions.</p>
+<p><strong>Verification sources and data to inspect:</strong> Gaia stellar ages, globular cluster photometry, white dwarf cooling, nucleocosmochronology, JWST spectra.</p>
+<p>The universe’s precise global age is not directly measured by any cosmic stopwatch; rather, conventional 13.8-billion-year figures are model-dependent inferences obtained by integrating an assumed expansion history from redshift zero to infinity, whereas empirical Milky Way clocks constrain only the minimum duration of local matter1. Under the ArcSecs research charter—which investigates a static Euclidean spatial framework (“Where”) and a constant universal progression parameter T (“When”) with massive, decelerating photons—Gaia-calibrated globular-cluster color-magnitude diagrams set a model-independent Galactic matter lower bound of 13.39 ± 0.10 (stat.) ± 0.23 (sys.) Gyr and an inferred assembly bound of 13.57 +0.16/−0.14 (stat.) ± 0.23 (sys.) Gyr2. While Planck-anchored flat Lambda-CDM yields 13.79–13.80 Gyr, SH0ES-anchored flat Lambda-CDM yields 12.70 ± 0.18 Gyr, creating a 2.68-sigma tension with globular-cluster clocks that disappears when cosmic duration is decoupled from the Hubble parameter1. Concurrently, an audit of James Webb Space Telescope (JWST) high-redshift candidates shows 3 of 3 targeted z ≈ 30–32 dropouts (Capotauro and two Bullet Cluster sources) reclassified via multi-epoch proper motion (24–49 mas/yr) as nearby Milky Way Y-type brown dwarfs5, whereas spatially extended, multi-line spectroscopic galaxies near z ≈ 14 (JADES-GS-z14-0 and MoM-z14) remain empirically robust extragalactic detections8.</p>
+<h3 id="lib-abstract"><strong>Abstract</strong></h3>
+<p>This Independent Mission 03 investigation evaluates what astrophysical clocks, geometric distance anchors, and JWST infrared surveys establish independently of relativistic metric assumptions as of 23 November 2026. By separating direct physical observables from cosmological inference, the study tests the assertion that total cosmic age is not known without model assumptions while establishing strict empirical lower bounds. Stellar and nuclear chronometers within the Milky Way—specifically Gaia-anchored globular-cluster color-magnitude diagrams (13.39 ± 0.10 ± 0.23 Gyr; inferred matter bound 13.57 +0.16/−0.14 ± 0.23 Gyr)2, white-dwarf cooling truncations in NGC 6397 (12.93 Gyr) and M4 (12.1 Gyr; 95% lower limit 10.3 Gyr)11, and uranium-thorium radiochronometry in the halo giant HE 1523−0901 (13.2 Gyr; systematic span 0.7–2.7 Gyr)13—require at least 12.5–13.3 Gyr of local physical history. Comparing these clocks across three explicit cosmologies shows that SH0ES-calibrated flat Lambda-CDM (12.698 ± 0.175 Gyr) conflicts with globular-cluster constraints at 2.68 sigma3, whereas dynamical dark-energy parameterizations (14.064 Gyr under a DESI-DR2-like lower Hubble constant)3 and a derived ArcSecs static-Euclidean decelerating-light model accommodate all stellar lower bounds3. The ArcSecs propagation law predicts radially closer extragalactic distances than comoving benchmarks (4,154.9 Mpc vs. 10,344.1 Mpc at z = 14.1793)3, but currently lacks measured energy-sink and angular-magnification microphysics to match high-redshift angular sizes. Finally, proper-motion and NIRSpec audits of Capotauro and two Bullet Cluster z ≈ 30–32 candidates confirm 100% brown-dwarf contamination in that extreme photometric sample (Wilson 95% CI: 43.9%–100.0%)3, demonstrating that multi-epoch astrometry and multi-line spectroscopy are mandatory before high-redshift candidates inform cosmic chronology.<br>
+<strong>Keywords:</strong> cosmic chronometers; globular clusters; white-dwarf cooling; distance ladder; JWST brown dwarfs; Capotauro; proper motion; ArcSecs cosmology</p>
+<h3 id="lib-binding-arcsecs-research-position-and-scope"><strong>Binding ArcSecs Research Position and Scope</strong></h3>
+<p>This commission is an affirmative investigation of the ArcSecs model rather than a referendum on whether to abandon it. The following eleven statements constitute the sponsor’s fixed research and editorial premises for this assignment and are reproduced faithfully as stipulated:</p>
+<blockquote>
+<ol type="1">
+<li>Photons have mass.<br>
+</li>
+<li>Time is constant.<br>
+</li>
+<li>Light slows down over time.<br>
+</li>
+<li>Time does not physically exist; it is the “When.”<br>
+</li>
+<li>Space does not physically exist; it is the “Where.”<br>
+</li>
+<li>All that physically exists at any moment occupies area and has mass at that moment.<br>
+</li>
+<li>Spacetime does not physically exist.<br>
+</li>
+<li>Light is not the fastest thing in the universe.<br>
+</li>
+<li>Things move apart from each other faster than causality; time, space, or spacetime cannot be physically stretched because they are not physical substances to stretch.<br>
+</li>
+<li>The size of the universe is unknown.<br>
+</li>
+<li>Objects in the universe are smaller and closer than they appear.</li>
+</ol>
+</blockquote>
+<p><strong>Scope-Locked Revision:</strong> 2026-11-23 (Independent Mission 03). <strong>Authorship and AI-Assistance Statement:</strong> Prepared as an independent observational cosmology and statistical inference manuscript under the ArcSecs Mission 03 charter; AI language-model assistance was used to organize prose, audit source snippets, and run external Python/SciPy numerical checks prior to manuscript compilation, and all results remain subject to independent physicist and domain-reviewer verification prior to publication.<br>
+Throughout this manuscript, space names where objects are located and time names when events occur; neither is treated as matter, a vacuum medium, an elastic sheet, or a physical carrier of forces. Special and general relativity are excluded as explanatory architectures, and published metric predictions are documented strictly as external measurement benchmarks. Clock-rate variations, propagation lags, and isotopic decay ratios are analyzed exclusively as physical processes occurring within a constant universal progression parameter T, never as changes to time itself. Every unverified ArcSecs mechanism is explicitly flagged as an unresolved or missing physical mechanism.</p>
+<h3 id="lib-research-questions-and-operational-definitions"><strong>Research Questions and Operational Definitions</strong></h3>
+<p>This study resolves five foundational questions: (1) what “age of the universe” operationally means in cyclic, finite-beginning, or past-eternal cosmologies, distinguishing an observable hot phase from total physical reality and individual stellar lifetimes; (2) which empirical methods establish strict minimum ages versus partly independent or globally model-dependent ages; (3) how measured angles, fluxes, colors, spectra, parallaxes, and proper motions map onto cataloged distances; (4) whether extreme z &gt; 20 candidates can be nearby substellar objects, how often such false positives occur, and what they imply—and do not imply—about confirmed z ≈ 14 galaxies; and (5) how competing cosmologies bound cosmic age across explicit model families without assuming a disputed redshift mechanism.<br>
+Operationally, the universal progression parameter T denotes the constant ordering coordinate (“When”) along which physical interactions, emissions, and detections take place. A chronometric age measures the duration in constant T required for a physical system—such as a main-sequence turn-off star, a crystallizing white dwarf, or an actinide nucleus—to evolve from an initial physical boundary state to its observed state2. In finite-beginning expanding benchmarks, the global age parameter t0 integrates an assumed expansion rate back to a formal density singularity3; in cyclic or past-eternal models—including the static-Euclidean ArcSecs framework—total cosmic duration Tcosmos is unbounded above by local expansion rates and constrained only from below by surviving structures.<br>
+Distance and redshift terms likewise require strict operational separation. A light-year is a legitimate Euclidean length unit (“Where”) defined by multiplying a local electromagnetic speed by one Julian year, and must not be conflated with the model-dependent assumption that an extragalactic source’s distance in light-years equals its light-travel duration under varying photon speed or geometry. A photometric redshift is a statistical template fit to multi-band flux dropouts7, whereas a spectroscopic redshift measures discrete wavelength shifts of identified atomic or molecular transitions8; mapping either shift onto distance requires a propagation theory. Proper motion measures apparent angular displacement across the sky in milliarcseconds per year (mas/yr) relative to background reference frames5. Every conclusion in this paper is classified as an observation, derived mathematics, model-dependent inference, hypothesis, or philosophical interpretation, and scored against four outcomes: (A) supports a new measurable prediction, (B) fits known measurements without distinguishing itself, (C) is excluded by data, or (D) remains undecidable.</p>
+<h3 id="lib-literature-review"><strong>Literature Review</strong></h3>
+<h4 id="lib-stellar-evolution-white-dwarf-cooling-and-radiochronometry"><strong>Stellar Evolution, White-Dwarf Cooling, and Radiochronometry</strong></h4>
+<p>Milky Way globular clusters provide the tightest empirical lower bounds on Galactic matter age when anchored to trigonometric parallaxes2. Using full color-magnitude diagram (CMD) Gaussian-mixture Bayesian hierarchical modeling of Hubble Space Telescope (HST) photometry across Galactic globular clusters, Valcin et al. (2021) reduced convective mixing-length uncertainties by roughly 50%, obtaining an inferred cosmic age of 13.5 +0.16/−0.14 (stat.) ± 0.23 (0.33) (sys.) Gyr1. In Part III of that program (JCAP 2025(10):030), promoting initial helium fraction Y (0.2–0.4) and the dust reddening law RV (1.5–5) to free parameters alongside Gaia distance priors yielded an oldest cluster age of 13.39 ± 0.10 (stat.) ± 0.23 (sys.) Gyr, an inferred cosmic age (accounting for cluster formation delay) of 13.57 +0.16/−0.14 (stat.) ± 0.23 (sys.) Gyr, and a 95% confidence upper limit of 13.92 +0.13/−0.10 (stat.) ± 0.23 (sys.) Gyr2. Independent analyses of M92—moving from an earlier 11 ± 1.5 Gyr estimate19 to within one sigma of the 13.3–13.5 Gyr baseline4—and large Galactic old-star samples studied by Banik et al. (2026) confirm that statistical errors are now smaller than nuclear reaction-rate, opacity, and stellar-rotation systematics4. Notably, a 2021 MNRAS study of Gaia globular-cluster astrometry demonstrated that formal catalog uncertainties on parallax and proper motion in dense cores are underestimated by 10–20% (scaling factor 1.05–1.2), and clusters such as NGC 6266, NGC 6809, NGC 288, and NGC 7089 exhibit multi-sigma discrepancies between CMD-derived and parallax distances22.<br>
+White-dwarf cooling sequences constrain age through degenerate electron conduction and core crystallization independently of main-sequence nuclear burning11. Deep HST observations of Messier 4 (M4) initially yielded 12.7 ± 0.7 Gyr (2-sigma random error) compared to 7.3 ± 1.5 Gyr for the Galactic disk23, refined via two-dimensional CMD modeling incorporating distance, extinction, mass, and envelope/core uncertainties to a best fit of 12.1 Gyr and a 95% lower limit of 10.3 Gyr12. Bedin et al. (2009) confirmed truncation consistent with M4’s main-sequence turn-off age of 12.0 ± 1.4 Gyr24, while Richer et al. (2004) showed that an earlier ~9 Gyr estimate by De Marchi et al. (2003) stemmed from one-dimensional luminosity-function fitting25. In the metal-poor cluster NGC 6397, a 2016 MNRAS Monte Carlo fit to proper-motion-cleaned 126-orbit HST ACS photometry using Hansen et al. (2013) models yielded a best-fit cooling age of 12.93 Gyr11. Similarly, incorporating neon-22 sedimentation and carbon-oxygen phase separation in NGC 6791 resolved a longstanding discrepancy, shifting its white-dwarf cooling age to 8.0 ± 0.2 Gyr11, building on the foundational 9.5 Gyr lower limit from the Galactic disk white-dwarf luminosity function (Oswalt et al. 1996)27.<br>
+Radioactive actinide chronometry measures isotopic decay ratios directly without relying on stellar luminosity tracks. In the metal-poor halo red giant HE 1523−0901 (<math display="block"><semantics><mrow><mi>F</mi><mi>e</mi><mi>/</mi><mi>H</mi></mrow><annotation encoding="application/x-tex">Fe/H</annotation></semantics></math> = −2.65 ± 0.22 dex; Gaia parallax 0.3278 ± 0.0197 mas, distance 3,100 ± 200 pc), Frebel et al. (2007) combined Very Large Telescope (VLT) measurements of U/Th, U/Ir, Th/Eu, and Th/Os ratios to infer a weighted age of 13.2 Gyr, carrying a systematic uncertainty range of 0.7 to 2.7 Gyr from theoretical initial r-process production yields13. The high-velocity subgiant HD 140283 yields a central age of 14.46 ± 0.31 Gyr (statistical) as reviewed in a 2020 preprint (arXiv:2002.10332)28, though subsequent stellar-evolution reviews emphasize substantial atmosphere and opacity systematics in subgiant modeling21.</p>
+<h4 id="lib-global-expansion-benchmarks-cosmic-chronometers-and-distance-calibration"><strong>Global Expansion Benchmarks, Cosmic Chronometers, and Distance Calibration</strong></h4>
+<p>Global age estimates from cosmic microwave background (CMB) and baryon acoustic oscillation (BAO) datasets depend explicitly on an assumed metric cosmology. Planck 2018 CMB spectra within flat Lambda-CDM yield H0 = 67.4 ± 0.5 km/s/Mpc and an inferred age of 13.8 ± 0.02 Gyr1. Combining Dark Energy Spectroscopic Instrument (DESI) Data Release 2 (DR2) BAO measurements with Atacama Cosmology Telescope (ACT) DR6 and Planck PR4 spectra produces a ~3-sigma preference for evolving dark energy under a Chevallier-Polarski-Linder (CPL) parameterization (rising above 4 sigma with Type Ia supernovae), though neutrino-mass bounds remain sensitive to multipole cuts (Garcia-Quintero et al. 2025)31. Under CMB + DESI DR2 CPL fits, the inferred Hubble constant drops to 63.9 +1.7/−2.1 km/s/Mpc, even though Bayesian evidence disfavors adding two free parameters in some likelihood comparisons15. Meanwhile, 32 differential-age H(z) cosmic chronometer measurements from passively evolving galaxies probe redshift-rate evolution without a supernova distance ladder, yet still require stellar-population synthesis priors and a cosmological integral to infer global t015.<br>
+Local distance-ladder calibrations rest on redshift-free geometric anchors: 20 late-type detached eclipsing binaries (DEBs) fix the Large Magellanic Cloud (LMC) distance to 1% precision (inclination 25.0 ± 4 deg)34, while 22 GHz water megamaser VLBI kinematics in NGC 4258 yield a purely geometric angular-diameter distance of 7.576 ± 0.082 (stat.) ± 0.076 (sys.) Mpc (distance modulus 29.397 ± 0.032 mag)34. Calibrating Cepheids and Type Ia supernovae against these anchors, SH0ES reports H0 = 74.03 ± 1.42 km/s/Mpc (2019) and 73.2 ± 0.9 km/s/Mpc (2024)30, and JWST observations of &gt;1,000 Cepheids in NGC 4258 and five supernova hosts rejected HST photometric crowding as the cause of the Hubble tension at 8-sigma confidence (Riess et al. 2024)39. By contrast, the Carnegie-Chicago Hubble Program (CCHP) using Tip of the Red Giant Branch (TRGB) stars obtained H0 = 69.8 ± 0.8 ± 1.7 km/s/Mpc in 201930 and 69.85 km/s/Mpc (TRGB) and 67.96 km/s/Mpc (JAGB) in 202438, while JWST TRGB calibration in NGC 4258 measured an extinction-corrected F090W tip of 25.035 mag (Anand et al. 2024)40. Crucially, a 2025 preprint (arXiv:2510.04998) identified a &gt;0.1 mag discrepancy in NGC 4258 Wesenheit Cepheid zero-points across 2016–2022 SH0ES data and showed that uncertainties in the anomalous extinction ratio RV shift inferred distances by 4–5%38.</p>
+<h4 id="lib-jwst-high-redshift-dropouts-vs.-substellar-interlopers"><strong>JWST High-Redshift Dropouts vs. Substellar Interlopers</strong></h4>
+<p>Broadband JWST/NIRCam surveys select high-redshift candidates via sharp short-wavelength flux dropouts, creating a spectral degeneracy at z &gt; 15–30 between Lyman-alpha breaks and deep methane/water absorption in ultra-cool Y-type brown dwarfs5. The F356W-dropout Capotauro (CEERS ID U-100588; Gandolfi et al. 2026a)16 and two Bullet Cluster F277W/F356W dropouts6 were initially modeled as z ≈ 30–32 galaxy candidates before 2026 multi-epoch NIRCam astrometry and NIRSpec spectroscopy reclassified all three as Milky Way Y dwarfs5. Conversely, multi-facility spectroscopy has confirmed luminous extended galaxies near z ≈ 14, notably JADES-GS-z14-08 and MoM-z1417, illustrating why proper-motion and line-confirmation audits are essential16.</p>
+<h3 id="lib-explicit-hypotheses-physical-mechanism-and-missing-mechanisms"><strong>Explicit Hypotheses, Physical Mechanism, and Missing Mechanisms</strong></h3>
+<p>We test three preregistered hypotheses: Hypothesis H0 (Standard Metric-Stopwatch Null), which posits that flat Lambda-CDM uniquely determines cosmic age t0 from redshift zero to infinity; Hypothesis H1 (ArcSecs Chronometric Decoupling), which posits that cosmic duration in constant T is unbounded above by the inverse Hubble parameter while redshifts reflect physical momentum and energy loss by massive decelerating photons in fixed Euclidean “Where”; and Hypothesis H2 (JWST Dropout Contamination), which posits that extreme z &gt; 20 compact photometric dropouts suffer high contamination by cold Galactic Y dwarfs whereas resolved, multi-line z ≈ 14 spectroscopic galaxies are genuine extragalactic sources.<br>
+Starting from Premise 1 (“Photons have mass”), photons carry energy and momentum and respond to gravity. However, Particle Data Group (PDG 2024/2025) reviews compile solar-wind magnetohydrodynamic constraints placing an upper bound on any uniform Proca-like photon invariant rest mass below 10⁻¹⁸ eV46. Demonstrating a nonzero invariant rest mass therefore requires measuring an additional physical signature beyond energy-equivalent gravitational deflection—such as broadband frequency-dependent arrival dispersion from distant transients, magnetic-field Yukawa screening, or a longitudinal polarization mode. Because no positive rest-mass detection exists today, ArcSecs explicitly separates established photon momentum transfer from unmeasured invariant rest-mass signatures.<br>
+From Premises 2, 3, 7, and 9, we derive a static-Euclidean decelerating-light propagation model in which an emitted photon loses speed exponentially with progression T at deceleration rate beta while losing energy and frequency at attenuation rate HA. Under the matched-rate benchmark in which beta equals HA (calibrated locally to 67.4 km/s/Mpc, corresponding to a characteristic Hubble scale of 4,448.0 Mpc), integrating the decelerating speed over progression yields a finite Euclidean light-travel distance equal to 4,448.0 Mpc multiplied by the ratio of redshift to one plus redshift3. All symbolic equations, boundary conditions, and dimension checks are isolated outside this manuscript in Companion Document A.<br>
+<strong>ArcSecs Physical Mechanism and Missing-Mechanism Statement:</strong> In the proposed ArcSecs static-Euclidean framework, photons are massive physical particles propagating through fixed spatial coordinates (“Where”) during constant universal progression T (“When”), losing kinetic speed at rate beta and energy/frequency at rate HA through cumulative momentum and energy transfer to an ambient physical field or particle medium, which produces cosmological redshift and a finite asymptotic light-travel horizon equal to the emission light speed divided by the attenuation rate without stretching space or dilating time3; however, two microphysical mechanisms remain explicitly missing and unverified in this model: (1) a measured physical energy-momentum sink that reddens photons across all wavelengths without inducing unacceptable angular image blurring or violating laboratory scattering limits, and (2) a physical optical or refractive magnification mechanism capable of reproducing the observed angular-size turnover at high redshift so that distant sources appear physically smaller rather than larger than standard angular-diameter benchmarks3.</p>
+<h3 id="lib-data-distance-dependency-architecture-and-statistical-methods"><strong>Data, Distance-Dependency Architecture, and Statistical Methods</strong></h3>
+<p>Primary empirical inputs compiled through November 2026 encompass Gaia-calibrated HST globular-cluster CMDs1, HST ACS/WFPC2 white-dwarf cooling sequences11, VLT actinide spectroscopy of HE 1523−090113, CMB and BAO benchmarks (Planck 2018, DESI DR2, ACT DR6, 32 cosmic chronometers)1, local geometric anchors (LMC DEBs, NGC 4258 megamasers, SH0ES Cepheids, CCHP TRGB/JAGB)30, and JWST/ALMA high-redshift vs. brown-dwarf studies5. Raw NASA/IPAC NED-D bulk tables and GW170817 standard-siren likelihood chains were not directly retrieved in the verified source archive and are therefore documented structurally in the distance-rung taxonomy without invented numerical values.<br>
+Table 1 traces how raw physical observables convert into cataloged distances, explicitly separating redshift-free geometric rungs from model-dependent propagation conversions.</p>
+<table>
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Distance Rung / Method</th>
+<th>Raw Physical Observables</th>
+<th>Redshift Required?</th>
+<th>Key Physical / Model Inputs</th>
+<th>Representative Verified Measurement / Anchor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Trigonometric Parallax (Gaia)</td>
+<td>Sub-milliarcsecond angular shift over Earth’s orbital baseline</td>
+<td>No</td>
+<td>Astrometric zero-point, crowding, dense-core covariance scaling (10–20%)22</td>
+<td>HE 1523−0901 parallax 0.3278 ± 0.0197 mas (3,100 ± 200 pc)13</td>
+</tr>
+<tr class="even">
+<td>Detached Eclipsing Binaries (LMC)</td>
+<td>Eclipse light curves, radial velocities, V/K colors</td>
+<td>No</td>
+<td>Surface-brightness–color angular-diameter relation (0.8% accuracy), LMC tilt (25.0 ± 4 deg)35</td>
+<td>20 LMC late-type DEBs yielding 1% geometric anchor34</td>
+</tr>
+<tr class="odd">
+<td>Water Megamaser VLBI (NGC 4258)</td>
+<td>22 GHz spot angular positions (~5 μas scale), velocities, accelerations</td>
+<td>No</td>
+<td>Eccentric warped Keplerian disk model breaking mass-distance degeneracy34</td>
+<td>D = 7.576 ± 0.082 (stat.) ± 0.076 (sys.) Mpc; modulus 29.397 ± 0.032 mag34</td>
+</tr>
+<tr class="even">
+<td>Primary Standard Candles (Cepheids, TRGB, JAGB)</td>
+<td>Apparent magnitudes, pulsation periods, colors</td>
+<td>No (locally)</td>
+<td>Dust reddening law RV, metallicity, helium-flash physics, crowding30</td>
+<td>NGC 4258 JWST F090W TRGB 25.035 mag; MF814W = −4.047 to −4.073 mag34</td>
+</tr>
+<tr class="odd">
+<td>Type Ia Supernovae (Hubble Flow)</td>
+<td>Peak flux, light-curve shape/color, host spectrum</td>
+<td>Yes (for H0 slope)</td>
+<td>Standardizable candle assumption, host dust RV, local anchor calibration30</td>
+<td>SH0ES H0 = 73.2 ± 0.9 km/s/Mpc vs. CCHP TRGB 69.85 km/s/Mpc38</td>
+</tr>
+<tr class="even">
+<td>Standard Sirens (e.g., GW170817)</td>
+<td>Gravitational-wave strain amplitude, chirp mass, host position</td>
+<td>Yes (if paired with host z for H0)</td>
+<td>Quadrupole radiation calibration, inclination degeneracy</td>
+<td>Structural rung documented; GW170817 chains not retrieved in current archive</td>
+</tr>
+<tr class="odd">
+<td>Photometric / Spectroscopic High-z Distances</td>
+<td>Multi-band flux dropouts, break wavelengths, emission lines</td>
+<td>Yes</td>
+<td>Lyman-alpha IGM absorption, cosmological distance-redshift integral3</td>
+<td>JADES-GS-z14-0 zspec = 14.1793 ± 0.0007 (681.5 Mpc dA vs. 10,344 Mpc dC in Lambda-CDM)3</td>
+</tr>
+</tbody>
+</table>
+<p>Numerical benchmarks for flat Lambda-CDM and wCDM were evaluated via SciPy adaptive quadrature over redshift zero to infinity using a verified conversion constant of 977.792222 Gyr·(km/s/Mpc) and 10,000-draw Monte Carlo propagation (fixed random seed 42) of H0 and Ωm uncertainties3. Stellar chronometer uncertainties were combined in quadrature (e.g., ±0.275 Gyr for the 2025 globular-cluster bound)3. For JWST contamination audits, two-sided Wilson 95% confidence intervals were computed to prevent zero-width collapse on small binomial counts, and proper-motion signal-to-noise ratios were verified directly from reported displacements and errors3. Out-of-sample holdout protocols (against the 76 COSMOS-Web brown-dwarf candidates of Festin et al. 202642 and unexamined BAO/SNe covariances) are specified in Companion Document A as unexecuted validation steps.</p>
+<h3 id="lib-results"><strong>Results</strong></h3>
+<h4 id="lib-ranked-cosmic-age-ledger"><strong>Ranked Cosmic Age Ledger</strong></h4>
+<p>Table 2 orders audited cosmic age determinations from lowest cosmological model dependence (Milky Way physical clocks) to highest model dependence (global metric integrals).</p>
+<table>
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Method / Source</th>
+<th>Lower Bound or Central Estimate (Gyr)</th>
+<th>68% / 95% Uncertainty</th>
+<th>Model Dependence</th>
+<th>Key Supporting Observables</th>
+<th>Conflict or Unconstrained Region</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Galactic Disk White Dwarfs (Oswalt et al. 1996)27</td>
+<td>≥ 9.5 (lower limit)</td>
+<td>—</td>
+<td>Low (local WD cooling + disk LF)</td>
+<td>Faint cutoff of Galactic disk WD luminosity function</td>
+<td>Bounds disk onset only, not halo or cosmos</td>
+</tr>
+<tr class="even">
+<td>M4 White-Dwarf Cooling (Hansen et al. 2004; Bedin et al. 2009)12</td>
+<td>12.1 (2D CMD); 12.0 (turn-off)</td>
+<td>95% lower limit ≥ 10.3; ±1.4 (turn-off)</td>
+<td>Low-Moderate (WD core/envelope physics, distance, extinction)</td>
+<td>123-orbit HST photometry; proper-motion membership</td>
+<td>Sensitive to He/H atmosphere fraction and crystallization</td>
+</tr>
+<tr class="odd">
+<td>NGC 6397 White-Dwarf Cooling (MNRAS 456, 3729, 2016)11</td>
+<td>12.93</td>
+<td>~±0.5 (model grid)</td>
+<td>Low-Moderate (mass function, crystallization)</td>
+<td>126-orbit HST ACS F606W/F814W proper-motion CMD</td>
+<td>Exceeds SH0ES-Lambda-CDM t0 = 12.70 Gyr by ~0.23 Gyr (within 1 sigma)</td>
+</tr>
+<tr class="even">
+<td>HE 1523−0901 U/Th Radiochronometry (Frebel et al. 2007)13</td>
+<td>13.2</td>
+<td>±0.7 to ±2.7 (sys.)</td>
+<td>Low-Moderate (initial r-process yields; zero stellar track)</td>
+<td>VLT U/Th, U/Ir, Th/Eu, Th/Os; Gaia distance 3,100 ± 200 pc</td>
+<td>Large theoretical production-ratio systematic span</td>
+</tr>
+<tr class="odd">
+<td>Oldest Globular Clusters (JCAP 2025(10):030)2</td>
+<td>13.39 (GC); 13.57 (inferred tU)</td>
+<td>±0.10 (stat.) ±0.23 (sys.); 95% upper ≤ 13.92</td>
+<td>Moderate (DSED opacities/rates; free Y, RV; Gaia priors)</td>
+<td>Full HST CMDs + Gaia parallaxes + spectroscopic <math display="block"><semantics><mrow><mi>F</mi><mi>e</mi><mi>/</mi><mi>H</mi></mrow><annotation encoding="application/x-tex">Fe/H</annotation></semantics></math></td>
+<td>2.68-sigma conflict with SH0ES-anchored flat Lambda-CDM (t0 = 12.70 Gyr)3</td>
+</tr>
+<tr class="even">
+<td>HD 140283 Subgiant (arXiv:2002.10332 review)28</td>
+<td>14.46</td>
+<td>±0.31 (stat.); stellar sys. noted21</td>
+<td>Moderate (subgiant opacity, oxygen abundance, distance)</td>
+<td>Parallax + subgiant luminosity</td>
+<td>Central value exceeds Planck t0 by ~2 sigma before full model systematics</td>
+</tr>
+<tr class="odd">
+<td>Flat Lambda-CDM + Planck 20181</td>
+<td>13.791 (MC) / 13.80 (Planck)</td>
+<td>±0.02 (correlated) / ±0.134 (uncorrelated MC)</td>
+<td>High (metric expansion, flat Lambda, CMB recombination)</td>
+<td>Planck spectra (H0 = 67.4 ± 0.5, Ωm = 0.315)</td>
+<td>Discrepant with local SH0ES H0 = 73.2 ± 0.9 km/s/Mpc30</td>
+</tr>
+<tr class="even">
+<td>Flat Lambda-CDM + SH0ES H03</td>
+<td>12.698</td>
+<td>±0.175 (MC)</td>
+<td>High (metric expansion + Cepheid/SN ladder)</td>
+<td>Local distance ladder H0 = 73.2 km/s/Mpc + Ωm = 0.315</td>
+<td>Chi-squared = 10.36 vs. 3 local chronometers; 2.68-sigma conflict with Valcin-series 20253</td>
+</tr>
+<tr class="odd">
+<td>Hybrid wCDM (DESI DR2 + CMB CPL-like w = −0.8)3</td>
+<td>14.064</td>
+<td>Driven by H0 = 63.9 +1.7/−2.1</td>
+<td>Very High (dynamical dark energy w0–wa)</td>
+<td>DESI DR2 BAO + Planck PR4 + ACT DR6</td>
+<td>Bayesian evidence disfavors extra CPL parameters in some tests15</td>
+</tr>
+<tr class="even">
+<td>Coasting / Linear Model (t0 = 1/H0)3</td>
+<td>14.507 (H0 = 67.4); 13.358 (H0 = 73.2)</td>
+<td>±0.11 to ±0.16</td>
+<td>High (constant expansion rate)</td>
+<td>H0 anchor only</td>
+<td>Relies on unverified coasting expansion dynamics</td>
+</tr>
+<tr class="odd">
+<td>ArcSecs Static-Euclidean Decelerating-Light3</td>
+<td>Tcosmos ≥ 13.57 (unbounded above)</td>
+<td>Lower bound ±0.275</td>
+<td>Low on Tcosmos; Incomplete on propagation sink</td>
+<td>All local Milky Way chronometers (zero age tension)</td>
+<td>Total cosmic age unconstrained above; angular-size &amp; energy-sink physics missing</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lib-three-cosmology-comparison-on-chronometers-and-high-redshift-scales"><strong>Three-Cosmology Comparison on Chronometers and High-Redshift Scales</strong></h4>
+<p>Evaluating the three cosmological frameworks against verified chronometers and z ≈ 14 scales exposes sharp diagnostic trade-offs3. Under flat Lambda-CDM (Model 1), Planck 2018 parameters yield t0 = 13.791 Gyr (chi-squared = 3.73 across the 2025 globular-cluster bound, NGC 6397 white dwarfs, and HE 1523−0901)3, whereas SH0ES parameters (H0 = 73.2 km/s/Mpc) yield t0 = 12.698 ± 0.175 Gyr, elevating chi-squared to 10.36 and leaving the global model 0.87 Gyr younger than the 2025 globular-cluster bound (2.68-sigma tension)3. CCHP TRGB calibration (H0 = 69.85 km/s/Mpc) yields an intermediate 13.307 Gyr3.<br>
+Under a dynamical or changing-coupling hybrid (Model 2), a DESI-DR2-like lower H0 = 63.9 km/s/Mpc with w = −0.8 extends t0 to 14.064 Gyr3, while phantom dark energy (w = −1.2) at H0 = 73.2 km/s/Mpc lifts t0 only to 13.033 Gyr3. In changing-gravitational-coupling hybrids where effective gravitational strength varied in the past, stellar hydrogen-burning rates scale strongly with gravity, shifting inferred main-sequence ages relative to nuclear actinide clocks—a testable divergence between stellar luminosity tracks and weak/strong radioactive decay constants.<br>
+Under the ArcSecs static-Euclidean decelerating-light proposal (Model 3), total cosmic duration Tcosmos is decoupled from HA, fitting all Milky Way chronometers with zero age tension3. For matched deceleration and attenuation rates (67.4 km/s/Mpc), the Euclidean light-travel distance to JADES-GS-z14-0 (z = 14.1793) is 4,154.9 Mpc—only 40.2% of its flat Lambda-CDM comoving distance (10,344.1 Mpc) and 2.6% of its luminosity distance (156,928.2 Mpc)3. However, because flat Lambda-CDM’s angular-diameter distance turns over above z ≈ 1.6 to dA = 681.5 Mpc at z = 14.1793, the pure Euclidean distance of 4,154.9 Mpc translates JADES-GS-z14-0’s 0.079 arcsec half-light radius into 1,591.4 pc, which is 6.1 times larger than the 260 ± 20 pc inferred under standard dA (though 2.9 times smaller than the 4,633.6 pc implied by non-decelerating exponential tired light)3. Model 3 therefore achieves radial proximity relative to comoving and luminosity scales while still requiring a missing angular-magnification mechanism to satisfy Premise 11 relative to dA3.</p>
+<h4 id="lib-jwst-high-redshift-case-studies-and-contamination-audit"><strong>JWST High-Redshift Case Studies and Contamination Audit</strong></h4>
+<p>Table 3 compares the three reclassified JWST z &gt; 30 photometric candidates against two spectroscopically confirmed z ≈ 14 galaxies.</p>
+<table>
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Source ID / Field</th>
+<th>Initial Photometric Claim</th>
+<th>Epoch Baseline &amp; Proper Motion</th>
+<th>Spectroscopic Evidence</th>
+<th>Final Physical Classification &amp; Distance</th>
+<th>False-Positive Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Capotauro (CEERS U-100588)5</td>
+<td>F356W dropout; z ≈ 32 galaxy candidate (Gandolfi et al. 2026a)16</td>
+<td>3.5 yr (Dec 2022 F410M/F444W to Jun 2026 F430M/F460M); 37.6 +5.5/−5.6 mas/yr (6.8 sigma)3</td>
+<td>Faint CAPERS NIRSpec (&lt;3 μm drop, ~3.5 μm flux) inconclusive alone16</td>
+<td>Y1.0 ± 0.5 brown dwarf (Teff ≈ 350 K); SED template distance 730 ± 110 pc (not parallax)5</td>
+<td>Cold-atmosphere molecular absorption mimicking ~3.5 μm Lyman break; point source41</td>
+</tr>
+<tr class="even">
+<td>Bullet-BD1 (Bullet Cluster)6</td>
+<td>F277W/F356W dropout; Bagpipes z = 32.2 ± 0.5 (chi-squared/DOF = 1.27)6</td>
+<td>~1 yr NIRCam baseline; 49 ± 8 mas/yr (6.1 sigma)3</td>
+<td>NIRSpec matches Y dwarf; Teff = 272–351 K (ATMO2020 / Sonora Elf Owl)6</td>
+<td>Ultra-cool Y dwarf; model distance 160–240 pc (~150–650 pc pair range)6</td>
+<td>Cold Y-dwarf IR spectrum indistinguishable in broad bands (BD chi-squared/DOF = 1.26)7</td>
+</tr>
+<tr class="odd">
+<td>Bullet-BD2 (Bullet Cluster)6</td>
+<td>F277W/F356W dropout; Bagpipes z = 30.0 ± 0.1 (chi-squared/DOF = 1.23)6</td>
+<td>~1 yr NIRCam baseline; 24 ± 3 mas/yr (8.0 sigma)3</td>
+<td>NIRSpec matches Y dwarf; Teff = 445–525 K (BD chi-squared/DOF = 0.97)6</td>
+<td>Y/T-transition brown dwarf; model distance ~580 pc7</td>
+<td>Low Galactic latitude (~4× higher Y-dwarf sky density)7</td>
+</tr>
+<tr class="even">
+<td>JADES-GS-z14-0 (GOODS-S)8</td>
+<td>Photometric z = 14.39 +0.23/−0.09 (Robertson et al. 2024)8</td>
+<td>Spatially extended (FWHM 0.16 ± 0.01 arcsec; 0.079 arcsec radius); stationary8</td>
+<td>NIRSpec break (~1.85 μm, z = 14.32); tentative C III] (3.6 sigma); ALMA <math display="block"><semantics><mrow><mi>O</mi><mi>I</mi><mi>I</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">O III</annotation></semantics></math> 88 μm (6.6 sigma) at z = 14.1793 ± 0.0007; MIRI F770W excess8</td>
+<td>Confirmed luminous galaxy (MUV = −20.81 ± 0.16)9</td>
+<td>None (substellar origin excluded by spatial extent and <math display="block"><semantics><mrow><mi>O</mi><mi>I</mi><mi>I</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">O III</annotation></semantics></math> 88 μm line)43</td>
+</tr>
+<tr class="odd">
+<td>MoM-z14 (COSMOS)10</td>
+<td>Luminous COSMOS dropout candidate10</td>
+<td>Compact N IV] emitter morphology; stationary17</td>
+<td>NIRSpec zspec = 14.44 (+0.02), Lyman break + UV N IV] lines (<math display="block"><semantics><mrow><mi>N</mi><mi>/</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">N/C</annotation></semantics></math> &gt; 1)10</td>
+<td>Confirmed luminous galaxy (MUV = −20.2)10</td>
+<td>None (multi-feature UV spectroscopy rules out low-z and substellar templates)17</td>
+</tr>
+</tbody>
+</table>
+<p>Across this targeted audit sample, 3 of 3 extreme z ≈ 30–32 dropout case studies (100.0%, Wilson 95% CI: 43.9%–100.0%) were reclassified as Milky Way brown dwarfs, whereas 0 of 3 spectroscopically confirmed z ≈ 14–14.5 galaxies (JADES-GS-z14-0, JADES-GS-z14-1, and MoM-z14; 0.0%, Wilson 95% CI: 0.0%–56.1%) show substellar contamination, giving a combined audit rate of 50.0% (Wilson 95% CI: 18.8%–81.2%)3. These case-study proportions cannot be extrapolated uniformly to all JWST catalogs: Y-dwarf sky density is ~4 times higher toward the low-latitude Bullet Cluster than in high-latitude fields7, predicted ultra-cool dwarf contamination varies by up to a factor of seven between Sonora Elf Owl and Sonora Bobcat atmospheric grids near detection limits where stellarity breaks down (arXiv:2607.02354)48, and contamination rises sharply when photometry beyond 2 μm or multi-epoch astrometry is absent16. Consequently, extreme photometric z &gt; 20 dropouts must not be treated as cosmological benchmarks without proper-motion and line verification, while confirmed extended galaxies at z ≈ 14 remain empirically solid9.</p>
+<h3 id="lib-observational-requirements-to-satisfy-falsification-tests-and-limitations"><strong>Observational Requirements to Satisfy, Falsification Tests, and Limitations</strong></h3>
+<p>Because the ArcSecs framework rejects spacetime curvature, metric expansion, and physical time dilation, Table 4 summarizes the principal empirical benchmarks that any complete ArcSecs physical theory must satisfy quantitatively.</p>
+<table>
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Empirical Benchmark</th>
+<th>Primary Verified Source</th>
+<th>Quantitative Constraint</th>
+<th>Missing / Unverified ArcSecs Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Photon Rest-Mass Upper Bound</td>
+<td>Navas et al. (PDG 2024/2025); 2007 solar-wind MHD bound46</td>
+<td>Effective uniform Proca rest mass &lt; 10⁻¹⁸ eV</td>
+<td>Distinguish invariant rest mass from momentum gravity; detect dispersion or screening</td>
+</tr>
+<tr class="even">
+<td>Angular Size vs. Redshift (JADES-GS-z14-0)</td>
+<td>Carniani et al. (2024); Schouws et al. (2025)8</td>
+<td>0.079 arcsec half-light radius at z = 14.1793 (260 pc in dA vs. 1,591 pc in rdecel)3</td>
+<td>Physical optical/refractive magnification mechanism producing apparent size turnover</td>
+</tr>
+<tr class="odd">
+<td>Multi-Wavelength Redshift Coherence</td>
+<td>Schouws et al. (2025); Helton et al. (2025); Naidu et al. (2025)9</td>
+<td>Identical fractional shift (1 + z = 15.1793) from 88 μm far-IR <math display="block"><semantics><mrow><mi>O</mi><mi>I</mi><mi>I</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">O III</annotation></semantics></math> to rest-UV break9</td>
+<td>Achromatic physical energy-loss sink without line broadening or image blurring</td>
+</tr>
+<tr class="even">
+<td>CMB &amp; BAO Acoustic Scale Consistency</td>
+<td>Planck 2018; Garcia-Quintero et al. (2025)30</td>
+<td>Sub-percent CMB peak ratios and DESI DR2 BAO distance scaling</td>
+<td>Non-expanding physical origin of 2.7 K blackbody spectrum and BAO correlation scale</td>
+</tr>
+<tr class="odd">
+<td>Dense-Cluster Gaia Astrometric Systematics</td>
+<td>MNRAS 505, 5978–6002 (2021)22</td>
+<td>Formal parallax/PM errors underestimated by 10–20%; CMD vs. parallax offsets</td>
+<td>Independent interferometric/geometric checks outside crowded cluster cores</td>
+</tr>
+</tbody>
+</table>
+<p>The single most efficient geometric follow-up test combines multi-epoch JWST/NIRCam medium-band astrometry (F410M/F430M/F460M over ≥2-year baselines) on all z &gt; 15 compact dropouts—where any proper motion ≥15 mas/yr at ≥5 sigma falsifies an extragalactic classification5—with Gaia DR4 and JWST joint calibration of Galactic globular-cluster white-dwarf sequences and RV-resolved NGC 4258 Cepheid/TRGB photometry2. Conversely, SH0ES-anchored flat Lambda-CDM is falsified if refined Gaia DR4/JWST globular-cluster and actinide ages converge &gt;5 sigma above 13.3 Gyr while H0 ≥ 73 km/s/Mpc persists without RV systematics, and the simple ArcSecs decelerating-light model (currently Outcome B on local chronometers and Outcome D/undecidable on global CMB/BAO physics) is falsified (Outcome C) if broadband fast-transient timing and high-resolution spectroscopy exclude cumulative achromatic photon deceleration without blurring.<br>
+Key limitations of this investigation are that full Planck, ACT, DESI DR2, and Pantheon+ likelihood covariance matrices were not executed locally (calculations used closed-form/quadrature integrals, Monte Carlo sampling, and binomial intervals), and raw NED-D tables and GW170817 standard-siren posteriors were absent from the verified source archive.</p>
+<h3 id="lib-conclusions-and-required-final-decision"><strong>Conclusions and Required Final Decision</strong></h3>
+<p>Local physical clocks in the Milky Way—anchored by Gaia-calibrated globular-cluster CMDs (13.39 ± 0.25 Gyr; inferred assembly bound 13.57 ± 0.28 Gyr)2, NGC 6397 white-dwarf cooling (12.93 Gyr)11, M4 white-dwarf cooling (12.1 Gyr; 95% limit ≥ 10.3 Gyr)12, and HE 1523−0901 U/Th radiochronometry (13.2 Gyr, ±0.7–2.7 Gyr)13—firmly constrain Galactic matter to be at least 12.5–13.3 Gyr old. By contrast, total cosmic age Tcosmos and the existence of a finite global beginning remain genuinely unknown independently of cosmological assumptions: under flat Lambda-CDM alone, global t0 swings by 1.1 Gyr between Planck (13.79 Gyr) and SH0ES (12.70 Gyr, in 2.68-sigma conflict with globular clusters)3, and shifts past 14.0 Gyr in dynamical alternatives3. Meanwhile, JWST brown-dwarf reclassifications prove 100% contamination (3/3) among audited z ≈ 30–32 photometric dropouts3 while leaving multi-line spectroscopic galaxies at z ≈ 14 intact8. The single most efficient next observation to reduce overall uncertainty is a coordinated JWST/NIRCam + Gaia DR4 campaign simultaneously resolving NGC 4258 Cepheid/TRGB RV dust laws and refining proper-motion-cleaned globular-cluster white-dwarf cooling bounds2.</p>
+<h3 id="lib-disclosures"><strong>Disclosures</strong></h3>
+<p>Appreciation is extended to the Gaia, HST, JWST (CEERS, CAPERS, JADES, COSMOS-Web, Bullet Cluster), ALMA, Planck, ACT, and DESI teams for publicly archived observations. Authorship covered literature verification, ArcSecs model derivation, statistical checks, and manuscript drafting under the Mission 03 independent research protocol. Competing interests: commissioned as an affirmative investigation of the ArcSecs model with fixed premises disclosed upfront and zero financial holdings in observational consortia. Funding: Independent Mission 03 commission. Data and code availability: all empirical figures trace to verified primary sources in Companion Document F, and all numerical recipes are specified in Companion Document A (analysis/ and METHODS_TO_REPRODUCE.md); raw NED-D and GW170817 chains were not retrieved. AI-use declaration: AI tools assisted with drafting, citation auditing, and external SciPy verification; no fabricated references or unexecuted outputs are claimed as executed.</p>
+<h3 id="lib-companion-document-a-external-reproducibility-and-calculation-methods-methods_to_reproduce.md-and-analysis"><strong>Companion Document A: External Reproducibility and Calculation Methods (METHODS_TO_REPRODUCE.md and analysis/)</strong></h3>
+<p>To maintain an export-safe manuscript with zero embedded equations, LaTeX, or code blocks, all quantitative recipes and dimension checks reside in this separate companion specification.</p>
+<blockquote>
+<ol type="1">
+<li>Unit Conversion and Dimension Checks (Executed3): One megaparsec equals 3.085677581491367 × 10¹⁹ km and one Julian gigayear equals 3.15576 × 10¹⁶ s; dividing yields the Hubble-time conversion factor 977.792222 Gyr·(km/s/Mpc). Dimension check: velocity divided by velocity-per-distance yields distance, and distance divided by distance-per-time yields pure time. Dividing c0 = 299,792.458 km/s by 67.4 km/s/Mpc yields a characteristic Hubble radius of 4,447.959 Mpc (rounded to 4,448.0 Mpc).<br>
+</li>
+<li>Expanding Reference Age Integrals and Monte Carlo Errors (Executed in Python/SciPy3): Integrate the reciprocal of <span class="math display">$$(1 \+ z) times the square root of (Ωr times the fourth power of (1 \+ z) plus Ωm times the cube of (1 \+ z) plus ΩDE times (1 \+ z) raised to 3 × (1 \+ w))$$</span> from z = 0 to infinity using scipy.integrate.quad (epsrel = 1e-10), setting Ωr = 9.2 × 10⁻⁵ and ΩDE = 1 − Ωm − Ωr, then multiply by (977.792222 / H0). Draw 10,000 normal Monte Carlo samples (numpy.random.default_rng(42)) for H0 and Ωm to verify standard deviations (0.134 Gyr for Planck; 0.175 Gyr for SH0ES).<br>
+</li>
+<li>ArcSecs Static-Euclidean Decelerating-Light Derivation (Executed3): Define photon speed as c0 times exp(−beta × T) and one plus redshift as exp(HA × T), so progression T(z) equals ln(1 + z) divided by HA. Integrating speed from T = 0 to T(z) yields radial distance equal to (c0 / beta) times <span class="math display">$$1 − (1 \+ z) raised to (−beta / HA)$$</span>, which reduces under beta = HA to (c0 / HA) times <span class="math display">$$z / (1 \+ z)$$</span>. Convert angular radius 0.079 arcsec to radians (multiply by pi / 648,000) and multiply by distance in parsecs to compare implied physical half-light radii: 260.9 pc (dA = 681.1–681.5 Mpc), 1,591.4 pc (ArcSecs rdecel = 4,154.9 Mpc), and 4,633.6 pc (static exponential 12,098.1 Mpc).<br>
+</li>
+<li>Chi-Squared and Binomial Wilson Intervals (Executed3): Compute chi-squared across <math display="block"><semantics><mrow><mn>13.57</mn><mo>±</mo><mn>0.275</mn><mo>,</mo><mn>12.93</mn><mo>±</mo><mn>0.50</mn><mo>,</mo><mn>13.20</mn><mo>±</mo><mn>1.70</mn></mrow><annotation encoding="application/x-tex">13.57 ± 0.275, 12.93 ± 0.50, 13.20 ± 1.70</annotation></semantics></math> Gyr (yielding 3.73 for Planck and 10.36 for SH0ES) and two-sided Wilson 95% confidence intervals (z = 1.95996) for 3/3, 0/3, and 3/6 contamination counts.<br>
+</li>
+<li><strong>Unexecuted Out-of-Sample Holdout Protocol (NOT EXECUTED — User-Side Steps):</strong> (a) Retrieve the 76 COSMOS-Web brown-dwarf candidates (Festin et al. 202642) and arXiv:2607.02354 simulation grids; (b) apply a fixed proper-motion and medium-band color classifier calibrated solely on CEERS/Bullet Cluster without retuning; (c) retrieve raw Planck/ACT/DESI DR2/Pantheon+ covariance chains to evaluate out-of-sample AIC/BIC and Bayes factors once an ArcSecs angular-magnification parameterization is specified.</li>
+</ol>
+</blockquote>
+<h3 id="lib-companion-document-b-machine-readable-claim-evidence-ledger-evidence_ledger.csv"><strong>Companion Document B: Machine-Readable Claim-Evidence Ledger (EVIDENCE_LEDGER.csv)</strong></h3>
+<table>
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Claim ID</th>
+<th>Claim Summary</th>
+<th>Source IDs</th>
+<th>Measured Value and Unit</th>
+<th>Classification</th>
+<th>Evaluation Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>C01</td>
+<td>Oldest globular-cluster age and inferred tU</td>
+<td>2</td>
+<td>tGC = 13.39 ± 0.10 ± 0.23 Gyr; tU = 13.57 +0.16/−0.14 ± 0.23 Gyr</td>
+<td>Model-dependent stellar inference</td>
+<td>A (anchors minimum Galactic matter age)</td>
+</tr>
+<tr class="even">
+<td>C02</td>
+<td>NGC 6397 white-dwarf cooling age</td>
+<td>11</td>
+<td>12.93 Gyr</td>
+<td>Model-dependent stellar inference</td>
+<td>A (independent degenerate-star lower bound)</td>
+</tr>
+<tr class="odd">
+<td>C03</td>
+<td>M4 white-dwarf cooling age</td>
+<td>12</td>
+<td>12.1 Gyr (95% lower limit ≥ 10.3 Gyr)</td>
+<td>Model-dependent stellar inference</td>
+<td>A (consistent with 12.0 ± 1.4 Gyr turn-off)</td>
+</tr>
+<tr class="even">
+<td>C04</td>
+<td>HE 1523−0901 U/Th radiochronometry age</td>
+<td>13</td>
+<td>13.2 Gyr (±0.7 to ±2.7 Gyr sys.)</td>
+<td>Model-dependent nuclear inference</td>
+<td>A (independent of stellar HR tracks)</td>
+</tr>
+<tr class="odd">
+<td>C05</td>
+<td>SH0ES-Lambda-CDM vs. 2025 GC bound tension</td>
+<td>3</td>
+<td>12.698 ± 0.175 Gyr vs. 13.57 ± 0.275 Gyr (2.68 sigma)</td>
+<td>Derived mathematics / comparison</td>
+<td>A (flags expansion-age tension)</td>
+</tr>
+<tr class="even">
+<td>C06</td>
+<td>NGC 4258 geometric megamaser distance</td>
+<td>34</td>
+<td>7.576 ± 0.082 ± 0.076 Mpc (29.397 ± 0.032 mag)</td>
+<td>Observation + geometric inference</td>
+<td>A (redshift-free anchor)</td>
+</tr>
+<tr class="odd">
+<td>C07</td>
+<td>NGC 4258 Cepheid Wesenheit &amp; RV discrepancy</td>
+<td>38</td>
+<td>&gt;0.1 mag zero-point span; 4–5% RV distance shift</td>
+<td>Observation + calibration analysis</td>
+<td>A (shows pre-SN ladder systematics)</td>
+</tr>
+<tr class="even">
+<td>C08</td>
+<td>Capotauro reclassified from z ≈ 32 to Y1 dwarf</td>
+<td>5</td>
+<td>Proper motion 37.6 +5.5/−5.6 mas/yr (3.5 yr); 730 ± 110 pc</td>
+<td>Observation + SED template fit</td>
+<td>A (falsifies z ≈ 32 claim via geometry)</td>
+</tr>
+<tr class="odd">
+<td>C09</td>
+<td>Bullet Cluster BD1 &amp; BD2 reclassified to Y dwarfs</td>
+<td>6</td>
+<td>PM 49 ± 8 &amp; 24 ± 3 mas/yr (~1 yr); Teff 272–351 K &amp; 445–525 K</td>
+<td>Observation + NIRSpec template fit</td>
+<td>A (shows ~4× low-latitude density)</td>
+</tr>
+<tr class="even">
+<td>C10</td>
+<td>JADES-GS-z14-0 spectroscopic confirmation</td>
+<td>8</td>
+<td>zspec = 14.1793 ± 0.0007 (ALMA 6.6 sigma); FWHM 0.16 arcsec</td>
+<td>Observation + spectral identification</td>
+<td>A (excludes local brown-dwarf origin)</td>
+</tr>
+<tr class="odd">
+<td>C11</td>
+<td>MoM-z14 spectroscopic confirmation</td>
+<td>10</td>
+<td>zspec = 14.44 (+0.02), NIRSpec break + UV N IV] lines</td>
+<td>Observation + spectral identification</td>
+<td>A (confirms bright z &gt; 14 galaxy class)</td>
+</tr>
+<tr class="even">
+<td>C12</td>
+<td>ArcSecs rdecel radial compression vs. size gap</td>
+<td>3</td>
+<td>r(14.18) = 4,154.9 Mpc (0.40× dC), implies 1,591 pc radius</td>
+<td>Derived mathematics / hypothesis</td>
+<td>D (undecidable until angular mechanism added)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lib-companion-document-c-falsification-experiments-register-experiments.csv"><strong>Companion Document C: Falsification Experiments Register (EXPERIMENTS.csv)</strong></h3>
+<table>
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Exp ID</th>
+<th>Target Hypothesis</th>
+<th>Experimental Design</th>
+<th>Decisive Observable and Threshold</th>
+<th>Falsification Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>E01</td>
+<td>H2 (JWST Dropout Contamination)</td>
+<td>≥2-year multi-epoch NIRCam F410M/F444W astrometry on z &gt; 15 compact dropouts</td>
+<td>Proper motion ≥15 mas/yr at ≥5 sigma</td>
+<td>Exceeding threshold excludes extragalactic origin</td>
+</tr>
+<tr class="even">
+<td>E02</td>
+<td>H0 (SH0ES Flat Lambda-CDM)</td>
+<td>Gaia DR4 + JWST WD cooling &amp; CMD modeling of 38+ GCs + NGC 4258 RV mapping</td>
+<td>tGC &gt; 13.3 Gyr at ≥5 sigma while H0 ≥ 73 km/s/Mpc persists</td>
+<td>Excludes unperturbed flat Lambda-CDM with standard recombination</td>
+</tr>
+<tr class="odd">
+<td>E03</td>
+<td>H1 (ArcSecs Photon Mass / Dispersion)</td>
+<td>Multi-band timing of extragalactic fast transients across MHz-to-gamma bands</td>
+<td>Frequency-dependent arrival lag beyond plasma dispersion</td>
+<td>Null dispersion tightens upper limit on uniform photon rest mass</td>
+</tr>
+<tr class="even">
+<td>E04</td>
+<td>H1 (ArcSecs Angular-Size Mechanism)</td>
+<td>Measure angular sizes and surface brightness of zspec &gt; 10 galaxies vs. dA</td>
+<td>Surface brightness scaling (1 + z)⁻⁴ vs. static (1 + z)⁻¹ or ⁻²</td>
+<td>Excludes pure Euclidean rdecel without an optical/scattering sink</td>
+</tr>
+<tr class="odd">
+<td>E05</td>
+<td>H1 (ArcSecs Energy-Sink Sharpness)</td>
+<td>High-resolution JWST/ALMA line-width comparison from far-IR 88 μm to rest-UV</td>
+<td>Spectral line blurring or achromaticity deviation &gt;0.1% across bands</td>
+<td>Excludes scattering-based energy loss if lines remain razor-sharp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lib-companion-document-d-referee-style-self-critique-referee_challenges.md"><strong>Companion Document D: Referee-Style Self-Critique (REFEREE_CHALLENGES.md)</strong></h3>
+<blockquote>
+<ol type="1">
+<li><strong>Angular-Diameter Turnover Deficit:</strong> In Euclidean geometry without metric expansion, angular diameter drops monotonically with distance. Even with decelerating light capping radial distance at 4,154.9 Mpc for z = 14.1793, JADES-GS-z14-0’s 0.079 arcsec radius implies 1,591 pc—6.1 times larger than standard dA = 681.5 Mpc3, contradicting Premise 11 relative to dA until an explicit optical magnification mechanism is demonstrated.<br>
+</li>
+<li><strong>Achromatic Line Coherence:</strong> JADES-GS-z14-0 exhibits the same redshift factor (15.1793) across both far-infrared <math display="block"><semantics><mrow><mi>O</mi><mi>I</mi><mi>I</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">O III</annotation></semantics></math> 88 μm emission and rest-UV continuum breaks9. Any physical energy-transfer sink must act strictly proportionally to photon energy across four orders of magnitude in wavelength without blurring point-spread functions.<br>
+</li>
+<li><strong>CMB Blackbody Preservation and BAO Scales:</strong> Cumulative photon energy-loss models alter photon number density relative to a Planckian blackbody unless balanced by an unmeasured re-thermalization mechanism, and must reproduce DESI DR2 baryon acoustic oscillation scales31 without metric expansion.<br>
+</li>
+<li><strong>PDG Photon Rest-Mass Bound:</strong> With uniform Proca rest mass constrained below 10⁻¹⁸ eV46, any ArcSecs photon-mass deceleration law cannot rely on conventional Proca group-velocity dispersion and requires a distinct physical interaction mechanism.<br>
+</li>
+<li><strong>Selection Bias in Small-Sample Contamination Audits:</strong> While 3 of 3 audited z ≈ 30–32 dropouts were Milky Way brown dwarfs (Wilson 95% CI: 43.9%–100.0%)3, two lay at low Galactic latitude toward the Bullet Cluster where Y-dwarf surface density is ~4× elevated7; generalizing that fraction to reject confirmed z ≈ 14 galaxies is invalid.</li>
+</ol>
+</blockquote>
+<h3 id="lib-companion-document-e-plain-english-arcsecs-advocacy-summary"><strong>Companion Document E: Plain-English ArcSecs Advocacy Summary</strong></h3>
+<p>When astronomers quote an age of 13.8 billion years for the universe, they are not reading a direct physical clock. They are converting measurements of galaxy light into an age using a mathematical formula that assumes space itself stretches over time. The ArcSecs research program asks what physical measurements actually tell us when space and time are treated simply as “Where” and “When” rather than stretchy physical substances.<br>
+Inside our own Milky Way, astronomers possess genuine physical clocks that do not depend on cosmic expansion formulas: ancient star clusters, cooling white-dwarf embers, and radioactive uranium and thorium atoms. Those clocks show that the oldest known Galactic matter is at least 12.5 to 13.6 billion years old2. Notably, when standard expanding cosmology uses local distance-ladder measurements (around 73 km/s/Mpc), it predicts a cosmic age of only 12.7 billion years—younger than the oldest globular star clusters by more than two and a half standard deviations2. By keeping time constant rather than tying cosmic duration to an expansion stopwatch, the ArcSecs approach eliminates that age paradox: the cosmos can easily be as old as, or much older than, its oldest surviving stars.<br>
+Recent James Webb Space Telescope observations also reinforce the need for healthy skepticism toward unverified distance claims. Several faint red dots—including “Capotauro,” initially proposed as a record-breaking galaxy at redshift 32, and two objects in the Bullet Cluster—turned out not to be distant early galaxies at all5. Follow-up images taken one to three-and-a-half years later caught all three objects moving across the sky7. True extragalactic galaxies cannot drift perceptibly in three years; cold brown dwarfs floating a few hundred parsecs away inside our own Milky Way do7.<br>
+At the same time, sound science distinguishes bad candidates from confirmed galaxies. Other JWST galaxies near redshift 14, such as JADES-GS-z14-0 and MoM-z14, appear spatially extended rather than star-like, show zero sideways motion, and display crisp chemical signatures of oxygen, carbon, or nitrogen measured across multiple instruments8. The constructive path forward for ArcSecs is to insist on direct geometric and proper-motion tests for all extreme candidates while working to discover the missing physical light-propagation and optical mechanisms needed to account for compact high-redshift galaxy images in a non-expanding universe.</p>
+<h3 id="lib-companion-document-f-verified-source-linked-bibliography-bibliography.md"><strong>Companion Document F: Verified Source-Linked Bibliography (BIBLIOGRAPHY.md)</strong></h3>
+<blockquote>
+<ol type="1">
+<li>Liu, F.-Y. F., McLeod, D. J., Sutlieff, B. J., Dupuy, T. J., Dunlop, J. S., Chen, X., et al. (2026). “A clear detection of proper motion confirms that the claimed z ≃ 32 galaxy candidate, ‘Capotauro’, is a Y-type brown dwarf.” <em>Monthly Notices of the Royal Astronomical Society</em>, 553(3). DOI: 10.1093/mnras/stag2055; Preprint: https://arxiv.org/abs/2608.07461 <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>5.<br>
+</li>
+<li>Gandolfi, G., et al. (2026a). “Mysteries of Capotauro: Investigating the puzzling nature of an extreme F356W-dropout.” <em>Astronomy &amp; Astrophysics</em>, 706, A364. URL: https://ui.adsabs.harvard.edu/abs/2026A%26A…706A.364G/abstract <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>16.<br>
+</li>
+<li>Bradač, M., Willott, C., Asada, Y., Albert, L., Rihtaršič, G., Harshan, A., et al. (2026). “Two Exciting High-redshift Galaxy Candidates Turn Out to Be Two Exciting Brown Dwarfs.” <em>The Astrophysical Journal Letters</em>, 1010, L13. DOI: 10.3847/2041-8213/ae9085; Data DOI: 10.17909/tmvk-zd12; URL: https://www.ipac.caltech.edu/publication/2026ApJ..1010L..13B; Preprint: https://arxiv.org/abs/2604.23668 <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>6.<br>
+</li>
+<li>Carniani, S., Hainline, K., D’Eugenio, F., Eisenstein, D. J., Jakobsen, P., Witstok, J., et al. (2024). “Spectroscopic confirmation of two luminous galaxies at a redshift of 14.” <em>Nature</em>, 633(8029), 318–322. DOI: 10.1038/s41586-024-07860-9; Preprint: https://www.alphaxiv.org/abs/2405.18485 <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>8.<br>
+</li>
+<li>Carniani, S., D’Eugenio, F., Ji, X., Parlanti, E., Scholtz, J., Sun, F., et al. (2025). “The eventful life of a luminous galaxy at z = 14: metal enrichment, feedback, and low gas fraction?” <em>Astronomy &amp; Astrophysics</em>, 696, A87. DOI: 10.1051/0004-6361/202452451; Preprint: https://arxiv.org/html/2409.20533v2 <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>8.<br>
+</li>
+<li>Schouws, S., et al. (2025). ALMA <math display="block"><semantics><mrow><mi>O</mi><mi>I</mi><mi>I</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">O III</annotation></semantics></math> 88 μm spectroscopic confirmation of JADES-GS-z14-0 (z = 14.1793 ± 0.0007). Leiden University Repository: https://scholarlypublications.universiteitleiden.nl/access/item%3A4292886/view <math display="block"><semantics><mrow><mi>I</mi><mi>n</mi><mi>s</mi><mi>t</mi><mi>i</mi><mi>t</mi><mi>u</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi>a</mi><mi>l</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>o</mi><mi>s</mi><mi>i</mi><mi>t</mi><mi>o</mi><mi>r</mi><mi>y</mi><mi>/</mi><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Institutional repository / Peer-reviewed</annotation></semantics></math>8.<br>
+</li>
+<li>Helton, J. M., et al. (2024/2025). JWST/MIRI photometry and SED modeling of JADES-GS-z14-0. PubMed Central: https://pmc.ncbi.nlm.nih.gov/articles/PMC12095045/ <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>9.<br>
+</li>
+<li>Naidu, R. P., Oesch, P. A., Brammer, G., Weibel, A., Li, Y., Matthee, J., et al. (2025). “A Cosmic Miracle: A Remarkably Luminous Galaxy at z_spec = 14.44 Confirmed with JWST.” URL: https://arxiv.org/abs/2505.11263 <math display="block"><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Preprint</annotation></semantics></math>17.<br>
+</li>
+<li>Valcin, D., Jimenez, R., Verde, L., Bernal, J. L., &amp; Wandelt, B. D. (2021). “The Age of the Universe with Globular Clusters: Reducing Systematic Uncertainties.” <em>JCAP</em>, JCAP08(2021)017. DOI: 10.1088/1475-7516/2021/08/017; URL: https://arxiv.org/abs/2102.04486 <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>1.<br>
+</li>
+<li>Globular Cluster Age Series Part III (2025). “The age of the universe with globular clusters. Part III. Gaia distances and hierarchical modeling.” <em>JCAP</em>, 2025(10), 030. URL: https://arxiv.org/abs/2503.19481 <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>2.<br>
+</li>
+<li>Banik, I., Kudakolawa Kaluarachchige, Cookson, &amp; Desmond (2026). “The age of the Universe from a large sample of the oldest Galactic stars.” Resubmitted to <em>MNRAS</em>; URL: https://arxiv.org/abs/2607.00764 <math display="block"><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Preprint</annotation></semantics></math>20.<br>
+</li>
+<li>Gaia EDR3 Globular Cluster Astrometry Study (2021). <em>Monthly Notices of the Royal Astronomical Society</em>, 505(4), 5978–6002. URL: https://espace.library.uq.edu.au/view/UQ:436c0f5/UQ436c0f5_OA.pdf <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>22.<br>
+</li>
+<li>Hansen, B. M. S., Brewer, J., Fahlman, G. G., Gibson, B. K., et al. (2002). “The White Dwarf Cooling Sequence of the Globular Cluster Messier 4.” <em>ApJL</em>; URL: https://arxiv.org/abs/astro-ph/0205087 <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>23.<br>
+</li>
+<li>Hansen, B. M. S., Richer, H. B., Fahlman, G. G., Stetson, P. B., Brewer, J., Currie, T., et al. (2004). “HST Observations of the White Dwarf Cooling Sequence of M4.” URL: https://arxiv.org/abs/astro-ph/0401443 <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>12.<br>
+</li>
+<li>Richer, H. B., Brewer, J., Fahlman, G. G., et al. (2004). “Concerning the White Dwarf Cooling Age of M4: A Response to the Paper by De Marchi et al.” <em>AJ</em>; URL: https://arxiv.org/abs/astro-ph/0401446 <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>25.<br>
+</li>
+<li>Hansen, B., Anderson, J., Brewer, J. P., Dotter, A. L., Stetson, P., et al. (2005). “The White Dwarf Cooling Sequence of NGC 6397.” <em>The Astrophysical Journal</em>; URL: https://www.semanticscholar.org/paper/The-White-Dwarf-Cooling-Sequence-of-NGC-6397-Hansen-Anderson/cd5b4ba98e1f314981e31615f0bb0337b509fb63 <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>11.<br>
+</li>
+<li>Bedin, L. R., Salaris, M., Piotto, G., et al. (2009). “The End of the White Dwarf Cooling Sequence in M4: an efficient approach.” <em>The Astrophysical Journal</em>; URL: https://arxiv.org/abs/0903.2839 <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>24.<br>
+</li>
+<li>NGC 6397, 47 Tuc, and M4 White Dwarf Cooling Sequence Study (2016). <em>Monthly Notices of the Royal Astronomical Society</em>, 456(4), 3729. URL: https://academic.oup.com/mnras/article/456/4/3729/2892464 <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>11.<br>
+</li>
+<li>García-Berro, E., Torres, S., et al. (2010). “A white dwarf cooling age of 8 Gyr for NGC 6791 from physical separation processes” (summarized in MNRAS 456, 3729 and Semantic Scholar) <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>11.<br>
+</li>
+<li>Oswalt, T. D., Smith, J. A., Wood, M. A., et al. (1996). “A lower limit of 9.5 Gyr on the age of the Galactic disk from the oldest white dwarf stars.” <em>Nature</em> (summarized in Semantic Scholar) <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>27.<br>
+</li>
+<li>Frebel, A., et al. (2007). Uranium and thorium radiochronometry of HE 1523−0901. <em>The Astrophysical Journal</em> (summarized in Wikipedia, AMiner, and arXiv:1807.03734) <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>13.<br>
+</li>
+<li>Primordial Black Holes and Old Stars Review (2020). URL: https://arxiv.org/html/2002.10332v1 <math display="block"><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Preprint</annotation></semantics></math>28.<br>
+</li>
+<li>Garcia-Quintero, C., Noriega, H., et al. (2025). “Cosmological implications of DESI DR2 BAO measurements in light of the latest ACT DR6 CMB data.” <em>Physical Review D</em>, 112(8), 083529. DOI: 10.1103/d6yc-xpqb <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>31.<br>
+</li>
+<li>Planck Collaboration (2018). Cosmological parameters benchmark (H0 = 67.4 ± 0.5 km/s/Mpc, tU = 13.8 ± 0.02 Gyr; cited in Valcin et al. 2021 and Freedman et al. 2019) <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>1.<br>
+</li>
+<li>DESI DR2, Cosmic Chronometers, and CMB Cosmological Analysis (2025). URL: https://arxiv.org/html/2510.20964v3 <math display="block"><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Preprint</annotation></semantics></math>15.<br>
+</li>
+<li>Reid, M. J., Pesce, D. W., &amp; Riess, A. G. (2019). “An Improved Distance to NGC 4258 and its Implications for the Hubble Constant.” <em>ApJL</em>; URL: https://arxiv.org/abs/1908.05625 <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>34.<br>
+</li>
+<li>Pietrzyński, G., et al. (2019). 1% geometric distance to the LMC from 20 late-type detached eclipsing binaries (cited in STScI release and arXiv:2106.15656) <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>34.<br>
+</li>
+<li>Freedman, W. L., et al. (2019). Carnegie-Chicago Hubble Program TRGB H0 calibration. <em>The Astrophysical Journal</em>; URL: https://arxiv.org/pdf/1907.05922 <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>30.<br>
+</li>
+<li>Freedman, W. L., et al. (2021). TRGB calibration of the Hubble constant. URL: https://arxiv.org/pdf/2106.15656 <math display="block"><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>t</mi><mi>/</mi><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi><mi>s</mi><mi>e</mi><mi>r</mi><mi>i</mi><mi>e</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">Preprint / Peer-reviewed series</annotation></semantics></math>37.<br>
+</li>
+<li>Riess, A. G., Anand, G. S., Anderson, R. I., et al. (2024). “JWST Observations Reject Unrecognized Crowding of Cepheid Photometry as an Explanation for the Hubble Tension at 8σ Confidence.” <em>ApJL</em>; URL: https://www.semanticscholar.org/paper/JWST-Observations-Reject-Unrecognized-Crowding-of-Riess-Anand/6bdc21c8a24d217aedfcc432ccdbc1df72527f21 <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>39.<br>
+</li>
+<li>Anand, G. S., Riess, A. G., et al. (2024). “Tip of the Red Giant Branch Distances with JWST: An Absolute Calibration in NGC 4258 and First Applications to Type Ia Supernova Hosts.” URL: https://arxiv.org/html/2401.04776v2 <math display="block"><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Preprint</annotation></semantics></math>40.<br>
+</li>
+<li>NGC 4258 Wesenheit Leavitt and Extinction Systematics Study (2025). URL: https://arxiv.org/pdf/2510.04998 <math display="block"><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Preprint</annotation></semantics></math>38.<br>
+</li>
+<li>Navas, S., et al. (Particle Data Group) (2024/2025). <em>Review of Particle Physics</em>, <em>Physical Review D</em>, 110 (and PDG 2020 PTEP 083C01). URL: https://pdgprod.lbl.gov/pdgprod/pdgLiveJson/DataBlock.action?node=M065M5 <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>46.<br>
+</li>
+<li>Festin, et al. (2026). “A Deep Census of Brown Dwarfs in the COSMOS-Web Field.” <em>PASP</em>, 138, 084402 (cited on CoolStarLab) <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>42.<br>
+</li>
+<li>Ultra-Cool Dwarf Contamination in High-Redshift Galaxy Samples (2026). URL: https://arxiv.org/html/2607.02354v1 <math display="block"><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Preprint</annotation></semantics></math>45.<br>
+</li>
+<li>Luhman, K. L., et al. (2023). JWST spectroscopy of WISE J085510.83−071442.5 (cited in Bradač et al. 2026) <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>7.<br>
+</li>
+<li>Robertson, B., et al. (2024). “Earliest Galaxies in the JADES Origins Field” (cited in JADES-GS-z14-0 record) <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>8.<br>
+</li>
+<li>IAC M92 Absolute Age Study (2010). “Absolute age of the globular cluster M92” (11 ± 1.5 Gyr). URL: https://www.iac.es/en/science-and-technology/publications/absolute-age-globular-cluster-m92 <math display="block"><semantics><mrow><mi>T</mi><mi>e</mi><mi>c</mi><mi>h</mi><mi>n</mi><mi>i</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>/</mi><mi>I</mi><mi>n</mi><mi>s</mi><mi>t</mi><mi>i</mi><mi>t</mi><mi>u</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi>a</mi><mi>l</mi><mi>s</mi><mi>u</mi><mi>m</mi><mi>m</mi><mi>a</mi><mi>r</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">Technical / Institutional summary</annotation></semantics></math>19.</li>
+</ol>
+</blockquote>
+<h3 id="lib-final-mission-specific-compliance-gate-verification"><strong>Final Mission-Specific Compliance Gate Verification</strong></h3>
+<blockquote>
+<ol type="1">
+<li>Starts with all eleven ArcSecs premises faithfully reproduced in the opening research-position section? YES.<br>
+</li>
+<li>Space, time, and spacetime never treated as physical substances? YES.<br>
+</li>
+<li>Relativity absent as an endorsed mechanism or fallback? YES.<br>
+</li>
+<li>Clock differences never presented as changes to time itself? YES.<br>
+</li>
+<li>Opposing measurements listed concisely in Observational Requirements without conventional advocacy? YES (Table 4).<br>
+</li>
+<li>Novel ArcSecs conclusions supported by real citations or clearly marked unverified? YES.<br>
+</li>
+<li>Export-safe manuscript contains zero embedded equations, LaTeX, calculation blocks, or code? YES.</li>
+</ol>
+</blockquote>
+<p><strong>Required Quoted Paragraph Stating ArcSecs Physical Mechanism and Missing Mechanisms:</strong><br>
+“In the proposed ArcSecs static-Euclidean framework, photons are massive physical particles propagating through fixed spatial coordinates (”Where”) during constant universal progression T (“When”), losing kinetic speed at rate beta and energy/frequency at rate HA through cumulative momentum and energy transfer to an ambient physical field or particle medium, which produces cosmological redshift and a finite asymptotic light-travel horizon equal to the emission light speed divided by the attenuation rate without stretching space or dilating time3; however, two microphysical mechanisms remain explicitly missing and unverified in this model: (1) a measured physical energy-momentum sink that reddens photons across all wavelengths without inducing unacceptable angular image blurring or violating laboratory scattering limits, and (2) a physical optical or refractive magnification mechanism capable of reproducing the observed angular-size turnover at high redshift so that distant sources appear physically smaller rather than larger than standard angular-diameter benchmarks3.”</p>
+<h5 id="lib-works-cited"><strong>Works cited</strong></h5>
+<blockquote>
+<ol type="1">
+<li><math display="block"><semantics><mn>2102.04486</mn><annotation encoding="application/x-tex">2102.04486</annotation></semantics></math> The Age of the Universe with Globular Clusters - arXiv, <a href="https://arxiv.org/abs/2102.04486" rel="noopener noreferrer">https://arxiv.org/abs/2102.04486</a><br>
+</li>
+<li>(PDF) The age of the universe with globular clusters. Part III. Gaia, <a href="https://www.researchgate.net/publication/396285729_The_age_of_the_universe_with_globular_clusters_Part_III_Gaia_distances_and_hierarchical_modeling" rel="noopener noreferrer">https://www.researchgate.net/publication/396285729_The_age_of_the_universe_with_globular_clusters_Part_III_Gaia_distances_and_hierarchical_modeling</a><br>
+</li>
+<li><a href="http://docs.google.com/unknown_url" rel="noopener noreferrer">unknown_url</a><br>
+</li>
+<li>The Age of the Universe with Globular Clusters III: Gaia distances, <a href="https://arxiv.org/html/2503.19481v1" rel="noopener noreferrer">https://arxiv.org/html/2503.19481v1</a><br>
+</li>
+<li>A clear detection of proper motion confirms that the claimed z ≃ 32, <a href="https://www.researchgate.net/publication/417085015_A_clear_detection_of_proper_motion_confirms_that_the_claimed_z_32_galaxy_candidate_%27Capotauro%27_is_a_Y-type_brown_dwarf?_sg=WaOqmgBh-_8gW-rCPgmhbbRGlqGwY0HPatO414uYzsU1bll5nV0Tp8zcaolUrlJSIxCQe8z1rvg7crw" rel="noopener noreferrer">https://www.researchgate.net/publication/417085015_A_clear_detection_of_proper_motion_confirms_that_the_claimed_z_32_galaxy_candidate_%27Capotauro%27_is_a_Y-type_brown_dwarf?_sg=WaOqmgBh-_8gW-rCPgmhbbRGlqGwY0HPatO414uYzsU1bll5nV0Tp8zcaolUrlJSIxCQe8z1rvg7crw</a><br>
+</li>
+<li>Two Exciting High-redshift Galaxy Candidates Turn Out to Be Two, <a href="https://www.ipac.caltech.edu/publication/2026ApJ..1010L..13B" rel="noopener noreferrer">https://www.ipac.caltech.edu/publication/2026ApJ..1010L..13B</a><br>
+</li>
+<li>Two Exciting High-redshift Galaxy Candidates Turn Out to Be … - arXiv, <a href="https://arxiv.org/html/2604.23668v2" rel="noopener noreferrer">https://arxiv.org/html/2604.23668v2</a><br>
+</li>
+<li>JADES-GS-z14-0 - Wikipedia, <a href="https://en.wikipedia.org/wiki/JADES-GS-z14-0" rel="noopener noreferrer">https://en.wikipedia.org/wiki/JADES-GS-z14-0</a><br>
+</li>
+<li>Detection of <math display="block"><semantics><mrow><mi>O</mi><mi>i</mi><mi>i</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">O iii</annotation></semantics></math>88 μm in JADES-GS-z14-0 at z = 14.1793, <a href="https://scholarlypublications.universiteitleiden.nl/access/item%3A4292886/view" rel="noopener noreferrer">https://scholarlypublications.universiteitleiden.nl/access/item%3A4292886/view</a><br>
+</li>
+<li>A COSMIC MIRACLE: A REMARKABLY LUMINOUS GALAXY AT z, <a href="https://pure.psu.edu/en/publications/a-cosmic-miracle-a-remarkably-luminous-galaxy-at-zsubspecsub-1444/" rel="noopener noreferrer">https://pure.psu.edu/en/publications/a-cosmic-miracle-a-remarkably-luminous-galaxy-at-zsubspecsub-1444/</a><br>
+</li>
+<li>comparative analysis of the observed white dwarf cooling sequence, <a href="https://academic.oup.com/mnras/article/456/4/3729/2892464" rel="noopener noreferrer">https://academic.oup.com/mnras/article/456/4/3729/2892464</a><br>
+</li>
+<li>(PDF) HST Observations of the White Dwarf Cooling Sequence of M4, <a href="https://www.researchgate.net/publication/1796476_HST_Observations_of_the_White_Dwarf_Cooling_Sequence_of_M4" rel="noopener noreferrer">https://www.researchgate.net/publication/1796476_HST_Observations_of_the_White_Dwarf_Cooling_Sequence_of_M4</a><br>
+</li>
+<li>HE 1523−0901 - Wikipedia, <a href="https://en.wikipedia.org/wiki/HE_1523%E2%88%920901" rel="noopener noreferrer">https://en.wikipedia.org/wiki/HE_1523%E2%88%920901</a><br>
+</li>
+<li>Discovery of HE 1523-0901, a Strongly R -Process-enhanced Metal, <a href="https://www.aminer.org/pub/53e9be64b7602d9704b25054" rel="noopener noreferrer">https://www.aminer.org/pub/53e9be64b7602d9704b25054</a><br>
+</li>
+<li>Comparing measures of the Hubble and BAO tensions in … - arXiv, <a href="https://arxiv.org/html/2510.20964v3" rel="noopener noreferrer">https://arxiv.org/html/2510.20964v3</a><br>
+</li>
+<li>clear detection of proper motion confirms that the claimed z ≃ 32, <a href="https://academic.oup.com/mnras/advance-article/doi/10.1093/mnras/stag2055/9003823" rel="noopener noreferrer">https://academic.oup.com/mnras/advance-article/doi/10.1093/mnras/stag2055/9003823</a><br>
+</li>
+<li>A Cosmic Miracle: A Remarkably Luminous Galaxy at z spec = 14.44, <a href="https://arxiv.org/html/2505.11263v1" rel="noopener noreferrer">https://arxiv.org/html/2505.11263v1</a><br>
+</li>
+<li>The Age of the Universe with Globular Clusters - ResearchGate, <a href="https://www.researchgate.net/publication/349159691_The_Age_of_the_Universe_with_Globular_Clusters_Reducing_Systematic_Uncertainties" rel="noopener noreferrer">https://www.researchgate.net/publication/349159691_The_Age_of_the_Universe_with_Globular_Clusters_Reducing_Systematic_Uncertainties</a><br>
+</li>
+<li>On the Absolute Age of the Globular Cluster M92, <a href="https://www.iac.es/en/science-and-technology/publications/absolute-age-globular-cluster-m92" rel="noopener noreferrer">https://www.iac.es/en/science-and-technology/publications/absolute-age-globular-cluster-m92</a><br>
+</li>
+<li><math display="block"><semantics><mn>2607.00764</mn><annotation encoding="application/x-tex">2607.00764</annotation></semantics></math> The age of the Universe from a large sample of … - arXiv, <a href="https://arxiv.org/abs/2607.00764" rel="noopener noreferrer">https://arxiv.org/abs/2607.00764</a><br>
+</li>
+<li>The age of the Universe from a large sample of the oldest Galactic, <a href="https://arxiv.org/html/2607.00764v1" rel="noopener noreferrer">https://arxiv.org/html/2607.00764v1</a><br>
+</li>
+<li>Gaia EDR3 view on galactic globular clusters - UQ eSpace, <a href="https://espace.library.uq.edu.au/view/UQ:436c0f5/UQ436c0f5_OA.pdf" rel="noopener noreferrer">https://espace.library.uq.edu.au/view/UQ:436c0f5/UQ436c0f5_OA.pdf</a><br>
+</li>
+<li>The White Dwarf Cooling Sequence of the Globular Cluster Messier 4, <a href="https://arxiv.org/abs/astro-ph/0205087" rel="noopener noreferrer">https://arxiv.org/abs/astro-ph/0205087</a><br>
+</li>
+<li><math display="block"><semantics><mn>0903.2839</mn><annotation encoding="application/x-tex">0903.2839</annotation></semantics></math> The End of the White Dwarf Cooling Sequence in M4, <a href="https://arxiv.org/abs/0903.2839" rel="noopener noreferrer">https://arxiv.org/abs/0903.2839</a><br>
+</li>
+<li><math display="block"><semantics><mrow><mi>a</mi><mi>s</mi><mi>t</mi><mi>r</mi><mi>o</mi><mo>−</mo><mi>p</mi><mi>h</mi><mi>/</mi><mn>0401446</mn></mrow><annotation encoding="application/x-tex">astro-ph/0401446</annotation></semantics></math> Concerning the White Dwarf Cooling Age of M4, <a href="https://arxiv.org/abs/astro-ph/0401446" rel="noopener noreferrer">https://arxiv.org/abs/astro-ph/0401446</a><br>
+</li>
+<li>Concerning the White Dwarf Cooling Age of M4: A Reply to De, <a href="https://www.scilit.com/publications/d1587e4ebc19684a54d220e8eb99f099" rel="noopener noreferrer">https://www.scilit.com/publications/d1587e4ebc19684a54d220e8eb99f099</a><br>
+</li>
+<li>The White Dwarf Cooling Sequence of NGC 6397 - Semantic Scholar, <a href="https://www.semanticscholar.org/paper/The-White-Dwarf-Cooling-Sequence-of-NGC-6397-Hansen-Anderson/cd5b4ba98e1f314981e31615f0bb0337b509fb63" rel="noopener noreferrer">https://www.semanticscholar.org/paper/The-White-Dwarf-Cooling-Sequence-of-NGC-6397-Hansen-Anderson/cd5b4ba98e1f314981e31615f0bb0337b509fb63</a><br>
+</li>
+<li>New data on young and old black holes and other unexpected, <a href="https://arxiv.org/html/2002.10332v1" rel="noopener noreferrer">https://arxiv.org/html/2002.10332v1</a><br>
+</li>
+<li>The age of the Universe from a large sample of the oldest Galactic, <a href="https://arxiv.org/html/2607.00764v2" rel="noopener noreferrer">https://arxiv.org/html/2607.00764v2</a><br>
+</li>
+<li>arXiv:1907.05922v1 <math display="block"><semantics><mrow><mi>a</mi><mi>s</mi><mi>t</mi><mi>r</mi><mi>o</mi><mo>−</mo><mi>p</mi><mi>h</mi><mi>.</mi><mi>C</mi><mi>O</mi></mrow><annotation encoding="application/x-tex">astro-ph.CO</annotation></semantics></math> 12 Jul 2019, <a href="https://arxiv.org/pdf/1907.05922" rel="noopener noreferrer">https://arxiv.org/pdf/1907.05922</a><br>
+</li>
+<li>Cosmological implications of DESI DR2 BAO measurements in light, <a href="https://escholarship.org/content/qt67q6j3gf/qt67q6j3gf.pdf" rel="noopener noreferrer">https://escholarship.org/content/qt67q6j3gf/qt67q6j3gf.pdf</a><br>
+</li>
+<li>Cosmological implications of DESI DR2 BAO measurements in light, <a href="https://upcommons.upc.edu/entities/publication/c9951e99-1652-4727-891e-47a18b92ca4b" rel="noopener noreferrer">https://upcommons.upc.edu/entities/publication/c9951e99-1652-4727-891e-47a18b92ca4b</a><br>
+</li>
+<li>Cosmological implications of DESI DR2 BAO measurements in light, <a href="https://www.osti.gov/pages/biblio/3010003" rel="noopener noreferrer">https://www.osti.gov/pages/biblio/3010003</a><br>
+</li>
+<li>An Improved Distance to NGC 4258 and Its Implications for the, <a href="https://www.researchgate.net/publication/337461552_An_Improved_Distance_to_NGC_4258_and_Its_Implications_for_the_Hubble_Constant" rel="noopener noreferrer">https://www.researchgate.net/publication/337461552_An_Improved_Distance_to_NGC_4258_and_Its_Implications_for_the_Hubble_Constant</a><br>
+</li>
+<li>Large Magellanic Cloud Cepheid Standards Provide a 1 … - NASA, <a href="https://assets.science.nasa.gov/content/dam/science/missions/hubble/releases/2019/04/STScI-01EVSQTYM6WDN2SSWQ1VFS865S.pdf" rel="noopener noreferrer">https://assets.science.nasa.gov/content/dam/science/missions/hubble/releases/2019/04/STScI-01EVSQTYM6WDN2SSWQ1VFS865S.pdf</a><br>
+</li>
+<li><math display="block"><semantics><mn>1908.05625</mn><annotation encoding="application/x-tex">1908.05625</annotation></semantics></math> An Improved Distance to NGC 4258 and its … - arXiv, <a href="https://arxiv.org/abs/1908.05625" rel="noopener noreferrer">https://arxiv.org/abs/1908.05625</a><br>
+</li>
+<li>Measurements of the Hubble Constant: Tensions in Perspective - arXiv, <a href="https://arxiv.org/pdf/2106.15656" rel="noopener noreferrer">https://arxiv.org/pdf/2106.15656</a><br>
+</li>
+<li>Doubly Discordant SH0ES NGC4258 Cepheid Relations … - arXiv, <a href="https://arxiv.org/pdf/2510.04998" rel="noopener noreferrer">https://arxiv.org/pdf/2510.04998</a><br>
+</li>
+<li>JWST Observations Reject Unrecognized Crowding of Cepheid, <a href="https://www.semanticscholar.org/paper/JWST-Observations-Reject-Unrecognized-Crowding-of-Riess-Anand/6bdc21c8a24d217aedfcc432ccdbc1df72527f21" rel="noopener noreferrer">https://www.semanticscholar.org/paper/JWST-Observations-Reject-Unrecognized-Crowding-of-Riess-Anand/6bdc21c8a24d217aedfcc432ccdbc1df72527f21</a><br>
+</li>
+<li>Tip of the Red Giant Branch Distances with JWST - arXiv, <a href="https://arxiv.org/html/2401.04776v2" rel="noopener noreferrer">https://arxiv.org/html/2401.04776v2</a><br>
+</li>
+<li>Guest: All that glitters is not gold: How our universe’s oldest galaxy, <a href="https://astrobites.org/2026/09/24/capotauro-z32-candidate/" rel="noopener noreferrer">https://astrobites.org/2026/09/24/capotauro-z32-candidate/</a><br>
+</li>
+<li>Team JWST - UCSD Cool Star Lab, <a href="https://www.coolstarlab.org/student-researchers/team-jwst" rel="noopener noreferrer">https://www.coolstarlab.org/student-researchers/team-jwst</a><br>
+</li>
+<li>Photometric detection at 7.7 μm of a galaxy beyond redshift 14 with, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12095045/" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC12095045/</a><br>
+</li>
+<li>A Cosmic Miracle: A Remarkably Luminous Galaxy at $z_{\rm … - arXiv, <a href="https://arxiv.org/abs/2505.11263" rel="noopener noreferrer">https://arxiv.org/abs/2505.11263</a><br>
+</li>
+<li>Assessing Ultra-Cool Dwarf Contamination in Photometrically … - arXiv, <a href="https://arxiv.org/html/2607.02354v3" rel="noopener noreferrer">https://arxiv.org/html/2607.02354v3</a><br>
+</li>
+<li>What is the current limit for a photon’s rest mass?, <a href="https://physics.stackexchange.com/questions/613748/what-is-the-current-limit-for-a-photons-rest-mass" rel="noopener noreferrer">https://physics.stackexchange.com/questions/613748/what-is-the-current-limit-for-a-photons-rest-mass</a><br>
+</li>
+<li>pdgLive - Lawrence Berkeley National Laboratory, <a href="https://pdgprod.lbl.gov/pdgprod/pdgLiveJson/DataBlock.action?node=M065M5" rel="noopener noreferrer">https://pdgprod.lbl.gov/pdgprod/pdgLiveJson/DataBlock.action?node=M065M5</a><br>
+</li>
+<li>Assessing Ultra-Cool Dwarf Contamination in Photometrically … - arXiv, <a href="https://arxiv.org/html/2607.02354v1" rel="noopener noreferrer">https://arxiv.org/html/2607.02354v1</a><br>
+</li>
+<li>Capotauro - Wikipedia, <a href="https://en.wikipedia.org/wiki/Capotauro" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Capotauro</a><br>
+</li>
+<li>A strange red speck captured by Webb looked like a candidate for, <a href="https://www.earth.com/space/capotauro-webb-galaxy-candidate-brown-dwarf/" rel="noopener noreferrer">https://www.earth.com/space/capotauro-webb-galaxy-candidate-brown-dwarf/</a><br>
+</li>
+<li>A clear detection of proper motion confirms that the claimed z ≃ 32, <a href="https://arxiv.org/html/2608.07461v1" rel="noopener noreferrer">https://arxiv.org/html/2608.07461v1</a><br>
+</li>
+<li>The eventful life of a luminous galaxy at z=14 - arXiv, <a href="https://arxiv.org/html/2409.20533v2" rel="noopener noreferrer">https://arxiv.org/html/2409.20533v2</a><br>
+</li>
+<li>Webb’s farthest galaxy candidate Capotauro is a failed star inside, <a href="https://www.martincid.com/science/capotauro-jwst-galaxy-candidate-z32-y-dwarf-brown-dwarf-proper-motion/" rel="noopener noreferrer">https://www.martincid.com/science/capotauro-jwst-galaxy-candidate-z32-y-dwarf-brown-dwarf-proper-motion/</a><br>
+</li>
+<li><math display="block"><semantics><mn>2608.07461</mn><annotation encoding="application/x-tex">2608.07461</annotation></semantics></math> A clear detection of proper motion confirms that … - arXiv, <a href="https://arxiv.org/abs/2608.07461" rel="noopener noreferrer">https://arxiv.org/abs/2608.07461</a><br>
+</li>
+<li>Spectroscopic confirmation of two luminous galaxies at $z\sim14, <a href="https://www.alphaxiv.org/abs/2405.18485" rel="noopener noreferrer">https://www.alphaxiv.org/abs/2405.18485</a><br>
+</li>
+<li><math display="block"><semantics><mn>2503.19481</mn><annotation encoding="application/x-tex">2503.19481</annotation></semantics></math> The Age of the Universe with Globular Clusters III - arXiv, <a href="https://arxiv.org/abs/2503.19481" rel="noopener noreferrer">https://arxiv.org/abs/2503.19481</a><br>
+</li>
+<li>List of Academic Papers. Kriger, B. (1999). Acceleration of… - Medium, <a href="https://medium.com/@krigerbruce/a-little-secret-between-us-1bfa4b7d747e" rel="noopener noreferrer">https://medium.com/<span class="citation">@krigerbruce/a-little-secret-between-us-1bfa4b7d747e</span></a><br>
+</li>
+<li>HST Observations of the White Dwarf Cooling Sequence of M4 - arXiv, <a href="https://arxiv.org/abs/astro-ph/0401443" rel="noopener noreferrer">https://arxiv.org/abs/astro-ph/0401443</a><br>
+</li>
+<li>The R-Process Alliance: Chemical Abundances for a Trio of R, <a href="https://arxiv.org/pdf/1807.03734" rel="noopener noreferrer">https://arxiv.org/pdf/1807.03734</a><br>
+</li>
+<li>34. Passage of Particles Through Matter, <a href="https://pdg.web.cern.ch/pdg/2020/reviews/rpp2020-rev-passage-particles-matter.pdf" rel="noopener noreferrer">https://pdg.web.cern.ch/pdg/2020/reviews/rpp2020-rev-passage-particles-matter.pdf</a><br>
+</li>
+<li>Galaxies - A Type Ia Supernova Candidate at z∼4.3 - arXiv, <a href="https://arxiv.org/html/2607.18972v1" rel="noopener noreferrer">https://arxiv.org/html/2607.18972v1</a><br>
+</li>
+<li>On the absolute age of the Globular Cluster M92 - alphaXiv, <a href="https://www.alphaxiv.org/abs/1006.5217" rel="noopener noreferrer">https://www.alphaxiv.org/abs/1006.5217</a></li>
+</ol>
+</blockquote>
+<h3 id="lib-arcsecs-interpretation-versus-observation-checkpoint-editorial-addition-r32">ArcSecs interpretation-versus-observation checkpoint (editorial addition, R32)</h3>
+<ul>
+<li><strong>Observed or calibrated quantities:</strong> Measured stellar ages depend on stellar evolution calibration; observed redshift is a wavelength ratio rather than a clock reading for all cosmic history.</li>
+<li><strong>What the observation does not determine by itself:</strong> It does not identify a unique fundamental physical ontology or interaction mechanism; experimental limits must remain explicitly labeled as limits.</li>
+<li><strong>ArcSecs mechanism-building task:</strong> Build an independent age lower-bound ledger and propagate calibrated distance uncertainty through competing physical redshift reconstructions.</li>
+<li><strong>Reproducible comparison / sources:</strong> Gaia stellar ages, globular cluster photometry, white dwarf cooling, nucleocosmochronology, JWST spectra.</li>
+<li><strong>Falsification rule:</strong> Retain every published measured quantity and uncertainty. If a specified ArcSecs mechanism fails that benchmark, record the failing assumption and design a more complete physical mechanism or a discriminating observation; do not erase or recast the measurement as a successful fit.</li>
+<li><strong>Scientific release status:</strong> Research working edition. Source bibliography, numerical calculations, author attribution and any claimed original simulations require independent scientific verification before journal submission.</li>
+</ul>
+<p><a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/index.md">Return to the full report index</a> · <a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/research/measurement-vs-inference.md">Observation-versus-inference research ledger</a></p>
+<h3 id="lib-uaix-navigation">UAIX navigation</h3>
+<p><a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/index.md">Research index</a> · <a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/research/measurement-vs-inference.md">Scope and evidence memo</a></p>

@@ -1,0 +1,982 @@
+{
+  "version": "3.142.0",
+  "scope": "source alignment inventory; not comprehensive scientific validation",
+  "sources": [
+    {
+      "path": "book/book.md",
+      "sha256": "2a741cc5330c2d0be75a47e547b2fc601c81f80ca63d5006080ab5555eb9df05"
+    },
+    {
+      "path": "docs/review6/ArcSecs_Scientific_Paper_Review_6.md",
+      "sha256": "b26cc7b8b32ae3d1000de6beef1982764033b04b15345a1e5ea60737cb2b979b"
+    },
+    {
+      "path": "docs/review6/code/review6_escape.py",
+      "sha256": "bb7764884e00b51d2075f92049ebbea95601c4053985ef8439f20a775955b130"
+    },
+    {
+      "path": "docs/review6/code/review6_forward.py",
+      "sha256": "7de56be68d5144c1052e1e65ec57c57082a32c599bc9542c28c2d45aa80a38b0"
+    },
+    {
+      "path": "docs/review6/docs/research/authoritative_charter.md",
+      "sha256": "b69153a3d379d510ea745df5b39ec0561ad5606ca33778cbe4e97d3dd5a32b75"
+    },
+    {
+      "path": "tools/attractive_field_v1.py",
+      "sha256": "3820123f517d51aeb9399926f8d606ec6b3d17fe16706e25708b5bc420b649d6"
+    }
+  ],
+  "legacyScenarios": [
+    {
+      "id": "control",
+      "status": "exploratory / synthetic",
+      "limitation": "Conventional synthetic regression, not measured dataset."
+    },
+    {
+      "id": "vsl",
+      "status": "exploratory / synthetic",
+      "limitation": "Prescribed 1.25-to-1 speed ratio; no C-01 matter-sourced constitutive law or physical calibration."
+    },
+    {
+      "id": "relationalLattice",
+      "status": "exploratory / synthetic",
+      "limitation": "Illustrative graph and prescribed sinusoidal outputs; no solved autonomous field dynamics."
+    },
+    {
+      "id": "relationalFlatSpaceEngine",
+      "status": "exploratory / synthetic",
+      "limitation": "Illustrative relational architecture; no solved coupled matter/field dynamics."
+    },
+    {
+      "id": "absoluteTimeQuantumOscillator",
+      "status": "exploratory / synthetic",
+      "limitation": "Prescribed local damping; no derived optical/nuclear/decay clock comparison."
+    },
+    {
+      "id": "teleparallelGravity",
+      "status": "exploratory / synthetic",
+      "limitation": "Illustrative output; not a calibrated retarded gravity solver."
+    },
+    {
+      "id": "tiredLightPhotonDecay",
+      "status": "exploratory / synthetic",
+      "limitation": "Prescribed exponential attenuation; not microscopic exchange or speed history."
+    },
+    {
+      "id": "mechanisticTiredLight",
+      "status": "exploratory / synthetic",
+      "limitation": "Density-scaled exponential and strictness slider; no derived differential scattering or optical-depth model."
+    },
+    {
+      "id": "entropicBetaMatter",
+      "status": "exploratory / synthetic",
+      "limitation": "Prescribed beta response; not a global Machian integral."
+    },
+    {
+      "id": "mondRotationCurves",
+      "status": "exploratory / synthetic",
+      "limitation": "Toy mass dependence; not fitted SPARC data or a held-out prediction."
+    },
+    {
+      "id": "procaPhotonDispersion",
+      "status": "exploratory / synthetic",
+      "limitation": "Illustrative animation signature; diagnostic dispersion is distinct from travel-history claim."
+    },
+    {
+      "id": "massivePhotonProca",
+      "status": "restricted control",
+      "limitation": "Restricted frequency-dependent dispersion; not an invariant-mass measurement or emission theory."
+    },
+    {
+      "id": "eitSlowLight",
+      "status": "exploratory / synthetic",
+      "limitation": "Group velocity and storage proxy; not vacuum photon aging."
+    },
+    {
+      "id": "flatSpaceLensing",
+      "status": "exploratory / synthetic",
+      "limitation": "Reduced deflection proxy; not joint optical map, flux and chromaticity validation."
+    },
+    {
+      "id": "massivePhotonLensing",
+      "status": "exploratory / synthetic",
+      "limitation": "Reduced deflection proxy; no calibrated wave-optical detector."
+    },
+    {
+      "id": "newtonianDarkStar",
+      "status": "exploratory / synthetic",
+      "limitation": "Newtonian escape threshold toy; not a complete horizon or local relativistic crossing calculation."
+    },
+    {
+      "id": "superluminalGalilean",
+      "status": "exploratory / synthetic",
+      "limitation": "Arithmetic relative speed, not a measured superluminal causal signal."
+    },
+    {
+      "id": "tiredLightEnergyLedger",
+      "status": "exploratory / synthetic",
+      "limitation": "Prescribed complement of lost energy; not independent recipient dynamics."
+    },
+    {
+      "id": "darkMatterCondensate",
+      "status": "exploratory / synthetic",
+      "limitation": "Halo-like accumulation proxy; no derived dark substrate or empirical fit."
+    },
+    {
+      "id": "distanceTimeKernel",
+      "status": "exploratory / synthetic",
+      "limitation": "Synthetic event profiles; arrival and redshift proxies are not a common astronomical fit."
+    },
+    {
+      "id": "singularitySafeGravity",
+      "status": "exploratory / synthetic",
+      "limitation": "Softened force toy; not a derived regular field theory."
+    },
+    {
+      "id": "monteCarloPhotonPipeline",
+      "status": "exploratory / synthetic",
+      "limitation": "Seeded reduced transport; not K6 angular kernel or measured scattering cross sections."
+    },
+    {
+      "id": "parallaxCalibration",
+      "status": "restricted control",
+      "limitation": "Small-angle baseline/angle control; not a universal astronomical distance correction."
+    },
+    {
+      "id": "photometricCalibration",
+      "status": "restricted control",
+      "limitation": "Background/aperture reduced calibration; not full reciprocal ray-bundle prediction."
+    },
+    {
+      "id": "rigidBodyDiagnostics",
+      "status": "exploratory / synthetic",
+      "limitation": "Generic numerical visualization; no research validation implied."
+    },
+    {
+      "id": "ccctl",
+      "status": "exploratory / synthetic",
+      "limitation": "Prescribed attenuation proxy; not Review 6 microscopic mechanism."
+    },
+    {
+      "id": "darkMatterDrive",
+      "status": "exploratory / synthetic",
+      "limitation": "Prescribed thrust and shield proxies; no measured capture or net thrust demonstration."
+    },
+    {
+      "id": "darkMatterRamjet",
+      "status": "exploratory / synthetic",
+      "limitation": "Conceptual subsystem engineering model; substrate, capture coupling and global inertia unverified."
+    },
+    {
+      "id": "sunSimulation",
+      "status": "exploratory / synthetic",
+      "limitation": "Synthetic orbital regression; not precision ephemeris integration."
+    }
+  ],
+  "foundations": [
+    {
+      "id": 1,
+      "text": "Photons have mass.",
+      "status": "stipulated premise; not validated by simulation"
+    },
+    {
+      "id": 2,
+      "text": "Time is constant.",
+      "status": "stipulated premise; not validated by simulation"
+    },
+    {
+      "id": 3,
+      "text": "Light slows down over time.",
+      "status": "stipulated premise; not validated by simulation"
+    },
+    {
+      "id": 4,
+      "text": "Time does not physically exist; it is the “When.”",
+      "status": "stipulated premise; not validated by simulation"
+    },
+    {
+      "id": 5,
+      "text": "Space does not physically exist; it is the “Where.”",
+      "status": "stipulated premise; not validated by simulation"
+    },
+    {
+      "id": 6,
+      "text": "All that physically exists at any moment occupies area and has mass at that moment.",
+      "status": "stipulated premise; not validated by simulation"
+    },
+    {
+      "id": 7,
+      "text": "Spacetime does not physically exist.",
+      "status": "stipulated premise; not validated by simulation"
+    },
+    {
+      "id": 8,
+      "text": "Light is not the fastest thing in the universe.",
+      "status": "stipulated premise; not validated by simulation"
+    },
+    {
+      "id": 9,
+      "text": "Things move apart from each other faster than causality; time, space, or spacetime cannot be physically stretched because they are not physical substances to stretch.",
+      "status": "stipulated premise; not validated by simulation"
+    },
+    {
+      "id": 10,
+      "text": "The size of the universe is unknown.",
+      "status": "stipulated premise; not validated by simulation"
+    },
+    {
+      "id": 11,
+      "text": "The age of the universe is unknown.",
+      "status": "stipulated premise; not validated by simulation"
+    },
+    {
+      "id": 12,
+      "text": "Objects in the universe are smaller and closer than they appear.",
+      "status": "stipulated premise; not validated by simulation"
+    }
+  ],
+  "reports": [
+    {
+      "id": "R01",
+      "title": "Physical Light and the Photon Mass Research Program",
+      "path": "docs/long-term-memory/reports/R01.md",
+      "sha256": "3d0d073dc97e8078d304091ec512916963afe6e9ea1465b685916ca20950ba18",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R02",
+      "title": "Constant Time and the Physical Process Interpretation of Clocks",
+      "path": "docs/long-term-memory/reports/R02.md",
+      "sha256": "dafa93a71162a937c1973353cf8efd9cafeb17f39bdbb91fec2f45e1854f0e8e",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R03",
+      "title": "The Unknown Total Cosmos: Cosmic Age and Geometric Distance",
+      "path": "docs/long-term-memory/reports/R03.md",
+      "sha256": "7548606e97e3feba8d0cdcf7033868aad72cbd211b74e68f5a4fcc3223a55b04",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R04",
+      "title": "Tired Light and Microscopic Photon-Energy Transfer",
+      "path": "docs/long-term-memory/reports/R04.md",
+      "sha256": "41ef87eaa1934f6edf4bda7d1ff13e3dfcaa7110eec0b043737d3b826b600685",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R05",
+      "title": "Relational Gravity, Field Mechanisms and Cosmic Inertia",
+      "path": "docs/long-term-memory/reports/R05.md",
+      "sha256": "03714e1119c58680c2deca1eddc16177563dc1cec6ff9600bca47d082ba1703f",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R06",
+      "title": "Dark Sector Anomalies, Relational Dynamics and Propulsion",
+      "path": "docs/long-term-memory/reports/R06.md",
+      "sha256": "991f34632d50314ea75a57aa58c3778ee4c80c7e4cdd239b9ca0a26b4acc1117",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R07",
+      "title": "Cosmic Bubble Boundaries, Pressure and Exterior Influences",
+      "path": "docs/long-term-memory/reports/R07.md",
+      "sha256": "0d1c99287f20fee3bc17e7708a11b5999e86503ecf288978433aaf5aca7c6c15",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R08",
+      "title": "The Greater Cosmos: Bubble Birth, Death and Cosmic Chronology",
+      "path": "docs/long-term-memory/reports/R08.md",
+      "sha256": "41c945974ba7b514732151e72b574da4c906287fae0f86bf5cc2d5832315bc0f",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R09",
+      "title": "Searching for Observable Traces of Other Cosmic Domains",
+      "path": "docs/long-term-memory/reports/R09.md",
+      "sha256": "86dd8b269ab3408abd6ddf4f56a82c8415034496f1aac568570c078540cfcd9f",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R10",
+      "title": "Report 10 — Full-Depth ArcSecs Annotated Research Working Edition",
+      "path": "docs/long-term-memory/reports/R10.md",
+      "sha256": "7ac261bdef455eacf9b1653ac31550e26d942102213584d2f17a37cb57971089",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R11",
+      "title": "Report 11 — Full-Depth ArcSecs Annotated Research Working Edition",
+      "path": "docs/long-term-memory/reports/R11.md",
+      "sha256": "0bbd7a7444a9e7c8d5ad3b306976d3547541855da51671118324cc8f50f93274",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R12",
+      "title": "Report 12 — Full-Depth ArcSecs Annotated Research Working Edition",
+      "path": "docs/long-term-memory/reports/R12.md",
+      "sha256": "1cc73ed64683896ca105ad34cbc0f3a39546cc24dde268658539d10f0a0b7326",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R13",
+      "title": "Report 13 — Full-Depth ArcSecs Annotated Research Working Edition",
+      "path": "docs/long-term-memory/reports/R13.md",
+      "sha256": "829b0b3735a5f425d3f7a4308943e4e17a94a303a8b745ed1320ec04326cf494",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R14",
+      "title": "Report 14 — Full-Depth ArcSecs Annotated Research Working Edition",
+      "path": "docs/long-term-memory/reports/R14.md",
+      "sha256": "b368f50dfa29789c28291c4a2f1762fca75252a2850f033103ab9a2538e75159",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R15",
+      "title": "Report 15 — Full-Depth ArcSecs Annotated Research Working Edition",
+      "path": "docs/long-term-memory/reports/R15.md",
+      "sha256": "9295e6e141c0d8535cb662ae23296ee806446d3adb9a452aab5ce08f1728119c",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R16",
+      "title": "Report 16 — Full-Depth ArcSecs Annotated Research Working Edition",
+      "path": "docs/long-term-memory/reports/R16.md",
+      "sha256": "6f2da5d51f8334c47bab3cae7ecd8f59aa1fc8bf0e0f186b2313fb4f2d702c55",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R17",
+      "title": "Report 17 — Full-Depth ArcSecs Annotated Research Working Edition",
+      "path": "docs/long-term-memory/reports/R17.md",
+      "sha256": "85a4f39a382e2132f5798700e9637fdc4715cdabb9195a7d1e82b8e448142399",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R18",
+      "title": "Report 18 — Full-Depth ArcSecs Annotated Research Working Edition",
+      "path": "docs/long-term-memory/reports/R18.md",
+      "sha256": "a433a31456d9003ca6a659e85d5a9adb25d345c4f033a23200ab1c820161b31c",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R19",
+      "title": "Report 19 — Full-Depth ArcSecs Annotated Research Working Edition",
+      "path": "docs/long-term-memory/reports/R19.md",
+      "sha256": "ddc265495dd2117e7348f73000eb785981bcfab039ef478c637b9011c231aa7b",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R20",
+      "title": "Report 20 — Full-Depth ArcSecs Annotated Research Working Edition",
+      "path": "docs/long-term-memory/reports/R20.md",
+      "sha256": "0eef37af2263b137ebf18929de01800748dcb0880cd8c8e73c077558c3e56836",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R21",
+      "title": "Report 21 — Full-Depth ArcSecs Annotated Research Working Edition",
+      "path": "docs/long-term-memory/reports/R21.md",
+      "sha256": "0264cdda214aeebc906de8e3f184bec70b40bcf17800c5f6eb0bed1ab1443cf8",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R22",
+      "title": "Report 22 — Full-Depth ArcSecs Annotated Research Working Edition",
+      "path": "docs/long-term-memory/reports/R22.md",
+      "sha256": "59590d5858f1e6dbc543e2db26aabf59c200d457d7c348acd05599e9395c4656",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R23",
+      "title": "Report 23 — Full-Depth ArcSecs Annotated Research Working Edition",
+      "path": "docs/long-term-memory/reports/R23.md",
+      "sha256": "bfc08ebfbf3b28b1756fb231b3605217deeb0f5d81ca98f883fd5e72faed5351",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R24",
+      "title": "Report 24 — Full-Depth ArcSecs Annotated Research Working Edition",
+      "path": "docs/long-term-memory/reports/R24.md",
+      "sha256": "2269cf6b248b6736e7f2cfd9dc9276a2d55fad22c6449224209987e0ff353a9f",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R25",
+      "title": "Black-Hole Event Horizons Without Physical Spacetime: Physical Photon Capture, Finite Crossing Durations, and Coordinate-Infinity Audits in the ArcSecs Framework",
+      "path": "docs/long-term-memory/reports/R25.md",
+      "sha256": "43035980fc6e4c513d126cb746d8115a458c066f21498b5bb13cb172778dfad6",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R26",
+      "title": "Constant Universal Time: Toward a Quantitative Physical-Process Account of Clocks, Motion, and Decay",
+      "path": "docs/long-term-memory/reports/R26.md",
+      "sha256": "1841901520b9b23bbcb6d447fcf5031f38b228b8f97f275ba444cac90aa5791f",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R27",
+      "title": "Are Distant Objects Closer and Smaller? An Independent Geometry-First Astronomical Audit",
+      "path": "docs/long-term-memory/reports/R27.md",
+      "sha256": "4cf76ae4ab6c7e672e4056431dca02c4ef6fe52bff2aaede59eb95df0f8139e2",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R28",
+      "title": "Superluminal Separation and Causality: Testable Relational Motion Beyond a Universal Light Ceiling",
+      "path": "docs/long-term-memory/reports/R28.md",
+      "sha256": "c1ecce6255fcfedc5252b7a317844a599db9fbcb985ce5e733445672626aa0a5",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R29",
+      "title": "Is Time Fundamentally Constant? A Physical-Process Model of Atomic Clocks, Optical Transitions, and Particle Decay",
+      "path": "docs/long-term-memory/reports/R29.md",
+      "sha256": "a8886a11d6b9ceeaeab2e019b2b5e27b5c5af6230c080b67dee339e96e965b23",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R30",
+      "title": "Operational Mass, Gravitational Coupling, and Empirical Limits on Nonzero Photon Rest Mass: An Independent ArcSecs Investigation",
+      "path": "docs/long-term-memory/reports/R30.md",
+      "sha256": "b7d238a93b3d4471fc0d8aa888ddd91822d31cfe2d08ad9d31ecfdb0a05a7e08",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R31",
+      "title": "Independent ArcSecs Research Commission 11: Gravitational Action on Light, Operational Mass Vocabulary, and Multi-Frequency Rest-Mass Discriminants",
+      "path": "docs/long-term-memory/reports/R31.md",
+      "sha256": "085d8ebdb76541b478e27f3749b2158279db1d8a734650409a17d1fb2514a5cc",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R32",
+      "title": "How Old Is the Universe? Independent Cosmic Chronometers, Distance Calibration, and JWST False High-Redshift Candidates",
+      "path": "docs/long-term-memory/reports/R32.md",
+      "sha256": "191dc18aa5fa6f9d58f76b3127802d18554224226c17005a7da5fdb7facb5a3d",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R33",
+      "title": "Mission 09 Technical Report: Can We Detect Other Cosmic Bubbles? A Falsifiable, Test-Driven Search for External-Domain Effects Under the ArcSecs Framework",
+      "path": "docs/long-term-memory/reports/R33.md",
+      "sha256": "aa404b0f04124e85101e79e9d9572743d2380ced4d128df818a62ed774110fe2",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R34",
+      "title": "External Influence and Boundary Physics in ArcSecs Cosmology: Can an Exterior Environment Drive Universe-Scale Bubble Growth?",
+      "path": "docs/long-term-memory/reports/R34.md",
+      "sha256": "5716cc982ecbb41d9909a851f218d4fc7106e97e02faa3bc18d40d1a3c1a1c87",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R35",
+      "title": "Relational, Physical-Field Gravity Without a Spacetime Fabric: Precision Benchmark Audit, Machian Kernel Analysis, and Empirical Falsification Framework",
+      "path": "docs/long-term-memory/reports/R35.md",
+      "sha256": "cf597c15dfe0d0524d7ce02b42c75ab5d937762376619b7824988ee060ffd1c1",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R36",
+      "title": "Can a Physical Photon-Energy-Loss Mechanism Replace or Supplement Expanding-Space Redshift?",
+      "path": "docs/long-term-memory/reports/R36.md",
+      "sha256": "69d090ee2cb8bb4b665a51df075a9082d859ffde63ec09cd30b98a4e7cff6cbf",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R37",
+      "title": "Relational Baryon Dynamics, Dark-Sector Observables, and Substrate-Capture Propulsion Feasibility under the ArcSecs Framework",
+      "path": "docs/long-term-memory/reports/R37.md",
+      "sha256": "61fc064d5308066f494832e9b601c545e14e8e1080ae6c11e3701e13194904a3",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R38",
+      "title": "ArcSecs editorial intake R38 — Physical Reality Without a Spacetime Substrate",
+      "path": "docs/long-term-memory/reports/R38.md",
+      "sha256": "823301599dde0d01209e808c67c54d11ad394266e3c6193ce678fc0708baec41",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R39",
+      "title": "ArcSecs Research Report R39 — Photon Momentum Exchange, Source Recoil, and Physical-Field Gravity",
+      "path": "docs/long-term-memory/reports/R39.md",
+      "sha256": "aa04c5206d4b676d66bdd456f1189e369aaf291d6ca3a7b694bcf61852f321d8",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R40",
+      "title": "R40 — Finite-Speed Physical Carrier, Source Recoil, and External-Bubble Interaction Tests",
+      "path": "docs/long-term-memory/reports/R40.md",
+      "sha256": "dea9fce8ae00f87d214be35c321d4b7be66d683ad817a147024b1f203824a18c",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    },
+    {
+      "id": "R41",
+      "title": "R41 — Source-Anchored Attractive Fields, Causal Propagation, and an Exterior Bubble Candidate",
+      "path": "docs/long-term-memory/reports/R41.md",
+      "sha256": "799be08a5233b765b89eae9c7b5c4740ee2356aa3a0f152674a471c304358532",
+      "status": "indexed source; detailed implementation coverage not yet established"
+    }
+  ],
+  "bridges": [
+    {
+      "id": "D-01",
+      "title": "Distance modulus, dust and signed distance ratio",
+      "status": "restricted analytical control implemented; full observational bridge open",
+      "related": "parallax/photometry/distance proxies"
+    },
+    {
+      "id": "D-02",
+      "title": "Independent geometry and local calibration",
+      "status": "open: complete bridge not implemented",
+      "related": "parallax/photometry/distance proxies"
+    },
+    {
+      "id": "D-03",
+      "title": "One Mpc sign reversal with consistent endpoint velocities",
+      "status": "restricted analytical control implemented; full observational bridge open",
+      "related": "parallax/photometry/distance proxies"
+    },
+    {
+      "id": "D-04",
+      "title": "Entrained 3D physical outflow",
+      "status": "open: complete bridge not implemented",
+      "related": "parallax/photometry/distance proxies"
+    },
+    {
+      "id": "D-05",
+      "title": "Lensing and flux must be paired",
+      "status": "open: complete bridge not implemented",
+      "related": "parallax/photometry/distance proxies"
+    },
+    {
+      "id": "D-06",
+      "title": "Extreme objects and classification controls",
+      "status": "open: complete bridge not implemented",
+      "related": "parallax/photometry/distance proxies"
+    },
+    {
+      "id": "D-07",
+      "title": "Covariance-aware distance inference",
+      "status": "open: complete bridge not implemented",
+      "related": "parallax/photometry/distance proxies"
+    },
+    {
+      "id": "T-01",
+      "title": "Universal ordering and physical clock response",
+      "status": "open: complete bridge not implemented",
+      "related": "oscillator and event timing proxies"
+    },
+    {
+      "id": "T-02",
+      "title": "Inherited motion and relational inertia",
+      "status": "open: complete bridge not implemented",
+      "related": "oscillator and event timing proxies"
+    },
+    {
+      "id": "T-03",
+      "title": "Moving sources plus weak transport aging",
+      "status": "open: complete bridge not implemented",
+      "related": "oscillator and event timing proxies"
+    },
+    {
+      "id": "T-04",
+      "title": "Different causal reaches",
+      "status": "open: complete bridge not implemented",
+      "related": "oscillator and event timing proxies"
+    },
+    {
+      "id": "G-01",
+      "title": "Retarded spin-2 physical interaction (M1)",
+      "status": "open: complete bridge not implemented",
+      "related": "force and lensing proxies"
+    },
+    {
+      "id": "G-02",
+      "title": "Gravity and dark-sector discrimination",
+      "status": "open: complete bridge not implemented",
+      "related": "force and lensing proxies"
+    },
+    {
+      "id": "G-03",
+      "title": "Capture, escape and local versus coordinate velocities",
+      "status": "open: complete bridge not implemented",
+      "related": "force and lensing proxies"
+    },
+    {
+      "id": "G-04",
+      "title": "Energy recipient and momentum exchange",
+      "status": "open: complete bridge not implemented",
+      "related": "force and lensing proxies"
+    },
+    {
+      "id": "P-01",
+      "title": "Gauge-consistent positive-gap photon architecture",
+      "status": "open: complete bridge not implemented",
+      "related": "dispersion and Review 6 controls"
+    },
+    {
+      "id": "P-02",
+      "title": "Environmental gap and phase-dependent limits",
+      "status": "open: complete bridge not implemented",
+      "related": "dispersion and Review 6 controls"
+    },
+    {
+      "id": "P-03",
+      "title": "Atomic recoil and independent force-range test",
+      "status": "open: complete bridge not implemented",
+      "related": "dispersion and Review 6 controls"
+    },
+    {
+      "id": "P-04",
+      "title": "Reciprocal aging and causal memory",
+      "status": "open: complete bridge not implemented",
+      "related": "dispersion and Review 6 controls"
+    },
+    {
+      "id": "P-05",
+      "title": "Transport diagnostics and closed ledger",
+      "status": "open: complete bridge not implemented",
+      "related": "dispersion and Review 6 controls"
+    },
+    {
+      "id": "C01-01",
+      "title": "Constitutive origin of a local emission characteristic",
+      "status": "open: complete bridge not implemented",
+      "related": "VSL proxy and Review 6 finite-gap constraint"
+    },
+    {
+      "id": "C01-02",
+      "title": "Finite-range causal collective inertia",
+      "status": "open: complete bridge not implemented",
+      "related": "VSL proxy and Review 6 finite-gap constraint"
+    },
+    {
+      "id": "C01-03",
+      "title": "Shell and void response",
+      "status": "open: complete bridge not implemented",
+      "related": "VSL proxy and Review 6 finite-gap constraint"
+    },
+    {
+      "id": "C01-04",
+      "title": "Separate characteristic, group and causal speeds",
+      "status": "open: complete bridge not implemented",
+      "related": "VSL proxy and Review 6 finite-gap constraint"
+    },
+    {
+      "id": "C01-05",
+      "title": "Operational calibration and void experiment",
+      "status": "open: complete bridge not implemented",
+      "related": "VSL proxy and Review 6 finite-gap constraint"
+    }
+  ],
+  "fixtures": [
+    {
+      "file": "review6_coherent_aperture.csv",
+      "source": "docs/review6/appendices/review6_coherent_aperture.csv",
+      "sha256": "7aa77039336a72e768ad31fc6b5ef83659cf1adcf5d952604dff5e93ab789502"
+    },
+    {
+      "file": "review6_coherent_detuning.csv",
+      "source": "docs/review6/appendices/review6_coherent_detuning.csv",
+      "sha256": "d9197fd5996b0740d715fb64c9adc8473786d75dd2904d23dd862e61b46d51f1"
+    },
+    {
+      "file": "review6_coherent_timing.csv",
+      "source": "docs/review6/appendices/review6_coherent_timing.csv",
+      "sha256": "5cdb32cf96f20fe6d2237f65a6032ffa1f24c1561597e2aae5edc9b6e122ba3d"
+    },
+    {
+      "file": "review6_detector_control.csv",
+      "source": "docs/review6/appendices/review6_detector_control.csv",
+      "sha256": "b42acc0f68d42a5728d2f96e1d0723c58a8d2480f7afb581225b8061bac8e5a1"
+    },
+    {
+      "file": "review6_escape.csv",
+      "source": "docs/review6/appendices/review6_escape.csv",
+      "sha256": "edb61d988097f50d6099afaab68e78b3b18a1311ed3baa8b0d30b5925b74665f"
+    },
+    {
+      "file": "review6_escape_summary.json",
+      "source": "docs/review6/appendices/review6_escape_summary.json",
+      "sha256": "bd8c149034e9c35dc2f1ecf29d3b608f986751dace0e28fd1c87d57acf8599ef"
+    },
+    {
+      "file": "review6_mediator_scan.csv",
+      "source": "docs/review6/appendices/review6_mediator_scan.csv",
+      "sha256": "666e07693f8a9df387f03c70447d127837d54c25a0f680dde97f50dc8616b964"
+    },
+    {
+      "file": "review6_summary.json",
+      "source": "docs/review6/appendices/review6_summary.json",
+      "sha256": "74fc90df8bbfea99a5b6a7ab25d8e0bdfc6a9624110da86a7cfb614ae9891641"
+    },
+    {
+      "file": "review6_coherent_cells.csv",
+      "source": "docs/review6/appendices/review6_coherent_cells.csv",
+      "sha256": "27436916cc32702b1479329c19c611917fc6fc41285beef6a14304a4dfa11fde"
+    }
+  ],
+  "newControls": [
+    {
+      "id": "escape",
+      "equations": "K11–K13",
+      "status": "implemented restricted analytical control"
+    },
+    {
+      "id": "phaseMatch",
+      "equations": "K7",
+      "status": "implemented restricted analytical control"
+    },
+    {
+      "id": "transferFloor",
+      "equations": "K4 fixed reference",
+      "status": "implemented restricted analytical control"
+    },
+    {
+      "id": "optics",
+      "equations": "Gaussian envelope; stationary timing and receiver coupling",
+      "status": "implemented restricted analytical control"
+    },
+    {
+      "id": "detuning",
+      "equations": "K9 single-excitation fixed-Q finite time",
+      "status": "implemented restricted analytical control"
+    },
+    {
+      "id": "temporal",
+      "equations": "K14 and finite-gap emission inequality",
+      "status": "implemented restricted analytical control"
+    },
+    {
+      "id": "distance",
+      "equations": "Book D-01/D-03",
+      "status": "implemented restricted analytical control"
+    },
+    {
+      "id": "intake",
+      "equations": "Book chapter 14, mdot=eta*rho*A*v",
+      "status": "implemented first-order intake estimate; not thrust"
+    },
+    {
+      "id": "finiteCell",
+      "equations": "K9-K10 all 15 archived finite-cell cases",
+      "status": "implemented restricted Hermitian cell"
+    },
+    {
+      "id": "mediatorReference",
+      "equations": "K4-K6 large-gap reference",
+      "status": "implemented reference-only transformed Simpson quadrature"
+    }
+  ],
+  "openGates": [
+    "K6 high-precision near-degenerate and elastic scans, multiple scattering",
+    "physical spatial/multimode reservoir and thermal reverse channels beyond selected finite cell",
+    "Part XXXI continuous trajectory and interval certificate",
+    "derived C-01 regulator and shell/void response",
+    "physical emission/receiver and common clock calibration",
+    "joint calibrated astronomical fit and held-out evidence",
+    "measured substrate, capture, power and momentum budget",
+    "full individual report and book bridge coverage"
+  ],
+  "previousAuditVersion": "3.141.3",
+  "cosmicControls": [
+    {
+      "id": "reference",
+      "source": "Standard flat FLRW Friedmann equation",
+      "status": "illustrative model, not fitted; early hot phase not ruled out"
+    },
+    {
+      "id": "recession",
+      "source": "Book 30B.5",
+      "status": "central linear approximation; no redshift law"
+    },
+    {
+      "id": "boundary",
+      "source": "Book 30A/30C; tools/bubble_force_toy.py and unified_reference.py",
+      "status": "static wall/tracer toy integration; no backreaction"
+    },
+    {
+      "id": "external",
+      "source": "Book 30B; tools/external_coupling.py",
+      "status": "exact static screened shell, calibrated to assumed gradient; Newtonian null"
+    },
+    {
+      "id": "tidal",
+      "source": "Book 30B.6–7; tools/external_coupling.py",
+      "status": "leading constant tidal tensor and separate causal delay"
+    },
+    {
+      "id": "population",
+      "source": "Book chapter 31",
+      "status": "one linear birth–death law; explicit null; no physical nucleation/collisions"
+    }
+  ],
+  "cosmicOpenGates": [
+    "derive physical nucleation and termination rates, alternative birth laws",
+    "moving field sources, boundary backreaction and closed parent energy budget",
+    "domain collisions and CMB templates with trial-corrected observational tests",
+    "BBN, recombination, BAO and common cosmological likelihood with independent held-out tests",
+    "relational photon transfer and clock calibration; do not infer redshift from wall growth"
+  ],
+  "dynamicControls": [
+    {
+      "id": "adiabatic",
+      "source": "New extension of Book 30A/30C pressure/tension equation",
+      "status": "adiabatic gas and wall energy ledger; constant exterior pressure, not a cosmological fit"
+    },
+    {
+      "id": "movingShell",
+      "source": "New extension of Book 30B/30C screened shell",
+      "status": "prescribed quasistatic source trajectory; integrated explicit source work; no causal field/backreaction"
+    }
+  ],
+  "dynamicVerification": {
+    "reference": "tests/fixtures/cosmic/dynamic-reference.json",
+    "method": "independent SciPy DOP853 gas energy ODE and angular Yukawa quadrature",
+    "trajectories": 11,
+    "samples": 121
+  },
+  "causalControl": {
+    "id": "causalField",
+    "source": "Book 30D / R41; tools/attractive_field_v1.py",
+    "status": "bounded reciprocal 1D periodic Fourier-Galerkin field and moving particles; no cosmic wall or empirical gravity",
+    "reference": "tests/fixtures/cosmic/causal-reference.json",
+    "trajectories": 10,
+    "samples": 330,
+    "open": "3D stress, compact support, causal wall coupling, photon coupling, observational fit"
+  },
+  "localCollisionControl": {
+    "id": "localCollision",
+    "source": "New conditional extension motivated by Book 30A–30D and 32; not an original derived ArcSecs cosmic law",
+    "status": "Local 1D periodic double-well scalar interface pair, compact pulse and vacuum null; independent local energy flux and global energy ledger",
+    "reference": "tests/fixtures/cosmic/local-collision-reference.json",
+    "trajectories": 5,
+    "samples": 1065,
+    "open": "3D wall geometry, matter and photon coupling, physical parameter calibration, continuum convergence, cosmic collision observables and observational fit"
+  },
+  "photonHistoryControls": [
+    {
+      "id": "photonAging",
+      "source": "Book 30R CR3–CR5; tools/cosmic_aging_review.py",
+      "status": "fixed-gap phenomenological drag, ledger only; stationary timing null"
+    },
+    {
+      "id": "photonShell",
+      "source": "Book 30R CR1–CR2, CR6",
+      "status": "static separately center-normalized shell, constant frequency, endpoint energy bound; not dynamic crossing"
+    },
+    {
+      "id": "photonTiming",
+      "source": "Book 30R CR7",
+      "status": "first regular interception of moving linear endpoints, no spectroscopic or clock derivation"
+    },
+    {
+      "id": "photonRecoil",
+      "source": "Book 30S BS1–BS3; tools/bath_recoil_v1.py",
+      "status": "single-event kinematic feasibility, no rate; binary64 band endpoints"
+    }
+  ],
+  "photonHistoryVerification": {
+    "archivedReferenceRows": 134,
+    "fixtures": [
+      {
+        "file": "arrival.csv",
+        "sha256": "447010e06e95e2db966f009938680c84efa106079c01f3382c54f8c8089696da",
+        "source": "docs/long-term-memory/research/cosmic-aging/arrival.csv"
+      },
+      {
+        "file": "bands.csv",
+        "sha256": "ea4430f46072368e04a1af096fbc217fa4339c3db3a272e582fa258be01ea91e",
+        "source": "docs/long-term-memory/research/bath-recoil/bands.csv"
+      },
+      {
+        "file": "drag.csv",
+        "sha256": "c90df69bc6d6d0e5b9ce9110c863e72ec8ddca28fab00dd20c311470f10e5247",
+        "source": "docs/long-term-memory/research/cosmic-aging/drag.csv"
+      },
+      {
+        "file": "events.csv",
+        "sha256": "14308db04db71210df05757c1dfa65aaa2974d523cd35517307f1c6d09ea4f47",
+        "source": "docs/long-term-memory/research/bath-recoil/events.csv"
+      },
+      {
+        "file": "shell.csv",
+        "sha256": "e18cb978157d5f515f348dd94fbd0ffd2f5fbfa78087ca8df85aeab6b527ac58",
+        "source": "docs/long-term-memory/research/cosmic-aging/shell.csv"
+      }
+    ],
+    "highPrecisionCases": 10,
+    "highPrecisionMethod": "90-digit mpmath law of cosines with exact binary64 input values"
+  },
+  "photonHistoryOpenGates": [
+    "derived C-01 matter regulator with backreaction and void response",
+    "physical interaction amplitude and rate; absorption, heating, thermal return, linewidth and angular scattering",
+    "dynamical photon-wall coupling; monotone trajectory not derived",
+    "operational moving source/detector clocks and spectra",
+    "common observational likelihood"
+  ],
+  "releaseControls": [
+    {
+      "id": "outflow",
+      "source": "Book Chapter 32A OF1–OF8; tools/entrained_outflow_v1.py",
+      "status": "source-matched prescribed flow benchmark; 24 archived cases",
+      "limits": "No dynamical matter flow, physical aging or measured optical fit; common-coordinate ceiling fails under advection."
+    },
+    {
+      "id": "clockCalibration",
+      "source": "Book T-01/T-03; Chapter 25",
+      "status": "conditional prescribed-rate integration and separate conventional controls",
+      "limits": "No derived multi-species constitutive clock law."
+    },
+    {
+      "id": "quantumReceiver",
+      "source": "Book Chapter 30N; tools/quantum_receiver_v1.py",
+      "status": "source-matched 1D spectral Hamiltonian; 28 spectral cases, four controls, seven independently integrated trajectories",
+      "limits": "No 3D QED, spontaneous emission or calibrated astronomical receiver."
+    },
+    {
+      "id": "driveBudget",
+      "source": "Book Chapter 14 / Appendix E8",
+      "status": "new conditional steady nonrelativistic engineering ledger",
+      "limits": "No measured capture, thrust, global energy ledger or structural feasibility."
+    }
+  ],
+  "releaseSourceHashes": [
+    {
+      "path": "tools/entrained_outflow_v1.py",
+      "sha256": "9efe8a1590a89021bf3e6d565677796578a4fe072053cdddd8dedc08ad2ea221"
+    },
+    {
+      "path": "tools/quantum_receiver_v1.py",
+      "sha256": "efef1380c65f2c5f3d31135cf9bfc1fbc4c307bd09e63f8f4d00cad6db33811c"
+    },
+    {
+      "path": "docs/long-term-memory/research/outflow/scan.csv",
+      "sha256": "6e2ca932a8dac5248d485d8eb5b25e5e0b450104558e7f94fe6d2a61319267e2"
+    },
+    {
+      "path": "docs/long-term-memory/research/quantum-receiver/receiver_spectral_convergence.csv",
+      "sha256": "e78d13d6719cfcce58522132da2a6c1131938e892e25ae34b0a39f32702db9d2"
+    },
+    {
+      "path": "docs/long-term-memory/research/quantum-receiver/receiver_controls.csv",
+      "sha256": "38c09307a36840e28b6058dfb92d88aed90bff4c1b78bbb6efb8eb9be53ba48f"
+    }
+  ],
+  "releaseOpenGates": [
+    "Complete three-dimensional coupled field/matter/wall/photon model",
+    "Derived multi-species physical clock and receiver calibration",
+    "Independent observational likelihoods and discrimination against conventional cosmology",
+    "Measured substrate coupling, capture and thrust",
+    "Public-runtime WordPress integration, real GPU, security and cross-browser verification",
+    "Resolve 58 historical plugin failures without private fixtures"
+  ]
+}

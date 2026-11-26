@@ -1,0 +1,772 @@
+<h2 id="lib-external-influence-and-boundary-physics-in-arcsecs-cosmology-can-an-exterior-environment-drive-universe-scale-bubble-growth"><strong>External Influence and Boundary Physics in ArcSecs Cosmology: Can an Exterior Environment Drive Universe-Scale Bubble Growth?</strong></h2>
+<blockquote>
+<p><strong>ArcSecs editorial reading key (23 November 2026; R34):</strong> This report develops the ArcSecs physical-first research programme. Instrument readings and published numerical bounds remain distinct from an author’s inference about the underlying cause. Historical relativity-based expressions are comparison benchmarks, <strong>not</strong> the adopted ArcSecs physical mechanism. A failed narrowly specified toy model does not establish that every future nonmetric physical mechanism is impossible. Likewise, an ArcSecs position is not automatically an independently observed result.</p>
+</blockquote>
+<p><strong>Direct observation to preserve:</strong> Physical pressure differences can accelerate a material boundary; symmetric surrounding inverse-square gravity cancels inside a spherical shell.</p>
+<p><strong>ArcSecs inference to investigate:</strong> Test nonmetric exterior screened interactions, boundary pressure gradients and anisotropic tides separately; do not relabel exterior gravity as a measured isotropic pull.</p>
+<p><strong>Verification sources and data to inspect:</strong> Classical shell theorem, vacuum-wall literature, CMB anisotropy bounds.</p>
+<p><strong>Scope-locked revision:</strong> 2026-11-23 · Independent Mission 07 · Research-only scientific manuscript (not peer-reviewed).<br>
+An affirmative, test-driven investigation under the eleven-premise ArcSecs charter finds that under inverse-square gravity and an exactly symmetric exterior shell, the net force inside is zero; a distinct interaction would be needed for isotropic outward influence because inverse-square forces from a spherically symmetric surrounding mass shell cancel inside the cavity, and standard vacuum-decay and thin-shell benchmarks rely on interior-minus-exterior stress differences or wormhole throat formation rather than outward gravitational attraction1. Within a non-substrate relational cosmos governed by a constant universal progression parameter, sustained isotropic outward acceleration of a real physical bubble boundary requires a radial pressure or relational field-energy gradient across a material interface rather than attractive gravity from distant surrounding mass; by contrast, an asymmetric exterior gravitational distribution imprints a coupled center-of-mass dipole and anisotropic tidal quadrupole shear whose ratio places strict observational bounds on the distance to any exterior attractor3. Combining Planck isotropy limits on anisotropic cosmic shear with quasar dipole measurements, fast radio burst dispersion limits on photon invariant rest mass, and full-sky bubble-collision searches yields quantitative boundary-motion and source-receiver propagation criteria capable of ruling out an exterior-field origin for cosmic expansion4.</p>
+<h3 id="lib-structured-abstract"><strong>Structured Abstract</strong></h3>
+<p><strong>Objective:</strong> Evaluate whether a hypothetical greater physical environment outside our observable cosmic domain can physically nucleate, sustain, and accelerate the outward growth of a universe-sized spherical bubble through exterior gravity or negative exterior pressure without invoking a material spacetime substrate, relativistic metric expansion, or variable time.<br>
+<strong>Methods:</strong> Operational definitions are established strictly in terms of physical mass-energy carriers, pairwise relational separations, and localized interfaces within a constant universal “When” parameter. Three established benchmarks—classical thin-interface pressure bubbles (Model A), semiclassical first-order vacuum decay (Model B), and Israel thin-shell junction dynamics including generalized higher-curvature extensions (Model C)—are audited solely as mathematical and historical constraints against an explicit ArcSecs physical-relational candidate (Model D)2. Quantitative behavior is evaluated via dimensionless numerical integrations across four dynamical regimes, a 2,000-point Fibonacci-sphere quadrature check of the exterior shell theorem with controlled dipole and quadrupole symmetry breaking, triaxial boundary-shear integrations, and a 5,000-realization simulated-null Monte Carlo calibration3.<br>
+<strong>Results:</strong> Numerically, a spherically symmetric exterior mass shell produces zero net radial pull inside its cavity down to a 1.876 × 10⁻⁷ discretization floor relative to its 4.000 × 10⁻² baseline force scale, showing that symmetric inverse-square attraction cannot supply the proposed isotropic boundary force without additional physics3. An exterior dipole perturbation shifts the bubble’s center of mass without isotropic stretching, while a quadrupole perturbation drives triaxial shear without net expansion3. In standard thin-shell benchmarks, unbound false-vacuum bubbles flip their exterior orientation sign and pinch off behind a Schwarzschild throat rather than expanding outward into the parent environment1. Coupling the Planck anisotropic shear bound (less than 10⁻¹⁰) to a kinematic dipole scale (around 10⁻³) forces any unscreened asymmetric exterior gravitational pull source beyond ten million Hubble radii unless the exterior mass distribution is spherically symmetric to better than one part in ten billion3. Simultaneously, solar-wind and fast radio burst observations restrict any Proca invariant photon rest mass below 2 × 10⁻⁵⁴ kg (Particle Data Group) and 3.9 × 10⁻⁵¹ kg (fast radio bursts), requiring any ArcSecs light-slowing mechanism to operate achromatically or via sub-threshold dispersion5.<br>
+<strong>Limitations:</strong> No empirical detection of a physical cosmic boundary, nonzero photon invariant rest mass, or exterior mass distribution exists in observational data as of 22 November 20264. Numerical solver outputs are illustrative mathematical tests of internal consistency rather than empirical confirmations, and all symbolic derivations and executable scripts are isolated in external companion files outside this equation-free manuscript.<br>
+<strong>Keywords:</strong> ArcSecs cosmology, bubble boundary dynamics, shell theorem, tidal quadrupole shear, thin-shell benchmark, photon mass bounds, cosmic dipole, falsification criteria.</p>
+<h3 id="lib-opening-research-position-binding-arcsecs-charter-and-scope"><strong>1. Opening Research Position: Binding ArcSecs Charter and Scope</strong></h3>
+<p>This commissioned investigation operates strictly as an affirmative, test-driven evaluation of the ArcSecs physical-first cosmological framework. The eleven statements below constitute the sponsor’s fixed editorial and theoretical premises for Mission 07 and are reproduced faithfully as the starting axioms of this study:</p>
+<blockquote>
+<ol type="1">
+<li>Photons have mass.<br>
+</li>
+<li>Time is constant.<br>
+</li>
+<li>Light slows down over time.<br>
+</li>
+<li>Time does not physically exist; it is the “When.”<br>
+</li>
+<li>Space does not physically exist; it is the “Where.”<br>
+</li>
+<li>All that physically exists at any moment occupies area and has mass at that moment.<br>
+</li>
+<li>Spacetime does not physically exist.<br>
+</li>
+<li>Light is not the fastest thing in the universe.<br>
+</li>
+<li>Things move apart from each other faster than causality; time, space, or spacetime cannot be physically stretched because they are not physical substances to stretch.<br>
+</li>
+<li>The size of the universe is unknown.<br>
+</li>
+<li>Objects in the universe are smaller and closer than they appear.</li>
+</ol>
+</blockquote>
+<p>Five scope boundaries govern every analytical section of this report. First, “space” designates where physical objects are located and “time” designates when physical events occur under a constant universal progression parameter; neither is treated as matter, an elastic sheet, a vacuum fabric, or a physical carrier of forces, and “spacetime” is excluded as a physical explanatory substance. Second, special and general relativity are rejected as fundamental explanatory architectures; published relativistic calculations—including Coleman–De Luccia instantons, Israel junction conditions, and generalized higher-curvature matching theorems—appear strictly as historical calculation tools and empirical calibration constraints rather than endorsed physical causes2. Third, atomic-clock frequency ratios, particle-decay counts, and signal arrival intervals are analyzed operationally as differences in physical processes and propagation events within constant universal “When,” never as time itself stretching or dilating. Fourth, every proposed interaction specifies physical entities, momentum transfer, energy conservation, and measurable observables. Fifth, following strict photon-mass terminology discipline, the ArcSecs premise that photons carry energy, momentum, and gravitational responsiveness is kept strictly distinct from the narrower unverified claim of a nonzero invariant rest mass, which would require dedicated dispersive or electrodynamic signatures rather than conflation with energy-equivalent gravitational deflection5.</p>
+<h3 id="lib-research-question-hypotheses-and-falsification-framework"><strong>2. Research Question, Hypotheses, and Falsification Framework</strong></h3>
+<p>Mission 07 addresses one central physical question: can an external physical environment surrounding a universe-sized domain exert an actual outward gravitational pull—distinct from interior-minus-exterior pressure gradients and relativistic metric stretching—that drives accelerated expansion of a real domain boundary, and what interior observables could confirm or rule out that exterior field?<br>
+To test this thesis rigorously, three mutually exclusive hypotheses are evaluated against numerical consistency and published observational limits:</p>
+<ul>
+<li><strong>Null Hypothesis (H0 — Interior Pressure or Absent Gravitational Pull):</strong> Either no physical exterior wall exists within causal reach, or any bubble growth is driven entirely by an internal-minus-external energy-density or pressure difference (or internal kinetic inertia) while isotropic exterior gravity exerts zero net radial pull by spherical symmetry. Under H0, interior observers detect zero wall-induced tidal shear above cosmic variance and zero directional boundary reflections.<br>
+</li>
+<li><strong>Principal ArcSecs Hypothesis (H1 — Exterior Physical Gravitational or Relational Pull):</strong> Our observable cosmic domain resides within a real boundary embedded in a greater physical environment of massive entities occupying finite area at constant universal “When,” and an exterior gravitational interaction—or a verified non-substrate exterior relational field coupling—transfers outward radial momentum to the boundary, producing measurable interior propagation distortions or anisotropic tidal shear.<br>
+</li>
+<li><strong>Alternative Hypothesis (H2 — Asymmetric Tidal Disruption Without Isotropic Expansion):</strong> An inhomogeneous exterior mass distribution acts gravitationally on a physical boundary not by pulling it uniformly outward, but by inducing a bulk center-of-mass dipole acceleration plus an anisotropic quadrupole tidal shear aligned with the exterior mass axis. Under H2, exterior gravity deforms and shears the bubble rather than inflating it isotropically.</li>
+</ul>
+<p>Predeclared falsification gates govern acceptance or rejection of H1. Any proposed exterior-gravity mechanism fails if its calculated radial force vanishes by spherical symmetry, if it merely relabels pressure difference as “gravity,” if it violates local energy-momentum conservation, if it lacks a causal physical coupling across the boundary, or if its predicted anisotropic shear or bulk dipole exceeds observational ceilings3. Specifically, if an asymmetric exterior gravitational pull requires a bulk kinematic dipole near 10⁻³ while Planck measurements bound large-scale anisotropic Bianchi shear below 10⁻¹⁰, any model placing an unscreened exterior perturbing mass closer than ten million Hubble radii is ruled out3. Likewise, any ArcSecs photon-mass propagation model invoking Proca-type invariant rest mass above 3.9 × 10⁻⁵¹ kg is ruled out by fast radio burst dispersion limits5, and any model predicting observable late-time thin-wall bubble collisions at rates exceeding four sky-wide imprints is disfavored at 95 percent confidence by WMAP and Planck full-sky filters4.</p>
+<h3 id="lib-operational-definitions-without-a-material-spacetime-substrate"><strong>3. Operational Definitions Without a Material Spacetime Substrate</strong></h3>
+<p>Translating the “boiling pot of cosmic bubbles” analogy16 into coherent physics requires separating four concepts frequently conflated in informal cosmology: an embedded physical bubble in pre-existing relational locations, a scalar domain wall between field vacua, a causal propagation horizon, and the observable-universe limit.<br>
+In ArcSecs, <strong>greater universe</strong> denotes the totality of physical entities carrying mass and occupying finite area at a constant universal progression parameter, without assuming an overarching material container or spatial fabric. <strong>Outside</strong> and <strong>parent environment</strong> denote physical matter, radiation, or scalar-field condensates located at greater pairwise relational separations from a chosen central reference body than the boundary itself. <strong>Bubble interior</strong> refers to the bounded physical domain characterized by a distinct bulk energy density, particle density, or field state relative to the surrounding domain. <strong>Boundary</strong> (or physical wall) designates a localized material or field transition zone of finite thickness, nonzero surface energy density, and measurable stress capable of exchanging momentum with impinging massive particles and massive photons—not a mere mathematical coordinate surface or observational horizon.<br>
+Without a material spacetime manifold, <strong>radius</strong> is defined operationally as the instantaneous Euclidean-relational separation distance between a designated interior reference anchor and the physical wall elements at a single instant of universal progression, calibrated via radar-ranging, parallax, or angular-diameter benchmarks once light-slowing and apparent-size corrections (Premise 11) are specified. <strong>Age</strong> denotes the elapsed interval of universal progression since a defined physical event such as nucleation or local structure formation, measured by reproducible physical oscillators such as atomic transition cycles or radioactive decay counts rather than a malleable temporal dimension.<br>
+Critically, <strong>causal horizon</strong> and <strong>observable-universe boundary</strong> are observational limits set by signal travel speed and elapsed duration, not physical membranes. Under ArcSecs Premise 8 (light is not the fastest thing in the universe) and Premise 9 (bodies move apart faster than local electromagnetic causality), two physical regions can separate faster than light signals traverse the gap without stretching any underlying fabric, and an observer’s electromagnetic visibility limit need not coincide with a real physical bubble wall.<br>
+Finally, the informal claim that <strong>“negative pressure outside pulls the wall”</strong> conflates four inequivalent mechanisms that must be kept strictly distinct:</p>
+<blockquote>
+<ol type="1">
+<li><strong>Hydrostatic Pressure-Gradient Force:</strong> When interior pressure exceeds exterior pressure, net outward force per unit wall area arises from momentum transfer across the interface. If the exterior is a state with <em>more negative</em> pressure than the interior, the interior-minus-exterior pressure difference is positive and pushes outward; this is a contact stress-gradient push from higher to lower pressure, not gravitational attraction1.<br>
+</li>
+<li><strong>Relativistic Vacuum Stress-Energy Backreaction:</strong> In general relativity, uniform vacuum energy with negative pressure acts as a repulsive source in the Friedmann and Einstein equations, altering global metric curvature; this is excluded as an ArcSecs physical explanation and treated solely as a mathematical benchmark1.<br>
+</li>
+<li><strong>Wall Surface Tension:</strong> A domain wall with positive surface energy density exhibits tangential tension that resists area increase and pulls a spherical interface <em>inward</em> toward collapse, unless overwhelmed by outward pressure work or an exotic negative-tension nonminimal coupling3.<br>
+</li>
+<li><strong>Attraction by Ordinary External Mass:</strong> Gravitational attraction from massive bodies located outside the boundary obeys inverse-square scaling with distance. By Gauss’s flux law and Newton’s shell theorem, a spherically symmetric exterior mass distribution produces identically zero net gravitational force anywhere inside the cavity; only non-spherical exterior multipoles generate internal tidal gradients3.</li>
+</ol>
+</blockquote>
+<h3 id="lib-literature-review-classical-bubbles-vacuum-transitions-thin-shells-and-cosmic-isotropy-constraints"><strong>4. Literature Review: Classical Bubbles, Vacuum Transitions, Thin Shells, and Cosmic Isotropy Constraints</strong></h3>
+<p>Primary theoretical literature on cosmic bubbles spans semiclassical field tunneling, relativistic thin-shell matching, numerical collision phenomenology, and observational isotropy tests. Coleman (1977) established the flat-space semiclassical bounce formalism for false-vacuum decay, showing that a metastable scalar field tunnels to a lower-energy configuration via an O(4)-symmetric Euclidean instanton whose critical bubble balances positive surface tension against volume energy release2. Coleman and De Luccia (1980) incorporated gravitational backreaction, calculating that vacuum decay alters the effective cosmological constant across the wall, suppresses tunneling rates relative to flat space, and generates an apparently infinite open interior geometry from an inside observer’s perspective2. Gott subsequently formalized how open universes arise within de Sitter vacuum transitions19, while his later essay (Gott 2017) popularized the “sea of inflating bubbles” imagery—a pedagogical picture that serves as commentary rather than primary empirical evidence16.<br>
+Subsequent foundational analyses revealed sharp limitations in standard vacuum-decay dynamics. A critique in arXiv:hep-th/0211160 challenged Coleman–De Luccia decay into flat or anti-de Sitter minima, arguing that generic tunneling transitions with negative true-vacuum energy evolve toward crunching cosmological spacetimes rather than stable static vacua26. A Hamiltonian Wheeler–DeWitt investigation in <em>Physical Review D</em> (10.1103/PhysRevD.104.026013) critiqued Coleman’s reliance on imaginary eigenvalues and Euclidean analytic continuation, showing that a Lorentzian Hamiltonian treatment of false-vacuum transitions can yield closed rather than open universes20. Farhi, Guth, and Guven (1990) and Burda, Gregory, and Moss (2015) further examined how black holes or singular initial conditions complicate or catalyze vacuum nucleation28.<br>
+To analyze bubble wall motion independently of Euclidean instantons, Israel (1966) formulated the covariant thin-shell junction formalism, equating the jump in extrinsic curvature across a singular timelike hypersurface to the localized surface energy-momentum tensor and deriving the exact equation of motion for a spherical dust shell separating Minkowski and Schwarzschild domains10. Berezin, Kuzmin, and Tkachev (1987) classified general relativistic thin-wall trajectories across phase transitions and false-vacuum remnants31, while Blau, Guendelman, and Guth (1987) solved the dynamics of a de Sitter false-vacuum bubble embedded in a Schwarzschild true-vacuum exterior1. Blau, Guendelman, and Guth uncovered a decisive geometric paradox: an observer on the false-vacuum side sees the bubble inflate, yet above the critical mass threshold the exterior orientation sign reverses, so the exterior Schwarzschild observer sees a black-hole wormhole throat rather than a wall plowing outward into the surrounding universe1. Ipser and Sikivie calculated that planar and spherical domain walls exhibit repulsive gravitational fields in general relativity28, whereas a nonminimally coupled scalar-field study (arXiv:0710.4599) explored effective negative wall tension18. Extending thin-shell matching to arbitrary gravitational actions depending on curvature invariants and their covariant derivatives, Senovilla (2026) demonstrated via distributional calculus that thin shells arise from jumps in the (m+1)-th normal derivative of the Riemann tensor, that purely quadratic theories uniquely permit gravitational double layers, and that shell-free proper matchings universally require continuity of normal bulk energy-momentum components across every diffeomorphism-invariant theory9.<br>
+If neighboring cosmic bubbles collided with our domain, Aguirre, Johnson, and Shomer36 and Aguirre and Johnson (2008, 2009) derived thin-wall collision geometries and survival conditions, showing that causal boundaries map onto circular azimuthally symmetric temperature and polarization features on an interior observer’s sky37. Wainwright, Johnson, Aguirre, and Peiris (2014) carried out full 1+1 relativistic scalar-field simulations directly from Lagrangians, finding power-law collision amplitudes bounded by present spatial curvature15. Observational searches by Feeney, Johnson, Mortlock, and Peiris (2011), McEwen et al. (2012), Osborne, Senatore, and Smith (2013), and subsequent Planck-era forecasts tested WMAP and Planck maps with optimal azimuthal filters, finding no significant bubble-collision detections and bounding expected full-sky collisions to fewer than four at 95 percent confidence4.<br>
+Full-sky isotropy and dipole observations provide stringent tests of any large-scale exterior influence. Akrami et al. (Planck Collaboration 2020) documented high statistical isotropy overall alongside persistent low-multipole anomalies including a hemispherical power asymmetry44, confirmed in four foreground-cleaned Planck maps in a 2024 <em>Astronomy &amp; Astrophysics</em> directional study (683, A176)47 and analyzed in a 2025 preprint (arXiv:2509.24712) reporting dipole-modulation amplitude near 0.07 at multipoles below 60 at roughly the 3-sigma level48. Crucially, Saadeh, Feeney, Pontzen, Peiris, and McEwen (2016) used Planck data to constrain global anisotropic Bianchi expansion shear relative to the Hubble rate to below 10⁻¹⁰3. Meanwhile, Secrest et al. (2021) analyzed a flux-limited all-sky sample of CatWISE quasars (arXiv:2009.14826) and reported a number-count dipole exceeding the standard kinematic CMB expectation6, prompting ongoing spectral-index re-evaluations in a February 2026 preprint (arXiv:2602.05700v2)50. Finally, empirical tests of photon invariant rest mass yield severe upper limits: the Particle Data Group (Navas et al. 2024) lists an official upper bound of 2 × 10⁻⁵⁴ kg (on the scale of 10⁻¹⁸ eV) rooted in Ryutov’s (2007) solar-wind magnetohydrodynamic analysis to Pluto’s orbit5, fast radio burst dispersion analyses set 95 percent confidence limits down to 3.9 × 10⁻⁵¹ kg5, and a 2026 Compton-scattering preprint by Nyambuya sets an upper limit below 2.60 × 10⁻³³ kg at 95 percent confidence while citing an earlier unverified gamma-ray burst lag estimate near 10⁻³⁷ kg that stands in multi-order-of-magnitude tension with solar-wind and fast radio burst limits52.</p>
+<h3 id="lib-physical-models-and-benchmark-evaluation"><strong>5. Physical Models and Benchmark Evaluation</strong></h3>
+<p>To isolate whether external gravity or an exterior pressure environment can make a universe-sized bubble grow, four dynamical frameworks are evaluated in ordinary prose; complete symbolic expressions, coordinate mappings, and numerical solver scripts reside exclusively in the external analysis/ companion files.</p>
+<h4 id="lib-model-a-classical-material-bubble-baseline"><strong>Model A: Classical Material Bubble Baseline</strong></h4>
+<p>Consider a spherical physical interface of instantaneous radius separating an interior medium at uniform pressure from an exterior environment at another pressure, carrying positive surface-energy density (tension) in joules per square meter and surface inertia per unit area. Under quasistatic assumptions, total potential energy equals the surface-area tension energy cost minus the volume pressure-work gain given by the interior-minus-exterior pressure difference multiplied by enclosed sphere volume. Differentiating energy with respect to radius shows two competing radial forces: an inward restoring surface-tension force proportional to radius and surface-energy density, and a pressure-difference force proportional to surface area and the pressure excess inside over outside. Equilibrium defines the Laplace balance, where pressure difference equals twice surface tension divided by radius, establishing an unstable critical nucleation radius.<br>
+Below the critical radius, surface tension dominates and the bubble collapses; above it, positive interior-minus-exterior pressure difference drives runaway radial acceleration. Including wall inertia in the Euler–Lagrange evolution equation ensures conservation of total kinetic plus surface plus volume potential energy3. Notice that if the exterior medium possesses <em>more negative</em> pressure than the interior, then interior pressure minus exterior pressure is strictly positive, producing an outward force across the interface. Calling this outward acceleration “exterior gravitational attraction” is physically mistaken: it is a local stress-gradient force across a contact wall, identical in mechanism to an overpressured vapor bubble expanding in a lower-pressure fluid. Furthermore, the three-dimensional thermal nucleation barrier scales with the cube of surface tension divided by the square of pressure difference, whereas four-dimensional semiclassical quantum tunneling (Coleman 1977) scales with the fourth power of surface tension divided by the cube of vacuum energy difference and cannot be interchanged without altering action dimensionality2.</p>
+<h4 id="lib-model-b-first-order-vacuum-phase-transition-historical-benchmark"><strong>Model B: First-Order Vacuum Phase Transition (Historical Benchmark)</strong></h4>
+<p>In standard scalar-field vacuum decay (Coleman 1977; Coleman &amp; De Luccia 1980), two homogeneous field minima have unequal potential energy densities, forming a metastable false vacuum outside and a lower-energy true vacuum inside2. A wall forms where the scalar field interpolates across the potential barrier, giving a positive wall tension set by the integrated field gradient across the barrier23. Semiclassical tunneling nucleates a critical true-vacuum bubble whose growth converts higher-energy false vacuum into lower-energy true vacuum, transferring the liberated bulk energy directly into the kinetic energy of the accelerating wall2. Gravitational backreaction introduces bulk curvature terms that enlarge the bounce action and, if true-vacuum energy is negative, risk a post-tunneling collapse rather than eternal growth23. Crucially, standard vacuum decay does not predict expansion caused by “outside gravity pulling the wall.” Instead, the higher energy density and more negative pressure of the exterior false vacuum relative to the interior true vacuum create a positive outward energy-conversion gradient; gravitational effects of the false vacuum inhibit or curve the background rather than pulling the wall outward like a surrounding attracting shell2.</p>
+<h4 id="lib-model-c-published-relativistic-shell-benchmark-only-not-an-arcsecs-physical-mechanism"><strong>Model C: Published Relativistic Shell Benchmark Only — Not an ArcSecs Physical Mechanism</strong></h4>
+<p>Strictly as a historical geometric benchmark and never as an endorsed ArcSecs physical mechanism, Israel’s (1966) thin-shell junction formalism matches distinct interior and exterior spherically symmetric solutions across a three-dimensional wall history parameterized by shell proper time10. In geometric units where the speed of light is unity (recoverable to SI units via factors of Newton’s gravitational constant divided by the fourth power of light speed), matching the intrinsic area metric forces the radial jumps in interior and exterior metric functions—weighted by normal orientation signs—to equal four pi times Newton’s constant times surface energy density times shell radius1. Squaring this junction identity yields a one-dimensional effective radial potential governing shell acceleration3.<br>
+Benchmarking against Blau, Guendelman, and Guth (1987) reveals why thin-shell geometry cannot validate outward pulling by exterior gravity1. For a high-energy de Sitter bubble embedded in a lower-energy Schwarzschild exterior, the interior pressure is lower (more negative) than the exterior zero-pressure vacuum, so local pressure forces point inward1. Unbound solutions above the critical Schwarzschild mass occur only when the exterior orientation sign reverses across a critical radius, meaning the growing bubble disconnects through a wormhole throat as a separate closed domain while an outside observer sees only a black hole1. Conversely, for a true-vacuum bubble inside a false-vacuum de Sitter exterior (the classical Coleman–De Luccia growth regime), unbounded hyperbolic growth occurs only if dimensionless wall tension stays below unity relative to the exterior Hubble scale, driven by the interior-minus-exterior vacuum energy difference3. Senovilla’s (2026) generalized junction conditions for arbitrary higher-derivative curvature theories show that while higher-order curvature invariants alter thin-shell distributional terms and permit double layers in quadratic gravity, proper shell-free junctions universally enforce continuity of normal bulk energy-momentum components across every diffeomorphism-invariant theory9. Thus, generalized junction rules neither eliminate the requirement for localized wall stress to support a pressure jump nor create an isotropic outward gravitational pull.</p>
+<h4 id="lib-model-d-independent-arcsecs-physical-relational-candidate"><strong>Model D: Independent ArcSecs Physical-Relational Candidate</strong></h4>
+<p>Under the ArcSecs charter, no material spacetime fabric exists; every physical system consists of massive particles and massive radiation occupying area and interacting via momentum-conserving forces at a constant universal progression parameter. Can a genuine exterior physical interaction—not a disguised pressure difference—accelerate a universe-sized spherical boundary outward?<br>
+Applying Newton’s shell theorem to an exterior spherical distribution of massive bodies surrounding a smaller physical bubble wall yields an exact cancellation: every cone of exterior mass pulling outward on a wall element is balanced by the larger opposite cone at greater distance, producing zero net radial gravitational acceleration inside the cavity3. Consequently, ordinary inverse-square exterior gravity from a spherically symmetric parent cosmos cannot expand a bubble.<br>
+To construct a valid ArcSecs physical-relational candidate without reinstalling metric stretching, two non-substrate mechanisms remain physically definable:</p>
+<blockquote>
+<ol type="1">
+<li><strong>Relational Exterior Field-Gradient Coupling (Scalar or Matter Stress Analogue):</strong> A continuous physical medium or scalar-matter sea occupying the greater universe couples locally to the massive constituents of a physical wall via a relational interaction Hamiltonian. Expansion occurs only if the exterior medium maintains a higher local interaction potential or lower thermodynamic pressure than the interior, transferring net outward radial momentum to wall particles across the finite wall thickness. While physically well-defined and energy-conserving (depleting exterior field energy into wall kinetic energy and interior excitation), this is a local boundary stress or field-gradient push, not long-range exterior gravitational attraction.<br>
+</li>
+<li><strong>Anisotropic Exterior Mass Distribution (Tidal Quadrupole) or Screened Finite-Range Coupling:</strong> If the greater universe breaks spherical symmetry around the bubble—characterized by an exterior mass dipole and quadrupole tensor—gravity pulls the bubble’s center of mass along the dipole axis while stretching one axis and compressing orthogonal axes via tidal quadrupole shear3. Only a hypothetical short-range attractive force (falling off faster than inverse-square over a screening length comparable to wall-to-shell separation) breaks Newton’s shell theorem inside a uniform shell, because the near wall element outweighs the distant opposite side; however, any such modification of inverse-square gravity on cosmic scales is severely constrained if required to vanish locally in planetary ephemerides and laboratory tests, and remains an unverified mechanism requiring an explicit physical mediator.</li>
+</ol>
+</blockquote>
+<p><strong>Compliance Statement — Explicit ArcSecs Mechanism and Missing-Mechanism Identification:</strong><br>
+“Within the ArcSecs constant-When relational framework, isotropic outward acceleration of a spherical cosmic boundary cannot be driven by long-range inverse-square gravity from a spherically symmetric exterior mass distribution because Newton’s shell theorem enforces exact radial cancellation inside the cavity; therefore, an actual isotropic outward gravitational pull from outside is presently a missing mechanism unless either a verified finite-range attractive mediator breaks inverse-square symmetry on cosmic scales without violating local solar-system bounds, or observed outward boundary acceleration is driven instead by a non-gravitational exterior-to-interior physical stress or scalar-matter gradient across a real material wall while exterior asymmetric mass supplies only a coupled bulk dipole translation and anisotropic quadrupole tidal shear.”</p>
+<table>
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Explanatory Ontology</th>
+<th>What Drives Wall Growth</th>
+<th>Role of Exterior Gravity</th>
+<th>Physical Wall Required</th>
+<th>Status in ArcSecs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Model A: Classical Material Bubble</td>
+<td>Flat relational domain, constant progression</td>
+<td>Positive interior-minus-exterior pressure excess overcoming surface tension</td>
+<td>None (central mass pulls inward; symmetric exterior cancels)</td>
+<td>Yes (measurable surface tension and inertia)</td>
+<td>Valid baseline for contact stress gradients; not exterior gravity3</td>
+</tr>
+<tr class="even">
+<td>Model B: First-Order Vacuum Decay</td>
+<td>Quantum scalar field in curved spacetime</td>
+<td>False-to-true vacuum energy conversion and wall tension dynamics</td>
+<td>Suppresses decay rate; does not pull wall outward</td>
+<td>Yes (scalar field gradient domain wall)</td>
+<td>Historical benchmark only; relies on rejected metric backreaction2</td>
+</tr>
+<tr class="odd">
+<td>Model C: Israel Thin-Shell and Generalized Junctions</td>
+<td>Piecewise Lorentzian manifolds glued at hypersurface</td>
+<td>Extrinsic curvature jump and vacuum stress difference; throat pinch-off</td>
+<td>Black-hole or wormhole geometry outside; not outward pull</td>
+<td>Idealized zero-thickness distributional shell</td>
+<td>Benchmark only; explicitly excluded as ArcSecs physical cause1</td>
+</tr>
+<tr class="even">
+<td>Model D: ArcSecs Physical-Relational Candidate</td>
+<td>Massive entities, relational separation, constant progression</td>
+<td>Local exterior-interior scalar or matter stress gradient, or anisotropic tidal shear</td>
+<td>Zero isotropic pull for inverse-square symmetry; nonzero dipole and quadrupole shear if asymmetric</td>
+<td>Yes (finite-thickness mass-energy interface)</td>
+<td>Active candidate; isotropic gravitational pull missing or unverified3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lib-methods-numerical-integration-protocol-and-statistical-design"><strong>6. Methods, Numerical Integration Protocol, and Statistical Design</strong></h3>
+<p>All mathematical derivations, solver configurations, and verification scripts are maintained externally under the analysis/ directory (documented in the Reproducibility Companion) so that the main manuscript remains completely equation-free. Four computational modules were executed to test dynamical consistency and statistical calibration3:</p>
+<blockquote>
+<ol type="1">
+<li><strong>Dimensionless Classical Solver (Model A):</strong> Variables are normalized by the critical Laplace radius and wall-inertia timescale. An adaptive Runge–Kutta integrator (relative tolerance 10⁻¹¹, absolute tolerance 10⁻¹³, maximum dimensionless step 0.01) tracks dimensionless radius and radial velocity across four distinct regimes: supercritical expansion without gravity, subcritical collapse without gravity, negative pressure difference collapse, and the tensionless limit with central interior gravity3. Conservation is audited via the exact Hamiltonian residual across every time step3.<br>
+</li>
+<li><strong>Thin-Shell Relativistic Benchmarks (Model C):</strong> The Blau–Guendelman–Guth effective radial potential is evaluated across six parameter pairs spanning bound-barrier and unbound regimes, and integrated in shell proper time with constraint residuals tracking squared velocity plus effective potential3. An independent analytical cross-check integrates the true-in-false hyperbolic wall trajectory and compares against the exact hyperbolic-cosine solution3.<br>
+</li>
+<li><strong>Shell-Theorem Quadrature and Triaxial Tidal Model (Model D):</strong> A 2,000-point Fibonacci-sphere discretization of an exterior mass shell at five times the bubble radius evaluates net radial force and center-of-mass acceleration across six cardinal boundary points under symmetric, pure-dipole (10 percent amplitude), pure-quadrupole (10 percent amplitude), and combined perturbations3. Subsequently, a volume-preserving triaxial Hamiltonian (evolving mean radius and quadrupole shape mode) integrates Model D under baseline pressure, pressure plus weak tidal shear, zero-pressure relational gradient plus tidal shear, and pure tidal shear without pressure3.<br>
+</li>
+<li><strong>Statistical Calibration and Simulated-Null Control:</strong> Before comparing against Planck and quasar dipole constraints, an eight-mode isotropic Gaussian null model (representing three dipole and five quadrupole standardized harmonic amplitudes) is tested across 5,000 Monte Carlo realizations with fixed seed 20261123 to verify false-positive rates against theoretical chi-squared quantiles at 95 percent and 99 percent thresholds3. Nuisance parameters include foreground masking, local peculiar motion, and cosmic variance; model selection compares pure isotropic H0 against exterior-dipole and shear models H1 and H2 using predeclared chi-squared rejection gates and tidal-to-dipole distance scaling3.</li>
+</ol>
+</blockquote>
+<h3 id="lib-results-trajectory-regimes-shell-theorem-audit-and-propagation-bounds"><strong>7. Results: Trajectory Regimes, Shell Theorem Audit, and Propagation Bounds</strong></h3>
+<p>All numerical results below represent verified computational outputs of the mathematical models3 and must be distinguished strictly from empirical cosmological measurements or unperformed observational forecasts.</p>
+<h4 id="lib-classical-and-relativistic-benchmark-dynamics"><strong>Classical and Relativistic Benchmark Dynamics</strong></h4>
+<p>In Model A, the supercritical regime (pressure difference positive, initial dimensionless radius 1.200 exceeding critical radius 1.000) accelerates monotonically to radius 2.9621 at dimensionless time 4.0000 with final velocity +1.0038 and relative energy drift 9.252 × 10⁻¹⁴3. Reducing initial radius to 0.800 (subcritical) triggers inward tension collapse to the numerical floor 0.0010 at time 1.5578 (relative energy drift 1.363 × 10⁻¹⁰), while reversing the pressure difference to negative unity drives even faster collapse by time 0.9463 despite an initial outward velocity3. Removing surface tension altogether while adding central gravity yields accelerated growth to radius 5.6870 by time 4.00003.<br>
+In Model C benchmarks, bound-barrier parameters produce positive effective potential peaks (ranging from +0.092283 to +0.710846), so inward-moving exterior shells bounce off the barrier—for example, from an initial radius of 3.2696 down to turning radius 3.1139 and back out to 5.6436 (constraint residual 1.091 × 10⁻¹⁰)—while subcritical expanding interiors collapse back to zero3. Above the critical mass threshold (unbound dimensionless curvature parameter 1.5 and surface tension parameter 0.8), the effective potential peak drops to -0.389413; an expanding wall crosses the orientation-flip radius 0.7020 and reaches 4.1598 with both interior and exterior orientation signs equal to -1 (constraint residual 2.566 × 10⁻⁹), confirming the Blau–Guendelman–Guth pinching-off throat geometry3. Meanwhile, the true-in-false Coleman–De Luccia benchmark (with dimensionless tension ratio 0.2) grows from dimensionless nucleation radius 0.3846 to 9.5044 at proper time 1.5, matching the exact hyperbolic-cosine analytical trajectory to 3.556 × 10⁻¹²3.</p>
+<h4 id="lib-shell-theorem-audit-and-triaxial-tidal-evolution"><strong>Shell Theorem Audit and Triaxial Tidal Evolution</strong></h4>
+<p>The 2,000-point Fibonacci quadrature verifies Newton’s shell theorem: for a uniform exterior shell, net internal force magnitude is 1.876 × 10⁻⁷ against a baseline exterior gravitational pull scale of 4.000 × 10⁻², with mean isotropic wall stretching -3.229 × 10⁻¹⁰ (pure discretization floor)3. Adding a 10 percent exterior mass dipole shifts the bubble’s entire center of mass by bulk acceleration +1.3331 × 10⁻³ while leaving mean isotropic wall expansion at -7.429 × 10⁻¹⁰ and tidal shear at +4.4777 × 10⁻⁸3. Conversely, a 10 percent exterior mass quadrupole produces zero bulk center-of-mass shift (-2.1117 × 10⁻⁷) and zero isotropic expansion (-2.642 × 10⁻¹⁰), but generates an anisotropic tidal shear of +2.4004 × 10⁻⁴ along the symmetry axis3.<br>
+In the triaxial Model D integrations, pure isotropic pressure growth preserves zero shear to machine precision3. Combining pressure or a dimensionless relational gradient of 1.2 with a weak tidal field of 0.05 drives radial growth from 1.200 to 2.124 and 2.908 respectively while accumulating large anisotropic shape distortions (+8.3194 × 10⁻² and +6.6925 × 10⁻²)3. Crucially, when both pressure difference and relational radial gradient are turned off and only an exterior tidal field of 0.20 acts on a tension-bearing wall, the mean radius <em>contracts</em> from 1.200 to 1.097 while stretching anisotropically by +1.7786 × 10⁻²3. Thus, exterior gravitational tides deform bubbles into ellipsoids rather than inflating them isotropically.</p>
+<table>
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Regime or Configuration</th>
+<th>Model</th>
+<th>Initial to Final Radius</th>
+<th>Final Radial Velocity or Shear</th>
+<th>Energy or Constraint Residual</th>
+<th>Physical Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Supercritical pressure (zero gravity)</td>
+<td>Model A</td>
+<td>1.200 to 2.9621 (t = 4.0)</td>
+<td>Velocity +1.0038</td>
+<td>1.332 × 10⁻¹⁴ (rel 9.252 × 10⁻¹⁴)</td>
+<td>Outward stress-gradient expansion3</td>
+</tr>
+<tr class="even">
+<td>Subcritical pressure (zero gravity)</td>
+<td>Model A</td>
+<td>0.800 to 0.0010 (t = 1.5578)</td>
+<td>Velocity -546.5031</td>
+<td>2.036 × 10⁻¹¹ (rel 1.363 × 10⁻¹⁰)</td>
+<td>Surface-tension collapse3</td>
+</tr>
+<tr class="odd">
+<td>Negative pressure difference</td>
+<td>Model A</td>
+<td>1.200 to 0.0010 (t = 0.9463)</td>
+<td>Velocity -1627.7589</td>
+<td>1.952 × 10⁻¹⁰ (rel 1.473 × 10⁻¹⁰)</td>
+<td>Combined inward pressure and tension3</td>
+</tr>
+<tr class="even">
+<td>Tensionless with interior gravity</td>
+<td>Model A</td>
+<td>1.200 to 5.6870 (t = 4.0)</td>
+<td>Velocity +1.9327</td>
+<td>2.824 × 10⁻¹³ (rel 2.845 × 10⁻¹³)</td>
+<td>Unopposed outward pressure acceleration3</td>
+</tr>
+<tr class="odd">
+<td>BGG unbound false vacuum</td>
+<td>Model C</td>
+<td>0.4000 to 4.1598 (tau = 1.5)</td>
+<td>Velocity +7.4266 (exterior sign -1)</td>
+<td>2.566 × 10⁻⁹</td>
+<td>Wormhole throat pinch-off, not exterior growth3</td>
+</tr>
+<tr class="even">
+<td>BGG bound bounce</td>
+<td>Model C</td>
+<td>3.2696 to 3.1139 to 5.6436</td>
+<td>Velocity +1.7956</td>
+<td>1.091 × 10⁻¹⁰</td>
+<td>Exterior shell bounces off potential barrier3</td>
+</tr>
+<tr class="odd">
+<td>CDL true-in-false benchmark</td>
+<td>Model C</td>
+<td>0.3846 to 9.5044 (tau = 1.5)</td>
+<td>Growth rate 2.6000 exterior Hubble units</td>
+<td>3.556 × 10⁻¹² vs analytical curve</td>
+<td>Interior lower-vacuum expansion3</td>
+</tr>
+<tr class="even">
+<td>Relational gradient plus tidal</td>
+<td>Model D</td>
+<td>1.200 to 2.908 (t = 3.0)</td>
+<td>Shear +6.6925 × 10⁻²</td>
+<td>4.545 × 10⁻¹⁴</td>
+<td>Growth driven by gradient; tides add shear3</td>
+</tr>
+<tr class="odd">
+<td>Pure exterior tidal (zero pressure and gradient)</td>
+<td>Model D</td>
+<td>1.200 to 1.097 (t = 3.0)</td>
+<td>Shear +1.7786 × 10⁻²</td>
+<td>6.455 × 10⁻¹²</td>
+<td>Contraction under tension plus tidal elongation3</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lib-monte-carlo-calibration-and-distance-scaling"><strong>Monte Carlo Calibration and Distance Scaling</strong></h4>
+<p>Across 5,000 simulated isotropic Gaussian skies with eight standardized dipole-plus-quadrupole modes, empirical false-positive rates match theory closely: 0.0510 above the 95 percent critical threshold (15.5073) and 0.0116 above the 99 percent threshold3. Linking bulk dipole velocity to tidal shear via distance scaling shows that the ratio of dimensionless dipole velocity (order 10⁻³) to maximum allowed anisotropic shear (below 10⁻¹⁰ from Planck constraints3) scales directly with exterior mass distance divided by Hubble scale, requiring exterior unscreened asymmetric pull sources to lie beyond ten million Hubble radii3.</p>
+<h3 id="lib-observational-requirements-to-satisfy-boundary-motion-criteria-and-source-receiver-propagation-tests"><strong>8. Observational Requirements to Satisfy, Boundary Motion Criteria, and Source-Receiver Propagation Tests</strong></h3>
+<h4 id="lib-central-deliverable-criteria-that-could-rule-out-the-proposed-exterior-field"><strong>Central Deliverable: Criteria That Could Rule Out the Proposed Exterior Field</strong></h4>
+<p>An interior observer can falsify a proposed exterior gravitational or relational field through two coupled sets of quantitative criteria:</p>
+<blockquote>
+<ol type="1">
+<li><strong>Boundary Motion and Interior Shear–Dipole Criteria:</strong> Any exterior gravitational mass distribution capable of pulling a boundary asymmetrically must induce both a bulk dipole translation and an aligned quadrupole tidal shear3. Because bulk dipole acceleration scales inversely with distance squared while tidal shear scales inversely with distance cubed, matching an observed cosmic dipole near 10⁻³ (or explaining excess quasar dipoles6) without exceeding the Planck anisotropic shear ceiling of 10⁻¹⁰7 requires the exterior perturbing mass to lie at least ten million Hubble radii away3. Alternatively, if an ArcSecs model attributes hemispherical cosmic microwave background asymmetry47 or quasar dipole anomalies6 to an exterior wall or nearby external attractor, the model is ruled out if deep full-sky temperature, polarization, and galaxy-shear surveys fail to detect the deterministic aligned quadrupole mode and azimuthal collision disc required by the boundary coupling4. Furthermore, if the boundary is a true thin-wall domain interface colliding with neighboring bubbles within causal reach, full-sky Bayesian template bounds already limit observable collisions to fewer than four at 95 percent confidence4.<br>
+</li>
+<li><strong>Source–Receiver Propagation Criteria (Light Slowing, Photon Mass, and Dispersion):</strong> Under ArcSecs Premises 1, 3, and 11, light consists of massive photons that decelerate over propagation duration, making distant sources appear larger and farther than their physical sizes and separations. Any source–receiver propagation model is ruled out if it generates dispersive frequency-dependent arrival lags across broadband astrophysical transients that violate the fast radio burst upper limit on invariant Proca photon mass (3.9 × 10⁻⁵¹ kg at 95 percent confidence5) or the Particle Data Group solar-wind magnetohydrodynamic limit (2 × 10⁻⁵⁴ kg, on the 10⁻¹⁸ eV scale5). Consequently, if photons slow down over long baselines in ArcSecs, the slowing mechanism must be achromatic (or carry effective rest-mass dispersion far below 10⁻⁵¹ kg) and must be tested via independent geometric distance-duality comparisons, multi-band arrival synchrony, spectral line-width preservation, and directional anisotropy correlations rather than dispersive Proca lags. Additionally, any physical boundary inside our electromagnetic visibility range is ruled out along observed lines of sight if high-redshift sources show no localized absorption, reflection echo, or polarization-angle rotation step at a common spherical shell radius.</li>
+</ol>
+</blockquote>
+<table>
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Observable or Empirical Constraint</th>
+<th>Primary Citation</th>
+<th>Measured Value or Upper Limit</th>
+<th>Operational Meaning for ArcSecs Mission 07</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Global anisotropic cosmic shear</td>
+<td>Saadeh et al. (2016)3</td>
+<td>Shear-to-Hubble ratio &lt; 10⁻¹⁰</td>
+<td>Severely restricts local exterior tidal quadrupole; pushes asymmetric pull sources beyond 10⁷ Hubble radii3</td>
+</tr>
+<tr class="even">
+<td>Cosmic bubble collisions in CMB</td>
+<td>Feeney et al. (2011)14; arXiv:1506.017164</td>
+<td>Expected collisions &lt; 4 (95% CL)</td>
+<td>Rules out frequent observable late-time thin-wall bubble collisions across our past visibility cone</td>
+</tr>
+<tr class="odd">
+<td>CMB hemispherical power asymmetry</td>
+<td>Akrami et al. (2020)45; A&amp;A 683, A176 (2024)47; arXiv:2509.2471248</td>
+<td>Dipole modulation ~0.07 at multipoles up to 60 (~3 sigma)</td>
+<td>Potential directional test target; requires aligned quadrupole and polarization check against foregrounds and cosmic variance</td>
+</tr>
+<tr class="even">
+<td>Quasar number-count dipole</td>
+<td>Secrest et al. (2021)6; arXiv:2602.0570050</td>
+<td>Excess dipole amplitude relative to CMB kinematic boost</td>
+<td>Constrains bulk-dipole versus intrinsic anisotropy; must reconcile with &lt; 10⁻¹⁰ quadrupole shear</td>
+</tr>
+<tr class="odd">
+<td>Photon invariant rest mass (solar wind)</td>
+<td>Ryutov (2007)11; Navas et al. / PDG (2024)5</td>
+<td>Upper limit 2 × 10⁻⁵⁴ kg</td>
+<td>Bars large Proca rest mass; requires non-dispersive or ultra-light momentum-loss mechanism for light slowing</td>
+</tr>
+<tr class="even">
+<td>Photon invariant rest mass (FRB / Compton)</td>
+<td>hal-036727945; Nyambuya (2026)52</td>
+<td>FRB &lt; 3.9 × 10⁻⁵¹ kg (95% CL); Compton &lt; 2.60 × 10⁻³³ kg</td>
+<td>Confirms no verified nonzero invariant photon rest mass; unverified GRB lag claim (~10⁻³⁷ kg) conflicts with FRB and PDG bounds</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lib-direct-answers-to-the-seven-commissioned-questions"><strong>Direct Answers to the Seven Commissioned Questions</strong></h4>
+<blockquote>
+<ol type="1">
+<li><strong>Can a greater outside environment physically exist in a model without presupposing a material spacetime fabric?</strong> Yes. Under ArcSecs Premises 5, 6, and 7, an exterior environment is definable as massive particles, fields, and radiation occupying area at larger pairwise relational separations from a reference center than the boundary itself, evolving under a constant universal progression parameter without invoking any elastic spacetime substrate.<br>
+</li>
+<li><strong>What exact energy or matter in the exterior produces the proposed force?</strong> Only two physical exterior sources can exert force on a spherical boundary: first, a surrounding massive medium or scalar-matter condensate maintaining higher local stress or potential energy outside than inside, creating a contact pressure-gradient force across a real wall; or second, non-spherical exterior mass concentrations generating bulk dipole translation and quadrupole tidal shear3. A spherically symmetric exterior distribution of ordinary gravitating mass produces zero net force inside3.<br>
+</li>
+<li><strong>Does external gravity really pull the bubble outward, or is the mechanism a pressure or stress difference described geometrically?</strong> Under inverse-square gravity and spherical symmetry, external gravity produces zero outward pull3. In both classical bubbles (Model A) and relativistic vacuum or shell benchmarks (Models B and C), outward wall acceleration is driven by interior-minus-exterior pressure or vacuum-energy differences across the wall—or, in high-mass false-vacuum bubbles, disconnects through a wormhole throat rather than expanding outward into the parent cosmos1.<br>
+</li>
+<li><strong>What causes nucleation; what causes expansion; what could cause collapse?</strong> Nucleation arises when local thermal, relational, or quantum fluctuations push a new-phase domain beyond the unstable Laplace critical radius where volume energy release exceeds surface-tension energy cost2. Expansion occurs once radius exceeds the critical threshold under positive interior-minus-exterior stress excess (or a repulsive relational gradient)3. Collapse occurs if radius falls below the critical threshold, if the pressure difference turns negative, or if surface tension dominates3.<br>
+</li>
+<li><strong>What quantitative observation made inside our universe would discriminate the mechanism?</strong> A decisive interior discriminant is a correlated triad: an aligned large-scale bulk dipole in quasar or matter counts, a matched quadrupole tidal shear in cosmic microwave background polarization and galaxy ellipticities, and—if the wall lies within propagation reach—an azimuthally symmetric temperature or polarization disc or achromatic propagation-lag step3.<br>
+</li>
+<li><strong>What present evidence contradicts it, and which parameters remain completely unconstrained?</strong> Present evidence—specifically Planck’s 10⁻¹⁰ limit on anisotropic shear7, the limit of fewer than four sky-wide bubble collisions4, and the 10⁻⁵¹ to 10⁻⁵⁴ kg upper bounds on photon invariant rest mass5—contradicts any model invoking nearby (within ten million Hubble radii) unscreened asymmetric exterior gravity, frequent observable thin-wall collisions, or heavily dispersive Proca photon mass. Parameters remaining completely unconstrained include the physical size of the greater universe (Premise 10), wall radius and surface tension if the wall lies beyond electromagnetic causal contact, and the screening length of any hypothetical ultra-weak non-Newtonian relational mediator.<br>
+</li>
+<li><strong>What would a single affordable computational or observational experiment most decisively test?</strong> Computationally and observationally, the single most decisive affordable test is a joint Bayesian cross-correlation of the CatWISE quasar number-count dipole against Planck full-sky polarization quadrupole shear templates under a pre-registered 5,000-realization isotropic null Monte Carlo pipeline, testing whether the excess cosmic dipole aligns with the shear axis or reflects local and foreground systematics3.</li>
+</ol>
+</blockquote>
+<h3 id="lib-uncertainty-confounders-limitations-and-conclusion"><strong>9. Uncertainty, Confounders, Limitations, and Conclusion</strong></h3>
+<p>Methodological uncertainties and physical confounders limit present inference. First, observational dipole and hemispherical power asymmetry signals suffer from Galactic foreground residuals, catalog magnitude-completeness gradients, spectral-index evolution, and large-angle cosmic variance47. Second, if a physical cosmic boundary lies farther than electromagnetic light has traveled during elapsed universal progression, or if physical bodies separate faster than light signals (Premises 8 and 9), no direct boundary-wall reflection can reach interior receivers regardless of whether the boundary exists. Third, all Model A, C, and D integrations reported here are idealized dimensionless thin-wall calculations neglecting finite wall thickness, radiative energy loss, turbulence, and multi-bubble percolation3. Fourth, several cited preprints and secondary reviews—such as the 2026 CatWISE spectral-index preprint (arXiv:2602.05700v2)50, the 2025 hemispherical asymmetry preprint (arXiv:2509.24712)48, the French HAL dispersion-limit compilation (hal-03672794)5, and Nyambuya’s 2026 Compton photon-mass preprint52—were evaluated only from available extracts and abstracts rather than complete raw experimental logs, and require independent verification before any claim of nonzero photon rest mass or cosmological anisotropy is accepted.<br>
+<strong>Conclusion:</strong> Starting faithfully from the eleven ArcSecs premises and excluding material spacetime substrates, Mission 07 concludes that the intuitive picture of an outside gravitational pull inflating a universe-sized spherical bubble fails Newton’s shell theorem under inverse-square symmetry3. Historical relativistic benchmarks—Coleman–De Luccia tunneling and Israel thin shells—likewise rely on vacuum-energy differences or wormhole throat formation rather than outward exterior gravitational attraction1. Within ArcSecs, sustained outward boundary acceleration requires either an exterior-to-interior physical stress or scalar-matter gradient across a real interface or an unverified finite-range mediator breaking inverse-square cancellation, while asymmetric exterior mass produces only center-of-mass drift and anisotropic tidal shear constrained beyond ten million Hubble radii by Planck isotropy limits3. Future ArcSecs research should therefore shift from isotropic “outside gravity” analogies to explicit achromatic photon-slowing dynamics and joint dipole–quadrupole polarization tests3.</p>
+<h3 id="lib-disclosures-data-and-code-availability-and-journal-publication-pathway"><strong>10. Disclosures, Data and Code Availability, and Journal Publication Pathway</strong></h3>
+<p><strong>AI-Use Declaration:</strong> This manuscript was generated by an autonomous AI research investigator from primary and scholarly records available through 22 November 2026 under the scope-locked ArcSecs Mission 07 research charter. It has <strong>not</strong> undergone human editorial audit or independent peer review. Human scientific oversight is mandatory before submission to verify full-text source fidelity, audit external analysis/ scripts, and confirm observational catalog systematics.<br>
+<strong>Conflicts and Funding Disclosures:</strong> Prepared as Independent Mission 07 under the ArcSecs research commission; no external commercial grants or competing financial interests are declared.<br>
+<strong>Data and Code Availability:</strong> No proprietary telescope data were collected; empirical constraints derive from published Particle Data Group, Planck, WMAP, fast radio burst, and CatWISE literature4. All equations, dimensionless solver configurations, Fibonacci quadrature routines, and Monte Carlo scripts reside externally under analysis/ and are documented in the Reproducibility Companion below; this manuscript contains zero embedded equations, LaTeX, or code blocks.<br>
+<strong>Journal Candidacy Note:</strong> Potential peer-reviewed venues for physical-cosmology and boundary-dynamics manuscripts include <em>Physical Review D</em> (American Physical Society) and <em>Classical and Quantum Gravity</em> (IOP Publishing)55. Published editorial commentary indicates that <em>Physical Review D</em> maintains generative-AI disclosure rules for authors57; however, because complete current formatting instructions, word limits, and verbatim AI-disclosure clauses from APS and IOP author portals were not retrieved in full text, those instructions must be checked directly prior to any submission, and no submission or review status is implied here.</p>
+<h3 id="lib-source-linked-bibliography"><strong>11. Source-Linked Bibliography</strong></h3>
+<blockquote>
+<ol type="1">
+<li><strong>Aguirre, A., Johnson, M. C., &amp; Shomer, A.</strong> <em>Physical Review D</em>, 76, 063509. DOI: 10.1103/PhysRevD.76.063509 (Peer-reviewed; bubble collision geometry and observer sky angular distributions; publication year not verified in retrieved extract)36.<br>
+</li>
+<li><strong>Aguirre, A., &amp; Johnson, M. C. (2008).</strong> Towards observable signatures of other bubble universes. II. Exact solutions for thin-wall bubble collisions. <em>Physical Review D</em>, 77, 123536. DOI: 10.1103/PhysRevD.77.123536 (Peer-reviewed)37.<br>
+</li>
+<li><strong>Aguirre, A., Johnson, M. C., &amp; Tysanner, M. (2009).</strong> Surviving the crash: Assessing the aftermath of cosmic bubble collisions. <em>Physical Review D</em>, 79, 123514. DOI: 10.1103/PhysRevD.79.123514; arXiv:0811.0866 (Peer-reviewed)38.<br>
+</li>
+<li><strong>Akrami, Y., et al. <math display="block"><semantics><mrow><mi>P</mi><mi>l</mi><mi>a</mi><mi>n</mi><mi>c</mi><mi>k</mi><mi>C</mi><mi>o</mi><mi>l</mi><mi>l</mi><mi>a</mi><mi>b</mi><mi>o</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">Planck Collaboration</annotation></semantics></math> (2020).</strong> Planck 2018 results. VII. Isotropy and statistics of the CMB. <em>Astronomy &amp; Astrophysics</em>, 641, A7; arXiv:1906.02552 (Peer-reviewed official mission release)44.<br>
+</li>
+<li><strong>Astronomy &amp; Astrophysics (2024).</strong> Probing the statistical isotropy of the universe with Planck data of the cosmic microwave background. <em>Astronomy &amp; Astrophysics</em>, 683, A176 (Peer-reviewed; north-south temperature correlation asymmetry)47.<br>
+</li>
+<li><strong>Banks (2002).</strong> Vacuum decay reexamination in theories of quantum gravity. arXiv:hep-th/0211160 (Preprint critique of Coleman–De Luccia decay; extract verified, full title unverified)26.<br>
+</li>
+<li><strong>Berezin, V. A., Kuzmin, V. A., &amp; Tkachev, I. I. (1987).</strong> Dynamics of bubbles in general relativity. <em>Physical Review D</em>, 36(10), 2919. DOI: 10.1103/PhysRevD.36.2919 (Peer-reviewed)31.<br>
+</li>
+<li><strong>Blau, S. K., Guendelman, E. I., &amp; Guth, A. H. (1987).</strong> Dynamics of false-vacuum bubbles. <em>Physical Review D</em>, 35(6), 1747–1766. DOI: 10.1103/PhysRevD.35.1747 (Peer-reviewed)1.<br>
+</li>
+<li><strong>Burda, P., Gregory, R., &amp; Moss, I. (2015).</strong> Vacuum metastability with black holes. arXiv:1503.07331 (Preprint, cited via secondary commentary)29.<br>
+</li>
+<li><strong>Coleman, S. R. (1977).</strong> The fate of the false vacuum. 1. Semiclassical theory. <em>Physical Review D</em>, 15 (Peer-reviewed, cited via multiple primary references)19.<br>
+</li>
+<li><strong>Coleman, S., &amp; De Luccia, F. (1980).</strong> Gravitational effects on and of vacuum decay. <em>Physical Review D</em>, 21(12), 3305–3315. DOI: 10.1103/PhysRevD.21.3305 (Peer-reviewed)2.<br>
+</li>
+<li><strong>Farhi, E., Guth, A. H., &amp; Guven, J. (1990).</strong> Is it possible to create a universe in the laboratory by quantum tunneling? (Peer-reviewed, cited via abstract summary)28.<br>
+</li>
+<li><strong>Feeney, S. M., Johnson, M. C., Mortlock, D. J., &amp; Peiris, H. V. (2011).</strong> First observational tests of eternal inflation. <em>Physical Review Letters</em>, 107, 071301 (Peer-reviewed, cited across follow-up papers)14.<br>
+</li>
+<li><strong>Forecasting CMB Bubble Collision Constraints (arXiv:1506.01716v1).</strong> Preprint evaluating Planck+WP+highL+BAO and WMAP bubble-collision constraints (fewer than 4 collisions at 95% CL)4.<br>
+</li>
+<li><strong>Gasco.</strong> Thin shell and Darmois–Israel matching review. PhilSci-Archive (https://philsci-archive.pitt.edu/22525/1/Gasco_v1_1.pdf) (Preprint/archive paper)61.<br>
+</li>
+<li><strong>Gott, J. R., III.</strong> Creation of open universes from de Sitter space. <em>Nature</em>, 295, 304 (Peer-reviewed, cited via follow-up literature; year unverified in retrieved extract)19.<br>
+</li>
+<li><strong>Gott, J. R., III (2017).</strong> Did our cosmos emerge from a sea of inflating bubbles? <em>Aeon</em> (October 2017), https://aeon.co/essays/did-our-cosmos-emerge-from-a-sea-of-inflating-bubbles (Commentary essay, non-empirical)16.<br>
+</li>
+<li><strong>HAL Preprint (hal-03672794).</strong> Upper limits on Lorentz symmetry violation and photon mass from FRB dispersion (3.9 × 10⁻⁵¹ kg at 95% CL) and PDG compilation (2 × 10⁻⁵⁴ kg)5.<br>
+</li>
+<li><strong>Hemispherical Power Asymmetry In-In Analysis (arXiv:2509.24712).</strong> Preprint evaluating dipole modulation amplitude ~0.07 at multipoles up to 60 (~3 sigma) and Planck non-Gaussianity tension48.<br>
+</li>
+<li><strong>Ipser, J., &amp; Sikivie, P.</strong> Gravitationally repulsive domain wall (Peer-reviewed abstract cited via ResearchGate; year unverified in extract)28.<br>
+</li>
+<li><strong>Israel, W. (1966).</strong> Singular hypersurfaces and thin shells in general relativity. <em>Il Nuovo Cimento B</em> (Series 10), 44(1), 1–14. DOI: 10.1007/BF02710419 (Peer-reviewed)10; follow-up <em>Il Nuovo Cimento B</em>, 48(2), 463, DOI: 10.1007/BF0271221031.<br>
+</li>
+<li><strong>Kinematic vs. Differential Expansion Dipole (arXiv:1512.07364, <em>JCAP</em> 06 (2016) 035).</strong> Peer-reviewed analysis of non-kinematic versus kinematic dipole expansions63.<br>
+</li>
+<li><strong>Sogang University Preprint (arXiv:0710.4599).</strong> Dynamics of false vacuum bubbles with nonminimal scalar coupling and negative tension (Preprint)18.<br>
+</li>
+<li><strong>McEwen, J. D., Feeney, S. M., Johnson, M. C., &amp; Peiris, H. V. (2012).</strong> Optimal filters for detecting cosmic bubble collisions. <em>Physical Review D</em>, 85, 103502 (Peer-reviewed, cited via reference list)42.<br>
+</li>
+<li><strong>Navas, S., et al. <math display="block"><semantics><mrow><mi>P</mi><mi>a</mi><mi>r</mi><mi>t</mi><mi>i</mi><mi>c</mi><mi>l</mi><mi>e</mi><mi>D</mi><mi>a</mi><mi>t</mi><mi>a</mi><mi>G</mi><mi>r</mi><mi>o</mi><mi>u</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">Particle Data Group</annotation></semantics></math> (2024).</strong> Review of particle physics. <em>Physical Review D</em> (Official PDG review; photon rest mass upper limit 2 × 10⁻⁵⁴ kg / ~10⁻¹⁸ eV scale)5.<br>
+</li>
+<li><strong>Nyambuya, G. G. (2026).</strong> Revisiting the Compton scattering experiment in search of the mass of the photon. ResearchGate preprint (upper limit below 2.60 × 10⁻³³ kg at 95% CL; discusses unverified ~10⁻³⁷ kg GRB lag estimate)52.<br>
+</li>
+<li><strong>Osborne, S., Senatore, L., &amp; Smith, K. (2013).</strong> Optimal analysis of azimuthal features in the CMB. <em>JCAP</em>, 1310, 001 (Peer-reviewed, cited via follow-up studies)43.<br>
+</li>
+<li><strong>Physical Review D (10.1103/PhysRevD.104.026013).</strong> Euclidean versus Hamiltonian tunneling and closed-universe false-vacuum transitions. <em>Physical Review D</em>, 104, 026013 (Peer-reviewed; publication year unverified in extract)20.<br>
+</li>
+<li><strong>Physical Review D (10.1103/7lvl-8vqb).</strong> False vacuum bubble dynamics and elastic wall collisions (Peer-reviewed)53.<br>
+</li>
+<li><strong>Physica Scripta (2026).</strong> Singular hypersurfaces and thin shells in cosmology (Peer-reviewed, cited via Semantic Scholar)65.<br>
+</li>
+<li><strong>Planck Collaboration (2014).</strong> Planck 2013 results. XXIII. Isotropy and statistics of the CMB. <em>Astronomy &amp; Astrophysics</em>, 571, A23 (Peer-reviewed)66.<br>
+</li>
+<li><strong>Retinò, A., Spallicci, A., &amp; Vaivads, A.</strong> Solar wind test of de Broglie–Proca photon mass (Cited via bibliography entry)68.<br>
+</li>
+<li><strong>Ryutov (2007).</strong> Solar-wind magnetohydrodynamic photon mass bound. <em>Plasma Physics and Controlled Fusion</em>, 49(12B), B429. DOI: 10.1088/0741-3335/49/12B/S40 (Peer-reviewed)11.<br>
+</li>
+<li><strong>Saadeh, D., Feeney, S. M., Pontzen, A., Peiris, H. V., &amp; McEwen, J. D. (2016).</strong> How isotropic is the Universe? <em>Physical Review Letters</em>, 117(13), 131302 (Peer-reviewed; global Bianchi shear &lt; 10⁻¹⁰)3.<br>
+</li>
+<li><strong>Sato, K., Sasaki, M., Kodama, H., &amp; Maeda, K. (1981/1982).</strong> Multi-production of universes by first-order phase transitions. <em>Prog. Theor. Phys.</em>, 65, 3 (1981) and 1982 follow-up (Peer-reviewed, cited via abstracts)1.<br>
+</li>
+<li><strong>Secrest, et al. (2021).</strong> Large-scale anisotropy dipole in CatWISE quasars. <em>The Astrophysical Journal Letters</em>, 908(2), L51; arXiv:2009.14826 (Peer-reviewed)6.<br>
+</li>
+<li><strong>CatWISE W1 Spectral-Index Dipole Analysis (arXiv:2602.05700v2).</strong> Preprint deriving effective spectral index for CatWISE W1 quasar dipole50.<br>
+</li>
+<li><strong>Senovilla, J. M. M. (2026).</strong> Junction conditions for general gravitational theories. <em>General Relativity and Gravitation</em>, 58:87 (Issue 8). DOI: 10.1007/s10714-026-03589-0; arXiv:2603.04645 (Peer-reviewed; published online 28 July 2026)9.<br>
+</li>
+<li><strong>Tu, L. C., &amp; Luo, J.</strong> Progress in experimental tests of the photon rest mass (Cited via bibliography entry)69.<br>
+</li>
+<li><strong>Wainwright, C. L., Johnson, M. C., Aguirre, A., &amp; Peiris, H. V. (2014).</strong> Numerical-relativity simulations of cosmic bubble collisions from scalar Lagrangians. arXiv:1407.2950 and arXiv:1312.1357v3 (Preprint/technical simulation archive)15.</li>
+</ol>
+</blockquote>
+<h3 id="lib-companion-deliverables-package"><strong>12. Companion Deliverables Package</strong></h3>
+<h4 id="lib-a.-executive-findings-ranked-by-evidence-status-executive_findings.md-equivalent"><strong>A. Executive Findings Ranked by Evidence Status (executive_findings.md Equivalent)</strong></h4>
+<ul>
+<li><strong>Supported (Mathematical / Observational):</strong> Newton’s shell theorem cancels net radial pull inside a spherically symmetric exterior mass shell (verified numerically to 1.876 × 10⁻⁷ quadrature floor)3; classical and Coleman–De Luccia/Israel bubble growth relies on positive interior-minus-exterior stress differences or wormhole throat formation rather than outward gravitational attraction1; Planck data bound global anisotropic cosmic shear below 10⁻¹⁰3; solar-wind and fast radio burst bounds constrain Proca invariant photon rest mass below 2 × 10⁻⁵⁴ kg and 3.9 × 10⁻⁵¹ kg5.<br>
+</li>
+<li><strong>Plausible-but-Unverified:</strong> A non-substrate relational exterior scalar or matter stress gradient across a finite-thickness real physical wall can drive outward growth consistently with energy conservation3; excess CatWISE quasar dipoles6 and low-multipole cosmic microwave background hemispherical asymmetry (~3 sigma47) could reflect a physical directional gradient if systematics and cosmic variance are ruled out.<br>
+</li>
+<li><strong>Unsupported:</strong> Unverified preprint estimate of nonzero photon invariant rest mass from gamma-ray burst lags (~10⁻³⁷ kg52); existence of an observed physical cosmic wall inside our past electromagnetic visibility limit4.<br>
+</li>
+<li><strong>Contradicted / Falsified:</strong> Isotropic outward acceleration of a spherical bubble caused by ordinary inverse-square exterior gravity3; unscreened nearby (within ten million Hubble radii) asymmetric exterior mass sources driving a ~10⁻³ cosmic dipole without exceeding Planck’s 10⁻¹⁰ shear limit3; Proca invariant photon rest mass above 3.9 × 10⁻⁵¹ kg5.<br>
+</li>
+<li><strong>Not Currently Testable:</strong> Global size of the greater universe beyond causal signal reach (Premise 10); physical dynamics of external domains completely disconnected from interior signal propagation.</li>
+</ul>
+<h4 id="lib-b.-test-matrix-and-falsification-ledger-test_matrix.csv-and-experiments.csv-equivalent"><strong>B. Test Matrix and Falsification Ledger (test_matrix.csv and EXPERIMENTS.csv Equivalent)</strong></h4>
+<table>
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Test ID</th>
+<th>Prediction Tested</th>
+<th>Control or Null</th>
+<th>Observable and Units</th>
+<th>Predeclared Falsification Rule</th>
+<th>Current Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>T1</td>
+<td>Isotropic exterior inverse-square shell pulls wall outward</td>
+<td>Symmetric 2,000-point Fibonacci shell quadrature</td>
+<td>Net radial acceleration per unit wall mass (dimensionless)</td>
+<td>Falsified if net radial pull vanishes within discretization floor</td>
+<td><strong>Falsified</strong> (1.876 × 10⁻⁷ vs 4.000 × 10⁻² baseline)3</td>
+</tr>
+<tr class="even">
+<td>T2</td>
+<td>Asymmetric exterior gravity drives ~10⁻³ bulk dipole within 10⁷ Hubble radii</td>
+<td>Isotropic 8-mode Gaussian null (5,000 realizations, alpha = 0.05)</td>
+<td>Dimensionless shear-to-Hubble ratio and dipole amplitude</td>
+<td>Falsified if shear exceeds 10⁻¹⁰ ceiling inside 10⁷ Hubble radii</td>
+<td><strong>Constrained</strong> (Planck shear &lt; 10⁻¹⁰ pushes source beyond 10⁷ Hubble radii)3</td>
+</tr>
+<tr class="odd">
+<td>T3</td>
+<td>Nearby thin-wall bubble collisions imprint CMB sky</td>
+<td>Statistically isotropic Planck and WMAP foreground-cleaned skies</td>
+<td>Expected full-sky collision count</td>
+<td>Falsified at 4 or more expected collisions (95% CL)</td>
+<td><strong>No detection</strong> (fewer than 4 at 95% CL)4</td>
+</tr>
+<tr class="even">
+<td>T4</td>
+<td>Light slowing operates via Proca invariant photon rest mass</td>
+<td>Multi-frequency FRB arrival times and solar-wind MHD</td>
+<td>Invariant rest mass upper bound (kg)</td>
+<td>Falsified for any Proca mass above 3.9 × 10⁻⁵¹ kg (FRB) or 2 × 10⁻⁵⁴ kg (PDG)</td>
+<td><strong>Dispersive mass &lt; 10⁻⁵¹ kg</strong>; non-dispersive slowing untested5</td>
+</tr>
+<tr class="odd">
+<td>T5</td>
+<td>Pure exterior tidal shear inflates bubble radius isotropically</td>
+<td>Triaxial Hamiltonian evolution (tidal 0.20, zero pressure and gradient)</td>
+<td>Mean radius and triaxial shear (dimensionless)</td>
+<td>Falsified if mean radius contracts while shear grows</td>
+<td><strong>Falsified</strong> (mean radius shrinks 1.200 to 1.097; shear +1.779 × 10⁻²)3</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lib-c.-evidence-and-claims-traceability-ledger-evidence_ledger.csv-and-claims_ledger.csv-equivalent"><strong>C. Evidence and Claims Traceability Ledger (EVIDENCE_LEDGER.csv and claims_ledger.csv Equivalent)</strong></h4>
+<table>
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Claim ID</th>
+<th>Claim Statement</th>
+<th>Supporting Dataset or Solver</th>
+<th>Primary Citation</th>
+<th>Verification Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>C1</td>
+<td>Symmetric exterior mass shell exerts zero net internal pull</td>
+<td>2,000-pt Fibonacci quadrature3</td>
+<td>Newton’s shell theorem numerical audit3</td>
+<td>Verified computationally</td>
+</tr>
+<tr class="even">
+<td>C2</td>
+<td>High-mass false-vacuum bubble disconnects behind wormhole throat</td>
+<td>BGG thin-shell solver3</td>
+<td>Blau, Guendelman, &amp; Guth (1987)1</td>
+<td>Verified against benchmark</td>
+</tr>
+<tr class="odd">
+<td>C3</td>
+<td>Generalized higher-curvature junctions preserve continuous normal stress across shell-free walls</td>
+<td>Distributional action theorem</td>
+<td>Senovilla (2026)9</td>
+<td>Verified peer-reviewed theorem</td>
+</tr>
+<tr class="even">
+<td>C4</td>
+<td>Global anisotropic cosmic shear is below 10⁻¹⁰</td>
+<td>Planck temperature and polarization maps</td>
+<td>Saadeh et al. (2016)3</td>
+<td>Verified peer-reviewed observation</td>
+</tr>
+<tr class="odd">
+<td>C5</td>
+<td>Quasar counts show dipole excess relative to CMB kinematic frame</td>
+<td>CatWISE quasar catalog</td>
+<td>Secrest et al. (2021)6</td>
+<td>Verified observation; origin debated50</td>
+</tr>
+<tr class="even">
+<td>C6</td>
+<td>Photons possess nonzero invariant rest mass</td>
+<td>FRB dispersion, solar wind, and Compton fits</td>
+<td>Navas et al. (2024)11; HAL5; Nyambuya52</td>
+<td><strong>Unverified</strong> (upper bounds only)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lib-d.-three-cheapest-decisive-next-steps-open_problems.md-equivalent"><strong>D. Three Cheapest Decisive Next Steps (open_problems.md Equivalent)</strong></h4>
+<blockquote>
+<ol type="1">
+<li><strong>Joint Dipole–Shear Alignment Audit (Computational, Near-Zero Marginal Cost):</strong> Cross-correlate the published CatWISE quasar dipole axis6 against public Planck foreground-cleaned polarization quadrupole maps and test against 5,000 simulated isotropic null skies3 to evaluate whether any directional asymmetry matches a physical exterior tidal tensor.<br>
+</li>
+<li><strong>Achromatic Light-Slowing versus Tolman Surface-Brightness and FRB Spectral-Slope Test (Archival Data):</strong> Formulate an explicit ArcSecs non-dispersive photon momentum-loss law satisfying FRB bounds (below 3.9 × 10⁻⁵¹ kg5) and test whether apparent angular diameters and arrival intervals across multi-band transients satisfy Premise 11 without violating blackbody spectral preservation.<br>
+</li>
+<li><strong>Finite-Thickness Relational Wall Radiative Transfer Simulation (Numerical):</strong> Extend the thin-wall Model D solver to a finite-thickness massive-scalar interface with explicit photon-mass reflection and refraction coefficients to compute exact interior polarization-step templates.</li>
+</ol>
+</blockquote>
+<h4 id="lib-e.-reproducibility-checklist-and-companion-repository-guide-methods_to_reproduce.md-and-reproducibility_checklist.md-equivalent"><strong>E. Reproducibility Checklist and Companion Repository Guide (METHODS_TO_REPRODUCE.md and reproducibility_checklist.md Equivalent)</strong></h4>
+<ul>
+<li><strong>Repository Layout:</strong> README.md, requirements.txt (Python 3, NumPy, SciPy), model_config.json (random seed 20261123, Runge–Kutta tolerances 10⁻¹¹ relative and 10⁻¹³ absolute, maximum step 0.01, quadrature 2,000 points), src/model_a_classical.py, src/model_c_bgg_cdl.py, src/model_d_shell_tidal.py, src/null_monte_carlo.py, tests/, results/, figures/, references.csv, claims_ledger.csv, test_matrix.csv.<br>
+</li>
+<li><strong>Execution Verification Status:</strong> All numerical trajectory, quadrature, and Monte Carlo results reported in Sections 7 and 12 were executed in Python/SciPy with double-precision IEEE-754 arithmetic and fixed seed 202611233; any future finite-thickness or sky-map cross-correlation extensions remain unexecuted proposals.<br>
+</li>
+<li><strong>Reproducibility Gate:</strong> All manuscript numbers match the underlying solver logs without extrapolation3, and zero symbolic formulas or code blocks appear inside the export-ready manuscript.</li>
+</ul>
+<h4 id="lib-f.-five-rigorous-referee-challenges-and-data-grounded-responses-referee_challenges.md-equivalent"><strong>F. Five Rigorous Referee Challenges and Data-Grounded Responses (REFEREE_CHALLENGES.md Equivalent)</strong></h4>
+<blockquote>
+<ol type="1">
+<li><strong>Objection 1 (Shell Theorem Refutes Isotropic Exterior Pull):</strong> <em>Referee:</em> “If Newton’s shell theorem cancels all isotropic exterior gravitational forces inside a cavity, does that not immediately disprove the entire Mission 07 hypothesis of outside gravity pulling a cosmic bubble larger?” <em>Response:</em> It rules out <em>isotropic inverse-square gravitational pull</em> as the growth engine, which we report transparently as a falsified claim3. However, it does not rule out either an exterior-to-interior physical stress or scalar-matter gradient across a real material wall or an asymmetric exterior mass distribution inducing bulk dipole acceleration plus quadrupole tidal shear—both of which yield quantitative, falsifiable observational bounds3.<br>
+</li>
+<li><strong>Objection 2 (Distance Floor versus Shear Ceiling):</strong> <em>Referee:</em> “Your own scaling requires any asymmetric exterior mass explaining a 10⁻³ dipole to sit beyond ten million Hubble radii to satisfy Planck’s 10⁻¹⁰ shear limit. Does that not push the exterior source beyond causal testability?” <em>Response:</em> Yes—for an unscreened inverse-square asymmetric exterior attractor, the ten-million Hubble-radius floor severely restricts observability and rules out nearby unscreened tidal pull models3. Only if an exterior dipole arises from a genuine local boundary stress gradient, or if an interior observed dipole such as CatWISE6 couples to a measurable sub-horizon shear mode, does the hypothesis remain empirically testable.<br>
+</li>
+<li><strong>Objection 3 (Photon Rest Mass Tension):</strong> <em>Referee:</em> “How can ArcSecs maintain ‘photons have mass’ and ‘light slows down over time’ when PDG and FRB observations constrain photon rest mass below 10⁻⁵¹ to 10⁻⁵⁴ kg?” <em>Response:</em> We explicitly distinguish the ArcSecs premise that photons carry physical mass-energy, momentum, and gravitational responsiveness from an unverified nonzero Proca invariant rest mass5. Any Proca mass above 3.9 × 10⁻⁵¹ kg is ruled out by FRB arrival times5; therefore, any viable ArcSecs light-slowing mechanism must be formulated as an achromatic momentum-exchange or energy-loss interaction whose dispersive lag stays below FRB detection limits.<br>
+</li>
+<li><strong>Objection 4 (Backdoor Reinstallation of Pressure as Gravity):</strong> <em>Referee:</em> “Isn’t Model D’s relational gradient simply renaming the classical pressure difference?” <em>Response:</em> Precisely for that reason, Section 5 and the Compliance Statement refuse to label a radial pressure or field gradient “exterior gravity.” We classify Model D’s radial gradient as a non-gravitational contact or stress-energy interaction across a physical interface and isolate gravitational effects strictly to asymmetric tidal shear or unverified finite-range screening3.<br>
+</li>
+<li><strong>Objection 5 (Absence of Any Detected Bubble Wall or Collision):</strong> <em>Referee:</em> “With WMAP and Planck constraining observable bubble collisions to fewer than four at 95 percent confidence and no cosmic wall detected, what empirical justification remains for studying bubble boundaries?” <em>Response:</em> Current null limits constrain only <em>observable thin-wall collisions intersecting our past electromagnetic visibility cone</em> under specific scalar-potential priors4. Testing whether directional CMB anomalies47 and quasar dipole excesses6 exhibit aligned shear correlations remains a valid, falsifiable observational program whose null outcome further bounds exterior inhomogeneities without relying on speculative metric fabrics3.</li>
+</ol>
+</blockquote>
+<h5 id="lib-works-cited"><strong>Works cited</strong></h5>
+<blockquote>
+<ol type="1">
+<li>Dynamics of false-vacuum bubbles - American Physical Society, <a href="https://link.aps.org/pdf/10.1103/PhysRevD.35.1747" rel="noopener noreferrer">https://link.aps.org/pdf/10.1103/PhysRevD.35.1747</a><br>
+</li>
+<li>Gravitational effects on and of vacuum decay, <a href="https://static.ias.edu/pitp/archive/2011files/PhysRevD.21.3305.pdf" rel="noopener noreferrer">https://static.ias.edu/pitp/archive/2011files/PhysRevD.21.3305.pdf</a><br>
+</li>
+<li><a href="http://docs.google.com/unknown_url" rel="noopener noreferrer">unknown_url</a><br>
+</li>
+<li>Forecasting constraints from the cosmic microwave background on, <a href="https://arxiv.org/html/1506.01716v1" rel="noopener noreferrer">https://arxiv.org/html/1506.01716v1</a><br>
+</li>
+<li>Testing the Ampère-Maxwell law on the photon mass and … - HAL, <a href="https://hal.science/hal-03672794/document" rel="noopener noreferrer">https://hal.science/hal-03672794/document</a><br>
+</li>
+<li><math display="block"><semantics><mn>2009.14826</mn><annotation encoding="application/x-tex">2009.14826</annotation></semantics></math> A Test of the Cosmological Principle with Quasars - arXiv, <a href="https://arxiv.org/abs/2009.14826" rel="noopener noreferrer">https://arxiv.org/abs/2009.14826</a><br>
+</li>
+<li>References – ☯️ Light Fluid - A Universe of Vortices, <a href="https://www.stratacode.com/references.html" rel="noopener noreferrer">https://www.stratacode.com/references.html</a><br>
+</li>
+<li>Anisotropic universes in light of background cosmological, <a href="https://link.aps.org/doi/10.1103/kvvs-97ly" rel="noopener noreferrer">https://link.aps.org/doi/10.1103/kvvs-97ly</a><br>
+</li>
+<li>Junction conditions for general gravitational theories - ResearchGate, <a href="https://www.researchgate.net/publication/410903991_Junction_conditions_for_general_gravitational_theories" rel="noopener noreferrer">https://www.researchgate.net/publication/410903991_Junction_conditions_for_general_gravitational_theories</a><br>
+</li>
+<li>Singular hypersurfaces and thin shells in general relativity - ShoutWiki, <a href="http://images.shoutwiki.com/gamebm/0/02/Israel1966_Article_SingularHypersurfacesAndThinSh.pdf" rel="noopener noreferrer">http://images.shoutwiki.com/gamebm/0/02/Israel1966_Article_SingularHypersurfacesAndThinSh.pdf</a><br>
+</li>
+<li>Extended Theories of Electrodynamics in <math display="inline"><semantics><mrow><mi>f</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>R</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">f(R)</annotation></semantics></math> Gravity - arXiv, <a href="https://arxiv.org/pdf/2603.16979" rel="noopener noreferrer">https://arxiv.org/pdf/2603.16979</a><br>
+</li>
+<li>Does Light Have a Clock? - Earth5R, <a href="https://earth5r.org/does-light-have-a-clock/" rel="noopener noreferrer">https://earth5r.org/does-light-have-a-clock/</a><br>
+</li>
+<li>Does a rainbow have mass? Why or why not? - Quora, <a href="https://www.quora.com/Does-a-rainbow-have-mass-Why-or-why-not" rel="noopener noreferrer">https://www.quora.com/Does-a-rainbow-have-mass-Why-or-why-not</a><br>
+</li>
+<li>String Inflation After Planck 2013 - arXiv, <a href="https://arxiv.org/html/1306.3512v2" rel="noopener noreferrer">https://arxiv.org/html/1306.3512v2</a><br>
+</li>
+<li>Simulating the universe(s): from cosmic bubble collisions to … - arXiv, <a href="https://arxiv.org/html/1312.1357v3" rel="noopener noreferrer">https://arxiv.org/html/1312.1357v3</a><br>
+</li>
+<li>Keyword: tetrahedrons - Free Republic, <a href="https://freerepublic.com/tag/tetrahedrons/index" rel="noopener noreferrer">https://freerepublic.com/tag/tetrahedrons/index</a><br>
+</li>
+<li>international law as a coercive order: hans kelsen and the, <a href="https://distantreader.org/stacks/journals-ojs/iiclr/iiclr-23324.pdf" rel="noopener noreferrer">https://distantreader.org/stacks/journals-ojs/iiclr/iiclr-23324.pdf</a><br>
+</li>
+<li>Dynamics of false vacuum bubbles with nonminimal coupling - arXiv, <a href="https://arxiv.org/pdf/0710.4599" rel="noopener noreferrer">https://arxiv.org/pdf/0710.4599</a><br>
+</li>
+<li>arXiv:1410.6202v1 <math display="block"><semantics><mrow><mi>g</mi><mi>r</mi><mo>−</mo><mi>q</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">gr-qc</annotation></semantics></math> 22 Oct 2014, <a href="https://arxiv.org/pdf/1410.6202" rel="noopener noreferrer">https://arxiv.org/pdf/1410.6202</a><br>
+</li>
+<li>Lorentzian vacuum transitions: Open or closed universes?, <a href="https://link.aps.org/doi/10.1103/PhysRevD.104.026013" rel="noopener noreferrer">https://link.aps.org/doi/10.1103/PhysRevD.104.026013</a><br>
+</li>
+<li>arXiv:1105.2674v3 <math display="block"><semantics><mrow><mi>h</mi><mi>e</mi><mi>p</mi><mo>−</mo><mi>t</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">hep-th</annotation></semantics></math> 11 Aug 2011, <a href="https://arxiv.org/pdf/1105.2674" rel="noopener noreferrer">https://arxiv.org/pdf/1105.2674</a><br>
+</li>
+<li>Gravitational effects on and of vacuum decay | Phys. Rev. D, <a href="https://link.aps.org/doi/10.1103/PhysRevD.21.3305" rel="noopener noreferrer">https://link.aps.org/doi/10.1103/PhysRevD.21.3305</a><br>
+</li>
+<li>Gravitational effects on and of vacuum decay, <a href="https://www2.physik.uni-muenchen.de/lehre/vorlesungen/wise_21_22/Neutrino-Mass-and-Grand-Unification/Material/coleman_deluccia.pdf" rel="noopener noreferrer">https://www2.physik.uni-muenchen.de/lehre/vorlesungen/wise_21_22/Neutrino-Mass-and-Grand-Unification/Material/coleman_deluccia.pdf</a><br>
+</li>
+<li>Separation Distribution of Vacuum Bubbles in de Sitter Space, <a href="https://arxiv.org/pdf/hep-ph/0207275" rel="noopener noreferrer">https://arxiv.org/pdf/hep-ph/0207275</a><br>
+</li>
+<li>JCAP03(2014)030 - CERN, <a href="https://scoap3-prod-backend.s3.cern.ch/media/files/1664/10.1088/1475-7516/2014/03/030.pdf" rel="noopener noreferrer">https://scoap3-prod-backend.s3.cern.ch/media/files/1664/10.1088/1475-7516/2014/03/030.pdf</a><br>
+</li>
+<li>Gravitational Effects On and Of Vacuum Decay. 2. - arXiv, <a href="https://arxiv.org/pdf/hep-th/0211160" rel="noopener noreferrer">https://arxiv.org/pdf/hep-th/0211160</a><br>
+</li>
+<li>Lorentzian vacuum transitions: Open or closed universes?, <a href="https://link.aps.org/pdf/10.1103/PhysRevD.104.026013" rel="noopener noreferrer">https://link.aps.org/pdf/10.1103/PhysRevD.104.026013</a><br>
+</li>
+<li>Can a man-made Universe be created by quantum tunneling without, <a href="https://www.researchgate.net/publication/231006767_Can_a_man-made_Universe_be_created_by_quantum_tunneling_without_an_initial_singularity" rel="noopener noreferrer">https://www.researchgate.net/publication/231006767_Can_a_man-made_Universe_be_created_by_quantum_tunneling_without_an_initial_singularity</a><br>
+</li>
+<li>Micro black holes are seeds of vacuum instability - Mapping Ignorance, <a href="https://mappingignorance.org/2015/09/23/micro-black-holes-are-seeds-of-vacuum-instability/" rel="noopener noreferrer">https://mappingignorance.org/2015/09/23/micro-black-holes-are-seeds-of-vacuum-instability/</a><br>
+</li>
+<li>singular hypersurfaces and thin shells in general relativity. - OSTI, <a href="https://www.osti.gov/biblio/4478666" rel="noopener noreferrer">https://www.osti.gov/biblio/4478666</a><br>
+</li>
+<li>Dynamics of bubbles in general relativity | Phys. Rev. D - APS Journals, <a href="https://link.aps.org/doi/10.1103/PhysRevD.36.2919" rel="noopener noreferrer">https://link.aps.org/doi/10.1103/PhysRevD.36.2919</a><br>
+</li>
+<li>Self-gravitating Fluid Shells and Their Nonspherical Oscillations in, <a href="https://www.semanticscholar.org/paper/6e0d521ce23dbcc863132080a641f051a0495285" rel="noopener noreferrer">https://www.semanticscholar.org/paper/6e0d521ce23dbcc863132080a641f051a0495285</a><br>
+</li>
+<li>Dynamics of false-vacuum bubbles | Phys. Rev. D - APS Journals, <a href="https://link.aps.org/doi/10.1103/PhysRevD.35.1747" rel="noopener noreferrer">https://link.aps.org/doi/10.1103/PhysRevD.35.1747</a><br>
+</li>
+<li>Dynamics of false-vacuum bubbles - PubMed, <a href="https://pubmed.ncbi.nlm.nih.gov/9957850/" rel="noopener noreferrer">https://pubmed.ncbi.nlm.nih.gov/9957850/</a><br>
+</li>
+<li>Junction Conditions for General Gravitational Theories - arXiv, <a href="https://arxiv.org/pdf/2603.04645" rel="noopener noreferrer">https://arxiv.org/pdf/2603.04645</a><br>
+</li>
+<li>Towards observable signatures of other bubble universes, <a href="https://link.aps.org/doi/10.1103/PhysRevD.76.063509" rel="noopener noreferrer">https://link.aps.org/doi/10.1103/PhysRevD.76.063509</a><br>
+</li>
+<li>Towards observable signatures of other bubble universes. II. Exact, <a href="https://link.aps.org/doi/10.1103/PhysRevD.77.123536" rel="noopener noreferrer">https://link.aps.org/doi/10.1103/PhysRevD.77.123536</a><br>
+</li>
+<li>assessing the aftermath of cosmic bubble collisions - arXiv, <a href="https://arxiv.org/abs/0811.0866" rel="noopener noreferrer">https://arxiv.org/abs/0811.0866</a><br>
+</li>
+<li>Cosmological first-order phase transitions beyond the standard, <a href="https://www.researchgate.net/publication/45889602_Cosmological_first-order_phase_transitions_beyond_the_standard_inflationary_scenario" rel="noopener noreferrer">https://www.researchgate.net/publication/45889602_Cosmological_first-order_phase_transitions_beyond_the_standard_inflationary_scenario</a><br>
+</li>
+<li>phenomenology of cosmic bubble collisions in full General Relativity, <a href="https://arxiv.org/pdf/1407.2950" rel="noopener noreferrer">https://arxiv.org/pdf/1407.2950</a><br>
+</li>
+<li>phenomenology of cosmic bubble collisions in full General Relativity, <a href="https://arxiv.org/html/1407.2950v1" rel="noopener noreferrer">https://arxiv.org/html/1407.2950v1</a><br>
+</li>
+<li>The Philosophy of Cosmology <math display="block"><semantics><mrow><mn>1</mn><mi>e</mi><mi>d</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">1 ed.</annotation></semantics></math> 1107145392, 978-1-107, <a href="https://dokumen.pub/the-philosophy-of-cosmology-1nbsped-1107145392-978-1-107-14539-9-9781316535783-1316535789-161-179-181-2.html" rel="noopener noreferrer">https://dokumen.pub/the-philosophy-of-cosmology-1nbsped-1107145392-978-1-107-14539-9-9781316535783-1316535789-161-179-181-2.html</a><br>
+</li>
+<li>the role of oscillons in three-dimensional bubble collisions - arXiv, <a href="https://arxiv.org/html/1505.02162v2" rel="noopener noreferrer">https://arxiv.org/html/1505.02162v2</a><br>
+</li>
+<li>Planck 2018 results. VII. Isotropy and Statistics of the CMB - arXiv, <a href="https://arxiv.org/html/1906.02552" rel="noopener noreferrer">https://arxiv.org/html/1906.02552</a><br>
+</li>
+<li>Planck 2018 results. VII. Isotropy and Statistics of the CMB - arXivDaily, <a href="https://www.arxivdaily.com/papers/1906.02552" rel="noopener noreferrer">https://www.arxivdaily.com/papers/1906.02552</a><br>
+</li>
+<li>A Quantitative Framework for Testing the Hubble Tension in a … - arXiv, <a href="https://arxiv.org/pdf/2607.29197" rel="noopener noreferrer">https://arxiv.org/pdf/2607.29197</a><br>
+</li>
+<li>Probing the statistical isotropy of the universe with Planck data of the, <a href="https://www.researchgate.net/publication/377807976_Probing_the_statistical_isotropy_of_the_universe_with_Planck_data_of_the_cosmic_microwave_background" rel="noopener noreferrer">https://www.researchgate.net/publication/377807976_Probing_the_statistical_isotropy_of_the_universe_with_Planck_data_of_the_cosmic_microwave_background</a><br>
+</li>
+<li>CMB Hemispherical Power Asymmetry from Early Phase of Inflation, <a href="https://arxiv.org/pdf/2509.24712" rel="noopener noreferrer">https://arxiv.org/pdf/2509.24712</a><br>
+</li>
+<li>Is the Observable Universe Consistent with the Cosmological … - arXiv, <a href="https://arxiv.org/html/2207.05765v4" rel="noopener noreferrer">https://arxiv.org/html/2207.05765v4</a><br>
+</li>
+<li>The kinematic cosmic dipole beyond Ellis and Baldwin - arXiv, <a href="https://arxiv.org/html/2602.05700v2" rel="noopener noreferrer">https://arxiv.org/html/2602.05700v2</a><br>
+</li>
+<li>From Particle to Cosmos on the Net - Hans Konstapel Blogs, <a href="https://constable.blog/wp-content/uploads/From-Particle-to-Cosmos-on-the-Net-1.pdf" rel="noopener noreferrer">https://constable.blog/wp-content/uploads/From-Particle-to-Cosmos-on-the-Net-1.pdf</a><br>
+</li>
+<li>Revisiting the Compton Scattering Experiment in Search of the Mass, <a href="https://www.researchgate.net/publication/417808972_Revisiting_the_Compton_Scattering_Experiment_in_Search_of_the_Mass_of_the_Photon" rel="noopener noreferrer">https://www.researchgate.net/publication/417808972_Revisiting_the_Compton_Scattering_Experiment_in_Search_of_the_Mass_of_the_Photon</a><br>
+</li>
+<li>Impacts of wormholes on false vacuum bubble tunneling, <a href="https://link.aps.org/doi/10.1103/7lvl-8vqb" rel="noopener noreferrer">https://link.aps.org/doi/10.1103/7lvl-8vqb</a><br>
+</li>
+<li>UC Santa Barbara - eScholarship.org, <a href="https://escholarship.org/content/qt7xw981n4/qt7xw981n4.pdf" rel="noopener noreferrer">https://escholarship.org/content/qt7xw981n4/qt7xw981n4.pdf</a><br>
+</li>
+<li>Quantum Physics Jan 2025 - arXiv, <a href="http://arxiv.org/list/quant-ph/2025-01?skip=0&amp;show=2000" rel="noopener noreferrer">http://arxiv.org/list/quant-ph/2025-01?skip=0&amp;show=2000</a><br>
+</li>
+<li>Achievements - BITS Pilani, <a href="https://www.bits-pilani.ac.in/goa/achievements/" rel="noopener noreferrer">https://www.bits-pilani.ac.in/goa/achievements/</a><br>
+</li>
+<li>Scientific Journal Publishing Blog - Manusights, <a href="https://manusights.com/blog" rel="noopener noreferrer">https://manusights.com/blog</a><br>
+</li>
+<li>Physical Review D - Volume 79 Issue 12 - APS Journals, <a href="https://journals.aps.org/prd/issues/79/12" rel="noopener noreferrer">https://journals.aps.org/prd/issues/79/12</a><br>
+</li>
+<li>Coleman-De Luccia instanton in nLab, <a href="https://ncatlab.org/nlab/show/Coleman-De+Luccia+instanton" rel="noopener noreferrer">https://ncatlab.org/nlab/show/Coleman-De+Luccia+instanton</a><br>
+</li>
+<li>Gravitational effects on and of vacuum decay (Journal Article) - OSTI, <a href="https://www.osti.gov/biblio/5364208" rel="noopener noreferrer">https://www.osti.gov/biblio/5364208</a><br>
+</li>
+<li>The model of thin shell in General Relativity1 - PhilSci-Archive, <a href="https://philsci-archive.pitt.edu/22525/1/Gasco_v1_1.pdf" rel="noopener noreferrer">https://philsci-archive.pitt.edu/22525/1/Gasco_v1_1.pdf</a><br>
+</li>
+<li>W. Israel, “Singular Hypersurfaces and Thin Shells in … - SciRP.org, <a href="https://www.scirp.org/reference/referencespapers?referenceid=572841" rel="noopener noreferrer">https://www.scirp.org/reference/referencespapers?referenceid=572841</a><br>
+</li>
+<li>A Test of the Cosmological Principle using Quasars, <a href="https://telescoper.blog/2020/10/08/a-test-of-the-cosmological-principle-using-quasars/" rel="noopener noreferrer">https://telescoper.blog/2020/10/08/a-test-of-the-cosmological-principle-using-quasars/</a><br>
+</li>
+<li>Exploring the Ultra Large Scale Structure of the Universe, <a href="https://cosmo-nordita.fysik.su.se/talks/w3/d3/NORDITA17.pdf" rel="noopener noreferrer">https://cosmo-nordita.fysik.su.se/talks/w3/d3/NORDITA17.pdf</a><br>
+</li>
+<li>Singular hypersurfaces and thin shells in general relativity, <a href="https://www.semanticscholar.org/paper/Singular-hypersurfaces-and-thin-shells-in-general-Israel/bf387e0f57f6f3b878ae09fed558a21b57ff35cb" rel="noopener noreferrer">https://www.semanticscholar.org/paper/Singular-hypersurfaces-and-thin-shells-in-general-Israel/bf387e0f57f6f3b878ae09fed558a21b57ff35cb</a><br>
+</li>
+<li>Addressing observational tensions in cosmology with systematics, <a href="https://orbi.uliege.be/handle/2268/334986" rel="noopener noreferrer">https://orbi.uliege.be/handle/2268/334986</a><br>
+</li>
+<li>Modified Gravity 9789813274006, 981327400X - DOKUMEN.PUB, <a href="https://dokumen.pub/modified-gravity-9789813274006-981327400x.html" rel="noopener noreferrer">https://dokumen.pub/modified-gravity-9789813274006-981327400x.html</a><br>
+</li>
+<li>OR Report 2 The Theory of Observational Relativity … - viXra.org, <a href="https://vixra.org/pdf/2508.0044v1.pdf" rel="noopener noreferrer">https://vixra.org/pdf/2508.0044v1.pdf</a><br>
+</li>
+<li>Why is Spacetime Curved in Einstein’s General Relativity? (Part Ⅱ), <a href="https://journal.bjut.edu.cn/bjgydxxb/en/article/doi/10.11936/bjutxb2022040007-2?viewType=HTML" rel="noopener noreferrer">https://journal.bjut.edu.cn/bjgydxxb/en/article/doi/10.11936/bjutxb2022040007-2?viewType=HTML</a><br>
+</li>
+<li>Junction conditions for general gravitational theories | Documents, <a href="https://ekoizpen-zientifikoa.ehu.eus/documentos/6a81a069926b1d60e686dfbf" rel="noopener noreferrer">https://ekoizpen-zientifikoa.ehu.eus/documentos/6a81a069926b1d60e686dfbf</a></li>
+</ol>
+</blockquote>
+<h3 id="lib-arcsecs-interpretation-versus-observation-checkpoint-editorial-addition-r34">ArcSecs interpretation-versus-observation checkpoint (editorial addition, R34)</h3>
+<ul>
+<li><strong>Observed or calibrated quantities:</strong> Physical pressure differences can accelerate a material boundary; symmetric surrounding inverse-square gravity cancels inside a spherical shell.</li>
+<li><strong>What the observation does not determine by itself:</strong> It does not identify a unique fundamental physical ontology or interaction mechanism; experimental limits must remain explicitly labeled as limits.</li>
+<li><strong>ArcSecs mechanism-building task:</strong> Test nonmetric exterior screened interactions, boundary pressure gradients and anisotropic tides separately; do not relabel exterior gravity as a measured isotropic pull.</li>
+<li><strong>Reproducible comparison / sources:</strong> Classical shell theorem, vacuum-wall literature, CMB anisotropy bounds.</li>
+<li><strong>Falsification rule:</strong> Retain every published measured quantity and uncertainty. If a specified ArcSecs mechanism fails that benchmark, record the failing assumption and design a more complete physical mechanism or a discriminating observation; do not erase or recast the measurement as a successful fit.</li>
+<li><strong>Scientific release status:</strong> Research working edition. Source bibliography, numerical calculations, author attribution and any claimed original simulations require independent scientific verification before journal submission.</li>
+</ul>
+<p><a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/index.md">Return to the full report index</a> · <a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/research/measurement-vs-inference.md">Observation-versus-inference research ledger</a></p>
+<h3 id="lib-uaix-navigation">UAIX navigation</h3>
+<p><a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/index.md">Research index</a> · <a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/research/measurement-vs-inference.md">Scope and evidence memo</a></p>

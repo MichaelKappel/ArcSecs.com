@@ -193,9 +193,9 @@ $primary_path_cards = array(
 
 <section class="home-research-library-cta wrap" aria-label="Research library path">
     <div>
-        <div class="eyebrow">Evidence library</div>
-        <h2>Check the sources behind the claims.</h2>
-        <p>Open the Research Library for grouped scientific links, source roles, support statements, limitations, and simulation prompts.</p>
+        <div class="eyebrow">Scientific Research Library</div>
+        <h2>Read the research. Check the sources.</h2>
+        <p>Browse all 41 historical research reports, twelve stated foundations, scientific review history, numerical verification and the external evidence behind the claims.</p>
     </div>
     <a class="arcsecs-button" href="<?php echo esc_url( $research_library_url ); ?>">Open Research Library</a>
 </section>

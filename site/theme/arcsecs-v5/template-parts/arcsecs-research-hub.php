@@ -149,7 +149,7 @@ $path_cards = array(
             <a href="<?php echo esc_url( $demo_url ); ?>"><span>05</span><strong>Demo</strong><em>Simulation hooks</em></a>
             <a href="<?php echo esc_url( $drive_url ); ?>"><span>06</span><strong>DM Drive</strong><em>Propulsion sandbox</em></a>
             <a href="<?php echo esc_url( $multi_messenger_url ); ?>"><span>07</span><strong>Timing</strong><em>GW / EM delay</em></a>
-            <a href="<?php echo esc_url( $library_url ); ?>"><span>08</span><strong>Library</strong><em>Sources and links</em></a>
+            <a href="<?php echo esc_url( $library_url ); ?>"><span>08</span><strong>Library</strong><em>Reports, premises and evidence</em></a>
         </div>
     </section>
 
@@ -224,7 +224,7 @@ $path_cards = array(
             <a href="<?php echo esc_url( $sitemap_url ); ?>"><strong>ArcSecs sitemap</strong><span>Custom sitemap with virtual research routes.</span></a>
             <a href="<?php echo esc_url( $comparison_url ); ?>#architecture"><strong>Architecture section</strong><span>TypeScript engine as scientific argument.</span></a>
             <a href="<?php echo esc_url( $comparison_url ); ?>#architecture"><strong>Provided TypeScript</strong><span>Source examples are bundled under assets/ts/arcsecs-physics-engine/.</span></a>
-            <a href="<?php echo esc_url( $library_url ); ?>"><strong>Research Library</strong><span>Curated source map with what each link supports and what it does not prove.</span></a>
+            <a href="<?php echo esc_url( $library_url ); ?>"><strong>Research Library</strong><span>Read 41 historical reports, twelve foundations, manuscript history, archived checks, and external evidence with explicit limitations.</span></a>
             <a href="<?php echo esc_url( $distance_time_url ); ?>"><strong>Distance-Time Framework</strong><span>No-lightyear distance, clockless progression, gravity-wave baselines, and degraded electromagnetic-light framing.</span></a>
             <a href="<?php echo esc_url( $multi_messenger_url ); ?>"><strong>Multi-Messenger Timing</strong><span>Report-based GW/EM timing page with diagrams, delay buckets, and falsification checkpoints.</span></a>
             <a href="<?php echo esc_url( $drive_url ); ?>"><strong>Dark Matter Drive Simulator</strong><span>Interactive deterministic replay sandbox for ArcSecs speculative propulsion scenarios.</span></a>

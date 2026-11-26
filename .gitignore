@@ -20,3 +20,6 @@ __pycache__/
 
 !docs/review6/appendices/**/*.log
 !docs/long-term-memory/research/editorial-audit/tests.log
+
+# Intentional public CC0 corpus, required for independent download.
+!site/theme/arcsecs-v5/assets/publications/ai-corpus/ArcSecs_AI_Corpus_v1.0.0.zip

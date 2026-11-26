@@ -14,6 +14,7 @@ final class ArcSecs_Physics_Engine_Shortcodes
     {
         add_shortcode('arcsecs_dark_matter_drive_simulator', array($this, 'render_dark_matter_drive_shortcode'));
         add_shortcode('arcsecs_space_travel_simulation', array($this, 'render_space_travel_simulation_shortcode'));
+        add_shortcode('arcsecs_cosmic_evolution', array($this, 'render_cosmic_shortcode'));
         add_shortcode('arcsecs_physics_engine', array($this, 'render_engine_shortcode'));
     }
 
@@ -23,6 +24,28 @@ final class ArcSecs_Physics_Engine_Shortcodes
      * @param array<string, mixed> $attributes Shortcode attributes supplied by WordPress.
      * @return string HTML markup for the simulator shell.
      */
+    private function render_demo_navigation(string $current): void
+    {
+        $links = array('Physics engine' => '/arcsecs-physics-engine-demo/', 'Dark Matter Drive' => '/dark-matter-drive-simulator/', 'Space travel' => '/space-travel-simulation/', 'Research library' => '/research-library/', 'Reproducibility' => '/research-library/reproducibility/', 'AI corpus' => '/ai-corpus/', 'Cosmic evolution' => '/cosmic-evolution-simulator/');
+        echo '<nav class="arcsecs-demo-round-nav" aria-label="Explore ArcSecs experiments and evidence">';
+        foreach ($links as $label => $path) {
+            echo '<a href="' . esc_url(home_url($path)) . '"' . ($label === $current ? ' aria-current="page"' : '') . '>' . esc_html($label) . '</a>';
+        }
+        wp_enqueue_script('arcsecs-review6-lab');
+        echo '<button type="button" data-lab-open>Review 6 experiment lab</button></nav>';
+        require __DIR__ . '/review6-lab.php';
+        echo '<p class="arcsecs-demo-round-boundary">Exploratory legacy model, not experimental proof or a complete Review 6 solver. Open the Review 6 experiment lab for source-matched analytical controls. Start a run when ready.</p>';
+    }
+
+    public function render_cosmic_shortcode(array $attributes = array()): string
+    {
+        wp_enqueue_style('arcsecs-physics-engine');
+        wp_enqueue_script('arcsecs-cosmic-lab');
+        ob_start();
+        require __DIR__ . '/cosmic-lab.php';
+        return (string) ob_get_clean();
+    }
+
     public function render_engine_shortcode(array $attributes = array()): string
     {
         wp_enqueue_style('arcsecs-physics-engine');
@@ -33,9 +56,9 @@ final class ArcSecs_Physics_Engine_Shortcodes
                 'title' => 'ArcSecs Experimental Physics Engine',
                 'subtitle' => 'Flat-space theatrical physics, tired light, massive photons, dark-matter ramjet simulation, and real-time diagnostics',
                 'scenario' => 'relationalLattice',
-                'auto_run' => 'true',
-                'auto_grand_experiment' => 'true',
-                'auto_guided_tour' => 'true',
+                'auto_run' => 'false',
+                'auto_grand_experiment' => 'false',
+                'auto_guided_tour' => 'false',
                 'auto_launch_delay_ms' => '900',
                 'steps' => '6000',
                 'default_open_controls' => 'false',
@@ -68,6 +91,7 @@ final class ArcSecs_Physics_Engine_Shortcodes
         ?>
         <section id="<?php echo esc_attr($instance_id); ?>" class="<?php echo esc_attr($root_classes); ?>" data-arcsecs-engine="true" data-default-scenario="<?php echo esc_attr($scenario); ?>" data-auto-run="<?php echo esc_attr($auto_run); ?>" data-auto-grand-experiment="<?php echo esc_attr($auto_grand_experiment); ?>" data-auto-guided-tour="<?php echo esc_attr($auto_guided_tour); ?>" data-auto-launch-delay-ms="<?php echo esc_attr((string) $auto_launch_delay_ms); ?>" data-auto-launch-version="v5.7.16" data-default-steps="<?php echo esc_attr((string) $steps); ?>" data-default-open-controls="<?php echo esc_attr($default_open_controls); ?>">
             <header class="arcsecs-demo-hero">
+                <?php $this->render_demo_navigation('Physics engine'); ?>
                 <a class="arcsecs-demo-brand arcsecs-demo-brand-link" href="<?php echo esc_url($main_site_url); ?>" data-arcsecs-brand-home="true" aria-label="Return to ArcSecs.com home page" title="Return to the ArcSecs.com home page. This exits the full-screen research cockpit and opens the main site.">
                     <span class="arcsecs-demo-mark" aria-hidden="true">ARC</span>
                     <span class="arcsecs-demo-brand-copy">
@@ -97,7 +121,8 @@ final class ArcSecs_Physics_Engine_Shortcodes
                     <a class="arcsecs-demo-back-link" href="<?php echo esc_url($main_site_url); ?>" data-arcsecs-back-home="true" title="Return to the ArcSecs.com home page. Use this when you are done with the simulator.">← Back to ArcSecs.com</a>
                     <a class="arcsecs-demo-back-link" href="<?php echo esc_url(home_url('/arcsecs-physics-engine-demo/')); ?>" title="Reload the main ArcSecs Physics Engine Demo route with the current plugin shell.">Physics Engine Demo</a>
                     <button type="button" data-arcsecs-preset="darkMatterRamjet" title="Dark Matter Ramjet: run the full pipeline from EIT scoop through HIBE shield, Fishback solenoid, buffer, reactor, thermal system, and exhaust.">Dark Matter Drive Simulation</button>
-                    <button type="button" data-arcsecs-play-pause="true" aria-pressed="false" title="Pause or resume the fixed-time-step simulation runner. Spacebar also toggles play and pause.">Pause</button>
+                    <button type="button" data-arcsecs-play-pause="true" aria-pressed="false" title="Pause or resume viewport animation. Worker computation has its own Cancel control.">Pause</button>
+                    <button type="button" data-arcsecs-cancel-run="true" disabled>Cancel computation</button>
                     <button type="button" data-arcsecs-run="true" title="Run the selected scenario through the worker simulation and refresh diagnostics, charts, validation, and reports. Watch the main viewport, telemetry strip, and bottom graphs for the visible response.">Run Scenario</button>
                     <button type="button" data-arcsecs-parameter-guide-open="true" aria-haspopup="dialog" title="Open the Run Your Own Simulation Parameter Guide. Choose an example experiment and populate the sandbox controls automatically.">Run Your Own Simulation</button>
                     <button type="button" data-arcsecs-step="true" title="Advance exactly one deterministic simulation tick. Useful for debugging solver and scenario state changes.">Step</button>
@@ -246,7 +271,7 @@ final class ArcSecs_Physics_Engine_Shortcodes
 
             <section class="arcsecs-readiness-sweep-panel arcsecs-physics-engine-onboarding" data-arcsecs-physics-readiness-sweep="true" aria-label="Physics Engine readiness sweep overview">
                 <header>
-                    <span>v5.8.36 evidence bundle integrity labels</span>
+                    <span>v3.142.0 evidence bundle integrity labels</span>
                     <h2>Speculative research visualization with comparison, evidence, and falsification up front</h2>
                     <p>ArcSecs is a speculative research visualization framework. It lets visitors inspect alternative model behavior, compare it against standard references, export evidence, and identify what would falsify the model.</p>
                 </header>
@@ -1673,7 +1698,7 @@ final class ArcSecs_Physics_Engine_Shortcodes
                         <span>Entities <strong data-arcsecs-entity-count="true">—</strong></span>
                         <span>Photons <strong data-arcsecs-photon-count="true">—</strong></span>
                         <span title="Solver Links / Constraints. Counts the active structural relationships, calibration constraints, relation edges, field boundary conditions, rigid-body constraints, or subsystem couplings used by the active scenario.">Solver Links <strong data-arcsecs-constraint-count="true">—</strong></span>
-                        <span>Status <strong data-arcsecs-status="true">Initializing</strong></span>
+                        <span>Status <strong data-arcsecs-status="true" role="status" aria-live="polite">Initializing</strong></span>
                     </div>
                     <section class="arcsecs-bottom-graphs" data-testid="bottom-graphs" aria-label="Graphs and telemetry" title="Bottom graph strip: these two panels are not extra empty content. They are reserved for live scenario charts: the left graph shows the active model signal, and the right graph shows the baseline, comparison, or energy-ledger signal.">
                         <article class="arcsecs-graph-card" title="Primary Model Graph: this lower-left area is reserved for the main live chart of the active scenario. Depending on the selected mode it can show photon energy, redshift, force magnitude, capture rate, calibration error, rigid-body energy, or solver stability.">
@@ -2043,8 +2068,9 @@ final class ArcSecs_Physics_Engine_Shortcodes
 
         ob_start();
         ?>
-        <section id="<?php echo esc_attr($instance_id); ?>" class="arcsecs-dark-drive arcsecs-physics-demo" data-arcsecs-dark-drive="true" data-default-preset="<?php echo esc_attr($preset); ?>" tabindex="-1">
+        <section id="<?php echo esc_attr($instance_id); ?>" class="arcsecs-dark-drive arcsecs-physics-demo" data-arcsecs-dark-drive="true" data-default-preset="<?php echo esc_attr($preset); ?>" tabindex="0" aria-label="Dark Matter Drive simulator; focus here to use flight keyboard shortcuts">
             <header class="arcsecs-drive-hero">
+                <?php $this->render_demo_navigation('Dark Matter Drive'); ?>
                 <div class="arcsecs-drive-hero-main">
                     <a class="arcsecs-demo-brand arcsecs-demo-brand-link" href="<?php echo esc_url(home_url('/')); ?>" aria-label="Return to ArcSecs.com home page">
                         <span class="arcsecs-demo-mark" aria-hidden="true">ARC</span>
@@ -2470,8 +2496,9 @@ final class ArcSecs_Physics_Engine_Shortcodes
 
         ob_start();
         ?>
-        <section id="<?php echo esc_attr($instance_id); ?>" class="arcsecs-space-travel-simulator" data-arcsecs-space-travel-simulation="true">
+        <section id="<?php echo esc_attr($instance_id); ?>" class="arcsecs-space-travel-simulator" data-arcsecs-space-travel-simulation="true" tabindex="0" aria-label="Space travel simulator; focus here to use mission keyboard shortcuts">
             <header class="arcsecs-space-travel-hero">
+                <?php $this->render_demo_navigation('Space travel'); ?>
                 <p class="arcsecs-space-travel-kicker">ArcSecs Mission Model • Interactive Demo • Speculative Boundary</p>
                 <h2><?php echo esc_html($title); ?></h2>
                 <p><?php echo esc_html($subtitle); ?></p>
@@ -2491,7 +2518,7 @@ final class ArcSecs_Physics_Engine_Shortcodes
 
             <div class="arcsecs-space-travel-layout">
                 <section class="arcsecs-space-travel-cockpit" aria-label="Interactive space travel simulation cockpit">
-                    <canvas data-arcsecs-space-canvas="true" width="860" height="520" aria-label="ArcSecs space travel mission simulator canvas"></canvas>
+                    <canvas data-arcsecs-space-canvas="true" tabindex="0" width="860" height="520" aria-label="ArcSecs space travel mission simulator canvas"></canvas>
                     <div class="arcsecs-space-travel-demo-director" aria-label="Guided mission demo director">
                         <label for="<?php echo esc_attr($instance_id . '-demo'); ?>">Guided demo</label>
                         <select id="<?php echo esc_attr($instance_id . '-demo'); ?>" data-arcsecs-space-demo-select="true">
@@ -2588,7 +2615,7 @@ final class ArcSecs_Physics_Engine_Shortcodes
                         <button type="button" data-arcsecs-space-action="reset">Reset Mission</button>
                         <button type="button" data-arcsecs-space-action="export">Export Run JSON</button>
                     </div>
-                    <p class="arcsecs-space-travel-keyboard">Keyboard: W/↑ thrust, S/↓ brake, A/← turn left, D/→ turn right. Hold buttons on touch devices.</p>
+                    <p class="arcsecs-space-travel-keyboard">Focus the simulator or its canvas for keyboard controls: W/↑ thrust, S/↓ brake, A/← turn left, D/→ turn right. Hold buttons on touch devices.</p>
                 </section>
 
                 <aside class="arcsecs-space-travel-panel" aria-label="Mission telemetry">

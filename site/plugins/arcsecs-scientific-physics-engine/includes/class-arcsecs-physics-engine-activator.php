@@ -13,6 +13,7 @@ final class ArcSecs_Physics_Engine_Activator
     public static function activate(): void
     {
         $page_id = self::create_or_update_demo_page();
+        self::create_cosmic_page();
         $dark_drive_page_id = self::create_or_update_dark_matter_drive_page();
         $contact_page_id = self::create_or_update_contact_page();
         self::add_demo_page_to_menu($page_id);
@@ -32,6 +33,7 @@ final class ArcSecs_Physics_Engine_Activator
     public static function repair_installation(): int
     {
         $page_id = self::create_or_update_demo_page();
+        self::create_cosmic_page();
         $dark_drive_page_id = self::create_or_update_dark_matter_drive_page();
         $contact_page_id = self::create_or_update_contact_page();
         self::add_demo_page_to_menu($page_id);
@@ -47,16 +49,23 @@ final class ArcSecs_Physics_Engine_Activator
      *
      * @return Int32 WordPress post ID for the demo page.
      */
+    private static function create_cosmic_page(): int
+    {
+        $existing = get_page_by_path('cosmic-evolution-simulator');
+        if ($existing instanceof WP_Post) { return (int) $existing->ID; }
+        return (int) wp_insert_post(array('post_title' => 'Cosmic Evolution & Greater Cosmos', 'post_name' => 'cosmic-evolution-simulator', 'post_type' => 'page', 'post_status' => 'publish', 'post_content' => "<!-- wp:shortcode -->\n[arcsecs_cosmic_evolution]\n<!-- /wp:shortcode -->", 'comment_status' => 'closed'));
+    }
+
     private static function create_or_update_demo_page(): int
     {
         $stored_page_id = (int) get_option('arcsecs_physics_engine_demo_page_id', 0);
         $existing_page = $stored_page_id > 0 ? get_post($stored_page_id) : null;
 
-        if (!$existing_page) {
+        if (!($existing_page instanceof WP_Post) || $existing_page->post_type !== 'page') {
             $existing_page = get_page_by_path('arcsecs-physics-engine-demo');
         }
 
-        $content = "<!-- wp:heading {\"level\":1} -->\n<h1>ArcSecs Scientific Physics Engine Demo</h1>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>The demo starts immediately with a default Dark Matter Drive / speculative cosmology simulation. Open the expandable control console only when you want to tune parameters, export data, or rerun the model.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:shortcode -->\n[arcsecs_physics_engine title=\"ArcSecs Scientific Physics Engine\" subtitle=\"A live scientific instrument for TDD Physics, VSL, tired light, Proca dispersion, covariant constants, and Dark Matter Drive flow models.\" scenario=\"darkMatterDrive\" auto_run=\"true\" steps=\"6000\"]\n<!-- /wp:shortcode -->";
+        $content = "<!-- wp:heading {\"level\":1} -->\n<h1>ArcSecs Scientific Physics Engine Demo</h1>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Choose a scenario and select Run to begin a speculative cosmology simulation. Open the expandable control console only when you want to tune parameters, export data, or rerun the model.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:shortcode -->\n[arcsecs_physics_engine title=\"ArcSecs Scientific Physics Engine\" subtitle=\"A live scientific instrument for TDD Physics, VSL, tired light, Proca dispersion, covariant constants, and Dark Matter Drive flow models.\" scenario=\"darkMatterDrive\" auto_run=\"false\" auto_grand_experiment=\"false\" steps=\"6000\"]\n<!-- /wp:shortcode -->";
 
         $post_data = array(
             'post_title' => 'ArcSecs Physics Engine Demo',
@@ -69,8 +78,7 @@ final class ArcSecs_Physics_Engine_Activator
         );
 
         if ($existing_page instanceof WP_Post) {
-            $post_data['ID'] = $existing_page->ID;
-            $page_id = (int) wp_update_post($post_data);
+            $page_id = (int) $existing_page->ID;
         } else {
             $page_id = (int) wp_insert_post($post_data);
         }
@@ -92,7 +100,7 @@ final class ArcSecs_Physics_Engine_Activator
         $stored_page_id = (int) get_option('arcsecs_dark_matter_drive_page_id', 0);
         $existing_page = $stored_page_id > 0 ? get_post($stored_page_id) : null;
 
-        if (!$existing_page) {
+        if (!($existing_page instanceof WP_Post) || $existing_page->post_type !== 'page') {
             $existing_page = get_page_by_path('dark-matter-drive-simulator');
         }
 
@@ -125,8 +133,7 @@ HTML;
         );
 
         if ($existing_page instanceof WP_Post) {
-            $post_data['ID'] = $existing_page->ID;
-            $page_id = (int) wp_update_post($post_data);
+            $page_id = (int) $existing_page->ID;
         } else {
             $page_id = (int) wp_insert_post($post_data);
         }
@@ -149,11 +156,11 @@ HTML;
         $stored_page_id = (int) get_option('arcsecs_contact_page_id', 0);
         $existing_page = $stored_page_id > 0 ? get_post($stored_page_id) : null;
 
-        if (!$existing_page) {
+        if (!($existing_page instanceof WP_Post) || $existing_page->post_type !== 'page') {
             $existing_page = get_page_by_path('contact');
         }
 
-        if (!$existing_page) {
+        if (!($existing_page instanceof WP_Post) || $existing_page->post_type !== 'page') {
             $existing_page = get_page_by_path('michael-kappel-contact');
         }
 
@@ -315,8 +322,7 @@ HTML;
         );
 
         if ($existing_page instanceof WP_Post) {
-            $post_data['ID'] = $existing_page->ID;
-            $page_id = (int) wp_update_post($post_data);
+            $page_id = (int) $existing_page->ID;
         } else {
             $page_id = (int) wp_insert_post($post_data);
         }

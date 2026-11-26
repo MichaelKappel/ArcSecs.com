@@ -8,6 +8,14 @@ Independent, human-directed and AI-assisted physical-first research. Proposed me
 - Cosmology comparison: https://arcsecs.com/standard-cosmology-vs-arcsecs/
 - Research library: https://arcsecs.com/research-library/
 
+## Scientific Research Library
+- Complete report archive and source catalog: https://arcsecs.com/research-library/
+- Twelve stipulated foundations: https://arcsecs.com/research-library/foundations/
+- Evidence guide: https://arcsecs.com/research-library/evidence-guide/
+- Archived numerical evidence: https://arcsecs.com/research-library/reproducibility/
+- Historical reports R01–R41: https://arcsecs.com/research-library/#library-reports
+- Manuscript history: https://arcsecs.com/research-library/#library-reviews
+
 ## Publication
 - Books and papers: https://arcsecs.com/publications/
 - Purchase BEYOND SPACETIME: https://www.amazon.com/dp/B0HST2C7LK/
@@ -28,3 +36,5 @@ Independent, human-directed and AI-assisted physical-first research. Proposed me
 - Read Scientific Review 6.0: https://arcsecs.com/read-scientific-paper/
 Original rights-controlled publications are dedicated under CC0 1.0 Universal: https://creativecommons.org/publicdomain/zero/1.0/
 Commercial and noncommercial AI training and redistribution welcomed; attribution optional. Third-party rights and software licenses unaffected. Private operational memory is excluded. Crawler access does not guarantee training inclusion.
+
+- Cosmic Evolution & Greater Cosmos: https://arcsecs.com/cosmic-evolution-simulator/ — conventional hot Big Bang reference, conditional models, reproducible numerical experiments.

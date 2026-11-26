@@ -35,7 +35,7 @@
         <a href="<?php echo esc_url( arcsecs_ai_access_url( 'arcsecs-distance-time-framework/' ) ); ?>"><?php esc_html_e('Distance-Time Framework', 'arcsecs'); ?></a>
         <a href="<?php echo esc_url( arcsecs_ai_access_url( 'arcsecs-physics-engine-demo/' ) ); ?>"><?php esc_html_e('Physics Engine Demo', 'arcsecs'); ?></a>
         <a href="<?php echo esc_url( arcsecs_dark_matter_drive_simulator_url() ); ?>"><?php esc_html_e('Dark Matter Drive Simulator', 'arcsecs'); ?></a>
-        <a href="<?php echo esc_url( arcsecs_ai_access_url( 'research-library/' ) ); ?>"><?php esc_html_e('Evidence & Sources', 'arcsecs'); ?></a>
+        <a href="<?php echo esc_url( arcsecs_ai_access_url( 'research-library/' ) ); ?>"><?php esc_html_e('Scientific Research Library', 'arcsecs'); ?></a>
         <a href="<?php echo esc_url( arcsecs_ai_access_url( 'standard-cosmology-vs-arcsecs/' ) ); ?>"><?php esc_html_e('Standard Cosmology vs ArcSecs', 'arcsecs'); ?></a>
         <a href="<?php echo esc_url( arcsecs_ai_access_url( 'cosmic-anomalies-tracker/' ) ); ?>"><?php esc_html_e('Cosmic Anomalies Tracker', 'arcsecs'); ?></a>
     </nav>

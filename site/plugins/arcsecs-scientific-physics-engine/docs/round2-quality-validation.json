@@ -1,0 +1,361 @@
+{
+  "version": "3.141.2",
+  "passed": 214,
+  "knownLegacyFailures": 58,
+  "unexpectedFailures": 0,
+  "missingBaselineTests": 0,
+  "recovered": [],
+  "known": [
+    {
+      "file": "tests/js/v5812-scientific-source-matrix-equation-library.test.js",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5812-scientific-source-matrix-equation-library.test.js",
+      "name": "v5.8.36 docs and uai memory reference source matrix equation library package",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5813-live-scenario-audit-console-export-diff.test.js",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5813-live-scenario-audit-console-export-diff.test.js",
+      "name": "v5.8.36 docs and uai memory describe audit console export diff package",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5814-scenario-screenshot-evidence-pack-reviewer-notes.test.js",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5814-scenario-screenshot-evidence-pack-reviewer-notes.test.js",
+      "name": "copy boundary preserves speculative wording and avoids forbidden claims",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5814-scenario-screenshot-evidence-pack-reviewer-notes.test.js",
+      "name": "docs and uai memory describe v5.8.36 reviewer evidence workflow",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5815-public-reviewer-gallery-manifest-evidence-index.test.js",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5815-public-reviewer-gallery-manifest-evidence-index.test.js",
+      "name": "copy boundary preserves speculative wording and avoids forbidden claims",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5815-public-reviewer-gallery-manifest-evidence-index.test.js",
+      "name": "docs and uai memory describe v5.8.36 gallery manifest workflow",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5816-evidence-bundle-integrity-labels-reviewer-signoff.test.js",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5816-evidence-bundle-integrity-labels-reviewer-signoff.test.js",
+      "name": "copy boundary preserves speculative wording and avoids forbidden claims",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5816-evidence-bundle-integrity-labels-reviewer-signoff.test.js",
+      "name": "docs and uai memory describe v5.8.36 integrity signoff workflow",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5817-review-bundle-reconciliation-evidence-gap-assistant.test.js",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5817-review-bundle-reconciliation-evidence-gap-assistant.test.js",
+      "name": "copy boundary preserves speculative wording and avoids forbidden claims",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5817-review-bundle-reconciliation-evidence-gap-assistant.test.js",
+      "name": "docs and uai memory describe v5.8.36 reconciliation workflow",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5818-scenario-review-walkthrough-evidence-repair-queue.test.js",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5818-scenario-review-walkthrough-evidence-repair-queue.test.js",
+      "name": "copy boundary preserves speculative wording and avoids forbidden claims",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5818-scenario-review-walkthrough-evidence-repair-queue.test.js",
+      "name": "docs and uai memory describe v5.8.36 walkthrough repair workflow",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5819-evidence-repair-completion-ledger-demo-readiness-gate.test.js",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5819-evidence-repair-completion-ledger-demo-readiness-gate.test.js",
+      "name": "copy boundary safeguards reject proof and established technology claims",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5819-evidence-repair-completion-ledger-demo-readiness-gate.test.js",
+      "name": "docs and uai memory describe v5.8.36 completion ledger demo readiness workflow",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5820-public-demo-scenario-checklist-reviewer-evidence-pack.test.js",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5820-public-demo-scenario-checklist-reviewer-evidence-pack.test.js",
+      "name": "copy boundary safeguards preserve speculative wording and reject proof or established technology claims",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5820-public-demo-scenario-checklist-reviewer-evidence-pack.test.js",
+      "name": "docs and uai memory describe v5.8.36 public demo checklist reviewer evidence pack workflow",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5821-public-demo-script-builder-screenshot-caption-pack.test.js",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5821-public-demo-script-builder-screenshot-caption-pack.test.js",
+      "name": "copy boundary safeguards preserve speculative wording and reject proof or established technology claims",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5821-public-demo-script-builder-screenshot-caption-pack.test.js",
+      "name": "docs and uai memory describe v5.8.36 demo scripts and caption pack",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5822-public-demo-page-assembly-copy-review-bundle.test.js",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5822-public-demo-page-assembly-copy-review-bundle.test.js",
+      "name": "copy boundary tests preserve speculative wording and reject proof or established technology claims",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5822-public-demo-page-assembly-copy-review-bundle.test.js",
+      "name": "docs and uai memory describe v5.8.36 page assembly and copy review bundle",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5823-public-demo-route-draft-seo-schema-review.test.js",
+      "name": "package identity is v5.8.36 for public demo route draft SEO schema review package",
+      "error": "ERR_ASSERTION",
+      "category": "historical fixed-version assertion"
+    },
+    {
+      "file": "tests/js/v5823-public-demo-route-draft-seo-schema-review.test.js",
+      "name": "copy boundary remains cautious and rejects proof or established-technology language",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5823-public-demo-route-draft-seo-schema-review.test.js",
+      "name": "docs and uai memory describe v5.8.36 route draft and schema review",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5824-public-demo-publication-handoff-static-page-draft.test.js",
+      "name": "package identity is v5.8.36 for publication handoff static page draft package",
+      "error": "ERR_ASSERTION",
+      "category": "historical fixed-version assertion"
+    },
+    {
+      "file": "tests/js/v5824-public-demo-publication-handoff-static-page-draft.test.js",
+      "name": "copy boundary remains cautious and rejects proof or established-technology language",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5824-public-demo-publication-handoff-static-page-draft.test.js",
+      "name": "docs and uai memory describe v5.8.36 handoff and static page draft",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5825-static-draft-review-import-page-readiness-diff.test.js",
+      "name": "package identity is v5.8.36 for static draft review import page readiness diff package",
+      "error": "ERR_ASSERTION",
+      "category": "historical fixed-version assertion"
+    },
+    {
+      "file": "tests/js/v5825-static-draft-review-import-page-readiness-diff.test.js",
+      "name": "copy boundary remains cautious and rejects proof or established-technology language",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5825-static-draft-review-import-page-readiness-diff.test.js",
+      "name": "docs and uai memory describe v5.8.36 static draft review import and page readiness diff",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5826-static-publication-review-checklist-page-draft-freeze.test.js",
+      "name": "package identity is v5.8.36 for static publication review checklist page draft freeze package",
+      "error": "ERR_ASSERTION",
+      "category": "historical fixed-version assertion"
+    },
+    {
+      "file": "tests/js/v5826-static-publication-review-checklist-page-draft-freeze.test.js",
+      "name": "copy boundary remains cautious and rejects proof or established-technology language",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5826-static-publication-review-checklist-page-draft-freeze.test.js",
+      "name": "docs and uai memory describe v5.8.36 static publication review checklist and page draft freeze bundle",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5827-static-publish-handoff-qa-summary-public-page-content-checklist.test.js",
+      "name": "package identity is v5.8.36 for static publish handoff qa summary public page content checklist package",
+      "error": "ERR_ASSERTION",
+      "category": "historical fixed-version assertion"
+    },
+    {
+      "file": "tests/js/v5827-static-publish-handoff-qa-summary-public-page-content-checklist.test.js",
+      "name": "copy boundary remains cautious and rejects proof or established-technology language",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5827-static-publish-handoff-qa-summary-public-page-content-checklist.test.js",
+      "name": "docs and uai memory describe v5.8.36 static publish QA and content checklist",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5828-uai-memory-organization-completeness-check.test.js",
+      "name": "tests/js/v5828-uai-memory-organization-completeness-check.test.js",
+      "error": "ERR_TEST_FAILURE",
+      "category": "historical test file missing named fixture"
+    },
+    {
+      "file": "tests/js/v5829-public-page-manual-publishing-runbook-post-deploy-verification.test.js",
+      "name": "package identity is v5.8.36 for manual publishing runbook package",
+      "error": "ERR_ASSERTION",
+      "category": "historical fixed-version assertion"
+    },
+    {
+      "file": "tests/js/v5829-public-page-manual-publishing-runbook-post-deploy-verification.test.js",
+      "name": "copy boundary rejects proof and publishing automation claims",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5830-manual-publishing-archive-receipt-human-review-signoff.test.js",
+      "name": "package identity is v5.8.36 for manual publishing archive receipt package",
+      "error": "ERR_ASSERTION",
+      "category": "historical fixed-version assertion"
+    },
+    {
+      "file": "tests/js/v5830-manual-publishing-archive-receipt-human-review-signoff.test.js",
+      "name": "copy boundary preserves cautious scientific wording",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5830-manual-publishing-archive-receipt-human-review-signoff.test.js",
+      "name": "uai memory remains complete and current after v5.8.36",
+      "error": "ENOENT",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "file": "tests/js/v5831-public-publishing-evidence-archive-index-reviewer-retrieval-notes.test.js",
+      "name": "tests/js/v5831-public-publishing-evidence-archive-index-reviewer-retrieval-notes.test.js",
+      "error": "ERR_TEST_FAILURE",
+      "category": "historical test file missing named fixture"
+    },
+    {
+      "file": "tests/js/v5832-michael-kappel-contact-page.test.js",
+      "name": "tests/js/v5832-michael-kappel-contact-page.test.js",
+      "error": "ERR_TEST_FAILURE",
+      "category": "historical test file missing named fixture"
+    },
+    {
+      "file": "tests/js/v5833-contact-page-live-polish-footer-link-seo-aeo.test.js",
+      "name": "tests/js/v5833-contact-page-live-polish-footer-link-seo-aeo.test.js",
+      "error": "ERR_TEST_FAILURE",
+      "category": "historical test file missing named fixture"
+    },
+    {
+      "file": "tests/js/v5834-contact-page-deployment-qa-public-trust-polish.test.js",
+      "name": "tests/js/v5834-contact-page-deployment-qa-public-trust-polish.test.js",
+      "error": "ERR_TEST_FAILURE",
+      "category": "historical test file missing named fixture"
+    },
+    {
+      "file": "tests/js/v5835-contact-page-live-verification-theme-footer-handoff.test.js",
+      "name": "tests/js/v5835-contact-page-live-verification-theme-footer-handoff.test.js",
+      "error": "ERR_TEST_FAILURE",
+      "category": "historical test file missing named fixture"
+    },
+    {
+      "file": "tests/js/v5836-viewport-scrollbar-accessibility-fix.test.js",
+      "name": "tests/js/v5836-viewport-scrollbar-accessibility-fix.test.js",
+      "error": "ERR_TEST_FAILURE",
+      "category": "historical test file missing named fixture"
+    }
+  ],
+  "unexpected": [],
+  "missing": [],
+  "gate": "PASS_WITH_DISCLOSED_LEGACY_DEBT"
+}

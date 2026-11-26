@@ -1,0 +1,1028 @@
+{
+  "source_version": "3.141.1",
+  "pass": 110,
+  "fail": 58,
+  "tests": [
+    {
+      "type": "test:pass",
+      "name": "visual clock is refresh-rate independent, and paused clock does not advance",
+      "file": "tests/js/round1-runtime.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "combined automatic launch starts only the scenario and queues the sweep",
+      "file": "tests/js/round1-runtime.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "cancel removes pending launch and reduced motion schedules no work",
+      "file": "tests/js/round1-runtime.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "hidden page does not launch automatic computation",
+      "file": "tests/js/round1-runtime.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "source avoids jQuery Ajax helpers and Bootstrap runtime dependency",
+      "file": "tests/js/source-quality.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "file": "tests/js/v5812-scientific-source-matrix-equation-library.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'CHANGELOG.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:pass",
+      "name": "physics engine demo includes visitor physicist engineer modes and comparison panels",
+      "file": "tests/js/v5812-scientific-source-matrix-equation-library.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "space travel page has onboarding grouped telemetry and replay validation guidance",
+      "file": "tests/js/v5812-scientific-source-matrix-equation-library.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "dark matter drive page separates reality controls placeholders and hotspots",
+      "file": "tests/js/v5812-scientific-source-matrix-equation-library.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "copy boundary remains cautious and forbidden proof claims are absent from new public panels",
+      "file": "tests/js/v5812-scientific-source-matrix-equation-library.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "space travel export and replay validation include requested schema fields",
+      "file": "tests/js/v5812-scientific-source-matrix-equation-library.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "dark matter drive exports include identity warnings and falsification notes",
+      "file": "tests/js/v5812-scientific-source-matrix-equation-library.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "v5.8.36 scientific source matrix covers all major requested scenarios",
+      "file": "tests/js/v5812-scientific-source-matrix-equation-library.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "v5.8.36 scenario equation library labels pseudo formulas units and export evidence",
+      "file": "tests/js/v5812-scientific-source-matrix-equation-library.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "v5.8.36 inert exports include sourceMatrix and scenarioEquationLibrary",
+      "file": "tests/js/v5812-scientific-source-matrix-equation-library.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "v5.8.36 docs and uai memory reference source matrix equation library package",
+      "file": "tests/js/v5812-scientific-source-matrix-equation-library.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/scientific-source-matrix.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "file": "tests/js/v5813-live-scenario-audit-console-export-diff.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'CHANGELOG.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:pass",
+      "name": "Live Scenario Audit Console render shell and reviewer buttons exist",
+      "file": "tests/js/v5813-live-scenario-audit-console-export-diff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "Export Diff Review render shell accepts two inert JSON textareas",
+      "file": "tests/js/v5813-live-scenario-audit-console-export-diff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "audit console JavaScript validates source matrix and equation library rows",
+      "file": "tests/js/v5813-live-scenario-audit-console-export-diff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "export diff review rejects invalid or incomplete inert JSON safely",
+      "file": "tests/js/v5813-live-scenario-audit-console-export-diff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "export diff review compares required top-level fields",
+      "file": "tests/js/v5813-live-scenario-audit-console-export-diff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "copy boundary remains cautious for audit and diff features",
+      "file": "tests/js/v5813-live-scenario-audit-console-export-diff.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "v5.8.36 docs and uai memory describe audit console export diff package",
+      "file": "tests/js/v5813-live-scenario-audit-console-export-diff.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/live-scenario-audit-console.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "file": "tests/js/v5814-scenario-screenshot-evidence-pack-reviewer-notes.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'CHANGELOG.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:pass",
+      "name": "Evidence Repair Completion Ledger and Demo Readiness Gate panels exist",
+      "file": "tests/js/v5814-scenario-screenshot-evidence-pack-reviewer-notes.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "reviewer selectors include required statuses and screenshot suitability values",
+      "file": "tests/js/v5814-scenario-screenshot-evidence-pack-reviewer-notes.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "JavaScript builds local-only evidence and notes exports with readiness scoring",
+      "file": "tests/js/v5814-scenario-screenshot-evidence-pack-reviewer-notes.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "main JSON export includes scenarioScreenshotEvidencePack and reviewerNotesBundle blocks",
+      "file": "tests/js/v5814-scenario-screenshot-evidence-pack-reviewer-notes.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "copy boundary preserves speculative wording and avoids forbidden claims",
+      "file": "tests/js/v5814-scenario-screenshot-evidence-pack-reviewer-notes.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'README.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "docs and uai memory describe v5.8.36 reviewer evidence workflow",
+      "file": "tests/js/v5814-scenario-screenshot-evidence-pack-reviewer-notes.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/scenario-screenshot-evidence-pack.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "file": "tests/js/v5815-public-reviewer-gallery-manifest-evidence-index.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'CHANGELOG.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:pass",
+      "name": "Public Reviewer Gallery Manifest panel and Evidence Index table exist",
+      "file": "tests/js/v5815-public-reviewer-gallery-manifest-evidence-index.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "Evidence Index filters and reviewer readiness summary exist",
+      "file": "tests/js/v5815-public-reviewer-gallery-manifest-evidence-index.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "JavaScript validates inert Evidence Pack and Reviewer Notes JSON safely",
+      "file": "tests/js/v5815-public-reviewer-gallery-manifest-evidence-index.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "Gallery manifest export includes required fields and evidence row fields",
+      "file": "tests/js/v5815-public-reviewer-gallery-manifest-evidence-index.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "Reviewer readiness summary counts required buckets",
+      "file": "tests/js/v5815-public-reviewer-gallery-manifest-evidence-index.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "copy boundary preserves speculative wording and avoids forbidden claims",
+      "file": "tests/js/v5815-public-reviewer-gallery-manifest-evidence-index.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'README.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "docs and uai memory describe v5.8.36 gallery manifest workflow",
+      "file": "tests/js/v5815-public-reviewer-gallery-manifest-evidence-index.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/public-reviewer-gallery-manifest.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "file": "tests/js/v5816-evidence-bundle-integrity-labels-reviewer-signoff.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'CHANGELOG.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:pass",
+      "name": "Evidence Bundle Integrity Labels panel and Integrity Review Table exist",
+      "file": "tests/js/v5816-evidence-bundle-integrity-labels-reviewer-signoff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "Reviewer Sign-Off Summary panel and selector values exist",
+      "file": "tests/js/v5816-evidence-bundle-integrity-labels-reviewer-signoff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "local fingerprint helper exists and avoids secrets or remote validation",
+      "file": "tests/js/v5816-evidence-bundle-integrity-labels-reviewer-signoff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "export JSON contains evidenceBundleIntegrityLabels and reviewerSignOffSummary",
+      "file": "tests/js/v5816-evidence-bundle-integrity-labels-reviewer-signoff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "integrity status supports complete warning incomplete rejected",
+      "file": "tests/js/v5816-evidence-bundle-integrity-labels-reviewer-signoff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "TypeScript contracts include integrity labels and signoff summary",
+      "file": "tests/js/v5816-evidence-bundle-integrity-labels-reviewer-signoff.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "copy boundary preserves speculative wording and avoids forbidden claims",
+      "file": "tests/js/v5816-evidence-bundle-integrity-labels-reviewer-signoff.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'README.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "docs and uai memory describe v5.8.36 integrity signoff workflow",
+      "file": "tests/js/v5816-evidence-bundle-integrity-labels-reviewer-signoff.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/evidence-bundle-integrity-labels.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "file": "tests/js/v5817-review-bundle-reconciliation-evidence-gap-assistant.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'CHANGELOG.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:pass",
+      "name": "Review Bundle Import Reconciliation panel and inert JSON inputs exist",
+      "file": "tests/js/v5817-review-bundle-reconciliation-evidence-gap-assistant.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "reconciliation checks include required comparison fields",
+      "file": "tests/js/v5817-review-bundle-reconciliation-evidence-gap-assistant.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "Evidence Gap Assistant exists and detects required gaps",
+      "file": "tests/js/v5817-review-bundle-reconciliation-evidence-gap-assistant.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "reconciliation export contains required inert fields",
+      "file": "tests/js/v5817-review-bundle-reconciliation-evidence-gap-assistant.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "TypeScript contracts include reconciliation exports and gap rows",
+      "file": "tests/js/v5817-review-bundle-reconciliation-evidence-gap-assistant.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "copy boundary preserves speculative wording and avoids forbidden claims",
+      "file": "tests/js/v5817-review-bundle-reconciliation-evidence-gap-assistant.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'README.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "docs and uai memory describe v5.8.36 reconciliation workflow",
+      "file": "tests/js/v5817-review-bundle-reconciliation-evidence-gap-assistant.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/review-bundle-import-reconciliation.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "file": "tests/js/v5818-scenario-review-walkthrough-evidence-repair-queue.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'CHANGELOG.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:pass",
+      "name": "Scenario Review Walkthrough Wizard panel and buttons exist",
+      "file": "tests/js/v5818-scenario-review-walkthrough-evidence-repair-queue.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "Evidence Repair Queue panel filters and local status values exist",
+      "file": "tests/js/v5818-scenario-review-walkthrough-evidence-repair-queue.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "repair item fields and recommendations are implemented",
+      "file": "tests/js/v5818-scenario-review-walkthrough-evidence-repair-queue.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "exports contain walkthrough and repair queue blocks",
+      "file": "tests/js/v5818-scenario-review-walkthrough-evidence-repair-queue.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "TypeScript contracts include walkthrough and repair queue exports",
+      "file": "tests/js/v5818-scenario-review-walkthrough-evidence-repair-queue.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "copy boundary preserves speculative wording and avoids forbidden claims",
+      "file": "tests/js/v5818-scenario-review-walkthrough-evidence-repair-queue.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'README.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "docs and uai memory describe v5.8.36 walkthrough repair workflow",
+      "file": "tests/js/v5818-scenario-review-walkthrough-evidence-repair-queue.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/scenario-review-walkthrough-wizard.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "file": "tests/js/v5819-evidence-repair-completion-ledger-demo-readiness-gate.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'CHANGELOG.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:pass",
+      "name": "Evidence Repair Completion Ledger panel exists with completion controls and statuses",
+      "file": "tests/js/v5819-evidence-repair-completion-ledger-demo-readiness-gate.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "Demo Readiness Gate panel exists with gate controls and statuses",
+      "file": "tests/js/v5819-evidence-repair-completion-ledger-demo-readiness-gate.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "required evidence checks and exports are implemented",
+      "file": "tests/js/v5819-evidence-repair-completion-ledger-demo-readiness-gate.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "TypeScript contracts include completion ledger and demo readiness gate exports",
+      "file": "tests/js/v5819-evidence-repair-completion-ledger-demo-readiness-gate.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "copy boundary safeguards reject proof and established technology claims",
+      "file": "tests/js/v5819-evidence-repair-completion-ledger-demo-readiness-gate.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'README.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "docs and uai memory describe v5.8.36 completion ledger demo readiness workflow",
+      "file": "tests/js/v5819-evidence-repair-completion-ledger-demo-readiness-gate.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/evidence-repair-completion-ledger.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "file": "tests/js/v5820-public-demo-scenario-checklist-reviewer-evidence-pack.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'CHANGELOG.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:pass",
+      "name": "Public Demo Scenario Checklist panel exists with controls filters and override statuses",
+      "file": "tests/js/v5820-public-demo-scenario-checklist-reviewer-evidence-pack.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "Reviewer Evidence Export Pack panel and required export fields exist",
+      "file": "tests/js/v5820-public-demo-scenario-checklist-reviewer-evidence-pack.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "required checklist items and inert export blocks are implemented in JavaScript",
+      "file": "tests/js/v5820-public-demo-scenario-checklist-reviewer-evidence-pack.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "TypeScript contracts include public demo checklist and reviewer evidence export pack",
+      "file": "tests/js/v5820-public-demo-scenario-checklist-reviewer-evidence-pack.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "copy boundary safeguards preserve speculative wording and reject proof or established technology claims",
+      "file": "tests/js/v5820-public-demo-scenario-checklist-reviewer-evidence-pack.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'README.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "docs and uai memory describe v5.8.36 public demo checklist reviewer evidence pack workflow",
+      "file": "tests/js/v5820-public-demo-scenario-checklist-reviewer-evidence-pack.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/public-demo-scenario-checklist.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "file": "tests/js/v5821-public-demo-script-builder-screenshot-caption-pack.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'CHANGELOG.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:pass",
+      "name": "Public Demo Script Builder panel exists with controls filters and script status values",
+      "file": "tests/js/v5821-public-demo-script-builder-screenshot-caption-pack.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "Screenshot Caption Pack panel exists with caption table and cautious copy",
+      "file": "tests/js/v5821-public-demo-script-builder-screenshot-caption-pack.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "generated script rows include required public demo sections",
+      "file": "tests/js/v5821-public-demo-script-builder-screenshot-caption-pack.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "caption rows include required screenshot communication fields",
+      "file": "tests/js/v5821-public-demo-script-builder-screenshot-caption-pack.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "TypeScript contracts include demo scripts and screenshot captions",
+      "file": "tests/js/v5821-public-demo-script-builder-screenshot-caption-pack.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "export JSON context contains publicDemoScriptBuilder and screenshotCaptionPack",
+      "file": "tests/js/v5821-public-demo-script-builder-screenshot-caption-pack.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "copy boundary safeguards preserve speculative wording and reject proof or established technology claims",
+      "file": "tests/js/v5821-public-demo-script-builder-screenshot-caption-pack.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'README.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "docs and uai memory describe v5.8.36 demo scripts and caption pack",
+      "file": "tests/js/v5821-public-demo-script-builder-screenshot-caption-pack.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/public-demo-script-builder.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "package identity is v5.8.36 for Viewport Scrollbar Accessibility Fix package",
+      "file": "tests/js/v5822-public-demo-page-assembly-copy-review-bundle.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'CHANGELOG.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:pass",
+      "name": "Public Demo Page Assembly Checklist and Copy Review Bundle panels exist",
+      "file": "tests/js/v5822-public-demo-page-assembly-copy-review-bundle.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "copy readiness status values and assembly checklist items exist",
+      "file": "tests/js/v5822-public-demo-page-assembly-copy-review-bundle.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "copy quality checks detect boundary falsification standard source alt proof operational and placeholder issues",
+      "file": "tests/js/v5822-public-demo-page-assembly-copy-review-bundle.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "export JSON contains publicDemoPageAssemblyChecklist and copyReviewBundle",
+      "file": "tests/js/v5822-public-demo-page-assembly-copy-review-bundle.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "TypeScript contracts include page assembly and copy review bundle exports",
+      "file": "tests/js/v5822-public-demo-page-assembly-copy-review-bundle.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "copy boundary tests preserve speculative wording and reject proof or established technology claims",
+      "file": "tests/js/v5822-public-demo-page-assembly-copy-review-bundle.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'README.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "docs and uai memory describe v5.8.36 page assembly and copy review bundle",
+      "file": "tests/js/v5822-public-demo-page-assembly-copy-review-bundle.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/public-demo-page-assembly-checklist.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "package identity is v5.8.36 for public demo route draft SEO schema review package",
+      "file": "tests/js/v5823-public-demo-route-draft-seo-schema-review.test.js",
+      "error": "ERR_ASSERTION",
+      "message": "The input did not match the regular expression /Version:\\s*5\\.8\\.36/. Input:\n\n'<?php\\n' +\n  '/**\\n' +\n  ' * Plugin Name: ArcSecs Scientific Physics Engine\\n' +\n  ' * Plugin URI: https://arcsecs.com/\\n' +\n  ' * Description: Scientific TDD Physics simulator for ArcSecs with local reviewer evidence workflows, contact page verification, and viewport scrollbar accessibility fixes for reachable simulator panels on shorter screens.\\n' +\n  ' * Version: 3.141.1\\n' +\n  ' * Author: ArcSecs\\n' +\n  ' * Autho",
+      "category": "historical fixed-version assertion"
+    },
+    {
+      "type": "test:pass",
+      "name": "Public Demo Route Draft Bundle and SEO Schema Review panels exist",
+      "file": "tests/js/v5823-public-demo-route-draft-seo-schema-review.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "route draft controls and status values exist",
+      "file": "tests/js/v5823-public-demo-route-draft-seo-schema-review.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "route draft rows include requested metadata and review statuses",
+      "file": "tests/js/v5823-public-demo-route-draft-seo-schema-review.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "schema review rows include reviewer-draft schema fields",
+      "file": "tests/js/v5823-public-demo-route-draft-seo-schema-review.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "text-only internal link suggestions exist and do not fetch or publish links",
+      "file": "tests/js/v5823-public-demo-route-draft-seo-schema-review.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "route/copy quality checks cover required warning classes",
+      "file": "tests/js/v5823-public-demo-route-draft-seo-schema-review.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "export JSON contains publicDemoRouteDraftBundle and seoSchemaReview",
+      "file": "tests/js/v5823-public-demo-route-draft-seo-schema-review.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "TypeScript contracts include route draft and SEO schema exports",
+      "file": "tests/js/v5823-public-demo-route-draft-seo-schema-review.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "copy boundary remains cautious and rejects proof or established-technology language",
+      "file": "tests/js/v5823-public-demo-route-draft-seo-schema-review.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/public-demo-route-draft-bundle.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "docs and uai memory describe v5.8.36 route draft and schema review",
+      "file": "tests/js/v5823-public-demo-route-draft-seo-schema-review.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/public-demo-route-draft-bundle.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "package identity is v5.8.36 for publication handoff static page draft package",
+      "file": "tests/js/v5824-public-demo-publication-handoff-static-page-draft.test.js",
+      "error": "ERR_ASSERTION",
+      "message": "The input did not match the regular expression /Version:\\s*5\\.8\\.36/. Input:\n\n'<?php\\n' +\n  '/**\\n' +\n  ' * Plugin Name: ArcSecs Scientific Physics Engine\\n' +\n  ' * Plugin URI: https://arcsecs.com/\\n' +\n  ' * Description: Scientific TDD Physics simulator for ArcSecs with local reviewer evidence workflows, contact page verification, and viewport scrollbar accessibility fixes for reachable simulator panels on shorter screens.\\n' +\n  ' * Version: 3.141.1\\n' +\n  ' * Author: ArcSecs\\n' +\n  ' * Autho",
+      "category": "historical fixed-version assertion"
+    },
+    {
+      "type": "test:pass",
+      "name": "Viewport Scrollbar Accessibility Fix panels exist",
+      "file": "tests/js/v5824-public-demo-publication-handoff-static-page-draft.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "publication handoff controls and status values exist",
+      "file": "tests/js/v5824-public-demo-publication-handoff-static-page-draft.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "handoff rows include route, schema, copy, evidence, source/equation, falsification, warning, and placeholder statuses",
+      "file": "tests/js/v5824-public-demo-publication-handoff-static-page-draft.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "static page draft rows include required public-page draft fields",
+      "file": "tests/js/v5824-public-demo-publication-handoff-static-page-draft.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "handoff quality checks cover required missing and unsafe copy classes",
+      "file": "tests/js/v5824-public-demo-publication-handoff-static-page-draft.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "export JSON contains publication handoff and static page draft blocks",
+      "file": "tests/js/v5824-public-demo-publication-handoff-static-page-draft.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "TypeScript contracts include publication handoff and static draft exports",
+      "file": "tests/js/v5824-public-demo-publication-handoff-static-page-draft.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "copy boundary remains cautious and rejects proof or established-technology language",
+      "file": "tests/js/v5824-public-demo-publication-handoff-static-page-draft.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/public-demo-publication-handoff-manifest.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "docs and uai memory describe v5.8.36 handoff and static page draft",
+      "file": "tests/js/v5824-public-demo-publication-handoff-static-page-draft.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/public-demo-publication-handoff-manifest.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "package identity is v5.8.36 for static draft review import page readiness diff package",
+      "file": "tests/js/v5825-static-draft-review-import-page-readiness-diff.test.js",
+      "error": "ERR_ASSERTION",
+      "message": "The input did not match the regular expression /Version:\\s*5\\.8\\.36/. Input:\n\n'<?php\\n' +\n  '/**\\n' +\n  ' * Plugin Name: ArcSecs Scientific Physics Engine\\n' +\n  ' * Plugin URI: https://arcsecs.com/\\n' +\n  ' * Description: Scientific TDD Physics simulator for ArcSecs with local reviewer evidence workflows, contact page verification, and viewport scrollbar accessibility fixes for reachable simulator panels on shorter screens.\\n' +\n  ' * Version: 3.141.1\\n' +\n  ' * Author: ArcSecs\\n' +\n  ' * Autho",
+      "category": "historical fixed-version assertion"
+    },
+    {
+      "type": "test:pass",
+      "name": "Viewport Scrollbar Accessibility Fix panels exist",
+      "file": "tests/js/v5825-static-draft-review-import-page-readiness-diff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "import controls and diff review status values exist",
+      "file": "tests/js/v5825-static-draft-review-import-page-readiness-diff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "invalid JSON and executable-looking content are rejected visibly",
+      "file": "tests/js/v5825-static-draft-review-import-page-readiness-diff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "diff rows compare required static page draft fields",
+      "file": "tests/js/v5825-static-draft-review-import-page-readiness-diff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "difference assistant detects missing fields, unsafe wording, and stale package version",
+      "file": "tests/js/v5825-static-draft-review-import-page-readiness-diff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "export JSON contains static draft review import and page readiness diff blocks",
+      "file": "tests/js/v5825-static-draft-review-import-page-readiness-diff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "TypeScript contracts include static draft review and page readiness diff exports",
+      "file": "tests/js/v5825-static-draft-review-import-page-readiness-diff.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "copy boundary remains cautious and rejects proof or established-technology language",
+      "file": "tests/js/v5825-static-draft-review-import-page-readiness-diff.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/static-draft-review-import.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "docs and uai memory describe v5.8.36 static draft review import and page readiness diff",
+      "file": "tests/js/v5825-static-draft-review-import-page-readiness-diff.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/static-draft-review-import.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "package identity is v5.8.36 for static publication review checklist page draft freeze package",
+      "file": "tests/js/v5826-static-publication-review-checklist-page-draft-freeze.test.js",
+      "error": "ERR_ASSERTION",
+      "message": "The input did not match the regular expression /Version:\\s*5\\.8\\.36/. Input:\n\n'<?php\\n' +\n  '/**\\n' +\n  ' * Plugin Name: ArcSecs Scientific Physics Engine\\n' +\n  ' * Plugin URI: https://arcsecs.com/\\n' +\n  ' * Description: Scientific TDD Physics simulator for ArcSecs with local reviewer evidence workflows, contact page verification, and viewport scrollbar accessibility fixes for reachable simulator panels on shorter screens.\\n' +\n  ' * Version: 3.141.1\\n' +\n  ' * Author: ArcSecs\\n' +\n  ' * Autho",
+      "category": "historical fixed-version assertion"
+    },
+    {
+      "type": "test:pass",
+      "name": "Viewport Scrollbar Accessibility Fix panels exist",
+      "file": "tests/js/v5826-static-publication-review-checklist-page-draft-freeze.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "checklist controls and freeze status values exist",
+      "file": "tests/js/v5826-static-publication-review-checklist-page-draft-freeze.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "checklist rows include required review statuses",
+      "file": "tests/js/v5826-static-publication-review-checklist-page-draft-freeze.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "freeze bundle rows include required linked artifacts",
+      "file": "tests/js/v5826-static-publication-review-checklist-page-draft-freeze.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "freeze quality checks block missing content, unsafe wording, stale rows, and missing boundary or falsification language",
+      "file": "tests/js/v5826-static-publication-review-checklist-page-draft-freeze.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "export JSON contains static publication review checklist and page draft freeze bundle blocks",
+      "file": "tests/js/v5826-static-publication-review-checklist-page-draft-freeze.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "TypeScript contracts include static publication checklist and freeze bundle exports",
+      "file": "tests/js/v5826-static-publication-review-checklist-page-draft-freeze.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "copy boundary remains cautious and rejects proof or established-technology language",
+      "file": "tests/js/v5826-static-publication-review-checklist-page-draft-freeze.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/static-publication-review-checklist.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "docs and uai memory describe v5.8.36 static publication review checklist and page draft freeze bundle",
+      "file": "tests/js/v5826-static-publication-review-checklist-page-draft-freeze.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/static-publication-review-checklist.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "package identity is v5.8.36 for static publish handoff qa summary public page content checklist package",
+      "file": "tests/js/v5827-static-publish-handoff-qa-summary-public-page-content-checklist.test.js",
+      "error": "ERR_ASSERTION",
+      "message": "The input did not match the regular expression /Version:\\s*5\\.8\\.36/. Input:\n\n'<?php\\n' +\n  '/**\\n' +\n  ' * Plugin Name: ArcSecs Scientific Physics Engine\\n' +\n  ' * Plugin URI: https://arcsecs.com/\\n' +\n  ' * Description: Scientific TDD Physics simulator for ArcSecs with local reviewer evidence workflows, contact page verification, and viewport scrollbar accessibility fixes for reachable simulator panels on shorter screens.\\n' +\n  ' * Version: 3.141.1\\n' +\n  ' * Author: ArcSecs\\n' +\n  ' * Autho",
+      "category": "historical fixed-version assertion"
+    },
+    {
+      "type": "test:pass",
+      "name": "Static Publish Handoff QA Summary and Public Page Content Checklist panels exist",
+      "file": "tests/js/v5827-static-publish-handoff-qa-summary-public-page-content-checklist.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "QA controls and QA status values exist",
+      "file": "tests/js/v5827-static-publish-handoff-qa-summary-public-page-content-checklist.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "QA rows include freeze status route schema copy evidence source equation falsification boundary warning rejected phrase recommended fix and final QA status",
+      "file": "tests/js/v5827-static-publish-handoff-qa-summary-public-page-content-checklist.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "Public page content checklist rows include route metadata copy fields script sections captions alt text callouts schema links evidence and labels",
+      "file": "tests/js/v5827-static-publish-handoff-qa-summary-public-page-content-checklist.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "QA quality checks block missing required content blocked freeze states unsafe wording missing boundary/falsification and unresolved fixes",
+      "file": "tests/js/v5827-static-publish-handoff-qa-summary-public-page-content-checklist.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "export JSON contains static publish handoff QA summary and public page content checklist blocks",
+      "file": "tests/js/v5827-static-publish-handoff-qa-summary-public-page-content-checklist.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "TypeScript contracts include static publish QA and public page content checklist exports",
+      "file": "tests/js/v5827-static-publish-handoff-qa-summary-public-page-content-checklist.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "copy boundary remains cautious and rejects proof or established-technology language",
+      "file": "tests/js/v5827-static-publish-handoff-qa-summary-public-page-content-checklist.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/static-publish-handoff-qa-summary.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "docs and uai memory describe v5.8.36 static publish QA and content checklist",
+      "file": "tests/js/v5827-static-publish-handoff-qa-summary-public-page-content-checklist.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'docs/static-publish-handoff-qa-summary.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "tests/js/v5828-uai-memory-organization-completeness-check.test.js",
+      "file": "tests/js/v5828-uai-memory-organization-completeness-check.test.js",
+      "error": "ERR_TEST_FAILURE",
+      "message": "test failed",
+      "category": "historical test file missing named fixture",
+      "diagnostic": "Error: ENOENT: no such file or directory, open '.uai/exports/manifest.json'"
+    },
+    {
+      "type": "test:fail",
+      "name": "package identity is v5.8.36 for manual publishing runbook package",
+      "file": "tests/js/v5829-public-page-manual-publishing-runbook-post-deploy-verification.test.js",
+      "error": "ERR_ASSERTION",
+      "message": "The input did not match the regular expression /Version:\\s*5\\.8\\.36/. Input:\n\n'<?php\\n' +\n  '/**\\n' +\n  ' * Plugin Name: ArcSecs Scientific Physics Engine\\n' +\n  ' * Plugin URI: https://arcsecs.com/\\n' +\n  ' * Description: Scientific TDD Physics simulator for ArcSecs with local reviewer evidence workflows, contact page verification, and viewport scrollbar accessibility fixes for reachable simulator panels on shorter screens.\\n' +\n  ' * Version: 3.141.1\\n' +\n  ' * Author: ArcSecs\\n' +\n  ' * Autho",
+      "category": "historical fixed-version assertion"
+    },
+    {
+      "type": "test:pass",
+      "name": "manual publishing runbook and post-deploy panels exist",
+      "file": "tests/js/v5829-public-page-manual-publishing-runbook-post-deploy-verification.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "manual handoff status values and quality checks exist",
+      "file": "tests/js/v5829-public-page-manual-publishing-runbook-post-deploy-verification.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "runbook rows and post-deploy checklist confirmations include required fields",
+      "file": "tests/js/v5829-public-page-manual-publishing-runbook-post-deploy-verification.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "exports contain manual publishing and post-deploy blocks",
+      "file": "tests/js/v5829-public-page-manual-publishing-runbook-post-deploy-verification.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "copy boundary rejects proof and publishing automation claims",
+      "file": "tests/js/v5829-public-page-manual-publishing-runbook-post-deploy-verification.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'README.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:pass",
+      "name": "typescript contracts include manual runbook and post-deploy exports",
+      "file": "tests/js/v5829-public-page-manual-publishing-runbook-post-deploy-verification.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "package identity is v5.8.36 for manual publishing archive receipt package",
+      "file": "tests/js/v5830-manual-publishing-archive-receipt-human-review-signoff.test.js",
+      "error": "ERR_ASSERTION",
+      "message": "The input did not match the regular expression /Version:\\s*5\\.8\\.36/. Input:\n\n'<?php\\n' +\n  '/**\\n' +\n  ' * Plugin Name: ArcSecs Scientific Physics Engine\\n' +\n  ' * Plugin URI: https://arcsecs.com/\\n' +\n  ' * Description: Scientific TDD Physics simulator for ArcSecs with local reviewer evidence workflows, contact page verification, and viewport scrollbar accessibility fixes for reachable simulator panels on shorter screens.\\n' +\n  ' * Version: 3.141.1\\n' +\n  ' * Author: ArcSecs\\n' +\n  ' * Autho",
+      "category": "historical fixed-version assertion"
+    },
+    {
+      "type": "test:pass",
+      "name": "manual publishing archive receipt and human review sign-off panels exist",
+      "file": "tests/js/v5830-manual-publishing-archive-receipt-human-review-signoff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "archive receipt and sign-off status values exist",
+      "file": "tests/js/v5830-manual-publishing-archive-receipt-human-review-signoff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "archive receipt rows and human sign-off rows include required fields",
+      "file": "tests/js/v5830-manual-publishing-archive-receipt-human-review-signoff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "archive sign-off quality checks block unsafe or incomplete handoff",
+      "file": "tests/js/v5830-manual-publishing-archive-receipt-human-review-signoff.test.js"
+    },
+    {
+      "type": "test:pass",
+      "name": "exports contain archive receipt and human sign-off blocks",
+      "file": "tests/js/v5830-manual-publishing-archive-receipt-human-review-signoff.test.js"
+    },
+    {
+      "type": "test:fail",
+      "name": "copy boundary preserves cautious scientific wording",
+      "file": "tests/js/v5830-manual-publishing-archive-receipt-human-review-signoff.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open 'README.md'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "uai memory remains complete and current after v5.8.36",
+      "file": "tests/js/v5830-manual-publishing-archive-receipt-human-review-signoff.test.js",
+      "error": "ENOENT",
+      "message": "ENOENT: no such file or directory, open '.uai/short-term-memory.uai'",
+      "category": "missing historical documentation or private fixture"
+    },
+    {
+      "type": "test:fail",
+      "name": "tests/js/v5831-public-publishing-evidence-archive-index-reviewer-retrieval-notes.test.js",
+      "file": "tests/js/v5831-public-publishing-evidence-archive-index-reviewer-retrieval-notes.test.js",
+      "error": "ERR_TEST_FAILURE",
+      "message": "test failed",
+      "category": "historical test file missing named fixture",
+      "diagnostic": "Error: ENOENT: no such file or directory, open '.uai/exports/manifest.json'"
+    },
+    {
+      "type": "test:fail",
+      "name": "tests/js/v5832-michael-kappel-contact-page.test.js",
+      "file": "tests/js/v5832-michael-kappel-contact-page.test.js",
+      "error": "ERR_TEST_FAILURE",
+      "message": "test failed",
+      "category": "historical test file missing named fixture",
+      "diagnostic": "Error: ENOENT: no such file or directory, open '.uai/exports/manifest.json'"
+    },
+    {
+      "type": "test:fail",
+      "name": "tests/js/v5833-contact-page-live-polish-footer-link-seo-aeo.test.js",
+      "file": "tests/js/v5833-contact-page-live-polish-footer-link-seo-aeo.test.js",
+      "error": "ERR_TEST_FAILURE",
+      "message": "test failed",
+      "category": "historical test file missing named fixture",
+      "diagnostic": "Error: ENOENT: no such file or directory, open '.uai/exports/manifest.json'"
+    },
+    {
+      "type": "test:fail",
+      "name": "tests/js/v5834-contact-page-deployment-qa-public-trust-polish.test.js",
+      "file": "tests/js/v5834-contact-page-deployment-qa-public-trust-polish.test.js",
+      "error": "ERR_TEST_FAILURE",
+      "message": "test failed",
+      "category": "historical test file missing named fixture",
+      "diagnostic": "Error: ENOENT: no such file or directory, open '.uai/exports/manifest.json'"
+    },
+    {
+      "type": "test:fail",
+      "name": "tests/js/v5835-contact-page-live-verification-theme-footer-handoff.test.js",
+      "file": "tests/js/v5835-contact-page-live-verification-theme-footer-handoff.test.js",
+      "error": "ERR_TEST_FAILURE",
+      "message": "test failed",
+      "category": "historical test file missing named fixture",
+      "diagnostic": "Error: ENOENT: no such file or directory, open '.uai/exports/manifest.json'"
+    },
+    {
+      "type": "test:fail",
+      "name": "tests/js/v5836-viewport-scrollbar-accessibility-fix.test.js",
+      "file": "tests/js/v5836-viewport-scrollbar-accessibility-fix.test.js",
+      "error": "ERR_TEST_FAILURE",
+      "message": "test failed",
+      "category": "historical test file missing named fixture",
+      "diagnostic": "Error: ENOENT: no such file or directory, open '.uai/exports/manifest.json'"
+    }
+  ]
+}

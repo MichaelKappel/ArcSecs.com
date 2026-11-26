@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('ARCSECS_VERSION', '3.140.0');
+define('ARCSECS_VERSION', '3.142.0');
 define('ARCSECS_DIR', get_template_directory());
 define('ARCSECS_URI', get_template_directory_uri());
 define('ARCSECS_CONTENT_MODIFIED_DATE', '2026-11-25');
@@ -205,13 +205,14 @@ function arcsecs_has_featured_image($post_id = null) {
 require ARCSECS_DIR . '/inc/site-repair.php';
 require ARCSECS_DIR . '/inc/publications.php';
 require ARCSECS_DIR . '/inc/ai-corpus.php';
+require ARCSECS_DIR . '/inc/research-library-edition.php';
 
 
 /**
  * Integrated AI/crawler access layer from the former ArcSecs V5 AI Access child theme.
  * This is now part of the single ArcSecs V5 theme package so only one theme needs to be installed.
  */
-define( 'ARCSECS_AI_ACCESS_THEME_VERSION', '3.140.0' );
+define( 'ARCSECS_AI_ACCESS_THEME_VERSION', '3.142.0' );
 define( 'ARCSECS_AI_ACCESS_DEMO_PATH', '/arcsecs-physics-engine-demo/' );
 define( 'ARCSECS_DARK_MATTER_DRIVE_SIMULATOR_PATH', '/dark-matter-drive-simulator/' );
 define( 'ARCSECS_SPACE_TRAVEL_SIMULATION_PATH', '/space-travel-simulation/' );
@@ -385,6 +386,11 @@ function arcsecs_physics_engine_menu_links() {
             'label' => __( 'Ship Travel', 'arcsecs' ),
             'class' => 'arcsecs-feature-menu-item arcsecs-feature-menu-item--ship-travel',
         ),
+        array(
+            'path'  => 'cosmic-evolution-simulator/',
+            'label' => __( 'Cosmic Evolution', 'arcsecs' ),
+            'class' => 'arcsecs-feature-menu-item arcsecs-feature-menu-item--cosmic-evolution',
+        ),
     );
 }
 
@@ -479,6 +485,8 @@ function arcsecs_group_primary_menu_demo_links( $items ) {
         'Dark Matter Drive Simulator',
         'Ship Travel',
         'Space Travel',
+        'Cosmic Evolution',
+        'Cosmic Evolution Simulator',
     );
 
     $demo_paths = array(
@@ -486,6 +494,7 @@ function arcsecs_group_primary_menu_demo_links( $items ) {
         'dark-matter-drive-simulator/',
         'space-travel-simulation/',
         'ship-travel/',
+        'cosmic-evolution-simulator/',
     );
 
     $items = (string) preg_replace_callback(
@@ -966,9 +975,9 @@ function arcsecs_get_public_route_seo_entries() {
         array(
             'path'        => 'research-library/',
             'owner'       => 'Theme',
-            'title'       => 'ArcSecs Research Library | Evidence, Sources, and Scientific Links',
+            'title'       => 'ArcSecs Scientific Research Library | Reports, Foundations and Evidence',
             'name'        => 'ArcSecs Research Library',
-            'description' => 'Browse ArcSecs source links grouped by Hubble tension, JWST early galaxies, SPARC rotation curves, El Gordo, Lithium-7, Proca photon bounds, tired-light constraints, and propulsion analogies.',
+            'description' => 'Browse all 41 historical research reports, twelve stipulated foundations, Scientific Reviews 2–6, reproducibility resources and external observational sources. Free reading and source downloads.',
             'image'       => arcsecs_home_social_image_url(),
             'priority'    => '0.94',
             'changefreq'  => 'weekly',
@@ -1031,6 +1040,17 @@ function arcsecs_get_public_route_seo_entries() {
             'keywords'    => 'ArcSecs space travel simulation, dense substrate, void corridor, torsion fields, teleparallel torsion, Proca substrate, Mass-Polariton transfer, tired light, graviball substrate, EIT capture, Dark-State Polariton, ramscoop vortex, route planning, autopilot, mission objectives, telemetry export contract, dense region void corridor tradeoff, falsification path',
         ),
 
+        array(
+            'path'        => 'cosmic-evolution-simulator/',
+            'owner'       => 'Plugin',
+            'title'       => 'Cosmic Evolution & Greater Cosmos | ArcSecs',
+            'name'        => 'Cosmic Evolution Simulator',
+            'description' => 'Compare conventional hot Big Bang cosmology with conditional physical recession, bubble fields, photon histories, physical clock calibration and receiver experiments. Numerical experiments, not observations.',
+            'image'       => arcsecs_home_social_image_url(),
+            'priority'    => '0.94',
+            'changefreq'  => 'weekly',
+            'keywords'    => 'cosmic evolution, Big Bang reference, bubble domains, physical recession, scientific simulation, photon transport, physical clocks',
+        ),
         array(
             'path'        => 'standard-cosmology-vs-arcsecs/',
             'owner'       => 'Theme',
@@ -2056,6 +2076,7 @@ add_filter( 'wp_headers', 'arcsecs_ai_access_headers', 50 );
  * @return void
  */
 function arcsecs_ai_access_rewrite_rules() {
+    add_rewrite_rule( '^research-library/(reports/r[0-9]{2}|reviews/review-[2-6]|foundations|evidence-guide|reproducibility)/?$', 'index.php?arcsecs_library_detail=$matches[1]', 'top' );
     add_rewrite_rule( '^read-book/?$', 'index.php?arcsecs_reader=book', 'top' );
     add_rewrite_rule( '^read-scientific-paper/?$', 'index.php?arcsecs_reader=paper', 'top' );
     add_rewrite_rule( '^ai-corpus/?$', 'index.php?arcsecs_corpus=1', 'top' );
@@ -2079,6 +2100,7 @@ add_action( 'init', 'arcsecs_ai_access_rewrite_rules' );
  * @return array<int,string> Updated query vars.
  */
 function arcsecs_ai_access_query_vars( $vars ) {
+    $vars[] = 'arcsecs_library_detail';
     $vars[] = 'arcsecs_reader';
     $vars[] = 'arcsecs_publications';
     $vars[] = 'arcsecs_corpus';
@@ -2173,6 +2195,9 @@ function arcsecs_ai_access_output_llms_txt() {
 
     echo "# ArcSecs.com\n\n";
     echo "ArcSecs.com presents speculative physics visualization, relational theatrical physics, tired-light scenarios, massive-photon concepts, and a Dark Matter Drive Ramjet simulation sandbox.\n\n";
+    echo "Scientific Research Library: " . esc_url_raw( arcsecs_ai_access_url( 'research-library/' ) ) . " — all 41 historical reports, five manuscript editions, twelve stipulated foundations and evidence resources.\n";
+    echo "Scientific library JSON catalog: " . esc_url_raw( arcsecs_library_asset_url( 'catalog.json' ) ) . "\n";
+    foreach ( arcsecs_library_seo_entries() as $entry ) { echo $entry['name'] . ": " . esc_url_raw( arcsecs_ai_access_url( $entry['path'] ) ) . "\n"; }
     echo "Research hub / Start Here: " . esc_url_raw( arcsecs_ai_access_url( 'arcsecs-research-hub/' ) ) . "\n";
     echo "Publications: " . esc_url_raw( arcsecs_ai_access_url( 'publications/' ) ) . " — free book and scientific paper, optional purchase.\n";
     echo "Read the entire book: " . esc_url_raw( arcsecs_ai_access_url( 'read-book/' ) ) . "\n";
@@ -2290,7 +2315,7 @@ function arcsecs_ai_access_output_sitemap_xml() {
     header( 'Content-Type: application/xml; charset=utf-8' );
     if ( ! get_option( 'blog_public' ) ) { header( 'X-Robots-Tag: noindex, nofollow' ); }
 
-    $urls = arcsecs_get_public_route_seo_entries();
+    $urls = array_merge( arcsecs_get_public_route_seo_entries(), arcsecs_library_seo_entries() );
 
     echo '<?xml version="1.0" encoding="UTF-8"?>' . "
 ";
@@ -2335,6 +2360,8 @@ function arcsecs_ai_access_output_sitemap_xml() {
  * @return void
  */
 function arcsecs_ai_access_template_redirect() {
+    $library_request = arcsecs_library_request();
+    if ( null !== $library_request ) { arcsecs_library_render( $library_request ); }
     if ( arcsecs_is_corpus_page() ) { arcsecs_render_corpus_page(); }
     if ( $reader = arcsecs_reader_key() ) { arcsecs_render_reader( $reader ); }
     if ( arcsecs_is_publications_page() ) {

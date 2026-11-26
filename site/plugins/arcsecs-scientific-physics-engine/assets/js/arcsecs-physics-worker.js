@@ -1,7 +1,8 @@
 (function () {
     "use strict";
 
-    const ENGINE_VERSION = "5.7.31";
+    const ENGINE_VERSION = "5.7.31"; // historical model identifier
+    const IMPLEMENTATION_VERSION = "3.142.0";
     const VALUES_PER_TICK = 18;
     const SCENARIOS = [
         "control",
@@ -40,6 +41,7 @@
     }
 
     function numberOrDefault(value, fallback) {
+        if (typeof value !== "number" && (typeof value !== "string" || value.trim() === "")) return fallback;
         const numberValue = Number(value);
         return Number.isFinite(numberValue) ? numberValue : fallback;
     }
@@ -132,6 +134,7 @@
     }
 
     function normalizeConfig(input) {
+        if (!input || typeof input !== "object" || Array.isArray(input)) throw new TypeError("Configuration must be an object.");
         const scenario = normalizeScenario(input.scenario);
         const config = {
             scenario,
@@ -596,6 +599,18 @@
         return tests;
     }
 
+    function requireFiniteTelemetry(value, path) {
+        if (typeof value === "number" && !Number.isFinite(value)) {
+            throw new RangeError("Non-finite simulation telemetry at " + path + ". Reduce parameter magnitude and rerun.");
+        }
+        if (Array.isArray(value) || ArrayBuffer.isView(value)) {
+            for (let i = 0; i < value.length; i++) requireFiniteTelemetry(value[i], path + "[" + i + "]");
+        } else if (value && typeof value === "object") {
+            for (const key of Object.keys(value)) requireFiniteTelemetry(value[key], path + "." + key);
+        }
+        return value;
+    }
+
     function runSimulation(input) {
         const config = normalizeConfig(input || {});
         const acceptedSteps = config.acceptedSteps;
@@ -793,6 +808,10 @@
             leibnizVoidNodeCount: config.scenario === "control" && config.acceptedSteps === 0 ? 0 : finalEntities,
             leibnizVoidActive: false
         };
+        // This is a numerical bookkeeping proxy, not independently measured energy conservation.
+        metrics.ledgerStatus = metrics.energyLedgerClosureProxy >= 0.94 ? "pass" : metrics.energyLedgerClosureProxy >= 0.82 ? "review" : "fail";
+        requireFiniteTelemetry(buffer, "buffer");
+        requireFiniteTelemetry(metrics, "metrics");
         const mechanicalLoad = clamp(metrics.baselineDelta * 0.012 + maxError * 35 + (config.scenario === "sunSimulation" ? 0.004 : 0) + (config.scenario === "darkMatterRamjet" ? (1 - metrics.ramjetMissionReadiness) * 0.035 : 0), 0, 0.22);
         const localOscillatorRatio = clamp(1 - mechanicalLoad, 0.72, 1);
         const cosmicClock = {
@@ -813,6 +832,7 @@
         const report = new ReportBuilder().build(config, metrics, tests);
         return {
             engineVersion: ENGINE_VERSION,
+            implementationVersion: IMPLEMENTATION_VERSION,
             runTimestampUtc: new Date().toISOString(),
             valuesPerTick: VALUES_PER_TICK,
             acceptedSteps,
@@ -973,7 +993,7 @@
                 { name: "photon ledger", expected: "0 <= energy <= 1", actual: metrics.finalEnergyFraction, passed: photonLedgerPassed },
                 { name: "speculative label", expected: "visible disclaimer", actual: "Speculative research visualization", passed: true }
             ],
-            caution: "Validation scores are internal consistency checks for a speculative research visualization, not proof of physical reality."
+            caution: "Validation scores are internal consistency checks for a speculative research visualization, not proof of physical reality. Observational fit is a heuristic score, not a fit to measured data. The tired-light ledger is constructed from the same energy-loss term, not an independent conservation test."
         };
     }
 
@@ -1072,21 +1092,23 @@
                 validationScore: result.validationLab.validationScore,
                 observationalFitScore: result.validationLab.observationalFitScore,
                 baselineDelta: result.metrics.baselineDelta || 0,
-                warnings: result.metrics.ramjetWarnings || result.metrics.numericalDriftWarning || "none",
+                warnings: [result.metrics.ramjetWarnings, result.metrics.numericalDriftWarning].filter(w => w && w !== "none").join(", ") || "none",
                 testsPassed,
-                testsTotal: result.tests.length
+                testsTotal: result.tests.length,
+                qualityGateStatus: result.qualityGateReport.status
             };
         });
         return {
             engineVersion: ENGINE_VERSION,
+            implementationVersion: IMPLEMENTATION_VERSION,
             generatedUtc: new Date().toISOString(),
             rowCount: rows.length,
             rows,
             summary: {
-                qualityGateStatus: "pass",
+                qualityGateStatus: rows.some(row => row.qualityGateStatus === "fail" || row.ledger === "fail" || row.testsPassed !== row.testsTotal) ? "fail" : rows.some(row => row.qualityGateStatus !== "pass" || row.ledger !== "pass" || row.warnings !== "none") ? "warn" : "pass",
                 averageValidationScore: rows.reduce((sum, row) => sum + row.validationScore, 0) / Math.max(1, rows.length),
                 averageObservationalFitScore: rows.reduce((sum, row) => sum + row.observationalFitScore, 0) / Math.max(1, rows.length),
-                stressedScenarios: rows.filter((row) => row.ledger !== "pass" || row.warnings !== "none").map((row) => row.scenario),
+                stressedScenarios: rows.filter((row) => row.ledger !== "pass" || row.warnings !== "none" || row.testsPassed !== row.testsTotal || row.qualityGateStatus !== "pass").map((row) => row.scenario),
                 recommendedPriority: rows.slice().sort((a, b) => (a.validationScore + a.observationalFitScore) - (b.validationScore + b.observationalFitScore))[0].scenario
             },
             experimentQueue: buildExperimentQueue(config),
@@ -1122,9 +1144,9 @@
             const result = runSimulation(stageConfig);
             const testsPassed = result.tests.filter((item) => item.passed).length;
             const primaryValue = Number(result.metrics[stage.primaryMetric]);
-            const warnings = result.metrics.ramjetWarnings || result.metrics.numericalDriftWarning || "none";
+            const warnings = [result.metrics.ramjetWarnings, result.metrics.numericalDriftWarning].filter(w => w && w !== "none").join(", ") || "none";
             const validationScore = result.validationLab.validationScore;
-            const status = validationScore >= 0.75 && Number.isFinite(primaryValue) && countWarnings(warnings) <= 2 ? "pass" : "review";
+            const status = testsPassed === result.tests.length && result.qualityGateReport.status === "pass" && result.metrics.ledgerStatus === "pass" && validationScore >= 0.75 && Number.isFinite(primaryValue) && countWarnings(warnings) <= 2 ? "pass" : "review";
             return {
                 order: stage.order,
                 scenario: stage.scenario,
@@ -1162,6 +1184,7 @@
         const weakest = rows.slice().sort((a, b) => a.validationScore - b.validationScore)[0] || rows[0];
         return {
             engineVersion: ENGINE_VERSION,
+            implementationVersion: IMPLEMENTATION_VERSION,
             generatedUtc: new Date().toISOString(),
             rowCount: rows.length,
             rows,
@@ -1430,16 +1453,16 @@
         const runId = message.runId || 0;
         try {
             if (message.type === "benchmark") {
-                const benchmark = buildBenchmarkSuite(normalizeConfig(message.config || {}));
+                const benchmark = requireFiniteTelemetry(buildBenchmarkSuite(normalizeConfig(message.config || {})), "benchmark");
                 emitWorkerMessage({ type: "benchmark", runId, benchmark });
                 return;
             }
             if (message.type === "grandTour") {
-                const grandTour = buildGrandExperimentSuite(normalizeConfig(message.config || {}));
+                const grandTour = requireFiniteTelemetry(buildGrandExperimentSuite(normalizeConfig(message.config || {})), "grandTour");
                 emitWorkerMessage({ type: "grandTour", runId, grandTour });
                 return;
             }
-            const result = runSimulation(message.config || {});
+            const result = requireFiniteTelemetry(runSimulation(message.config || {}), "result");
             emitWorkerMessage({ type: "progress", runId, progress: 1, status: "Simulation complete" });
             emitWorkerMessage({ type: "result", runId, result });
         } catch (error) {

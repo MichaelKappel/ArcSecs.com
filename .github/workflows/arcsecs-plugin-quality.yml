@@ -1,0 +1,61 @@
+name: ArcSecs plugin quality
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'site/plugins/arcsecs-scientific-physics-engine/**'
+      - '.github/workflows/arcsecs-plugin-quality.yml'
+      - 'site/theme/arcsecs-v5/**'
+      - 'tools/quantum_receiver_v1.py'
+      - 'tools/entrained_outflow_v1.py'
+  push:
+    branches: [main]
+    paths:
+      - 'site/plugins/arcsecs-scientific-physics-engine/**'
+      - '.github/workflows/arcsecs-plugin-quality.yml'
+      - 'site/theme/arcsecs-v5/**'
+      - 'tools/quantum_receiver_v1.py'
+      - 'tools/entrained_outflow_v1.py'
+permissions:
+  contents: read
+jobs:
+  quality:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: site/plugins/arcsecs-scientific-physics-engine
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          coverage: none
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned TypeScript
+        run: npm install --ignore-scripts --no-audit --no-fund
+      - name: Install browser test dependencies
+        run: |
+          python -m pip install -r tests/browser/requirements.txt
+          python -m playwright install --with-deps chromium
+      - name: Regression gate (disclosed legacy debt)
+        run: npm test
+      - name: Rendered demo and worker browser tests
+        run: npm run test:e2e
+      - name: Theme syntax and public library integration
+        working-directory: site/theme/arcsecs-v5
+        run: |
+          find . -name '*.php' -print0 | xargs -0 -n1 php -l
+          for test in publications-catalog-test.php open-knowledge-reader-test.php ai-corpus-test.php research-library-edition-test.php cosmic-release-integration-test.php; do php "tests/php/$test" || exit 1; done
+      - name: Publish automated quality evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: arcsecs-plugin-quality-results
+          path: site/plugins/arcsecs-scientific-physics-engine/test-results/
+          if-no-files-found: warn

@@ -2,8 +2,8 @@
 /**
  * Plugin Name: ArcSecs Scientific Physics Engine
  * Plugin URI: https://arcsecs.com/
- * Description: Scientific TDD Physics simulator for ArcSecs with local reviewer evidence workflows, contact page verification, and viewport scrollbar accessibility fixes for reachable simulator panels on shorter screens.
- * Version: 3.135.0
+ * Description: ArcSecs scientific and exploratory simulation platform with four demos, reproducible experiment laboratories, numerical controls and explicitly classified evidence.
+ * Version: 3.142.0
  * Author: ArcSecs
  * Author URI: https://arcsecs.com/
  * License: GPL-2.0-or-later
@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('ARCSECS_PHYSICS_ENGINE_VERSION', '3.135.0');
+define('ARCSECS_PHYSICS_ENGINE_VERSION', '3.142.0');
 define('ARCSECS_PHYSICS_ENGINE_FILE', __FILE__);
 define('ARCSECS_PHYSICS_ENGINE_PATH', plugin_dir_path(__FILE__));
 define('ARCSECS_PHYSICS_ENGINE_URL', plugin_dir_url(__FILE__));

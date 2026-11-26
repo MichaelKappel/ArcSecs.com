@@ -1,0 +1,66 @@
+{
+  "warnings": [
+    {
+      "slug": "reports/r01",
+      "warning_lines": 43,
+      "math_fallbacks": 7
+    },
+    {
+      "slug": "reports/r02",
+      "warning_lines": 40,
+      "math_fallbacks": 7
+    },
+    {
+      "slug": "reports/r04",
+      "warning_lines": 57,
+      "math_fallbacks": 10
+    },
+    {
+      "slug": "reports/r05",
+      "warning_lines": 51,
+      "math_fallbacks": 8
+    },
+    {
+      "slug": "reports/r06",
+      "warning_lines": 14,
+      "math_fallbacks": 1
+    },
+    {
+      "slug": "reports/r22",
+      "warning_lines": 32,
+      "math_fallbacks": 3
+    },
+    {
+      "slug": "reports/r30",
+      "warning_lines": 15,
+      "math_fallbacks": 3
+    },
+    {
+      "slug": "reports/r32",
+      "warning_lines": 15,
+      "math_fallbacks": 3
+    },
+    {
+      "slug": "reports/r35",
+      "warning_lines": 15,
+      "math_fallbacks": 3
+    },
+    {
+      "slug": "reports/r36",
+      "warning_lines": 25,
+      "math_fallbacks": 5
+    }
+  ],
+  "rendering": {
+    "source_links": 154,
+    "figure_placements": 1019,
+    "external_links": 2700,
+    "html_pages": 47,
+    "historical_figures_resolved_from_shared_archive": 14,
+    "unresolved_links": 1,
+    "unique_mirrored_figures": 676,
+    "mathml_equations": 3229,
+    "math_fallbacks": 50,
+    "warning_pages": 10
+  }
+}

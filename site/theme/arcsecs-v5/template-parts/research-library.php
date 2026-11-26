@@ -71,11 +71,11 @@ $library_paths = array(
             <div class="research-library-hero__copy">
                 <div class="eyebrow">Evidence &amp; Sources</div>
                 <h1 id="research-library-title">ArcSecs Research Library</h1>
-                <p class="research-library-hero__subtitle">A public source map for the observations, constraints, criticisms, speculative models, and engineering analogies behind ArcSecs.</p>
+                <p class="research-library-hero__subtitle">An open scientific library of full-depth reports, manuscript editions, foundations, reproducibility evidence and external scientific sources.</p>
                 <p>This page is the credibility layer. It does not claim the ArcSecs framework is proven. It shows what each source supports, what each source does <em>not</em> prove, and where the simulator should turn a claim into a visible test.</p>
                 <p class="research-library-disclaimer"><strong>Scientific boundary:</strong> Mainstream observational sources and model constraints remain distinct from ArcSecs simulation prompts and alternative/speculative theory links.</p>
                 <div class="hero-actions research-library-hero__actions">
-                    <a class="arcsecs-button" href="#evidence-sources-research-library">Open Research Library</a>
+                    <a class="arcsecs-button" href="#scientific-archive">Read the scientific archive</a>
                     <a class="arcsecs-button ghost" href="#evidence-sources-research-library">Browse Sources</a>
                     <a class="arcsecs-button ghost" href="<?php echo esc_url( $comparison_url ); ?>">Compare the Physics</a>
                     <a class="arcsecs-button ghost" href="<?php echo esc_url( $anomalies_url ); ?>">Track Anomalies</a>
@@ -94,7 +94,7 @@ $library_paths = array(
 
     <nav class="research-library-mini-nav" aria-label="Research library sections">
         <div class="wrap research-library-mini-nav__inner">
-            <a href="#source-map">Source map</a>
+            <a href="#scientific-archive">Research reports</a><a href="#source-map">Source map</a>
             <a href="#source-types">Source types</a>
             <a href="#evidence-sources-research-library">Browse sources</a>
             <a href="<?php echo esc_url( $comparison_url ); ?>">Comparison</a>
@@ -103,6 +103,8 @@ $library_paths = array(
             <a href="<?php echo esc_url( $multi_messenger_url ); ?>">Timing</a>
         </div>
     </nav>
+
+    <?php get_template_part( 'template-parts/research-library-catalog' ); ?>
 
     <section id="source-map" class="research-library-section wrap" aria-labelledby="source-map-title">
         <div class="research-library-section__heading">

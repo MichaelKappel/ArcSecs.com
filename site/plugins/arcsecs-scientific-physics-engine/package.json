@@ -1,17 +1,22 @@
 {
   "name": "arcsecs-scientific-physics-engine",
-  "version": "5.8.36",
+  "version": "3.142.0",
   "private": true,
-  "description": "Automated tests and strict TypeScript contracts for the ArcSecs v5.8.36 Viewport Scrollbar Accessibility Fix package.",
+  "description": "ArcSecs Scientific Alignment and Cosmic Evolution Experiment Laboratory",
   "scripts": {
     "build": "tsc --noEmit --project tsconfig.json",
     "lint": "node --test tests/js/source-quality.test.js",
-    "test": "npm run build && npm run lint && npm run test:js && npm run test:php",
+    "test": "node tests/quality/run-quality.cjs",
     "test:js": "node --test tests/js/*.test.js",
-    "test:e2e": "node --test tests/e2e/*.test.js",
-    "test:php": "for file in tests/php/*-test.php; do php $file; done && php -l arcsecs-scientific-physics-engine.php && find includes -name '*.php' -print0 | xargs -0 -n1 php -l >/dev/null"
+    "test:e2e": "python tests/browser/round2-browser.py && python tests/browser/round4-cosmic-browser.py",
+    "test:php": "node tests/quality/run-php.cjs",
+    "test:round1": "node --test tests/js/round1-runtime.test.js && php tests/php/round1-policy-test.php",
+    "test:legacy": "node --test tests/js/v*.test.js",
+    "test:strict": "npm run build && npm run test:js && npm run test:php",
+    "test:coverage": "node --experimental-test-coverage --test tests/js/round1-runtime.test.js tests/js/round2-*.test.js",
+    "test:all": "npm test && npm run test:e2e"
   },
   "devDependencies": {
-    "typescript": "^5.7.3"
+    "typescript": "5.8.3"
   }
 }

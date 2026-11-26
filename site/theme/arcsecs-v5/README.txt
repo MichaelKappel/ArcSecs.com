@@ -1,4 +1,4 @@
-ArcSecs V5 3.140.0 — Open Knowledge reading editions
+ArcSecs V5 3.141.0 — Open Knowledge reading editions
 Full HTML reading editions at /read-book/ and /read-scientific-paper/, source Markdown, MathML, scoped CC0 charter and machine-readable manifest. /publications/ route, book cover, Amazon purchase links, bundled free PDF/EPUB/paper and optional URL overrides, scholarly metadata and AI discovery links. See docs/publications-install.md.
 
 ArcSecs V5
@@ -233,3 +233,8 @@ Added an observation-first review mode to the Cosmic Anomalies Tracker. The togg
 3.139.0: Adds the investigator-supplied Zenodo record link, local BibTeX/RIS citations and archive discovery metadata. DOI and registered metadata are not independently verified. No scientific content changes.
 
 3.140.0: AI Corpus v1.0.0 landing page, verified local ZIP mirror, dataset inventory and Schema.org JSON-LD, hosted JSONL links, crawler discovery and Tools > ArcSecs Discovery diagnostics. Existing publications and simulation code preserved. No live crawler, model training, or hosted metadata verification claimed.
+
+3.141.0: Scientific Research Library Edition. Full-text historical reports R01–R41, Scientific Reviews 2–5, latest Review 6.0 entry, authoritative twelve foundations, evidence guide and archived reproducibility resources; searchable catalog, fixed routes, source checksums, figures, sitemap and discovery metadata. See release documentation for rendering limitations and testing scope.
+
+
+3.142.0 release integration: Cosmic Evolution simulator navigation, crawler discovery and SEO catalog entry. Research library source generation remains v3.141.0. Install the corresponding physics plugin.

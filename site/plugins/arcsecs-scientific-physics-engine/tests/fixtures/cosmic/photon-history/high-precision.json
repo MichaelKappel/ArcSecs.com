@@ -1,0 +1,112 @@
+[
+  {
+    "parameters": {
+      "gapFraction": 1e-16,
+      "lossFraction": 0.5,
+      "bathGap": 0,
+      "bathSpeed": 1.0,
+      "angleArcsec": 1
+    },
+    "allowed": false,
+    "angleDegrees": null
+  },
+  {
+    "parameters": {
+      "gapFraction": 1e-16,
+      "lossFraction": 0.5,
+      "bathGap": 0,
+      "bathSpeed": 0.9999999999999999,
+      "angleArcsec": 1
+    },
+    "allowed": true,
+    "angleDegrees": 6.037091348628667e-07
+  },
+  {
+    "parameters": {
+      "gapFraction": 1e-08,
+      "lossFraction": 0.5,
+      "bathGap": 0,
+      "bathSpeed": 1.0,
+      "angleArcsec": 1
+    },
+    "allowed": false,
+    "angleDegrees": null
+  },
+  {
+    "parameters": {
+      "gapFraction": 1e-08,
+      "lossFraction": 0.5,
+      "bathGap": 0,
+      "bathSpeed": 0.9999999999999999,
+      "angleArcsec": 1
+    },
+    "allowed": true,
+    "angleDegrees": 1.9022114634208378e-07
+  },
+  {
+    "parameters": {
+      "gapFraction": 1e-08,
+      "lossFraction": 0.5,
+      "bathGap": 0,
+      "bathSpeed": 0.99999999999,
+      "angleArcsec": 1
+    },
+    "allowed": true,
+    "angleDegrees": 0.00018118426514520617
+  },
+  {
+    "parameters": {
+      "gapFraction": 0.0001,
+      "lossFraction": 0.5,
+      "bathGap": 0,
+      "bathSpeed": 0.999999985,
+      "angleArcsec": 1
+    },
+    "allowed": true,
+    "angleDegrees": 0.0040514235278185555
+  },
+  {
+    "parameters": {
+      "gapFraction": 0.0001,
+      "lossFraction": 0.5,
+      "bathGap": 0,
+      "bathSpeed": 0.99999998,
+      "angleArcsec": 1
+    },
+    "allowed": true,
+    "angleDegrees": 0.0057295781297290755
+  },
+  {
+    "parameters": {
+      "gapFraction": 0.01,
+      "lossFraction": 0.5,
+      "bathGap": 0.1,
+      "bathSpeed": 0.9,
+      "angleArcsec": 1
+    },
+    "allowed": true,
+    "angleDegrees": 17.495197960341276
+  },
+  {
+    "parameters": {
+      "gapFraction": 0.01,
+      "lossFraction": 0.5,
+      "bathGap": 0.3,
+      "bathSpeed": 0.8,
+      "angleArcsec": 1
+    },
+    "allowed": false,
+    "angleDegrees": null
+  },
+  {
+    "parameters": {
+      "gapFraction": 0.1,
+      "lossFraction": 0.5,
+      "bathGap": 0.3,
+      "bathSpeed": 0.001,
+      "angleArcsec": 1
+    },
+    "allowed": false,
+    "angleDegrees": null
+  }
+]

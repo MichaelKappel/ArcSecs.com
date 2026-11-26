@@ -1,0 +1,317 @@
+{
+  "sources": {
+    "book/book.md": "2a741cc5330c2d0be75a47e547b2fc601c81f80ca63d5006080ab5555eb9df05",
+    "tools/bubble_force_toy.py": "4c72dbcfff71b485886356a5f21413a5826b45eafa37ba2a7dcc223ce6898335",
+    "tools/external_coupling.py": "a495b1a9ecdea09d59d4a371123cfad128e07cc432e95a23d5e0ac448923c304",
+    "tools/unified_reference.py": "a301c76511f482d8fd73a9e404cdf41bdb8879939f6069a09f02735bd69418b1"
+  },
+  "wall": [
+    {
+      "radius": 0.1,
+      "tension": 0,
+      "pressure": 0,
+      "force": 0.0,
+      "potential": 0.0
+    },
+    {
+      "radius": 0.1,
+      "tension": 0.8,
+      "pressure": 1,
+      "force": -1.884955592153876,
+      "potential": 0.096342174710087
+    },
+    {
+      "radius": 0.1,
+      "tension": 0.5,
+      "pressure": -0.1,
+      "force": -1.2692034320502765,
+      "potential": 0.06325073209227451
+    },
+    {
+      "radius": 0.1,
+      "tension": 1,
+      "pressure": 0,
+      "force": -2.5132741228718345,
+      "potential": 0.12566370614359174
+    },
+    {
+      "radius": 1,
+      "tension": 0,
+      "pressure": 0,
+      "force": 0.0,
+      "potential": 0.0
+    },
+    {
+      "radius": 1,
+      "tension": 0.8,
+      "pressure": 1,
+      "force": -7.5398223686155035,
+      "potential": 5.8643062867009474
+    },
+    {
+      "radius": 1,
+      "tension": 0.5,
+      "pressure": -0.1,
+      "force": -13.82300767579509,
+      "potential": 6.702064327658225
+    },
+    {
+      "radius": 1,
+      "tension": 1,
+      "pressure": 0,
+      "force": -25.132741228718345,
+      "potential": 12.566370614359172
+    },
+    {
+      "radius": 1.6,
+      "tension": 0,
+      "pressure": 0,
+      "force": 0.0,
+      "potential": 0.0
+    },
+    {
+      "radius": 1.6,
+      "tension": 0.8,
+      "pressure": 1,
+      "force": 0.0,
+      "potential": 8.578642339402531
+    },
+    {
+      "radius": 1.6,
+      "tension": 0.5,
+      "pressure": -0.1,
+      "force": -23.323183860250623,
+      "potential": 17.80068285426025
+    },
+    {
+      "radius": 1.6,
+      "tension": 1,
+      "pressure": 0,
+      "force": -40.21238596594935,
+      "potential": 32.169908772759484
+    },
+    {
+      "radius": 2,
+      "tension": 0,
+      "pressure": 0,
+      "force": 0.0,
+      "potential": 0.0
+    },
+    {
+      "radius": 2,
+      "tension": 0.8,
+      "pressure": 1,
+      "force": 10.053096491487338,
+      "potential": 6.702064327658228
+    },
+    {
+      "radius": 2,
+      "tension": 0.5,
+      "pressure": -0.1,
+      "force": -30.159289474462014,
+      "potential": 28.48377339254746
+    },
+    {
+      "radius": 2,
+      "tension": 1,
+      "pressure": 0,
+      "force": -50.26548245743669,
+      "potential": 50.26548245743669
+    },
+    {
+      "radius": 4,
+      "tension": 0,
+      "pressure": 0,
+      "force": 0.0,
+      "potential": 0.0
+    },
+    {
+      "radius": 4,
+      "tension": 0.8,
+      "pressure": 1,
+      "force": 120.63715789784806,
+      "potential": -107.23302924253159
+    },
+    {
+      "radius": 4,
+      "tension": 0.5,
+      "pressure": -0.1,
+      "force": -70.37167544041137,
+      "potential": 127.33922222550628
+    },
+    {
+      "radius": 4,
+      "tension": 1,
+      "pressure": 0,
+      "force": -100.53096491487338,
+      "potential": 201.06192982974676
+    },
+    {
+      "radius": 8,
+      "tension": 0,
+      "pressure": 0,
+      "force": 0.0,
+      "potential": 0.0
+    },
+    {
+      "radius": 8,
+      "tension": 0.8,
+      "pressure": 1,
+      "force": 643.3981754551896,
+      "potential": -1501.2624093954423
+    },
+    {
+      "radius": 8,
+      "tension": 0.5,
+      "pressure": -0.1,
+      "force": -180.95573684677208,
+      "potential": 616.5899181445567
+    },
+    {
+      "radius": 8,
+      "tension": 1,
+      "pressure": 0,
+      "force": -201.06192982974676,
+      "potential": 804.247719318987
+    }
+  ],
+  "shell": [
+    {
+      "r": 0,
+      "a": 4,
+      "lambda": 1.5,
+      "gm": 3,
+      "potential": -0.05211258841710116,
+      "acceleration": 0.0,
+      "centerGradient": 0.007720383469200172
+    },
+    {
+      "r": 1e-06,
+      "a": 4,
+      "lambda": 1.5,
+      "gm": 3,
+      "potential": -0.052112588417105025,
+      "acceleration": 7.720383469200513e-09,
+      "centerGradient": 0.007720383469200172
+    },
+    {
+      "r": 0.1,
+      "a": 4,
+      "lambda": 1.5,
+      "gm": 3,
+      "potential": -0.05215119891355882,
+      "acceleration": 0.0007723815295434523,
+      "centerGradient": 0.007720383469200172
+    },
+    {
+      "r": 1,
+      "a": 4,
+      "lambda": 1.5,
+      "gm": 3,
+      "potential": -0.05605947556276517,
+      "acceleration": 0.008069003156184251,
+      "centerGradient": 0.007720383469200172
+    },
+    {
+      "r": 3.9,
+      "a": 4,
+      "lambda": 1.5,
+      "gm": 3,
+      "potential": -0.13418454814653163,
+      "acceleration": 0.05604252960158961,
+      "centerGradient": 0.007720383469200172
+    },
+    {
+      "r": 0,
+      "a": 10,
+      "lambda": 2,
+      "gm": 10,
+      "potential": -0.006737946999085467,
+      "acceleration": 0.0,
+      "centerGradient": 0.0005614955832571223
+    },
+    {
+      "r": 1e-06,
+      "a": 10,
+      "lambda": 2,
+      "gm": 10,
+      "potential": -0.006737946999085748,
+      "acceleration": 5.614955832571362e-10,
+      "centerGradient": 0.0005614955832571223
+    },
+    {
+      "r": 0.1,
+      "a": 10,
+      "lambda": 2,
+      "gm": 10,
+      "potential": -0.006740754827957382,
+      "acceleration": 5.6163596968696004e-05,
+      "centerGradient": 0.0005614955832571223
+    },
+    {
+      "r": 1,
+      "a": 10,
+      "lambda": 2,
+      "gm": 10,
+      "potential": -0.0070222250997782395,
+      "acceleration": 0.0005756588885749463,
+      "centerGradient": 0.0005614955832571223
+    },
+    {
+      "r": 3.9,
+      "a": 10,
+      "lambda": 2,
+      "gm": 10,
+      "potential": -0.011897510060883819,
+      "acceleration": 0.0031439153106496537,
+      "centerGradient": 0.0005614955832571223
+    },
+    {
+      "r": 0,
+      "a": 4,
+      "lambda": 100000,
+      "gm": 3,
+      "potential": -0.7499700005999921,
+      "acceleration": 0.0,
+      "centerGradient": 2.4999000019999736e-11
+    },
+    {
+      "r": 1e-06,
+      "a": 4,
+      "lambda": 100000,
+      "gm": 3,
+      "potential": -0.7499700005999921,
+      "acceleration": 2.4999000019999732e-17,
+      "centerGradient": 2.4999000019999736e-11
+    },
+    {
+      "r": 0.1,
+      "a": 4,
+      "lambda": 100000,
+      "gm": 3,
+      "potential": -0.7499700006001171,
+      "acceleration": 2.499900002000223e-12,
+      "centerGradient": 2.4999000019999736e-11
+    },
+    {
+      "r": 1,
+      "a": 4,
+      "lambda": 100000,
+      "gm": 3,
+      "potential": -0.7499700006124915,
+      "acceleration": 2.4999000020249726e-11,
+      "centerGradient": 2.4999000019999736e-11
+    },
+    {
+      "r": 3.9,
+      "a": 4,
+      "lambda": 100000,
+      "gm": 3,
+      "potential": -0.7499700007901096,
+      "acceleration": 9.749610009282812e-11,
+      "centerGradient": 2.4999000019999736e-11
+    }
+  ],
+  "delayGyr": 3.2615637771674337,
+  "massKg": 1.255426029197556e+52
+}

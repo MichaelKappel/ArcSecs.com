@@ -2,6 +2,8 @@
     "use strict";
 
     const WEBGPU_COMPUTE_WORKGROUP_SIZE = 64;
+    // Dedicated workers do not inherit constants from the main simulator.
+    const WEBGPU_ADAPTIVE_COMPUTE_DISPATCH_CADENCE_BY_LEVEL = [18, 24, 36, 54];
     const WEBGPU_MAXIMUM_INTERACTIVE_PARTICLES = 4096;
     const WEBGPU_REDUCED_DIAGNOSTIC_WORDS = 9;
     const WEBGPU_COMPUTE_MESSAGE_CONTRACT_VERSION = 1;

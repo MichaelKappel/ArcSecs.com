@@ -1,0 +1,951 @@
+<h2 id="lib-can-a-physical-photon-energy-loss-mechanism-replace-or-supplement-expanding-space-redshift"><strong>Can a Physical Photon-Energy-Loss Mechanism Replace or Supplement Expanding-Space Redshift?</strong></h2>
+<blockquote>
+<p><strong>ArcSecs editorial reading key (23 November 2026; R36):</strong> This report develops the ArcSecs physical-first research programme. Instrument readings and published numerical bounds remain distinct from an author’s inference about the underlying cause. Historical relativity-based expressions are comparison benchmarks, <strong>not</strong> the adopted ArcSecs physical mechanism. A failed narrowly specified toy model does not establish that every future nonmetric physical mechanism is impossible. Likewise, an ArcSecs position is not automatically an independently observed result.</p>
+</blockquote>
+<p><strong>Direct observation to preserve:</strong> Redshift spectra, supernova light-curve intervals, CMB spectral shape and angular image sharpness are measured in separate experiments.</p>
+<p><strong>ArcSecs inference to investigate:</strong> Investigate physically coupled photon frequency, speed and arrival interval changes under constant progression, distinguishing failed energy-only toy laws from all possible future mechanisms.</p>
+<p><strong>Verification sources and data to inspect:</strong> DES 1504-supernova duration study, COBE/FIRAS, high-z galaxy imaging, DESI BAO.</p>
+<h3 id="lib-source-verification-addendum-23-november-2026">Source-verification addendum — 23 November 2026</h3>
+<p><strong>Audit focus:</strong> Physical photon transport and redshift benchmarks. This addendum supplies source-specific corrections and does not claim that all bibliography entries or datasets in this report were reverified.</p>
+<p><strong>Measured or reproducible benchmark:</strong> The DES 2024 study measured the light-curve-width exponent b=1.003 ± 0.005 (statistical) ± 0.010 (systematic) across 1,504 Type Ia supernovae. This directly constrains <strong>arrival-interval scaling</strong>, not the ontology of time as a substance. A constant-speed energy-only model predicting b=0 is severely inconsistent with that dataset; the result does not by itself rule out every future physical speed-evolution or emission mechanism.</p>
+<p><strong>Interpretation / missing mechanism:</strong> Fixsen et al. (1996) reported CMB spectral residuals below 50 parts per million and a CMB temperature 2.728 ± 0.004 K (95% confidence), whereas the frequently quoted 2.72548 ± 0.00057 K comes from Fixsen (2009). The manuscript’s 1.67e-5 <em>greybody redshift threshold</em> is a <strong>toy-model-specific consequence</strong> of its assumed unchanged photon-number/intensity normalization, not a source-published universal tired-light exclusion limit. The fitted 1.94%–2.70% bound on a tired-light fraction also assumes the paper’s simple b_eff=1-f parameterization. The source data and those assumptions must be kept distinct.</p>
+<p><strong>Primary literature checked:</strong> <a href="https://academic.oup.com/mnras/article/533/3/3365/7738388" rel="noopener noreferrer">DES24</a>; <a href="https://github.com/des-science/DES-SN5YR" rel="noopener noreferrer">DESDATA</a>; <a href="https://arxiv.org/abs/astro-ph/9605054" rel="noopener noreferrer">COBE96</a>; <a href="https://arxiv.org/abs/0911.1955" rel="noopener noreferrer">COBE09</a>. For detailed claim-level results see <a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/research/source-audit-4.md">four-report evidence audit</a>.</p>
+<p><strong>Review boundary:</strong> Audit of selected high-impact assertions only; remaining untested claims and claimed numerical pipelines require independent reproduction.</p>
+<hr>
+<p><strong>Mission ID:</strong> Independent Mission 04 (Scope-Locked Revision: 2026-11-23) <strong>Authorship &amp; AI-Assistance Statement:</strong> Commissioned independent theoretical astrophysics investigation conducted under the binding ArcSecs Research Charter; manuscript, derivations, and companion tables compiled by an AI theoretical research assistant with analytical numerical checks executed prior to drafting and full-catalog likelihood pipelines left unexecuted offline.<strong>Keywords:</strong> physical photon energy loss, tired light, slowing light, supernova light-curve duration, Tolman surface brightness, cosmic microwave background, baryon acoustic oscillations, photon rest mass</p>
+<h3 id="lib-abstract"><strong>Abstract</strong></h3>
+<p>This investigation evaluates whether a physical source-to-receiver photon energy-loss or velocity-damping mechanism operating within constant universal progression and non-material Euclidean spatial coordinates can replace or supplement expanding-space redshift across five empirical benchmarks: the redshift–distance relation, Type Ia supernova light-curve durations, Tolman surface brightness, cosmic microwave background (CMB) spectral and angular-power structure, and high-redshift image sharpness, alongside baryon acoustic oscillations and multimessenger arrival timing. Analyzing two specified microphysical channels—forward-coherent dynamical scalar-field drag and collective intergalactic plasma-wake excitation—plus a physical-recession hybrid, we find that <strong>pure constant-speed photon energy loss is quantitatively excluded</strong> as a primary redshift mechanism. Against the Dark Energy Survey five-year measurement of 1,504 Type Ia supernovae, where observed light-curve durations widen as one plus redshift raised to 1.003 ± 0.005 (statistical) ± 0.010 (systematic), a non-stretching prediction of zero incurs a chi-squared penalty of 4,471.2 (66.87 sigma) under linear error summation and 8,048.1 (89.71 sigma) under quadrature1. Any constant-speed photon-loss component is bounded to at most 1.94 to 2.70 percent of total logarithmic redshift at redshift one (95 percent two-sigma confidence)2. Two-body incoherent scattering predicts multi-degree angular blurring3 excluded by sharp sub-arcsecond galaxy and quasar imaging4, while energy-only redshifting of a thermal emitter violates the 50 parts-per-million COBE/FIRAS blackbody limit beyond redshift 0.00001673. The most promising ArcSecs candidate is <strong>forward-coherent secular velocity-damped scalar transport</strong>, which widens arrival intervals linearly with one plus redshift without stretching time itself, yet lacks a verified mechanism that shifts optical grating wavelengths and radio heterodyne frequencies equally, matches gravitational-wave speeds to one part in a quadrillion7, and generates CMB acoustic peaks8. Its single cheapest decisive test is an archival cross-band comparison of optical grating versus radio heterodyne absorber redshifts above redshift one.</p>
+<h3 id="lib-opening-research-position-section-question-and-operational-definitions"><strong>1. Opening Research-Position Section, Question, and Operational Definitions</strong></h3>
+<h4 id="lib-binding-arcsecs-research-premises"><strong>1.1 Binding ArcSecs Research Premises</strong></h4>
+<p>This commission is an affirmative investigation of the ArcSecs physical framework, conducted without assuming any prior ArcSecs manuscript or external project exists. The following eleven statements are reproduced verbatim as the sponsor’s fixed editorial and modeling premises:</p>
+<blockquote>
+<ol type="1">
+<li><strong>Photons have mass.</strong><br>
+</li>
+<li><strong>Time is constant.</strong><br>
+</li>
+<li><strong>Light slows down over time.</strong><br>
+</li>
+<li><strong>Time does not physically exist; it is the “When.”</strong><br>
+</li>
+<li><strong>Space does not physically exist; it is the “Where.”</strong><br>
+</li>
+<li><strong>All that physically exists at any moment occupies area and has mass at that moment.</strong><br>
+</li>
+<li><strong>Spacetime does not physically exist.</strong><br>
+</li>
+<li><strong>Light is not the fastest thing in the universe.</strong><br>
+</li>
+<li><strong>Things move apart from each other faster than causality; time, space, or spacetime cannot be physically stretched because they are not physical substances to stretch.</strong><br>
+</li>
+<li><strong>The size of the universe is unknown.</strong><br>
+</li>
+<li><strong>Objects in the universe are smaller and closer than they appear.</strong></li>
+</ol>
+</blockquote>
+<h4 id="lib-central-research-question-and-operational-definitions"><strong>1.2 Central Research Question and Operational Definitions</strong></h4>
+<p>The central question of this study is whether a physically specified interaction between propagating photons and material fields or media—operating strictly without expanding spatial fabric, spacetime curvature, or measured changes in process rates and signal arrival intervals—can reproduce the joint cosmological record, and if no candidate passes all benchmarks, which microphysical interaction is missing and what single low-cost test discriminates the leading channel.<br>
+To keep every coordinate and measurement operationally grounded within constant universal progression (the “When”) and three-dimensional Euclidean position (the “Where”), published quantities are defined strictly in terms of what detectors record rather than conventional metric interpretations. Spectroscopic redshift designates the fractional increase in observed photon wavelength relative to an identical laboratory transition, or equivalently the fractional decrease in received photon energy and frequency. Apparent supernova duration scaling designates the empirical ratio between the observed light-curve phase interval at Earth and the local rest-frame template interval; although prior literature labels this signal “cosmological time dilation”2, that phrase is treated here strictly as source terminology for arrival-interval ratios between consecutive physical electromagnetic pulses within constant universal progression. Bolometric surface brightness designates total radiant energy flux received per unit apparent solid angle on the sky. Luminosity distance and angular-diameter distance denote operational estimators inferred from apparent flux and apparent angular extent, respectively.<br>
+Regarding the first ArcSecs premise that photons have mass, it is uncontested empirically that electromagnetic quanta carry energy, transfer momentum, and respond to gravitational fields. A narrower claim—that photons possess a nonzero invariant rest mass—introduces a vacuum dispersion signature in which lower-frequency radio pulses lag behind higher-frequency radiation in proportion to the inverse square of photon frequency10. This study distinguishes inertial energy-momentum mass from invariant rest mass and treats the latter strictly within empirical dispersion bounds10.</p>
+<h3 id="lib-literature-review-and-observational-requirements-register"><strong>2. Literature Review and Observational Requirements Register</strong></h3>
+<h4 id="lib-historical-and-modern-photon-loss-proposals"><strong>2.1 Historical and Modern Photon-Loss Proposals</strong></h4>
+<p>Physical photon-loss accounts of cosmological redshift originated with Zwicky (1929), who proposed gravitational drag on light traversing intergalactic matter4. Subsequent critiques established that classical two-body scattering transfers transverse momentum to photons, blurring point-like distant sources, whereas observations demonstrate sharp high-redshift quasar and galaxy profiles (Steinbring 20074). Later alternative proposals revisited static or hybrid mechanisms, including plasma-redshift electron interactions16, double-Compton scattering conjectures18, exponential wavelength-distance relations19, and the Covarying Coupling Constants plus Tired Light (CCC+TL) hybrid proposed by Gupta (2023) to address compact high-redshift galaxies observed by the James Webb Space Telescope (JWST)22.<br>
+Independent empirical checks have challenged recent hybrid models. A 2026 peer-reviewed evaluation in <em>Monthly Notices of the Royal Astronomical Society</em> showed that Gupta’s best-fit supernova parameters diverge significantly from observational cosmic-chronometer expansion-rate measurements, concluding that compact high-redshift galaxies seen with JWST are more consistent with early intrinsic galaxy evolution23. Separately, Vavryčuk (2025) argued that standard expanding-ray kinematics keep successive photon intervals unchanged unless a rate-varying propagation effect operates, advancing a conformal varying-speed-of-light metric26. While illustrating active inquiry into light transport, none of those prior formulations has simultaneously satisfied supernova duration scaling, Tolman surface brightness, and CMB blackbody and acoustic-peak measurements with a single specified physical sink.</p>
+<h4 id="lib-observational-requirements-to-satisfy"><strong>2.2 Observational Requirements to Satisfy</strong></h4>
+<p>Any viable ArcSecs propagation mechanism must satisfy nine empirical benchmark datasets compiled through November 2026. Table 1 documents each measurement anchor neutrally as an operational requirement without advocating conventional relativistic cosmology.</p>
+<table>
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Benchmark Observable</th>
+<th>Primary Data Anchor &amp; Vintage</th>
+<th>Measured Value / Empirical Constraint</th>
+<th>Operational Requirement for Any Physical Model</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Type Ia supernova duration scaling</td>
+<td>White et al. (2024), DES-SN5YR, 1,504 supernovae across redshifts roughly 0.1 to 1.2 (September 2024)2</td>
+<td>Power-law exponent on one plus redshift measured at 1.003 ± 0.005 (statistical) ± 0.010 (systematic)2</td>
+<td>Observed phase intervals between consecutive supernova light-curve features must widen linearly with one plus redshift across optical filter bands30</td>
+</tr>
+<tr class="even">
+<td>Supernova spectral aging &amp; quasar timescales</td>
+<td>Blondin et al. (2008), 35 spectra of 13 supernovae (redshifts 0.28 to 0.62); Lewis &amp; Brewer (2023), 190 DES quasars (redshifts ~0.2 to 4.0)27</td>
+<td>Spectral aging matches inverse one plus redshift; quasar variability exponent 1.28 (+0.28 / -0.29), Bayesian odds above 100,000 over zero; follow-up 1.14 ± 0.3427</td>
+<td>Both atomic-line evolutionary cadences and continuum stochastic fluctuations must arrive stretched proportionally to one plus redshift31</td>
+</tr>
+<tr class="odd">
+<td>Redshift–distance Hubble diagram</td>
+<td>Pantheon+ compilation, 1,701 Type Ia supernovae (Brout et al. 2022; Scolnic et al. 2022); SH0ES vs. CCHP TRGB local calibrations33</td>
+<td>Tight apparent-magnitude curve beyond redshift 2; persistent local calibration offset between 67.4 (CMB-inferred), ~70 (TRGB), and 73.04 ± 1.04 km/s/Mpc (SH0ES)34</td>
+<td>Flux attenuation must exceed pure Euclidean inverse-square distance diminished only by one power of one plus redshift3</td>
+</tr>
+<tr class="even">
+<td>Tolman surface brightness &amp; JWST galaxy sizes</td>
+<td>Lubin &amp; Sandage (2001), HST clusters up to redshift 0.92; JWST CEERS (1,395 galaxies, Ormerod et al. 2024) &amp; UNCOVER (995 galaxies, Miller et al. 2024)5</td>
+<td>Surface brightness dims inversely with roughly the third to fourth power of one plus redshift (&gt;10 sigma against static no-evolution); effective radii scale with one plus redshift to -0.71 ± 0.19 up to redshift ~825</td>
+<td>Intensity per unit solid angle falls steeply with redshift unless physical size and luminosity evolution compensate systematically5</td>
+</tr>
+<tr class="odd">
+<td>CMB blackbody spectrum</td>
+<td>COBE/FIRAS, Fixsen et al. (1996), 2 to 21 inverse centimeters6; later temperature synthesis Fixsen (2009)</td>
+<td>1996 temperature 2.728 ± 0.004 kelvin (95% confidence); 2009 synthesis 2.72548 ± 0.00057 kelvin; rms residual below 50 parts per million; Comptonization magnitude below 15 × 10^-6, chemical-potential magnitude below 9 × 10^-5 (95% confidence)6</td>
+<td>Spectrum matches an unperturbed single-temperature Planckian to 50 parts per million, forbidding energy loss without commensurate photon-number reduction3</td>
+</tr>
+<tr class="even">
+<td>CMB angular acoustic spectra</td>
+<td>Planck Collaboration (2020), Planck 2018 V (<em>A&amp;A</em> 641, A5)8</td>
+<td>Multi-peak temperature, cross-correlation, and E-mode polarization harmonic spectra; baseline inferred slope 67.4 ± 0.5 km/s/Mpc8</td>
+<td>Requires coherent acoustic oscillations imprinted at a sharp decoupling surface with a fixed angular scale8</td>
+</tr>
+<tr class="odd">
+<td>Baryon acoustic oscillations (BAO)</td>
+<td>DESI DR2 Results I, II &amp; IV (2025, 2026; <em>Phys. Rev. D</em> 112, 083515)42</td>
+<td>13-element BAO distance vector; reported radial acoustic ratio 8.632 ± 0.098 ± 0.026 and transverse ratio 38.99 ± 0.52 ± 0.1244</td>
+<td>Transverse and radial galaxy/Lyman-alpha clustering preserves a common physical ruler across redshifts 0.1 to above 244</td>
+</tr>
+<tr class="even">
+<td>Image sharpness &amp; broadband achromaticity</td>
+<td>Steinbring (2007); JWST NIRCam multi-band imaging; multi-band AGN/galaxy spectroscopy4</td>
+<td>Distant quasars and galaxies show no cosmological PSF blurring; optical and radio transitions share identical redshifts4</td>
+<td>Any transport drag must impart essentially zero transverse momentum scatter and operate achromatically across decades in frequency3</td>
+</tr>
+<tr class="odd">
+<td>Photon rest mass &amp; multimessenger speed</td>
+<td><em>Phys. Lett. B</em> 820, 136596 (2021), 129 FRBs; Ran et al. (2024); GW170817/GRB 170817A (2017)7</td>
+<td>Invariant photon rest mass below 2.2 × 10^-15 electronvolts/c² (95% confidence); gamma-ray arrival lag 1.74 seconds, fractional gravitational-to-electromagnetic speed difference between -3 × 10^-15 and +7 × 10^-167</td>
+<td>Electromagnetic and gravitational propagation speeds must match to 15 decimal places while radio dispersion remains negligible7</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lib-hypotheses-data-methods-uncertainty-and-statistical-model"><strong>3. Hypotheses, Data, Methods, Uncertainty, and Statistical Model</strong></h3>
+<h4 id="lib-preregistered-hypotheses-and-decision-rules"><strong>3.1 Preregistered Hypotheses and Decision Rules</strong></h4>
+<p>Three competing physical hypotheses were defined before executing quantitative comparisons:</p>
+<ul>
+<li><strong>Null Hypothesis (Constant-Speed Photon Energy-Loss Transport):</strong> Cosmological redshift originates entirely from a static-distance photon energy-loss interaction at invariant vacuum light speed, predicting a zero exponent for supernova duration scaling, a no-evolution bolometric surface-brightness scaling inversely proportional to one plus redshift, and Euclidean static angular sizes.<br>
+</li>
+<li><strong>Alternative Hypothesis 1 (Forward-Coherent Secular Velocity-Damped Scalar Transport):</strong> Massive electromagnetic quanta interact coherently with a pervasive physical scalar field occupying cosmic volume, transferring energy into scalar kinetic degrees of freedom while the universal electromagnetic propagation speed decreases monotonically over constant universal progression, predicting an arrival-interval exponent of unity while remaining testable against wavelength-versus-frequency equivalence and multimessenger speed matching.<br>
+</li>
+<li><strong>Alternative Hypothesis 2 (Euclidean Physical Recession Plus Forward Scalar Drag):</strong> Galaxies physically separate through Euclidean spatial coordinates without stretching space or time while photons traverse a weakly dissipative forward scalar field, partitioning total logarithmic redshift between physical radial recession and non-stretching photon drag.</li>
+</ul>
+<p>Under preregistered decision thresholds, any candidate mechanism incurring a chi-squared penalty exceeding 25 (five standard deviations) on any single non-negotiable benchmark without an independently justified physical correction is classified as <strong>quantitatively excluded (Category C)</strong>; a model matching data only via unpenalized nuisance parameters is classified as <strong>fits without distinguishing (Category B)</strong>; a model satisfying one coupled observable while lacking a consistent microphysical bridge to another is classified as <strong>missing mechanism / undecidable (Category D)</strong>; and a model yielding a sharp out-of-sample discrimination test is classified as <strong>new measurable prediction (Category A)</strong>.</p>
+<h4 id="lib-data-provenance-statistical-propagation-and-holdout-protocol"><strong>3.2 Data Provenance, Statistical Propagation, and Holdout Protocol</strong></h4>
+<p>Quantitative checks draw exclusively on published summary likelihoods and primary data releases available as of November 2026: the DES five-year Type Ia supernova sample of 1,504 light curves (White et al. 20249), Pantheon+ (1,701 supernovae34), DES quasar variability (190 objects27), COBE/FIRAS spectrophotometry6, Planck 2018 legacy power spectra8, DESI DR2 baryon acoustic oscillation measurements42, Lubin and Sandage (2001) early-type cluster photometry16, JWST CEERS and UNCOVER size catalogs5, 129 FRB dispersion constraints12, and GW170817/GRB 170817A arrival timing7.<br>
+<strong>Execution Status and Uncertainty Model:</strong> Exact analytical likelihood penalties, Hubble-curve magnitude residuals, two-body scattering angular-blur bounds, Proca group-velocity lags, COBE/FIRAS greybody photon-number limits, and two-sigma hybrid fraction upper limits were <strong>executed numerically</strong> and archived in analysis/mechanisms_and_checks.py3. Full raw-catalog Markov Chain Monte Carlo fits—specifically the DES five-year untrained holdout split, the 13-element DESI DR2 covariance likelihood, and the Planck 2018 temperature-and-polarization likelihood—are <strong>explicitly marked not executed</strong> because raw FITS files and covariance chains could not be downloaded in this offline environment; exact step-by-step protocols and model-complexity penalized criteria (Akaike and Bayesian Information Criteria) are documented in METHODS_TO_REPRODUCE.md. Uncertainty propagation on the DES duration exponent treats statistical uncertainty (0.005) and systematic uncertainty (0.010) under both conservative quadrature combination (0.01118) and worst-case linear summation (0.01500)2. Selection effects documented in primary studies include Malmquist luminosity bias in high-redshift cluster selection21, DES shallow-field versus deep-field 50 percent completeness thresholds near redshifts 0.7 and 1.12, and bandpass K-corrections matching rest-frame spectral templates20.</p>
+<h3 id="lib-mechanism-discovery-and-physical-transport-analysis"><strong>4. Mechanism Discovery and Physical Transport Analysis</strong></h3>
+<h4 id="lib-minimal-phenomenological-attenuation-and-exclusion-of-particle-scattering"><strong>4.1 Minimal Phenomenological Attenuation and Exclusion of Particle Scattering</strong></h4>
+<p>Starting from the observed redshift ratio and a minimal phenomenological attenuation law in which fractional photon energy loss per unit Euclidean path length equals a constant negative coefficient, integration yields exponential energy decay with path length and a logarithmic distance–redshift relation. Matching the low-redshift Hubble slope of 67.4 kilometers per second per megaparsec36 requires a characteristic attenuation length of 4,448 megaparsecs, or a fractional loss rate of 7.29 × 10^-27 per meter. By itself, however, this attenuation coefficient is <strong>strictly a curve fit</strong> that specifies neither an energy recipient nor momentum conservation.<br>
+Evaluating standard two-body incoherent scattering (including conventional Compton scattering on free electrons, protons, or hypothetical light particles, which is standard electrodynamics rather than new physics) demonstrates an immediate kinematic impossibility. In elastic two-body collisions where optical photons near two electronvolts lose a small fraction of energy per scatter, the tiny single-scatter deflection angle requires proportionally more collisions to accumulate a cosmological redshift of one. When summed in quadrature across all collisions along the line of sight, the collision count cancels out identically: the root-mean-square total angular blur depends only on the square root of the target rest mass divided by the photon energy3. For optical light at redshift one, this yields 595.1 radians (122.8 million arcseconds) on electrons, 25,500 radians (5.26 billion arcseconds) on protons, 0.833 radians (171,700 arcseconds) on a one-electronvolt particle, and 0.0263 radians (5,430 arcseconds, or 1.5 degrees) even on a one-millielectronvolt particle3. Because distant quasars and galaxies remain crisp without cosmological blurring down to sub-arcsecond imaging scales (Steinbring 20074; JWST NIRCam5), <strong>every incoherent two-body recoil mechanism is excluded by four to ten orders of magnitude</strong>.</p>
+<h4 id="lib-mechanism-1-forward-coherent-scalar-field-drag-and-secular-velocity-damping"><strong>4.2 Mechanism 1: Forward-Coherent Scalar-Field Drag and Secular Velocity Damping</strong></h4>
+<p>To preserve sub-arcsecond image sharpness while respecting the ArcSecs requirement that all physical entities occupy area and carry mass-energy, the first specified microphysical channel couples a massive electromagnetic vector field (bounded in invariant rest mass below 2.2 × 10^-15 electronvolts divided by speed of light squared12) to a smooth, pervasive cosmic scalar field via a derivative interaction in the Lagrangian (derived in analysis/mechanisms_and_checks.py). Because the cosmic scalar gradient is spatially homogeneous over galactic scales, transverse momentum transfer vanishes identically. In the resulting radiative-transfer kinetic equation, photon occupation undergoes pure frequency drift with zero angular diffusion and zero spectral-line broadening beyond intrinsic emitter profiles, transferring lost photon energy directly into the kinetic energy density of the scalar field without emitting secondary X-rays.<br>
+Separating this scalar interaction into two kinematic regimes reveals the decisive physics of ArcSecs Premise 3 (“Light slows down over time”):<br>
+<strong>Mechanism 1A (Constant-Speed Forward Scalar Drag):</strong> When the scalar field extracts photon energy at constant propagation speed, consecutive photons emitted across a supernova light curve traverse identical Euclidean distances in equal durations, forcing a predicted duration-scaling exponent of zero. Tested against the DES measurement of 1.003 ± 0.005 (statistical) ± 0.010 (systematic)2, constant-speed drag suffers a chi-squared penalty of 40,240.4 (200.60 sigma) statistically, 8,048.1 (89.71 sigma) under quadrature, and 4,471.2 (66.87 sigma) under linear error summation3. In addition, pure energy-loss luminosity distance underpredicts supernova distance moduli by 0.611 magnitudes at redshift 0.5, 0.966 magnitudes at redshift 1.0, and 1.374 magnitudes at redshift 2.0 relative to benchmark expansion curves; even adding an ad hoc photon-number depletion factor leaves a systematic residual of minus 0.213 magnitudes at redshift 1.03. Likewise, bolometric surface brightness falls as only one power of one plus redshift, excluded at more than 10 sigma by Lubin and Sandage (2001)37.<br>
+<strong>Mechanism 1B (Secular Velocity-Damped Scalar Transport — Most Promising Channel):</strong> If instead the scalar condensate lowers the effective electromagnetic propagation speed monotonically over universal progression (while Premise 8 permits faster causal speeds above today’s electromagnetic speed), differentiating the fixed-distance Euclidean transit integral with respect to emission instant yields a simple, exact kinematic identity: <strong>the ratio of observed arrival duration to emitted duration equals the ratio of emission light speed to detection light speed</strong>. Whenever propagation speed slows by a factor of one plus redshift between emission and arrival, supernova light-curve widths and quasar variability timescales widen linearly with one plus redshift without stretching time or space.<br>
+However, confronting Mechanism 1B with the remaining benchmarks exposes <strong>three unresolved microphysical gaps</strong>:</p>
+<blockquote>
+<ol type="1">
+<li><strong>Grating Wavelength Versus Heterodyne Frequency Divergence:</strong> In a spatially homogeneous, time-varying refractive scalar medium, spatial translation symmetry conserves photon wavevector, leaving diffraction-grating wavelengths fixed at their emitted values while temporal variation lowers detected frequencies. Optical grating spectrographs and radio heterodyne receivers would therefore measure discrepant redshifts unless an additional spatial-dispersion coupling operates—yet simultaneously stretching wavelength and slowing propagation speed reduces frequency by the square of one plus redshift, overpredicting supernova light-curve widths by a factor of two.<br>
+</li>
+<li><strong>GW170817 Speed-Coincidence Constraint:</strong> Because gravitational waves from GW170817 and gamma rays from GRB 170817A arrived within 1.74 seconds across extragalactic distance, bounding their fractional speed difference between minus 3 × 10^-15 and plus 7 × 10^-167, any secular slowing of light over universal progression must either slow gravitational waves identically to 15 decimal places or remain below 10^-15 across that baseline.<br>
+</li>
+<li><strong>CMB Photon-Number Dilution and Acoustic Peaks:</strong> Even if the CMB began as a hotter blackbody emitter whose photon energies dropped uniformly by one plus redshift without reducing photon number density, the received specific intensity would retain the emitter’s cubed higher photon density, producing a massive greybody excess. Against the 50 parts-per-million COBE/FIRAS residual ceiling6, pure energy-only redshifting of a blackbody emitter is restricted to redshifts below 0.00001673, and scalar drag provides no acoustic mechanism for the Planck 2018 multi-peak angular spectra8.</li>
+</ol>
+</blockquote>
+<h4 id="lib-mechanism-2-collective-plasma-wake-and-plasmon-excitation-drag"><strong>4.3 Mechanism 2: Collective Plasma-Wake and Plasmon-Excitation Drag</strong></h4>
+<p>A second microphysical channel replaces scalar fields with known ionized intergalactic plasma, coupling the electromagnetic field minimally to collective longitudinal electron oscillations (plasmons)16. Lost photon energy heats intergalactic electrons, generating thermodynamic entropy inversely proportional to the intergalactic plasma temperature. Quantitative transport analysis excludes collective plasma drag on four independent fronts: (1) plasma dispersion and wake cross-sections vary inversely with frequency squared10, violating observed equality between radio, optical, and gamma-ray redshifts; (2) depositing cosmic radiative energy loss into intergalactic electrons drives Comptonization distortions orders of magnitude beyond the COBE/FIRAS 15 parts-per-million limit39 and violates localized FRB electron-column dispersion bounds10; (3) finite-wavevector plasmon recoil induces Debye-scale angular blur and line broadening; and (4) constant-speed plasma drag predicts zero supernova duration stretching, excluded at 66.87 to 200.60 sigma3.</p>
+<h4 id="lib-mechanism-3-physical-euclidean-recession-plus-forward-scalar-drag-hybrid"><strong>4.4 Mechanism 3: Physical Euclidean Recession Plus Forward Scalar Drag (Hybrid)</strong></h4>
+<p>Consistent with ArcSecs Premise 9—that physical bodies move apart through Euclidean spatial coordinates faster than causal signal speeds without stretching space or time—Mechanism 3 combines physical radial recession with weak forward-coherent scalar drag. Radial separation lengthens sequential photon travel paths, naturally producing linear arrival-interval widening for the kinematic recession component while scalar drag adds a non-stretching multiplicative redshift factor. Under this hybrid, the effective duration-scaling exponent equals one minus the non-stretching photon-loss fraction of logarithmic redshift. Applying a conservative two-sigma lower bound to White et al.’s (2024) measurement (1.003 ± 0.01118 quadrature or ± 0.015 linear) constrains any non-stretching tired-light contribution to <strong>at most 1.94 percent (quadrature) or 2.70 percent (linear)</strong> of total logarithmic redshift out to redshift one2. While Euclidean recession plus trace scalar drag accommodates low-redshift Hubble curves, it still requires an independent hot ionized-plasma acoustic phase to explain Planck 2018 CMB multipole oscillations8 and DESI DR2 baryon acoustic distance ratios44.</p>
+<h3 id="lib-results-forecasts-and-required-final-decision-matrix"><strong>5. Results, Forecasts, and Required Final Decision Matrix</strong></h3>
+<h4 id="lib-epistemic-classification-of-findings"><strong>5.1 Epistemic Classification of Findings</strong></h4>
+<p>Table 2 separates verified observational anchors and executed analytical derivations from model-dependent inferences and unexecuted prospective tests, assigning each a formal evaluation verdict (A: new measurable test; B: fits without distinguishing; C: excluded by data; D: missing mechanism / undecidable).</p>
+<table>
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Finding or Claim</th>
+<th>Epistemic Class</th>
+<th>Quantitative Outcome</th>
+<th>Execution Status</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DES-SN5YR duration scaling excludes constant-speed pure photon loss</td>
+<td>Executed Analytical Exclusion</td>
+<td>Chi-squared penalty 4,471.2 (66.87 sigma linear) to 8,048.1 (89.71 sigma quadrature); 200.60 sigma statistical1</td>
+<td>Executed</td>
+<td><strong>(C) Excluded by data</strong></td>
+</tr>
+<tr class="even">
+<td>Two-body incoherent scattering (electrons, protons, sub-eV targets)</td>
+<td>Derived Math + Observation</td>
+<td>Angular blur 5,430 to 5.26 billion arcseconds at redshift 1 vs. unblurred sub-arcsecond imaging3</td>
+<td>Executed</td>
+<td><strong>(C) Excluded by data</strong></td>
+</tr>
+<tr class="odd">
+<td>Energy-only redshifting of Planckian CMB without photon depletion</td>
+<td>Derived Math + Observation</td>
+<td>Violates 50 parts-per-million COBE/FIRAS limit above redshift 0.00001673</td>
+<td>Executed</td>
+<td><strong>(C) Excluded by data</strong></td>
+</tr>
+<tr class="even">
+<td>Pure energy-loss Hubble curve vs. benchmark distance moduli</td>
+<td>Executed Analytical Comparison</td>
+<td>Brighter by 0.966 mag at redshift 1.0 and 1.374 mag at redshift 2.0 (0.213 mag residual at z=1 with rate factor)3</td>
+<td>Executed</td>
+<td><strong>(C) Excluded by data</strong></td>
+</tr>
+<tr class="odd">
+<td>Non-stretching hybrid redshift fraction ceiling</td>
+<td>Derived Two-Sigma Upper Bound</td>
+<td>Restricted to at most 1.94% (quadrature) or 2.70% (linear) of logarithmic redshift out to z~12</td>
+<td>Executed</td>
+<td><strong>(C)/(B) Tightly bounded</strong></td>
+</tr>
+<tr class="even">
+<td>Secular velocity-damped scalar transport (Mechanism 1B)</td>
+<td>Model Inference / Hypothesis</td>
+<td>Reproduces exponent 1 arrival stretch cleanly; lacks grating-vs-radio equality, 10^-15 GW match, and CMB peaks7</td>
+<td>Analytical</td>
+<td><strong>(D) Missing mechanism</strong></td>
+</tr>
+<tr class="odd">
+<td>Archival grating vs. heterodyne redshift test on high-z absorbers</td>
+<td>Prospective Forecast</td>
+<td>Tests wavenumber-conserving slowing at zero telescope cost down to 0.01% fractional redshift difference</td>
+<td>Not Executed</td>
+<td><strong>(A) New measurable test</strong></td>
+</tr>
+<tr class="even">
+<td>Untrained DES-SN5YR split (train below z=0.5, test at z≥0.5) &amp; DESI DR2 AIC/BIC</td>
+<td>Prospective Catalog Holdout</td>
+<td>Evaluates chromatic drift across g, r, i, z bands and joint BAO/CMB model complexity penalties30</td>
+<td>Not Executed</td>
+<td><strong>(A) Protocol defined</strong></td>
+</tr>
+</tbody>
+</table>
+<h4 id="lib-required-final-decision-table-across-all-evaluated-mechanisms"><strong>5.2 Required Final Decision Table Across All Evaluated Mechanisms</strong></h4>
+<p>Table 3 presents the complete side-by-side decision matrix across every evaluated mechanism; full symbolic equations and dimensional checks reside in analysis/mechanisms_and_checks.py.</p>
+<table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Mechanism</th>
+<th>Original Equations (Ref analysis/)</th>
+<th>Energy Recipient</th>
+<th>Exact Parameters</th>
+<th>Redshift Fit</th>
+<th>Supernova-Stretch Result</th>
+<th>CMB Result</th>
+<th>Blurring</th>
+<th>Conservation Verdict</th>
+<th>Strongest Exclusion</th>
+<th>Prospective Falsifying Test</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Minimal Toy Attenuation Law</td>
+<td>Eq. (M0)</td>
+<td>Unspecified (curve fit only)</td>
+<td>Attenuation rate ~7.29 × 10^-27 per meter</td>
+<td>Misses by 0.966 mag at z=13</td>
+<td>Predicts zero (66.87–200.60 sigma excluded)1</td>
+<td>Violates 50 ppm beyond z=0.0000167; no peaks3</td>
+<td>Unspecified</td>
+<td>Incomplete (no physical energy sink)</td>
+<td>DES duration scaling &amp; COBE/FIRAS2</td>
+<td>Already excluded; lacks sink</td>
+</tr>
+<tr class="even">
+<td>Conventional 2-Body Incoherent Scattering</td>
+<td>Eq. (M0b)</td>
+<td>Recoiling electrons, protons, or light particles</td>
+<td>Target mass, number density, cross-section</td>
+<td>Fails unless tuned; chromatic</td>
+<td>Predicts zero (66.87–200.60 sigma excluded)3</td>
+<td>Exceeds Compton y limit; no peaks39</td>
+<td>5,430 to 5.26 billion arcsec at z=13</td>
+<td>Conserves 4-momentum locally; generates entropy</td>
+<td>Sub-arcsecond quasar/galaxy imaging4</td>
+<td>Already excluded by &gt;10,000× in PSF</td>
+</tr>
+<tr class="odd">
+<td><strong>Mech 1A:</strong> Forward Scalar Drag (Constant Speed)</td>
+<td>Eq. (M1A)</td>
+<td>Coherent cosmic scalar field</td>
+<td>Scalar-photon coupling, scalar slope, photon mass limit12</td>
+<td>Misses by 0.966 mag at z=13</td>
+<td>Predicts zero (66.87–200.60 sigma excluded)3</td>
+<td>Greybody excess beyond z=0.0000167; no peaks3</td>
+<td>Near zero (homogeneous forward limit)</td>
+<td>Conserves 4-momentum locally into scalar field</td>
+<td>DES duration scaling2 &amp; Lubin-Sandage (&gt;10σ)37</td>
+<td>Already excluded as sole mechanism</td>
+</tr>
+<tr class="even">
+<td><strong>Mech 1B (Most Promising):</strong> Secular Velocity-Damped Scalar Transport</td>
+<td>Eq. (M1B)</td>
+<td>Scalar condensate</td>
+<td>Speed profile over universal progression, scalar coupling</td>
+<td>Needs Euclidean-plus-dilution matching</td>
+<td><strong>Matches exponent 1</strong> via emission-to-detection speed ratio</td>
+<td>Missing photon-number sink &amp; acoustic peaks3</td>
+<td>Near zero (uniform medium)</td>
+<td>Conserves energy into scalar field; k-conservation splits optical/radio z</td>
+<td>GW170817 10^-15 speed match7 &amp; optical/radio z equality</td>
+<td>Archival z&gt;1 grating vs. heterodyne absorber test</td>
+</tr>
+<tr class="odd">
+<td><strong>Mech 2:</strong> Collective Plasma-Wake / Plasmon Drag</td>
+<td>Eq. (M2)</td>
+<td>Intergalactic electron plasmons</td>
+<td>Electron density, plasma temperature, coupling</td>
+<td>Chromatic (inverse frequency squared); fails10</td>
+<td>Predicts zero (66.87–200.60 sigma excluded)3</td>
+<td>Violates Compton y &lt; 15×10^-6 via IGM heating39</td>
+<td>Debye-scale angular blur &amp; line broadening</td>
+<td>Conserves energy; overheats IGM &amp; emits X-rays</td>
+<td>Chromaticity + COBE/FIRAS y + FRB dispersion + DES3</td>
+<td>Already excluded by broadband spectra</td>
+</tr>
+<tr class="even">
+<td><strong>Mech 3 (Hybrid):</strong> Euclidean Recession + Forward Scalar Drag</td>
+<td>Eq. (M3)</td>
+<td>Kinetic recession + scalar sink</td>
+<td>Recession velocity profile + non-stretching fraction</td>
+<td>Fits SN Hubble curve only if drag &lt;2.7%</td>
+<td>Forces non-stretching drag &lt;=1.94–2.70% (95% CL)2</td>
+<td>Lacks acoustic-peak plasma source8</td>
+<td>Near zero</td>
+<td>Conserves momentum in Euclidean coordinates</td>
+<td>DES caps drag &lt;2.7%2; BAO/CMB acoustic scale44</td>
+<td>DES untrained z≥0.5 holdout + DESI DR2 joint fit</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lib-most-promising-channel-and-single-cheapest-decisive-test"><strong>5.3 Most Promising Channel and Single Cheapest Decisive Test</strong></h4>
+<p>Within the ArcSecs framework, <strong>Mechanism 1B (Forward-Coherent Secular Velocity-Damped Scalar Transport)</strong> is the sole non-recession candidate that survives both point-source image sharpness and supernova light-curve stretching. Its <strong>single cheapest decisive test</strong> requires zero new observing time and uses existing public archives: <strong>cross-matching optical/near-infrared diffraction-grating redshifts (measured via spatial slit dispersion in SDSS, DESI, or JWST NIRSpec) against radio heterodyne frequency redshifts (measured via atomic 21-centimeter hydrogen or molecular carbon monoxide transitions in VLA or ALMA) for identical damped Lyman-alpha absorbers and active galactic nuclei above redshift one</strong>. Because a spatially uniform, time-varying refractive medium preserves spatial wavevector while lowering temporal frequency, grating-inferred and heterodyne-inferred redshifts diverge by order unity at redshift one; finding agreement within one part in ten thousand immediately falsifies wavenumber-conserving velocity damping and pinpoints the exact dispersion relation required of any successor ArcSecs transport law. Complementing this check, running the <strong>untrained DES five-year holdout test</strong> (calibrating below redshift 0.5 and predicting light-curve widths above redshift 0.5 across g, r, i, and z filters30) directly constrains wavelength-dependent propagation drift at sub-percent sensitivity.</p>
+<h3 id="lib-discussion-falsification-criteria-limitations-and-conclusions"><strong>6. Discussion, Falsification Criteria, Limitations, and Conclusions</strong></h3>
+<h4 id="lib-benchmark-synthesis-and-remaining-empirical-burden"><strong>6.1 Benchmark Synthesis and Remaining Empirical Burden</strong></h4>
+<p>Two robust conclusions emerge when physical photon-loss hypotheses are confronted with the 2026 observational record. First, <strong>the constant-speed tired-light mechanisms evaluated here do not reproduce the observed supernova interval scaling without an additional physical timing or source mechanism</strong>. The convergence of DES five-year Type Ia supernova light-curve widths2, Blondin et al.’s (2008) spectral aging32, Lewis and Brewer’s (2023) quasar timescale scaling31, Lubin and Sandage’s (2001) surface-brightness dimming37, and COBE/FIRAS photon-number preservation3 excludes non-stretching photon energy loss by tens to hundreds of standard deviations, capping any constant-speed energy-loss fraction below 2.70 percent3.<br>
+Second, <strong>ArcSecs Premise 3 (“Light slows down over time”) provides a rigorous non-relativistic kinematic mechanism for linear arrival-interval widening</strong> without invoking measured changes in process rates and signal arrival intervals or space: declining electromagnetic speed widens arrival spacing between sequential photons in direct proportion to the ratio of emission speed to reception speed. Furthermore, ArcSecs Premise 11 (“Objects in the universe are smaller and closer than they appear”) aligns qualitatively with JWST measurements showing compact high-redshift galaxy half-light radii scaling inversely as one plus redshift to the 0.71 ± 0.19 power out to redshift eight (Ormerod et al. 202425), although intrinsic early-galaxy evolution remains an active confounding interpretation5. Nevertheless, Mechanism 1B remains <strong>incomplete (Category D)</strong> unless a successor microphysical theory simultaneously satisfies four falsification criteria: (1) equal redshifts measured by diffraction gratings and heterodyne receivers; (2) co-propagation of gravitational and electromagnetic waves to within one part in a quadrillion (GW1708177); (3) an achromatic photon-number depletion or local thermalization process preserving the 50 parts-per-million COBE/FIRAS blackbody3; and (4) a physical plasma-oscillation origin in Euclidean coordinates for the Planck 2018 multipole peaks8 and DESI DR2 acoustic ruler44.</p>
+<h4 id="lib-limitations"><strong>6.2 Limitations</strong></h4>
+<p>This investigation has three principal limitations: (1) full covariance Markov Chain Monte Carlo fits over raw DES light-curve catalogs, Pantheon+ 1,701-by-1,701 covariances, DESI DR2 13-element BAO chains, and Planck 2018 likelihoods could not be executed offline (not executed), leaving multi-parameter information-criterion rankings for external execution via METHODS_TO_REPRODUCE.md; (2) several secondary and archival citations lack complete co-author rosters or journal page ranges in the available source records and are explicitly flagged in BIBLIOGRAPHY.md; and (3) unresolved calibration tension between CMB-inferred (67.4 km/s/Mpc) and local distance-ladder (73.04 ± 1.04 km/s/Mpc, with TRGB measurements near 70 km/s/Mpc) slopes34 introduces benchmark normalization uncertainty in pure distance–redshift comparisons.</p>
+<h4 id="lib-conclusion-and-compliance-verification-statement"><strong>6.3 Conclusion and Compliance Verification Statement</strong></h4>
+<p><strong>ArcSecs Physical Mechanism &amp; Missing-Mechanism Statement:</strong> Within the ArcSecs constant-progression ontology, the most promising physical redshift channel is <strong>forward-coherent secular velocity-damped scalar transport (Mechanism 1B)</strong>, in which massive electromagnetic quanta transfer energy to a pervasive physical scalar field occupying cosmic volume while propagating at a monotonically decreasing signal speed over constant universal “When,” naturally widening supernova arrival intervals by the emission-to-detection speed ratio with zero angular blurring. However, constant-speed photon energy loss is quantitatively excluded (66.87 to 200.60 sigma on DES supernova durations; above 10 sigma on Tolman surface brightness; redshift ceiling 0.0000167 on COBE/FIRAS photon conservation), and Mechanism 1B currently lacks a verified microphysical interaction that shifts optical grating wavelengths and radio heterodyne frequencies equally, slows gravitational waves identically to one part in a quadrillion, and reproduces the CMB blackbody photon density and acoustic multipole peaks; resolving this missing interaction proceeds directly through an archival cross-band absorber redshift comparison and an untrained high-redshift supernova holdout test rather than restoring expanding spacetime.</p>
+<h3 id="lib-acknowledgments-disclosures-and-availability-statements"><strong>7. Acknowledgments, Disclosures, and Availability Statements</strong></h3>
+<ul>
+<li><strong>Acknowledgments:</strong> Empirical benchmark anchors derive from public releases of the Dark Energy Survey, Planck Collaboration, COBE/FIRAS, DESI Collaboration, LIGO/Virgo/Fermi/INTEGRAL, and JWST CEERS/UNCOVER programs.<br>
+</li>
+<li><strong>Author Contributions:</strong> The commissioned theoretical astrophysics workflow formulated the transport models, executed analytical derivations and numerical exclusion checks, compiled the claim–evidence ledger, and authored the manuscript and companion specifications.<br>
+</li>
+<li><strong>Competing-Interests Statement:</strong> Commissioned under the binding ArcSecs Research Charter; all quantitative exclusions, limitations, and missing mechanisms are reported transparently without suppression.<br>
+</li>
+<li><strong>Funding Statement:</strong> Commissioned as Independent Mission 04 (2026-11-23); no external grant numbers apply.<br>
+</li>
+<li><strong>Data-Availability Statement:</strong> All numerical benchmarks derive from cited peer-reviewed papers and official collaboration portals (DES, NASA LAMBDA, ESA Planck Legacy Archive, DESI DR2 index, LIGO Document Control Center).<br>
+</li>
+<li><strong>Code-Availability Statement:</strong> Analytical derivations, dimensional checks, executed Python verification outputs, and unexecuted catalog-pipeline instructions reside in the companion artifacts METHODS_TO_REPRODUCE.md and analysis/mechanisms_and_checks.py.</li>
+</ul>
+<h3 id="lib-source-linked-bibliography"><strong>8. Source-Linked Bibliography</strong></h3>
+<blockquote>
+<ol type="1">
+<li>White, R. M. T., Davis, T. M., Lewis, G. F., Brout, D., et al. (DES Collaboration). 2024. “The Dark Energy Survey Supernova Program: slow supernovae show cosmological time dilation out to z ~ 1.” <em>Monthly Notices of the Royal Astronomical Society</em>, 533(3), 3365–3378. DOI: https://doi.org/10.1093/mnras/stae2008; URL: https://academic.oup.com/mnras/article/533/3/3365/7738388; arXiv:2406.05050 (Peer-reviewed)1.<br>
+</li>
+<li>Goldhaber, G., et al. 2001. Supernova Cosmology Project light-curve duration study (35 SNe Ia, 0.30 ≤ z ≤ 0.70, exponent ~ 1.07 ± 0.06), as cited in White et al. (2024) (Peer-reviewed; full venue details not verified in available records)9.<br>
+</li>
+<li>Goldhaber, G., et al. 1997. Seven-supernova time-dilation study (0.3 &lt; z &lt; 0.5), as cited in White et al. (2024) (Peer-reviewed; full venue details not verified in available records)9.<br>
+</li>
+<li>Leibundgut, B., et al. 1996. “Time Dilation in the Light Curve of the Distant Type Ia Supernova SN 1995K” (z = 0.479), as cited in White et al. (2024) and ResearchGate record (Peer-reviewed; volume/page not verified in available records)2.<br>
+</li>
+<li>Blondin, S., et al. 2008. “Time Dilation in Type Ia Supernova Spectra at High Redshift” (35 spectra of 13 SNe Ia, 0.28 ≤ z ≤ 0.62), as cited in White et al. (2024) and Frontiers (2024) (Peer-reviewed; volume/page not verified in available records)2.<br>
+</li>
+<li>Lewis, G. F., &amp; Brewer, B. J. 2023. “Detection of the cosmological time dilation of high-redshift quasars.” <em>Nature Astronomy</em>, 7(10), 1265–1269. URL: https://arxiv.org/pdf/2306.04053 (Peer-reviewed)31.<br>
+</li>
+<li>Brewer, B. J., et al. (follow-up quasar variability scatter study, exponent 1.14 ± 0.34), as cited in Vavryčuk (2025) (Status/venue not verified in available records)27.<br>
+</li>
+<li>Planck Collaboration: Aghanim, N., et al. 2020. “Planck 2018 results. V. CMB power spectra and likelihoods.” <em>Astronomy &amp; Astrophysics</em>, 641, A5. DOI: https://doi.org/10.1051/0004-6361/201936386; arXiv:1907.12875 (Peer-reviewed)8.<br>
+</li>
+<li>Fixsen, D. J., et al. 1996. “The Cosmic Microwave Background Spectrum from the Full COBE FIRAS Data Set.” <em>The Astrophysical Journal</em>, 473, 576. URL: https://arxiv.org/pdf/astro-ph/9605054 (Peer-reviewed; full co-author list not printed in available records)6.<br>
+</li>
+<li>Mather, J. C., et al. 1994. Initial COBE/FIRAS CMB temperature and spectral distortion limits (2.726 ± 0.010 K), as cited in Fixsen et al. (1996) (Peer-reviewed; volume/page not verified in available records)6.<br>
+</li>
+<li>Bennett, C. L., et al. 1996. COBE DMR dipole amplitude (3.353 ± 0.024 mK), as cited in Fixsen et al. (1996) (Peer-reviewed; full initials/venue not verified in available records)6.<br>
+</li>
+<li>DESI Collaboration, et al. 2025a. “DESI DR2 results. I. Baryon acoustic oscillations from the Lyman alpha forest.” Official index: https://data.desi.lbl.gov/doc/papers/dr2/ (Collaboration release)42.<br>
+</li>
+<li>DESI Collaboration, et al. 2025b. “DESI DR2 results. II. Measurements of baryon acoustic oscillations and cosmological constraints.” <em>Physical Review D</em>, 112, 083515. arXiv:2503.14738; Official index: https://data.desi.lbl.gov/doc/papers/dr2/ (Peer-reviewed)42.<br>
+</li>
+<li>DESI Collaboration, et al. 2026. “DESI DR2 Results IV: Alcock-Paczynski measurements from the Lyman Alpha Forest and Cosmological Constraints.” Official index: https://data.desi.lbl.gov/doc/papers/dr2/ (Collaboration release)42.<br>
+</li>
+<li>Lodha, et al. 2025. “Extended dark energy analysis using DESI DR2 BAO measurements.” Official index: https://data.desi.lbl.gov/doc/papers/dr2/ (Collaboration supporting publication)42.<br>
+</li>
+<li>LIGO Scientific Collaboration, Virgo Collaboration, Fermi Gamma-Ray Burst Monitor, &amp; INTEGRAL. 2017. “Gravitational Waves and Gamma-rays from a Binary Neutron Star Merger: GW170817 and GRB 170817A.” <em>The Astrophysical Journal Letters</em>, 848, L13 (27 pp.). DOI: https://doi.org/10.3847/2041-8213/aa920c; Report LIGO-P1700308; arXiv:1710.05834 (Peer-reviewed)7.<br>
+</li>
+<li>Lubin, L. M., &amp; Sandage, A. 2001a. “The Tolman Surface Brightness Test for the Reality of the Expansion. II. The Effect of the Point-Spread Function and Galaxy Ellipticity on the Derived Photometric Parameters.” URL: https://arxiv.org/pdf/astro-ph/0102214 (Preprint / peer-reviewed series)54.<br>
+</li>
+<li>Lubin, L. M., &amp; Sandage, A. R. 2001b. “The Tolman Surface Brightness Test for the Reality of the Expansion. III. Hubble Space Telescope Profile and Surface Brightness Data for Early-Type Galaxies in Three High-Redshift Clusters.” <em>The Astronomical Journal</em>, 122, 1071–1083 (Peer-reviewed)38.<br>
+</li>
+<li>Lubin, L. M., &amp; Sandage, A. 2001c. “The Tolman Surface Brightness Test for the Reality of the Expansion. IV. A Measurement of the Tolman Signal and the Luminosity Evolution of Early-Type Galaxies.” <em>The Astronomical Journal</em>, 122(3), 1084–1103. URL: https://arxiv.org/abs/astro-ph/0106566 (Peer-reviewed)37.<br>
+</li>
+<li>Tolman, R. C. 1930, 1934. Foundational surface-brightness redshift scaling papers, as cited in Lubin &amp; Sandage (2001) (Peer-reviewed historical works)54.<br>
+</li>
+<li>Ormerod, K., Conselice, C. J., Adams, N. J., et al. 2024. JWST CEERS galaxy size–redshift evolution (1,395 galaxies, 0.5 ≤ z ≲ 8). <em>Monthly Notices of the Royal Astronomical Society</em>, 527, 6110 (Peer-reviewed)25.<br>
+</li>
+<li>Miller, T. B., et al. 2024. “JWST UNCOVERs the Optical Size - Stellar Mass Relation at 4&lt;z&lt;8: Rapid Growth in the Sizes of Low Mass Galaxies in the First Billion Years of the Universe.” arXiv:2412.06957 (Preprint)5.<br>
+</li>
+<li>Steinbring, E. 2007. “Are High-Redshift Quasars Blurry?” <em>The Astrophysical Journal</em>, 655, 714–717 (Peer-reviewed)4.<br>
+</li>
+<li>Zwicky, F. 1929. “On the red shift of spectral lines through interstellar space.” <em>Proceedings of the National Academy of Sciences</em>, as cited in White et al. (2024) and review literature (Peer-reviewed historical work)9.<br>
+</li>
+<li>Authors not printed in source record. 2021. “Bounding the photon mass with cosmological propagation of fast radio bursts.” <em>Physics Letters B</em>, 820, 136596. DOI: https://doi.org/10.1016/j.physletb.2021.136596 (Peer-reviewed)12.<br>
+</li>
+<li>Ran, J.-Y., Wang, B., et al. 2024. “Cosmology-Independent Photon Mass Limits from Localized Fast Radio Bursts by Using Artificial Neural Networks.” <em>Chinese Physics Letters</em>, 41(5), 059501. DOI: https://doi.org/10.1088/0256-307X/41/5/059501 (Peer-reviewed)10.<br>
+</li>
+<li>Bonetti, et al. 2016, 2017; Wu, et al. 2016; Shao, &amp; Zhang. 2017. FRB dispersion bounds on photon rest mass (FRB 150418, FRB 121102), as cited in UNLV and USTC reviews (Peer-reviewed; full co-authors/venues not printed in available records)11.<br>
+</li>
+<li>Authors not printed in source record (USTC group). 2024. Massive photon propagation in plasma (Proca 1936 framework). URL: https://arxiv.org/pdf/2409.04672 (Preprint)11.<br>
+</li>
+<li>Brout, D., Scolnic, D., Popovic, B., Riess, A. G., Carr, A., Zuntz, J., Kessler, R., et al. 2022. “The Pantheon+ analysis: Cosmological constraints.” <em>The Astrophysical Journal</em>, 938(2), 110 (Peer-reviewed)34.<br>
+</li>
+<li>Scolnic, D., Brout, D., Carr, A., Riess, A. G., Davis, T. M., Dwomoh, A., Jones, D. O., et al. 2022. “The Pantheon+ analysis: The full data set and light-curve release.” <em>The Astrophysical Journal</em>, 938(2), 113 (Peer-reviewed)34.<br>
+</li>
+<li>Riess, A. G., et al. 2022. SH0ES Cepheid–SN Ia local calibration (73.04 ± 1.04 km/s/Mpc), as cited in33 (Peer-reviewed; exact volume/page not verified in available records).<br>
+</li>
+<li>Freedman, et al. 2024. JWST Chicago-Carnegie Hubble Program (CCHP) TRGB status update, as cited in34 (Venue details not verified in available records).<br>
+</li>
+<li>Gupta, R. P. 2023. Covarying Coupling Constants and Tired Light (CCC+TL) hybrid model, as cited in22 (Peer-reviewed; exact venue details not printed in available records).<br>
+</li>
+<li>Authors not printed in source record. 2026. Evaluation of the Covarying Coupling Constants and Tired Light (CCC+TL) hybrid model against JWST and cosmic-chronometer data. <em>Monthly Notices of the Royal Astronomical Society</em>, 547(3), stag430. URL: https://academic.oup.com/mnras/article/547/3/stag430/8507252; arXiv:2508.04277 (Peer-reviewed)22.<br>
+</li>
+<li>Vavryčuk, V. 2025. “Time dilation observed in Type Ia supernova light curves and its cosmological consequences.” URL: https://arxiv.org/pdf/2506.19099 (Preprint)26.<br>
+</li>
+<li>Shamir, L. 2024; Lovyagin, N., et al. 2022. Tired-light and JWST high-redshift galaxy studies, as cited in22 (Venue details not verified in available records).<br>
+</li>
+<li>Piran, 1992; Norris, et al. 1994; Singh, &amp; Desai. 2022. Gamma-ray burst duration–brightness studies, as cited in White et al. (2024) and Frontiers (2024)9.</li>
+</ol>
+</blockquote>
+<h2 id="lib-part-ii-separate-companion-files-outside-the-export-safe-manuscript"><strong>Part II: Separate Companion Files (Outside the Export-Safe Manuscript)</strong></h2>
+<h3 id="lib-companion-file-methods_to_reproduce.md"><strong>Companion File: METHODS_TO_REPRODUCE.md</strong></h3>
+<h4 id="lib-execution-provenance"><strong>1. Execution Provenance</strong></h4>
+<ul>
+<li><strong>Executed Analytical &amp; Numerical Checks:</strong> DES-SN5YR likelihood penalties (Delta_chi2), benchmark vs. TL1/TL2 distance-modulus residuals (dmu), two-body elastic scattering angular blur (Theta_blur), Proca rest-mass dispersion lags (Delta_t), COBE/FIRAS greybody redshift limit (z_max), and two-sigma hybrid fraction upper limits (f_TL) were executed in Python and archived in Section B of analysis/mechanisms_and_checks.py3.<br>
+</li>
+<li><strong>Unexecuted Catalog Likelihoods (NOT EXECUTED):</strong> Raw light-curve refits on DES-SN5YR, 1,701×1,701 Pantheon+ covariance evaluations, Planck 2018 Plik TT/TE/EE multipole chains, and DESI DR2 13-element BAO covariance evaluations could not be executed offline without network data retrieval.</li>
+</ul>
+<h4 id="lib-step-by-step-protocol-for-full-catalog-reproduction-not-executed"><strong>2. Step-by-Step Protocol for Full Catalog Reproduction (NOT EXECUTED)</strong></h4>
+<blockquote>
+<ol type="1">
+<li>Initialize Python 3.11+ with numpy&gt;=1.26, scipy&gt;=1.12, astropy&gt;=6.0, emcee&gt;=3.1, and cobaya&gt;=3.5, fixing random seed 42.<br>
+</li>
+<li>Download public collaboration releases: DES-SN5YR (DOI:10.1093/mnras/stae200828), Planck 2018 legacy likelihoods via NASA LAMBDA (DOI:10.1051/0004-6361/2019363868), DESI DR2 BAO data (arXiv:2503.1473842), and GW170817/GRB 170817A catalog (LIGO-P170030847).<br>
+</li>
+<li>Partition the 1,504 DES-SN5YR supernovae into a training subset (0.1 &lt;= z &lt; 0.5) and an untrained holdout subset (0.5 &lt;= z &lt;= 1.2)9. Fit light-curve stretch w = (1 + z)^b per DECam filter (g, r, i, z) on training data and evaluate out-of-sample chi-squared and chromatic slope db/dlambda on the holdout subset.<br>
+</li>
+<li>Compute joint information criteria across Pure Constant-c Energy Loss (k = 1), Secular Velocity-Damped Hybrid (k = 3), and reference benchmark using AIC = chi2_min + 2k and BIC = chi2_min + k ln(N).</li>
+</ol>
+</blockquote>
+<h3 id="lib-companion-file-analysismechanisms_and_checks.py"><strong>Companion File: analysis/mechanisms_and_checks.py</strong></h3>
+<h4 id="lib-section-a-analytical-equations-dimensionalunit-checks"><strong>Section A: Analytical Equations &amp; Dimensional/Unit Checks</strong></h4>
+<blockquote>
+<ol type="1">
+<li><strong>Eq. (M0) Minimal Phenomenological Attenuation:</strong> 1 + z = lambda_obs / lambda_emit = E_emit / E_obs (dimensionless); dE/ds = -alpha * E (<math display="block"><semantics><mrow><mi>J</mi><mi>/</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">J/m</annotation></semantics></math> = <math display="block"><semantics><mrow><mn>1</mn><mi>/</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">1/m</annotation></semantics></math> * <math display="block"><semantics><mi>J</mi><annotation encoding="application/x-tex">J</annotation></semantics></math>); constant alpha = H_0 / c = 7.286e-27 m^-1 for H_0 = 67.4 km/s/Mpc (2.184e-18 s^-1); E(s) = E_emit * exp(-alpha * s) and s(z) = (c / H_0) * ln(1 + z).<br>
+</li>
+<li><strong>Eq. (M0b) Two-Body Elastic Scattering Blur:</strong> delta_E / E = (E / (m_t * c^2)) * (theta^2 / 2); summing N scatters to ln(1 + z) gives N * theta^2 = 2 * ln(1 + z) * (m_t * c^2 / E), so Theta_blur = sqrt(N) * theta = sqrt(2 * ln(1 + z) * m_t * c^2 / E) (<math display="block"><semantics><mrow><mi>r</mi><mi>a</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">rad</annotation></semantics></math>, independent of N).<br>
+</li>
+<li><strong>Eq. (M1A) Forward-Coherent Scalar Drag (Constant c):</strong> Lagrangian L = -1/4 F_munu F^munu + 1/2 (m_gamma * c / hbar)^2 A_mu A^mu + 1/2 (d_mu phi)(d^mu phi) - V(phi) - (g_phi_gamma / 4) * (phi / M_*) * F_munu F_tilde^munu - (beta_s / M_*) * (d_mu phi) * (A_nu F^munu); <span class="math display">$$g\_phi\_gamma / M\_\*$$</span> = <math display="block"><semantics><mrow><mi>G</mi><mi>e</mi><msup><mi>V</mi><mo>−</mo></msup><mn>1</mn></mrow><annotation encoding="application/x-tex">GeV^-1</annotation></semantics></math>. Radiative transfer equation (1/c) dn/dT + Omega . grad(n) = d/dnu <span class="math display">$$alpha\_phi \* c \* nu \* n$$</span> + D_theta * Laplacian_Omega(n) + j_nu - kappa_nu * n; homogeneous limit sets D_theta = 0, d(nu)/ds = -alpha_phi * nu, and b = 0.<br>
+</li>
+<li><strong>Eq. (M1B) Secular Velocity-Damped Scalar Transport:</strong> Fixed Euclidean separation D = integral_{T_emit}^{T_obs} v(T’) dT’; differentiating at dD = 0 gives v(T_obs) dT_obs = v(T_emit) dT_emit, yielding Delta_T_obs / Delta_T_emit = v(T_emit) / v(T_obs) = 1 + z (b = 1). Proca dispersion lag check: Delta_t = (D / (2*c)) * (m_gamma * c^2 / (h * nu))^2 (<math display="block"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> = <math display="block"><semantics><mrow><mi>m</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>m</mi><mi>/</mi><mi>s</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">m/(m/s)</annotation></semantics></math> * <math display="block"><semantics><mrow><mi>e</mi><mi>V</mi><mi>/</mi><mi>e</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">eV/eV</annotation></semantics></math>^2).<br>
+</li>
+<li><strong>Eq. (M2) Collective Plasma-Wake Drag:</strong> Minimal coupling H_int = -(e/(m_e*c)) p . A + (e<sup>2/(2*m_e*c</sup>2)) A^2; plasma frequency omega_p = sqrt(n_e * e^2 / (epsilon_0 * m_e)) (<math display="block"><semantics><mrow><mi>r</mi><mi>a</mi><mi>d</mi><mi>/</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">rad/s</annotation></semantics></math>); refractive dispersion n(nu) = sqrt(1 - (nu_p / nu)^2) (nu^-2 scaling); entropy density generation dS/dT = (u_rad * alpha_plasma * c) / T_IGM (<span class="math display">$$J/(m^3 \* K \* s)$$</span>).<br>
+</li>
+<li><strong>Eq. (M3) Euclidean Recession + Scalar Drag Hybrid:</strong> 1 + z_tot = (1 + z_kin) * (1 + z_TL) with 1 + z_TL = (1 + z_tot)^f_TL and 1 + z_kin = (1 + z_tot)^(1 - f_TL); effective duration exponent b_eff = 1 - f_TL. Distance scalings: d_L_TL1 = s * (1 + z)^0.5, d_L_TL2 = s * (1 + z). CMB greybody intensity without (1 + z)^-3 photon-number depletion: I_nu_obs(nu) = (1 + z)^3 * B_nu(T_0); z_max = (1 + 5e-5)^(1/3) - 1 = 1.67e-5.</li>
+</ol>
+</blockquote>
+<h4 id="lib-section-b-executed-numerical-verification-outputs-python-3-executed"><strong>Section B: Executed Numerical Verification Outputs (Python 3, Executed)</strong></h4>
+<ul>
+<li>Delta_chi2(b=0) vs. b_obs = 1.003: 40,240.4 (200.60 sigma, stat 0.005), 8,048.1 (89.71 sigma, quad 0.01118), 4,471.2 (66.87 sigma, linear 0.01500)3.<br>
+</li>
+<li>dmu(TL1 - LCDM) for z = <math display="block"><semantics><mrow><mn>0.1</mn><mo>,</mo><mn>0.5</mn><mo>,</mo><mn>1.0</mn><mo>,</mo><mn>1.5</mn><mo>,</mo><mn>2.0</mn><mo>,</mo><mn>5.0</mn><mo>,</mo><mn>10.0</mn></mrow><annotation encoding="application/x-tex">0.1, 0.5, 1.0, 1.5, 2.0, 5.0, 10.0</annotation></semantics></math>: <span class="math display">$$-0.155, \-0.611, \-0.966, \-1.201, \-1.374, \-1.939, \-2.383$$</span> mag3.<br>
+</li>
+<li>dmu(TL2 - LCDM) for z = <math display="block"><semantics><mrow><mn>0.1</mn><mo>,</mo><mn>0.5</mn><mo>,</mo><mn>1.0</mn><mo>,</mo><mn>1.5</mn><mo>,</mo><mn>2.0</mn><mo>,</mo><mn>5.0</mn><mo>,</mo><mn>10.0</mn></mrow><annotation encoding="application/x-tex">0.1, 0.5, 1.0, 1.5, 2.0, 5.0, 10.0</annotation></semantics></math>: <span class="math display">$$-0.052, \-0.171, \-0.213, \-0.206, \-0.181, \+0.006, \+0.221$$</span> mag3.<br>
+</li>
+<li>Theta_blur(z=1, E=2.0 eV): electron 595.1 rad (1.228e8 arcsec), proton 2.550e4 rad (5.259e9 arcsec), 1 eV target 0.8326 rad (1.717e5 arcsec), 1 meV target 0.02633 rad (5,430 arcsec)3.<br>
+</li>
+<li>Delta_t(1 Gpc) for m_gamma = 1.7e-15 eV: 8.696e-3 s (1 GHz), 3.478e-14 s (500 THz)3.<br>
+</li>
+<li>z_max(conditional FIRAS 50-ppm greybody normalization toy) = 1.67e-5; model-dependent, not a universal photon-slowing limit.<br>
+</li>
+<li>Toy-parameterization-only two-sigma f_TL ceiling (assuming b_eff = 1-f_TL): 1 - (1.003 - 2*0.01118) = 0.01936 (1.94% quadrature); 1 - (1.003 - 2*0.015) = 0.0270 (2.70% linear).</li>
+</ul>
+<h4 id="lib-section-c-unexecuted-catalog-pipeline-pseudocode-not-executed"><strong>Section C: Unexecuted Catalog Pipeline Pseudocode (NOT EXECUTED)</strong></h4>
+<blockquote>
+<ol type="1">
+<li>Read DES-SN5YR light-curve stretch catalog (z_HD, w_obs, sigma_w, band); split at z = 0.5.<br>
+</li>
+<li>Fit b_band via weighted least squares on z &lt; 0.5; freeze parameters and compute out-of-sample chi2 for b = 0, b = 1, and b = 1 - f_TL on z &gt;= 0.5.<br>
+</li>
+<li>Import DESI_DR2 13-element vector and 13x13 covariance; compute chi2_BAO = delta^T Cov^-1 delta.<br>
+</li>
+<li>Evaluate Planck_2018_plik likelihood via cobaya; compute Delta_AIC and Delta_BIC.</li>
+</ol>
+</blockquote>
+<h3 id="lib-companion-file-evidence_ledger.csv"><strong>Companion File: EVIDENCE_LEDGER.csv</strong></h3>
+<table>
+
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>claim_id</th>
+<th>statement</th>
+<th>category</th>
+<th>source_citation</th>
+<th>quantitative_value</th>
+<th>execution_status</th>
+<th>verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>C01</td>
+<td>DES-SN5YR Type Ia SN duration scaling exponent</td>
+<td>Observation</td>
+<td>White et al. (2024)2</td>
+<td>b = 1.003 ± 0.005 (stat) ± 0.010 (sys)</td>
+<td>Primary published</td>
+<td>Fixed benchmark</td>
+</tr>
+<tr class="even">
+<td>C02</td>
+<td>Exclusion of b=0 constant-c energy loss</td>
+<td>Derived Math</td>
+<td>White et al. (2024) + Check1</td>
+<td>Delta_chi2 = 4,471.2 (66.87s) to 40,240.4 (200.60s)</td>
+<td>Executed</td>
+<td>(C) Excluded</td>
+</tr>
+<tr class="odd">
+<td>C03</td>
+<td>Spectral aging in SN Ia matches (1+z)^-1</td>
+<td>Observation</td>
+<td>Blondin et al. (2008)32</td>
+<td>35 spectra of 13 SNe (0.28 &lt;= z &lt;= 0.62)</td>
+<td>Primary published</td>
+<td>Supports b ~ 1</td>
+</tr>
+<tr class="even">
+<td>C04</td>
+<td>Quasar variability timescale scales with (1+z)^n</td>
+<td>Observation</td>
+<td>Lewis &amp; Brewer (2023)31</td>
+<td>n = 1.28 +0.28/-0.29 (odds &gt; 10^5 over n=0)</td>
+<td>Primary published</td>
+<td>Supports b ~ 1</td>
+</tr>
+<tr class="odd">
+<td>C05</td>
+<td>Two-sigma upper bound on non-stretching fraction f_TL</td>
+<td>Derived Bound</td>
+<td>White et al. (2024) + Check2</td>
+<td>f_TL &lt;= 1.94% (quad) or 2.70% (linear)</td>
+<td>Executed</td>
+<td>Tightly bounded</td>
+</tr>
+<tr class="even">
+<td>C06</td>
+<td>Two-body elastic scatter angular blur at z=1</td>
+<td>Derived Math</td>
+<td>Kinematic formula3</td>
+<td>595.1 rad (e-), 0.02633 rad (1 meV)</td>
+<td>Executed</td>
+<td>(C) Excluded</td>
+</tr>
+<tr class="odd">
+<td>C07</td>
+<td>High-z quasar/galaxy sub-arcsecond sharpness</td>
+<td>Observation</td>
+<td>Steinbring (2007); Miller et al. (2024)4</td>
+<td>No cosmological blurring in high-z imaging</td>
+<td>Primary published</td>
+<td>Rules out 2-body</td>
+</tr>
+<tr class="even">
+<td>C08</td>
+<td>Tolman surface brightness dims as (1+z)^-3 to -4</td>
+<td>Observation</td>
+<td>Lubin &amp; Sandage (2001)37</td>
+<td>&gt;10 sigma exclusion of static no-evolution</td>
+<td>Primary published</td>
+<td>Excludes TL1</td>
+</tr>
+<tr class="odd">
+<td>C09</td>
+<td>JWST galaxy effective radius redshift scaling</td>
+<td>Observation</td>
+<td>Ormerod et al. (2024)25</td>
+<td>R_eff proportional to (1+z)^(-0.71 ± 0.19)</td>
+<td>Primary published</td>
+<td>Consistent w/ P11</td>
+</tr>
+<tr class="even">
+<td>C10</td>
+<td>Pure energy-loss TL1 Hubble-diagram offset</td>
+<td>Derived Math</td>
+<td>Distance modulus check3</td>
+<td>-0.966 mag at z=1.0; -1.374 mag at z=2.0</td>
+<td>Executed</td>
+<td>(C) Excluded</td>
+</tr>
+<tr class="odd">
+<td>C11</td>
+<td>COBE/FIRAS CMB blackbody residual &amp; limits</td>
+<td>Observation</td>
+<td>Fixsen et al. (1996)6</td>
+<td>Fixsen (1996): T=2.728±0.004 K (95% CL); Fixsen (2009): T=2.72548±0.00057 K; &lt;50 ppm;</td>
+<td>y</td>
+<td>&lt;15e-6</td>
+</tr>
+<tr class="even">
+<td>C12</td>
+<td>Max z for energy-only CMB without number dilution</td>
+<td>Derived Math</td>
+<td>Planckian dilution check3</td>
+<td>z_max = 1.67e-5</td>
+<td>Executed</td>
+<td>(C) Excluded</td>
+</tr>
+<tr class="odd">
+<td>C13</td>
+<td>Planck 2018 CMB TT/TE/EE acoustic peaks</td>
+<td>Observation</td>
+<td>Planck Collaboration (2020)8</td>
+<td>Multi-peak harmonic spectrum; H0=67.4±0.5</td>
+<td>Primary published</td>
+<td>Missing in TL</td>
+</tr>
+<tr class="even">
+<td>C14</td>
+<td>DESI DR2 BAO distances &amp; cosmological ratios</td>
+<td>Observation</td>
+<td>DESI Collaboration (2025, 2026)42</td>
+<td>D_H/r_d=8.632±0.098; D_M/r_d=38.99±0.52</td>
+<td>Primary published</td>
+<td>Fixed benchmark</td>
+</tr>
+<tr class="odd">
+<td>C15</td>
+<td>Proca photon rest-mass upper bound from 129 FRBs</td>
+<td>Observation</td>
+<td>Phys. Lett. B 820, 136596 (2021)12</td>
+<td>m_gamma &lt;= 2.2e-15 eV/c^2 (95% CL)</td>
+<td>Primary published</td>
+<td>Bounds Premise 1</td>
+</tr>
+<tr class="even">
+<td>C16</td>
+<td>GW170817 / GRB 170817A speed coincidence</td>
+<td>Observation</td>
+<td>LIGO/Virgo/Fermi/INTEGRAL (2017)7</td>
+<td>-3e-15 &lt;= (v_gw - c)/c &lt;= +7e-16</td>
+<td>Primary published</td>
+<td>Constrains v(T)</td>
+</tr>
+<tr class="odd">
+<td>C17</td>
+<td>Secular v(T) scalar transport yields b=1</td>
+<td>Hypothesis</td>
+<td>Integral derivative (M1B)</td>
+<td>Delta_T_obs/Delta_T_emit = v_emit/v_obs</td>
+<td>Analytical</td>
+<td>(D) Missing link</td>
+</tr>
+<tr class="even">
+<td>C18</td>
+<td>CCC+TL best-fit deviates from H(z) chronometers</td>
+<td>Observation/Eval</td>
+<td>MNRAS 547(3) stag430 (2026)23</td>
+<td>Significant deviation from cosmic chronometers</td>
+<td>Primary published</td>
+<td>Challenges CCC+TL</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lib-companion-file-experiments.csv"><strong>Companion File: EXPERIMENTS.csv</strong></h3>
+<table>
+
+
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>exp_id</th>
+<th>title</th>
+<th>target_hypothesis</th>
+<th>dataset_or_facility</th>
+<th>estimated_cost</th>
+<th>decisive_observable</th>
+<th>falsification_threshold</th>
+<th>status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>E01</td>
+<td>Archival Cross-Band Grating vs. Heterodyne Redshift Test</td>
+<td>Mechanism 1B (k-conserving v(T) slowing)</td>
+<td>SDSS/DESI/JWST NIRSpec + ALMA/VLA archival absorbers (z &gt; 1)</td>
+<td>Near-zero (archival)</td>
+<td>Fractional offset (z_lambda - z_nu)/(1 + z)</td>
+<td></td>
+<td>z_lambda - z_nu</td>
+</tr>
+<tr class="even">
+<td>E02</td>
+<td>DES-SN5YR Untrained High-z Holdout &amp; Chromaticity Test</td>
+<td>Mech 1A, Mech 3 hybrid fraction f_TL</td>
+<td>DES-SN5YR (train z&lt;0.5, holdout z&gt;=0.5, g/r/i/z)</td>
+<td>Zero (public catalog)</td>
+<td>Out-of-sample b(lambda) and f_TL</td>
+<td>f_TL &gt; 0.03 excluded;</td>
+<td>db/dlambda</td>
+</tr>
+<tr class="odd">
+<td>E03</td>
+<td>Localized FRB + Optical Transient Co-Arrival Dispersion</td>
+<td>Premise 1 Proca mass + Mech 2 plasma drag</td>
+<td>Localized CHIME/DSA-110 FRBs + optical follow-ups</td>
+<td>Low-Moderate</td>
+<td>Residual DM_gamma(z) vs. optical delay</td>
+<td>Nu^-2 residual scaling with z after IGM subtraction</td>
+<td>Ongoing (Ran et al. 2024)</td>
+</tr>
+<tr class="even">
+<td>E04</td>
+<td>High-z Lensed GW + EM Multi-Band Timing</td>
+<td>Premise 3 universal v(T) vs. GW170817</td>
+<td>LIGO/Virgo/KAGRA + Fermi/Swift at z &gt; 0.1</td>
+<td>Existing facilities</td>
+<td>Arrival offset Delta_t(z) across EM and GW</td>
+<td></td>
+<td>v_gw - v_EM</td>
+</tr>
+<tr class="odd">
+<td>E05</td>
+<td>Joint Planck + DESI DR2 + Pantheon+ AIC/BIC Benchmark</td>
+<td>Mech 3 Euclidean hybrid vs. CMB/BAO</td>
+<td>NASA LAMBDA + DESI DR2 + Pantheon+</td>
+<td>Zero (public data)</td>
+<td>Delta_AIC and Delta_BIC across joint likelihoods</td>
+<td>Delta_chi2 &gt; 25 excludes static/hybrid without acoustic phase</td>
+<td>Proposed (Not Executed)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lib-companion-file-bibliography.md"><strong>Companion File: BIBLIOGRAPHY.md</strong></h3>
+<p><em>(Mirrors Section 8 of the standalone manuscript with verified URLs/DOIs and publication-status metadata; no unprinted co-authors or unverified volume/page numbers added.)</em></p>
+<h3 id="lib-companion-file-advocacy_summary.md-plain-english-arcsecs-evidence-summary"><strong>Companion File: ADVOCACY_SUMMARY.md (Plain-English ArcSecs Evidence Summary)</strong></h3>
+<h4 id="lib-what-we-tested-and-why-it-matters"><strong>What We Tested and Why It Matters</strong></h4>
+<p>Under the ArcSecs framework, space and time are not physical fabrics that can stretch; instead, “Where” denotes geometric position and “When” denotes a constant universal progression. Because light carries mass-energy and slows down over cosmic progression under ArcSecs premises, Independent Mission 04 tested whether a physical interaction between traveling photons and fields or matter can explain why distant galaxies appear redshifted without invoking expanding space.</p>
+<h4 id="lib-what-the-observations-show"><strong>What the Observations Show</strong></h4>
+<p>Two precision measurements place severe empirical constraints on traditional non-expansion photon-loss models. First, across 1,504 Type Ia supernovae measured by the Dark Energy Survey out to redshift ~1.2, distant explosions rise and fade more slowly in direct proportion to one plus redshift (exponent 1.003 ± 0.0152). A constant-speed photon energy-loss model predicts zero widening of explosion durations and fails that dataset by more than 66 standard deviations; even in a hybrid model, non-stretching photon energy loss cannot exceed roughly 2 to 3 percent of total redshift3. Second, if photons lost energy by colliding with electrons, protons, or even ultra-light particles, distant galaxies and quasars would blur across thousands to billions of arcseconds, contradicting sharp astronomical imaging3. Likewise, reducing photon energies in a static volume without reducing photon numbers breaks the cosmic microwave background’s 50 parts-per-million blackbody spectrum beyond tiny local redshifts3.</p>
+<h4 id="lib-the-most-promising-arcsecs-pathand-its-cheapest-test"><strong>The Most Promising ArcSecs Path—and Its Cheapest Test</strong></h4>
+<p>Constant-speed “tired light” is excluded. However, <strong>ArcSecs Premise 3 (“Light slows down over time”)</strong> identifies a sharp physical opening: if a pervasive physical scalar field monotonically slows light’s propagation speed over constant progression, trailing photons from a supernova take longer to complete the journey than leading photons, <strong>widening observed light-curve durations by one plus redshift without stretching time itself</strong>. To mature into a viable theory, this slowing-light mechanism must still explain how diffraction-grating wavelengths and radio frequencies shift equally, why gravitational waves and gamma rays from GW170817 arrived in lockstep to one part in a quadrillion7, and how the cosmic microwave background acquires its blackbody density and acoustic peaks6. We can test the core slowing-light prediction immediately at near-zero cost by comparing optical grating redshifts against radio heterodyne redshifts in archival spectra of distant gas clouds above redshift one.</p>
+<h3 id="lib-companion-file-referee_challenges.md"><strong>Companion File: REFEREE_CHALLENGES.md</strong></h3>
+<blockquote>
+<ol type="1">
+<li><strong>Grating-Wavelength Versus Heterodyne-Frequency Paradox:</strong> A spatially homogeneous, time-varying refractive scalar medium conserves photon wavevector, keeping optical grating wavelengths unshifted while lowering radio heterodyne frequencies. Conversely, stretching wavelength while slowing propagation speed reduces frequency by the square of one plus redshift, predicting a supernova duration exponent of two—excluded by DES. What physical mechanism in Euclidean coordinates shifts both grating wavelength and heterodyne frequency by exactly one plus redshift while producing a duration exponent of unity?<br>
+</li>
+<li><strong>GW170817 / GRB 170817A Co-Propagation Bound:</strong> GW170817 and GRB 170817A arrived within 1.74 seconds across extragalactic distance, fixing the fractional difference between gravitational and electromagnetic speeds between minus 3 × 10^-15 and plus 7 × 10^-167. How can electromagnetic waves slow substantially over cosmic progression to generate cosmological redshift without desynchronizing from gravitational waves?<br>
+</li>
+<li><strong>Planckian Photon-Number Conservation ((1 + z)^3 Excess):</strong> Under this report’s specified unchanged-number-density/intensity-normalization toy model, a hotter initial blackbody develops a greybody excess; the 50-parts-per-million threshold near redshift 0.00001673 is conditional on that radiative-transfer assumption and is not a universal limit on all coherent photon-transfer laws. What achromatic physical sink removes the exact excess fraction of CMB photons without distorting the Planck curve?<br>
+</li>
+<li><strong>Origin of Planck 2018 Acoustic Peaks and DESI DR2 BAO Ruler:</strong> Planck 2018 temperature and polarization spectra8 and DESI DR2 galaxy and Lyman-alpha clustering correlations42 independently recover a coherent physical sound-horizon scale across gigaparsec volumes. Without an early coupled hot-plasma epoch, what physical mechanism in static or Euclidean recession produces correlated harmonic acoustic oscillations?<br>
+</li>
+<li><strong>Tolman Surface Brightness Dilution:</strong> Even when secular velocity damping stretches arrival rates and lowers photon energies by one factor of one plus redshift each, static Euclidean geometry still spreads flux over area proportional to distance squared rather than distance times one plus redshift squared, leaving a two-power deficit relative to bolometric surface-brightness dimming37. What physical attenuation or beam-spreading mechanism accounts for the missing dimming factor without blurring images?</li>
+</ol>
+</blockquote>
+<h5 id="lib-works-cited"><strong>Works cited</strong></h5>
+<blockquote>
+<ol type="1">
+<li>slow supernovae show cosmological time dilation out to z ~ 1, <a href="https://academic.oup.com/mnras/article/533/3/3365/7738388" rel="noopener noreferrer">https://academic.oup.com/mnras/article/533/3/3365/7738388</a><br>
+</li>
+<li>Slow supernovae show cosmological time dilation out to $z \sim 1, <a href="https://www.researchgate.net/publication/381294837_The_Dark_Energy_Survey_Supernova_Program_Slow_supernovae_show_cosmological_time_dilation_out_to_z_sim_1" rel="noopener noreferrer">https://www.researchgate.net/publication/381294837_The_Dark_Energy_Survey_Supernova_Program_Slow_supernovae_show_cosmological_time_dilation_out_to_z_sim_1</a><br>
+</li>
+<li><a href="http://docs.google.com/unknown_url" rel="noopener noreferrer">unknown_url</a><br>
+</li>
+<li>Tests and problems of the standard model in Cosmology - arXiv, <a href="https://arxiv.org/html/1701.08720v1" rel="noopener noreferrer">https://arxiv.org/html/1701.08720v1</a><br>
+</li>
+<li>JWST UNCOVERs the Optical Size - Stellar Mass Relation at 4 &lt; z &lt; 8, <a href="https://www.researchgate.net/publication/386964092_JWST_UNCOVERs_the_Optical_Size_-_Stellar_Mass_Relation_at_4z8_Rapid_Growth_in_the_Sizes_of_Low_Mass_Galaxies_in_the_First_Billion_Years_of_the_Universe" rel="noopener noreferrer">https://www.researchgate.net/publication/386964092_JWST_UNCOVERs_the_Optical_Size_-_Stellar_Mass_Relation_at_4z8_Rapid_Growth_in_the_Sizes_of_Low_Mass_Galaxies_in_the_First_Billion_Years_of_the_Universe</a><br>
+</li>
+<li>arXiv:astro-ph/9605054v1 10 May 1996, <a href="https://arxiv.org/pdf/astro-ph/9605054" rel="noopener noreferrer">https://arxiv.org/pdf/astro-ph/9605054</a><br>
+</li>
+<li>The Era of Gravitational Waves Astronomy - Indico, <a href="https://indico.cern.ch/event/1552499/contributions/6617406/attachments/3127978/5548425/Zaldarriaga.pdf" rel="noopener noreferrer">https://indico.cern.ch/event/1552499/contributions/6617406/attachments/3127978/5548425/Zaldarriaga.pdf</a><br>
+</li>
+<li>Planck 2018 results. V. CMB power spectra and likelihoods - arXiv, <a href="https://arxiv.org/abs/1907.12875" rel="noopener noreferrer">https://arxiv.org/abs/1907.12875</a><br>
+</li>
+<li>arXiv:2406.05050v2 <math display="block"><semantics><mrow><mi>a</mi><mi>s</mi><mi>t</mi><mi>r</mi><mi>o</mi><mo>−</mo><mi>p</mi><mi>h</mi><mi>.</mi><mi>C</mi><mi>O</mi></mrow><annotation encoding="application/x-tex">astro-ph.CO</annotation></semantics></math> 20 Aug 2024, <a href="https://lss.fnal.gov/archive/2024/pub/fermilab-pub-24-0293-ppd.pdf" rel="noopener noreferrer">https://lss.fnal.gov/archive/2024/pub/fermilab-pub-24-0293-ppd.pdf</a><br>
+</li>
+<li>Cosmology-Independent Photon Mass Limits from Localized Fast, <a href="https://cpl.iphy.ac.cn/article/10.1088/0256-307X/41/5/059501" rel="noopener noreferrer">https://cpl.iphy.ac.cn/article/10.1088/0256-307X/41/5/059501</a><br>
+</li>
+<li>arXiv:2409.04672v1 <math display="block"><semantics><mrow><mi>a</mi><mi>s</mi><mi>t</mi><mi>r</mi><mi>o</mi><mo>−</mo><mi>p</mi><mi>h</mi><mi>.</mi><mi>H</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">astro-ph.HE</annotation></semantics></math> 7 Sep 2024, <a href="https://arxiv.org/pdf/2409.04672" rel="noopener noreferrer">https://arxiv.org/pdf/2409.04672</a><br>
+</li>
+<li>Bounding the photon mass with cosmological propagation of fast, <a href="https://scoap3-prod-backend.s3.cern.ch/media/files/64204/10.1016/j.physletb.2021.136596.pdf" rel="noopener noreferrer">https://scoap3-prod-backend.s3.cern.ch/media/files/64204/10.1016/j.physletb.2021.136596.pdf</a><br>
+</li>
+<li>arXiv:2202.12897v1 <math display="block"><semantics><mrow><mi>a</mi><mi>s</mi><mi>t</mi><mi>r</mi><mi>o</mi><mo>−</mo><mi>p</mi><mi>h</mi><mi>.</mi><mi>C</mi><mi>O</mi></mrow><annotation encoding="application/x-tex">astro-ph.CO</annotation></semantics></math> 25 Feb 2022, <a href="https://research.iac.es/preprints/files/PP22021.pdf" rel="noopener noreferrer">https://research.iac.es/preprints/files/PP22021.pdf</a><br>
+</li>
+<li>Fundamental Ideas in Cosmology - GEA, <a href="https://www.gea.org.br/wp-content/uploads/2023/06/Fundamental-Ideas-in-Cosmology.pdf" rel="noopener noreferrer">https://www.gea.org.br/wp-content/uploads/2023/06/Fundamental-Ideas-in-Cosmology.pdf</a><br>
+</li>
+<li>arXiv:1701.08720v1 <math display="block"><semantics><mrow><mi>a</mi><mi>s</mi><mi>t</mi><mi>r</mi><mi>o</mi><mo>−</mo><mi>p</mi><mi>h</mi><mi>.</mi><mi>C</mi><mi>O</mi></mrow><annotation encoding="application/x-tex">astro-ph.CO</annotation></semantics></math> 30 Jan 2017, <a href="https://arxiv.org/pdf/1701.08720" rel="noopener noreferrer">https://arxiv.org/pdf/1701.08720</a><br>
+</li>
+<li>The Tolman Surface Brightness Test for the Reality of the Expansion, <a href="https://www.researchgate.net/publication/2231004_The_Tolman_Surface_Brightness_Test_for_the_Reality_of_the_Expansion_IV_A_Measurement_of_the_Tolman_Signal_and_the_Luminosity_Evolution_of_Early-Type_Galaxies" rel="noopener noreferrer">https://www.researchgate.net/publication/2231004_The_Tolman_Surface_Brightness_Test_for_the_Reality_of_the_Expansion_IV_A_Measurement_of_the_Tolman_Signal_and_the_Luminosity_Evolution_of_Early-Type_Galaxies</a><br>
+</li>
+<li>(PDF) Free Electrons Compton Scattering Can Produce an Illusion, <a href="https://www.researchgate.net/publication/362701914_Free_Electrons_Compton_Scattering_Can_Produce_an_Illusion_of_Expanding_Universe" rel="noopener noreferrer">https://www.researchgate.net/publication/362701914_Free_Electrons_Compton_Scattering_Can_Produce_an_Illusion_of_Expanding_Universe</a><br>
+</li>
+<li>The Origins of Redshift in a Static Universe<math display="block"><semantics><mrow><mi>v</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">v1</annotation></semantics></math> - Preprints.org, <a href="https://www.preprints.org/manuscript/202412.0837/v1" rel="noopener noreferrer">https://www.preprints.org/manuscript/202412.0837/v1</a><br>
+</li>
+<li>(PDF) From magnitudes and redshifts of supernovae, their light, <a href="https://www.researchgate.net/publication/259633989_From_magnitudes_and_redshifts_of_supernovae_their_light-curves_and_angular_sizes_of_galaxies_to_a_tenable_cosmology" rel="noopener noreferrer">https://www.researchgate.net/publication/259633989_From_magnitudes_and_redshifts_of_supernovae_their_light-curves_and_angular_sizes_of_galaxies_to_a_tenable_cosmology</a><br>
+</li>
+<li>Expanding or Static Universe: Emergence of a New Paradigm, <a href="https://www.scirp.org/journal/paperinformation?paperid=109629" rel="noopener noreferrer">https://www.scirp.org/journal/paperinformation?paperid=109629</a><br>
+</li>
+<li>The expanding universe model fails the test, <a href="https://starburstfound.org/downloads/physics/universe.pdf" rel="noopener noreferrer">https://starburstfound.org/downloads/physics/universe.pdf</a><br>
+</li>
+<li>Stringent constraint on the CCC+TL cosmology with H ⁡ ( z ) - H(z), <a href="https://arxiv.org/html/2508.04277v3" rel="noopener noreferrer">https://arxiv.org/html/2508.04277v3</a><br>
+</li>
+<li>Stringent constraint on the CCC + TL cosmology with H(z, <a href="https://academic.oup.com/mnras/article/547/3/stag430/8507252" rel="noopener noreferrer">https://academic.oup.com/mnras/article/547/3/stag430/8507252</a><br>
+</li>
+<li>Stringent constraint on the CCC+TL cosmology with $H(z … - arXiv, <a href="https://arxiv.org/pdf/2508.04277" rel="noopener noreferrer">https://arxiv.org/pdf/2508.04277</a><br>
+</li>
+<li>Evolution of Size, Mass, and Density of Galaxies Since Cosmic Dawn, <a href="https://arxiv.org/pdf/2510.13844" rel="noopener noreferrer">https://arxiv.org/pdf/2510.13844</a><br>
+</li>
+<li>Time dilation observed in Type Ia supernova light curves and … - arXiv, <a href="https://arxiv.org/html/2506.19099v1" rel="noopener noreferrer">https://arxiv.org/html/2506.19099v1</a><br>
+</li>
+<li>Time dilation observed in Type Ia supernova light curves and … - arXiv, <a href="https://arxiv.org/pdf/2506.19099" rel="noopener noreferrer">https://arxiv.org/pdf/2506.19099</a><br>
+</li>
+<li>slow supernovae show cosmological time dilation out to z ∼ 1., <a href="https://impact.ornl.gov/en/publications/the-dark-energy-survey-supernova-program-slow-supernovae-show-cos/" rel="noopener noreferrer">https://impact.ornl.gov/en/publications/the-dark-energy-survey-supernova-program-slow-supernovae-show-cos/</a><br>
+</li>
+<li>Slow supernovae show cosmological time dilation out to $z \sim 1, <a href="https://arxiv.org/abs/2406.05050" rel="noopener noreferrer">https://arxiv.org/abs/2406.05050</a><br>
+</li>
+<li>Slow supernovae show cosmological time dilation out to z∼1. - arXiv, <a href="https://arxiv.org/html/2406.05050v1" rel="noopener noreferrer">https://arxiv.org/html/2406.05050v1</a><br>
+</li>
+<li>Detection of the Cosmological Time Dilation of High Redshift Quasars, <a href="https://arxiv.org/pdf/2306.04053" rel="noopener noreferrer">https://arxiv.org/pdf/2306.04053</a><br>
+</li>
+<li>Constraining the minimally extended varying speed of light model, <a href="https://www.frontiersin.org/journals/astronomy-and-space-sciences/articles/10.3389/fspas.2024.1453806/full" rel="noopener noreferrer">https://www.frontiersin.org/journals/astronomy-and-space-sciences/articles/10.3389/fspas.2024.1453806/full</a><br>
+</li>
+<li>Dark energy constraints from Pantheon+ Ia supernovae data - arXiv, <a href="https://arxiv.org/pdf/2311.04759" rel="noopener noreferrer">https://arxiv.org/pdf/2311.04759</a><br>
+</li>
+<li>desi baryon acoustic oscillation measurements and the evolving, <a href="https://sapcraa.com/api/articles/1528/pdf" rel="noopener noreferrer">https://sapcraa.com/api/articles/1528/pdf</a><br>
+</li>
+<li>Vacuum.Net Theory and Cosmology - Hans Konstapel Blogs, <a href="https://constable.blog/wp-content/uploads/Konstapel_2026_Vacuum_Net_Theory_and_Cosmology.pdf" rel="noopener noreferrer">https://constable.blog/wp-content/uploads/Konstapel_2026_Vacuum_Net_Theory_and_Cosmology.pdf</a><br>
+</li>
+<li>Hubble Constant Tension in SNe Ia Data | PDF - Scribd, <a href="https://www.scribd.com/document/901219269/2501-11772v1" rel="noopener noreferrer">https://www.scribd.com/document/901219269/2501-11772v1</a><br>
+</li>
+<li>The Tolman Surface Brightness Test for the Reality of the Expansion, <a href="https://arxiv.org/abs/astro-ph/0106566" rel="noopener noreferrer">https://arxiv.org/abs/astro-ph/0106566</a><br>
+</li>
+<li>The Tolman Surface Brightness Test for the Reality of the Expansion, <a href="https://www.semanticscholar.org/paper/The-Tolman-Surface-Brightness-Test-for-the-Reality-Lubin-Sandage/59a9533d5dd5fef3444c63d8b5c701b37610ed2c" rel="noopener noreferrer">https://www.semanticscholar.org/paper/The-Tolman-Surface-Brightness-Test-for-the-Reality-Lubin-Sandage/59a9533d5dd5fef3444c63d8b5c701b37610ed2c</a><br>
+</li>
+<li>COBE FIRAS CMB Spectrum Analysis | PDF - Scribd, <a href="https://www.scribd.com/document/885140760/ApJ-1996-473-576" rel="noopener noreferrer">https://www.scribd.com/document/885140760/ApJ-1996-473-576</a><br>
+</li>
+<li>Planck 2018 results: V. CMB power spectra and likelihoods, <a href="https://backend.orbit.dtu.dk/ws/files/222143996/aa36386_19.pdf" rel="noopener noreferrer">https://backend.orbit.dtu.dk/ws/files/222143996/aa36386_19.pdf</a><br>
+</li>
+<li>MQ’s Historical CMB Peak Construction | Technical Brief, <a href="https://www.informativity.org/measurement-quantization-historical-cmb-peak-construction-brief" rel="noopener noreferrer">https://www.informativity.org/measurement-quantization-historical-cmb-peak-construction-brief</a><br>
+</li>
+<li>DESI DR2 Publications - DESI Data, <a href="https://data.desi.lbl.gov/doc/papers/dr2/" rel="noopener noreferrer">https://data.desi.lbl.gov/doc/papers/dr2/</a><br>
+</li>
+<li>a differentiable JAX-based framework for cosmology inference - arXiv, <a href="https://arxiv.org/pdf/2606.28175" rel="noopener noreferrer">https://arxiv.org/pdf/2606.28175</a><br>
+</li>
+<li>DESI Collaboration’s research works - ResearchGate, <a href="https://www.researchgate.net/scientific-contributions/DESI-Collaboration-2117348402" rel="noopener noreferrer">https://www.researchgate.net/scientific-contributions/DESI-Collaboration-2117348402</a><br>
+</li>
+<li>Non-equilibrium Structures and Cosmic Evolution in Gravitational, <a href="https://zenodo.org/records/18117041/files/3-Daisuke_SATO-ORCID0009-0008-3878-4169_0101_Re0005.pdf?download=1" rel="noopener noreferrer">https://zenodo.org/records/18117041/files/3-Daisuke_SATO-ORCID0009-0008-3878-4169_0101_Re0005.pdf?download=1</a><br>
+</li>
+<li>Detectability of Spooky Quasar-Flux Correlation on the Sky, <a href="https://www.preprints.org/frontend/manuscript/faed3467204ad0277b6b74a0f747220c/download_pub" rel="noopener noreferrer">https://www.preprints.org/frontend/manuscript/faed3467204ad0277b6b74a0f747220c/download_pub</a><br>
+</li>
+<li><math display="block"><semantics><mn>1710.05834</mn><annotation encoding="application/x-tex">1710.05834</annotation></semantics></math> Gravitational Waves and Gamma-rays from a Binary, <a href="https://arxiv.org/abs/1710.05834" rel="noopener noreferrer">https://arxiv.org/abs/1710.05834</a><br>
+</li>
+<li>How do we know the speed of gravity? <math display="block"><semantics><mrow><mi>d</mi><mi>u</mi><mi>p</mi><mi>l</mi><mi>i</mi><mi>c</mi><mi>a</mi><mi>t</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">duplicate</annotation></semantics></math>, <a href="https://physics.stackexchange.com/questions/522652/how-do-we-know-the-speed-of-gravity" rel="noopener noreferrer">https://physics.stackexchange.com/questions/522652/how-do-we-know-the-speed-of-gravity</a><br>
+</li>
+<li>An Empirical Falsification of Kinematic Hubble Tension Solutions, <a href="https://mlsmawfield.com/tep/void/" rel="noopener noreferrer">https://mlsmawfield.com/tep/void/</a><br>
+</li>
+<li>Paul Shah from UCL Australia | Scilit, <a href="https://www.scilit.com/scholars/019f2806a0d7704db56784511c936c9e" rel="noopener noreferrer">https://www.scilit.com/scholars/019f2806a0d7704db56784511c936c9e</a><br>
+</li>
+<li>Detection of the cosmological time dilation of high-redshift quasars, <a href="https://www.courthousenews.com/wp-content/uploads/2023/06/Big-Bang-study.pdf" rel="noopener noreferrer">https://www.courthousenews.com/wp-content/uploads/2023/06/Big-Bang-study.pdf</a><br>
+</li>
+<li>On Dark Matter and Dark Energy in CCC+TL Cosmology, <a href="https://pdfs.semanticscholar.org/bb93/c96fd2a73da12a45d96344679c7d577e48b5.pdf" rel="noopener noreferrer">https://pdfs.semanticscholar.org/bb93/c96fd2a73da12a45d96344679c7d577e48b5.pdf</a><br>
+</li>
+<li>(PDF) The Cosmic Microwave Background Spectrum from the, <a href="https://www.researchgate.net/publication/1812435_The_Cosmic_Microwave_Background_Spectrum_from_the_FullCOBEFIRAS_Data_Set" rel="noopener noreferrer">https://www.researchgate.net/publication/1812435_The_Cosmic_Microwave_Background_Spectrum_from_the_FullCOBEFIRAS_Data_Set</a><br>
+</li>
+<li>arXiv:astro-ph/0102214v1 12 Feb 2001, <a href="https://arxiv.org/pdf/astro-ph/0102214" rel="noopener noreferrer">https://arxiv.org/pdf/astro-ph/0102214</a><br>
+</li>
+<li>The Universe according to DESI results - arXiv, <a href="https://arxiv.org/html/2409.19577v2" rel="noopener noreferrer">https://arxiv.org/html/2409.19577v2</a><br>
+</li>
+<li>An Analysis of Type 1a Supernovae Data With Newly Proposed, <a href="https://www.researchgate.net/publication/272692970_An_Alternative_Universe-Scale_Analytic_Metrology_and_Related_Cosmological_Model_An_Analysis_of_Type_1a_Supernovae_Data_With_Newly_Proposed_Distance_and_Brightness_Equations_Which_if_Valid_Would_Elimin" rel="noopener noreferrer">https://www.researchgate.net/publication/272692970_An_Alternative_Universe-Scale_Analytic_Metrology_and_Related_Cosmological_Model_An_Analysis_of_Type_1a_Supernovae_Data_With_Newly_Proposed_Distance_and_Brightness_Equations_Which_if_Valid_Would_Elimin</a><br>
+</li>
+<li>Photometric redshifts with surface brightness priors - Oxford Academic, <a href="https://academic.oup.com/mnras/article/387/3/1215/1026861" rel="noopener noreferrer">https://academic.oup.com/mnras/article/387/3/1215/1026861</a><br>
+</li>
+<li>Redshift Duality with Pantheon+SH0ES in a Planck-anchored Flat, <a href="https://arxiv.org/pdf/2606.02097" rel="noopener noreferrer">https://arxiv.org/pdf/2606.02097</a><br>
+</li>
+<li>Khostovan, Ali Ahmad; Kartaltepe, Jeyhan S.; Brinch, Malte, <a href="https://research.aalto.fi/files/220466487/EELG1002_-_Analog_of_Early_Galaxies.pdf" rel="noopener noreferrer">https://research.aalto.fi/files/220466487/EELG1002_-_Analog_of_Early_Galaxies.pdf</a><br>
+</li>
+<li>Contrasting Physical Imprints of Galaxy Evolution in Rest-Frame UV, <a href="https://arxiv.org/pdf/2608.18776" rel="noopener noreferrer">https://arxiv.org/pdf/2608.18776</a><br>
+</li>
+<li>Limits on the Weak Equivalence Principle and Photon Mass with, <a href="https://oasis.library.unlv.edu/cgi/viewcontent.cgi?article=1437&amp;context=physastr_fac_articles" rel="noopener noreferrer">https://oasis.library.unlv.edu/cgi/viewcontent.cgi?article=1437&amp;context=physastr_fac_articles</a><br>
+</li>
+<li>Redshift duality with Pantheon+SH0ES in a Planck-anchored flat, <a href="https://academic.oup.com/mnras/article/549/1/stag726/8659021" rel="noopener noreferrer">https://academic.oup.com/mnras/article/549/1/stag726/8659021</a><br>
+</li>
+<li>(PDF) Time dilation observed in Type Ia supernova light curves and, <a href="https://www.researchgate.net/publication/392980261_Time_dilation_observed_in_Type_Ia_supernova_light_curves_and_its_cosmological_consequences" rel="noopener noreferrer">https://www.researchgate.net/publication/392980261_Time_dilation_observed_in_Type_Ia_supernova_light_curves_and_its_cosmological_consequences</a></li>
+</ol>
+</blockquote>
+<h3 id="lib-arcsecs-interpretation-versus-observation-checkpoint-editorial-addition-r36">ArcSecs interpretation-versus-observation checkpoint (editorial addition, R36)</h3>
+<ul>
+<li><strong>Observed or calibrated quantities:</strong> Redshift spectra, supernova light-curve intervals, CMB spectral shape and angular image sharpness are measured in separate experiments.</li>
+<li><strong>What the observation does not determine by itself:</strong> It does not identify a unique fundamental physical ontology or interaction mechanism; experimental limits must remain explicitly labeled as limits.</li>
+<li><strong>ArcSecs mechanism-building task:</strong> Investigate physically coupled photon frequency, speed and arrival interval changes under constant progression, distinguishing failed energy-only toy laws from all possible future mechanisms.</li>
+<li><strong>Reproducible comparison / sources:</strong> DES 1504-supernova duration study, COBE/FIRAS, high-z galaxy imaging, DESI BAO.</li>
+<li><strong>Falsification rule:</strong> Retain every published measured quantity and uncertainty. If a specified ArcSecs mechanism fails that benchmark, record the failing assumption and design a more complete physical mechanism or a discriminating observation; do not erase or recast the measurement as a successful fit.</li>
+<li><strong>Scientific release status:</strong> Research working edition. Source bibliography, numerical calculations, author attribution and any claimed original simulations require independent scientific verification before journal submission.</li>
+</ul>
+<p><a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/index.md">Return to the full report index</a> · <a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/research/measurement-vs-inference.md">Observation-versus-inference research ledger</a></p>
+<h3 id="lib-uaix-navigation">UAIX navigation</h3>
+<p><a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/index.md">Research index</a> · <a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/research/measurement-vs-inference.md">Scope and evidence memo</a></p>

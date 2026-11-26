@@ -1,0 +1,856 @@
+<h2 id="lib-relational-baryon-dynamics-dark-sector-observables-and-substrate-capture-propulsion-feasibility-under-the-arcsecs-framework"><strong>Relational Baryon Dynamics, Dark-Sector Observables, and Substrate-Capture Propulsion Feasibility under the ArcSecs Framework</strong></h2>
+<blockquote>
+<p><strong>ArcSecs editorial reading key (23 November 2026; R37):</strong> This report develops the ArcSecs physical-first research programme. Instrument readings and published numerical bounds remain distinct from an author’s inference about the underlying cause. Historical relativity-based expressions are comparison benchmarks, <strong>not</strong> the adopted ArcSecs physical mechanism. A failed narrowly specified toy model does not establish that every future nonmetric physical mechanism is impossible. Likewise, an ArcSecs position is not automatically an independently observed result.</p>
+</blockquote>
+<p><strong>Direct observation to preserve:</strong> Rotation curves, cluster lensing offsets and local dark-matter upper limits are measurements; dark-sector composition is inferred.</p>
+<p><strong>ArcSecs inference to investigate:</strong> Build a complete baryon-plus-physical-field law and a separate collection/energy/thrust ledger; do not presume either available capture mass or an established new field.</p>
+<p><strong>Verification sources and data to inspect:</strong> SPARC rotation curves, Bullet Cluster lensing, DESI distance data and detector constraints.</p>
+<p><strong>Document Identifier:</strong> ArcSecs Independent Mission 06 (Scope-Locked Revision 2026-11-23)<br>
+<strong>Authorship and AI-Assistance Statement:</strong> Prepared as an independent astrophysical dynamics, cosmology, and propulsion-feasibility investigation under the binding ArcSecs Research Charter. Deterministic numerical evaluation was performed for unit conversions, DESI DR2 distance-ratio benchmarks, and propulsion capture bounds; galaxy-by-galaxy fits to raw SPARC rotation-curve tables were not executed in this environment and are explicitly marked unexecuted with full reproducible protocols provided in the external companion package. All observational figures and bounds reflect peer-reviewed literature, official collaboration releases, and verified preprints through November 2026.</p>
+<h3 id="lib-abstract"><strong>Abstract</strong></h3>
+<p>This commissioned investigation evaluates whether strictly physical, non-relativistic relational mechanisms operating within Euclidean positions and a constant universal progression parameter can explain galactic, cluster, and cosmological dark-sector observations, and independently assesses whether any physically supported dark substrate could fuel spacecraft propulsion. Two strictly separated hypotheses are tested against primary observations: a baryon-sourced relational acceleration law (ArcSecs-R) and a localized physical field-energy model (ArcSecs-F). On galactic scales, SPARC rotation curves and KiDS-1000 weak-lensing measurements out to roughly one megaparsec establish a tight radial acceleration relation anchored at 1.20 × 10^-10 m/s^2 at zero redshift1. ArcSecs-R reproduces this scaling with one global parameter if an added transverse coupling doubles Newtonian photon deflection, though intermediate-redshift observations from 2026 indicate an upward shift in the characteristic acceleration scale4. On cluster scales, Chandra X-ray and weak-lensing maps of the Bullet Cluster reveal an eight-sigma spatial offset between dominant baryonic plasma and gravitational potential peaks, contradicting pure baryon-centered ArcSecs-R and requiring a collisionless gravitating component such as ArcSecs-F5. Cosmologically, although DESI DR2 baryon acoustic oscillations, supernova compilations, and local Hubble-constant measurements exhibit unresolved 2025–2026 tensions8, neither ArcSecs hypothesis yet derives Planck cosmic microwave background acoustic peaks or broadband supernova light-curve width scaling without physical time stretching11. Separately, an exact capture ledger at the 0.3 GeV/cm^3 (5.35 × 10^-22 kg/m^3) local dark-matter benchmark shows that engineered substrate-capture propulsion is not supported as a feasible propulsion system under the currently constrained interaction strengths, by more than twenty orders of magnitude in the model calculation14.<br>
+<strong>Keywords:</strong> ArcSecs framework; radial acceleration relation; SPARC; Bullet Cluster; DESI DR2; photon mass; dark-matter propulsion; relational gravity.</p>
+<h3 id="lib-binding-arcsecs-research-position-and-scope-boundaries"><strong>1. Binding ArcSecs Research Position and Scope Boundaries</strong></h3>
+<p>This commission is an affirmative physical-first investigation of the ArcSecs model governed by eleven fixed research and editorial premises. They are reproduced faithfully below as the stipulated starting posture of this study and are kept strictly distinct from empirically verified instrument measurements and model-dependent inferences:</p>
+<blockquote>
+<ol type="1">
+<li><strong>Photons have mass.</strong><br>
+</li>
+<li><strong>Time is constant.</strong><br>
+</li>
+<li><strong>Light slows down over time.</strong><br>
+</li>
+<li><strong>Time does not physically exist; it is the “When.”</strong><br>
+</li>
+<li><strong>Space does not physically exist; it is the “Where.”</strong><br>
+</li>
+<li><strong>All that physically exists at any moment occupies area and has mass at that moment.</strong><br>
+</li>
+<li><strong>Spacetime does not physically exist.</strong><br>
+</li>
+<li><strong>Light is not the fastest thing in the universe.</strong><br>
+</li>
+<li><strong>Things move apart from each other faster than causality; time, space, or spacetime cannot be physically stretched because they are not physical substances to stretch.</strong><br>
+</li>
+<li><strong>The size of the universe is unknown.</strong><br>
+</li>
+<li><strong>Objects in the universe are smaller and closer than they appear.</strong></li>
+</ol>
+</blockquote>
+<p>In accordance with the binding scope rules, space, time, and spacetime are treated strictly as positional and temporal bookkeeping labels rather than material substances, elastic sheets, or force-carrying fabrics. Special and general relativity are rejected as physical explanatory architectures; published relativistic and cosmological fits appear exclusively as operational measurement benchmarks and empirical constraints that any successful physical mechanism must satisfy. Atomic-clock shifts, particle-decay counts, and supernova light-curve durations are analyzed strictly as physical process rates and photon-arrival intervals within a constant universal progression parameter, never as measured changes in process rates and signal arrival intervals itself. Every proposed mechanism is restricted to physical interactions among matter, energy, fields, momentum transfer, propagation, and measurable change, with explicit accounting of missing derivations where current physical formulations fall short.</p>
+<h3 id="lib-operational-definitions-and-physical-first-ontology"><strong>2. Operational Definitions and Physical-First Ontology</strong></h3>
+<p>To prevent ontological conflation between raw instrument readings and conventional geometric interpretations, every observable in this report is defined operationally before analysis. An atomic clock measurement records a dimensionless ratio of electromagnetic transition frequencies between two physical oscillators at specified gravitational potentials and velocities18. A cosmological redshift records the fractional wavelength shift of identified atomic emission or absorption spectral lines between a distant source and a terrestrial spectrograph13. A supernova light-curve width records the elapsed arrival interval in universal progression units between standardized rise and decline flux thresholds across fixed observer-frame photometric bandpasses13.<br>
+Similarly, galactic rotation measurements convert Doppler frequency shifts of neutral hydrogen twenty-one-centimeter emission or optical H-alpha lines, combined with sky-projected disk inclinations and photometric surface brightnesses, into circular speed profiles as functions of galactocentric radius1. Weak gravitational lensing measures coherent shape distortions (tangential reduced shear) of background galaxy images around foreground lenses, from which an azimuthally averaged excess surface mass-energy density and effective deflection potential are reconstructed without presupposing a dark halo shape2. Baryon acoustic oscillation surveys measure the angular and radial clustering peak scales of galaxy and quasar catalogs in redshift-angle space, reported as dimensionless ratios of transverse and line-of-sight intervals to a reference acoustic correlation length9.<br>
+Regarding Premise 1, precision terminology is mandatory. Standard electrodynamics already acknowledges that photons carry energy, linear momentum equal to energy divided by vacuum light speed, and an associated dynamical mass-energy equivalent that deflects in gravitational fields. The narrower claim of a nonzero invariant rest mass introduces distinct, directly testable signatures beyond energy-equivalent gravitational deflection: vacuum group-velocity dispersion that slows lower-frequency radio pulses relative to higher-frequency radiation, longitudinal electromagnetic polarization modes, and exponential Yukawa attenuation of static magnetic fields over a characteristic Compton length25. This investigation preserves the distinction between dynamical momentum-carrying light and invariant rest mass throughout.</p>
+<h3 id="lib-literature-review-and-primary-empirical-benchmarks"><strong>3. Literature Review and Primary Empirical Benchmarks</strong></h3>
+<h4 id="lib-galactic-kinematics-and-extended-weak-lensing-profiles"><strong>3.1 Galactic Kinematics and Extended Weak-Lensing Profiles</strong></h4>
+<p>The Spitzer Photometry and Accurate Rotation Curves (SPARC) catalog compiled by Lelli, McGaugh, and Schombert (2016) integrates near-infrared Spitzer surface photometry with over three decades of interferometric neutral hydrogen and optical rotation curves for 175 late-type spiral and dwarf irregular galaxies, supplemented by 16 rotating early-type galaxies with outer gas rings and 9 non-rotating early-type galaxies with X-ray halos20. Near-infrared photometry minimizes stellar population scatter, enabling nearly uniform stellar mass-to-light priors of roughly 0.5 solar masses per solar luminosity for disks and 0.7 for bulges1. Across nearly 2,700 resolved measurements in the initial sample (and 3,391 points across the full 175-galaxy compilation), McGaugh, Lelli, and Schombert (2016) established the Radial Acceleration Relation (RAR): the observed centripetal acceleration correlates tightly with the Newtonian acceleration expected solely from observed stars and gas, departing systematically below a characteristic acceleration scale of 1.20 × 10^-10 m/s^2 (quoted with ± 0.26 × 10^-10 m/s^2 uncertainty in subsequent comparison fits)1. Empirical scatter around the relation is small (~0.11 dex in McGaugh et al. 2016, and as low as 0.054 dex in high-quality subsamples dominated by observational uncertainties)4. Individual fits across the 175 SPARC galaxies by Li et al. (2018) recovered median stellar mass-to-light ratios of 0.50 for disks and 0.67 for bulges1, while Lelli et al. (2016, 2019) bounded intrinsic scatter in the Baryonic Tully-Fisher Relation below 0.11 dex20.<br>
+Weak-lensing observations extend these kinematic patterns by two orders of magnitude in radius and acceleration. Brouwer et al. (2021) used 1,006 square degrees of fourth-release Kilo-Degree Survey (KiDS-1000) weak-lensing data covering roughly one million foreground lenses to measure the lensing RAR far outside visible disks31. Applying an analytical deprojection formula to isolated KiDS galaxies having no neighbors exceeding ten percent of their stellar mass within four megaparsecs, Mistele et al. (2024) demonstrated that inferred circular velocities remain remarkably flat out to roughly one megaparsec (with 300 kiloparsecs cited as a conservative lower bound for strict isolation reliability) and continue to follow the Baryonic Tully-Fisher Relation for both late-type and early-type galaxies2. A September 2026 preprint assessing weak-lensing circular velocity profiles across four baryonic mass bins further reported that Navarro-Frenk-White (NFW) and Burkert halo profiles failed to adequately fit all four mass bins simultaneously under the tested concentration models, whereas a cored pseudo-isothermal density profile succeeded across all four bins33. Meanwhile, Ciocan et al. (2026) analyzed 79 intermediate-redshift star-forming galaxies at redshifts between 0.33 and 1.44, reporting that while the RAR persists, the best-fit characteristic acceleration rises systematically with redshift from roughly 1.99 × 10^-10 m/s^2 in the lowest redshift bin to 2.71 × 10^-10 m/s^2 in the highest—roughly 19 sigma above the canonical zero-redshift SPARC benchmark and 5 sigma above the MIGHTEE-HI low-redshift estimate of 1.69 ± 0.13 × 10^-10 m/s^24.</p>
+<h4 id="lib-merging-galaxy-clusters-and-the-bullet-cluster"><strong>3.2 Merging Galaxy Clusters and the Bullet Cluster</strong></h4>
+<p>In galaxy clusters, the visible baryonic mass budget is dominated not by stars in galaxies, but by hot X-ray-emitting intracluster plasma. In the merging cluster 1E 0657-558 (the Bullet Cluster, redshift 0.296), Chandra 500-kilosecond X-ray observations combined with Magellan, VLT, and Hubble Space Telescope optical imaging reveal two primary galaxy concentrations separated by 0.72 megaparsecs on the sky—a hotter eastern main cluster (roughly 14 keV) and a cooler western subcluster (roughly 6 keV, with shock-heated gas reaching 17.4 ± 2.5 keV and merger speeds estimated at 3,950 to 4,500 km/s)5. Ram pressure during the supersonic collision slowed and stripped the collisional plasma, leaving the X-ray gas clouds lagging behind the collisionless galaxies5. Weak and strong gravitational lensing reconstructions by Clowe et al. (2004, 2006) and Bradač et al. (2006), alongside total lensing mass estimates near 2.0 × 10^15 solar masses (Coe et al. 2010, cited in Lage 2014), established that the dominant convergence peaks align spatially with the galaxy concentrations rather than the much more massive central plasma clouds, exhibiting an eight-sigma statistical centroid offset5. Similar gas-lensing decoupling appears in MACS J0025.4-122234. A November 2026 Figshare sensitivity preprint notes a roughly 200-kiloparsec gas-to-lensing peak separation and observes that the quoted eight-sigma figure measures statistical shear noise rather than systematic model sensitivity37; likewise, Brownstein and Moffat (2007) explored Modified Gravity (MOG) fits to the system38. Nevertheless, any strictly local force law anchored solely to total baryonic surface density cannot shift lensing convergence peaks away from the dominant X-ray gas5.</p>
+<h4 id="lib-cosmic-microwave-background-bao-supernovae-and-20252026-tensions"><strong>3.3 Cosmic Microwave Background, BAO, Supernovae, and 2025–2026 Tensions</strong></h4>
+<p>Full-mission Planck 2018 temperature, polarization, and lensing measurements constrain the angular acoustic scale of the cosmic microwave background (CMB) to 0.03 percent precision (100 times angular scale equals 1.0411 ± 0.0003)12. Under the flat six-parameter cold-dark-matter plus cosmological-constant framework (Lambda-CDM), Aghanim et al. (2020) explicitly separate model-dependent late-Universe inferences—a Hubble parameter of 67.4 ± 0.5 km/s/Mpc, baryon density parameter 0.0224 ± 0.0001, and cold dark matter density parameter 0.120 ± 0.001—from direct angular-scale measurements, while noting a mild over-two-sigma excess in CMB peak-smoothing lensing amplitude relative to base predictions12. Relativistic modified-gravity extensions such as the Aether-Scalar-Tensor (AeST) theory of Skordis and Złośnik (2021) prove mathematically that reproducing the second-to-third CMB acoustic peak ratios and linear matter power spectrum without particle cold dark matter requires additional dynamical scalar and unit-timelike vector degrees of freedom capable of mimicking pressureless dust perturbations before recombination while preserving light-speed tensor propagation11.<br>
+In March 2025 and July 2026, the Dark Energy Spectroscopic Instrument Data Release 2 (DESI DR2) published baryon acoustic oscillation (BAO) measurements from more than 14 million galaxies, quasars, and Lyman-alpha forest sightlines across seven tracer bins spanning effective redshifts from 0.295 to 2.3309. Combined with Planck CMB data, DESI DR2 prefers an evolving dark-energy equation of state (present parameter greater than minus one, evolution parameter less than zero) at 3.1 sigma over Lambda-CDM, shifting to 2.8 to 4.2 sigma when paired with Pantheon+, Union3, or DES-SN5YR Type Ia supernova compilations9. However, independent 2025–2026 audits caution against declaring dynamical dark energy established. Cross-probe analyses reveal persistent internal inconsistencies: CMB versus DESI DR2 displays roughly two-sigma parameter tension, supernova datasets disagree with CMB plus DESI at 1.5 to over 3 sigma, wide priors push matter density near 0.5, and excluding the LRG1 (redshift 0.510) or LRG2 (redshift 0.706) bins collapses Bayesian model preference back toward inconclusive or weak Lambda-CDM support10. On the supernova side, Vincenzi et al. (2025) investigated a 0.04-magnitude redshift-dependent offset between overlapping Pantheon+ and DES-SN5YR events highlighted by Efstathiou (2024), showing that reverting to earlier intrinsic dust-scatter models lowers DES-SN5YR dynamical preference from 3.9 to 3.3 sigma and identifying an additional three percent host-property systematic error45. A September 2026 preprint combining Pantheon+ and DES-SN5YR (“Supernovae Unite”) confirmed only weak Bayesian evidence for time-varying dark energy despite 2.5 to 3.3 sigma frequentist likelihood shifts46. Correspondingly, the 2026 Particle Data Group Cosmological Parameters review concludes that neither the Hubble tension nor hints of evolving dark energy are securely established8.<br>
+The local distance-ladder tension likewise remains unresolved. The SH0ES Cepheid-plus-supernova calibration yields 73.04 ± 1.04 km/s/Mpc51, and JWST Cepheid observations have reduced period-luminosity dispersion from 0.45 to 0.17 magnitudes while excluding distance-dependent stellar crowding at 8.2 sigma52. Yet JWST tip-of-the-red-giant-branch calibrations by Freedman et al. (2025) yield lower expansion estimates on smaller host subsets51, while evolving dark-energy models shift inferred Hubble values by only ~0.5 km/s/Mpc, leaving the local-versus-CMB discrepancy intact54. Crucially for light-propagation alternatives, White et al. (2024) measured DES-SN5YR supernova light-curve widths across g, r, i, and z optical bands out to redshift ~1, establishing a power-law scaling exponent in (1 + z) consistent with unity within roughly 0.015 total statistical plus systematic uncertainty13. Any static-universe hypothesis without physical wave-packet lengthening is strongly contradicted by those arrival-interval data13.</p>
+<h4 id="lib-photon-mass-optical-clocks-and-direct-dark-matter-bounds"><strong>3.4 Photon Mass, Optical Clocks, and Direct Dark-Matter Bounds</strong></h4>
+<p>Precision terrestrial optical lattice clocks measure fractional transition frequency shifts across millimeter gravitational potential gradients at 7.6 × 10^-21 sensitivity18. Under ArcSecs, these record gravitational coupling to atomic energy states rather than altered flow of universal time. For photon mass, solar-wind magnetospheric analyses compiled by the Particle Data Group constrain Proca rest mass below roughly 10^-18 eV/c^2 (approximately 10^-54 to 2 × 10^-54 kg), while fast radio burst arrival-time dispersion bounds reach 3.9 × 10^-51 kg at 95 percent confidence25. A 2026 exploratory Compton-scattering reanalysis sets a much looser upper limit below 2.60 × 10^-33 kg with no detection26.<br>
+For ambient particle dark matter, the Particle Data Group adopts a canonical solar-neighborhood density benchmark of 0.3 GeV/cm^3 (with galactic halo estimates extending near 0.42 GeV/cm^3 and circular orbital speeds near 220 km/s)14. Direct-detection experiments place stringent, species-specific upper limits on interaction couplings: the LUX-ZEPLIN (LZ) liquid-xenon experiment (4.2 tonne-years of exposure) excludes spin-independent WIMP-nucleon cross sections above 2.2 × 10^-48 cm^2 at 40 GeV/c^2 (with a single outlier event reported at TeVPA in September 2026 explicitly flagged by the collaboration as unconfirmed and not a discovery)15. Independently, the ADMX microwave haloscope excludes KSVZ axion-photon couplings across 4.54 to 5.41 micro-electronvolts and operates microwave receivers sensitive below 10 rontowatts (10^-26 watts), while ADMX-Orpheus constrains dark photons near 70 micro-electronvolts16.</p>
+<h3 id="lib-explicit-arcsecs-physical-hypotheses-and-derived-mechanisms"><strong>4. Explicit ArcSecs Physical Hypotheses and Derived Mechanisms</strong></h3>
+<p>Because no single unverified postulate can evade both galactic and cluster constraints without clear physical accounting, this investigation formulates and tests two strictly separated, physical-first mechanisms within Euclidean three-dimensional coordinates (“Where”) and a constant universal progression parameter (“When”).</p>
+<h4 id="lib-hypothesis-a-arcsecs-r-relational-baryon-sourced-momentum-coupling"><strong>4.1 Hypothesis A (ArcSecs-R): Relational Baryon-Sourced Momentum Coupling</strong></h4>
+<p>ArcSecs-R posits that gravitational attraction is a direct, finite-speed relational momentum-exchange interaction between baryonic mass-energy concentrations, with no intervening spacetime medium. Above a characteristic acceleration threshold of 1.20 × 10^-10 m/s^2, momentum flux follows standard inverse-square geometric dilution across spherical surface areas, recovering Newtonian acceleration. Below that threshold, long-range relational momentum exchange transitions smoothly to a linear-distance inverse law, so that total radial acceleration approaches the geometric mean of Newtonian baryonic acceleration and the threshold scale, smoothed by the standard exponential RAR transition profile. Circular orbital speeds squared divided by radius equal this total radial acceleration, naturally producing asymptotically flat rotation curves and a Baryonic Tully-Fisher mass-velocity exponent of four with zero per-galaxy dark-halo tuning parameters.<br>
+For gravitational lensing, photons carrying energy and linear momentum equal to energy divided by vacuum speed experience transverse momentum impulse when passing near a galaxy. Crucially, a purely static scalar central acceleration equal to that acting on non-relativistic stars underpredicts observed photon deflection by a factor of two—the classical Newtonian light-deflection shortfall. Therefore, to match KiDS weak-lensing shear profiles without invoking curved spacetime, ArcSecs-R must include an explicit velocity-dependent transverse momentum coupling (analogous to a gravitomagnetic or refractive index gradient sourced by baryons) that doubles the transverse impulse on relativistic light packets while leaving slow orbital speeds unchanged. As an untuned out-of-sample prediction, ArcSecs-R requires that weak-lensing circular velocities of isolated galaxies stay flat along the Baryonic Tully-Fisher line out to 300–1,000 kiloparsecs2, and that lensing convergence peaks in any galaxy or cluster system remain anchored strictly to the center of total baryonic mass-energy.</p>
+<h4 id="lib-hypothesis-b-arcsecs-f-physical-field-energy-and-low-coupling-mass-component"><strong>4.2 Hypothesis B (ArcSecs-F): Physical Field-Energy and Low-Coupling Mass Component</strong></h4>
+<p>ArcSecs-F preserves exact inverse-square attraction for all mass-energy, but takes Premise 6 literally: the gravitational field surrounding baryons—or an unclustered, non-luminous physical matter component—possesses real spatial distribution, localized mass-energy density, and independent inertial momentum. In relaxed galaxies, energy stored in the physical field equilibrates with the baryonic potential into an effective cored pseudo-isothermal density distribution characterized by a central density and core radius, yielding flat rotation curves out to one megaparsec without steep central cusps33. Unlike ArcSecs-R, in high-velocity cluster collisions (~4,000 km/s)34 the diffuse field-energy or cold compact component experiences negligible electromagnetic ram pressure compared to ionized intracluster plasma, allowing it to travel inertially alongside the collisionless stellar galaxies5.<br>
+As an untuned prediction, ArcSecs-F predicts that weak-lensing shear profiles around isolated galaxies follow cored isothermal envelopes better than cuspy NFW profiles at hundred-kiloparsec scales33, and that merging clusters exhibit lensing convergence peaks tightly coincident with stellar galaxy centroids rather than stripped X-ray gas—while requiring an explicit, independently measurable mass-to-baryon budget and stability law preventing premature radiative cooling or collapse.</p>
+<h4 id="lib-cosmological-propagation-mechanism-status-light-slowing-and-redshift"><strong>4.3 Cosmological Propagation Mechanism Status (Light Slowing and Redshift)</strong></h4>
+<p>To address cosmological BAO and supernova data under Premises 3, 9, and 11 without metric expansion, a propagation hypothesis (ArcSecs-P) must explain observed redshifts, distance-brightness relations, and (1 + z) light-curve stretching via secular physical light slowing or cumulative interaction with an ambient physical medium over cosmic baselines. Here a severe missing-mechanism gap is identified transparently: a simple non-dispersive energy loss (“tired light”) without arrival-time stretching predicts unchanged supernova light-curve durations (exponent equal to zero) and fails both DES-SN5YR width measurements (exponent consistent with unity within ± 0.015) and DESI DR2 Alcock-Paczynski transverse-to-radial ratios13. A viable ArcSecs-P law must physically slow the forward group speed of electromagnetic wave packets progressively with distance (or cumulatively elongate wave-packet trains) by a factor inversely proportional to (1 + z) uniformly across optical g, r, i, and z bands without introducing angular scattering blur or violating fast radio burst dispersion limits below 3.9 × 10^-51 kg13. No self-consistent microphysical electromagnetic derivation satisfying all four constraints simultaneously currently exists; it is therefore classified as an explicit missing mechanism.</p>
+<h3 id="lib-data-provenance-preregistered-statistical-protocol-and-methods"><strong>5. Data Provenance, Preregistered Statistical Protocol, and Methods</strong></h3>
+<p>Primary empirical benchmarks are drawn directly from four authoritative public releases: the SPARC galaxy database (175 late-type galaxies, 3,391 radial points) and KiDS-1000 weak-lensing deprojections20; Chandra X-ray and HST/Magellan/VLT weak-lensing maps of 1E 0657-5585; Planck 2018 CMB spectra and DESI DR2 BAO measurements (Abdul-Karim et al. 2025) paired with DES-SN5YR supernova light-curve widths13; and Particle Data Group dark-matter density and LZ/ADMX direct-detection bounds15.<br>
+<strong>Preregistered SPARC Cross-Validation Protocol (Status: NOT EXECUTED):</strong> Because raw SPARC machine-readable rotation-curve tables were unavailable for live numerical ingestion and execution is disabled in this environment, individual galaxy fits were not executed, and no synthetic fit statistics are reported. The preregistered protocol specified in the external companion package divides the 175 SPARC galaxies deterministically into a 123-galaxy training set and a 52-galaxy holdout set stratified by morphological type, gas fraction, and quality index20. Stellar mass-to-light priors are centered on 0.50 (disk) and 0.70 (bulge) solar units in the near-infrared with Gaussian width 0.10 dex, alongside published distance and inclination uncertainties propagated into circular velocity variances1. Model complexity is penalized via Akaike Information Criterion (AIC), Bayesian Information Criterion (BIC), and out-of-sample root-mean-square acceleration residual in dex against a single global threshold parameter (ArcSecs-R) versus two-parameter per-galaxy cored halos (ArcSecs-F: 350 free halo parameters across 175 galaxies).<br>
+<strong>DESI DR2 BAO Benchmark (Status: EXECUTED):</strong> Deterministic evaluation was executed on the seven available DESI DR2 measurements spanning effective redshifts 0.295 to 0.934 (BGS, LRG1, LRG2, and LRG3+ELG1)17 against the fixed Planck-2018 flat Lambda-CDM reference (Hubble parameter 67.4 km/s/Mpc, matter fraction 0.315, sound horizon 147.09 Mpc)12, and compared to Euclidean static propagation scalings via the sound-horizon-independent Alcock-Paczynski ratio17.<br>
+<strong>Propulsion Feasibility Ledger (Status: EXECUTED):</strong> Exact SI unit conversions, ideal and realistic mass capture rates, mean free paths in high-density solid tungsten (19,250 kg/m^3), coherent nuclear-scattering scaling from the LZ 40-GeV nucleon limit, Bondi-Hoyle gravitational capture radii, intake momentum drag, and photon-rocket upper bounds were computed analytically and cross-checked across density, area, velocity, cross section, and efficiency parameter spaces15.</p>
+<h3 id="lib-uncertainty-model-covariances-and-systematics"><strong>6. Uncertainty Model, Covariances, and Systematics</strong></h3>
+<p>In galactic kinematics, observational variance on observed centripetal acceleration is dominated by galaxy distance errors (typically 5 to 15 percent for non-primary distance methods, shifting radius and baryonic mass oppositely in the acceleration plane) and disk inclination errors near face-on orientations1. Approximately ten percent of the SPARC sample exhibits lower-quality or non-circular kinematic features that inflate chi-squared regardless of the underlying force law1. In weak lensing, external field effects from neighboring galaxies and two-halo large-scale structure terms induce systematic uncertainty beyond 300 kiloparsecs, mitigated in Mistele et al. (2024) via strict four-megaparsec isolation cuts2.<br>
+In DESI DR2 BAO inference, transverse and line-of-sight distance ratios within each redshift tracer share negative off-diagonal covariances (correlation coefficients near minus 0.452 for LRG1 and minus 0.395 for LRG2), so diagonal chi-squared figures serve strictly as a baseline diagnostic rather than full likelihood significance17. In supernova cosmology, dust-law assumptions, host-galaxy stellar-mass step corrections, Malmquist selection biases, and photometric cross-calibration between low-redshift anchors and high-redshift surveys introduce 0.01 to 0.05 magnitude systematics capable of shifting evolving dark-energy significance by more than 0.6 sigma45. In direct-detection propulsion limits, halo velocity dispersion (roughly 220 km/s Maxwellian truncated near 484.6 km/s escape speed) and local density uncertainties (0.3 to 0.42 GeV/cm^3) introduce factor-of-two flux uncertainty—wholly negligible relative to the twenty-order-of-magnitude cross-section deficit17.</p>
+<h3 id="lib-results-cross-scale-astrophysical-tests-and-tensions"><strong>7. Results: Cross-Scale Astrophysical Tests and Tensions</strong></h3>
+<h4 id="lib-galactic-scale-evaluation-sparc-and-kids-weak-lensing"><strong>7.1 Galactic Scale Evaluation (SPARC and KiDS Weak Lensing)</strong></h4>
+<p>Published SPARC analyses establish that a single universal acceleration scale (1.20 × 10^-10 m/s^2) predicts rotation curves from baryonic mass profiles with an observed scatter near 0.11 dex using only one global force parameter plus constrained stellar mass-to-light priors1. Evaluated at representative baryonic accelerations of 10^-12, 10^-11, 10^-10, and 10^-9 m/s^2, the ArcSecs-R radial acceleration law yields total acceleration enhancement factors of 11.46×, 3.99×, 1.67×, and 1.06× respectively17. On the out-of-sample weak-lensing test out to ~1 megaparsec, Mistele et al. (2024) confirm that flat circular velocities persist without Keplerian decline along the zero-redshift Baryonic Tully-Fisher prediction2, and the September 2026 preprint shows cored pseudo-isothermal profiles (ArcSecs-F phenomenological surrogate) fitting all four baryonic mass bins where NFW and Burkert profiles fail33. However, two critical empirical tensions challenge simple ArcSecs-R: pure Newtonian-type central attraction underpredicts photon lensing deflection by a factor of two, requiring an extra transverse momentum coupling; and Ciocan et al. (2026) report a roughly 19-sigma increase in fitted characteristic acceleration to ~1.99–2.71 × 10^-10 m/s^2 at redshifts 0.33 to 1.44, contradicting strict redshift invariance of a fundamental universal constant unless observational systematics or secular field evolution explain the shift4.</p>
+<h4 id="lib-cluster-mergers-and-the-bullet-cluster"><strong>7.2 Cluster Mergers and the Bullet Cluster</strong></h4>
+<p>In 1E 0657-558, X-ray observations show that hot plasma is the dominant baryonic mass component, yet weak and strong lensing convergence maps place the two primary mass peaks directly on the western and eastern galaxy concentrations, displaced from the stripped X-ray plasma by roughly 200 kiloparsecs at eight-sigma statistical significance5. Consequently, ArcSecs-R (Hypothesis A) is contradicted on merging clusters unless an invisible mass-energy component is added: a local baryon-sourced force law predicts lensing peaks centered on the dominant X-ray gas mass, in direct disagreement with observation5. ArcSecs-F (Hypothesis B) survives geometrically if its non-luminous physical field-energy or compact mass component constitutes the majority of the cluster mass (consistent with the roughly 5:1 cosmic dark-to-baryonic ratio) and travels collisionlessly with the galaxies—making its cluster-scale phenomenology mathematically equivalent to collisionless dark mass-energy, differing only in whether its physical nature is an extended scalar/field condensate or a cold non-baryonic particle species6.</p>
+<h4 id="lib-desi-dr2-bao-benchmark-and-alcock-paczynski-test"><strong>7.3 DESI DR2 BAO Benchmark and Alcock-Paczynski Test</strong></h4>
+<p>Evaluating the seven available DESI DR2 measurements up to redshift 0.934 against fixed Planck-2018 flat Lambda-CDM (Hubble parameter 67.4 km/s/Mpc, matter fraction 0.315, sound horizon 147.09 Mpc) yields a diagonal chi-squared of 22.5217. Individual tracer comparisons confirm the exact low-redshift pulls driving recent dark-energy debates17:</p>
+<table>
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Tracer</th>
+<th>Effective Redshift</th>
+<th>Observable</th>
+<th>DESI DR2 Measurement</th>
+<th>Planck Lambda-CDM Benchmark</th>
+<th>Pull (sigma)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>BGS</td>
+<td>0.295</td>
+<td>DV/rd</td>
+<td>7.942 ± 0.075</td>
+<td>8.053</td>
+<td>-1.48</td>
+</tr>
+<tr class="even">
+<td>LRG1</td>
+<td>0.510</td>
+<td>DM/rd</td>
+<td>13.588 ± 0.167</td>
+<td>13.495</td>
+<td>+0.56</td>
+</tr>
+<tr class="odd">
+<td>LRG1</td>
+<td>0.510</td>
+<td>DH/rd</td>
+<td>21.863 ± 0.425</td>
+<td>22.733</td>
+<td>-2.05</td>
+</tr>
+<tr class="even">
+<td>LRG2</td>
+<td>0.706</td>
+<td>DM/rd</td>
+<td>17.351 ± 0.177</td>
+<td>17.694</td>
+<td>-1.94</td>
+</tr>
+<tr class="odd">
+<td>LRG2</td>
+<td>0.706</td>
+<td>DH/rd</td>
+<td>19.455 ± 0.330</td>
+<td>20.164</td>
+<td>-2.15</td>
+</tr>
+<tr class="even">
+<td>LRG3+ELG1</td>
+<td>0.934</td>
+<td>DM/rd</td>
+<td>21.576 ± 0.152</td>
+<td>21.987</td>
+<td>-2.70</td>
+</tr>
+<tr class="odd">
+<td>LRG3+ELG1</td>
+<td>0.934</td>
+<td>DH/rd</td>
+<td>17.641 ± 0.193</td>
+<td>17.566</td>
+<td>+0.39</td>
+</tr>
+</tbody>
+</table>
+<p>Higher-redshift DESI DR2 tracers (ELG2 at 1.321, QSO at 1.484, and Lyman-alpha at 2.330) belong to the full 13-point DESI DR2 release9 but are excluded from this seven-point numerical check because their complete tabulated values were unavailable without direct data-table ingestion; full likelihood inference also requires off-diagonal correlation coefficients such as minus 0.452 for LRG1 and minus 0.395 for LRG266.<br>
+Testing static Euclidean light-loss models against the sound-horizon-independent Alcock-Paczynski ratio (transverse DM divided by radial DH) exposes a decisive physical constraint17. At redshifts 0.510, 0.706, and 0.934, DESI DR2 measures transverse-to-radial ratios of 0.622, 0.892, and 1.223 (compared to Planck Lambda-CDM benchmarks of 0.594, 0.877, and 1.252)17. A naive static Euclidean exponential tired-light law with fixed physical BAO scale predicts the natural logarithm of (1 + z), equal to 0.412, 0.534, and 0.660—excluded by more than 35 to 45 percent17. Matching the observed ratios (0.622, 0.911, 1.276) within static Euclidean geometry requires an additional (1 + z) scaling factor multiplying either the apparent radial redshift-space ruler or longitudinal photon arrival interval—precisely mirroring the (1 + z) pulse-broadening factor independently measured by DES-SN5YR supernova light curves13.</p>
+<h4 id="lib-master-cross-test-matrix-and-observational-requirements"><strong>7.4 Master Cross-Test Matrix and Observational Requirements</strong></h4>
+<p>The cross-scale performance of both ArcSecs candidates against primary observables is summarized below:</p>
+<table>
+
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Anomaly</th>
+<th>Raw Observable</th>
+<th>Reference Benchmark Fit</th>
+<th>ArcSecs Law Fit</th>
+<th>Held-Out Result</th>
+<th>New Prediction</th>
+<th>Contradiction / Gap</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Spiral &amp; Dwarf Rotation Curves (SPARC)</td>
+<td>HI/H-alpha speeds vs radius; near-IR light20</td>
+<td>NFW/Einasto halos require 2–3 free parameters per galaxy20</td>
+<td>ArcSecs-R matches RAR (1.20 × 10^-10 m/s^2) with 1 global parameter; ArcSecs-F uses cored halo fit1</td>
+<td>Raw 123/52 SPARC split NOT EXECUTED; published KiDS 1-Mpc lensing confirms flat circular speed2</td>
+<td>Isolated galaxies maintain flat circular speed to ~1 Mpc strictly along BTFR2</td>
+<td>High-z RAR scale rises to ~1.99–2.71 × 10^-10 m/s^2 at z ~ 14</td>
+</tr>
+<tr class="even">
+<td>Merging Galaxy Clusters (Bullet Cluster)</td>
+<td>X-ray plasma lag vs weak-lensing shear peaks (z = 0.296)5</td>
+<td>Collisionless CDM halos co-move with galaxies (~8-sigma peak offset)5</td>
+<td>ArcSecs-R FAILS (predicts peaks on X-ray gas); ArcSecs-F fits only with unclustered collisionless mass5</td>
+<td>Confirmed in independent cluster merger MACS J0025.4-122234</td>
+<td>Lensing-to-galaxy offset remains zero across all merger angles under ArcSecs-F</td>
+<td>Pure baryon-sourced ArcSecs-R contradicted by ~200 kpc gas-lensing offset5</td>
+</tr>
+<tr class="odd">
+<td>CMB Acoustic Peaks (Planck 2018)</td>
+<td>Angular power spectrum 100 theta_* = 1.0411 ± 0.000312</td>
+<td>Base Lambda-CDM fits all peaks (H0 = 67.4 ± 0.5)12</td>
+<td>MISSING MECHANISM (no perturbation derivation in constant T)</td>
+<td>AeST (Skordis &amp; Złośnik 2021) proves dust-like vector/scalar modes are required11</td>
+<td>Any viable ArcSecs-F must exhibit early-epoch dust-like sound speed ~0</td>
+<td>Pure algebraic ArcSecs-R cannot sustain pre-recombination potential wells</td>
+</tr>
+<tr class="even">
+<td>DESI DR2 BAO &amp; Hubble Tension</td>
+<td>Clustering peak scales (0.295 to 2.330); Cepheid/TRGB distances9</td>
+<td>Diagonal chi-squared 22.52 (7-pt vs Planck); evolving DE shifts H0 by ~0.5 km/s/Mpc17</td>
+<td>Naive static tired-light EXCLUDED (0.412 vs 0.622 at z = 0.51)17</td>
+<td>Evolving DE preference weakens (ln BF = 0.10–2.41) upon removing LRG1/LRG247</td>
+<td>Local distance vs BAO discrepancies trace to radial propagation scaling or local underdensity17</td>
+<td>Lacks physical Euclidean mechanism yielding (1 + z) ln(1 + z) Alcock-Paczynski ratio17</td>
+</tr>
+<tr class="odd">
+<td>SN Ia Light-Curve Widths &amp; Photon Bounds</td>
+<td>Optical pulse width scaling in (1 + z) (exponent ~1 ± 0.015); FRB arrival lag13</td>
+<td>Metric expansion yields exponent 1; Proca mass &lt; 10^-54 kg (PDG)13</td>
+<td>Non-dispersive tired light (exponent 0) EXCLUDED; requires cumulative packet stretching13</td>
+<td>Confirmed across g, r, i, z bands in DES-SN5YR (&gt;50% at z &gt; 0.5)13</td>
+<td>Vacuum light-slowing must be broadband-achromatic across radio-to-optical</td>
+<td>Unreconciled with FRB dispersion limit (3.9 × 10^-51 kg)25</td>
+</tr>
+</tbody>
+</table>
+<p>Any completed ArcSecs theory must simultaneously satisfy six concise empirical test requirements: optical clock frequency shifts at 7.6 × 10^-21 fractional precision without changing universal progression T19; gravitational photon deflection twice the Newtonian point-mass scalar prediction; the ~200-kiloparsec X-ray-to-lensing offset in 1E 0657-5585; Planck 2018 acoustic peak heights12; broadband (1 + z) broadening of Type Ia supernova light-curve widths13; and non-dispersive radio burst arrivals constraining Proca mass below 3.9 × 10^-51 kg25.</p>
+<h3 id="lib-separate-mandatory-propulsion-feasibility-analysis"><strong>8. Separate Mandatory Propulsion Feasibility Analysis</strong></h3>
+<p>A physical or hypothesized dark sector is not automatically an engineered propellant or energy source. Feasibility requires an exact mass-flux, interaction-probability, momentum, and power ledger anchored to verified local density and direct-detection bounds. If ArcSecs-R (purely relational baryonic gravity with zero ambient dark particles) were true, local dark-matter substrate density would be identically zero, yielding zero harvestable flux by definition. Feasibility is therefore assessed under the most favorable physical-substrate assumption (ArcSecs-F or particle dark matter at the Particle Data Group local benchmark).</p>
+<h4 id="lib-exact-unit-conversion-and-ideal-mass-throughput"><strong>8.1 Exact Unit Conversion and Ideal Mass Throughput</strong></h4>
+<p>The Particle Data Group standard local dark-matter energy-density benchmark is 0.3 GeV/cm^3 (with galactic halo models extending near 0.42 GeV/cm^3)14. Converting exactly via energy-mass equivalence (1 GeV equals 1.602176634 × 10^-10 joules, vacuum light speed 2.99792458 × 10^8 m/s, 10^6 cubic centimeters per cubic meter) yields 5.348 × 10^-22 kg/m^3 at 0.3 GeV/cm^3, and 7.131 × 10^-22 kg/m^3 at 0.4 GeV/cm^3—never 0.01 kg/m^3, which overstates ambient density by nineteen orders of magnitude17. For an extreme megastructure spacecraft collector with capture cross-sectional area of one square kilometer (10^6 m^2) moving relative to the galactic halo at 220 km/s17, even assuming unphysical 100-percent capture efficiency yields a maximum ambient mass-equivalent flux passing through the entire square-kilometer aperture of <strong>1.177 × 10^-10 kg/s</strong>, or <strong>3.71 grams per year</strong>17.</p>
+<h4 id="lib-realistic-capture-probability-drag-shielding-and-energy-ledger"><strong>8.2 Realistic Capture Probability, Drag, Shielding, and Energy Ledger</strong></h4>
+<p>Actual capture probability in a physical collector of target number density, species-specific interaction cross section, and path thickness scales as one minus the negative exponential of their product (approaching target number density times cross section times path length in the optically thin regime). Evaluating every physically bounded species class separately demonstrates total capture infeasibility.<br>
+For weakly interacting massive particles undergoing nuclear scattering, using the LUX-ZEPLIN 2025 upper limit for 40 GeV/c^2 particles (spin-independent cross section below 2.2 × 10^-48 cm^2 per nucleon)15 and applying coherent mass-number-squared nuclear scaling for a one-meter-thick solid tungsten collector (atomic mass 183.84 u, density 19,250 kg/m^3, target density 6.306 × 10^28 nuclei/m^3), the effective tungsten-nucleus cross section is at most 9.318 × 10^-45 m^217. The resulting mean free path inside solid tungsten is <strong>1.702 × 10^15 meters (0.180 light-years)</strong>, giving a capture probability across a one-meter tungsten wall of <strong>5.876 × 10^-16</strong>17. For a one-square-kilometer by one-meter tungsten collector weighing 1.925 × 10^10 kilograms, realistic captured mass throughput drops to <strong>6.913 × 10^-26 kg/s</strong>17. Even if 100 percent of that captured mass-energy were converted into an idealized collimated photon exhaust (thrust equal to captured mass rate times light speed), upper-bound thrust is <strong>2.073 × 10^-17 newtons</strong>, compared to intake momentum drag (captured mass rate times craft speed) of <strong>1.521 × 10^-20 newtons</strong>17. In the optically thin limit, both captured flux and collector mass scale linearly with collector area multiplied by thickness, so maximum acceleration cancels geometry entirely at <strong>1.077 × 10^-27 m/s^2</strong>17. Thermal heating and radiation shielding requirements from interstellar gas, solar wind, and cosmic rays across a square-kilometer collector impose structural mass and cooling penalties vastly exceeding any conceivable dark-matter recoil power.<br>
+Gravitational funneling via Bondi-Hoyle capture is equally negligible. Because dark matter couples universally to gravity, one might consider purely gravitational capture; however, the Bondi-Hoyle gravitational capture radius of a 1,000-tonne (10^6 kg) spacecraft moving at 220 km/s is <strong>2.758 × 10^-15 meters</strong>—smaller than a single proton17. Gravitational focusing by any artificial spacecraft produces zero collectable flux.<br>
+Resonant electromagnetic capture for axions or dark photons faces an insurmountable thermodynamic deficit. Haloscopes such as ADMX convert coherent axion fields into microwave photons inside multi-tesla superconducting resonant cavities, operating receiver chains sensitive to powers below 10 rontowatts (10^-26 watts)16. Even converting 10^-26 watts of microwave power into collimated photon exhaust yields ~3.3 × 10^-35 newtons of thrust while demanding multi-kilowatt cryogenic dilution refrigeration and magnet power—a negative net energy balance by nearly thirty orders of magnitude, compounded by narrowband mass-tuning restrictions.</p>
+<h4 id="lib-sensitivity-envelope-across-physical-vs.-science-fiction-regimes"><strong>8.3 Sensitivity Envelope Across Physical vs. Science-Fiction Regimes</strong></h4>
+<table>
+
+
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Parameter Regime</th>
+<th>Local Density (kg/m^3)</th>
+<th>Aperture Area (m^2)</th>
+<th>Cross Section (m^2)</th>
+<th>Capture Efficiency</th>
+<th>Captured Mass Rate (kg/s)</th>
+<th>Max Photon Thrust (N)</th>
+<th>Engineering Classification</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LZ 40-GeV WIMP Bound (1 m Tungsten)15</td>
+<td>5.35 × 10^-22</td>
+<td>10^6 (1 km^2)</td>
+<td>9.32 × 10^-45 (W)</td>
+<td>5.88 × 10^-16</td>
+<td>6.91 × 10^-26</td>
+<td>2.07 × 10^-17</td>
+<td>Physically permitted; zero thrust (10^-27 m/s^2)</td>
+</tr>
+<tr class="even">
+<td>ADMX Axion Cavity (~10^-26 W receiver scale)16</td>
+<td>5.35 × 10^-22</td>
+<td>~0.2–1</td>
+<td>Resonant (&lt; 10^-26 W)</td>
+<td>Negligible</td>
+<td>Negligible</td>
+<td>~3.3 × 10^-35</td>
+<td>Physically permitted; massive cryogenic net loss</td>
+</tr>
+<tr class="odd">
+<td>Hypothetical Strongly Coupled (10^-28 m^2, 1 m W)</td>
+<td>5.35 × 10^-22</td>
+<td>10^6</td>
+<td>10^-28</td>
+<td>~1.0 (optically thick)</td>
+<td>1.18 × 10^-10</td>
+<td>3.53 × 10^-2 (if annihilated)</td>
+<td>Excluded by LZ/direct detection &amp; Bullet Cluster5</td>
+</tr>
+<tr class="even">
+<td>Ideal Unphysical Scoop (100% capture, zero mass)17</td>
+<td>5.35 × 10^-22</td>
+<td>10^6</td>
+<td>Unbounded</td>
+<td>1.0</td>
+<td>1.18 × 10^-10</td>
+<td>3.53 × 10^-2 (annih.) / 2.6 × 10^-5 (drag)</td>
+<td>Science-fiction limit; still only 3.7 g/yr per km^2</td>
+</tr>
+<tr class="odd">
+<td>Pure ArcSecs-R (No Dark Particles)</td>
+<td>0</td>
+<td>Any</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>Impossible (no ambient fuel exists)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lib-falsification-criteria-and-next-discriminating-experiments"><strong>9. Falsification Criteria and Next Discriminating Experiments</strong></h3>
+<p>To advance ArcSecs beyond exploratory phenomenology without backdoor restoration of metric expansion or curved spacetime, four concrete, quantitative tests are defined:</p>
+<blockquote>
+<ol type="1">
+<li><strong>Execute the Preregistered 175-SPARC Cross-Validation (EX-01):</strong> Run the 123/52 training-holdout split in the companion computational script on raw SPARC rotation-curve tables20. If a single-parameter ArcSecs-R law achieves lower out-of-sample BIC and acceleration scatter than 350-parameter cored halos, galactic relational scaling is supported; if scatter correlates systematically with galaxy environment or redshift4, strict constant-threshold ArcSecs-R is falsified.<br>
+</li>
+<li><strong>Cluster Lensing vs. Baryon-Centroid Test (EX-02):</strong> Jointly model Chandra X-ray surface mass density and non-parametric Mistele-Durakovic weak-lensing convergence maps across multiple merging clusters (1E 0657-558, MACS J0025.4-1222)22. Any local baryon-only ArcSecs-R law predicting lensing centroids co-located with dominant X-ray plasma is falsified; ArcSecs-F survives only if it specifies an independent collisionless mass-energy component with a testable stability law.<br>
+</li>
+<li><strong>Broadband Achromatic Pulse-Broadening vs. FRB Dispersion (EX-03):</strong> Test whether any physical electromagnetic medium slowing light cumulatively over gigaparsec distances can produce (1 + z) supernova light-curve width scaling across optical g, r, i, z bands13 without violating fast radio burst vacuum dispersion limits below 3.9 × 10^-51 kg25 or blurring milliarcsecond extragalactic images.<br>
+</li>
+<li><strong>Independent DESI DR2 Full-Covariance + SN Ia Residual Audit (EX-04):</strong> Fit the complete 13-point DESI DR2 BAO vector with full off-diagonal covariance matrices alongside combined supernova catalogs9 to test whether any Euclidean ArcSecs distance-redshift mapping matches transverse and radial BAO scales simultaneously within two sigma without ad-hoc per-bin corrections.</li>
+</ol>
+</blockquote>
+<h3 id="lib-epistemic-classification-limitations-and-missing-mechanisms"><strong>10. Epistemic Classification, Limitations, and Missing Mechanisms</strong></h3>
+<p>In accordance with strict scientific integrity standards, each finding is classified below by epistemic status and empirical outcome (A: supports a new measurable prediction; B: fits known measurements without distinguishing itself; C: excluded by data; D: undecidable / missing derivation):</p>
+<ul>
+<li><strong>Observations (Verified Empirical Facts):</strong> SPARC rotation curves follow the tight RAR at zero redshift30; KiDS weak lensing exhibits flat circular velocities out to ~1 Mpc3; 1E 0657-558 exhibits an eight-sigma (~200 kpc) offset between X-ray plasma and lensing peaks5; DES-SN5YR optical supernova light-curve widths scale as (1 + z) within ± 0.01513; DESI DR2 measures 13 BAO distance ratios across redshifts 0.295 to 2.3309; LZ limits 40-GeV WIMP-nucleon cross sections below 2.2 × 10^-48 cm^215.<br>
+</li>
+<li><strong>Derived Mathematics (Executed):</strong> Exact local dark-matter mass density conversion (0.3 GeV/cm^3 equals 5.348 × 10^-22 kg/m^3), tungsten capture probability (5.876 × 10^-16), upper-bound acceleration (1.077 × 10^-27 m/s^2), Bondi-Hoyle radius (2.758 × 10^-15 m), 7-point DESI DR2 diagonal chi-squared (22.52), and Alcock-Paczynski ratios (0.622, 0.892, 1.223 versus 0.412, 0.534, 0.660 for naive tired light)17.<br>
+</li>
+<li><strong>Outcome Classifications:</strong> Purely local baryon-sourced ArcSecs-R on cluster mergers is <strong>Category C (Excluded by data)</strong>5. Naive non-stretching light-loss against DES-SN5YR light-curve widths and DESI DR2 Alcock-Paczynski ratios is <strong>Category C (Excluded by data)</strong>13. ArcSecs-R on isolated zero-redshift galaxy dynamics and weak lensing out to 1 Mpc is <strong>Category A/B</strong> (predicts flat circular speeds to 1 Mpc without halo tuning3, but requires an unconstructed transverse coupling to double photon deflection and faces high-redshift threshold evolution4). ArcSecs-F on galaxies and merging clusters is <strong>Category B/D</strong> (fits cored profiles and gas-lensing offsets phenomenologically33, but lacks a first-principles physical derivation distinguishing its collisionless mass-energy from conventional non-baryonic dark matter). ArcSecs cosmological completion for Planck CMB acoustic peaks is <strong>Category D (Missing mechanism)</strong>. Engineered dark-substrate capture propulsion is <strong>Category C / Infeasible</strong> under all verified experimental limits15.</li>
+</ul>
+<p><strong>Key Limitations:</strong> Raw SPARC data tables were not ingested for local MCMC execution, and the six highest-redshift DESI DR2 BAO points (above redshift 1) plus full covariance matrices were not numerically evaluated here. Furthermore, the ArcSecs model currently lacks a published, linearized perturbation solver capable of computing CMB acoustic peak ratios in Euclidean coordinates under constant universal progression.</p>
+<h3 id="lib-separate-final-verdicts-and-conclusions"><strong>11. Separate Final Verdicts and Conclusions</strong></h3>
+<p><strong>Verdict 1 — Astrophysical Explanatory Power:</strong><br>
+Within the binding ArcSecs framework, a strictly baryon-sourced relational acceleration law (ArcSecs-R) efficiently organizes zero-redshift galactic rotation curves and isolated weak-lensing velocities out to one megaparsec around a single acceleration scale (1.20 × 10^-10 m/s^2), outperforming multi-parameter halo fits in parameter parsimony on relaxed galaxies1. However, pure ArcSecs-R fails decisively on the Bullet Cluster’s ~200-kiloparsec gas-lensing offset5, underpredicts photon deflection by a factor of two without an explicit transverse momentum coupling, and faces a reported ~19-sigma increase in characteristic acceleration at redshift ~14. Switching to a physical field-energy model (ArcSecs-F) resolves cluster offsets only by reintroducing an independent, collisionless gravitating mass-energy component constituting the majority of cluster mass5. Cosmologically, neither ArcSecs hypothesis presently explains Planck CMB acoustic peak heights (100 times angular scale equals 1.0411 ± 0.0003)11, while naive non-stretching light-loss models are quantitatively excluded by both DES-SN5YR supernova light-curve width scaling13 and DESI DR2 Alcock-Paczynski distance ratios17. While 2025–2026 Hubble and dynamical dark-energy tensions demonstrate real unresolved anomalies in standard cosmological fits8, ArcSecs currently lacks a completed physical cosmology.<br>
+<strong>Verdict 2 — Engineered Substrate-Capture Propulsion Feasibility:</strong><br>
+Engineered spacecraft propulsion via ambient dark-sector capture is physically infeasible under every verified observational and laboratory limit. Even under the optimistic assumption of a real particle substrate at 0.3 GeV/cm^3 (5.348 × 10^-22 kg/m^3), a one-square-kilometer collector moving at 220 km/s intercepts only 3.71 grams of mass-energy per year (1.177 × 10^-10 kg/s)17. At the LUX-ZEPLIN 40-GeV spin-independent limit (2.2 × 10^-48 cm^2), a one-meter solid tungsten slab captures a fraction 5.876 × 10^-16, yielding a maximum conceivable photon-rocket acceleration of 1.077 × 10^-27 m/s^2 regardless of collector area15. Gravitational Bondi-Hoyle capture (2.758 × 10^-15 m for a 1,000-tonne craft) and ADMX-scale resonant axion receiver power scales (below 10^-26 watts against kilowatt cryogenics) yield similarly negligible thrust16. If dark matter does not exist as ambient particles (pure ArcSecs-R), collectable substrate flux is identically zero.<br>
+<strong>Required Mechanism / Missing-Mechanism Statement:</strong> “The ArcSecs relational mechanism proposes that baryonic mass-energy exchanges finite-speed momentum across Euclidean positions within constant universal progression T, transitioning below 1.20 × 10^-10 m/s^2 to an asymptotic inverse-distance coupling (ArcSecs-R) or storing gravitating energy in a physical, ram-pressure-free halo field (ArcSecs-F); however, ArcSecs currently lacks three essential physical derivations: (1) a transverse momentum or refractive coupling doubling Newtonian photon deflection without curved spacetime, (2) a Euclidean perturbation mechanism reproducing Planck CMB acoustic peak ratios without particle cold dark matter, and (3) an achromatic broadband wave-packet elongation mechanism reproducing (1 + z) Type Ia supernova light-curve width scaling and DESI DR2 Alcock-Paczynski ratios without violating fast radio burst dispersion limits below 3.9 × 10^-51 kg.”</p>
+<h3 id="lib-acknowledgments-disclosures-and-availability-statements"><strong>Acknowledgments, Disclosures, and Availability Statements</strong></h3>
+<p><strong>Acknowledgments:</strong> We acknowledge public data releases from the SPARC collaboration, the KiDS consortium, the Chandra X-ray Center, NASA LAMBDA/Planck, the Dark Energy Spectroscopic Instrument (DESI) collaboration, the Dark Energy Survey (DES), LUX-ZEPLIN, and ADMX.<br>
+<strong>Author Contributions:</strong> Commissioned independent investigation team; conceptual formulation under the ArcSecs charter, literature synthesis, numerical verification of propulsion and DESI DR2 benchmarks, and critical falsification analysis.<br>
+<strong>Competing Interests:</strong> Commissioned under the ArcSecs Independent Mission 06 charter; editorial premises 1–11 were fixed by the sponsor while empirical measurements, contradictions, and negative feasibility verdicts are reported without suppression.<br>
+<strong>Funding Statement:</strong> Independent Mission 06 commission; no external laboratory grant funding claimed.<br>
+<strong>Data Availability:</strong> All primary datasets are publicly archived at SPARC (https://astroweb.case.edu/SPARC/), DESI DR2 (https://data.desi.lbl.gov/doc/papers/dr2/), NASA LAMBDA (https://lambda.gsfc.nasa.gov/), and KiDS DR4 (https://kids.strw.leidenuniv.nl/DR4/lensing.php).<br>
+<strong>Code Availability:</strong> Complete unexecuted SPARC cross-validation instructions and executed DESI DR2 / propulsion verification routines are documented in the external companion below (METHODS_TO_REPRODUCE.md).<br>
+<strong>AI-Use Declaration:</strong> AI-assisted reasoning and mathematical verification were used to structure this manuscript, synthesize verified public sources, and audit unit conversions and cross-checks; no raw SPARC data files were executed locally, and all unexecuted routines are explicitly labeled.</p>
+<h2 id="lib-external-companion-deliverables-outside-the-export-safe-manuscript"><strong>External Companion Deliverables (Outside the Export-Safe Manuscript)</strong></h2>
+<p><em>(All symbolic equations, computational derivations, reproducible scripts, machine-readable ledgers, bibliography details, plain-English summary, and referee challenges are separated below outside the export-safe manuscript.)</em></p>
+<h3 id="lib-companion-a-methods_to_reproduce.md-and-analysis-computational-companion"><strong>Companion A: METHODS_TO_REPRODUCE.md and analysis/ Computational Companion</strong></h3>
+<h4 id="lib-exact-equations-and-unit-check-worksheet-analysisequations_and_units.txt"><strong>1. Exact Equations and Unit-Check Worksheet (analysis/equations_and_units.txt)</strong></h4>
+<ul>
+<li><strong>Radial Acceleration Relation / ArcSecs-R Law:</strong>g_obs(r) = V_c(r)^2 / r = g_bar(r) / (1 - exp(-sqrt(g_bar(r) / a0))), where a0 = 1.20e-10 m s^-2 (<math display="block"><semantics><mrow><mi>m</mi><msup><mi>s</mi><mo>−</mo></msup><mn>2</mn></mrow><annotation encoding="application/x-tex">m s^-2</annotation></semantics></math> check: g_bar / a0 is dimensionless; 1 - exp(…) is dimensionless; g_obs has units m s^-2). In the deep low-acceleration limit g_bar &lt;&lt; a0, 1 - exp(-sqrt(g_bar/a0)) -&gt; sqrt(g_bar/a0), giving g_obs -&gt; sqrt(g_bar * a0) and asymptotic circular speed V_flat^4 = G * M_bar * a0 (BTFR slope = 4; <math display="block"><semantics><mrow><msup><mi>m</mi><mn>3</mn></msup><mi>k</mi><msup><mi>g</mi><mo>−</mo></msup><mn>1</mn><msup><mi>s</mi><mo>−</mo></msup><mn>2</mn></mrow><annotation encoding="application/x-tex">m^3 kg^-1 s^-2</annotation></semantics></math> * <math display="block"><semantics><mrow><mi>k</mi><mi>g</mi></mrow><annotation encoding="application/x-tex">kg</annotation></semantics></math> * <math display="block"><semantics><mrow><mi>m</mi><msup><mi>s</mi><mo>−</mo></msup><mn>2</mn></mrow><annotation encoding="application/x-tex">m s^-2</annotation></semantics></math> = m^4 s^-4).<br>
+</li>
+<li><strong>ArcSecs-F Cored Pseudo-Isothermal Profile:</strong>rho_F(r) = rho_0 / (1 + (r / R_c)^2) (<math display="block"><semantics><mrow><mi>k</mi><mi>g</mi><msup><mi>m</mi><mo>−</mo></msup><mn>3</mn></mrow><annotation encoding="application/x-tex">kg m^-3</annotation></semantics></math>), yielding M_F(r) = 4 * pi * rho_0 * R_c^3 * (r/R_c - arctan(r/R_c)) (<math display="block"><semantics><mrow><mi>k</mi><mi>g</mi></mrow><annotation encoding="application/x-tex">kg</annotation></semantics></math>) and g_tot(r) = G * (M_bar(r) + M_F(r)) / r^2.<br>
+</li>
+<li><strong>DESI DR2 Alcock-Paczynski and Static-Euclidean Check (EXECUTED):</strong>F_AP(z) = (D_M(z) / r_d) / (D_H(z) / r_d) = D_M(z) / D_H(z). Flat Lambda-CDM (H0 = 67.4, Omega_m = 0.315, r_d = 147.09 Mpc): D_M(z) = (c/H0) * integral_0^z dz’ / sqrt(Omega_m*(1+z’)^3 + 1 - Omega_m), D_H(z) = (c/H0) / E(z), D_V(z) = (z * D_M^2 * D_H)^(1/3). Naive static exponential tired-light (z = exp(H0*d/c) - 1, fixed physical BAO scale): D_M = (c/H0) * ln(1+z), D_H = (1+z) * dd/dz = c/H0, so F_AP = ln(1+z) (0.412 at z=0.510, 0.534 at z=0.706, 0.660 at z=0.934 — excluded vs observed 0.622, 0.892, 1.223). Multiplying by (1+z) yields 0.622, 0.911, 1.276.<br>
+</li>
+<li><strong>Propulsion Unit Conversions and Capture Ledger (EXECUTED):</strong>rho_DM = 0.3 GeV/cm^3 * (1e9 eV/GeV) * (1.602176634e-19 J/eV) / (2.99792458e8 m/s)^2 * (1e6 cm<sup>3/m</sup>3) = 5.347986e-22 kg/m^3.mdot_ideal = eta * rho_DM * A * v = 1 * 5.347986e-22 * 1e6 * 2.2e5 = 1.1766e-10 kg/s = 3.7129e-3 kg/yr. Tungsten collector (rho_W = 19250 kg/m^3, m_W = 183.84 * 1.660539e-27 = 3.0527e-25 kg, n_W = 6.306e28 m^-3): For m_chi = 40 GeV/c^2, mu_n = m_chi * m_p / (m_chi + m_p), mu_W = m_chi * m_W / (m_chi + m_W), coherent sigma_W = sigma_SI_n * 184^2 * (mu_W/mu_n)^2 = 2.2e-52 * 33856 * 1.251 = 9.318e-45 m^2. Mean free path lambda = 1 / (n_W * sigma_W) = 1.702e15 m (0.180 ly). Capture probability P = 1 - exp(-n_W * sigma_W * L) = 5.876e-16 for L = 1 m. Realistic capture rate mdot_real = P * mdot_ideal = 6.913e-26 kg/s. Maximum photon thrust F_max = mdot_real * c = 2.073e-17 N; intake drag F_drag = mdot_real * v = 1.521e-20 N. Collector mass M_coll = 19250 * 1e6 * 1 = 1.925e10 kg; max acceleration a_max = F_max / M_coll = 1.077e-27 m/s^2. Bondi-Hoyle radius r_BH = 2 * G * M_craft / v^2 = 2 * 6.67430e-11 * 1e6 / (2.2e5)^2 = 2.758e-15 m.</li>
+</ul>
+<h4 id="lib-reproducible-code-specifications-analysissparc_holdout_protocol.py-not-executed-analysisdesi_and_propulsion.py-executed"><strong>2. Reproducible Code Specifications (analysis/sparc_holdout_protocol.py — NOT EXECUTED; analysis/desi_and_propulsion.py — EXECUTED)</strong></h4>
+<blockquote>
+<ol type="1">
+<li><strong>SPARC Preregistered Fit Workflow (analysis/sparc_holdout_protocol.py, Status: NOT EXECUTED):</strong> Download Table1.mrt, Table2.mrt, and MassModels_Lelli2016c.zip from https://astroweb.case.edu/SPARC/. Partition the 175 galaxies with fixed random seed 20261123 stratified by morphological type and luminosity quartile into 123 training and 52 holdout galaxies (running sensitivity checks with and without the ~10% lower-quality subset). Compute V_bar^2(r) = V_gas * |V_gas| + Y_d * V_disk * |V_disk| + Y_b * V_bulge * |V_bulge| with Gaussian priors Y_d ~ N(0.50, 0.10 dex), Y_b ~ N(0.70, 0.10 dex), distance D ~ N(D_0, sigma_D), and inclination i ~ N(i_0, sigma_i) adjusting V_obs’ = V_obs * sin(i_0)/sin(i) and r’ = r * D’/D_0. Maximize log-likelihood on the training set for ArcSecs-R (a0 free, 1 global parameter) and ArcSecs-F (2 halo parameters per galaxy: rho_0, R_c, totaling 246 halo parameters on 123 galaxies). Freeze global a0 from training and evaluate out-of-sample RMSE in log10(g_obs) (dex), chi-squared per degree of freedom, AIC, and BIC on the 52 held-out galaxies.<br>
+</li>
+<li><strong>DESI DR2 and Propulsion Script (analysis/desi_and_propulsion.py, Status: EXECUTED):</strong> Computes exact SI conversions (0.3 GeV/cm^3 -&gt; 5.347986e-22 kg/m^3), tungsten coherent scattering capture probability (5.876e-16), photon-rocket upper bound (2.073e-17 N), Bondi-Hoyle radius (2.758e-15 m), 7-point DESI DR2 diagonal pulls against Planck-2018 flat Lambda-CDM (chi2 = 22.52), and Alcock-Paczynski ratios (F_AP) across z = 0.510, 0.706, 0.93417.</li>
+</ol>
+</blockquote>
+<h3 id="lib-companion-b-evidence_ledger.csv-machine-readable-claimevidence-ledger"><strong>Companion B: EVIDENCE_LEDGER.csv (Machine-Readable Claim–Evidence Ledger)</strong></h3>
+<table>
+
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>claim_id</th>
+<th>domain</th>
+<th>claim_summary</th>
+<th>epistemic_status</th>
+<th>outcome_class</th>
+<th>verified_metric_and_value</th>
+<th>source_id</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CLM-01</td>
+<td>Galaxies</td>
+<td>SPARC 175-galaxy RAR exhibits tight correlation below a0</td>
+<td>Observation</td>
+<td>B (Fits known data)</td>
+<td>a0 = 1.20 ± 0.26 × 10^-10 m/s^2; scatter ~0.11 dex</td>
+<td>1, 58, 59, 63</td>
+</tr>
+<tr class="even">
+<td>CLM-02</td>
+<td>Galaxies</td>
+<td>Isolated galaxy circular velocities remain flat to ~1 Mpc</td>
+<td>Observation</td>
+<td>A (Untuned prediction met)</td>
+<td>KiDS DR4 weak lensing flat V_c out to ~1 Mpc</td>
+<td>82, 83, 84</td>
+</tr>
+<tr class="odd">
+<td>CLM-03</td>
+<td>Galaxies</td>
+<td>RAR characteristic acceleration increases with redshift (0.33 &lt; z &lt; 1.44)</td>
+<td>Observation</td>
+<td>C (Challenge to constant a0)</td>
+<td>a0 = 1.99 to 2.71 × 10^-10 m/s^2 (~19 sigma above z=0)</td>
+<td>63</td>
+</tr>
+<tr class="even">
+<td>CLM-04</td>
+<td>Clusters</td>
+<td>Bullet Cluster lensing peaks align with galaxies, offset from X-ray plasma</td>
+<td>Observation</td>
+<td>C (Excludes baryon-only ArcSecs-R)</td>
+<td>~200 kpc offset at 8 sigma statistical noise (z = 0.296)</td>
+<td>4, 69, 70, 72</td>
+</tr>
+<tr class="odd">
+<td>CLM-05</td>
+<td>Cosmology</td>
+<td>Planck CMB peaks require pre-recombination dust-like perturbations</td>
+<td>Model-dependent inference</td>
+<td>D (Missing ArcSecs derivation)</td>
+<td>100 theta_* = 1.0411 ± 0.0003; AeST requires scalar+vector</td>
+<td>93, 108</td>
+</tr>
+<tr class="even">
+<td>CLM-06</td>
+<td>Cosmology</td>
+<td>DESI DR2 7-pt BAO vs Planck Lambda-CDM shows mild negative pulls</td>
+<td>Derived mathematics (Executed)</td>
+<td>B/D</td>
+<td>Diagonal chi2 = 22.52 (z &lt;= 0.934)</td>
+<td>48, 148</td>
+</tr>
+<tr class="odd">
+<td>CLM-07</td>
+<td>Cosmology</td>
+<td>Naive static tired-light fails DESI DR2 Alcock-Paczynski DM/DH</td>
+<td>Derived mathematics (Executed)</td>
+<td>C (Excluded)</td>
+<td>F_AP(0.51) = 0.412 vs 0.622 obs; F_AP(0.934) = 0.660 vs 1.223</td>
+<td>148</td>
+</tr>
+<tr class="even">
+<td>CLM-08</td>
+<td>Cosmology</td>
+<td>DES-SN5YR light-curve widths scale as (1+z) out to z ~ 1</td>
+<td>Observation</td>
+<td>C (Excludes b = 0 tired light)</td>
+<td>b = 1 within ±0.015 total uncertainty across g,r,i,z</td>
+<td>130</td>
+</tr>
+<tr class="odd">
+<td>CLM-09</td>
+<td>Cosmology</td>
+<td>2025–2026 w0 wa DDE &amp; H0 tensions remain disputed across priors/SN</td>
+<td>Observation / Model audit</td>
+<td>D (Undecided)</td>
+<td>ln BF = 0.10 (full DR2); 2.41 favoring LCDM without LRG1</td>
+<td>37, 117, 118, 122</td>
+</tr>
+<tr class="even">
+<td>CLM-10</td>
+<td>Particle</td>
+<td>Photon rest mass tightly constrained by solar-wind and FRB dispersion</td>
+<td>Observation</td>
+<td>Constraint</td>
+<td>m_gamma &lt; 10^-54 kg (PDG); &lt; 3.9 × 10^-51 kg (FRB)</td>
+<td>38, 41</td>
+</tr>
+<tr class="odd">
+<td>CLM-11</td>
+<td>Propulsion</td>
+<td>Local dark-matter energy density mass-equivalent conversion</td>
+<td>Derived mathematics (Executed)</td>
+<td>Constraint</td>
+<td>0.3 GeV/cm^3 = 5.348 × 10^-22 kg/m^3 (3.71 g/yr per km^2)</td>
+<td>13, 148</td>
+</tr>
+<tr class="even">
+<td>CLM-12</td>
+<td>Propulsion</td>
+<td>WIMP capture in 1 m tungsten at LZ limit yields negligible thrust</td>
+<td>Derived mathematics (Executed)</td>
+<td>C (Infeasible)</td>
+<td>P = 5.88 × 10^-16; a_max = 1.08 × 10^-27 m/s^2 (sigma_SI &lt; 2.2e-48 cm^2)</td>
+<td>80, 148</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lib-companion-c-experiments.csv-discriminating-next-experiments"><strong>Companion C: EXPERIMENTS.csv (Discriminating Next Experiments)</strong></h3>
+<table>
+
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>exp_id</th>
+<th>target_hypothesis</th>
+<th>dataset_or_apparatus</th>
+<th>measurement_observable</th>
+<th>null_threshold</th>
+<th>falsification_condition</th>
+<th>status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>EX-01</td>
+<td>ArcSecs-R vs ArcSecs-F</td>
+<td>175 SPARC galaxies (Table1.mrt/Table2.mrt)</td>
+<td>Out-of-sample RAR residual (dex), BIC on 52 held-out galaxies</td>
+<td>Residual &lt; 0.13 dex</td>
+<td>Systematic residual trend with environment or z</td>
+<td>Preregistered / NOT EXECUTED</td>
+</tr>
+<tr class="even">
+<td>EX-02</td>
+<td>ArcSecs-R vs ArcSecs-F</td>
+<td>Chandra X-ray + HST/JWST lensing of 1E 0657-558 &amp; MACS J0025.4-1222</td>
+<td>Centroid offset between convergence peak and X-ray gas peak</td>
+<td>Offset = 0 kpc for baryon-only force</td>
+<td>Confirmed &gt; 5 sigma offset (~200 kpc) falsifies pure ArcSecs-R</td>
+<td>Executed in literature (ArcSecs-R falsified)</td>
+</tr>
+<tr class="odd">
+<td>EX-03</td>
+<td>ArcSecs-P (Light slowing)</td>
+<td>FRB dispersion + multi-band SN Ia light curves + VLBI angular sizes</td>
+<td>Broadband (1 + z) pulse stretch vs frequency dispersion</td>
+<td>Zero non-thermal broadening or blurring</td>
+<td>Absence of achromatic (1+z) mechanism or &gt; 3.9e-51 kg dispersion</td>
+<td>Missing microphysical derivation</td>
+</tr>
+<tr class="even">
+<td>EX-04</td>
+<td>ArcSecs Distance-Redshift</td>
+<td>Full 13-pt DESI DR2 BAO + covariance + Supernovae Unite</td>
+<td>Joint chi2 of Euclidean D_M, D_H mapping across 0.295 &lt;= z &lt;= 2.33</td>
+<td>chi2 / dof ~ 1.0</td>
+<td>Inability to simultaneously match transverse D_M and radial D_H</td>
+<td>Partial 7-pt executed (chi2 = 22.52 vs LCDM)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lib-companion-d-bibliography.md-verified-source-linked-bibliography"><strong>Companion D: BIBLIOGRAPHY.md (Verified Source-Linked Bibliography)</strong></h3>
+<blockquote>
+<ol type="1">
+<li>Abdul-Karim, M., et al. (DESI Collaboration). (2025). “DESI DR2 Results II: Measurements of Baryon Acoustic Oscillations and Cosmological Constraints.” <em>Physical Review D</em>, 112(8), 083515. DOI: 10.1103/tr6y-kpc6; arXiv:2503.14738. (Peer-reviewed)9<br>
+</li>
+<li>Aalbers, J., et al. (LUX-ZEPLIN Collaboration). (2025). “Dark matter search results from 4.2 tonne-years of exposure of the LUX-ZEPLIN (LZ) experiment.” <em>Physical Review Letters</em>, 135, 011802. Summarized in Berkowitz, R., <em>Physics</em>, 18, s82. DOI: 10.1103/Physics.18.s82. (Peer-reviewed)15<br>
+</li>
+<li>Aghanim, N., et al. (Planck Collaboration). (2020). “Planck 2018 results. VI. Cosmological parameters.” <em>Astronomy &amp; Astrophysics</em>, 641, A6. DOI: 10.1051/0004-6361/201833910; arXiv:1807.06209. (Peer-reviewed)12<br>
+</li>
+<li>Andrade, U., et al. (DESI Collaboration). (2025). “Validation of the DESI DR2 Measurements of Baryon Acoustic Oscillations from Galaxies and Quasars.” arXiv:2503.14742. (Preprint/Collaboration report)44<br>
+</li>
+<li>Asgari, M., et al. (2021). KiDS-1000 Cosmic Shear Cosmology (https://kids.strw.leidenuniv.nl/DR4/lensing.php). (Peer-reviewed survey release)71<br>
+</li>
+<li>Bothwell, T., Kennedy, C. J., Aeppli, A., et al. (2022). “Resolving the gravitational redshift across a millimetre-scale atomic sample.” <em>Nature</em> (preprint arXiv:2109.12238). (Peer-reviewed)18<br>
+</li>
+<li>Bradač, M., Clowe, D., Gonzalez, A. H., Marshall, P., Forman, W., Jones, C., Markevitch, M., Randall, S., Schrabback, T., &amp; Zaritsky, D. (2006). “Strong and Weak Lensing United. III. Measuring the Mass Distribution of the Merging Galaxy Cluster 1ES 0657-558.” <em>The Astrophysical Journal</em>, 652(2), 937–947. DOI: 10.1086/508601. (Peer-reviewed)34<br>
+</li>
+<li>Brouwer, M. M., et al. (2021). “The weak lensing radial acceleration relation: Constraining modified gravity and cold dark matter theories with KiDS-1000.” <em>Astronomy &amp; Astrophysics</em>, 650, A113. DOI: 10.1051/0004-6361/202040108. (Peer-reviewed)31<br>
+</li>
+<li>Brownstein, J. R., &amp; Moffat, J. W. (2007). “The Bullet Cluster 1E0657-558 evidence shows Modified Gravity in the absence of Dark Matter.” <em>Monthly Notices of the Royal Astronomical Society</em>, 382(1), 29–47. arXiv:astro-ph/0702146. (Peer-reviewed)38<br>
+</li>
+<li>Cervantes, R., et al. (ADMX-Orpheus). (2022). “ADMX-Orpheus First Search for 70 μeV Dark Photon Dark Matter: Detailed Design, Operations, and Analysis.” <em>Physical Review D</em>, 106, 102002. (Peer-reviewed)16<br>
+</li>
+<li>Ciocan, B.-I., et al. (2026). “The radial acceleration relation at intermediate redshifts (0.33 &lt; z &lt; 1.44).” Accepted <em>Astronomy &amp; Astrophysics</em> (HAL hal-05614271, aa59230-26). (Peer-reviewed/Accepted)4<br>
+</li>
+<li>Clowe, D., Gonzalez, A., &amp; Markevitch, M. (2004). “Weak lensing mass reconstruction of the interacting cluster 1E0657-558: Direct evidence for the existence of dark matter.” <em>The Astrophysical Journal</em>, 604(2), 596–603. (Peer-reviewed)38<br>
+</li>
+<li>Clowe, D., Bradač, M., Gonzalez, A. H., Markevitch, M., Randall, S. W., Jones, C., &amp; Zaritsky, D. (2006). “A Direct Empirical Proof of the Existence of Dark Matter.” <em>The Astrophysical Journal</em>, 648, L109–L113. DOI: 10.1086/508162; arXiv:astro-ph/0608407. (Peer-reviewed)5<br>
+</li>
+<li>Derevianko, A., et al. (2022). “Fundamental physics with a state-of-the-art optical clock in space.” <em>Quantum Science and Technology</em>, 7, 044002. (Peer-reviewed)18<br>
+</li>
+<li>DESI Collaboration. (2025–2026). DESI DR2 Publications Portal. URL: https://data.desi.lbl.gov/doc/papers/dr2/. (Official collaboration archive)44<br>
+</li>
+<li>Freedman, W. L., et al. (2025). JWST local distance-ladder measurements (cited in <em>Discover Space</em> 2026 and aa55801-25). (Peer-reviewed/Journal literature)51<br>
+</li>
+<li>Giblin, B., et al. (2021); Kuijken, K., et al. (2019). KiDS-1000 Weak Lensing Data Release 4. URL: https://kids.strw.leidenuniv.nl/DR4/lensing.php. (Peer-reviewed survey release)3<br>
+</li>
+<li>Goodman, C., et al. (ADMX Collaboration). (2025). “ADMX Axion Dark Matter Bounds around 4.54–5.41 μeV / 3.3 μeV.” <em>Physical Review Letters</em>, 135, 191001. (Peer-reviewed)61<br>
+</li>
+<li>Kerenyi, J. (2026). “The lensing offset of the Bullet Cluster (1E 0657-56): A sensitivity calculation.” Figshare preprint, DOI: 10.6084/m9.figshare.35014156. (Preprint)37<br>
+</li>
+<li>Lage, C. (2014). <em>Bullet Cluster MHD Simulation Thesis</em> (citing Coe et al. 2010 lensing mass ~2.0 × 10^15 M_sun). URL: https://cosmo.nyu.edu/lage/support_files/astro_papers/lage_thesis_5sep14.pdf. (Doctoral thesis)36<br>
+</li>
+<li>Lelli, F., McGaugh, S. S., &amp; Schombert, J. M. (2016). “SPARC: Mass Models for 175 Disk Galaxies with Spitzer Photometry and Accurate Rotation Curves.” <em>The Astronomical Journal</em>, 152, 157; URL: https://astroweb.case.edu/SPARC/. (Peer-reviewed)20<br>
+</li>
+<li>Lelli, F., McGaugh, S. S., Schombert, J. M., &amp; Pawlowski, M. S. (2017). “One Law to Rule Them All: The Radial Acceleration Relation of Galaxies.” <em>The Astrophysical Journal</em>; URL: https://astroweb.cwru.edu/SPARC/RARbins.mrt. (Peer-reviewed)20<br>
+</li>
+<li>Lelli, F., McGaugh, S. S., Schombert, J. M., Desmond, H., &amp; Katz, H. (2019). “The baryonic Tully-Fisher relation for different velocity definitions and implications for galaxy angular momentum.” <em>MNRAS</em> (SPARC archive). (Peer-reviewed)2<br>
+</li>
+<li>Li, P., Lelli, F., McGaugh, S., &amp; Schombert, J. (2018). “Fitting the radial acceleration relation to individual SPARC galaxies.” arXiv:1803.00022v2. (Preprint/Journal article)1<br>
+</li>
+<li>LUX-ZEPLIN Collaboration. (2026). TeVPA 2026 presentation on 220-live-day outlier event. US DOE / Brown University / LLNL technical news releases (Sept 1, 2026). (Conference report / Technical release)58<br>
+</li>
+<li>Markevitch, M., et al. (2002, 2004). Chandra Bullet Cluster plasma temperatures and merger shock constraints (cited in5). (Peer-reviewed)5<br>
+</li>
+<li>McGaugh, S. S., Lelli, F., &amp; Schombert, J. M. (2016). “Radial Acceleration Relation in Rotationally Supported Galaxies.” <em>Physical Review Letters</em>, 117, 201101. DOI: 10.1103/PhysRevLett.117.201101; arXiv:1609.05917. (Peer-reviewed)30<br>
+</li>
+<li>Mistele, T., McGaugh, S., Lelli, F., Schombert, J., &amp; Li, P. (2024). “Indefinitely Flat Circular Velocities and the Baryonic Tully-Fisher Relation from Weak Lensing.” <em>The Astrophysical Journal Letters</em>, 969(1), L3. DOI: 10.3847/2041-8213/ad54b0; arXiv:2406.09685. (Peer-reviewed)2<br>
+</li>
+<li>Mistele, T., &amp; Durakovic, A. (2024). Non-parametric weak-lensing cluster mass profile method (cited in 2506.13716v2). (Journal/Preprint)22<br>
+</li>
+<li>Navas, S., et al. (Particle Data Group). (2024). “Review of Particle Physics.” <em>Physical Review D</em>, 110(3), 030001; plus 2025 Dark Matter Review (rpp2025-rev-dark-matter.pdf) and 2026 Cosmological Parameters Review (rpp2026-rev-cosmological-parameters.pdf). (Peer-reviewed reference)8<br>
+</li>
+<li>Nyambuya, G. G., et al. (2026). “Revisiting the Compton Scattering Experiment in Search of the Mass of the Photon.” ResearchGate preprint. (Preprint)26<br>
+</li>
+<li>Riess, A. G., et al. (2022, 2024). SH0ES local H0 (73.04 ± 1.04 km/s/Mpc) and JWST Cepheid crowding exclusion (8.2 sigma). (Peer-reviewed; cited in arXiv:2606.12980v1 and aa55801-25)51<br>
+</li>
+<li>Rybka, G. (2025). “Axions as Dark Matter / ADMX Status.” IBS Dark World 2025 presentation (indico.ibs.re.kr). (Conference presentation)79<br>
+</li>
+<li>Sanders, N., Seo, H., et al. (2026). “A Unified Tracer Analysis of DESI DR2 Baryon Acoustic Oscillations.” Fermilab Technical Report fermilab-pub-26-0656-ppd. (Technical report)80<br>
+</li>
+<li>Skordis, C., &amp; Złośnik, T. (2021). “New Relativistic Theory for Modified Newtonian Dynamics.” <em>Physical Review Letters</em>, 127, 161302. DOI: 10.1103/PhysRevLett.127.161302; arXiv:2007.00082. (Peer-reviewed)11<br>
+</li>
+<li>Sonnenschein, A. (2026). “ADMX Status and Upgrades.” DPF 2026 presentation (indico.fnal.gov). (Conference presentation)61<br>
+</li>
+<li>Spallicci, A., et al. (2022/2025). Extended theories of electromagnetism and photon mass limits (hal-03672794; CERN Indico 2025). (Preprint/Conference paper)25<br>
+</li>
+<li>Vincenzi, M., Kessler, R., Shah, P., et al. (DES Collaboration). (2025). “Comparing the DES-SN5YR and Pantheon+ SN cosmology analyses: investigation based on ‘evolving dark energy or supernovae systematics?’.” <em>Monthly Notices of the Royal Astronomical Society</em>, 541(3), 2585–2593. DOI: 10.1093/mnras/staf943; arXiv:2501.06664. (Peer-reviewed)45<br>
+</li>
+<li>White, R. M. T., Davis, T. M., et al. (DES Collaboration). (2024). “The Dark Energy Survey Supernova Program: Slow supernovae show cosmological time dilation out to z ~ 1.” arXiv:2406.05050v1. (Preprint/Collaboration paper)13<br>
+</li>
+<li>Preprint &amp; Journal Audits (2025–2026): (a) DESI DR2 + CMB + SN tension analysis (arXiv:2504.15222v2, Preprint)10; (b) DESI DR2 tracer-split Bayesian evidence analysis (arXiv:2507.21607v3, Preprint)47; (c) “Supernovae Unite: Combining Pantheon+ and DES-SN5YR” (arXiv:2609.05053, Preprint)46; (d) “A comprehensive assessment of weak-lensing inferred circular velocity profiles of isolated galaxies” (arXiv:2609.14085v1, Preprint)33; (e) “The local void model for the Hubble and BAO tensions” (<em>Discover Space</em>, 2026, Peer-reviewed)53; (f) Hubble tension and distance-ladder systematics reviews (arXiv:2606.20434v2 and arXiv:2606.12980v1, Preprints)52.</li>
+</ol>
+</blockquote>
+<h3 id="lib-companion-e-plain_english_summary.md-plain-english-arcsecs-summary"><strong>Companion E: PLAIN_ENGLISH_SUMMARY.md (Plain-English ArcSecs Summary)</strong></h3>
+<p>Under the ArcSecs guidelines—where time (“When”) and space (“Where”) are not physical fabrics that stretch or warp, and all real physical effects come from mass, energy, and direct interactions—this study tested two concrete questions: can physical-only interaction laws replace “dark matter” and “dark energy” across galaxies, clusters, and the deep universe, and could a spacecraft harvest any real dark substrate as rocket fuel?<br>
+On the scale of individual galaxies, the evidence is remarkably encouraging for relational physics. Measurements of 175 galaxies in the SPARC catalog and weak-lensing maps extending one megaparsec into surrounding space show that a single acceleration threshold (1.20 × 10^-10 m/s^2) tightly predicts how fast stars and gas orbit purely from the visible stars and gas—without tuning invisible dark-matter halos galaxy by galaxy1. However, three hard observational walls block a complete explanation today. First, in the colliding Bullet Cluster, gravitational lensing maps locate the bulk of the gravitating mass next to the galaxies, roughly 200 kiloparsecs away from the hot gas clouds that hold most of the visible ordinary matter5. A simple force tied only to visible matter puts the pull in the wrong place, forcing ArcSecs to include an invisible, collisionless physical field or compact mass component. Second, 2026 observations of distant galaxies suggest the galactic acceleration threshold rises at earlier epochs, challenging a fixed universal law4. Third, light from distant Type Ia supernovae arrives stretched out in duration by (1 + z), and DESI DR2 galaxy-clustering scales show specific transverse-to-radial shapes that simple “light loses energy on the way” models fail to match13. While standard cosmology faces genuine internal tensions in 2025–2026 over the Hubble constant and whether dark energy evolves8, ArcSecs has not yet built the mathematical replacement needed to match cosmic microwave background ripples or supernova pulse widths.<br>
+On propulsion, the verdict is unambiguous: dark-matter harvesting cannot power a spacecraft. The local density of dark matter (0.3 GeV/cm^3) equals just 5.35 × 10^-22 kg per cubic meter—meaning even a one-square-kilometer funnel sweeping through the galaxy at 220 km/s passes through less than four grams of dark matter per year17. Because particle dark matter passes through solid metal almost completely untouched—with a mean free path of nearly two-tenths of a light-year in solid tungsten under current LUX-ZEPLIN limits—a one-meter-thick tungsten collector traps fewer than one in a quadrillion particles15. Even converting trapped mass at 100-percent efficiency into photon thrust produces an acceleration of 10^-27 m/s^2, effectively zero17. And if ArcSecs explains galaxy speeds without dark particles at all, there is zero ambient fuel to collect.</p>
+<h3 id="lib-companion-f-referee_challenges.md-five-strongest-technical-challenges-to-arcsecs"><strong>Companion F: REFEREE_CHALLENGES.md (Five Strongest Technical Challenges to ArcSecs)</strong></h3>
+<blockquote>
+<ol type="1">
+<li><strong>The Bullet Cluster Spatial Decoupling Imperative:</strong> In 1E 0657-558, X-ray plasma dominates visible baryonic mass while lensing convergence peaks track the separated galaxy concentrations by ~200 kiloparsecs (8 sigma)5. How can ArcSecs-R avoid falsification without conceding that a non-luminous, low-cross-section gravitating mass component (ArcSecs-F) exists and decouples from collisional gas?<br>
+</li>
+<li><strong>Factor-of-Two Photon Deflection Deficit in Non-Metric Gravity:</strong> Because ArcSecs rejects curved spacetime, pure Newtonian-like momentum attraction on light packets carrying p = E/c yields only half the observed gravitational deflection of starlight and weak-lensing shear. What explicit physical field equation generates the missing factor-of-two transverse impulse while leaving non-relativistic planetary and galactic orbits unaffected?<br>
+</li>
+<li><strong>Achromatic (1 + z) Supernova Light-Curve Broadening vs. FRB Dispersion Limits:</strong> DES-SN5YR establishes that supernova pulse widths stretch as (1 + z) across g, r, i, z optical bands out to z ~ 113, while fast radio bursts limit frequency-dependent vacuum dispersion below 3.9 × 10^-51 kg25. What physical light-slowing mechanism elongates macroscopic wave-packet arrival intervals identically across wavelengths without scattering photons out of sharp extragalactic images?<br>
+</li>
+<li><strong>Planck CMB Third-Peak Height Without Pre-Recombination Cold Dark Matter:</strong> Skordis and Złośnik (2021) demonstrated that fitting Planck acoustic peaks without dark-matter particles requires early-universe dust-like scalar and vector perturbations11. Without a dynamical Boltzmann derivation under constant T and Euclidean coordinates, how can ArcSecs account for the measured acoustic peak amplitude ratios and 100 theta_* = 1.0411 ± 0.000312?<br>
+</li>
+<li><strong>Redshift Evolution of a0 at 0.33 &lt; z &lt; 1.44:</strong> Ciocan et al. (2026) measure an increase of the RAR acceleration scale to 1.99–2.71 × 10^-10 m/s^2 (~19 sigma above SPARC z = 0) across both CDM and modified-gravity modeling assumptions4. If a0 is not constant across cosmic epochs, how does a fixed relational force law avoid adding epoch-dependent free parameters that erase its parsimony advantage over per-galaxy dark halos?</li>
+</ol>
+</blockquote>
+<h5 id="lib-works-cited"><strong>Works cited</strong></h5>
+<blockquote>
+<ol type="1">
+<li>Fitting the radial acceleration relation to individual SPARC galaxies, <a href="https://arxiv.org/html/1803.00022v2" rel="noopener noreferrer">https://arxiv.org/html/1803.00022v2</a><br>
+</li>
+<li>The empirical laws of galaxy dynamics: from gas kinematics to weak, <a href="https://arxiv.org/html/2411.02499v1" rel="noopener noreferrer">https://arxiv.org/html/2411.02499v1</a><br>
+</li>
+<li>(PDF) Indefinitely Flat Circular Velocities and the Baryonic Tully, <a href="https://www.researchgate.net/publication/381588936_Indefinitely_Flat_Circular_Velocities_and_the_Baryonic_Tully-Fisher_Relation_from_Weak_Lensing" rel="noopener noreferrer">https://www.researchgate.net/publication/381588936_Indefinitely_Flat_Circular_Velocities_and_the_Baryonic_Tully-Fisher_Relation_from_Weak_Lensing</a><br>
+</li>
+<li>MUSE-DARK III: The evolution of the radial acceleration relation at, <a href="https://hal.science/hal-05614271/file/aa59230-26.pdf" rel="noopener noreferrer">https://hal.science/hal-05614271/file/aa59230-26.pdf</a><br>
+</li>
+<li>A Direct Empirical Proof of the Existence of Dark Matter, <a href="https://www.researchgate.net/publication/1789220_A_Direct_Empirical_Proof_of_the_Existence_of_Dark_Matter" rel="noopener noreferrer">https://www.researchgate.net/publication/1789220_A_Direct_Empirical_Proof_of_the_Existence_of_Dark_Matter</a><br>
+</li>
+<li>arXiv:astro-ph/0608407 v1 19 Aug 2006, <a href="https://www.astro.rug.nl/~weygaert/tim1publication/nijmegen06/articles/bulletcluster.clowe.bradac.2006.pdf" rel="noopener noreferrer">https://www.astro.rug.nl/~weygaert/tim1publication/nijmegen06/articles/bulletcluster.clowe.bradac.2006.pdf</a><br>
+</li>
+<li>Collision between galaxy clusters unveils striking evidence of dark, <a href="https://physicstoday.aip.org/news/collision-between-galaxy-clusters-unveils-striking-evidence-of-dark-matter" rel="noopener noreferrer">https://physicstoday.aip.org/news/collision-between-galaxy-clusters-unveils-striking-evidence-of-dark-matter</a><br>
+</li>
+<li>25. Cosmological Parameters, <a href="https://ccwww.kek.jp/pdg/2026/reviews/rpp2026-rev-cosmological-parameters.pdf" rel="noopener noreferrer">https://ccwww.kek.jp/pdg/2026/reviews/rpp2026-rev-cosmological-parameters.pdf</a><br>
+</li>
+<li>DESI DR2 Results II: Measurements of Baryon Acoustic Oscillations, <a href="https://www.researchgate.net/publication/390019176_DESI_DR2_Results_II_Measurements_of_Baryon_Acoustic_Oscillations_and_Cosmological_Constraints" rel="noopener noreferrer">https://www.researchgate.net/publication/390019176_DESI_DR2_Results_II_Measurements_of_Baryon_Acoustic_Oscillations_and_Cosmological_Constraints</a><br>
+</li>
+<li>Did DESI DR2 truly reveal dynamical dark energy? - arXiv, <a href="https://arxiv.org/html/2504.15222v2" rel="noopener noreferrer">https://arxiv.org/html/2504.15222v2</a><br>
+</li>
+<li>New Relativistic Theory for Modified Newtonian Dynamics - Indico, <a href="https://indico.bnl.gov/event/15473/attachments/40587/67834/PhysRevLett.127.161302-1.pdf" rel="noopener noreferrer">https://indico.bnl.gov/event/15473/attachments/40587/67834/PhysRevLett.127.161302-1.pdf</a><br>
+</li>
+<li>Planck 2018 results. VI. Cosmological parameters - -ORCA, <a href="https://orca.cardiff.ac.uk/id/eprint/131263/1/aa33910-18%20%281%29.pdf" rel="noopener noreferrer">https://orca.cardiff.ac.uk/id/eprint/131263/1/aa33910-18%20%281%29.pdf</a><br>
+</li>
+<li>Slow supernovae show cosmological time dilation out to z∼1. - arXiv, <a href="https://arxiv.org/html/2406.05050v1" rel="noopener noreferrer">https://arxiv.org/html/2406.05050v1</a><br>
+</li>
+<li>Direct Detection of Dark Matter – APPEC Committee Report, <a href="https://www.appec.org/wp-content/uploads/2021/04/appec_dm_report_2020_ga_approved.pdf" rel="noopener noreferrer">https://www.appec.org/wp-content/uploads/2021/04/appec_dm_report_2020_ga_approved.pdf</a><br>
+</li>
+<li>Dark Matter Detector Releases Best-Yet Result - Physics Magazine, <a href="https://physics.aps.org/articles/pdf/10.1103/Physics.18.s82" rel="noopener noreferrer">https://physics.aps.org/articles/pdf/10.1103/Physics.18.s82</a><br>
+</li>
+<li>Axion Dark Matter Experiment - Wikipedia, <a href="https://en.wikipedia.org/wiki/Axion_Dark_Matter_Experiment" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Axion_Dark_Matter_Experiment</a><br>
+</li>
+<li><a href="http://docs.google.com/unknown_url" rel="noopener noreferrer">unknown_url</a><br>
+</li>
+<li>Fundamental physics with a state-of-the-art optical clock in space, <a href="https://mariannasafronova.com/wp-content/uploads/2022/12/2022FOCOS.pdf" rel="noopener noreferrer">https://mariannasafronova.com/wp-content/uploads/2022/12/2022FOCOS.pdf</a><br>
+</li>
+<li>Resolving the gravitational redshift within a millimeter atomic sample, <a href="https://arxiv.org/abs/2109.12238" rel="noopener noreferrer">https://arxiv.org/abs/2109.12238</a><br>
+</li>
+<li>SPARC - Astroweb, <a href="https://astroweb.case.edu/SPARC/" rel="noopener noreferrer">https://astroweb.case.edu/SPARC/</a><br>
+</li>
+<li>The Radial Acceleration Relation of Galaxies Federico Lelli - Astroweb, <a href="https://astroweb.case.edu/dwarfs2017/Lelli_Cleveland.pdf" rel="noopener noreferrer">https://astroweb.case.edu/dwarfs2017/Lelli_Cleveland.pdf</a><br>
+</li>
+<li>Mass models of galaxy clusters from a non-parametric weak-lensing, <a href="https://astroweb.case.edu/ssm/papers/2506.13716v2.pdf" rel="noopener noreferrer">https://astroweb.case.edu/ssm/papers/2506.13716v2.pdf</a><br>
+</li>
+<li>Addressing the <math display="inline"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">{H}_{0}</annotation></semantics></math> tension through matter with pressure … - arXiv, <a href="https://arxiv.org/pdf/2506.11531" rel="noopener noreferrer">https://arxiv.org/pdf/2506.11531</a><br>
+</li>
+<li>On the origin of the BAOtr-DESI tension - arXiv, <a href="https://arxiv.org/pdf/2604.11106" rel="noopener noreferrer">https://arxiv.org/pdf/2604.11106</a><br>
+</li>
+<li>Testing the Ampère-Maxwell law on the photon mass and … - HAL, <a href="https://hal.science/hal-03672794/document" rel="noopener noreferrer">https://hal.science/hal-03672794/document</a><br>
+</li>
+<li>Revisiting the Compton Scattering Experiment in Search of the Mass, <a href="https://www.researchgate.net/publication/417808972_Revisiting_the_Compton_Scattering_Experiment_in_Search_of_the_Mass_of_the_Photon" rel="noopener noreferrer">https://www.researchgate.net/publication/417808972_Revisiting_the_Compton_Scattering_Experiment_in_Search_of_the_Mass_of_the_Photon</a><br>
+</li>
+<li>Solar wind test of the de Broglie-Proca massive photon with Cluster, <a href="https://www.researchgate.net/publication/235702994_Solar_wind_test_of_the_de_Broglie-Proca_massive_photon_with_Cluster_multi-spacecraft_data" rel="noopener noreferrer">https://www.researchgate.net/publication/235702994_Solar_wind_test_of_the_de_Broglie-Proca_massive_photon_with_Cluster_multi-spacecraft_data</a><br>
+</li>
+<li>A brief history of the Radial Acceleration Relation - Triton Station, <a href="https://tritonstation.com/2022/02/18/a-brief-history-of-the-radial-acceleration-relation/" rel="noopener noreferrer">https://tritonstation.com/2022/02/18/a-brief-history-of-the-radial-acceleration-relation/</a><br>
+</li>
+<li>The Radial Acceleration Relation — From Earth to the Cosmos, <a href="https://habitante.github.io/rar-explorer/sparc_rar_explorer.html" rel="noopener noreferrer">https://habitante.github.io/rar-explorer/sparc_rar_explorer.html</a><br>
+</li>
+<li>The Radial Acceleration Relation in Rotationally Supported Galaxies, <a href="https://arxiv.org/abs/1609.05917" rel="noopener noreferrer">https://arxiv.org/abs/1609.05917</a><br>
+</li>
+<li>Science data products - KiDS, <a href="https://kids.strw.leidenuniv.nl/sciencedata.php" rel="noopener noreferrer">https://kids.strw.leidenuniv.nl/sciencedata.php</a><br>
+</li>
+<li>The weak lensing radial acceleration relation: Constraining modified, <a href="https://www.researchgate.net/publication/352657498_The_weak_lensing_radial_acceleration_relation_Constraining_modified_gravity_and_cold_dark_matter_theories_with_KiDS-1000" rel="noopener noreferrer">https://www.researchgate.net/publication/352657498_The_weak_lensing_radial_acceleration_relation_Constraining_modified_gravity_and_cold_dark_matter_theories_with_KiDS-1000</a><br>
+</li>
+<li>A comprehensive assessment of weak-lensing inferred circular, <a href="https://arxiv.org/html/2609.14085v1" rel="noopener noreferrer">https://arxiv.org/html/2609.14085v1</a><br>
+</li>
+<li>Bullet Cluster - Wikipedia, <a href="https://en.wikipedia.org/wiki/Bullet_Cluster" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Bullet_Cluster</a><br>
+</li>
+<li>A Dark Core in Abell 520† - arXiv, <a href="https://arxiv.org/html/0706.3048v1" rel="noopener noreferrer">https://arxiv.org/html/0706.3048v1</a><br>
+</li>
+<li>Constrained Simulation of the Bullet Cluster, <a href="https://cosmo.nyu.edu/lage/support_files/astro_papers/lage_thesis_5sep14.pdf" rel="noopener noreferrer">https://cosmo.nyu.edu/lage/support_files/astro_papers/lage_thesis_5sep14.pdf</a><br>
+</li>
+<li>The lensing offset of the Bullet Cluster (1E 0657-56) A sensitivity, <a href="https://figshare.com/articles/preprint/The_lensing_offset_of_the_Bullet_Cluster_1E_0657-56_A_sensitivity_calculation_in_the_Zg_G_c_theory/35014156" rel="noopener noreferrer">https://figshare.com/articles/preprint/The_lensing_offset_of_the_Bullet_Cluster_1E_0657-56_A_sensitivity_calculation_in_the_Zg_G_c_theory/35014156</a><br>
+</li>
+<li>Galaxy Clusters - Department of Physics and Astronomy, <a href="https://www.physics.rutgers.edu/analyze/wiki/clusters.html" rel="noopener noreferrer">https://www.physics.rutgers.edu/analyze/wiki/clusters.html</a><br>
+</li>
+<li>The Bullet Cluster 1E0657-558 evidence shows Modified Gravity in, <a href="https://arxiv.org/abs/astro-ph/0702146" rel="noopener noreferrer">https://arxiv.org/abs/astro-ph/0702146</a><br>
+</li>
+<li>Galaxy Clusters and the Bullet Cluster | Measurement Quantization, <a href="https://www.informativity.org/galaxy-clusters-and-the-bullet-cluster" rel="noopener noreferrer">https://www.informativity.org/galaxy-clusters-and-the-bullet-cluster</a><br>
+</li>
+<li>Planck 2018 results: VI. Cosmological parameters, <a href="https://collaborate.princeton.edu/en/publications/planck-2018-results-vi-cosmological-parameters/" rel="noopener noreferrer">https://collaborate.princeton.edu/en/publications/planck-2018-results-vi-cosmological-parameters/</a><br>
+</li>
+<li><math display="block"><semantics><mn>1807.06209</mn><annotation encoding="application/x-tex">1807.06209</annotation></semantics></math> Planck 2018 results. VI. Cosmological parameters - arXiv, <a href="https://arxiv.org/abs/1807.06209" rel="noopener noreferrer">https://arxiv.org/abs/1807.06209</a><br>
+</li>
+<li>A new relativistic theory for Modified Newtonian Dynamics - arXiv, <a href="https://arxiv.org/abs/2007.00082" rel="noopener noreferrer">https://arxiv.org/abs/2007.00082</a><br>
+</li>
+<li>DESI DR2 Publications - DESI Data, <a href="https://data.desi.lbl.gov/doc/papers/dr2/" rel="noopener noreferrer">https://data.desi.lbl.gov/doc/papers/dr2/</a><br>
+</li>
+<li>Comparing the DES-SN5YR and Pantheon+ SN cosmology analyses, <a href="https://arxiv.org/html/2501.06664v1" rel="noopener noreferrer">https://arxiv.org/html/2501.06664v1</a><br>
+</li>
+<li>Supernovae Unite: Combining Pantheon+ and DES-SN5YR, <a href="https://www.researchgate.net/publication/414039023_Supernovae_Unite_Combining_Pantheon_and_DES-SN5YR" rel="noopener noreferrer">https://www.researchgate.net/publication/414039023_Supernovae_Unite_Combining_Pantheon_and_DES-SN5YR</a><br>
+</li>
+<li>Does DESI DR2 challenge ΛCDM paradigm ? - arXiv, <a href="https://arxiv.org/html/2507.21607v3" rel="noopener noreferrer">https://arxiv.org/html/2507.21607v3</a><br>
+</li>
+<li>Comparing the DES-SN5YR and Pantheon+ SN cosmology analyses, <a href="https://experts.illinois.edu/en/publications/comparing-the-des-sn5yr-and-pantheon-sn-cosmology-analyses-invest/" rel="noopener noreferrer">https://experts.illinois.edu/en/publications/comparing-the-des-sn5yr-and-pantheon-sn-cosmology-analyses-invest/</a><br>
+</li>
+<li>Comparing the DES-SN5YR and Pantheon+ SN cosmology analyses, <a href="https://eprints.soton.ac.uk/id/eprint/500985/" rel="noopener noreferrer">https://eprints.soton.ac.uk/id/eprint/500985/</a><br>
+</li>
+<li>Supernovae Unite: Combining Pantheon+ and DES-SN5YR - alphaXiv, <a href="https://www.alphaxiv.org/abs/2609.05053" rel="noopener noreferrer">https://www.alphaxiv.org/abs/2609.05053</a><br>
+</li>
+<li>university of copenhagen - Københavns Universitet, <a href="https://curis.ku.dk/ws/files/529201073/aa55801-25.pdf" rel="noopener noreferrer">https://curis.ku.dk/ws/files/529201073/aa55801-25.pdf</a><br>
+</li>
+<li>A Review on Resolving the Hubble Tension via Late-Universe Physics, <a href="https://arxiv.org/html/2606.12980v1" rel="noopener noreferrer">https://arxiv.org/html/2606.12980v1</a><br>
+</li>
+<li>(PDF) The local void model for the Hubble and BAO tensions, <a href="https://www.researchgate.net/publication/400459319_The_local_void_model_for_the_Hubble_and_BAO_tensions" rel="noopener noreferrer">https://www.researchgate.net/publication/400459319_The_local_void_model_for_the_Hubble_and_BAO_tensions</a><br>
+</li>
+<li>desi baryon acoustic oscillation measurements and the evolving, <a href="https://sapcraa.com/api/articles/1528/pdf" rel="noopener noreferrer">https://sapcraa.com/api/articles/1528/pdf</a><br>
+</li>
+<li>(PDF) The Cosmological Significance of Massive Photons, <a href="https://www.researchgate.net/publication/378970258_The_Cosmological_Significance_of_Massive_Photons" rel="noopener noreferrer">https://www.researchgate.net/publication/378970258_The_Cosmological_Significance_of_Massive_Photons</a><br>
+</li>
+<li>Dark Matter Signatures in the Galactic Halo and the Extragalactic, <a href="https://ediss.sub.uni-hamburg.de/bitstream/ediss/12517/1/Doctoral_Thesis-signed.pdf" rel="noopener noreferrer">https://ediss.sub.uni-hamburg.de/bitstream/ediss/12517/1/Doctoral_Thesis-signed.pdf</a><br>
+</li>
+<li>27. Dark Matter, <a href="https://ccwww.kek.jp/pdg/2025/reviews/rpp2025-rev-dark-matter.pdf" rel="noopener noreferrer">https://ccwww.kek.jp/pdg/2025/reviews/rpp2025-rev-dark-matter.pdf</a><br>
+</li>
+<li>LZ Sees Surprising Result in Search for Dark Matter, <a href="https://www.energy.gov/science/articles/lz-sees-surprising-result-search-dark-matter" rel="noopener noreferrer">https://www.energy.gov/science/articles/lz-sees-surprising-result-search-dark-matter</a><br>
+</li>
+<li>LZ experiment sees surprising result in search for dark matter, <a href="https://www.brown.edu/news/2026-09-01/lz-dark-matter-results" rel="noopener noreferrer">https://www.brown.edu/news/2026-09-01/lz-dark-matter-results</a><br>
+</li>
+<li>LZ experiment sees surprising result in search for dark matter, <a href="https://www.llnl.gov/article/54886/lz-experiment-sees-surprising-result-search-dark-matter" rel="noopener noreferrer">https://www.llnl.gov/article/54886/lz-experiment-sees-surprising-result-search-dark-matter</a><br>
+</li>
+<li>Searching for Axion Dark Matter with ADMX, <a href="https://indico.fnal.gov/event/72820/contributions/341033/attachments/200076/278948/Sonnenschein_DPF2026.pdf" rel="noopener noreferrer">https://indico.fnal.gov/event/72820/contributions/341033/attachments/200076/278948/Sonnenschein_DPF2026.pdf</a><br>
+</li>
+<li>Publications - The Axion Dark Matter eXperiment, <a href="https://depts.washington.edu/admx/publications.shtml" rel="noopener noreferrer">https://depts.washington.edu/admx/publications.shtml</a><br>
+</li>
+<li>TT Power Spectrum Plot Data Sources - nasa lambda, <a href="https://lambda.gsfc.nasa.gov/resources/lambda_graphics/more/tt_spectrum_source.html" rel="noopener noreferrer">https://lambda.gsfc.nasa.gov/resources/lambda_graphics/more/tt_spectrum_source.html</a><br>
+</li>
+<li>DESI DR2 Results II: Measurements of Baryon Acoustic Oscillations, <a href="https://arxiv.org/abs/2503.14738" rel="noopener noreferrer">https://arxiv.org/abs/2503.14738</a><br>
+</li>
+<li>Do we really need alternatives to the ω_0ω_aCDM parameterization, <a href="https://arxiv.org/pdf/2608.01215" rel="noopener noreferrer">https://arxiv.org/pdf/2608.01215</a><br>
+</li>
+<li>a no-go result for Hubble-cutoff holographic dark energy in Einstein, <a href="https://arxiv.org/pdf/2607.16370" rel="noopener noreferrer">https://arxiv.org/pdf/2607.16370</a><br>
+</li>
+<li>DESI DR2 Results II: Measurements of Baryon Acoustic … - HAL, <a href="https://hal.science/hal-05015266" rel="noopener noreferrer">https://hal.science/hal-05015266</a><br>
+</li>
+<li>DESI DR2 Results II: Measurements of Baryon Acoustic Oscillations, <a href="https://researchportal.port.ac.uk/en/publications/desi-dr2-results-ii-measurements-of-baryon-acoustic-oscillations-/" rel="noopener noreferrer">https://researchportal.port.ac.uk/en/publications/desi-dr2-results-ii-measurements-of-baryon-acoustic-oscillations-/</a><br>
+</li>
+<li>Planck Collaboration, Aghanim, N., et al. (2020) Planck … - SciRP.org, <a href="https://www.scirp.org/reference/referencespapers?referenceid=4376577" rel="noopener noreferrer">https://www.scirp.org/reference/referencespapers?referenceid=4376577</a><br>
+</li>
+<li>Validation of the DESI DR2 Measurements of Baryon Acoustic, <a href="https://arxiv.org/html/2503.14742v3" rel="noopener noreferrer">https://arxiv.org/html/2503.14742v3</a><br>
+</li>
+<li>KiDS-1000 Weak lensing data - Kilo-Degree Survey, <a href="https://kids.strw.leidenuniv.nl/DR4/lensing.php" rel="noopener noreferrer">https://kids.strw.leidenuniv.nl/DR4/lensing.php</a><br>
+</li>
+<li>A direct empirical proof of the existence of dark matter - arXiv, <a href="https://arxiv.org/abs/astro-ph/0608407" rel="noopener noreferrer">https://arxiv.org/abs/astro-ph/0608407</a><br>
+</li>
+<li><a href="https://astroweb.cwru.edu/SPARC/RARbins.mrt" rel="noopener noreferrer">https://astroweb.cwru.edu/SPARC/RARbins.mrt</a><br>
+</li>
+<li>McGaugh, S.S., Lelli, F. and Schombert, J.M. (2016) The Radial, <a href="https://www.scirp.org/reference/referencespapers?referenceid=2938492" rel="noopener noreferrer">https://www.scirp.org/reference/referencespapers?referenceid=2938492</a><br>
+</li>
+<li>arXiv:1609.05917v1 <math display="block"><semantics><mrow><mi>a</mi><mi>s</mi><mi>t</mi><mi>r</mi><mi>o</mi><mo>−</mo><mi>p</mi><mi>h</mi><mi>.</mi><mi>G</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">astro-ph.GA</annotation></semantics></math> 19 Sep 2016, <a href="https://arxiv.org/pdf/1609.05917" rel="noopener noreferrer">https://arxiv.org/pdf/1609.05917</a><br>
+</li>
+<li>Indefinitely Flat Circular Velocities and the Baryonic Tully-Fisher, <a href="https://arxiv.org/abs/2406.09685" rel="noopener noreferrer">https://arxiv.org/abs/2406.09685</a><br>
+</li>
+<li>DISSERTATION - Heidelberg University, <a href="https://archiv.ub.uni-heidelberg.de/volltextserver/38659/1/Thesis_Maike.pdf" rel="noopener noreferrer">https://archiv.ub.uni-heidelberg.de/volltextserver/38659/1/Thesis_Maike.pdf</a><br>
+</li>
+<li>Particle Detectors - OAPEN Library, <a href="https://library.oapen.org/bitstream/handle/20.500.12657/118931/9789819816491.pdf?sequence=1&amp;isAllowed=y" rel="noopener noreferrer">https://library.oapen.org/bitstream/handle/20.500.12657/118931/9789819816491.pdf?sequence=1&amp;isAllowed=y</a><br>
+</li>
+<li>The Axion Dark Matter Experiment (ADMX) - IBS Indico System, <a href="https://indico.ibs.re.kr/event/923/contributions/7957/attachments/5441/8277/S2-01.DW_2025_Gray%20Rybka.pdf" rel="noopener noreferrer">https://indico.ibs.re.kr/event/923/contributions/7957/attachments/5441/8277/S2-01.DW_2025_Gray%20Rybka.pdf</a><br>
+</li>
+<li>Fermilab - A Unified Tracer Analysis of DESI DR2 Baryon Acoustic, <a href="https://lss.fnal.gov/archive/2026/pub/fermilab-pub-26-0656-ppd.pdf" rel="noopener noreferrer">https://lss.fnal.gov/archive/2026/pub/fermilab-pub-26-0656-ppd.pdf</a><br>
+</li>
+<li>New tools for cosmology by Extended Theories of Electro-Magnetism, <a href="https://indico.cern.ch/event/1544691/contributions/6668274/attachments/3130032/5552693/Spallicci.pdf" rel="noopener noreferrer">https://indico.cern.ch/event/1544691/contributions/6668274/attachments/3130032/5552693/Spallicci.pdf</a><br>
+</li>
+<li>Supernovae Unite: Combining Pantheon+ and DES-SN5YR - arXiv, <a href="https://arxiv.org/abs/2609.05053" rel="noopener noreferrer">https://arxiv.org/abs/2609.05053</a><br>
+</li>
+<li>The Hubble tension: A decade review - arXiv, <a href="https://arxiv.org/html/2606.20434v2" rel="noopener noreferrer">https://arxiv.org/html/2606.20434v2</a></li>
+</ol>
+</blockquote>
+<h3 id="lib-arcsecs-interpretation-versus-observation-checkpoint-editorial-addition-r37">ArcSecs interpretation-versus-observation checkpoint (editorial addition, R37)</h3>
+<ul>
+<li><strong>Observed or calibrated quantities:</strong> Rotation curves, cluster lensing offsets and local dark-matter upper limits are measurements; dark-sector composition is inferred.</li>
+<li><strong>What the observation does not determine by itself:</strong> It does not identify a unique fundamental physical ontology or interaction mechanism; experimental limits must remain explicitly labeled as limits.</li>
+<li><strong>ArcSecs mechanism-building task:</strong> Build a complete baryon-plus-physical-field law and a separate collection/energy/thrust ledger; do not presume either available capture mass or an established new field.</li>
+<li><strong>Reproducible comparison / sources:</strong> SPARC rotation curves, Bullet Cluster lensing, DESI distance data and detector constraints.</li>
+<li><strong>Falsification rule:</strong> Retain every published measured quantity and uncertainty. If a specified ArcSecs mechanism fails that benchmark, record the failing assumption and design a more complete physical mechanism or a discriminating observation; do not erase or recast the measurement as a successful fit.</li>
+<li><strong>Scientific release status:</strong> Research working edition. Source bibliography, numerical calculations, author attribution and any claimed original simulations require independent scientific verification before journal submission.</li>
+</ul>
+<p><a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/index.md">Return to the full report index</a> · <a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/research/measurement-vs-inference.md">Observation-versus-inference research ledger</a></p>
+<h3 id="lib-uaix-navigation">UAIX navigation</h3>
+<p><a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/index.md">Research index</a> · <a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/research/measurement-vs-inference.md">Scope and evidence memo</a></p>

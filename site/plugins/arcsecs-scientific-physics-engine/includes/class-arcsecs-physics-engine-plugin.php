@@ -97,6 +97,12 @@ final class ArcSecs_Physics_Engine_Plugin
             true
         );
 
+        wp_register_script('arcsecs-cosmic-models', ARCSECS_PHYSICS_ENGINE_URL . 'assets/js/arcsecs-cosmic-models.js', array(), $this->get_deployment_asset_version('assets/js/arcsecs-cosmic-models.js'), true);
+        wp_register_script('arcsecs-cosmic-lab', ARCSECS_PHYSICS_ENGINE_URL . 'assets/js/arcsecs-cosmic-lab.js', array('arcsecs-cosmic-models'), $this->get_deployment_asset_version('assets/js/arcsecs-cosmic-lab.js'), true);
+        wp_register_script('arcsecs-review6-models', ARCSECS_PHYSICS_ENGINE_URL . 'assets/js/arcsecs-review6-models.js', array(), $this->get_deployment_asset_version('assets/js/arcsecs-review6-models.js'), true);
+        wp_register_script('arcsecs-review6-lab', ARCSECS_PHYSICS_ENGINE_URL . 'assets/js/arcsecs-review6-lab.js', array('arcsecs-review6-models'), $this->get_deployment_asset_version('assets/js/arcsecs-review6-lab.js'), true);
+
+
         wp_register_script(
             'arcsecs-dark-matter-drive-simulator',
             ARCSECS_PHYSICS_ENGINE_URL . 'assets/js/arcsecs-dark-matter-drive-simulator.js',
@@ -216,9 +222,10 @@ final class ArcSecs_Physics_Engine_Plugin
      */
     public function register_ai_readable_routes(): void
     {
-        add_rewrite_rule('^llms\.txt$', 'index.php?arcsecs_llms_txt=1', 'top');
+        if (!function_exists('arcsecs_ai_access_output_llms_txt')) {
+            add_rewrite_rule('^llms\.txt$', 'index.php?arcsecs_llms_txt=1', 'top');
+        }
         add_rewrite_rule('^arcsecs-physics-engine-demo/ai-summary/?$', 'index.php?arcsecs_ai_summary=1', 'top');
-        add_rewrite_rule('^dark-matter-drive-simulator/?$', 'index.php?arcsecs_dark_drive_standalone=1', 'top');
         add_rewrite_rule('^dark-matter-drive-simulator/ai-summary/?$', 'index.php?arcsecs_dark_drive_ai_summary=1', 'top');
         add_filter('query_vars', static function (array $vars): array {
             $vars[] = 'arcsecs_llms_txt';
@@ -238,24 +245,26 @@ final class ArcSecs_Physics_Engine_Plugin
     public function maybe_render_ai_readable_endpoint(WP $wp): void
     {
         $path = trim((string) parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH), '/');
-        $is_llms = isset($wp->query_vars['arcsecs_llms_txt']) || $path === 'llms.txt';
+        $is_llms = !function_exists('arcsecs_ai_access_output_llms_txt') && (isset($wp->query_vars['arcsecs_llms_txt']) || $path === 'llms.txt');
         $is_summary = isset($wp->query_vars['arcsecs_ai_summary']) || $path === 'arcsecs-physics-engine-demo/ai-summary';
         $is_dark_drive_standalone = isset($wp->query_vars['arcsecs_dark_drive_standalone']) || $path === 'dark-matter-drive-simulator';
         $is_dark_drive_summary = isset($wp->query_vars['arcsecs_dark_drive_ai_summary']) || $path === 'dark-matter-drive-simulator/ai-summary';
 
-        if ($is_dark_drive_standalone) {
-            $this->render_fullscreen_demo_template('darkMatterDrive');
-            exit;
-        }
 
         if (!$is_llms && !$is_summary && !$is_dark_drive_summary) {
             return;
         }
 
+        if (($is_summary && !$this->is_public_demo_page('arcsecs-physics-engine-demo')) || ($is_dark_drive_summary && !$this->is_public_demo_page('dark-matter-drive-simulator'))) {
+            status_header(404);
+            nocache_headers();
+            header('X-Robots-Tag: noindex, nofollow');
+            exit;
+        }
         status_header(200);
         header('Content-Type: text/markdown; charset=utf-8');
-        header('X-Robots-Tag: index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
-        header('Cache-Control: public, max-age=300');
+        if (!get_option('blog_public')) { header('X-Robots-Tag: noindex, nofollow'); }
+        nocache_headers();
         echo $is_llms ? $this->build_llms_txt() : ($is_dark_drive_summary ? $this->build_dark_drive_ai_summary_markdown() : $this->build_ai_summary_markdown());
         exit;
     }
@@ -269,30 +278,8 @@ final class ArcSecs_Physics_Engine_Plugin
      */
     public function filter_robots_txt(string $output, bool $public): string
     {
-        $policy = array(
-            'User-agent: OAI-SearchBot',
-            'Allow: /',
-            '',
-            'User-agent: ChatGPT-User',
-            'Allow: /',
-            '',
-            'User-agent: GPTBot',
-            'Allow: /',
-            '',
-            'User-agent: Googlebot',
-            'Allow: /',
-            '',
-            'User-agent: Bingbot',
-            'Allow: /',
-            '',
-            'User-agent: *',
-            'Disallow: /wp-admin/',
-            'Allow: /wp-admin/admin-ajax.php',
-            'Allow: /',
-            'Sitemap: ' . home_url('/sitemap.xml'),
-        );
-
-        return implode("\n", $policy) . "\n";
+        // Preserve WordPress, theme and host crawler directives.
+        return $output;
     }
 
     /**
@@ -303,11 +290,7 @@ final class ArcSecs_Physics_Engine_Plugin
      */
     public function filter_public_headers(array $headers): array
     {
-        $path = trim((string) parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH), '/');
-        if ($this->is_plugin_page_request() || $path === 'llms.txt' || $path === 'arcsecs-physics-engine-demo/ai-summary' || $path === 'dark-matter-drive-simulator/ai-summary') {
-            $headers['X-Robots-Tag'] = 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1';
-        }
-
+        // Never replace an explicit noindex or other existing header.
         return $headers;
     }
 
@@ -328,7 +311,7 @@ final class ArcSecs_Physics_Engine_Plugin
         $title = $is_dark_drive ? 'Dark Matter Drive Simulator | ArcSecs' : 'ArcSecs Experimental Physics Engine';
         $description = $is_dark_drive ? 'Interactive ambient vector potential density, Machian rotational interaction matrices, Proca substrate currents, relational tether distortion telemetry, and speculative ArcSecs inertial-decoupling dashboard.' : 'ArcSecs Experimental Physics Engine: an interactive speculative research visualization for relational flat-space simulations, tired-light redshift, massive photons, calibration tests, and Dark Matter Drive ramjet diagnostics.';
         ?>
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <?php if (!get_option('blog_public')) : ?><meta name="robots" content="noindex, nofollow" /><?php endif; ?>
         <link rel="canonical" href="<?php echo esc_url($demo_url); ?>" />
         <link rel="alternate" type="text/markdown" href="<?php echo esc_url($summary_url); ?>" title="<?php echo esc_attr($title); ?> AI-readable summary" />
         <meta name="description" content="<?php echo esc_attr($description); ?>" />
@@ -577,8 +560,17 @@ final class ArcSecs_Physics_Engine_Plugin
      *
      * @return bool Whether current route is one of the plugin-owned public simulator routes.
      */
+    private function is_public_demo_page(string $slug): bool
+    {
+        $page = get_page_by_path($slug);
+        return $page instanceof WP_Post && $page->post_status === 'publish' && $page->post_password === '';
+    }
+
     private function is_plugin_page_request(): bool
     {
+        if (!is_page()) { return false; }
+        $page = get_queried_object();
+        if (!($page instanceof WP_Post) || $page->post_status !== 'publish' || $page->post_password !== '') { return false; }
         return $this->is_demo_request() || $this->is_dark_matter_drive_request();
     }
 
@@ -590,9 +582,6 @@ final class ArcSecs_Physics_Engine_Plugin
     private function is_dark_matter_drive_request(): bool
     {
         $path = trim((string) parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH), '/');
-        if ($path === 'dark-matter-drive-simulator') {
-            return true;
-        }
 
         if (!is_page()) {
             return false;
@@ -633,7 +622,7 @@ final class ArcSecs_Physics_Engine_Plugin
         <head>
             <meta charset="<?php bloginfo('charset'); ?>" />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+            <?php if (!get_option('blog_public')) : ?><meta name="robots" content="noindex, nofollow" /><?php endif; ?>
             <?php wp_head(); ?>
         </head>
         <body <?php body_class($is_dark_drive ? 'arcsecs-fullscreen-demo arcsecs-dark-drive-page' : 'arcsecs-fullscreen-demo'); ?>>
@@ -643,7 +632,7 @@ final class ArcSecs_Physics_Engine_Plugin
                 if ($is_dark_drive) {
                     echo do_shortcode('[arcsecs_dark_matter_drive_simulator]');
                 } else {
-                    echo do_shortcode('[arcsecs_physics_engine title="ArcSecs Physics Engine Demo" subtitle="No-spacetime relational simulation: tired light, entropic gravity, beta-matter, and real-time diagnostics" scenario="relationalLattice" auto_run="true" steps="6000" show_boundary="true"]');
+                    echo do_shortcode('[arcsecs_physics_engine title="ArcSecs Physics Engine Demo" subtitle="No-spacetime relational simulation: tired light, entropic gravity, beta-matter, and real-time diagnostics" scenario="relationalLattice" auto_run="false" auto_grand_experiment="false" auto_guided_tour="false" steps="6000" show_boundary="true"]');
                 }
                 ?>
             </main>

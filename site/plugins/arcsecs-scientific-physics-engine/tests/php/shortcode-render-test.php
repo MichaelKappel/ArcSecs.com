@@ -1,4 +1,5 @@
 <?php
+if (PHP_SAPI !== "cli") { http_response_code(404); exit; }
 $pluginFile = __DIR__ . '/../../arcsecs-scientific-physics-engine.php';
 $shortcodeFile = __DIR__ . '/../../includes/class-arcsecs-physics-engine-shortcodes.php';
 $php = file_get_contents($shortcodeFile);
@@ -38,12 +39,14 @@ foreach ($required as $needle) {
         exit(1);
     }
 }
-$plugin = file_get_contents($pluginFile);
-if ($plugin === false || strpos($plugin, 'Version: 5.8.36') === false) {
-    fwrite(STDERR, "Plugin identity was not updated to 5.8.36.\n");
-    exit(1);
+$required = array('data-arcsecs-static-publication-review-checklist', 'data-arcsecs-page-draft-freeze-bundle');
+foreach ($required as $needle) {
+    if (strpos($php, $needle) === false) { fwrite(STDERR, "Missing render marker: {$needle}\n"); exit(1); }
 }
-exit(0);
-
-assert(strpos($html, 'data-arcsecs-static-publication-review-checklist') !== false);
-assert(strpos($html, 'data-arcsecs-page-draft-freeze-bundle') !== false);
+$plugin = file_get_contents($pluginFile);
+$package = json_decode(file_get_contents(__DIR__ . '/../../package.json'), true);
+$version = $package['version'];
+if ($plugin === false || strpos($plugin, 'Version: ' . $version) === false || strpos($plugin, "ARCSECS_PHYSICS_ENGINE_VERSION', '" . $version . "'") === false) {
+    fwrite(STDERR, "Plugin header, runtime version and package version disagree.\n"); exit(1);
+}
+echo "Shortcode marker and version contracts passed.\n";

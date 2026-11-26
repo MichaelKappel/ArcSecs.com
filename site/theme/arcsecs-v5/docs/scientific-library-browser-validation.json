@@ -1,0 +1,26 @@
+[
+  {
+    "width": 390,
+    "catalog_search": "pass",
+    "clear_empty_state": "pass",
+    "four_reader_templates": "pass",
+    "horizontal_overflow": "none detected",
+    "javascript_errors": []
+  },
+  {
+    "width": 768,
+    "catalog_search": "pass",
+    "clear_empty_state": "pass",
+    "four_reader_templates": "pass",
+    "horizontal_overflow": "none detected",
+    "javascript_errors": []
+  },
+  {
+    "width": 1440,
+    "catalog_search": "pass",
+    "clear_empty_state": "pass",
+    "four_reader_templates": "pass",
+    "horizontal_overflow": "none detected",
+    "javascript_errors": []
+  }
+]

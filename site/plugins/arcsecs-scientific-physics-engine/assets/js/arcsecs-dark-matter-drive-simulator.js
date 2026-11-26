@@ -1240,7 +1240,7 @@ fn fragmentMain(input: VertexOutput) -> @location(0) vec4<f32> {
         const sampledDense = regionsCrossed.some((region) => region === "dense_filament" || region === "galaxy_halo" || region === "matter_cloud");
         const sampledVoid = regionsCrossed.some((region) => region === "void_channel" || region === "smooth_inertial_corridor");
         const recommendedRoute = routePlanner.darkMatterTravelRecommendedRoute;
-        const autopilotValid = autopilotPayload.darkMatterTravelAutopilotValidation.every((row) => row.passed);
+        const autopilotValid = autopilotPayload.darkMatterTravelAutopilot.engaged && autopilotPayload.darkMatterTravelAutopilotValidation.every((row) => row.passed);
         const objectives = [
             objective("reach-beacon", "reach-beacon", "Reach the beacon without lightyear navigation", sandbox.outcome.destinationReached ? "complete" : "active", Math.max(0, 100 - sandbox.ship.distanceToBeaconUiUnits), 100, sandbox.outcome.destinationReached ? 20 : 12, "Distance to beacon is " + sandbox.ship.distanceToBeaconUiUnits.toFixed(2) + " UI-mask units, exported as relational Arcsecs telemetry."),
             objective("maintain-fuel", "maintain-fuel", "Maintain enough harvested fuel reserve", sandbox.ship.fuelCharge >= 20 ? "complete" : "watch", sandbox.ship.fuelCharge, 20, sandbox.ship.fuelCharge >= 20 ? 16 : 5, "Fuel charge is " + sandbox.ship.fuelCharge.toFixed(2) + " percent."),
@@ -5619,8 +5619,8 @@ fn fragmentMain(input: VertexOutput) -> @location(0) vec4<f32> {
             this.lastFrameTime = 0;
             this.lastIdleFrameTime = 0;
             this.minimumFrameMilliseconds = 1000 / 60;
-            this.idleFrameMilliseconds = 1000 / 30;
-            this.boundVisibilityHandler = () => { if (typeof document !== "undefined" && document.hidden) { this.core.pause(); this.progressMonitor.addEntry("Simulation paused", "Tab hidden; animation loop paused to protect performance.", "info"); this.render(); } };
+            this.idleFrameMilliseconds = 250;
+            this.boundVisibilityHandler = () => { if (typeof document !== "undefined" && document.hidden) { this.core.pause(); this.clearTravelKeys(); this.progressMonitor.addEntry("Simulation paused", "Tab hidden; animation loop paused to protect performance.", "info"); this.render(); } };
         }
         initialize() {
             this.selectRenderer();
@@ -5671,10 +5671,10 @@ fn fragmentMain(input: VertexOutput) -> @location(0) vec4<f32> {
             this.root.querySelectorAll("[data-arcsecs-drive-mission]").forEach((button) => button.addEventListener("click", () => this.moveMission(button.getAttribute("data-arcsecs-drive-mission") || "next")));
             this.root.querySelectorAll("[data-arcsecs-drive-demo-select]").forEach((select) => select.addEventListener("change", () => this.handleDemoSelection(select.value || "demo-flight")));
             this.root.querySelectorAll("[data-arcsecs-drive-demo]").forEach((button) => button.addEventListener("click", () => this.runSelectedDemoAction(button.getAttribute("data-arcsecs-drive-demo") || "play")));
-            this.root.querySelectorAll("[data-arcsecs-travel-input]").forEach((button) => button.addEventListener("click", () => this.handleDarkMatterTravelInput(button.getAttribute("data-arcsecs-travel-input") || "thrust")));
-            this.root.querySelectorAll("[data-arcsecs-travel-route-autopilot]").forEach((button) => button.addEventListener("click", () => this.engageDarkMatterTravelRouteAutopilot()));
             this.root.querySelectorAll("[data-arcsecs-drive-acceptance-run]").forEach((button) => button.addEventListener("click", () => this.runAcceptanceFlight()));
             this.root.addEventListener("click", (event) => {
+                const travelButton = event.target && event.target.closest ? event.target.closest("[data-arcsecs-travel-input], [data-arcsecs-travel-route-autopilot]") : null;
+                if (travelButton && this.root.contains(travelButton)) { event.preventDefault(); if (travelButton.hasAttribute("data-arcsecs-travel-route-autopilot")) this.engageDarkMatterTravelRouteAutopilot(); else this.handleDarkMatterTravelInput(travelButton.getAttribute("data-arcsecs-travel-input")); return; }
                 const travelTarget = event.target && event.target.closest ? event.target.closest("[data-arcsecs-travel-canvas]") : null;
                 if (travelTarget && this.root.contains(travelTarget)) { this.setDarkMatterTravelTarget(event, travelTarget); return; }
                 const target = event.target && event.target.closest ? event.target.closest("[data-arcsecs-drive-demo-stage]") : null;
@@ -5709,7 +5709,7 @@ fn fragmentMain(input: VertexOutput) -> @location(0) vec4<f32> {
                     this.render();
                 });
             }
-            if (typeof window !== "undefined") { window.addEventListener("keydown", (event) => this.handleDarkMatterTravelKey(event, true)); window.addEventListener("keyup", (event) => this.handleDarkMatterTravelKey(event, false)); window.addEventListener("gamepadconnected", () => { this.updateCapabilities(); this.progressMonitor.addEntry("Gamepad detected", "Gamepad input can be used in a later WebXR-ready implementation slice.", "info"); this.render(); }); }
+            if (typeof window !== "undefined") { this.root.addEventListener("keydown", (event) => this.handleDarkMatterTravelKey(event, true)); this.root.addEventListener("keyup", (event) => this.handleDarkMatterTravelKey(event, false)); this.root.addEventListener("focusout", event => { if (!this.root.contains(event.relatedTarget)) this.clearTravelKeys(); }); this.boundBlurHandler = () => this.clearTravelKeys(); window.addEventListener("blur", this.boundBlurHandler); this.boundGamepadHandler = () => { this.updateCapabilities(); this.progressMonitor.addEntry("Gamepad detected", "Gamepad input can be used in a later WebXR-ready implementation slice.", "info"); this.render(); }; window.addEventListener("gamepadconnected", this.boundGamepadHandler); }
         }
         applyControls() {
             const recipe = {};
@@ -5822,7 +5822,9 @@ fn fragmentMain(input: VertexOutput) -> @location(0) vec4<f32> {
             this.progressMonitor.addEntry("Dark Matter Ship Travel Sandbox active", "Use W/A/S/D, arrow keys, Space, tap-to-target, or the mobile controls to fly through Proca substrate regions.", "success");
             this.render();
         }
+        clearTravelKeys() { this.darkMatterTravelInput = Object.assign({}, this.darkMatterTravelInput, { thrust:false, brake:false, rotateLeft:false, rotateRight:false, scoopToggleRequested:false, inertialAssistToggleRequested:false }); }
         handleDarkMatterTravelKey(event, pressed) {
+            if (pressed && (event.defaultPrevented || event.ctrlKey || event.altKey || event.metaKey || (event.target && (event.target.isContentEditable || ["INPUT", "TEXTAREA", "SELECT", "BUTTON", "A"].includes(event.target.tagName))))) return;
             if (!this.darkMatterTravelSandboxActive) { return; }
             const key = event.key || "";
             let nextInput = this.darkMatterTravelInput || createDarkMatterTravelInputState();
@@ -5832,6 +5834,7 @@ fn fragmentMain(input: VertexOutput) -> @location(0) vec4<f32> {
             else if (key === "d" || key === "D" || key === "ArrowRight") { nextInput = Object.assign({}, nextInput, { rotateRight: pressed }); }
             else if (key === " ") { if (pressed) { nextInput = Object.assign({}, nextInput, { inertialAssistToggleRequested: true }); } if (event.preventDefault) { event.preventDefault(); } }
             else { return; }
+            if (event.preventDefault) event.preventDefault();
             this.darkMatterTravelInput = nextInput;
             if (pressed) { this.stepDarkMatterTravelSandbox(2); }
             if (!pressed) { this.darkMatterTravelInput = Object.assign({}, this.darkMatterTravelInput, { scoopToggleRequested: false, inertialAssistToggleRequested: false }); }
@@ -5871,6 +5874,26 @@ fn fragmentMain(input: VertexOutput) -> @location(0) vec4<f32> {
             }
             this.darkMatterShipTravelSandbox = state;
         }
+        buildDarkMatterShipTravelAutopilotExportPayload() {
+            const sandbox = this.darkMatterShipTravelSandbox || createDarkMatterShipTravelSandbox();
+            const route = buildDarkMatterTravelRoutePlanner(sandbox, buildDarkMatterTravelRelationalAdapter(sandbox));
+            const payload = buildDarkMatterTravelRouteAutopilot(sandbox, route, this.darkMatterTravelAutopilotTicks || 0);
+            payload.darkMatterTravelAutopilot.engaged = this.darkMatterTravelAutopilotTicks > 0;
+            if (!payload.darkMatterTravelAutopilot.engaged) payload.darkMatterTravelAutopilot.statusLabel = "route preview — not run";
+            return payload;
+        }
+        engageDarkMatterTravelRouteAutopilot() {
+            this.activateDarkMatterShipTravelSandbox();
+            const payload = this.buildDarkMatterShipTravelAutopilotExportPayload();
+            const command = payload.darkMatterTravelAutopilotCommands[0];
+            const ship = this.darkMatterShipTravelSandbox.ship;
+            this.darkMatterTravelInput = Object.assign(createDarkMatterTravelInputState(), { hasTarget:true, targetUiPositionX:command.targetUiPositionX, targetUiPositionY:command.targetUiPositionY, thrust:command.thrustRecommended, brake:command.brakeRecommended, scoopToggleRequested:command.scoopRecommended !== ship.scoopEnabled, inertialAssistToggleRequested:command.inertialAssistRecommended !== ship.inertialAssistEnabled });
+            this.stepDarkMatterTravelSandbox(1);
+            this.darkMatterTravelInput.scoopToggleRequested = false; this.darkMatterTravelInput.inertialAssistToggleRequested = false;
+            this.stepDarkMatterTravelSandbox(11); this.darkMatterTravelAutopilotTicks += 12; this.clearTravelKeys();
+            this.darkMatterTravelAutopilotSnapshot = this.buildDarkMatterShipTravelAutopilotExportPayload();
+            this.progressMonitor.addEntry("Route planner step", "Advanced 12 sandbox ticks along the recommended route; not a physical flight.", "info"); this.render();
+        }
         buildDarkMatterShipTravelExportPayload() {
             const sandbox = this.darkMatterShipTravelSandbox || createDarkMatterShipTravelSandbox();
             const relationalAdapter = buildDarkMatterTravelRelationalAdapter(sandbox);
@@ -5900,6 +5923,13 @@ fn fragmentMain(input: VertexOutput) -> @location(0) vec4<f32> {
             const routePlanner = buildDarkMatterTravelRoutePlanner(sandbox, relationalAdapter);
             const routeItems = routePlanner.darkMatterTravelRouteCandidates.map((candidate) => "<li class='" + (candidate.candidateId === routePlanner.darkMatterTravelRecommendedRoute.candidateId ? "is-recommended" : "") + "'><strong>" + safeVisibleText(candidate.label) + "</strong><span>Score " + candidate.totalScore.toFixed(2) + " • " + safeVisibleText(candidate.targetRegionType) + " • " + candidate.targetArcseconds.toFixed(0) + " arcsec</span><em>" + safeVisibleText(candidate.recommendation) + "</em></li>").join("");
             const routeValidationItems = routePlanner.darkMatterTravelRoutePlannerValidation.map((row) => "<li class='" + (row.passed ? "is-pass" : "is-watch") + "'><strong>" + safeVisibleText(row.label) + "</strong><span>" + safeVisibleText(row.evidence) + "</span></li>").join("");
+            const autopilot = this.buildDarkMatterShipTravelAutopilotExportPayload();
+            const autopilotCommand = autopilot.darkMatterTravelAutopilotCommands[0];
+            const renderValidation = rows => rows.map(row => "<li><strong>" + safeVisibleText(row.label) + "</strong> — " + (row.passed ? "pass" : "review") + ": " + safeVisibleText(row.evidence) + "</li>").join("");
+            const autopilotValidationItems = renderValidation(autopilot.darkMatterTravelAutopilotValidation);
+            const missionPayload = buildDarkMatterTravelMissionObjectives(sandbox, routePlanner, autopilot);
+            const missionObjectiveItems = missionPayload.darkMatterTravelMissionObjectives.map(row => "<li><strong>" + safeVisibleText(row.label) + "</strong> — " + safeVisibleText(row.status) + ": " + safeVisibleText(row.evidence) + "</li>").join("");
+            const missionValidationItems = renderValidation(missionPayload.darkMatterTravelMissionValidation);
             const telemetryCards = [
                 ["Fuel charge", ship.fuelCharge.toFixed(1) + "%"],
                 ["Thermal load", ship.thermalLoad.toFixed(1) + "%"],
@@ -5915,7 +5945,7 @@ fn fragmentMain(input: VertexOutput) -> @location(0) vec4<f32> {
                 ["Photon lag / wavefront delay", sandbox.wavefrontTrace.photonLag.toFixed(2)]
             ].map((card) => "<li><strong>" + safeVisibleText(card[0]) + "</strong><span>" + safeVisibleText(card[1]) + "</span></li>").join("");
             const validationItems = sandbox.validationLedger.map((item) => "<li class='" + (item.passed ? "is-pass" : "is-watch") + "'><strong>" + safeVisibleText(item.label) + "</strong><span>" + safeVisibleText(item.evidence) + "</span></li>").join("");
-            return "<section class='arcsecs-travel-sandbox' aria-label='Dark Matter Ship Travel Sandbox'><div class='arcsecs-travel-instructions'><h3>Dark Matter Ship Travel Sandbox</h3><p>Drive the ship across the two-dimensional instrument mask. Dense substrate regions provide more fuel but add torsion pull, Weber drag, thermal stress, route bending, and optical delay. Void corridors coast smoothly but provide less fuel.</p><p><strong>Controls:</strong> W/ArrowUp thrust, S/ArrowDown brake, A/D rotate, Space inertial assist, tap/click map target.</p></div><div class='arcsecs-travel-layout'><div class='arcsecs-travel-canvas' data-arcsecs-travel-canvas='true' role='application' aria-label='Interactive Dark Matter Ship Travel map'>" + regionNodes + routeNodes + harvestNodes + "<span class='arcsecs-travel-beacon' style='left:" + sandbox.configuration.beaconPositionX + "%;top:" + sandbox.configuration.beaconPositionY + "%;'>Beacon</span><span class='arcsecs-travel-target' style='left:" + ship.activeTargetPointX + "%;top:" + ship.activeTargetPointY + "%;'></span><span class='arcsecs-travel-ship' style='left:" + ship.uiPositionX + "%;top:" + ship.uiPositionY + "%;transform:translate(-50%,-50%) rotate(" + ship.headingDegrees + "deg);'><b></b></span><span class='arcsecs-travel-thermal " + (ship.thermalLoad > 70 ? "is-hot" : "") + "'></span></div><aside class='arcsecs-travel-side'><section class='arcsecs-travel-advisor is-" + safeVisibleText(sandbox.advisorMessage.severity) + "'><h4>Travel Advisor</h4><p>" + safeVisibleText(sandbox.advisorMessage.message) + "</p></section><section class='arcsecs-travel-wavefront'><h4>Interferometric Wavefront Tracker</h4><p>GW baseline lane " + sandbox.wavefrontTrace.gravitationalWaveBaselineLane.toFixed(2) + " • photon lane " + sandbox.wavefrontTrace.electromagneticPhotonLane.toFixed(2) + " • lag " + sandbox.wavefrontTrace.photonLag.toFixed(2) + " • energy attenuation " + sandbox.wavefrontTrace.energyAttenuation.toFixed(2) + " • visibility " + safeVisibleText(sandbox.wavefrontTrace.opticalVisibilityStatus) + "</p></section><section class='arcsecs-travel-mobile-controls'><h4>Travel controls</h4><button type='button' data-arcsecs-travel-input='thrust'>Thrust</button><button type='button' data-arcsecs-travel-input='brake'>Brake</button><button type='button' data-arcsecs-travel-input='left'>Rotate Left</button><button type='button' data-arcsecs-travel-input='right'>Rotate Right</button><button type='button' data-arcsecs-travel-input='scoop'>Toggle Scoop</button><button type='button' data-arcsecs-travel-input='assist'>Inertial Assist</button><button type='button' data-arcsecs-travel-input='reset'>Reset Travel</button></section></aside></div><section class='arcsecs-travel-relational-adapter'><h4>Relational Navigation Adapter</h4><p>" + safeVisibleText(relationalAdapter.instrumentalMask.relationalAdapterDescription) + "</p><ul>" + adapterCards + "</ul><ol>" + adapterValidationItems + "</ol><em>" + safeVisibleText(relationalAdapter.teleparallelGaugeForce.forceDescription) + "</em></section><section class='arcsecs-travel-route-planner'><h4>Route Planner</h4><p>" + safeVisibleText(routePlanner.darkMatterTravelRoutePlanner.routePolicy) + "</p><button type='button' data-arcsecs-travel-route-autopilot='true'>Engage Recommended Route</button><ol>" + routeItems + "</ol><ul>" + routeValidationItems + "</ul><em>Recommended: " + safeVisibleText(routePlanner.darkMatterTravelRecommendedRoute.label) + "</em></section><section class='arcsecs-travel-route-autopilot'><h4>Route Autopilot</h4><p>" + safeVisibleText(autopilot.darkMatterTravelAutopilot.statusLabel) + " • target " + safeVisibleText(autopilot.darkMatterTravelAutopilotTarget.label) + " • progress " + autopilot.darkMatterTravelAutopilot.progressTowardTarget.toFixed(2) + "</p><strong>" + safeVisibleText(autopilotCommand.steeringInstruction) + "</strong><ul>" + autopilotValidationItems + "</ul></section><section class='arcsecs-travel-mission-objectives'><h4>Mission Objectives</h4><p>Score " + missionPayload.darkMatterTravelMissionScore.totalScore.toFixed(1) + " • grade " + safeVisibleText(missionPayload.darkMatterTravelMissionScore.finalGrade) + " • " + (missionPayload.darkMatterTravelMissionScore.missionPass ? "pass" : "watch") + "</p><ol>" + missionObjectiveItems + "</ol><ul>" + missionValidationItems + "</ul></section><section class='arcsecs-travel-telemetry'><h4>Ship Travel Cockpit</h4><ul>" + telemetryCards + "</ul></section><section class='arcsecs-travel-validation'><h4>Travel validation / quality strip</h4><ul>" + validationItems + "</ul></section></section>";
+            return "<section class='arcsecs-travel-sandbox' aria-label='Dark Matter Ship Travel Sandbox'><div class='arcsecs-travel-instructions'><h3>Dark Matter Ship Travel Sandbox</h3><p>Drive the ship across the two-dimensional instrument mask. Dense substrate regions provide more fuel but add torsion pull, Weber drag, thermal stress, route bending, and optical delay. Void corridors coast smoothly but provide less fuel.</p><p><strong>Controls:</strong> W/ArrowUp thrust, S/ArrowDown brake, A/D rotate, Space inertial assist, tap/click map target.</p></div><div class='arcsecs-travel-layout'><div class='arcsecs-travel-canvas' data-arcsecs-travel-canvas='true' role='application' aria-label='Interactive Dark Matter Ship Travel map'>" + regionNodes + routeNodes + harvestNodes + "<span class='arcsecs-travel-beacon' style='left:" + sandbox.configuration.beaconPositionX + "%;top:" + sandbox.configuration.beaconPositionY + "%;'>Beacon</span><span class='arcsecs-travel-target' style='left:" + ship.activeTargetPointX + "%;top:" + ship.activeTargetPointY + "%;'></span><span class='arcsecs-travel-ship' style='left:" + ship.uiPositionX + "%;top:" + ship.uiPositionY + "%;transform:translate(-50%,-50%) rotate(" + ship.headingDegrees + "deg);'><b></b></span><span class='arcsecs-travel-thermal " + (ship.thermalLoad > 70 ? "is-hot" : "") + "'></span></div><aside class='arcsecs-travel-side'><section class='arcsecs-travel-advisor is-" + safeVisibleText(sandbox.advisorMessage.severity) + "'><h4>Travel Advisor</h4><p>" + safeVisibleText(sandbox.advisorMessage.message) + "</p></section><section class='arcsecs-travel-wavefront'><h4>Interferometric Wavefront Tracker</h4><p>GW baseline lane " + sandbox.wavefrontTrace.gravitationalWaveBaselineLane.toFixed(2) + " • photon lane " + sandbox.wavefrontTrace.electromagneticPhotonLane.toFixed(2) + " • lag " + sandbox.wavefrontTrace.photonLag.toFixed(2) + " • energy attenuation " + sandbox.wavefrontTrace.energyAttenuation.toFixed(2) + " • visibility " + safeVisibleText(sandbox.wavefrontTrace.opticalVisibilityStatus) + "</p></section><section class='arcsecs-travel-mobile-controls'><h4>Travel controls</h4><button type='button' data-arcsecs-travel-input='thrust'>Thrust</button><button type='button' data-arcsecs-travel-input='brake'>Brake</button><button type='button' data-arcsecs-travel-input='left'>Rotate Left</button><button type='button' data-arcsecs-travel-input='right'>Rotate Right</button><button type='button' data-arcsecs-travel-input='scoop'>Toggle Scoop</button><button type='button' data-arcsecs-travel-input='assist'>Inertial Assist</button><button type='button' data-arcsecs-travel-input='reset'>Reset Travel</button></section></aside></div><section class='arcsecs-travel-relational-adapter'><h4>Relational Navigation Adapter</h4><p>" + safeVisibleText(relationalAdapter.instrumentalMask.relationalAdapterDescription) + "</p><ul>" + adapterCards + "</ul><ol>" + adapterValidationItems + "</ol><em>" + safeVisibleText(relationalAdapter.teleparallelGaugeForce.forceDescription) + "</em></section><section class='arcsecs-travel-route-planner'><h4>Route Planner</h4><p>" + safeVisibleText(routePlanner.darkMatterTravelRoutePlanner.routePolicy) + "</p><button type='button' data-arcsecs-travel-route-autopilot='true'>Advance Recommended Route (12 ticks)</button><ol>" + routeItems + "</ol><ul>" + routeValidationItems + "</ul><em>Recommended: " + safeVisibleText(routePlanner.darkMatterTravelRecommendedRoute.label) + "</em></section><section class='arcsecs-travel-route-autopilot'><h4>Route Autopilot</h4><p>" + safeVisibleText(autopilot.darkMatterTravelAutopilot.statusLabel) + " • target " + safeVisibleText(autopilot.darkMatterTravelAutopilotTarget.label) + " • progress " + autopilot.darkMatterTravelAutopilot.progressTowardTarget.toFixed(2) + "</p><strong>" + safeVisibleText(autopilotCommand.steeringInstruction) + "</strong><ul>" + autopilotValidationItems + "</ul></section><section class='arcsecs-travel-mission-objectives'><h4>Mission Objectives</h4><p>Score " + missionPayload.darkMatterTravelMissionScore.totalScore.toFixed(1) + " • grade " + safeVisibleText(missionPayload.darkMatterTravelMissionScore.finalGrade) + " • " + (missionPayload.darkMatterTravelMissionScore.missionPass ? "pass" : "watch") + "</p><ol>" + missionObjectiveItems + "</ol><ul>" + missionValidationItems + "</ul></section><section class='arcsecs-travel-telemetry'><h4>Ship Travel Cockpit</h4><ul>" + telemetryCards + "</ul></section><section class='arcsecs-travel-validation'><h4>Travel validation / quality strip</h4><ul>" + validationItems + "</ul></section></section>";
         }
 
         handleDemoSelection(key) {
@@ -6488,6 +6518,8 @@ fn fragmentMain(input: VertexOutput) -> @location(0) vec4<f32> {
             });
         }
         loop(timestamp) {
+            if (!this.root.isConnected) { document.removeEventListener("visibilitychange", this.boundVisibilityHandler); window.removeEventListener("blur", this.boundBlurHandler); window.removeEventListener("gamepadconnected", this.boundGamepadHandler); if (this.renderer && this.renderer.computeWorkerClient) this.renderer.computeWorkerClient.terminate(); return; }
+            if (document.hidden) { window.requestAnimationFrame(next => this.loop(next)); return; }
             if (timestamp - this.lastFrameTime >= this.minimumFrameMilliseconds) {
                 this.lastFrameTime = timestamp;
                 if (this.core.running) {
@@ -7149,7 +7181,9 @@ fn fragmentMain(input: VertexOutput) -> @location(0) vec4<f32> {
 
     function initializePages() {
         document.querySelectorAll("[data-arcsecs-dark-drive]").forEach((root) => {
+            if (root.__arcsecsDriveController) return;
             const page = new DashboardController(root);
+            root.__arcsecsDriveController = page;
             page.initialize();
         });
     }

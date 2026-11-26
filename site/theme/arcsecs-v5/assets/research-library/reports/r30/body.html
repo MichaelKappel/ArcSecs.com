@@ -1,0 +1,1145 @@
+<h2 id="lib-operational-mass-gravitational-coupling-and-empirical-limits-on-nonzero-photon-rest-mass-an-independent-arcsecs-investigation"><strong>Operational Mass, Gravitational Coupling, and Empirical Limits on Nonzero Photon Rest Mass: An Independent ArcSecs Investigation</strong></h2>
+<blockquote>
+<p><strong>ArcSecs editorial reading key (23 November 2026; R30):</strong> This report develops the ArcSecs physical-first research programme. Instrument readings and published numerical bounds remain distinct from an author’s inference about the underlying cause. Historical relativity-based expressions are comparison benchmarks, <strong>not</strong> the adopted ArcSecs physical mechanism. A failed narrowly specified toy model does not establish that every future nonmetric physical mechanism is impossible. Likewise, an ArcSecs position is not automatically an independently observed result.</p>
+</blockquote>
+<p><strong>Direct observation to preserve:</strong> Photon momentum, radiation pressure and gravitational deflection are observed; photon invariant rest mass is currently constrained by limits, not a positive measurement.</p>
+<p><strong>ArcSecs inference to investigate:</strong> Investigate a physical gravitational coupling to photon energy-momentum and design a distinct rest-mass signature if intrinsic mass is claimed.</p>
+<p><strong>Verification sources and data to inspect:</strong> PDG photon listings; Maxwell/Proca laboratory null tests; localized FRB arrival-time constraints.</p>
+<h3 id="lib-source-verification-addendum-23-november-2026">Source-verification addendum — 23 November 2026</h3>
+<p><strong>Audit focus:</strong> Photon gravitational response versus invariant rest mass. This addendum supplies source-specific corrections and does not claim that all bibliography entries or datasets in this report were reverified.</p>
+<p><strong>Measured or reproducible benchmark:</strong> PDG 2025 lists photon invariant-rest-mass <strong>upper bounds</strong>, including an adopted solar-wind benchmark of 1 × 10^-18 eV/c² (about 1.78 × 10^-54 kg), and separates measurements with additional model assumptions. Photon radiation pressure, energy-momentum and gravitational deflection are valid physical evidence, but not a direct positive invariant-rest-mass detection.</p>
+<p><strong>Interpretation / missing mechanism:</strong> Do not merge photon energy-equivalent mass, inertial momentum transfer, in-medium effective mass, and intrinsic vacuum rest mass into one experimental value. A static Proca mass changes dispersion without by itself making energy decay with distance. The lensed-FRB example provides an additional <strong>upper bound</strong> with lens-model dependence, not an experimental detection. The ArcSecs proposal is to derive a non-fabric physical coupling and seek a new independent discriminant.</p>
+<p><strong>Primary literature checked:</strong> <a href="https://pdg.lbl.gov/2025/listings/rpp2025-list-photon.pdf" rel="noopener noreferrer">PDG25</a>; <a href="https://doi.org/10.1103/PhysRevD.111.L041304" rel="noopener noreferrer">FRB25</a>. For detailed claim-level results see <a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/research/source-audit-4.md">four-report evidence audit</a>.</p>
+<p><strong>Review boundary:</strong> Audit of selected high-impact assertions only; remaining untested claims and claimed numerical pipelines require independent reproduction.</p>
+<hr>
+<h3 id="lib-abstract"><strong>Abstract</strong></h3>
+<p>This independent investigation evaluates whether photons possess physical mass within the ArcSecs framework, separating verified measurements of photon energy, momentum, and gravitational deflection from the narrower experimental claim of a nonzero invariant rest mass. Across laboratory electrodynamics, planetary and solar-wind magnetohydrodynamics, gravitational lensing, multi-messenger gamma-ray burst timing, and localized fast radio burst (FRB) dispersion studies, photons carry linear momentum, transfer radiation pressure, and exhibit gravitational trajectory deflection and arrival delays near massive bodies1. However, the cited terrestrial and astrophysical studies constrain invariant photon rest mass through upper limits rather than supplying a positive rest-mass detection; all published Proca-model analyses report upper bounds. Verified limits span roughly 10⁻¹⁴ electron-volts per speed-of-light squared (2 × 10⁻⁵⁰ kilograms) in laboratory Coulomb-law tests5, 4.71 × 10⁻⁵¹ to 4.86 × 10⁻⁵¹ kilograms (roughly 2.6 × 10⁻¹⁵ to 2.7 × 10⁻¹⁵ electron-volts per speed-of-light squared) from 104 localized FRBs6, and 1 × 10⁻¹⁸ electron-volts (roughly 1.78 × 10⁻⁵⁴ kilograms) adopted by the Particle Data Group from solar-wind magnetohydrodynamics7. We construct a physical-first gravitational-coupling mechanism based on local potential-gradient momentum exchange under a constant universal progression parameter, avoiding physical spacetime curvature or time-stretching ontologies. Crucially, Hamiltonian conservation shows that a static Proca rest mass alone preserves photon energy, produces frequency-dependent group-velocity slowing rather than continual deceleration, and cannot explain Hubble-scale redshifts. Achieving a positive rest-mass detection—rather than a tighter upper bound—requires isolating low-frequency Proca-plasma dispersion cross-terms below 50 megahertz or detecting drive-locked longitudinal electromagnetic modes in cryogenic superconducting cavities.<br>
+Keywords: photon rest mass, Proca electrodynamics, gravitational deflection, fast radio bursts, solar-wind magnetohydrodynamics, dispersion measure, ArcSecs framework</p>
+<h3 id="lib-opening-research-position-the-eleven-binding-arcsecs-premises"><strong>Opening Research Position: The Eleven Binding ArcSecs Premises</strong></h3>
+<p>This study is conducted as an affirmative, physically grounded investigation under the eleven binding premises of the ArcSecs research charter. Those premises are reproduced verbatim below as the fixed editorial and modeling starting point of this report, kept distinct from independently verified experimental detections:</p>
+<blockquote>
+<ol type="1">
+<li><strong>Photons have mass.</strong><br>
+</li>
+<li><strong>Time is constant.</strong><br>
+</li>
+<li><strong>Light slows down over time.</strong><br>
+</li>
+<li><strong>Time does not physically exist; it is the “When.”</strong><br>
+</li>
+<li><strong>Space does not physically exist; it is the “Where.”</strong><br>
+</li>
+<li><strong>All that physically exists at any moment occupies area and has mass at that moment.</strong><br>
+</li>
+<li><strong>Spacetime does not physically exist.</strong><br>
+</li>
+<li><strong>Light is not the fastest thing in the universe.</strong><br>
+</li>
+<li><strong>Things move apart from each other faster than causality; time, space, or spacetime cannot be physically stretched because they are not physical substances to stretch.</strong><br>
+</li>
+<li><strong>The size of the universe is unknown.</strong><br>
+</li>
+<li><strong>Objects in the universe are smaller and closer than they appear.</strong></li>
+</ol>
+</blockquote>
+<p>Throughout the main manuscript, space names physical location (“Where”) and time names event ordering (“When”) under a constant universal progression parameter T. Neither space, time, nor spacetime is treated as a material substrate, medium, fabric, or force carrier. Coordinate systems, metrics, and published mathematical tensors are referenced strictly as calculation tools or observational calibration benchmarks, never as physical substances exerting forces. Atomic-clock rate comparisons, spectral-aging intervals, and signal-arrival delays are analyzed strictly as rates of physical processes and signal propagation within constant progression T.</p>
+<h3 id="lib-introduction-and-core-research-questions"><strong>1. Introduction and Core Research Questions</strong></h3>
+<p>The intuition motivating the ArcSecs framework is physical and direct: light responds to gravity, transfers mechanical impulse to matter, and therefore behaves as a massive physical entity rather than a disembodied geometric ray. Conventional physics treats photons as strictly massless quanta traveling along null paths in a curved four-dimensional spacetime manifold while simultaneously assigning them momentum, energy-flux density, and gravitational deflection1. From a physical-first standpoint that rejects spacetime as a material substrate, gravitational bending requires a concrete interaction between massive gravitating sources and propagating electromagnetic quanta.<br>
+Scientific discipline, however, requires separating gravitational energy-momentum coupling from the narrower empirical claim of a nonzero invariant rest mass. If a photon possesses invariant rest mass, Proca-type field electrodynamics predicts specific physical deviations from massless Maxwell propagation: Yukawa-type exponential damping of static electric and magnetic fields, a third longitudinal wave polarization alongside the two transverse modes, and a frequency-dependent sub-luminal group velocity in free space11. Conversely, measuring gravitational deflection or radiation pressure confirms energy-momentum inertia without automatically proving nonzero invariant rest mass.<br>
+This investigation addresses five core questions:</p>
+<blockquote>
+<ol type="1">
+<li>What operational definitions of photon mass exist, and which observables cleanly discriminate zero invariant rest mass from nonzero invariant rest mass?<br>
+</li>
+<li>How does an ArcSecs physical-interaction candidate compare against Maxwell propagation (used strictly as a laboratory calibration control) and Proca/Stueckelberg massive electrodynamics across gauge structure, degrees of freedom, polarization, static potentials, and group velocity?<br>
+</li>
+<li>Does any verified gravitational-bending experiment measure a photon’s invariant rest mass, or do energy-momentum dynamics account for observed lensing angles, wavelength independence, and polarization?<br>
+</li>
+<li>Can a tiny photon rest mass generate cumulative dispersion, continual slowing over time, or cosmological redshift, and does Proca rest mass alone cause continual photon energy loss?<br>
+</li>
+<li>What prospective experiment offers the strongest realistic protocol for a positive rest-mass detection rather than merely tightening an upper limit?</li>
+</ol>
+</blockquote>
+<p>To keep the main manuscript export-safe and readable, all symbolic equations, unit derivations, numerical worksheets, and Python reproducibility scripts are housed outside this manuscript in the separate technical companion (analysis/ and METHODS_TO_REPRODUCE.md).</p>
+<h3 id="lib-operational-definitions-of-photon-mass-and-discriminating-observables"><strong>2. Operational Definitions of Photon Mass and Discriminating Observables</strong></h3>
+<p>In experimental physics, the label “mass” applied to photons encompasses three distinct operational properties that must remain conceptually and quantitatively separated.<br>
+The first operational definition is <strong>dynamical momentum-carrying mass-energy</strong>. Every detected photon transfers quantized energy proportional to its frequency and linear momentum equal to energy divided by the limiting electromagnetic speed in the massless limit, or governed more generally by the dispersion relation connecting squared energy to squared momentum and squared rest-mass energy6. Laboratory radiation pressure, Compton scattering, and photoelectric recoil directly verify that propagating light carries physical inertia and exchanges momentum with matter at every interaction. This operational property is empirically established and aligns with the ArcSecs premise that light acts as a momentum-bearing physical participant in nature.<br>
+The second operational definition is <strong>gravitational coupling mass-energy</strong>. Because photons carry energy flux and momentum density (parameterized mathematically via a stress-energy tensor), they respond to gravitational fields—exhibiting angular deflection near stars and galaxies, frequency shifts across gravitational potential differences, and excess propagation delays when passing near massive bodies such as the Sun1. Within an ArcSecs physical-first ontology lacking curved spacetime, this behavior arises from direct gravitational force or potential-gradient coupling to the photon’s physical energy-momentum. Crucially, however, gravitational coupling to photon energy-momentum operates identically at leading order whether the photon’s invariant rest mass is strictly zero or tiny compared to photon energy.<br>
+The third, narrowest operational definition is <strong>nonzero invariant rest mass</strong>. Formally defined as the residual energy a quantum would possess at zero linear momentum—or equivalently via the inverse reduced Compton wavelength governing finite-range interactions—invariant rest mass generates four distinct physical signatures absent in Maxwell electrodynamics11. Specifically, Proca-type massive vector dynamics breaks local gauge invariance (or requires a compensating Stueckelberg scalar field), introduces a third physical longitudinal polarization state, damps static electrostatic and magnetostatic potentials exponentially beyond the reduced Compton wavelength, and slows vacuum group velocity inversely with the square of photon frequency11. Discriminating zero from nonzero invariant rest mass therefore demands detecting an exponential static-field departure11, an uncancelled vector-potential torque or Aharonov-Bohm phase shift13, a vacuum frequency-squared arrival delay separable from cold-plasma dispersion17, or a physical longitudinal electromagnetic wave mode11.</p>
+<h3 id="lib-literature-review-and-verified-experimental-constraint-register"><strong>3. Literature Review and Verified Experimental Constraint Register</strong></h3>
+<p>Primary peer-reviewed literature, Particle Data Group (PDG) summaries, and astrophysical transient studies through November 2026 document progressive upper limits on invariant photon rest mass across four experimental regimes. Note on source provenance: the direct web endpoints for the 2025 PDG online listing19 and the LIGO Document Control Center entry P170030820 were inaccessible during verification; consequently, PDG benchmarks are verified from the accessible 2026 PDG Gauge and Higgs Bosons summary table and archived 2014–2024 PDG photon listings8, while GW170817 and GRB 170817A measurements are verified from published <em>Astrophysical Journal Letters</em> records2.</p>
+<h4 id="lib-laboratory-electrodynamics-and-quantum-interferometry"><strong>Laboratory Electrodynamics and Quantum Interferometry</strong></h4>
+<p>Local terrestrial experiments test Maxwell’s inverse-square laws directly inside shielded enclosures. The cleanest local Cavendish-style electrostatic test remains Williams, Faller, and Hill (1971), which searched for interior electric fields inside concentric charged shells and constrained the photon Compton wavelength above roughly 20,000 kilometers (over 2 × 10⁷ meters in Goldhaber and Nieto’s review, cited as over 3 × 10⁹ centimeters in Spavieri et al.), corresponding to an upper rest-mass limit near 2 × 10⁻⁵⁰ kilograms, or roughly 10⁻¹⁴ electron-volts per speed-of-light squared5. Cryogenic tests of Ampère’s law at 1.24 kelvin by Chernikov et al. (1992)11 and low-temperature phase-transition measurements at 1.36 kelvin by Ryan, Accetta, and Austin (constraining the Compton wavelength above 300 meters) probed whether photon mass emerges below a critical temperature5. (Note: the exact numerical mass exponent from Chernikov et al. 1992 was truncated in the accessible abstract tables11 and is therefore not extrapolated here.)<br>
+Torsion-balance experiments introduced by Lakes (1998) and refined dynamically by Luo, Tu, Hu, and Luan (2003) measure mechanical torques on shielded magnetized toroids exposed to an assumed ambient cosmic magnetic vector potential, with Luo et al. reporting an inverse range exceeding 1.66 × 10¹³ centimeters and a photon mass below 2.1 × 10⁻⁵⁴ kilograms (2.1 × 10⁻⁵¹ grams)11. However, authoritative reviews by Goldhaber and Nieto (2010) and Tu, Luo, and Gillies (2005) classify extended Lakes-method bounds as speculative and strongly model-dependent because the ambient cosmic vector potential has never been independently measured and its local orientation is unknown5. Quantum-interferometric proposals using the Aharonov-Bohm effect—originally estimated by Boulware and Deser at a range near 140 kilometers (roughly 2.5 × 10⁻⁴⁸ kilograms) and over 10⁵ meters in Goldhaber and Nieto—have been extended theoretically by Spavieri et al. (2007, 2011) to projected tabletop sensitivities between 2 × 10⁻⁵⁴ kilograms and 10⁻⁵⁷ kilograms, though dedicated ultra-sensitive implementations remain prospective5.</p>
+<h4 id="lib-planetary-solar-wind-and-galactic-magnetohydrodynamics"><strong>Planetary, Solar-Wind, and Galactic Magnetohydrodynamics</strong></h4>
+<p>Spacecraft magnetometry extends spatial baselines from meters to astronomical units. Applying Erwin Schrödinger’s vector-potential modification for a magnetic dipole, Goldhaber and Nieto (1968) analyzed geomagnetic data to bound photon mass below 4.0 × 10⁻⁵¹ kilograms (4.0 × 10⁻⁴⁸ grams)32, followed by Fischbach et al. (1994) on terrestrial magnetic fields and Davis, Goldhaber, and Nieto (1975) using Pioneer 10 observations of Jupiter’s magnetic field—widely cited as a secure planetary dipole limit, though exact mass exponents from those two tables were truncated in available summaries5.<br>
+The official PDG 2026 summary table adopts an upper bound of less than 1 × 10⁻¹⁸ electron-volts (roughly 1.78 × 10⁻⁵⁴ kilograms, corresponding to a reduced Compton wavelength exceeding 1.32 astronomical units)7. That benchmark derives from Ryutov (1997, 2007), who analyzed solar-wind magnetohydrodynamics out to Earth’s orbit and subsequently Pluto’s orbit, showing that a larger Proca mass would suppress large-scale interplanetary magnetic-field coherence9. Independent spacecraft tests include Cluster multi-point measurements of Ampère’s law in the solar wind by Retinò, Spallicci, and Vaivads (2016)21 and recent 2024 analyses using Parker Solar Probe observations where candidate photon-mass scales intersect local inner-heliosphere plasma frequencies34. Still tighter cosmic bounds—such as Goldhaber and Nieto (2003) at roughly 10⁻⁵⁵ kilograms (10⁻⁵² grams) from Coma Cluster plasma stability—carry substantial magnetohydrodynamic model assumptions5.</p>
+<h4 id="lib-fast-radio-bursts-pulsars-and-gamma-ray-bursts"><strong>Fast Radio Bursts, Pulsars, and Gamma-Ray Bursts</strong></h4>
+<p>Time-of-flight dispersion of short cosmological radio bursts avoids static-field equilibrium assumptions by probing vacuum wavepacket group velocity directly. Under Proca kinematics, lower-frequency photons travel slightly slower than higher-frequency photons, creating an arrival delay proportional to the inverse square of frequency—mathematically mirroring cold-plasma dispersion along the line of sight12.<br>
+Early gamma-ray burst (GRB) timing constraints by Schaefer (1999) and GRB multi-band radio afterglow analyses in 2016 (arXiv:1607.03225, reaching 2.804 × 10⁻⁴⁷ kilograms for GRB 000301C)12 were surpassed by fast radio bursts (FRBs), whose millisecond durations at gigahertz frequencies travel across gigaparsec distances15. Early single-burst limits using FRB 150418 (5.2 × 10⁻⁵⁰ kilograms, Wu et al. 2016, relying on a contested host redshift; 1.8 × 10⁻¹⁴ electron-volts in Bonetti et al. 2016) and FRB 121102 (3.9 × 10⁻⁵⁰ kilograms, Bonetti et al. 2017; 5.1 × 10⁻⁵¹ kilograms from subpulse time-frequency drift, Xing et al. 2019) suffered single-sightline degeneracy between plasma dispersion measure and photon rest mass15. Shao and Zhang (2017) resolved this degeneracy statistically by exploiting the distinct distance/redshift scaling of plasma versus Proca delays across burst ensembles, setting a 21-FRB bound of 8.7 × 10⁻⁵¹ kilograms at 68 percent confidence15.<br>
+Subsequent multi-source bounds included Magellanic Cloud radio pulsars (2.3 × 10⁻⁴⁸ kilograms in Wei and Wu 2018 preprint; 1.51 × 10⁻⁴⁸ kilograms cited in Lin et al. 2023)18, nine localized FRBs (7.1 × 10⁻⁵¹ kilograms or 4.0 × 10⁻¹⁵ electron-volts at 68 percent confidence, and 1.3 × 10⁻⁵⁰ kilograms at 95 percent confidence, Wei and Wu 2020)17, 129 predominantly unlocalized FRBs (3.1 × 10⁻⁵¹ kilograms at 68 percent confidence, Wang, Miao, and Shao 2021)14, and localized FRB updates reaching 3.8 × 10⁻⁵¹ kilograms at 1-sigma (7.2 × 10⁻⁵¹ kilograms at 2-sigma)40. Crucially, Zhang, Liu, Yu, and Wu (2025/2026) demonstrated that several prior FRB studies omitted a mandatory normalization factor in the Macquart extragalactic dispersion-measure distribution, biasing earlier limits artificially low14. Reanalyzing 104 localized FRBs with the corrected distribution alongside supernova, cosmic microwave background, and baryon acoustic oscillation benchmarks, Zhang et al. established robust 1-sigma upper bounds of 4.83 × 10⁻⁵¹ kilograms, 4.71 × 10⁻⁵¹ kilograms, and 4.86 × 10⁻⁵¹ kilograms (roughly 2.6 × 10⁻¹⁵ to 2.7 × 10⁻¹⁵ electron-volts per speed-of-light squared via CODATA conversion) across three background parameterizations6. Second-order FRB and Crab pulsar dispersion analyses (arXiv:2207.00950) additionally bound quartic dispersion terms at 6.0 × 10⁻⁴⁷ to 6.3 × 10⁻⁴⁶ kilograms15.</p>
+<h4 id="lib-gravitational-lensing-and-multi-messenger-timing"><strong>Gravitational Lensing and Multi-Messenger Timing</strong></h4>
+<p>Solar-system Shapiro time-delay measurements via the Cassini spacecraft and Very Long Baseline Interferometry (VLBI) light-deflection campaigns confirm gravitational delay and deflection to within 0.001 percent (10⁻⁵ precision) achromatically across radio frequencies3. Massive-photon scattering calculations by Accioly and Paszko (2004, 2008) show that invariant rest mass adds an inverse-energy-squared correction to gravitational deflection41. In 2025, a <em>Physical Review D</em> study using arrival-time ratios of a strongly lensed FRB candidate tightened gravitational-lensing photon-mass bounds by one to two orders of magnitude compared with earlier lensed active galactic nucleus studies4. Meanwhile, the binary neutron star merger GW170817 and GRB 170817A (located roughly 40 megaparsecs away, 130 million light-years) recorded an arrival delay of plus 1.74 ± 0.05 seconds between gravitational waves and 100-kiloelectron-volt gamma rays (chance probability 5.0 × 10⁻⁸), bounding non-dispersive velocity offsets between negative 3 × 10⁻¹⁵ and positive 7 × 10⁻¹⁶ times the speed of light under source-lag assumptions2. Direct group-velocity conversion shows this 1.74-second lag at 100 kiloelectron-volts yields a naive Proca bound of 2.91 × 10⁻³ electron-volts (5.18 × 10⁻³⁹ kilograms)7, demonstrating that multi-messenger gamma-ray timing probes non-dispersive speed equality rather than Proca invariant rest mass.</p>
+<h4 id="lib-verified-experimental-constraint-summary"><strong>Verified Experimental Constraint Summary</strong></h4>
+<table>
+
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Experimental Method</th>
+<th>Measured Quantity</th>
+<th>Adopted Theory / Model</th>
+<th>Photon-Mass Constraint</th>
+<th>Statistical Level</th>
+<th>Dominant Systematic</th>
+<th>Primary Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Concentric-shell Cavendish test</td>
+<td>Interior null voltage</td>
+<td>Proca electrostatics (Yukawa screening)</td>
+<td>Less than 2 × 10⁻⁵⁰ kg (~10⁻¹⁴ eV)</td>
+<td>Laboratory null bound</td>
+<td>Stray capacitance and shell geometry</td>
+<td>Williams, Faller, &amp; Hill (1971)5</td>
+</tr>
+<tr class="even">
+<td>Cryogenic Ampère’s law test (1.24 K)</td>
+<td>Magnetic deviation in conductor</td>
+<td>Proca magnetostatics</td>
+<td>Null deviation reported (exact bound exponent truncated in source excerpt)</td>
+<td>Laboratory null bound</td>
+<td>Thermal drift and magnetometer noise</td>
+<td>Chernikov et al. (1992)11</td>
+</tr>
+<tr class="odd">
+<td>Dynamic rotating torsion balance</td>
+<td>Periodic torque on shielded toroid</td>
+<td>Proca + assumed cosmic vector potential</td>
+<td>Less than 2.1 × 10⁻⁵⁴ kg (model-dependent)</td>
+<td>Torsion torque bound</td>
+<td>Unmeasured cosmic vector potential</td>
+<td>Luo et al. (2003); Goldhaber &amp; Nieto (2010)11</td>
+</tr>
+<tr class="even">
+<td>Geomagnetic dipole field</td>
+<td>Earth surface magnetic field</td>
+<td>Schrödinger / Proca dipole</td>
+<td>Less than 4.0 × 10⁻⁵¹ kg</td>
+<td>Geomagnetic fit bound</td>
+<td>External magnetospheric currents</td>
+<td>Goldhaber &amp; Nieto (1968)32</td>
+</tr>
+<tr class="odd">
+<td>Solar-wind MHD survival (to Pluto)</td>
+<td>Interplanetary magnetic coherence</td>
+<td>Proca magnetohydrodynamics</td>
+<td>Less than 1 × 10⁻¹⁸ eV (~1.78 × 10⁻⁵⁴ kg)</td>
+<td>Order-of-magnitude MHD limit</td>
+<td>Solar-wind turbulence and plasma beta</td>
+<td>Ryutov (2007); PDG (2026)8</td>
+</tr>
+<tr class="even">
+<td>Magellanic Cloud radio pulsars</td>
+<td>Extragalactic pulsar dispersion</td>
+<td>Proca dispersion + cold-plasma DM</td>
+<td>Less than 1.51 × 10⁻⁴⁸ kg (2.3 × 10⁻⁴⁸ kg in 2018 preprint)</td>
+<td>Bayesian combined bound</td>
+<td>Galactic and Magellanic electron density</td>
+<td>Wei &amp; Wu (2018); Lin et al. (2023)18</td>
+</tr>
+<tr class="odd">
+<td>Nine localized FRBs</td>
+<td>Multi-band radio arrival lags</td>
+<td>Proca dispersion + IGM/host DM</td>
+<td>Less than 7.1 × 10⁻⁵¹ kg (4.0 × 10⁻¹⁵ eV)</td>
+<td>68% CL (95% CL: 1.3 × 10⁻⁵⁰ kg)</td>
+<td>Host-galaxy DM scatter (92.5 pc cm⁻³)</td>
+<td>Wei &amp; Wu (2020)17</td>
+</tr>
+<tr class="even">
+<td>104 localized FRBs + cosmological priors</td>
+<td>Dispersion measure vs. redshift</td>
+<td>Proca dispersion + normalized Macquart PDF</td>
+<td>Less than 4.71–4.86 × 10⁻⁵¹ kg (~2.7 × 10⁻¹⁵ eV)</td>
+<td>68% CL (1-sigma)</td>
+<td>Diffuse baryon fraction and Milky Way halo DM</td>
+<td>Zhang et al. (2025/2026)6</td>
+</tr>
+<tr class="odd">
+<td>GRB early-time radio afterglows</td>
+<td>Multi-band radio peak time lags</td>
+<td>Proca group-velocity dispersion</td>
+<td>Less than 2.804 × 10⁻⁴⁷ kg (GRB 000301C)</td>
+<td>Deterministic upper bound</td>
+<td>Intrinsic blast-wave spectral lags</td>
+<td>arXiv:1607.03225 (2016)12</td>
+</tr>
+<tr class="even">
+<td>Strongly lensed FRB image timing</td>
+<td>Delay vs. flux ratio</td>
+<td>Massive-photon point-mass + shear lens</td>
+<td>1–2 orders tighter than lensed AGN bounds</td>
+<td>Boundary inequality</td>
+<td>Lens potential and external shear</td>
+<td><em>Phys. Rev. D</em> 111, L041304 (2025)4</td>
+</tr>
+<tr class="odd">
+<td>GW170817 / GRB 170817A timing</td>
+<td>1.74 ± 0.05 s lag over 40 Mpc</td>
+<td>Non-dispersive speed offset; Proca check</td>
+<td>Speed offset −3×10⁻¹⁵ to +7×10⁻¹⁶ c (Proca ~2.9×10⁻³ eV)</td>
+<td>Observational bound</td>
+<td>Intrinsic jet-launch delay assumptions</td>
+<td>Abbott et al. (2017); this work2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lib-the-arcsecs-physical-mechanism-gravitational-coupling-proca-dynamics-and-missing-interactions"><strong>4. The ArcSecs Physical Mechanism: Gravitational Coupling, Proca Dynamics, and Missing Interactions</strong></h3>
+<p>To satisfy the ArcSecs charter without invoking curved spacetime, time stretching, or expanding spatial fabric, every observed electromagnetic and gravitational phenomenon must trace to physical interactions among sources, fields, momentum transfer, and spatial boundaries evolving under constant universal progression T.</p>
+<h4 id="lib-central-arcsecs-physical-mechanism-statement"><strong>Central ArcSecs Physical-Mechanism Statement</strong></h4>
+<p>In the ArcSecs physical-interaction model, a photon is a localized electromagnetic wavepacket carrying nonzero physical energy-momentum and an energy-equivalent gravitational mass, evolving within constant universal progression T rather than moving along a curved spacetime geometry; gravitational deflection and excess propagation delay near a massive body arise from a direct radial potential-gradient force and momentum transfer between the gravitating source field and the photon’s energy-momentum density, while any additional invariant rest mass enters strictly through a Proca-type self-energy interaction that adds a third longitudinal polarization state, Yukawa static-field screening, and an inverse-frequency-squared group-velocity lag without causing continual energy loss, leaving any distance-proportional photon redshift or continual slowing over time as an explicit missing dissipative mechanism requiring a separate medium-coupling interaction.</p>
+<h4 id="lib-maxwell-calibration-control-vs.-procastueckelberg-candidate"><strong>Maxwell Calibration Control vs. Proca/Stueckelberg Candidate</strong></h4>
+<p>Maxwell electrodynamics functions strictly as our calibrated laboratory baseline: it enforces local gauge symmetry, supports two transverse polarization states, produces infinite-range inverse-square static potentials, and propagates all vacuum frequencies at the limiting speed c. Introducing a Proca mass parameter directly breaks local gauge invariance, dynamically enforcing the Lorenz subsidiary condition on the vector potential and expanding the physical field to three degrees of freedom11. In a Stueckelberg gauge-restored representation—where an auxiliary physical scalar field is absorbed into the massive vector field—the massless limit remains analytically smooth, clarifying why the third longitudinal wave mode decouples cleanly from conserved electric currents as rest mass approaches zero.<br>
+Under Proca electrodynamics, three measurable departures emerge relative to the Maxwell control (derived in analysis/derivations_and_worksheets.md):</p>
+<blockquote>
+<ol type="1">
+<li><strong>Exponential static-field screening:</strong> Static point-charge potentials acquire Yukawa exponential damping governed by the reduced Compton wavelength, modifying Gauss’s law into a screened Helmholtz relation and generating an apparent constant magnetic-field residual inside dipole configurations11.<br>
+</li>
+<li><strong>Third longitudinal polarization:</strong> Alongside the two transverse wave modes, a longitudinal electric oscillation propagates with amplitude and matter-coupling strength suppressed by the ratio of rest-mass energy to photon energy—explaining why macroscopic optical and radio receivers observe almost purely transverse radiation even if rest mass sits near 10⁻¹⁸ electron-volts.<br>
+</li>
+<li><strong>Sub-luminal dispersive propagation:</strong> Massive wavepackets travel below the limiting electromagnetic speed c, with fractional speed deficit proportional to half the square of the mass-to-energy ratio7. Consistent with ArcSecs premise 8 (“Light is not the fastest thing in the universe”), massive photons propagate below the causal limit c, permitting faster non-dispersive disturbances—such as gravitational interactions or extreme-energy quanta approaching c—to outrun low-frequency photons.</li>
+</ol>
+</blockquote>
+<h4 id="lib-gravitational-coupling-without-spacetime-curvature"><strong>Gravitational Coupling Without Spacetime Curvature</strong></h4>
+<p>Does any verified gravitational-lensing measurement detect a photon’s invariant rest mass? Quantitative evaluation shows the answer is <strong>no</strong> at present instrumental precision. In an ArcSecs physical-coupling description—operationally equivalent in weak fields to a spatially varying optical refractive gradient or direct radial gravitational force proportional to the Newtonian potential divided by c squared acting on photon energy-momentum—a passing photon exchanges transverse and longitudinal impulse with the central gravitational field. Because both the gravitational coupling force and inertial momentum scale linearly with total photon energy, the resulting trajectory deflection angle is frequency-independent at leading order, matching achromatic VLBI and optical lensing observations3.<br>
+Incorporating nonzero invariant rest mass into weak-field scattering (following Accioly and Paszko 2004/2008) adds a chromatic enhancement to the deflection angle proportional to half the square of the rest-mass-to-energy ratio41. For an optical photon near 2 electron-volts or a radio photon at 1.4 gigahertz (5.79 microelectron-volts) constrained below 10⁻¹⁵ electron-volts, that chromatic deflection shift is roughly 10⁻²⁹ in optical bands and 10⁻¹⁷ in L-band radio—at least twelve orders of magnitude smaller than microarcsecond VLBI astrometric resolution. Thus, verified gravitational bending measures photon <strong>energy-momentum gravitational coupling</strong>, not invariant rest mass. Only strongly lensed transient arrival-time ratios approach FRB dispersion sensitivity, because timing probes group-velocity delay rather than deflection angle4.</p>
+<h4 id="lib-explicit-test-can-proca-rest-mass-alone-cause-continual-slowing-or-redshift"><strong>Explicit Test: Can Proca Rest Mass Alone Cause Continual Slowing or Redshift?</strong></h4>
+<p>Primary Question 4 tests whether a tiny Proca rest mass can cause cumulative slowing over time or cosmological redshift in a static background. From Hamiltonian energy conservation in Proca field theory, the answer is <strong>explicitly no</strong>. Because the free-space Proca wave equation in a homogeneous background is invariant under shifts in constant progression T and spatial translations, photon energy and canonical momentum remain strictly conserved throughout propagation. A massive photon of fixed frequency travels at a constant sub-luminal group speed determined at emission; it neither loses energy continuously nor decelerates as travel duration increases.<br>
+Moreover, under any experimentally allowed Proca mass (below 2.7 × 10⁻¹⁵ electron-volts from FRBs or 10⁻¹⁸ electron-volts from solar-wind magnetohydrodynamics6), cumulative dispersive lags are tiny at optical and gamma-ray wavelengths. Across a 1-gigaparsec Euclidean path (roughly 1.029 × 10¹⁷ seconds transit time), a 10⁻¹⁵ electron-volt rest mass delays a 1.4-gigahertz pulse by only 1.54 milliseconds and an optical photon by just 12.0 femtoseconds, with zero frequency shift7. Accordingly, <strong>Proca invariant rest mass cannot explain Hubble-scale redshift</strong>. Incorporating ArcSecs premise 3 (“Light slows down over time”) and premise 11 (“Objects in the universe are smaller and closer than they appear”) as physical redshift explanations requires introducing a <strong>missing dissipative interaction term</strong>—such as energy-momentum transfer to an intervening physical medium—that must independently pass the stringent empirical benchmarks listed in Section 8.</p>
+<h3 id="lib-data-methods-and-covariance-aware-statistical-framework"><strong>5. Data, Methods, and Covariance-Aware Statistical Framework</strong></h3>
+<p>To evaluate rest-mass signals across multi-band astrophysical transients without confounding systematics, we construct a covariance-aware forward arrival-time model and likelihood protocol (formulated mathematically in analysis/derivations_and_worksheets.md and coded in analysis/photon_mass_framework.py).</p>
+<h4 id="lib-multi-band-transient-forward-model"><strong>Multi-Band Transient Forward Model</strong></h4>
+<p>For a short transient crossing a known baseline and detected across radio, optical, and gamma-ray frequency bands under constant progression T, the observed arrival time at each frequency channel sums six physical terms: (1) a common source-emission epoch; (2) intrinsic source spectral chirp or emission lag (for example, downward subpulse frequency drift near 200 megahertz per millisecond observed in FRB 12110237, or internal GRB shock delays); (3) achromatic gravitational potential propagation delay along the line of sight calibrated against solar-system Shapiro profiles3; (4) cold-plasma dispersion proportional to integrated free-electron column density and the inverse square of frequency, using the verified dispersion constant of 4148.806 seconds megahertz-squared parsec⁻¹ centimeter³7; (5) Proca vacuum group-velocity dispersion scaling with squared rest mass and inverse-square frequency at leading order, plus second-order inverse-fourth-power Proca and coupled plasma-Proca cross-terms15; and (6) receiver filter latency and inter-observatory clock synchronization offsets.<br>
+Because leading-order Proca dispersion and cold-plasma dispersion share identical inverse-frequency-squared scaling, a single burst at a single distance is mathematically degenerate between electron column density and photon mass17. Breaking that degeneracy requires either multi-distance ensemble regression across localized bursts—exploiting the distinct distance/redshift scaling of uniform Proca delay versus fluctuating intergalactic and host-galaxy plasma14—or wideband observations below 100 megahertz where higher-order inverse-fourth-power Proca and coupled plasma-Proca delays diverge from cold-plasma propagation15.</p>
+<h4 id="lib-statistical-protocol-controls-and-reproducibility-status"><strong>Statistical Protocol, Controls, and Reproducibility Status</strong></h4>
+<p>Pre-analysis specifications fix the null hypothesis at zero invariant rest mass and the alternative hypothesis at strictly positive squared photon mass. The data covariance matrix aggregates per-channel timing variance, correlated cross-band instrumental clock jitter, and asymmetric extragalactic dispersion variance modeled using the properly normalized Macquart probability distribution identified by Zhang et al. (2025/2026)14. Nested models are evaluated using marginalized Bayes factors alongside Akaike Information Criterion (AIC) and Bayesian Information Criterion (BIC) complexity penalties, validated via chronological or redshift-split held-out test partitions and synthetic injection-recovery runs.<br>
+Execution status disclosure: exact CODATA SI/eV conversions, reduced Compton wavelengths, the cold-plasma dispersion constant, and the GW170817 naive Proca bound were executed and verified (7, supplemented by analytic Taylor checks resolving IEEE-754 underflow). The full multi-band Bayesian MCMC and synthetic mock-injection suite in analysis/photon_mass_framework.py is <strong>not executed</strong> here due to the absence of live runtime execution tooling and is provided with fixed random seeds and execution instructions in METHODS_TO_REPRODUCE.md.</p>
+<h3 id="lib-results-vs.-forecasts-conversion-magnitudes-dispersion-limits-and-redshift-checks"><strong>6. Results vs. Forecasts: Conversion Magnitudes, Dispersion Limits, and Redshift Checks</strong></h3>
+<p>Table 1 reports exact SI-to-electron-volt conversions, reduced Compton wavelengths, fractional vacuum speed deficits, cumulative arrival delays across a 1-gigaparsec baseline (1.029 × 10¹⁷ seconds light-travel time), and equivalent plasma dispersion measures across four benchmark photon masses7. A critical numerical lesson emerged during verification: direct 64-bit floating-point evaluation of the square-root speed difference suffers catastrophic cancellation whenever the mass-to-energy ratio drops below roughly 10⁻⁸, spuriously returning zero at 400 megahertz and above for 10⁻¹⁴ electron-volts7. Table 1 therefore uses the exact leading-order Taylor series, accurate to better than one part in 10¹⁵ across every listed band.</p>
+<table>
+
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Photon Mass (eV/c²)</th>
+<th>Mass (kg)</th>
+<th>Reduced Compton Wavelength</th>
+<th>100 MHz Speed Deficit and 1 Gpc Delay</th>
+<th>1.4 GHz Speed Deficit and 1 Gpc Delay</th>
+<th>500 THz Optical Deficit and 1 Gpc Delay</th>
+<th>Effective DM at 1 Gpc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.0 × 10⁻¹⁴</td>
+<td>1.783 × 10⁻⁵⁰</td>
+<td>1.973 × 10⁷ m</td>
+<td>2.92 × 10⁻¹⁶ (30.1 s)</td>
+<td>1.49 × 10⁻¹⁸ (154 ms)</td>
+<td>1.17 × 10⁻²⁹ (1.20 ps)</td>
+<td>72.5 pc cm⁻³</td>
+</tr>
+<tr class="even">
+<td>1.0 × 10⁻¹⁵</td>
+<td>1.783 × 10⁻⁵¹</td>
+<td>1.973 × 10⁸ m</td>
+<td>2.92 × 10⁻¹⁸ (301 ms)</td>
+<td>1.49 × 10⁻²⁰ (1.54 ms)</td>
+<td>1.17 × 10⁻³¹ (12.0 fs)</td>
+<td>0.725 pc cm⁻³</td>
+</tr>
+<tr class="odd">
+<td>1.0 × 10⁻¹⁸ (PDG)</td>
+<td>1.783 × 10⁻⁵⁴</td>
+<td>1.973 × 10¹¹ m (1.32 AU)</td>
+<td>2.92 × 10⁻²⁴ (0.301 µs)</td>
+<td>1.49 × 10⁻²⁶ (1.54 ns)</td>
+<td>1.17 × 10⁻³⁷ (1.20 × 10⁻²⁰ s)</td>
+<td>7.25 × 10⁻⁷ pc cm⁻³</td>
+</tr>
+<tr class="even">
+<td>1.0 × 10⁻²²</td>
+<td>1.783 × 10⁻⁵⁸</td>
+<td>1.973 × 10¹⁵ m (0.064 pc)</td>
+<td>2.92 × 10⁻³² (3.01 × 10⁻¹⁵ s)</td>
+<td>1.49 × 10⁻³⁴ (1.54 × 10⁻¹⁷ s)</td>
+<td>1.17 × 10⁻⁴⁵ (1.20 × 10⁻²⁸ s)</td>
+<td>7.25 × 10⁻¹⁵ pc cm⁻³</td>
+</tr>
+</tbody>
+</table>
+<p>Three quantitative conclusions follow directly from Table 1:<br>
+First, <strong>FRB dispersion bounds match the physical noise floor of extragalactic plasma</strong>. At 1.0 × 10⁻¹⁵ electron-volts, a 1-gigaparsec baseline yields an effective dispersion measure of 0.725 parsec per cubic centimeter, rising to 11.6 parsecs per cubic centimeter at 4.0 × 10⁻¹⁵ electron-volts7. Because localized FRBs show mean host-galaxy contributions near 27 parsecs per cubic centimeter and intrinsic scatter near 92.5 parsecs per cubic centimeter17, current 104-burst catalogs naturally plateau near 2.6 × 10⁻¹⁵ to 2.7 × 10⁻¹⁵ electron-volts (4.71 × 10⁻⁵¹ to 4.86 × 10⁻⁵¹ kilograms6). Probing the 10⁻¹⁸ electron-volt solar-wind MHD threshold via radio dispersion alone would require resolving sub-nanosecond lags across gigaparsec baselines—currently buried under six orders of magnitude of turbulent astrophysical plasma variance.<br>
+Second, <strong>GW170817/GRB 170817A timing constrains frequency-independent speed offsets rather than Proca rest mass</strong>. A 1.74-second lag at 100 kiloelectron-volts over 40 megaparsecs permits a naive Proca mass up to 2.91 × 10⁻³ electron-volts (5.18 × 10⁻³⁹ kilograms)7—twelve orders of magnitude looser than FRB limits—while tightly bounding non-dispersive speed offsets near one part in 10¹⁵2.<br>
+Third, <strong>Proca rest mass cannot drive Hubble-scale redshift or observable optical slowing</strong>. Even at 10⁻¹⁴ electron-volts, optical photons at 500 terahertz slow by roughly one part in 10²⁹ and retain their exact emission frequency throughout propagation.</p>
+<h3 id="lib-prospective-discriminating-experiment-protocol-for-a-positive-rest-mass-detection"><strong>7. Prospective Discriminating Experiment: Protocol for a Positive Rest-Mass Detection</strong></h3>
+<p>Because existing upper-limit campaigns measure either a single inverse-frequency-squared slope entangled with plasma or static magnetic persistence subject to magnetohydrodynamic assumptions, achieving a <strong>positive detection</strong> requires targeting observables where massless Maxwell electrodynamics and cold plasma predict strictly zero signal. We specify a dual-track prospective experiment (detailed in EXPERIMENTS.csv and METHODS_TO_REPRODUCE.md).</p>
+<h4 id="lib-channel-a-astrophysical-forecast-sub-50-megahertz-wideband-timing-of-repeating-frbs-and-millisecond-pulsars"><strong>Channel A (Astrophysical Forecast): Sub-50-Megahertz Wideband Timing of Repeating FRBs and Millisecond Pulsars</strong></h4>
+<p>Recent theoretical derivations (arXiv:2409.04672 and arXiv:2207.00950) show that coupled propagation through cold plasma and nonzero photon rest mass generates a distinct dispersion term scaling inversely with the <strong>fourth power of frequency</strong>, complementing second-order vacuum Proca dispersion15. By pairing low-frequency wideband arrays (20 to 250 megahertz) with synchronized 1.4-gigahertz receivers on bright repeating FRBs and nearby millisecond pulsars featuring microsecond subpulses:</p>
+<blockquote>
+<ol type="1">
+<li><strong>Instrument and Cadence Protocol:</strong> Simultaneous multi-band coherent dedispersion across 20–250 megahertz and 1.4 gigahertz with 10-nanosecond clock synchronization, targeting burst detections exceeding a signal-to-noise ratio of 50 per sub-integration.<br>
+</li>
+<li><strong>Controls and Confounders:</strong> Cold-plasma turbulent scattering broadens pulse tails roughly as frequency to the minus 4.0 to minus 4.4 power, while magnetospheric emission height varies with frequency and Earth’s ionosphere adds variable low-frequency delay. Controls require independent exponential scattering-tail deconvolution across pulse shapes, dual-polarization Faraday calibration, and multi-latitude sightline cross-validation.<br>
+</li>
+<li><strong>Null vs. Alternative Discrimination:</strong> The null hypothesis predicts zero deterministic arrival-time shift once inverse-square plasma dispersion, independently fitted scattering tails, and ionospheric delays are removed. A positive rest-mass detection near 10⁻¹⁵ to 10⁻¹⁶ electron-volts requires a non-broadening, unpolarized advance/lag residual scaling consistently across multiple sources at distinct distances.<br>
+</li>
+<li><strong>Feasibility Assessment:</strong> Channel A is technically achievable using existing low-frequency phased arrays paired with L-band facilities down to roughly 5 × 10⁻¹⁶ electron-volts; below 10⁻¹⁷ electron-volts, Galactic interstellar scattering severely smears sub-50-megahertz pulse edges.</li>
+</ol>
+</blockquote>
+<h4 id="lib-channel-b-controlled-laboratory-forecast-high-q-superconducting-cavity-sensing-of-the-longitudinal-mode"><strong>Channel B (Controlled Laboratory Forecast): High-Q Superconducting Cavity Sensing of the Longitudinal Mode</strong></h4>
+<p>Surpassing astrophysical plasma limits toward 10⁻¹⁸ electron-volts requires a <strong>zero-plasma laboratory observable</strong> targeting the third longitudinal Proca polarization11. Modernizing the nested high-voltage shell geometry of Williams, Faller, and Hill (1971)5 with meter-scale cryogenic superconducting radio-frequency (SRF) shields (quality factor at or above 10¹⁰, 20-millikelvin noise floor, and quantum-limited SQUID/Josephson readout):</p>
+<blockquote>
+<ol type="1">
+<li><strong>Physical Mechanism:</strong> Driving a 100-kilovolt harmonic scalar potential across an outer superconducting shell induces zero interior electric field under Maxwell electrodynamics beyond the London penetration depth, whereas a nonzero Proca mass couples a residual penetrating longitudinal mode proportional to the squared ratio of apparatus size to reduced Compton wavelength.<br>
+</li>
+<li><strong>Detection Signature and Feasibility:</strong> Integrated coherently over 10⁶ seconds (roughly 11.6 days) across dual cross-correlated cavities, a positive detection manifests as a narrowband tone strictly phase-locked to the external drive that vanishes when the drive frequency or boundary geometry changes according to Proca Helmholtz boundary conditions—independent of unknown cosmic vector potentials5. Tabletop prototypes realistically probe 10⁻¹⁵ to 10⁻¹⁶ electron-volts, while multi-cavity resonant scaling maps the technical path toward 10⁻¹⁸ electron-volts.</li>
+</ol>
+</blockquote>
+<h3 id="lib-observational-requirements-to-satisfy-falsification-criteria-and-limitations"><strong>8. Observational Requirements to Satisfy, Falsification Criteria, and Limitations</strong></h3>
+<h4 id="lib-concise-observational-requirements-register"><strong>Concise Observational Requirements Register</strong></h4>
+<p>Empirical measurements that challenge naive massive-photon, static-universe, or tired-light models are tabulated below strictly as quantitative benchmarks that any completed ArcSecs cosmology or propagation model must satisfy without reverting to curved spacetime or expanding-fabric assumptions:</p>
+<table>
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Observational Benchmark</th>
+<th>Measured Quantity and Precision</th>
+<th>Empirical Constraint on Naive Models</th>
+<th>Required Test / Burden for ArcSecs</th>
+<th>Primary Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tolman surface brightness dimming</td>
+<td>Galaxy surface brightness excludes (1+z)⁻¹ tired-light dimming at greater than 10 sigma</td>
+<td>Rules out simple distance-proportional photon energy loss without flux/angular redistribution</td>
+<td>Any ArcSecs redshift mechanism must reproduce observed dimming scaling without metric expansion</td>
+<td>Lubin &amp; Sandage (2001)44</td>
+</tr>
+<tr class="even">
+<td>Type Ia supernova spectral aging</td>
+<td>Spectral feature cadence scales inversely with (1+z)^b, exponent b of 0.97 ± 0.10</td>
+<td>Excludes static models predicting zero pulse-train stretching (b = 0)</td>
+<td>Must derive physical pulse-train broadening near exponent 1 under constant progression T</td>
+<td>Blondin et al. (2008)46</td>
+</tr>
+<tr class="odd">
+<td>Cosmic microwave background spectrum</td>
+<td>Planck blackbody spectrum across frequencies to ~50 parts per million (2.7255 K)</td>
+<td>Excludes frequency-dependent absorption or scattering that distorts blackbody photon ratios</td>
+<td>Any missing energy-loss term must preserve exact Planck spectral shape and temperature scaling</td>
+<td>Fixsen et al. (1996)6</td>
+</tr>
+<tr class="even">
+<td>Solar-system Shapiro delay &amp; VLBI</td>
+<td>Solar gravitational delay and radio deflection match achromatic coupling to 0.001% (10⁻⁵)</td>
+<td>Excludes strongly chromatic gravitational deflection above 10⁻⁵</td>
+<td>ArcSecs gravitational force/index coupling must match achromatic deflection and delay to 10⁻⁵</td>
+<td>Cassini &amp; VLBI review (PMC5255900)3</td>
+</tr>
+<tr class="odd">
+<td>GW170817 / GRB 170817A lag</td>
+<td>Plus 1.74 ± 0.05 s lag over 40 Mpc between gravitational waves and 100 keV gamma rays</td>
+<td>Bounds non-dispersive velocity difference to −3×10⁻¹⁵ to +7×10⁻¹⁶ c</td>
+<td>Massive photons cannot trail gravitational disturbances beyond 1.74 s at 100 keV over 40 Mpc</td>
+<td>Abbott et al. (2017)2</td>
+</tr>
+<tr class="even">
+<td>104 localized FRBs dispersion</td>
+<td>Pulse arrival lags follow inverse-square frequency scaling with normalized IGM distribution</td>
+<td>Excludes Proca rest mass above 4.83 × 10⁻⁵¹ kg (1-sigma)</td>
+<td>ArcSecs invariant rest-mass candidate must stay below 2.7 × 10⁻¹⁵ eV/c² or invoke screening</td>
+<td>Zhang et al. (2025/2026)6</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lib-explicit-falsification-criteria-and-study-limitations"><strong>Explicit Falsification Criteria and Study Limitations</strong></h4>
+<p>The Proca-coupled ArcSecs rest-mass hypothesis is <strong>falsified</strong> within a given mass window if: (1) localized FRB catalogs with sub-millisecond low-frequency timing push 95-percent upper bounds below 10⁻¹⁶ electron-volts while finding zero residual inverse-fourth-power Proca-plasma cross-term; and (2) cryogenic SRF longitudinal-cavity tests record null drive-correlated signals down to 10⁻¹⁸ electron-volts alongside null solar-wind Ampère deviations. Conversely, the broader ArcSecs physical gravitational-coupling proposal would be falsified if precision multi-band lensing detected chromatic deflection inconsistent with energy-momentum proportionality.<br>
+Principal study limitations include: (a) two primary online endpoints (pdg.lbl.gov/202519 and dcc.ligo.org/LIGO-P170030820) were inaccessible during verification, mitigated by verified 2026 PDG summary tables and published journal records2; (b) exact mass exponents from several older summary-table entries (such as Chernikov et al. 1992, Lakes 1998, Fischbach et al. 1994, and Davis, Goldhaber, &amp; Nieto 1975) were truncated in accessible secondary excerpts11 and are therefore excluded rather than extrapolated; (c) live execution of the full MCMC mock-injection script was unavailable in this step and remains marked unexecuted; and (d) conservative Proca mass leaves cosmological redshift and apparent angular-size anomalies as an explicit open mechanism rather than a solved derivation.</p>
+<h3 id="lib-required-final-decision-and-precise-conclusions"><strong>9. Required Final Decision and Precise Conclusions</strong></h3>
+<p>Evaluating the three required diagnostic statements strictly against verified evidence and ArcSecs operational definitions:</p>
+<blockquote>
+<ol type="1">
+<li><strong>“Photons carry energy and momentum” — STATUS: CONFIRMED OBSERVATION.</strong><em>Evidence:</em> Direct laboratory radiation-pressure, photoelectric, and Compton-scattering measurements confirm quantized photon energy and linear momentum across all electromagnetic bands, validating that photons carry physical inertia at every moment of propagation.<br>
+</li>
+<li><strong>“Photons interact gravitationally” — STATUS: CONFIRMED OBSERVATION (Mechanism: ArcSecs Model-Dependent Energy-Momentum Coupling).</strong> <em>Evidence:</em> Gravitational lensing of galaxies and FRB candidates1, solar-limb VLBI radio deflection, and Cassini Shapiro arrival delays (verified to 0.001 percent3) confirm that gravitational fields alter photon trajectories and travel intervals. However, verified gravitational deflection measures photon <strong>energy-momentum coupling</strong>, not invariant rest mass, because massive-photon chromatic corrections are suppressed below 10⁻¹⁷ at radio and 10⁻²⁹ at optical frequencies.<br>
+</li>
+<li><strong>“Photons have detected nonzero invariant rest mass” — STATUS: UNDETECTED / UNDECIDABLE BELOW EMPIRICAL UPPER BOUNDS (Excluded above 2.7 × 10⁻¹⁵ eV/c² by FRBs and 1 × 10⁻¹⁸ eV by solar-wind MHD).</strong> <em>Evidence:</em> No laboratory, planetary, solar-wind, gravitational-lensing, or FRB experiment has positively detected nonzero invariant photon rest mass. Robust localized-FRB bounds stand at 4.71 × 10⁻⁵¹ to 4.86 × 10⁻⁵¹ kilograms (roughly 2.6 × 10⁻¹⁵ to 2.7 × 10⁻¹⁵ electron-volts per speed-of-light squared at 1-sigma)6, while solar-wind magnetohydrodynamics underpins the PDG 2026 limit of 1 × 10⁻¹⁸ electron-volts8. Moreover, Proca invariant rest mass alone conserves energy in a static background and cannot explain Hubble-scale redshift or continual photon slowing over time.</li>
+</ol>
+</blockquote>
+<h4 id="lib-scientific-integrity-classification-of-conclusions"><strong>Scientific Integrity Classification of Conclusions</strong></h4>
+<ul>
+<li><strong>Observation:</strong> Photons carry energy/momentum, bend and delay near massive bodies3, follow inverse-square frequency dispersion in FRBs down to ~4.8 × 10⁻⁵¹ kilograms6, exhibit supernova spectral cadence scaling near exponent 0.9746, obey steep galaxy surface-brightness dimming45, and form a 50-ppm CMB blackbody46.<br>
+</li>
+<li><strong>Derived Mathematics:</strong> CODATA SI/eV conversions, Compton wavelengths, Taylor-corrected group-velocity delays7, Proca three-mode electrodynamics, Hamiltonian energy conservation, and the inverse-fourth-power Proca-plasma cross-term43.<br>
+</li>
+<li><strong>Model-Dependent Inference:</strong> Solar-wind MHD limits below 1 × 10⁻¹⁸ electron-volts8, torsion-balance ambient-potential limits below 2.1 × 10⁻⁵⁴ kilograms13, and ArcSecs potential-gradient lensing coupling (fits known 10⁻⁵ deflection/delay benchmarks without distinguishing itself from null-path predictions — Category B).<br>
+</li>
+<li><strong>Hypothesis:</strong> Nonzero photon invariant rest mass exists below 1 × 10⁻¹⁸ electron-volts and is accessible via sub-50-megahertz FRB cross-terms or superconducting longitudinal-mode cavities (Category A prospective test).<br>
+</li>
+<li><strong>Philosophical / Charter Interpretation:</strong> The eleven binding ArcSecs premises (space as “Where”, time as “When”, constant universal progression T, and rejection of physical spacetime).</li>
+</ul>
+<p><strong>Recommended Next Measurement:</strong> Deploy a joint observational and laboratory campaign pairing (1) synchronized 20–250 megahertz and 1.4 gigahertz timing of bright repeating FRBs to isolate deterministic inverse-fourth-power Proca-plasma dispersion shifts from turbulent scattering tails, with (2) cryogenic high-Q superconducting longitudinal-mode shielded cavity sensing targeting coherent drive-locked signals bridging 10⁻¹⁵ to 10⁻¹⁸ electron-volts. A confirmed geometry-dependent longitudinal tone or multi-sightline non-scattering dispersion residual would directly challenge the massless-photon paradigm.</p>
+<h3 id="lib-disclosures-provenance-and-availability-statements"><strong>10. Disclosures, Provenance, and Availability Statements</strong></h3>
+<ul>
+<li><strong>Authorship and AI-Use Declaration:</strong> Prepared as an independent commissioned manuscript under the ArcSecs Mission 01 charter. Literature synthesis, statistical protocol design, and unit calculations utilized AI research-assistant tooling; no unverified observations, fabricated references, or unperformed experimental detections are reported. Independent evaluation by qualified experimental and theoretical physicists is required prior to hardware prototyping or journal submission.<br>
+</li>
+<li><strong>Acknowledgments:</strong> Public experimental collaborations including the Particle Data Group, LIGO/Virgo, Fermi-GBM, INTEGRAL, Pioneer 10, Cluster, Parker Solar Probe, COBE FIRAS, and international FRB localization observatories are acknowledged for open observational benchmarks.<br>
+</li>
+<li><strong>Author Contributions:</strong> Independent research team responsible for source verification, operational mass classification, ArcSecs physical-mechanism derivation, statistical model design, and companion artifact preparation.<br>
+</li>
+<li><strong>Competing Interests and Funding Statement:</strong> Commissioned under the ArcSecs Mission 01 independent research prompt; no commercial, hardware-vendor, or institutional financial conflicts declared.<br>
+</li>
+<li><strong>Data Availability Statement:</strong> All verified empirical bounds, CODATA constants, and bibliographic identifiers are cataloged in EVIDENCE_LEDGER.csv, EXPERIMENTS.csv, and BIBLIOGRAPHY.md. Two inaccessible external URLs (pdg.lbl.gov/202519 and dcc.ligo.org/LIGO-P170030820) are documented and replaced by verified 2026 PDG and journal records2.<br>
+</li>
+<li><strong>Code Availability Statement:</strong> Reproducibility steps and Python code following AAS data/software guidelines are provided in METHODS_TO_REPRODUCE.md and analysis/photon_mass_framework.py. Core unit and group-delay arithmetic was executed (7 plus analytic Taylor validation); Bayesian MCMC mock-injection modules remain marked unexecuted pending local Python runtime access.</li>
+</ul>
+<h2 id="lib-separate-technical-companion-and-project-artifacts"><strong>Separate Technical Companion and Project Artifacts</strong></h2>
+<p>The companion deliverables required outside the export-safe manuscript follow below in clearly delimited sections.</p>
+<h3 id="lib-companion-file-methods_to_reproduce.md"><strong>Companion File: METHODS_TO_REPRODUCE.md</strong></h3>
+<h4 id="lib-reproducibility-instructions-and-execution-status"><strong>Reproducibility Instructions and Execution Status</strong></h4>
+<blockquote>
+<ol type="1">
+<li><strong>Verified / Executed Computations:</strong><br>
+</li>
+</ol>
+<ul>
+<li>SI-to-eV mass conversion (1 eV/c^2 = 1.782662e-36 kg), reduced Compton wavelengths, cold-plasma dispersion constant (K_DM = 4148.806424 s MHz^2 pc^-1 cm^3), and GW170817 naive group-velocity bound (2.907e-3 eV) were executed via Python 3 (numpy, pandas)7.<br>
+</li>
+<li><em>Numerical Precision Fix:</em> Direct IEEE-754 float64 evaluation of 1 - sqrt(1 - (m*c<sup>2/E)</sup>2) underflows to 0.0 when m*c^2/E &lt; 1e-87. All group-velocity deficits and 1 Gpc delays in analysis/photon_mass_framework.py use the exact Taylor series 0.5*(m*c<sup>2/E)</sup>2 + 0.125*(m*c<sup>2/E)</sup>4, verified analytically to 15+ significant digits.<br>
+</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Unexecuted Modules (Marked Explicitly as Not Executed):</strong><br>
+</li>
+</ol>
+<ul>
+<li>The multi-band covariance-aware Bayesian MCMC sampler and synthetic mock-injection/recovery benchmark (run_mock_recovery) in analysis/photon_mass_framework.py are <strong>not executed</strong> because live code execution is unavailable in this step.<br>
+</li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Local Execution Protocol:</strong><br>
+</li>
+</ol>
+<ul>
+<li>Environment: Python &gt;=3.10, numpy&gt;=1.26, scipy&gt;=1.11, pandas&gt;=2.1, emcee&gt;=3.1, matplotlib&gt;=3.8.<br>
+</li>
+<li>Fixed random seed: SEED = 20261123.<br>
+</li>
+<li>Command: python analysis/photon_mass_framework.py --mode all --seed 20261123 --out-dir results/<br>
+</li>
+</ul>
+<ol start="4" type="1">
+<li><strong>Data Provenance &amp; Holdout Split:</strong><br>
+</li>
+</ol>
+<ul>
+<li>Benchmarked against Zhang et al. (2025/2026, arXiv:2511.14163v2, N = 104 localized FRBs)6 and Wei &amp; Wu (2020, arXiv:2006.09680, N = 9 localized FRBs)17. Held-out cross-validation partitions localized FRBs at z &lt; 0.35 (training) vs. z &gt;= 0.35 (holdout).</li>
+</ul>
+</blockquote>
+<h3 id="lib-companion-file-analysisderivations_and_worksheets.md"><strong>Companion File: analysis/derivations_and_worksheets.md</strong></h3>
+<h4 id="lib-dispersion-relation-group-velocity-and-dimensional-checks"><strong>1. Dispersion Relation, Group Velocity, and Dimensional Checks</strong></h4>
+<p>From the massive-photon energy-momentum relation:<br>
+<img src="__ARCSECS_LIBRARY_ASSETS__/figures/77c1dbfad2710c71c3e1.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"><br>
+with <img src="__ARCSECS_LIBRARY_ASSETS__/figures/f194cff08c4bcfaaa81c.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">, the vacuum group velocity is:<br>
+<img src="__ARCSECS_LIBRARY_ASSETS__/figures/2a088f29067b2b2669b3.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"></p>
+<ul>
+<li><strong>Massless limit (<img src="__ARCSECS_LIBRARY_ASSETS__/figures/fba566653b014cbd8daf.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">):</strong> <img src="__ARCSECS_LIBRARY_ASSETS__/figures/e24bea6a1f12f733bcea.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"> identically across all frequencies.<br>
+</li>
+<li><strong>High-energy expansion (<img src="__ARCSECS_LIBRARY_ASSETS__/figures/b653950a7ebe7351d6a0.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">):</strong><br>
+<img src="__ARCSECS_LIBRARY_ASSETS__/figures/4c02c525e9ae91b13474.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"><br>
+- <strong>Static-baseline arrival lag</strong> across baseline <img src="__ARCSECS_LIBRARY_ASSETS__/figures/d009af48fb59d74fce4d.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"> between <img src="__ARCSECS_LIBRARY_ASSETS__/figures/533c937ac58536bba40f.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">:<br>
+<img src="__ARCSECS_LIBRARY_ASSETS__/figures/3d8b754e8006476abceb.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"><br>
+</li>
+<li><strong>Dimensional verification:</strong> <img src="__ARCSECS_LIBRARY_ASSETS__/figures/651d5594b6cb01a74675.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">. Verified.</li>
+</ul>
+<h4 id="lib-si-ev-compton-wavelength-conversion-worksheet"><strong>2. SI / eV / Compton Wavelength Conversion Worksheet</strong></h4>
+<p>Using CODATA constants (<img src="__ARCSECS_LIBRARY_ASSETS__/figures/cf6bd14919a963e52a64.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">, <img src="__ARCSECS_LIBRARY_ASSETS__/figures/cddf2086f24ddea66f90.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">, <img src="__ARCSECS_LIBRARY_ASSETS__/figures/f8c8f8e5fb1cabc46cdd.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">):</p>
+<ul>
+<li><img src="__ARCSECS_LIBRARY_ASSETS__/figures/b2b5975ab8307f050995.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"><br>
+</li>
+<li>Reduced Compton wavelength: <img src="__ARCSECS_LIBRARY_ASSETS__/figures/a66235b8b59651780b66.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">, with <img src="__ARCSECS_LIBRARY_ASSETS__/figures/b64ac81085a2c55589a8.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">.<br>
+</li>
+<li>Effective dispersion measure at <img src="__ARCSECS_LIBRARY_ASSETS__/figures/9689a782043712abe826.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"> using <img src="__ARCSECS_LIBRARY_ASSETS__/figures/72dd44e9ddfc657d2aca.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">:<br>
+<img src="__ARCSECS_LIBRARY_ASSETS__/figures/bc487c437c2efbe81303.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"></li>
+</ul>
+<h4 id="lib-maxwell-control-vs.-proca-stueckelberg-field-candidate"><strong>3. Maxwell Control vs. Proca / Stueckelberg Field Candidate</strong></h4>
+<ul>
+<li><strong>Maxwell Calibration Control (<img src="__ARCSECS_LIBRARY_ASSETS__/figures/50dffab855c33e140202.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">):</strong> Lagrangian <img src="__ARCSECS_LIBRARY_ASSETS__/figures/dd143c9b570abbdf06d0.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">; local <img src="__ARCSECS_LIBRARY_ASSETS__/figures/c829c09d9add7b110370.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"> gauge invariance; 2 transverse DOF; static Coulomb potential <img src="__ARCSECS_LIBRARY_ASSETS__/figures/349391628febfd3531e5.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">.<br>
+</li>
+<li><strong>Proca Candidate (<img src="__ARCSECS_LIBRARY_ASSETS__/figures/6e3b7c52251f655e45e1.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">):</strong> Lagrangian:<br>
+<img src="__ARCSECS_LIBRARY_ASSETS__/figures/34ab7e3e6e5f96fcbc9e.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"><br>
+Field equations: <img src="__ARCSECS_LIBRARY_ASSETS__/figures/5a8d3abb737bb9733663.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">. With <img src="__ARCSECS_LIBRARY_ASSETS__/figures/ffaa8fed2b1693cd3cea.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">, the Lorenz condition <img src="__ARCSECS_LIBRARY_ASSETS__/figures/6941a98409cffddfe11e.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"> holds dynamically (3 physical DOF: 2 transverse + 1 longitudinal).<br>
+</li>
+<li><strong>Stueckelberg Gauge-Restored Variant:</strong> Substitute <img src="__ARCSECS_LIBRARY_ASSETS__/figures/2eac04c1563be2f13943.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"> to retain formal <img src="__ARCSECS_LIBRARY_ASSETS__/figures/c829c09d9add7b110370.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"> redundancy and smooth <img src="__ARCSECS_LIBRARY_ASSETS__/figures/0131bdcee29037cd69a9.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"> decoupling of the longitudinal scalar mode.<br>
+</li>
+<li><strong>Static Electrostatics &amp; Magnetostatics:</strong> <img src="__ARCSECS_LIBRARY_ASSETS__/figures/e7cd6f58434d379fb414.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"> (Yukawa potential). <img src="__ARCSECS_LIBRARY_ASSETS__/figures/2c277bfdc2aaf586091b.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"> (producing Schrödinger’s apparent constant magnetic component inside dipole boundaries)11.</li>
+</ul>
+<h4 id="lib-gravitational-coupling-and-lensing-deflection-physical-force-formulation"><strong>4. Gravitational Coupling and Lensing Deflection (Physical-Force Formulation)</strong></h4>
+<p>In a static gravitational potential <img src="__ARCSECS_LIBRARY_ASSETS__/figures/b926552bdcb85a2d68d6.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"> under constant progression <img src="__ARCSECS_LIBRARY_ASSETS__/figures/596b882a4abc2b031318.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">, a weak-field refractive equivalent <img src="__ARCSECS_LIBRARY_ASSETS__/figures/dc75e8bfd7f05eac128e.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"> (matching empirical Cassini/VLBI coupling to <img src="__ARCSECS_LIBRARY_ASSETS__/figures/f603955cf363d576b7ee.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"> without spacetime curvature) acts directly on photon energy-momentum <img src="__ARCSECS_LIBRARY_ASSETS__/figures/e5e8dc45547af391a15e.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">. For a massive photon of group speed <img src="__ARCSECS_LIBRARY_ASSETS__/figures/0f89eb13fd297b00185e.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">, weak-field scattering yields (cf. Accioly &amp; Paszko 2004/2008)41:<br>
+<img src="__ARCSECS_LIBRARY_ASSETS__/figures/b5d8d87783524e5e8d4d.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"><br>
+For <img src="__ARCSECS_LIBRARY_ASSETS__/figures/3101a18147dfad0515ad.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"> (<img src="__ARCSECS_LIBRARY_ASSETS__/figures/d499382a820846d789c0.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">) and <img src="__ARCSECS_LIBRARY_ASSETS__/figures/d068f082515f8eeade28.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">, the chromatic correction <img src="__ARCSECS_LIBRARY_ASSETS__/figures/e38909ab796779432376.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">, far below VLBI resolution; transverse and longitudinal polarizations experience the same leading-order scalar potential gradient.</p>
+<h4 id="lib-energy-conservation-test-proca-mass-vs.-redshift"><strong>5. Energy Conservation Test: Proca Mass vs. Redshift</strong></h4>
+<p>From the Proca stress-energy tensor <img src="__ARCSECS_LIBRARY_ASSETS__/figures/03078789e9fe0625efa3.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"> in a static homogeneous vacuum (<img src="__ARCSECS_LIBRARY_ASSETS__/figures/b591481aa5e8d3fc1f7b.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">, <img src="__ARCSECS_LIBRARY_ASSETS__/figures/9f48d86a26faf8e493a2.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">), <img src="__ARCSECS_LIBRARY_ASSETS__/figures/3cd0e8cf347934d1b884.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">, so wavepacket energy <img src="__ARCSECS_LIBRARY_ASSETS__/figures/c2c321ac5298f992e1bb.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"> is strictly conserved (<img src="__ARCSECS_LIBRARY_ASSETS__/figures/39ef30335c5480ea7829.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">). Continual energy loss (<img src="__ARCSECS_LIBRARY_ASSETS__/figures/c53211604423021f046a.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">) requires a missing dissipative coupling <img src="__ARCSECS_LIBRARY_ASSETS__/figures/4934412ee61a09025f9f.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">, absent from Proca theory and tightly constrained by Tolman <img src="__ARCSECS_LIBRARY_ASSETS__/figures/3123906840d08c0d73d9.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"> exclusion of <img src="__ARCSECS_LIBRARY_ASSETS__/figures/e3a28a1b4dca0e8a80d1.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">, SN Ia cadence (<img src="__ARCSECS_LIBRARY_ASSETS__/figures/ac8a47ed0c82fbda79e8.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">), and COBE FIRAS blackbody precision (<img src="__ARCSECS_LIBRARY_ASSETS__/figures/cc994e7c112d9a81de19.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">)45.</p>
+<h4 id="lib-multi-band-forward-model-covariance-aware-likelihood"><strong>6. Multi-Band Forward Model &amp; Covariance-Aware Likelihood</strong></h4>
+<p>Observed arrival time at frequency <img src="__ARCSECS_LIBRARY_ASSETS__/figures/d57895a8da3fa346e8ea.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"> for burst <img src="__ARCSECS_LIBRARY_ASSETS__/figures/815606440acb49004c33.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">:<br>
+<img src="__ARCSECS_LIBRARY_ASSETS__/figures/debd98b192803b9b7e48.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"><br>
+Covariance <img src="__ARCSECS_LIBRARY_ASSETS__/figures/7b892d26ce946c391b18.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"> combines receiver errors, correlated clock jitter, and normalized Macquart extragalactic dispersion variance. Model selection uses <img src="__ARCSECS_LIBRARY_ASSETS__/figures/61b59b80b6ca920e471d.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">, <img src="__ARCSECS_LIBRARY_ASSETS__/figures/01dd77b6e2c8cab99312.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">, <img src="__ARCSECS_LIBRARY_ASSETS__/figures/344abd4c52d43b52d084.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">, and Bayes factor <img src="__ARCSECS_LIBRARY_ASSETS__/figures/d0513725e157ccd408b8.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)">.</p>
+<h3 id="lib-companion-file-analysisphoton_mass_framework.py"><strong>Companion File: analysis/photon_mass_framework.py</strong></h3>
+<p>Python<br>
+““”<br>
+ArcSecs Mission 01: Photon Mass Dispersion, Unit Conversion, and Forward Likelihood<br>
+Status: Unit/Taylor calculations verified; full MCMC mock-injection suite NOT EXECUTED<br>
+in this environment (run locally with Python &gt;=3.10, numpy, scipy, pandas).<br>
+““”<br>
+import argparse<br>
+import numpy as np<br>
+import pandas as pd</p>
+<p>H_PLANCK = 6.62607015e-34 # J s<br>
+HBAR = H_PLANCK / (2.0 * np.pi) # J s<br>
+C_LIGHT = 299792458.0 # m / s<br>
+E_CHARGE = 1.602176634e-19 # J / eV<br>
+M_ELECTRON = 9.1093837015e-31 # kg<br>
+EPS0 = 8.8541878128e-12 # F / m<br>
+PC_M = 3.085677581491367e16 # m<br>
+GPC_M = 1e9 * PC_M<br>
+EV_TO_KG = E_CHARGE / (C_LIGHT ** 2)<br>
+K_DM_SI = (E_CHARGE ** 2) / (8.0 * (np.pi ** 2) * EPS0 * M_ELECTRON * C_LIGHT)<br>
+K_DM_ASTRO = K_DM_SI * (PC_M * 1e6) / 1e12 # s MHz^2 pc^-1 cm^3 (~4148.8064)</p>
+<p>def fractional_speed_deficit(m_eV: float, nu_Hz: float) -&gt; float:<br>
+“““Compute (c - v_g)/c avoiding IEEE-754 catastrophic cancellation.”“”<br>
+E_eV = H_PLANCK * nu_Hz / E_CHARGE<br>
+r = m_eV / E_eV<br>
+if r &gt;= 1.0:<br>
+return np.nan<br>
+if r &lt; 1e-4:<br>
+r2 = r * r<br>
+return 0.5 * r2 + 0.125 * (r2 * r2)<br>
+return 1.0 - np.sqrt(1.0 - r * r)</p>
+<p>def arrival_delay_seconds(m_eV: float, nu_Hz: float, distance_m: float) -&gt; float:<br>
+“““Excess travel time relative to speed c over baseline distance_m.”“”<br>
+E_eV = H_PLANCK * nu_Hz / E_CHARGE<br>
+r = m_eV / E_eV<br>
+if r &gt;= 1.0:<br>
+return np.inf<br>
+t0 = distance_m / C_LIGHT<br>
+if r &lt; 1e-4:<br>
+r2 = r * r<br>
+return t0 * (0.5 * r2 + 0.375 * (r2 * r2))<br>
+return t0 * (1.0 / np.sqrt(1.0 - r * r) - 1.0)</p>
+<p>def build_benchmark_table() -&gt; pd.DataFrame:<br>
+“““Generate exact conversion and 1 Gpc delay benchmarks.”“”<br>
+masses = <math display="block"><semantics><mrow><mn>1</mn><mi>e</mi><mo>−</mo><mn>14</mn><mo>,</mo><mn>1</mn><mi>e</mi><mo>−</mo><mn>15</mn><mo>,</mo><mn>1</mn><mi>e</mi><mo>−</mo><mn>18</mn><mo>,</mo><mn>1</mn><mi>e</mi><mo>−</mo><mn>22</mn></mrow><annotation encoding="application/x-tex">1e-14, 1e-15, 1e-18, 1e-22</annotation></semantics></math><br>
+freqs = {<br>
+“100MHz”: 1e8,<br>
+“400MHz”: 4e8,<br>
+“1.4GHz”: 1.4e9,<br>
+“500THz”: 5e14,<br>
+“100keV”: 1e5 * E_CHARGE / H_PLANCK,<br>
+}<br>
+records = []<br>
+for m in masses:<br>
+m_kg = m * EV_TO_KG<br>
+lambdabar = (HBAR / (m_kg * C_LIGHT)) if m_kg &gt; 0 else np.inf<br>
+row = {“m_eV”: m, “m_kg”: m_kg, “lambdabar_m”: lambdabar}<br>
+for label, nu in freqs.items():<br>
+row<span class="math display">$$f"dv\_c\_{label}"$$</span> = fractional_speed_deficit(m, nu)<br>
+row<span class="math display">$$f"dt\_1Gpc\_{label}\_s"$$</span> = arrival_delay_seconds(m, nu, GPC_M)<br>
+records.append(row)<br>
+return pd.DataFrame(records)</p>
+<p>def log_likelihood_frb_catalog(<br>
+m_eV: float,<br>
+dm_obs: np.ndarray,<br>
+dm_mw: np.ndarray,<br>
+distances_m: np.ndarray,<br>
+sigma_dm: np.ndarray,<br>
+dm_host_mean: float = 27.0,<br>
+dm_igm_mean_per_gpc: float = 900.0,<br>
+) -&gt; float:<br>
+“““Gaussian approximation for DM_obs = DM_astro + DM_gamma.”“”<br>
+if m_eV &lt; 0.0:<br>
+return -np.inf<br>
+dt_100 = np.array(<math display="block"><semantics><mrow><mi>a</mi><mi>r</mi><mi>r</mi><mi>i</mi><mi>v</mi><mi>a</mi><mi>l</mi><mi>_</mi><mi>d</mi><mi>e</mi><mi>l</mi><mi>a</mi><mi>y</mi><mi>_</mi><mi>s</mi><mi>e</mi><mi>c</mi><mi>o</mi><mi>n</mi><mi>d</mi><mi>s</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>m</mi><mi>_</mi><mi>e</mi><mi>V</mi><mo>,</mo><mn>1</mn><mi>e</mi><mn>8</mn><mo>,</mo><mi>d</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>f</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>i</mi><mi>n</mi><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi><mi>a</mi><mi>n</mi><mi>c</mi><mi>e</mi><mi>s</mi><mi>_</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">arrival\_delay\_seconds(m\_eV, 1e8, d) for d in distances\_m</annotation></semantics></math>)<br>
+dm_gamma = dt_100 / (K_DM_ASTRO * (100.0 ** -2))<br>
+dm_pred = dm_mw + dm_host_mean + dm_igm_mean_per_gpc * (distances_m / GPC_M) + dm_gamma<br>
+resid = dm_obs - dm_pred<br>
+return float(-0.5 * np.sum((resid / sigma_dm) ** 2 + np.log(2.0 * np.pi * sigma_dm ** 2)))</p>
+<p>def run_mock_recovery(seed: int = 20261123, n_bursts: int = 104, m_true_eV: float = 0.0) -&gt; dict:<br>
+“““Synthetic injection-recovery harness (unexecuted in non-runtime environment).”“”<br>
+rng = np.random.default_rng(seed)<br>
+distances_m = rng.uniform(0.1 * GPC_M, 2.5 * GPC_M, size=n_bursts)<br>
+dm_mw = rng.uniform(30.0, 80.0, size=n_bursts)<br>
+sigma_dm = rng.uniform(40.0, 120.0, size=n_bursts)<br>
+dt_true = np.array(<math display="block"><semantics><mrow><mi>a</mi><mi>r</mi><mi>r</mi><mi>i</mi><mi>v</mi><mi>a</mi><mi>l</mi><mi>_</mi><mi>d</mi><mi>e</mi><mi>l</mi><mi>a</mi><mi>y</mi><mi>_</mi><mi>s</mi><mi>e</mi><mi>c</mi><mi>o</mi><mi>n</mi><mi>d</mi><mi>s</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>m</mi><mi>_</mi><mi>t</mi><mi>r</mi><mi>u</mi><mi>e</mi><mi>_</mi><mi>e</mi><mi>V</mi><mo>,</mo><mn>1</mn><mi>e</mi><mn>8</mn><mo>,</mo><mi>d</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>f</mi><mi>o</mi><mi>r</mi><mi>d</mi><mi>i</mi><mi>n</mi><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi><mi>a</mi><mi>n</mi><mi>c</mi><mi>e</mi><mi>s</mi><mi>_</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">arrival\_delay\_seconds(m\_true\_eV, 1e8, d) for d in distances\_m</annotation></semantics></math>)<br>
+dm_gamma_true = dt_true / (K_DM_ASTRO * (100.0 ** -2))<br>
+dm_obs = dm_mw + 27.0 + 900.0 * (distances_m / GPC_M) + dm_gamma_true + rng.normal(0.0, sigma_dm)<br>
+grid = np.linspace(0.0, 5e-15, 250)<br>
+ll = np.array(<math display="block"><semantics><mrow><mi>l</mi><mi>o</mi><mi>g</mi><mi>_</mi><mi>l</mi><mi>i</mi><mi>k</mi><mi>e</mi><mi>l</mi><mi>i</mi><mi>h</mi><mi>o</mi><mi>o</mi><mi>d</mi><mi>_</mi><mi>f</mi><mi>r</mi><mi>b</mi><mi>_</mi><mi>c</mi><mi>a</mi><mi>t</mi><mi>a</mi><mi>l</mi><mi>o</mi><mi>g</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>m</mi><mo>,</mo><mi>d</mi><mi>m</mi><mi>_</mi><mi>o</mi><mi>b</mi><mi>s</mi><mo>,</mo><mi>d</mi><mi>m</mi><mi>_</mi><mi>m</mi><mi>w</mi><mo>,</mo><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi><mi>a</mi><mi>n</mi><mi>c</mi><mi>e</mi><mi>s</mi><mi>_</mi><mi>m</mi><mo>,</mo><mi>s</mi><mi>i</mi><mi>g</mi><mi>m</mi><mi>a</mi><mi>_</mi><mi>d</mi><mi>m</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>f</mi><mi>o</mi><mi>r</mi><mi>m</mi><mi>i</mi><mi>n</mi><mi>g</mi><mi>r</mi><mi>i</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">log\_likelihood\_frb\_catalog(m, dm\_obs, dm\_mw, distances\_m, sigma\_dm) for m in grid</annotation></semantics></math>)<br>
+post = np.exp(ll - np.max(ll))<br>
+cdf = np.cumsum(post) / np.sum(post)<br>
+return {<br>
+“m_true_eV”: m_true_eV,<br>
+“ul_68_eV”: float(grid<math display="block"><semantics><mrow><mi>n</mi><mi>p</mi><mi>.</mi><mi>s</mi><mi>e</mi><mi>a</mi><mi>r</mi><mi>c</mi><mi>h</mi><mi>s</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>e</mi><mi>d</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>c</mi><mi>d</mi><mi>f</mi><mo>,</mo><mn>0.68</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">np.searchsorted(cdf, 0.68)</annotation></semantics></math>),<br>
+“ul_95_eV”: float(grid<math display="block"><semantics><mrow><mi>n</mi><mi>p</mi><mi>.</mi><mi>s</mi><mi>e</mi><mi>a</mi><mi>r</mi><mi>c</mi><mi>h</mi><mi>s</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>e</mi><mi>d</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>c</mi><mi>d</mi><mi>f</mi><mo>,</mo><mn>0.95</mn><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">np.searchsorted(cdf, 0.95)</annotation></semantics></math>),<br>
+}</p>
+<p>if __name__ == “__main__”:<br>
+parser = argparse.ArgumentParser()<br>
+parser.add_argument(“–seed”, type=int, default=20261123)<br>
+parser.add_argument(“–mode”, choices=<span class="math display">$$"table", "mock", "all"$$</span>, default=“all”)<br>
+args = parser.parse_args()<br>
+if args.mode in (“table”, “all”):<br>
+print(build_benchmark_table().to_string(index=False))<br>
+if args.mode in (“mock”, “all”):<br>
+print(“Null injection:”, run_mock_recovery(args.seed, m_true_eV=0.0))<br>
+print(“Alternative injection (1e-15 eV):”, run_mock_recovery(args.seed, m_true_eV=1e-15))</p>
+<h3 id="lib-companion-file-evidence_ledger.csv"><strong>Companion File: EVIDENCE_LEDGER.csv</strong></h3>
+<table>
+
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Claim_ID</th>
+<th>Statement</th>
+<th>Classification</th>
+<th>Empirical_Status</th>
+<th>Quantitative_Bound_or_Value</th>
+<th>Model_Dependencies</th>
+<th>Verified_Source_IDs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>C01</td>
+<td>Photons carry quantized energy and linear momentum</td>
+<td>Observation</td>
+<td>Confirmed</td>
+<td>Energy proportional to frequency; momentum impulse transferred</td>
+<td>None (direct detection)</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>C02</td>
+<td>Photons undergo gravitational deflection and path delay</td>
+<td>Observation</td>
+<td>Confirmed</td>
+<td>Cassini/VLBI agreement to 0.001% (10⁻⁵); lensed AGN/FRB images</td>
+<td>Weak-field potential or geometric benchmark</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>C03</td>
+<td>Nonzero invariant photon rest mass detected</td>
+<td>Hypothesis</td>
+<td>Undetected (Upper bounds only)</td>
+<td>No positive signal; PDG limit &lt; 1 × 10⁻¹⁸ eV</td>
+<td>Proca electrodynamics + MHD / dispersion</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>C04</td>
+<td>Laboratory electrostatic Coulomb-law validity</td>
+<td>Observation</td>
+<td>Null bound</td>
+<td>m_γ &lt; 2 × 10⁻⁵⁰ kg (~10⁻¹⁴ eV)</td>
+<td>Proca Yukawa screening</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>C05</td>
+<td>Geomagnetic dipole falloff</td>
+<td>Model-dependent inference</td>
+<td>Null bound</td>
+<td>m_γ &lt; 4.0 × 10⁻⁵¹ kg</td>
+<td>Schrödinger/Proca dipole</td>
+<td>32</td>
+</tr>
+<tr class="even">
+<td>C06</td>
+<td>Solar-wind MHD magnetic survival to Pluto</td>
+<td>Model-dependent inference</td>
+<td>Null bound (PDG adopted)</td>
+<td>m_γ &lt; 1 × 10⁻¹⁸ eV (~1.78 × 10⁻⁵⁴ kg)</td>
+<td>Ideal MHD + plasma-beta stability</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>C07</td>
+<td>Rotating torsion balance ambient-potential torque</td>
+<td>Model-dependent inference</td>
+<td>Speculative bound</td>
+<td>m_γ &lt; 2.1 × 10⁻⁵⁴ kg</td>
+<td>Unmeasured cosmic vector potential</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<td>C08</td>
+<td>104 localized FRBs dispersion bound</td>
+<td>Model-dependent inference</td>
+<td>Null bound</td>
+<td>m_γ &lt; 4.71–4.86 × 10⁻⁵¹ kg (1-sigma, ~2.7 × 10⁻¹⁵ eV)</td>
+<td>Normalized Macquart IGM DM + priors</td>
+<td>6</td>
+</tr>
+<tr class="odd">
+<td>C09</td>
+<td>Strongly lensed FRB image arrival-delay bound</td>
+<td>Model-dependent inference</td>
+<td>Null bound</td>
+<td>1–2 orders tighter than lensed AGN limits</td>
+<td>Point-mass + external shear lens model</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>C10</td>
+<td>GW170817 / GRB 170817A multi-messenger lag</td>
+<td>Observation</td>
+<td>Speed offset constrained</td>
+<td>Lag (+1.74 ± 0.05) s; speed offset −3×10⁻¹⁵ to +7×10⁻¹⁶ c</td>
+<td>Intrinsic jet-launch lag assumptions</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>C11</td>
+<td>Proca rest mass causes continual energy loss / redshift</td>
+<td>Derived mathematics</td>
+<td>Excluded</td>
+<td>dE/dT = 0 in static Proca vacuum; optical lag 12 fs at 10⁻¹⁵ eV</td>
+<td>Proca Hamiltonian energy conservation</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>C12</td>
+<td>Classical tired-light (1+z)⁻¹ dimming and spectral fit</td>
+<td>Observation</td>
+<td>Excluded</td>
+<td>Excluded at &gt;10 σ (Tolman); SN Ia b = 0.97 ± 0.10; CMB 50 ppm</td>
+<td>Flux/spectral calibration</td>
+<td>45</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lib-companion-file-experiments.csv"><strong>Companion File: EXPERIMENTS.csv</strong></h3>
+<table>
+
+
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Experiment_ID</th>
+<th>Method</th>
+<th>Measured_Quantity</th>
+<th>Adopted_Theory</th>
+<th>Photon_Mass_Constraint</th>
+<th>Statistical_Level</th>
+<th>Dominant_Systematic</th>
+<th>Source_Citation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>E01</td>
+<td>Concentric-shell Cavendish test</td>
+<td>Interior null voltage</td>
+<td>Proca electrostatics</td>
+<td>&lt; 2 × 10⁻⁵⁰ kg (~10⁻¹⁴ eV)</td>
+<td>Laboratory upper bound</td>
+<td>Stray capacitance / geometry</td>
+<td>Williams, Faller, &amp; Hill (1971)5</td>
+</tr>
+<tr class="even">
+<td>E02</td>
+<td>Cryogenic Ampère’s law test (1.24 K)</td>
+<td>Shielded magnetic field</td>
+<td>Proca magnetostatics</td>
+<td>Null bound (exponent truncated in source)</td>
+<td>Laboratory upper bound</td>
+<td>Thermal drift / magnetometer noise</td>
+<td>Chernikov et al. (1992)11</td>
+</tr>
+<tr class="odd">
+<td>E03</td>
+<td>Dynamic rotating torsion balance</td>
+<td>Periodic toroid torque</td>
+<td>Proca + cosmic A_amb</td>
+<td>&lt; 2.1 × 10⁻⁵⁴ kg</td>
+<td>Torsion torque bound</td>
+<td>Unknown cosmic vector potential</td>
+<td>Luo et al. (2003)11</td>
+</tr>
+<tr class="even">
+<td>E04</td>
+<td>Earth dipole magnetic field</td>
+<td>Surface vector field</td>
+<td>Schrödinger/Proca</td>
+<td>&lt; 4.0 × 10⁻⁵¹ kg</td>
+<td>Geomagnetic fit bound</td>
+<td>External magnetospheric currents</td>
+<td>Goldhaber &amp; Nieto (1968)32</td>
+</tr>
+<tr class="odd">
+<td>E05</td>
+<td>Solar-wind MHD coherence</td>
+<td>Heliospheric B-field</td>
+<td>Proca MHD</td>
+<td>&lt; 1 × 10⁻¹⁸ eV (~1.78 × 10⁻⁵⁴ kg)</td>
+<td>Order-of-magnitude</td>
+<td>Solar-wind turbulence</td>
+<td>Ryutov (2007); PDG (2026)8</td>
+</tr>
+<tr class="even">
+<td>E06</td>
+<td>GRB multi-band radio peaks</td>
+<td>Radio peak time lags</td>
+<td>Proca dispersion</td>
+<td>&lt; 2.804 × 10⁻⁴⁷ kg</td>
+<td>Deterministic upper bound</td>
+<td>Intrinsic blast-wave lag</td>
+<td>arXiv:1607.03225 (2016)12</td>
+</tr>
+<tr class="odd">
+<td>E07</td>
+<td>Magellanic Cloud radio pulsars</td>
+<td>Pulsar dispersion measure</td>
+<td>Proca + cold plasma</td>
+<td>&lt; 1.51 × 10⁻⁴⁸ kg</td>
+<td>Bayesian combined</td>
+<td>Galactic/LMC plasma model</td>
+<td>Wei &amp; Wu (2018); Lin et al. (2023)18</td>
+</tr>
+<tr class="even">
+<td>E08</td>
+<td>9 localized FRBs</td>
+<td>Multi-band arrival lag</td>
+<td>Proca + IGM/host DM</td>
+<td>&lt; 7.1 × 10⁻⁵¹ kg (4.0 × 10⁻¹⁵ eV)</td>
+<td>68% CL (95%: 1.3 × 10⁻⁵⁰ kg)</td>
+<td>Host-galaxy DM variance</td>
+<td>Wei &amp; Wu (2020)17</td>
+</tr>
+<tr class="odd">
+<td>E09</td>
+<td>104 localized FRBs + CMB/BAO/SN</td>
+<td>DM vs. redshift</td>
+<td>Proca + normalized Macquart</td>
+<td>&lt; 4.71–4.86 × 10⁻⁵¹ kg (~2.7 × 10⁻¹⁵ eV)</td>
+<td>68% CL (1-sigma)</td>
+<td>Diffuse baryon fraction</td>
+<td>Zhang et al. (2025/2026)6</td>
+</tr>
+<tr class="even">
+<td>E10</td>
+<td>Lensed FRB image timing</td>
+<td>Delay vs. flux ratio</td>
+<td>Massive-photon lens</td>
+<td>1–2 orders below AGN bounds</td>
+<td>Boundary inequality</td>
+<td>Lens potential &amp; shear</td>
+<td>Phys. Rev. D 111, L041304 (2025)4</td>
+</tr>
+<tr class="odd">
+<td>E11</td>
+<td>GW170817 / GRB 170817A</td>
+<td>1.74 s GW-gamma lag</td>
+<td>Proca / speed offset</td>
+<td>Δv/c ~ 10⁻¹⁵ (Proca ~2.9 × 10⁻³ eV)</td>
+<td>Observational bound</td>
+<td>Jet-launch delay uncertainty</td>
+<td>Abbott et al. (2017); this work2</td>
+</tr>
+<tr class="even">
+<td>E12</td>
+<td>Prospective SRF Cavity + &lt;50 MHz FRB</td>
+<td>Longitudinal tone / ν⁻⁴ lag</td>
+<td>Proca 3-DOF + cross-term</td>
+<td>Target 10⁻¹⁶–10⁻¹⁸ eV</td>
+<td>Prospective (unexecuted)</td>
+<td>EM shielding / ISM scattering</td>
+<td>This investigation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lib-companion-file-bibliography.md"><strong>Companion File: BIBLIOGRAPHY.md</strong></h3>
+<blockquote>
+<ol type="1">
+<li>Abbott, B. P., et al. (LIGO Scientific Collaboration, Virgo Collaboration, Fermi-GBM, and INTEGRAL) (2017). “Gravitational Waves and Gamma-Rays from a Binary Neutron Star Merger: GW170817 and GRB 170817A.” <em>The Astrophysical Journal Letters</em>, 848(2), L13. DOI: 10.3847/2041-8213/aa920c (arXiv:1710.05834). <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>2. (LIGO DCC endpoint https://dcc.ligo.org/LIGO-P1700308/public inaccessible during verification20.)<br>
+</li>
+<li>Accioly, A., &amp; Paszko, R. (2008). <em>Physical Review D</em>, 78, 064002 (massive-photon gravitational deflection). URL: https://repositorio.unesp.br/bitstreams/693d381e-7662-46be-9ed4-5a92456e12fe/download. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>41.<br>
+</li>
+<li>Bentum, M. J., Bonetti, L., &amp; Spallicci, A. D. A. M. (2017). Non-Maxwellian electromagnetism and pulsar photon-mass limits. <em>Advances in Space Research</em>, 59(2), 736. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>17.<br>
+</li>
+<li>Blondin, S., Davis, T. M., Krisciunas, K., et al. (2008). Type Ia supernova spectral aging measurements (cited in <em>Fundamental Ideas in Cosmology</em>). URL: https://www.gea.org.br/wp-content/uploads/2023/06/Fundamental-Ideas-in-Cosmology.pdf. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>46.<br>
+</li>
+<li>Bonetti, L., et al. (2016). Photon mass limits from FRB 150418 (cited in <em>MNRASL</em> 533, L57). URL: https://academic.oup.com/mnrasl/article-pdf/533/1/L57/58483643/slae062.pdf. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>38.<br>
+</li>
+<li>Bonetti, L., et al. (2017). Photon mass limits from FRB 121102 (cited in arXiv:2006.09680 and arXiv:2304.14784v2). <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>17.<br>
+</li>
+<li>Chernikov, M. A., Gerber, C. J., Ott, H. R., &amp; Gerber, H.-J. (1992). Low-temperature test of Ampère’s law and photon rest mass. <em>Physical Review Letters</em> (cited in HAL-03672794 and PDG 2014). URL: https://hal.science/hal-03672794/document. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>11.<br>
+</li>
+<li>Davis, L., Jr., Goldhaber, A. S., &amp; Nieto, M. M. (1975). Limit on the photon mass deduced from Pioneer-10 observations of Jupiter’s magnetic field. <em>Physical Review Letters</em>, 35, 1402. URL: https://hal.science/hal-03672794/document. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>5.<br>
+</li>
+<li>Fischbach, E., et al. (1994). Terrestrial magnetic field limits on photon mass (cited in PDG 2014 Review). <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>11.<br>
+</li>
+<li>Fixsen, D. J., Cheng, E. S., Gales, J. M., Mather, J. C., Shafer, R. A., et al. (1996). COBE FIRAS cosmic microwave background blackbody spectrum (cited in arXiv:1009.0953v5). URL: https://arxiv.org/html/1009.0953v5. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>44.<br>
+</li>
+<li>Goldhaber, A. S., &amp; Nieto, M. M. (1968). Geomagnetic limit on the photon rest mass. <em>Physical Review Letters</em>, 21, 567 (cited in <em>Physics Today</em>). URL: https://physicstoday.aip.org/news/new-upper-limit-for-photon-mass. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>32.<br>
+</li>
+<li>Goldhaber, A. S., &amp; Nieto, M. M. (1971). Terrestrial and extraterrestrial limits on the photon mass. <em>Reviews of Modern Physics</em>, 43, 277. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>4.<br>
+</li>
+<li>Goldhaber, A. S., &amp; Nieto, M. M. (2010). Photon and graviton mass limits. <em>Reviews of Modern Physics</em>, 82, 939 (arXiv:0809.1003). DOI: 10.1103/RevModPhys.82.939. URL: https://arxiv.org/pdf/0809.1003. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>5.<br>
+</li>
+<li>Goldstein, A., Veres, P., Burns, E., et al. (2017). “An Ordinary Short Gamma-Ray Burst with Extraordinary Implications: Fermi-GBM Detection of GRB 170817A.” <em>The Astrophysical Journal Letters</em>, 848(2). DOI: 10.3847/2041-8213/aa8f41. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>2.<br>
+</li>
+<li>Lakes, R. (1998). “Experimental Limits on the Photon Mass and Cosmic Magnetic Vector Potential.” <em>Physical Review Letters</em>, 80, 1826–1829. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>11.<br>
+</li>
+<li>Lin, H.-N., Tang, L., &amp; Zou, R. (2023). Revised constraints on photon mass from fast radio bursts. <em>MNRAS</em> (accepted 2022, arXiv:2301.12103). URL: https://arxiv.org/pdf/2301.12103. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi><mi>/</mi><mi>P</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed / Preprint</annotation></semantics></math>18.<br>
+</li>
+<li>Lubin, L. M., &amp; Sandage, A. (2001). “The Tolman Surface Brightness Test for the Reality of the Expansion. IV. A Measurement of the Tolman Signal and the Luminosity Evolution of Early-Type Galaxies.” <em>The Astronomical Journal</em>, 122(2), 1084–1103. DOI: 10.1086/589568. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>44.<br>
+</li>
+<li>Luo, J., Tu, L.-C., Hu, Z.-K., &amp; Luan, E.-J. (2003). “New Experimental Limit on the Photon Rest Mass with a Rotating Torsion Balance.” <em>Physical Review Letters</em>, 90, 081801. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>11.<br>
+</li>
+<li>Particle Data Group (PDG) (2014, 2018, 2024). <em>Review of Particle Physics</em>: Photon Listings (rpp2014_0557-0644.pdf; <em>Phys. Rev. D</em> 98, 030001; rpp2024-list-photon.pdf). URL: https://ccwww.kek.jp/pdg/2024/listings/rpp2024-list-photon.pdf. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed review</annotation></semantics></math>21.<br>
+</li>
+<li>Particle Data Group (PDG) (2026). <em>Review of Particle Physics</em>: Gauge and Higgs Bosons Summary Table. <em>Phys. A</em> 41, 2630011 (2026). URL: https://ccwww.kek.jp/pdg/2026/tables/rpp2026-sum-gauge-higgs-bosons.pdf. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed review</annotation></semantics></math>8. (2025 endpoint https://pdg.lbl.gov/2025/listings/particle_properties.html inaccessible during verification19.)<br>
+</li>
+<li>Retinò, A., Spallicci, A. D. A. M., &amp; Vaivads, A. (2016). Ampère’s law in the solar wind with Cluster spacecraft. <em>Astroparticle Physics</em>, 82, 49. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>21.<br>
+</li>
+<li>Ryan, Accetta, &amp; Austin. Low-temperature photon-mass phase transition limit at 1.36 K (cited in arXiv:0809.1003 and arXiv:0705.1101). <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>5.<br>
+</li>
+<li>Ryutov, D. D. (1997, 2007). Solar wind magnetohydrodynamics and photon mass limits. <em>Controlled Fusion</em>, 49, B429 (2007). <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>11.<br>
+</li>
+<li>Schaefer, B. E. (1999). Dispersion of gamma-ray bursts and photon-mass limits (cited in arXiv:1607.03225). <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>11.<br>
+</li>
+<li>Shao, L., &amp; Zhang, B. (2017). Bayesian framework to constrain the photon mass with fast radio bursts. <em>Physical Review D</em>, 95, 123010. DOI: 10.1103/PhysRevD.95.123010. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>15.<br>
+</li>
+<li>Spavieri, G., et al. (2007, 2011). Photon mass and quantum effects of the Aharonov-Bohm type. <em>Physical Review A</em>, 75, 052113 (arXiv:0705.1101) and arXiv:1005.4082. DOI: 10.1103/PhysRevA.75.052113. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi><mi>/</mi><mi>P</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed / Preprint</annotation></semantics></math>13.<br>
+</li>
+<li>Tu, L.-C., Luo, J., &amp; Gillies, G. T. (2005). The mass of the photon. <em>Reports on Progress in Physics</em>, 68, 77. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>4.<br>
+</li>
+<li>Wang, H., Miao, X., &amp; Shao, L. (2021). Bounding the photon mass with 129 fast radio bursts. <em>Physics Letters B</em>, 136596. DOI: 10.1016/j.physletb.2021.136596. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>14.<br>
+</li>
+<li>Wei, J.-J., &amp; Wu, X.-F. (2018). Robust limits on photon mass from statistical samples of extragalactic radio pulsars (arXiv:1803.07298). URL: https://arxiv.org/pdf/1803.07298. <math display="block"><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Preprint</annotation></semantics></math>18.<br>
+</li>
+<li>Wei, J.-J., &amp; Wu, X.-F. (2020). Combined photon mass limit from nine localized fast radio bursts (arXiv:2006.09680). URL: https://arxiv.org/pdf/2006.09680. <math display="block"><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Preprint</annotation></semantics></math>17.<br>
+</li>
+<li>Will, C. M. (Cassini Shapiro delay and VLBI deflection review). <em>Living Reviews in Relativity</em> (PMC5255900). URL: https://pmc.ncbi.nlm.nih.gov/articles/PMC5255900/. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed review</annotation></semantics></math>3.<br>
+</li>
+<li>Williams, E. R., Faller, J. E., &amp; Hill, H. A. (1971). “New Experimental Test of Coulomb’s Law: A Laboratory Upper Limit on the Photon Rest Mass.” <em>Physical Review Letters</em>, 26, 721–724. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>5.<br>
+</li>
+<li>Wu, X.-F., Zhang, S.-B., Gao, H., Wei, J.-J., Zou, Y.-C., et al. (2016). Constraints on the photon mass with fast radio bursts. URL: https://pure.psu.edu/en/publications/constraints-on-the-photon-mass-with-fast-radio-bursts. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>18.<br>
+</li>
+<li>Xing, N., Gao, H., Wei, J.-J., et al. (2019). Photon mass limit from subpulse time-frequency structure of FRB 121102. URL: https://oasis.library.unlv.edu/cgi/viewcontent.cgi?article=1437&amp;context=physastr_fac_articles. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>17.<br>
+</li>
+<li>Zhang, Y., Liu, Y., Yu, H., &amp; Wu, P. (2025/2026). “Photon rest mass from localized fast radio bursts with an improved distribution of the dispersion measure from extragalactic gas.” <em>Physical Review D</em>, DOI: 10.1103/sh7h-94jy (arXiv:2511.14163v2). URL: https://link.aps.org/doi/10.1103/sh7h-94jy. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>6.<br>
+</li>
+<li>Unattributed author list in accessible excerpt (2016). Photon mass limits from GRB early-time radio afterglows (arXiv:1607.03225). URL: https://arxiv.org/html/1607.03225v1. <math display="block"><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Preprint</annotation></semantics></math>12.<br>
+</li>
+<li>Unattributed author list in accessible excerpt (2022). Second-order dispersion constraints on photon rest mass (arXiv:2207.00950). URL: https://arxiv.org/pdf/2207.00950. <math display="block"><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Preprint</annotation></semantics></math>15.<br>
+</li>
+<li>Unattributed author list in accessible excerpt (2023). FRB + CMB + BAO + SN Ia joint constraints on photon mass (PP23063.pdf). URL: https://research.iac.es/preprints/files/PP23063.pdf. <math display="block"><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Preprint</annotation></semantics></math>40.<br>
+</li>
+<li>Unattributed author list in accessible excerpt (2024). Combined plasma and nonzero photon mass dispersion relation (arXiv:2409.04672). URL: https://arxiv.org/pdf/2409.04672. <math display="block"><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Preprint</annotation></semantics></math>43.<br>
+</li>
+<li>Unattributed author list in accessible excerpt (2024). Parker Solar Probe constraints on photon mass and local plasma frequency (arXiv:2405.12285v3; <em>Physics</em> 18, 91). URL: https://arxiv.org/html/2405.12285v3. <math display="block"><semantics><mrow><mi>P</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>t</mi><mi>/</mi><mi>J</mi><mi>o</mi><mi>u</mi><mi>r</mi><mi>n</mi><mi>a</mi><mi>l</mi><mi>h</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>l</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Preprint / Journal highlight</annotation></semantics></math>34.<br>
+</li>
+<li>Unattributed author list in accessible excerpt (2025). Photon mass limit from gravitational lensing time delays of a lensed FRB candidate. <em>Physical Review D</em>, 111, L041304. DOI: 10.1103/PhysRevD.111.L041304. <math display="block"><semantics><mrow><mi>P</mi><mi>e</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>r</mi><mi>e</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi><mi>e</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">Peer-reviewed</annotation></semantics></math>4.</li>
+</ol>
+</blockquote>
+<h3 id="lib-companion-file-referee_challenges.md"><strong>Companion File: REFEREE_CHALLENGES.md</strong></h3>
+<blockquote>
+<ol type="1">
+<li><strong>Challenge 1 (Degeneracy of Invariant Mass vs. Energy-Momentum Coupling):</strong> <em>Critique:</em> If gravitational lensing and radiation pressure are fully described by energy-momentum coupling without an invariant rest-mass term, can any current lensing deflection measurement distinguish zero rest mass from 10⁻¹⁸ electron-volts?<em>Response:</em> No. Current gravitational bending angles cannot distinguish zero from 10⁻¹⁸ electron-volts because the chromatic correction is below 10⁻²³ at radio frequencies. Mission 01 explicitly avoids claiming lensing proves invariant rest mass, relocating positive detection tests to low-frequency Proca-plasma cross-terms and longitudinal superconducting cavities.<br>
+</li>
+<li><strong>Challenge 2 (Missing Mechanism for Redshift and Slowing Over Time):</strong> <em>Critique:</em> Binding Premise 3 states “light slows down over time,” yet Section 4 shows Proca mass conserves energy and propagates at a constant sub-luminal group speed without continual deceleration or redshift. Doesn’t this refute Premise 3 within Proca theory? <em>Response:</em> It demonstrates that <strong>conservative Proca rest mass alone</strong> cannot generate continual deceleration or redshift. Rather than masking this failure or falling back on expanding-space metric stretching, the manuscript explicitly flags continual slowing/redshift as a missing dissipative mechanism and lists the three quantitative empirical gates (Tolman &gt;10 σ, SN Ia spectral cadence b = 0.97 ± 0.10, and 50-ppm CMB blackbody45) any future medium-coupling model must pass.<br>
+</li>
+<li><strong>Challenge 3 (Solar-Wind MHD Model Dependence):</strong> <em>Critique:</em> Could nonlinear solar-wind turbulence or current sheets invalidate the PDG 2026 limit (&lt; 1 × 10⁻¹⁸ eV), leaving masses near 10⁻¹⁵ electron-volts viable? <em>Response:</em> Because MHD equilibrium arguments depend on large-scale magnetic-coherence modeling, independent cosmological dispersion limits from 104 localized FRBs (&lt; 4.83 × 10⁻⁵¹ kg, or ~2.7 × 10⁻¹⁵ eV6) and zero-plasma laboratory SRF cavity tests (targeting 10⁻¹⁶–10⁻¹⁸ eV) remain essential independent checks.<br>
+</li>
+<li><strong>Challenge 4 (Plasma Scattering Mimicking Inverse-Fourth-Power Cross-Terms):</strong> <em>Critique:</em> Turbulent interstellar scattering broadens low-frequency pulses roughly as frequency to the minus 4.0 to minus 4.4 power. How can Channel A separate a Proca-plasma cross-term from scattering?<em>Response:</em> Multipath plasma scattering asymmetrically stretches the trailing exponential tail of a pulse and decorrelates across scintillation bandwidths, whereas a coherent Proca-plasma dispersion shift translates the leading pulse edge deterministically without asymmetric smearing. Channel A requires joint exponential-tail deconvolution across multiple sightlines with distinct Galactic latitudes.<br>
+</li>
+<li><strong>Challenge 5 (Longitudinal-Mode Decoupling in Channel B):</strong> <em>Critique:</em> In Stueckelberg-Proca electrodynamics, does a conserved current source decouple from the longitudinal mode in proportion to squared mass over squared drive energy (~10⁻²⁴ suppression at 100 MHz for 10⁻¹⁸ eV)?<em>Response:</em> Yes—this coupling suppression is the primary technical hurdle of Channel B. High-frequency cavities suffer (m_γ / E)² suppression, whereas quasi-static nested superconducting shell geometries (modernized Williams-Faller-Hill geometry) probe (L / λ_C)² directly, reaching ~10⁻¹⁶ eV cleanly and defining the exact scaling challenge to reach 10⁻¹⁸ eV.</li>
+</ol>
+</blockquote>
+<h3 id="lib-companion-file-arcsecs_advocacy_summary.md"><strong>Companion File: ARCSECS_ADVOCACY_SUMMARY.md</strong></h3>
+<h4 id="lib-plain-english-arcsecs-evidence-summary-mission-01-photon-mass-and-gravity"><strong>Plain-English ArcSecs Evidence Summary (Mission 01: Photon Mass and Gravity)</strong></h4>
+<p>Does light possess physical mass, and does gravity pull on light directly without needing “curved spacetime”? This independent investigation audited laboratory electrodynamics, spacecraft magnetometry, gravitational lensing observations, and distant cosmic radio bursts to separate what measurements firmly establish from what remains untested.<br>
+<strong>What the evidence firmly supports:</strong> Photons—physical wavepackets of light—unambiguously carry energy and momentum, exert radiation pressure on matter, and respond directly to gravity1. When starlight or radio signals graze the Sun or pass distant galaxies, their paths bend and their arrival intervals delay relative to unobstructed routes3. Within the ArcSecs worldview, these are concrete physical interactions between massive gravitating bodies and light’s physical energy-momentum, occurring at ordinary spatial locations (“Where”) under constant event progression (“When”)—without treating space or time as stretchable fabrics.<br>
+<strong>What remains unmeasured:</strong> Physics distinguishes between light’s <strong>energy-momentum gravitational mass-equivalence</strong> (firmly observed) and a photon’s <strong>invariant rest mass</strong>—the residual mass a light packet would hold if brought to rest. Despite decades of searching, no experiment has positively detected nonzero invariant rest mass. Instead, measurements place strict upper ceilings on how large it could be: laboratory electric-field shields rule out masses above 2 × 10⁻⁵⁰ kilograms (roughly 10⁻¹⁴ electron-volts)5; 104 localized fast radio bursts tighten the ceiling to roughly 4.8 × 10⁻⁵¹ kilograms (2.7 × 10⁻¹⁵ electron-volts)6; and solar-wind magnetic coherence sets the Particle Data Group benchmark at 1 × 10⁻¹⁸ electron-volts8.<br>
+<strong>Two key boundaries identified by this study:</strong> First, adding a standard Proca rest mass causes lower-frequency radio waves to lag slightly behind higher-frequency light, <strong>but it does not make light lose energy or continually slow down over time in empty space</strong>. Consequently, Proca photon rest mass alone cannot explain cosmological redshifts; any ArcSecs redshift model requires a separate physical medium-coupling mechanism capable of passing galaxy surface-brightness dimming, supernova spectral-aging, and cosmic microwave background blackbody benchmarks45. Second, standard gravitational bending deflects optical and radio frequencies almost identically even with a tiny rest mass, meaning lensing angles confirm energy-momentum gravitational coupling rather than invariant rest mass3.<br>
+<strong>The constructive path forward:</strong> Rather than arguing philosophy, ArcSecs research can test for a genuine <strong>positive rest-mass signal</strong> by (1) tracking ultra-low-frequency repeating radio bursts below 50 megahertz to isolate coupled mass-plasma dispersion shifts15, and (2) operating cryogenic superconducting shielded cavities to search for the faint longitudinal wave pattern unique to massive light11.</p>
+<h5 id="lib-works-cited"><strong>Works cited</strong></h5>
+<blockquote>
+<ol type="1">
+<li>Gravitational Lensing: Strong, Weak and Micro, <a href="https://pjovanovic.aob.rs/gl2023/book/Gravitational%20Lensing%20Strong,%20Weak%20and%20Micro%20Saas-Fee%20Advanced%20Course%2033%20(Saas-Fee%20Advanced%20Courses).pdf" rel="noopener noreferrer">https://pjovanovic.aob.rs/gl2023/book/Gravitational%20Lensing%20Strong,%20Weak%20and%20Micro%20Saas-Fee%20Advanced%20Course%2033%20(Saas-Fee%20Advanced%20Courses).pdf</a><br>
+</li>
+<li>Sheila McBreen | Outputs - University College Dublin, <a href="https://people.ucd.ie/sheila.mcbreen/publications?startFrom=70&amp;perPage=10&amp;sortBy=publicationDate&amp;sortAscending=false" rel="noopener noreferrer">https://people.ucd.ie/sheila.mcbreen/publications?startFrom=70&amp;perPage=10&amp;sortBy=publicationDate&amp;sortAscending=false</a><br>
+</li>
+<li>The Confrontation between General Relativity and Experiment - PMC, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5255900/" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC5255900/</a><br>
+</li>
+<li>Bounding the photon mass with gravitationally lensed fast radio bursts, <a href="https://link.aps.org/doi/10.1103/PhysRevD.111.L041304" rel="noopener noreferrer">https://link.aps.org/doi/10.1103/PhysRevD.111.L041304</a><br>
+</li>
+<li>arXiv:0809.1003v5 <math display="block"><semantics><mrow><mi>h</mi><mi>e</mi><mi>p</mi><mo>−</mo><mi>p</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">hep-ph</annotation></semantics></math> 5 Oct 2010, <a href="https://arxiv.org/pdf/0809.1003" rel="noopener noreferrer">https://arxiv.org/pdf/0809.1003</a><br>
+</li>
+<li>Photon rest mass from localized fast radio bursts with improved, <a href="https://arxiv.org/html/2511.14163v2" rel="noopener noreferrer">https://arxiv.org/html/2511.14163v2</a><br>
+</li>
+<li><a href="http://docs.google.com/unknown_url" rel="noopener noreferrer">unknown_url</a><br>
+</li>
+<li>GAUGE AND HIGGS BOSONS, <a href="https://ccwww.kek.jp/pdg/2026/tables/rpp2026-sum-gauge-higgs-bosons.pdf" rel="noopener noreferrer">https://ccwww.kek.jp/pdg/2026/tables/rpp2026-sum-gauge-higgs-bosons.pdf</a><br>
+</li>
+<li>What is the current limit for a photon’s rest mass?, <a href="https://physics.stackexchange.com/questions/613748/what-is-the-current-limit-for-a-photons-rest-mass" rel="noopener noreferrer">https://physics.stackexchange.com/questions/613748/what-is-the-current-limit-for-a-photons-rest-mass</a><br>
+</li>
+<li>Every Particle in the Universe, From Massless to Impossible - YouTube, <a href="https://www.youtube.com/watch?v=SeSB7q1CPS0" rel="noopener noreferrer">https://www.youtube.com/watch?v=SeSB7q1CPS0</a><br>
+</li>
+<li>(PDF) Experimental tests of Coulomb’s Law and the photon rest mass, <a href="https://www.researchgate.net/publication/228689980_Experimental_tests_of_Coulomb's_Law_and_the_photon_rest_mass" rel="noopener noreferrer">https://www.researchgate.net/publication/228689980_Experimental_tests_of_Coulomb’s_Law_and_the_photon_rest_mass</a><br>
+</li>
+<li>Constraining the Mass of the Photon with Gamma-Ray Bursts - arXiv, <a href="https://arxiv.org/html/1607.03225v1" rel="noopener noreferrer">https://arxiv.org/html/1607.03225v1</a><br>
+</li>
+<li>arXiv:0705.1101v1 <math display="block"><semantics><mrow><mi>q</mi><mi>u</mi><mi>a</mi><mi>n</mi><mi>t</mi><mo>−</mo><mi>p</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">quant-ph</annotation></semantics></math> 8 May 2007, <a href="https://arxiv.org/pdf/0705.1101" rel="noopener noreferrer">https://arxiv.org/pdf/0705.1101</a><br>
+</li>
+<li>Photon rest mass from localized fast radio bursts with an improved, <a href="https://link.aps.org/doi/10.1103/sh7h-94jy" rel="noopener noreferrer">https://link.aps.org/doi/10.1103/sh7h-94jy</a><br>
+</li>
+<li>Bounding the Photon Mass with the Dedispersed Pulses of the Crab, <a href="https://arxiv.org/pdf/2207.00950" rel="noopener noreferrer">https://arxiv.org/pdf/2207.00950</a><br>
+</li>
+<li>Photon mass and quantum effects of the Aharonov-Bohm type, <a href="https://link.aps.org/doi/10.1103/PhysRevA.75.052113" rel="noopener noreferrer">https://link.aps.org/doi/10.1103/PhysRevA.75.052113</a><br>
+</li>
+<li>arXiv:2006.09680v2 <math display="block"><semantics><mrow><mi>a</mi><mi>s</mi><mi>t</mi><mi>r</mi><mi>o</mi><mo>−</mo><mi>p</mi><mi>h</mi><mi>.</mi><mi>H</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">astro-ph.HE</annotation></semantics></math> 18 Jun 2020, <a href="https://arxiv.org/pdf/2006.09680" rel="noopener noreferrer">https://arxiv.org/pdf/2006.09680</a><br>
+</li>
+<li>Revised constraints on the photon mass from well-localized … - arXiv, <a href="https://arxiv.org/pdf/2301.12103" rel="noopener noreferrer">https://arxiv.org/pdf/2301.12103</a><br>
+</li>
+<li><a href="https://pdg.lbl.gov/2025/listings/particle_properties.html" rel="noopener noreferrer">https://pdg.lbl.gov/2025/listings/particle_properties.html</a><br>
+</li>
+<li><a href="https://dcc.ligo.org/LIGO-P1700308/public" rel="noopener noreferrer">https://dcc.ligo.org/LIGO-P1700308/public</a><br>
+</li>
+<li>109. Supersymmetry, part I (theory) - Scuola Normale Superiore, <a href="https://ricerca.sns.it/retrieve/e3aacdfe-63c2-4c98-e053-3705fe0acb7e/PhysRevD.98.030001-part5.pdf" rel="noopener noreferrer">https://ricerca.sns.it/retrieve/e3aacdfe-63c2-4c98-e053-3705fe0acb7e/PhysRevD.98.030001-part5.pdf</a><br>
+</li>
+<li>γ (photon), <a href="https://ccwww.kek.jp/pdg/2024/listings/rpp2024-list-photon.pdf" rel="noopener noreferrer">https://ccwww.kek.jp/pdg/2024/listings/rpp2024-list-photon.pdf</a><br>
+</li>
+<li>gauge and higgs bosons - AWS, <a href="https://cfn-live-content-bucket-iop-org.s3.eu-west-1.amazonaws.com/journals/1674-1137/38/9/090001/revision2/rpp2014_0557-0644.pdf" rel="noopener noreferrer">https://cfn-live-content-bucket-iop-org.s3.eu-west-1.amazonaws.com/journals/1674-1137/38/9/090001/revision2/rpp2014_0557-0644.pdf</a><br>
+</li>
+<li>Gravitational Waves and Gamma-Rays from a Binary Neutron Star, <a href="https://www.osti.gov/pages/biblio/1416313" rel="noopener noreferrer">https://www.osti.gov/pages/biblio/1416313</a><br>
+</li>
+<li>GeV emission from a compact binary merger - IRIS - GSSI, <a href="https://iris.gssi.it/retrieve/ab8c3780-1f7f-4bf2-b38f-6f94fc3b6812/PostPrint_2022_Nature_612_Mei.pdf" rel="noopener noreferrer">https://iris.gssi.it/retrieve/ab8c3780-1f7f-4bf2-b38f-6f94fc3b6812/PostPrint_2022_Nature_612_Mei.pdf</a><br>
+</li>
+<li>Korea Astronomy and Space Science Institute | 1174 Authors, <a href="https://scispace.com/institutions/korea-astronomy-and-space-science-institute-lv7awjku" rel="noopener noreferrer">https://scispace.com/institutions/korea-astronomy-and-space-science-institute-lv7awjku</a><br>
+</li>
+<li>Testing the Ampère-Maxwell law on the photon mass and … - HAL, <a href="https://hal.science/hal-03672794/document" rel="noopener noreferrer">https://hal.science/hal-03672794/document</a><br>
+</li>
+<li>The Color of the Night - SciRP.org, <a href="https://www.scirp.org/journal/paperinformation?paperid=108950" rel="noopener noreferrer">https://www.scirp.org/journal/paperinformation?paperid=108950</a><br>
+</li>
+<li>Photon and graviton mass limits | Rev. Mod. Phys. - APS Journals, <a href="https://link.aps.org/doi/10.1103/RevModPhys.82.939" rel="noopener noreferrer">https://link.aps.org/doi/10.1103/RevModPhys.82.939</a><br>
+</li>
+<li>arXiv:2412.09806v2 <math display="block"><semantics><mrow><mi>a</mi><mi>s</mi><mi>t</mi><mi>r</mi><mi>o</mi><mo>−</mo><mi>p</mi><mi>h</mi><mi>.</mi><mi>H</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">astro-ph.HE</annotation></semantics></math> 25 Jan 2025, <a href="https://arxiv.org/pdf/2412.09806" rel="noopener noreferrer">https://arxiv.org/pdf/2412.09806</a><br>
+</li>
+<li>Momentum of electromagnetic fields, speed of light in moving media, <a href="https://arxiv.org/pdf/1005.4082" rel="noopener noreferrer">https://arxiv.org/pdf/1005.4082</a><br>
+</li>
+<li>New Upper Limit For Photon Mass - Physics Today, <a href="https://physicstoday.aip.org/news/new-upper-limit-for-photon-mass" rel="noopener noreferrer">https://physicstoday.aip.org/news/new-upper-limit-for-photon-mass</a><br>
+</li>
+<li>Solar wind test of the de Broglie-Proca massive photon with Cluster, <a href="https://arxiv.org/pdf/1302.6168" rel="noopener noreferrer">https://arxiv.org/pdf/1302.6168</a><br>
+</li>
+<li>In situ Measurements of Dark Photon Dark Matter Using Parker, <a href="https://arxiv.org/html/2405.12285v3" rel="noopener noreferrer">https://arxiv.org/html/2405.12285v3</a><br>
+</li>
+<li>Combing Through the Sun’s Corona for Dark Matter, <a href="https://physics.aps.org/articles/pdf/10.1103/Physics.18.91" rel="noopener noreferrer">https://physics.aps.org/articles/pdf/10.1103/Physics.18.91</a><br>
+</li>
+<li>Constraining the Mass of the Photon with Gamma-Ray Bursts - arXiv, <a href="https://arxiv.org/pdf/1607.03225" rel="noopener noreferrer">https://arxiv.org/pdf/1607.03225</a><br>
+</li>
+<li>Limits on the Weak Equivalence Principle and Photon Mass with, <a href="https://oasis.library.unlv.edu/cgi/viewcontent.cgi?article=1437&amp;context=physastr_fac_articles" rel="noopener noreferrer">https://oasis.library.unlv.edu/cgi/viewcontent.cgi?article=1437&amp;context=physastr_fac_articles</a><br>
+</li>
+<li>Constraining fundamental constants with fast radio bursts, <a href="https://academic.oup.com/mnrasl/article-pdf/533/1/L57/58483643/slae062.pdf" rel="noopener noreferrer">https://academic.oup.com/mnrasl/article-pdf/533/1/L57/58483643/slae062.pdf</a><br>
+</li>
+<li>Robust Limits on Photon Mass from Statistical Samples of … - arXiv, <a href="https://arxiv.org/pdf/1803.07298" rel="noopener noreferrer">https://arxiv.org/pdf/1803.07298</a><br>
+</li>
+<li>Revisiting constraints on the photon rest mass with cosmological fast, <a href="https://research.iac.es/preprints/files/PP23063.pdf" rel="noopener noreferrer">https://research.iac.es/preprints/files/PP23063.pdf</a><br>
+</li>
+<li>Tópicos em Teoria Quântica de Campos, <a href="https://repositorio.unesp.br/bitstreams/693d381e-7662-46be-9ed4-5a92456e12fe/download" rel="noopener noreferrer">https://repositorio.unesp.br/bitstreams/693d381e-7662-46be-9ed4-5a92456e12fe/download</a><br>
+</li>
+<li>GW170817 - Wikipedia, <a href="https://en.wikipedia.org/wiki/GW170817" rel="noopener noreferrer">https://en.wikipedia.org/wiki/GW170817</a><br>
+</li>
+<li>arXiv:2409.04672v1 <math display="block"><semantics><mrow><mi>a</mi><mi>s</mi><mi>t</mi><mi>r</mi><mi>o</mi><mo>−</mo><mi>p</mi><mi>h</mi><mi>.</mi><mi>H</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">astro-ph.HE</annotation></semantics></math> 7 Sep 2024, <a href="https://arxiv.org/pdf/2409.04672" rel="noopener noreferrer">https://arxiv.org/pdf/2409.04672</a><br>
+</li>
+<li>Observational evidence favors a static universe - arXiv, <a href="https://arxiv.org/html/1009.0953v5" rel="noopener noreferrer">https://arxiv.org/html/1009.0953v5</a><br>
+</li>
+<li>Who Proved Static Universe Can Work? | by Michael Aaron Cody, <a href="https://medium.com/@mac123456/who-proved-static-universe-can-work-d8b478bd4970" rel="noopener noreferrer">https://medium.com/<span class="citation">@mac123456/who-proved-static-universe-can-work-d8b478bd4970</span></a><br>
+</li>
+<li>Rival Cosmologies - The Berean Archive, <a href="https://bereanarchive.org/unpublished-ai/rival-cosmologies/" rel="noopener noreferrer">https://bereanarchive.org/unpublished-ai/rival-cosmologies/</a><br>
+</li>
+<li>Fundamental Ideas in Cosmology - GEA, <a href="https://www.gea.org.br/wp-content/uploads/2023/06/Fundamental-Ideas-in-Cosmology.pdf" rel="noopener noreferrer">https://www.gea.org.br/wp-content/uploads/2023/06/Fundamental-Ideas-in-Cosmology.pdf</a><br>
+</li>
+<li>arXiv:1906.11833v1 <math display="block"><semantics><mrow><mi>g</mi><mi>r</mi><mo>−</mo><mi>q</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">gr-qc</annotation></semantics></math> 27 Jun 2019, <a href="https://arxiv.org/pdf/1906.11833" rel="noopener noreferrer">https://arxiv.org/pdf/1906.11833</a><br>
+</li>
+<li>Cosmology-Independent Photon Mass Limits from Localized Fast, <a href="https://cpl.iphy.ac.cn/article/10.1088/0256-307X/41/5/059501" rel="noopener noreferrer">https://cpl.iphy.ac.cn/article/10.1088/0256-307X/41/5/059501</a><br>
+</li>
+<li>Fast radio bursts — A brief review: Some questions, fewer answers, <a href="https://www.worldscientific.com/doi/abs/10.1142/s0217732316300135" rel="noopener noreferrer">https://www.worldscientific.com/doi/abs/10.1142/s0217732316300135</a><br>
+</li>
+<li>Revisiting constraints on the photon rest mass with cosmological fast, <a href="https://arxiv.org/html/2304.14784v2" rel="noopener noreferrer">https://arxiv.org/html/2304.14784v2</a><br>
+</li>
+<li>(PDF) Robust Limits on Photon Mass from Statistical Samples of, <a href="https://www.researchgate.net/publication/323904822_Robust_Limits_on_Photon_Mass_from_Statistical_Samples_of_Extragalactic_Radio_Pulsars" rel="noopener noreferrer">https://www.researchgate.net/publication/323904822_Robust_Limits_on_Photon_Mass_from_Statistical_Samples_of_Extragalactic_Radio_Pulsars</a><br>
+</li>
+<li>(PDF) Free Electrons Compton Scattering Can Produce an Illusion, <a href="https://www.researchgate.net/publication/362701914_Free_Electrons_Compton_Scattering_Can_Produce_an_Illusion_of_Expanding_Universe" rel="noopener noreferrer">https://www.researchgate.net/publication/362701914_Free_Electrons_Compton_Scattering_Can_Produce_an_Illusion_of_Expanding_Universe</a><br>
+</li>
+<li>(PDF) Constraining the photon mass via Schumann resonances, <a href="https://www.researchgate.net/publication/366538071_Constraining_the_photon_mass_via_Schumann_resonances" rel="noopener noreferrer">https://www.researchgate.net/publication/366538071_Constraining_the_photon_mass_via_Schumann_resonances</a><br>
+</li>
+<li>Bounding the photon mass with cosmological propagation of fast, <a href="https://scoap3-prod-backend.s3.cern.ch/media/files/64204/10.1016/j.physletb.2021.136596.pdf" rel="noopener noreferrer">https://scoap3-prod-backend.s3.cern.ch/media/files/64204/10.1016/j.physletb.2021.136596.pdf</a><br>
+</li>
+<li>Constraints on the photon mass with fast radio bursts - Penn State, <a href="https://pure.psu.edu/en/publications/constraints-on-the-photon-mass-with-fast-radio-bursts" rel="noopener noreferrer">https://pure.psu.edu/en/publications/constraints-on-the-photon-mass-with-fast-radio-bursts</a></li>
+</ol>
+</blockquote>
+<h3 id="lib-arcsecs-interpretation-versus-observation-checkpoint-editorial-addition-r30">ArcSecs interpretation-versus-observation checkpoint (editorial addition, R30)</h3>
+<ul>
+<li><strong>Observed or calibrated quantities:</strong> Photon momentum, radiation pressure and gravitational deflection are observed; photon invariant rest mass is currently constrained by limits, not a positive measurement.</li>
+<li><strong>What the observation does not determine by itself:</strong> It does not identify a unique fundamental physical ontology or interaction mechanism; experimental limits must remain explicitly labeled as limits.</li>
+<li><strong>ArcSecs mechanism-building task:</strong> Investigate a physical gravitational coupling to photon energy-momentum and design a distinct rest-mass signature if intrinsic mass is claimed.</li>
+<li><strong>Reproducible comparison / sources:</strong> PDG photon listings; Maxwell/Proca laboratory null tests; localized FRB arrival-time constraints.</li>
+<li><strong>Falsification rule:</strong> Retain every published measured quantity and uncertainty. If a specified ArcSecs mechanism fails that benchmark, record the failing assumption and design a more complete physical mechanism or a discriminating observation; do not erase or recast the measurement as a successful fit.</li>
+<li><strong>Scientific release status:</strong> Research working edition. Source bibliography, numerical calculations, author attribution and any claimed original simulations require independent scientific verification before journal submission.</li>
+</ul>
+<p><a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/index.md">Return to the full report index</a> · <a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/research/measurement-vs-inference.md">Observation-versus-inference research ledger</a></p>
+<h3 id="lib-uaix-navigation">UAIX navigation</h3>
+<p><a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/index.md">Research index</a> · <a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/research/measurement-vs-inference.md">Scope and evidence memo</a></p>

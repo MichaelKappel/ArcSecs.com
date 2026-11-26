@@ -1,0 +1,152 @@
+{
+  "version": "3.142.0",
+  "status": "local release candidate; not deployed or pushed",
+  "sourceBase": {
+    "originalCommit": "4c88e1d5f8af6b471cd1e3fbe489810af7808e07",
+    "originalTree": "e9909c3ee0671dc589c73d0b2a0de397cf00e096",
+    "checkedRemoteMain": "5ea8a67857eb838ca367dd84379fb4ee442c524f",
+    "checkedRemoteTree": "9385396010296a8b595b480da58f5bffd6eda57f",
+    "originalTrackedPathsPreserved": 1699,
+    "originalResearchFilesByteIdentical": 1284
+  },
+  "publicationHashes": {
+    "book/book.md": "2a741cc5330c2d0be75a47e547b2fc601c81f80ca63d5006080ab5555eb9df05",
+    "book/book.pdf": "1ca7c03f31608081135face95588d9405b0b54ad8e0245816f7f73d4557becd5",
+    "book/book.epub": "3585438c26d664123e61c1c3487519a5a15b87cee67980971a9332cd30dd212f",
+    "docs/review6/ArcSecs_Scientific_Paper_Review_6.md": "b26cc7b8b32ae3d1000de6beef1982764033b04b15345a1e5ea60737cb2b979b",
+    "docs/review6/ArcSecs_Scientific_Paper_Review_6.pdf": "e714e97fbd4c7995b20950edef386c56ae637c5226935000b6ee7e16af624fbf"
+  },
+  "corpusSha256": "e1a77972b96bda84b4d239921e771a1db553dbb7121b41ca9f5ecf9ccab33b61",
+  "pluginQuality": {
+    "passed": 672,
+    "knownLegacyFailures": 58,
+    "unexpectedFailures": 0,
+    "missingBaselineTests": 0,
+    "gate": "PASS_WITH_DISCLOSED_LEGACY_DEBT"
+  },
+  "newTests": 85,
+  "browser": [
+    {
+      "demo": "engine",
+      "width": 390,
+      "page_errors": [],
+      "scroll_width": 390,
+      "viewport": 390,
+      "result": "pass"
+    },
+    {
+      "demo": "engine",
+      "width": 768,
+      "page_errors": [],
+      "scroll_width": 768,
+      "viewport": 768,
+      "result": "pass"
+    },
+    {
+      "demo": "engine",
+      "width": 1440,
+      "page_errors": [],
+      "scroll_width": 1440,
+      "viewport": 1440,
+      "result": "pass"
+    },
+    {
+      "demo": "space",
+      "width": 390,
+      "page_errors": [],
+      "scroll_width": 390,
+      "viewport": 390,
+      "result": "pass"
+    },
+    {
+      "demo": "space",
+      "width": 768,
+      "page_errors": [],
+      "scroll_width": 768,
+      "viewport": 768,
+      "result": "pass"
+    },
+    {
+      "demo": "space",
+      "width": 1440,
+      "page_errors": [],
+      "scroll_width": 1440,
+      "viewport": 1440,
+      "result": "pass"
+    },
+    {
+      "demo": "drive",
+      "width": 390,
+      "page_errors": [],
+      "scroll_width": 390,
+      "viewport": 390,
+      "result": "pass"
+    },
+    {
+      "demo": "drive",
+      "width": 768,
+      "page_errors": [],
+      "scroll_width": 768,
+      "viewport": 768,
+      "result": "pass"
+    },
+    {
+      "demo": "drive",
+      "width": 1440,
+      "page_errors": [],
+      "scroll_width": 1440,
+      "viewport": 1440,
+      "result": "pass"
+    }
+  ],
+  "cosmicBrowser": [
+    {
+      "width": 390,
+      "experiments": 17,
+      "exports": 21,
+      "invalidInputRejected": true,
+      "uncaughtErrors": []
+    },
+    {
+      "width": 768,
+      "experiments": 17,
+      "exports": 21,
+      "invalidInputRejected": true,
+      "uncaughtErrors": []
+    },
+    {
+      "width": 1440,
+      "experiments": 17,
+      "exports": 21,
+      "invalidInputRejected": true,
+      "uncaughtErrors": []
+    }
+  ],
+  "recipeReplayAndCsvChecks": "All three cosmic viewports: recipe export, import, invalid import, reset; numeric CSV download. All 17 default cases additionally checked for returned-row CSV structure.",
+  "pythonSourceTests": {
+    "outflow": 9,
+    "receiver": 25
+  },
+  "theme": {
+    "syntaxPassed": 85,
+    "targetedSmokePassed": 5,
+    "fullPassed": 12,
+    "fullFailed": 37,
+    "previousStandalonePassed": 11,
+    "previousStandaloneFailed": 30,
+    "commonTestStatusRegressions": 0,
+    "retainedOriginalPublicHistoricalFailures": 7
+  },
+  "heuristicPrivacyScan": {
+    "textFilesScanned": 946,
+    "patternMatches": [],
+    "scope": "heuristic high-confidence patterns only; no binaries, Git history or comprehensive privacy audit"
+  },
+  "limitations": [
+    "No live WordPress integration or physical GPU execution",
+    "No comprehensive security, privacy, rights, binary or history audit",
+    "Remote CI not executed",
+    "No empirical cosmology validation or measured thrust",
+    "58 historical plugin failures and 37 historical theme failures remain"
+  ]
+}

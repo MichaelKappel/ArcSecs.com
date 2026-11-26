@@ -4610,6 +4610,8 @@
             const button = root.querySelector("[data-arcsecs-space-action='" + toggle.action + "']");
             if (button) {
                 button.classList.toggle("is-active", toggle.active);
+                button.setAttribute("aria-pressed", String(Boolean(toggle.active)));
+                if (toggle.action === "start") button.textContent = toggle.active ? "Pause mission" : "Start mission";
             }
         });
     }
@@ -4636,6 +4638,10 @@
         const state = createInitialState(5810);
         let animationFrame = 0;
         let lastTimestamp = 0;
+        let lastPaint = 0;
+        let accumulator = 0;
+        let destroyed = false;
+        const documentRef = root.ownerDocument;
 
         function resizeCanvas() {
             if (!canvas || !context) {
@@ -4666,19 +4672,24 @@
         }
 
         function loop(timestamp) {
-            if (!lastTimestamp) {
-                lastTimestamp = timestamp;
-            }
-            const deltaSeconds = clamp((timestamp - lastTimestamp) / 1000, FRAME_SECONDS, 0.05);
+            if (destroyed || !root.isConnected) { destroy(); return; }
+            if (documentRef.hidden) { lastTimestamp = 0; animationFrame = globalScope.requestAnimationFrame(loop); return; }
+            const deltaSeconds = lastTimestamp ? clamp((timestamp - lastTimestamp) / 1000, 0, 0.05) : 0;
             lastTimestamp = timestamp;
-            if (state.missionReplayExportViewer && state.missionReplayExportViewer.playbackActive) {
-                stepMissionReplayExportViewer(state, deltaSeconds);
-            } else if (state.running) {
-                stepMissionState(state, deltaSeconds);
-            }
-            render();
+            const replaying = state.missionReplayExportViewer && state.missionReplayExportViewer.playbackActive;
+            if (replaying) stepMissionReplayExportViewer(state, deltaSeconds);
+            else if (state.running) { accumulator += deltaSeconds; while (accumulator + 1e-10 >= FRAME_SECONDS) { stepMissionState(state, FRAME_SECONDS); accumulator = Math.max(0, accumulator - FRAME_SECONDS); } } else accumulator = 0;
+            if (state.running || replaying || timestamp - lastPaint >= 250) { render(); lastPaint = timestamp; }
             animationFrame = globalScope.requestAnimationFrame(loop);
         }
+        function clearHolds() { ["thrust", "brake", "left", "right"].forEach(action => setHoldAction(action, false)); }
+        function visibilityChange() { if (documentRef.hidden) { clearHolds(); state.running = false; if (state.missionReplayExportViewer) state.missionReplayExportViewer.playbackActive = false; lastTimestamp = 0; accumulator = 0; } }
+        function destroy() { if (destroyed) return; destroyed = true; clearHolds(); globalScope.cancelAnimationFrame(animationFrame); documentRef.removeEventListener("visibilitychange", visibilityChange); globalScope.removeEventListener("blur", clearHolds); if (resizeObserver) resizeObserver.disconnect(); root.removeAttribute("data-arcsecs-space-initialized"); }
+        const resizeObserver = typeof globalScope.ResizeObserver === "function" ? new globalScope.ResizeObserver(() => { resizeCanvas(); render(); }) : null;
+        if (resizeObserver && canvas) resizeObserver.observe(canvas);
+        documentRef.addEventListener("visibilitychange", visibilityChange);
+        globalScope.addEventListener("blur", clearHolds);
+        root.addEventListener("focusout", event => { if (!root.contains(event.relatedTarget)) clearHolds(); });
 
         function setHoldAction(action, active) {
             if (action === "thrust") {
@@ -4911,11 +4922,15 @@
                 button.addEventListener("pointerup", function pointerUp() {
                     setHoldAction(action, false);
                 });
+                button.addEventListener("pointercancel", () => setHoldAction(action, false));
+                button.addEventListener("lostpointercapture", () => setHoldAction(action, false));
+                button.addEventListener("blur", () => setHoldAction(action, false));
                 button.addEventListener("pointerleave", function pointerLeave() {
                     setHoldAction(action, false);
                 });
                 button.addEventListener("keydown", function keyDown(event) {
                     if (event.key === " " || event.key === "Enter") {
+                        event.preventDefault();
                         setHoldAction(action, true);
                         state.running = true;
                     }
@@ -4930,10 +4945,9 @@
             }
         });
 
-        globalScope.addEventListener("keydown", function keyDown(event) {
-            if (event.target && ["INPUT", "TEXTAREA", "SELECT", "BUTTON"].indexOf(event.target.tagName) !== -1) {
-                return;
-            }
+        root.addEventListener("keydown", function keyDown(event) {
+            if (event.defaultPrevented || event.ctrlKey || event.altKey || event.metaKey || (event.target && (event.target.isContentEditable || ["INPUT", "TEXTAREA", "SELECT", "BUTTON", "A"].includes(event.target.tagName)))) return;
+            if (["arrowup", "arrowdown", "arrowleft", "arrowright", "w", "a", "s", "d", "e"].includes(event.key.toLowerCase())) event.preventDefault();
             if (event.key === "ArrowUp" || event.key.toLowerCase() === "w") {
                 state.input.thrust = true;
                 state.running = true;
@@ -4949,7 +4963,7 @@
             }
         });
 
-        globalScope.addEventListener("keyup", function keyUp(event) {
+        root.addEventListener("keyup", function keyUp(event) {
             if (event.key === "ArrowUp" || event.key.toLowerCase() === "w") {
                 state.input.thrust = false;
             } else if (event.key === "ArrowDown" || event.key.toLowerCase() === "s") {
@@ -4968,9 +4982,7 @@
         return {
             state,
             render,
-            destroy: function destroy() {
-                globalScope.cancelAnimationFrame(animationFrame);
-            }
+            destroy
         };
     }
 
@@ -4985,7 +4997,7 @@
                 return;
             }
             root.setAttribute("data-arcsecs-space-initialized", "true");
-            createController(root);
+            root.__arcsecsSpaceController = createController(root);
         });
     }
 

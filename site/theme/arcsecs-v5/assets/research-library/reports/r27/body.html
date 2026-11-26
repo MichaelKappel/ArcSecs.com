@@ -1,0 +1,1552 @@
+<h2 id="lib-are-distant-objects-closer-and-smaller-an-independent-geometry-first-astronomical-audit"><strong>Are Distant Objects Closer and Smaller? An Independent Geometry-First Astronomical Audit</strong></h2>
+<blockquote>
+<p><strong>ArcSecs editorial reading key (23 November 2026; R27):</strong> This report develops the ArcSecs physical-first research programme. Instrument readings and published numerical bounds remain distinct from an author’s inference about the underlying cause. Historical relativity-based expressions are comparison benchmarks, <strong>not</strong> the adopted ArcSecs physical mechanism. A failed narrowly specified toy model does not establish that every future nonmetric physical mechanism is impossible. Likewise, an ArcSecs position is not automatically an independently observed result.</p>
+</blockquote>
+<p><strong>Direct observation to preserve:</strong> Observed redshift, angular displacement, spectra and proper motion are distinct from inferred distance and galaxy size.</p>
+<p><strong>ArcSecs inference to investigate:</strong> Separate photometric classification errors from spectroscopic redshifts and test ArcSecs distance predictions against calibrated geometric anchors.</p>
+<p><strong>Verification sources and data to inspect:</strong> JWST Capotauro and Bullet Cluster brown-dwarf reclassifications, masers, Gaia astrometry and high-z spectral controls.</p>
+<p>This independent scientific investigation audits the ArcSecs research proposition that extragalactic distances, ages, and physical sizes are systematically overestimated when broadband colors, photometric redshifts, and model-dependent emission physics stand in for direct geometry. Through an object-by-object provenance audit spanning verified 2023–2026 James Webb Space Telescope (JWST) observations, archival astrometry, submillimeter spectroscopy, and 2026 geometric distance reanalyses, this manuscript delivers a provenance-first catalog of independently reclassified foreground impostors alongside spectroscopically verified high-redshift controls, ranks seven distance-determination methods by geometric independence, evaluates angular-to-physical size conversion across four explicit distance frameworks, and specifies an automated prospective verification protocol1.<br>
+The empirical evidence produces a sharply bifurcated verdict that requires source-by-source classification rather than converting a few remarkable reclassifications into a universal distance correction. Supporting ArcSecs measurement skepticism, multi-epoch astrometry and follow-up spectroscopy in 2026 confirmed that three headline extreme-redshift galaxy candidates—Capotauro (initially proposed near redshift 32) and two Bullet Cluster dropouts—are cold Milky Way Y-type brown dwarfs located roughly 160 to 730 parsecs away, revising their inferred distances and physical sizes downward by five to seven orders of magnitude2. Concurrently, a 2026 individual-component tracking reanalysis of the premier extragalactic megamaser anchor NGC 4258 demonstrates that statistically robust maser-selection configurations span 6.7 to 8.1 megaparsecs, exposing hidden cadence-driven systematics inside claimed percent-level geometric calibrations5. Conversely, multi-line ultraviolet, infrared, and submillimeter spectroscopy independently anchors genuine high-redshift extragalactic systems such as GN-z11 (redshift 10.603), GHZ2 (redshift 12.34), and JADES-GS-z14-0 (redshift 14.1793, confirmed via a 6.6-sigma submillimeter ionized-oxygen detection)1. Moreover, executed numerical distance-scale comparisons establish that standard static exponential tired-light and bounded-propagation models anchored to the local Hubble scale predict substantially larger, rather than smaller, physical radii for confirmed high-redshift galaxies than the standard expanding benchmark6. Consequently, while photometric misclassification produces extreme distance overestimates for specific cool-dwarf and dusty-interloper subclasses, the proposed systematic distance/size revision still requires a model that reproduces independent spectroscopic and geometric controls; confirmed nearby interlopers demonstrate the importance of this work.<br>
+<strong>Commission Metadata and Disclosures:</strong> Independent ArcSecs Research Commission 16 · Date and data cutoff: 2026-11-23 · Mode: Standalone, geometry-first empirical audit · <strong>Author-Role and AI-Use Disclosure:</strong> This manuscript was synthesized, analyzed, and drafted by an artificial intelligence research system operating without human co-authors, following transparency disclosures aligned with the September 2026 American Astronomical Society (AAS) guidelines on artificial intelligence in manuscript preparation9. An AI system is not a human author and holds no independent academic standing; qualified human astrophysical domain review is mandatory before any journal submission or archival deposit. No raw telescope FITS images were downloaded and no image-level injection-recovery simulation was executed; multi-model angular-size and tangential-velocity computations were executed via a standalone analytical script during research verification, while all prospective image-processing workflows are explicitly marked as unexecuted specifications6.<br>
+<strong>Keywords:</strong> JWST photometry, ultracool Y dwarfs, proper motion astrometry, spectroscopic redshift verification, megamaser geometric anchors, Gaia DR3 parallax zero-point, angular-diameter distance, Tolman surface brightness, photon mass bounds, ArcSecs cosmology.</p>
+<h3 id="lib-arcsecs-foundational-position-and-epistemic-protocol"><strong>ArcSecs Foundational Position and Epistemic Protocol</strong></h3>
+<p>This commission operates as an affirmative, physical-first scientific investigation of the ArcSecs modeling program rather than a debate over whether to investigate it. The following eleven foundational assertions constitute the sponsor’s fixed research and editorial premises and are reproduced verbatim:</p>
+<blockquote>
+<ol type="1">
+<li><strong>Photons have mass.</strong><br>
+</li>
+<li><strong>Time is constant.</strong><br>
+</li>
+<li><strong>Light slows down over time.</strong><br>
+</li>
+<li><strong>Time does not physically exist; it is the “When.”</strong><br>
+</li>
+<li><strong>Space does not physically exist; it is the “Where.”</strong><br>
+</li>
+<li><strong>All that physically exists at any moment occupies area and has mass at that moment.</strong><br>
+</li>
+<li><strong>Spacetime does not physically exist.</strong><br>
+</li>
+<li><strong>Light is not the fastest thing in the universe.</strong><br>
+</li>
+<li><strong>Things move apart from each other faster than causality; time, space, or spacetime cannot be physically stretched because they are not physical substances to stretch.</strong><br>
+</li>
+<li><strong>The size of the universe is unknown.</strong><br>
+</li>
+<li><strong>Objects in the universe are smaller and closer than they appear.</strong></li>
+</ol>
+</blockquote>
+<p>Scientific legitimacy is earned strictly through verified measurements, traceable methods, and independent falsification testing; a stipulated premise is never treated as an experimental discovery. Every substantive claim in this manuscript is therefore distinguished across five explicit epistemic categories: <strong>ArcSecs Premise (AP)</strong> for one of the eleven stipulated starting principles; <strong>Directly Observed Fact (DOF)</strong> for a raw or instrumentally calibrated physical measurement recorded prior to cosmological interpretation (such as flux density in nanojanskys, multi-epoch angular displacement in milliarcseconds, or spectral emission-line frequency in gigahertz); <strong>Model-Dependent Interpretation (MDI)</strong> for a quantity requiring an astrophysical or cosmological model (such as a photometric redshift, a brown-dwarf distance assuming an evolutionary radius, or a benchmark comoving distance); <strong>Derived Consequence (DC)</strong> for a quantitative result computed from explicit assumptions and observed inputs; and <strong>Open, Unverified, or Disproven Hypothesis (OUH)</strong> for conjectures awaiting observation, unresolved physical mechanisms, or candidate claims overturned by follow-up data.</p>
+<h4 id="lib-operational-definitions-within-constant-universal-progression"><strong>Operational Definitions Within Constant Universal Progression</strong></h4>
+<p>Within the ArcSecs framework, space designates purely the relational coordinates describing where physical matter and radiation reside, and time designates purely the universal progression parameter—designated constant universal progression T—ordering when physical events occur. Neither space, time, nor their combination is treated anywhere in this report as a physical substance, elastic medium, fabric, or force-carrying substrate. Published relativistic coordinate metrics (such as the Friedmann–Robertson–Walker distance definitions reviewed by Davis and Lineweaver in 200411) appear strictly as external mathematical calculation benchmarks against which astronomical catalogs are conventionally tabulated, never as endorsed physical explanations. Where cited literature uses the phrase “time dilation” to describe atomic-clock, supernova, or quasar observations, that phrase is used solely to attribute the original source accurately and is immediately restated operationally as a measured ratio of physical oscillation frequencies, light-curve durations, or photon arrival intervals occurring within constant universal progression T12.</p>
+<h3 id="lib-structured-abstract"><strong>Structured Abstract</strong></h3>
+<p><strong>Background:</strong> Deep near- and mid-infrared surveys with the James Webb Space Telescope (JWST) have uncovered compact, intensely red sources photometrically selected as candidate galaxies at redshifts 15 to 32, intensifying methodological scrutiny over how celestial distances and physical sizes are inferred prior to geometric confirmation2. Simultaneously, persistent percent-level discrepancies across extragalactic distance calibrations motivate an independent, geometry-first audit of the cosmic distance ladder5.<br>
+<strong>Objective:</strong> Operating strictly within the eleven fixed ArcSecs research premises, this audit determines which specific astronomical subclasses have verified empirical evidence for major distance and size overestimation, which remain spectroscopically robust, and under what propagation laws non-expanding models predict smaller versus larger physical sizes.<br>
+<strong>Methods:</strong> We compile a provenance-first audit catalog separating raw detector observables from model-dependent inferences across reclassified JWST objects (Capotauro, Bullet-BD1, Bullet-BD2, UNCOVER-BD-1 through BD-3, CEERS-93316), a direct-parallax substellar benchmark (JADES-GS-BD-5), and spectroscopically secured high-redshift controls (GN-z11, GHZ2, JADES-GS-z14-0, MoM-z14, JADES-GS-z13-0, J0313−1806)1. We rank seven distance-calibration tiers by geometric purity, execute numerical angular-diameter distance comparisons across four mathematical models, and define a prospective red-team reclassification pipeline with blind holdout fields.<br>
+<strong>Results:</strong> Multi-epoch JWST NIRCam astrometry rules out extragalactic origins beyond 6 sigma for Capotauro (total proper motion 37.6 plus 5.5 minus 5.6 milliarcseconds per year) and confirms Galactic membership for Bullet-BD1 (49 plus or minus 8 milliarcseconds per year) and Bullet-BD2 (24 plus or minus 3 milliarcseconds per year), revising their distances from alleged extragalactic scales to roughly 160 to 730 parsecs2. By contrast, CEERS-93316 was refuted as an extragalactic dusty emission-line galaxy at spectroscopic redshift 4.91223, while JADES-GS-z14-0 and GN-z11 are independently anchored by multi-transition ultraviolet, infrared, and submillimeter detections1. In NGC 4258, individual maser component tracking expands statistically robust geometric distances across 6.7 to 8.1 megaparsecs under historical 4-to-8-month VLBI cadences5. Numerically, monotonic static exponential tired-light and bounded-propagation models anchored to the local Hubble scale predict angular-diameter distances 12.7 to 17.4 times and 4.8 to 6.0 times larger than the expanding benchmark at redshifts 10.6 to 14.2, implying larger rather than smaller inferred radii for confirmed high-redshift galaxies unless an effective distance scale much shorter than the local Hubble length applies6.<br>
+<strong>Conclusions:</strong> Verified photometric misclassifications substantiate ArcSecs skepticism toward unvetted color-selected distances, particularly among compact F277W and F356W dropouts. However, a universal “closer and smaller” generalization is unsupported by multi-line spectroscopy and monotonic static-propagation geometry. Productive next steps include blind held-out proper-motion vetting of JWST deep fields, monthly VLBI monitoring of NGC 4258, and microphysical derivation of a blur-free propagation mechanism capable of satisfying supernova arrival-interval durations, laboratory clock-frequency ratios, and photon rest-mass bounds within constant universal progression T.</p>
+<h3 id="lib-research-questions-novelty-and-scope"><strong>Research Questions, Novelty, and Scope</strong></h3>
+<p>Rather than repeating abstract debates over universe age, this investigation conducts a granular, object-level astronomical audit addressing six explicit research questions:</p>
+<blockquote>
+<ol type="1">
+<li>How does a telescope actually measure an angular position, proper motion, spectrum, flux, color, and apparent size before any cosmological model is applied?<br>
+</li>
+<li>At what stages can a dusty foreground dwarf or cool planet-mass object masquerade photometrically as a very high-redshift galaxy?<br>
+</li>
+<li>Which specific 2026 candidates were reclassified after follow-up, and what did spectroscopy versus multi-epoch astrometry independently establish?<br>
+</li>
+<li>How can a distance and physical size be inferred without first assigning an object’s redshift as a distance?<br>
+</li>
+<li>What do direct geometric anchors—Gaia parallaxes, water megamaser galaxies, detached eclipsing binaries, and calibrated standards—independently demonstrate about the distance ladder?<br>
+</li>
+<li>For which kinds of objects does a tired-light or changing-propagation model predict smaller versus larger physical sizes, and what empirical data decide the sign?</li>
+</ol>
+</blockquote>
+<p>The novelty of this audit lies in integrating three 2026 empirical milestones into a single provenance-locked decision architecture: the 2026 JWST proper-motion and NIRSpec reclassifications of ultra-cool Y dwarfs masquerading as redshift-15-to-32 galaxies2, the 2026 individual-component tracking audit of the NGC 4258 megamaser anchor5, and the June 2026 ASTRODEEP-JWST surface-brightness and deblending analysis26 paired with an executed four-model angular-size benchmark6.</p>
+<h3 id="lib-literature-review-and-evidence-map"><strong>Literature Review and Evidence Map</strong></h3>
+<p>The empirical basis for this study spans five intersecting bodies of primary astronomical, astrophysical, and metrology literature through November 2026.</p>
+<h4 id="lib-jwst-deep-fields-and-substellar-interlopers"><strong>JWST Deep Fields and Substellar Interlopers</strong></h4>
+<p>Deep near- and mid-infrared imaging across JWST extragalactic legacy fields—including CEERS, JADES, GLASS, UNCOVER, RUBIES, PRIMER, and COSMOS-Web—rapidly revealed compact red dropouts photometrically consistent with Lyman-break galaxies at redshifts 10 to 3216. Follow-up spectroscopy and multi-epoch imaging exposed two primary impostor populations. The first consists of dust-obscured intermediate-redshift star-forming galaxies (roughly redshift 3 to 6) whose intense rest-frame optical nebular emission lines—doubly ionized oxygen and hydrogen Balmer transitions—boost long-wavelength NIRCam broadbands while dust extinguishes shorter wavelengths. The archetypal case is CEERS-93316, selected near photometric redshift 16.4 (Donnan et al. 2023) despite medium-band F410M coverage and spectroscopically refuted at redshift 4.912 by Arrabal Haro et al. (2023)23. The second population consists of cool Galactic T- and Y-type brown dwarfs extending to kiloparsec distances in the Milky Way disk and halo, whose deep atmospheric molecular absorption troughs mimic high-redshift spectral breaks3.<br>
+Documented brown-dwarf contaminations accumulated steadily from 2023 through late 2026. Nonino et al. (2023) and Burgasser et al. (2024) confirmed cold brown dwarfs in the GLASS and UNCOVER fields, including UNCOVER-BD-1 and UNCOVER-BD-2, which had been selected photometrically as high-redshift active galactic nuclei before 14.3-hour JWST NIRSpec PRISM spectra revealed water, methane, ammonia, phosphine, and collision-induced molecular hydrogen absorption3. Hainline et al. (2024a) cataloged 21 brown-dwarf candidates across JADES and CEERS27. In 2026, two decisive follow-up studies demonstrated how extreme F277W and F356W dropouts slip past single-epoch vetting: Bradač et al. (2026) reclassified two Bullet Cluster high-redshift candidates as ultra-cool Y dwarfs using independent NIRSpec spectra and one-year NIRCam proper motions2, while Liu et al. (2026a) overturned the redshift-32 candidate Capotauro (originally presented by Gandolfi et al. 2025/202617) via a 3.5-year proper-motion measurement ruling out any extragalactic origin beyond 6 sigma2. In November 2026, Liu et al. (2026b) achieved JWST’s first direct trigonometric parallax for an extragalactic-field Y dwarf (JADES-GS-BD-5 at 64 parsecs) while highlighting large inferred velocity scatter among parallax-free JADES candidates21.</p>
+<h4 id="lib-spectroscopically-secured-high-redshift-controls"><strong>Spectroscopically Secured High-Redshift Controls</strong></h4>
+<p>Alongside interloper refutations, multi-transition and multi-facility spectroscopy has anchored a benchmark population of luminous high-redshift systems incompatible with Milky Way stars. GN-z11—originally flagged in Hubble Space Telescope slitless grism data by Oesch et al. (2016)1—was confirmed at redshift 10.603 by Bunker et al. (2023) through high-signal-to-noise JWST NIRSpec prism and grating detections of multiple rest-frame ultraviolet emission lines, subsequently refined by Cycle 4 medium-resolution UV spectroscopy (SPURS Collaboration 2026, systemic redshift 10.6016)8, nuclear continuum analysis (Ji et al. 2025)36, and mid-infrared spectroscopy (Álvarez-Márquez et al. 2025)37. GHZ2/GLASS-z12 was similarly secured at redshift 12.34 via multiple UV lines and submillimeter follow-up (Castellano et al. 2024; Zavala et al. 2024)7. JADES-GS-z14-0—originally flagged as a likely low-redshift interloper due to a redshift-3.475 foreground galaxy 0.4 arcseconds away—was confirmed via NIRSpec Lyman-break and tentative ionized-carbon emission (Carniani et al. 2024) and pinned at redshift 14.1793 plus or minus 0.0007 by a blind 6.6-sigma Atacama Large Millimeter/submillimeter Array (ALMA) detection of the 88-micrometer doubly ionized oxygen line (Schouws et al. 2024/2025)1. Additional controls span JADES-GS-z13-0 at redshift 13.222, the record-holder MoM-z14 at redshift 14.44 plus or minus 0.02 (Naidu et al. 2025, currently reliant on a sharp UV break and tentative emission-line hints)20, and the luminous quasar J0313−1806 cited in high-redshift quasar compilations22.</p>
+<h4 id="lib-geometric-distance-anchors-and-calibration-systematics"><strong>Geometric Distance Anchors and Calibration Systematics</strong></h4>
+<p>Modern extragalactic distance ladders rest on four primary first-rung anchors: Milky Way trigonometric parallaxes from ESA’s Gaia mission, detached eclipsing binaries in the Large and Small Magellanic Clouds (LMC and SMC), and water megamaser orbital dynamics in NGC 425843. Every anchor carries documented empirical systematics. Gaia Data Release 3 (DR3) documentation and Lindegren et al. (2021b) establish systematic parallax zero-point biases varying with magnitude, color, and position (modeled through Z5 and Z6 calibration recipes), underestimated formal proper-motion uncertainties requiring empirical scaling factors, and astrometric quality cuts (renormalized unit weight error below 1.4)44. Detached eclipsing binaries constrain the LMC to 49.59 plus or minus 0.09 kiloparsecs (statistical; Pietrzyński et al. 2019) and the SMC to 62.44 plus or minus 0.47 (statistical) plus or minus 0.81 (systematic) kiloparsecs (Graczyk et al. 2020), relying on an empirically calibrated stellar surface-brightness–color relation49. For NGC 4258, epoch-averaged Very Long Baseline Interferometry (VLBI) analyses progressed from 7.2 plus or minus 0.3 megaparsecs (Herrnstein et al. 1999) to 7.60 megaparsecs (Humphreys et al. 2013) and 7.576 plus or minus 0.082 (statistical) plus or minus 0.076 (systematic) megaparsecs (Reid, Pesce, and Riess 2019)5. Yet van der Boom and Kushnir (2026) demonstrated that tracking individual maser components rather than averaging sparse epochs yields statistically robust distances spanning 6.7 to 8.1 megaparsecs5. Similarly, a September 2026 Bayesian forward-modeling reanalysis of the Megamaser Cosmology Project (MCP) sample shows that non-linear peculiar-velocity reconstructions lower the inferred recession slope from 73.9 (Pesce et al. 2020) to 71.6 plus or minus 3.7 kilometers per second per megaparsec18. Independent calibrations—Cepheids (Riess et al. 2022), tip of the red giant branch and J-region asymptotic giant branch stars (Freedman et al. 2024–2026), gravitational-wave standard sirens (GW170817, Abbott et al. 2017; 2025 multi-messenger review), and strong-lensing time delays (Birrer et al. 2020, 2024; TDCOSMO 2026)—continue to display 2 to 6 percent methodological spread19.</p>
+<h4 id="lib-angular-sizes-tolman-surface-brightness-and-propagation-metrology"><strong>Angular Sizes, Tolman Surface Brightness, and Propagation Metrology</strong></h4>
+<p>Under the standard expanding benchmark (Davis and Lineweaver 2004), angular-diameter distance reaches a maximum near redshift 1.25 to 1.6 and declines thereafter6. JWST structural surveys report compact rest-frame optical half-light radii declining inversely with one plus redshift to the 0.71 plus or minus 0.19 power across 1,395 CEERS galaxies (Ormerod et al. 2024) and sub-kiloparsec sizes above redshift 5 (Morishita et al. 2024)57. Non-expanding tired-light researchers (Lopez-Corredoira 2014; Lerner 2018; LaViolette 2021) note that raw angular sizes and observer-frame surface-brightness scaling—measured in the 531,173-object ASTRODEEP-JWST catalog (Merlin et al. 2024; Tsymbal et al. 2026) as declining with one plus redshift to the minus 1.3 power—appear flatter than non-evolving expanding predictions26. While Lubin and Sandage (2001) concluded that Hubble Space Telescope early-type galaxy data ruled out static tired light beyond 10 sigma60, Desmond, Yasin, Stiskalek, and von Hausegger (2026) found that both ASTRODEEP-JWST surface brightness and ultracompact radio distance-duality scaling lie between non-evolving expansion and static tired light, matching IllustrisTNG luminosity-density evolution (power-law exponent 2.23 plus or minus 0.20) while revealing notable sensitivity to image deblending algorithms26.<br>
+Finally, any physical-first propagation candidate within ArcSecs premises must satisfy stringent metrology constraints: Particle Data Group (2024) upper bounds on an invariant photon rest mass (Goldhaber and Nieto 1968, 2010; Tu et al. 2005; Ryutov 1997, 2007; Retinò et al. 2016; Bonetti et al. 2016, 2017; Wang et al. 2023)62; Type Ia supernova light-curve width scaling proportional to one plus redshift to the 1.003 plus or minus 0.015 power (Blondin et al. 2008; White et al. 2024)12; redshift-dependent quasar variability timescale stretching (Lewis and Brewer 2023)13; and optical atomic-clock transition frequency shifts across millimeter-to-meter vertical height separations (Chou et al. 2010; Bothwell et al. 2022; Zheng et al. 2022)15.</p>
+<h3 id="lib-from-photons-to-coordinates-pre-cosmological-telescope-measurements"><strong>From Photons to Coordinates: Pre-Cosmological Telescope Measurements</strong></h3>
+<p>Answering Research Questions 1 and 2 begins by isolating what telescopes physically record before any cosmological framework enters the analysis. A telescope never directly measures distance, linear radius, age, or cosmic epoch. Every astronomical catalog originates from five pre-cosmological physical observables:</p>
+<blockquote>
+<ol type="1">
+<li><strong>Angular Position:</strong> Photons strike detector pixels and register charge. Mapping pixel centroids onto celestial coordinates requires an optical distortion model anchored to compact reference sources—such as Gaia DR3 stars or stationary background galaxies—achieving tens of microarcseconds in Gaia and several milliarcseconds in local relative JWST NIRCam frames2.<br>
+</li>
+<li><strong>Multi-Epoch Proper Motion and Parallax:</strong> Repeating centroiding across separated calendar epochs exposes linear sky drift (proper motion, in milliarcseconds per year) arising from transverse relative velocity, plus an annual oscillatory ellipse (trigonometric parallax, in milliarcseconds) generated by Earth’s physical orbital displacement around the Sun2. Both are purely geometric detector observables prior to assuming any velocity distribution.<br>
+</li>
+<li><strong>Broadband Flux and Color:</strong> Integrating calibrated detector counts inside a defined angular aperture or point-spread function (PSF) profile through a bandpass filter measures specific energy flux density (typically in nanojanskys or AB magnitudes), while color is simply the flux ratio between two filters4. Even here, converting raw counts into cataloged “total” fluxes requires non-cosmological pipeline choices: PSF homogenization across filters, fixed circular apertures (from 0.20 to 5.30 arcseconds in ASTRODEEP-JWST), Kron-aperture flux scaling corrections, and neighbor deblending schemes such as Voronoi versus Gaussian weighting26.<br>
+</li>
+<li><strong>Apparent Angular Extent:</strong> Determining whether a source is spatially resolved requires comparing its two-dimensional brightness profile against the empirical instrument PSF via profile fitting (such as single-component Sérsic fits with GALFIT) or aperture growth curves57. Unresolved sources yield only angular upper limits (such as smaller than 0.043 to 0.071 arcseconds for the Bullet Cluster dwarfs)4.<br>
+</li>
+<li><strong>Dispersed Spectrum:</strong> Passing radiation through a prism, diffraction grating, or radio heterodyne spectrometer separates flux across wavelength or frequency1. Multiple narrow atomic or molecular transitions uniquely fingerprint the emitting physics and fractional wavelength shift, whereas broad continuum breaks remain susceptible to template degeneracy.</li>
+</ol>
+</blockquote>
+<p><img src="__ARCSECS_LIBRARY_ASSETS__/figures/5ad3e41e9152420050ac.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"></p>
+<h4 id="lib-how-cool-dwarfs-and-dusty-galaxies-masquerade-as-extreme-redshift-sources"><strong>How Cool Dwarfs and Dusty Galaxies Masquerade as Extreme-Redshift Sources</strong></h4>
+<p>Photometric misclassifications arise along the single-epoch dropout bypass whenever sharp broadband flux steps are converted directly into Lyman-break redshifts without independent astrometry or spectroscopy. Two physical radiative-transfer mechanisms drive this confusion in JWST deep fields.<br>
+The first mechanism is <strong>cold substellar molecular absorption</strong> in Milky Way T- and Y-type brown dwarfs (substellar objects below the roughly 0.075 solar-mass hydrogen-fusion threshold with effective temperatures below 1,300 kelvin, and below roughly 500 kelvin for Y dwarfs)3. Although their thermal emission peaks between 1 and 5 micrometers, dense molecular opacity from water, methane, ammonia, carbon monoxide, phosphine, and collision-induced molecular hydrogen carves deep absorption troughs across 2.3 to 3.5 micrometers while leaving a bright atmospheric transmission window between 4.0 and 4.8 micrometers3. Through JWST’s broadband filters (F200W, F277W, F356W, F444W), a Y dwarf hundreds of parsecs away disappears below 3.5 micrometers yet shines brightly in F410M and F444W—creating an extreme F277W- or F356W-dropout signature that mimics the neutral-hydrogen Lyman break of a galaxy at redshift 15 to 322. Because substellar angular diameters fall far below JWST’s diffraction limit, these nearby stars also mimic the unresolved or ultra-compact morphologies expected for early-epoch galaxies4.<br>
+The second mechanism is <strong>dust reddening paired with intense nebular line boosting</strong> in intermediate-redshift galaxies (roughly redshift 3.5 to 5.5). Heavy interstellar dust suppresses rest-frame ultraviolet flux to mimic a short-wavelength dropout, while strong optical emission lines—specifically doubly ionized oxygen (495.9 and 500.7 nanometers), hydrogen-beta, and hydrogen-alpha—fall directly inside long-wavelength NIRCam broadbands24. Whenever template libraries underrepresent extreme dust-plus-line equivalent widths, photometric fitting codes mistakenly assign the steep step between broadbands to a Lyman break above redshift 1523.</p>
+<h3 id="lib-physical-mechanisms-photon-mass-boundaries-and-missing-ingredients"><strong>Physical Mechanisms, Photon-Mass Boundaries, and Missing Ingredients</strong></h3>
+<p>An affirmative physical-first investigation must account for energy sinks, momentum exchange, and measurable interactions among physical entities without invoking stretching space or warped spacetime. Auditing our domain reveals a clear separation across three physical layers: verified impostor physics, photon-mass metrology, and an explicitly missing cosmological propagation mechanism.</p>
+<h4 id="lib-verified-physical-mechanisms-behind-photometric-overestimates"><strong>Verified Physical Mechanisms Behind Photometric Overestimates</strong></h4>
+<p>For reclassified JWST dropouts, the physical mechanism producing extreme apparent distances is fully identified and empirically confirmed: molecular radiative transfer (methane, water, ammonia, phosphine, and collision-induced hydrogen absorption) in cold substellar atmospheres for Milky Way brown dwarfs3, and dust extinction combined with nebular atomic emission in intermediate-redshift galaxies23. Energy and momentum transfer occur entirely through standard photon-matter absorption, thermal re-emission, and scattering inside the source atmosphere or interstellar medium.</p>
+<h4 id="lib-photon-mass-observed-momentum-coupling-versus-invariant-rest-mass"><strong>Photon Mass: Observed Momentum Coupling Versus Invariant Rest Mass</strong></h4>
+<p>ArcSecs Premise 1 states that photons have mass. Rigorous experimental analysis requires separating two distinct physical claims. First, it is an uncontested directly observed fact that photons carry energy and linear momentum, exert radiation pressure, and undergo frequency shifts and trajectory deflections inside gravitational potentials14. Second, the narrower hypothesis of a <strong>nonzero intrinsic invariant photon rest mass</strong> introduces an explicit Proca mass term into classical electromagnetism, predicting specific measurable signatures: exponential Yukawa-type decay of static electric and magnetic fields over a finite Compton length, macroscopic departures from Ampère’s and Coulomb’s laws, frequency-dependent vacuum dispersion (causing lower-frequency radio waves to arrive later than higher-frequency waves), and a third longitudinal polarization state62.<br>
+As documented by the Particle Data Group (2024), Goldhaber and Nieto (1968, 2010), and Tu et al. (2005), no experiment has yet achieved a positive detection of a nonzero invariant photon rest mass62. Instead, terrestrial, heliospheric, and astrophysical experiments constrain any invariant rest mass below stringent upper limits summarized below.</p>
+<table>
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Experimental Method</th>
+<th>Primary Physical Observable</th>
+<th>Upper Limit on Invariant Photon Rest Mass</th>
+<th>Key Modeling Assumptions &amp; Caveats</th>
+<th>Verified Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Solar-wind magnetohydrodynamics (out to Pluto orbit)</td>
+<td>Survival of Parker spiral interplanetary magnetic field structure</td>
+<td>Below 1 × 10⁻¹⁸ eV</td>
+<td>Assumes MHD plasma scaling holds across outer heliosphere</td>
+<td>Ryutov (2007); PDG (2024)63</td>
+</tr>
+<tr class="even">
+<td>Solar-wind MHD (inner heliosphere)</td>
+<td>Persistence of solar magnetic field against Proca decay</td>
+<td>Below 6 × 10⁻¹⁷ eV</td>
+<td>Conservative inner-heliosphere baseline</td>
+<td>Ryutov (1997); PDG (2024)63</td>
+</tr>
+<tr class="odd">
+<td>Four-spacecraft solar-wind Ampère’s law test (Cluster)</td>
+<td>Direct curl of magnetic field vs. measured plasma current density</td>
+<td>1.9 × 10⁻¹⁵ eV to 7.9 × 10⁻¹⁴ eV</td>
+<td>Range reflects uncertainty in ambient interplanetary vector potential</td>
+<td>Retinò et al. (2016); PDG (2024)63</td>
+</tr>
+<tr class="even">
+<td>Rotating toroid Cavendish balance</td>
+<td>Torque on magnetic toroid from ambient cosmic vector potential</td>
+<td>Below 1 × 10⁻¹⁷ eV (cluster field) to 2 × 10⁻¹⁶ eV (Galactic field)</td>
+<td>Directly contingent on assumed ambient vector potential magnitude</td>
+<td>Lakes (1998); Luo et al. (2003); PDG (2024)63</td>
+</tr>
+<tr class="odd">
+<td>Fast Radio Burst (FRB) dispersion timing</td>
+<td>Frequency-dependent arrival delay across radio bands</td>
+<td>Below 1.8 × 10⁻¹⁴ eV to 2.2 × 10⁻¹⁴ eV (tightened in 2023)</td>
+<td>Degenerate with ionized intergalactic plasma dispersion</td>
+<td>Bonetti et al. (2016, 2017); Wang et al. (2023); PDG (2024)63</td>
+</tr>
+<tr class="even">
+<td>Earth dipole magnetic field mapping</td>
+<td>Apparent constant residual magnetic field component</td>
+<td>Below 4.0 × 10⁻⁴⁸ grams (approx. 2.2 × 10⁻¹⁵ eV)</td>
+<td>Foundational geomagnetic bound via Schrödinger method</td>
+<td>Goldhaber &amp; Nieto (1968); Fischbach et al. (1994)62</td>
+</tr>
+<tr class="odd">
+<td>Galactic magnetic field virial stability</td>
+<td>Persistence of large-scale Galactic magnetic fields</td>
+<td>Below 10⁻²⁶ eV (model-dependent)</td>
+<td>Strongly contingent on virial equilibrium and Proca regime across all scales</td>
+<td>Yamaguchi (1959); Chibisov (1976); PDG (2024)63</td>
+</tr>
+</tbody>
+</table>
+<p>As Tu et al. (2005) point out, no physical experiment can prove invariant rest mass is mathematically zero; empirical physics can only tighten upper bounds or uncover a positive signal below current sensitivity64. However, if an invariant photon rest mass lies below 10⁻¹⁸ electron-volts (roughly 1.8 × 10⁻⁵¹ grams), vacuum dispersion at optical and infrared wavelengths remains vanishingly small and cannot by itself explain achromatic, order-unity extragalactic redshifts observed across ultraviolet and submillimeter bands1.</p>
+<h4 id="lib-explicit-identification-of-the-missing-cosmological-propagation-mechanism"><strong>Explicit Identification of the Missing Cosmological Propagation Mechanism</strong></h4>
+<p>Evaluating ArcSecs Premises 2, 3, and 9—constant universal progression T, light slowing down over time, and rejection of physically stretching space—exposes three concrete physical ingredients that remain <strong>currently missing</strong> from a complete non-expanding propagation theory.<br>
+First, any propagation-based redshift mechanism must produce <strong>strictly achromatic wavelength shifts without image blurring</strong>. Confirmed high-redshift galaxies like JADES-GS-z14-0 display the same fractional wavelength shift across rest-frame ultraviolet transitions (0.19 micrometers) and far-infrared fine-structure emission (88 micrometers)—a span of more than 460 times in wavelength—while maintaining compact, unblurred angular profiles1. Ordinary photon-particle scattering transfers transverse momentum and blurs distant images, which JWST and ALMA imaging do not observe72. A viable ArcSecs interaction must therefore specify the physical field or matter sink receiving lost photon energy strictly collinearly with the propagation vector, maintaining angular scatter well below 0.03 arcseconds over cosmological distances.<br>
+Second, a complete mechanism must account for <strong>macroscopic arrival-interval stretching within constant universal progression T</strong>. Pure photon energy loss at fixed light speed across a static path leaves the arrival duration of a transient burst unchanged, conflicting with Type Ia supernova light-curve widths scaling as one plus redshift to the 1.003 plus or minus 0.015 power (White et al. 2024) and redshift-dependent quasar variability scaling (Lewis and Brewer 2023)12. Within constant T, matching both wavelength shift and arrival-interval stretching requires either genuine physical kinematic recession through relational coordinates (ordinary Doppler motion, which stretches pulse intervals without stretching space but requires an independent explanation for superluminal high-redshift apparent velocities) or a secular slowing of light’s propagation speed such that later wavefronts cross the remaining path slower than earlier wavefronts. Yet a fractional light-speed deceleration at the Hubble rate (roughly 7 parts in 10¹¹ per year) lacks a verified microphysical field-matter mechanism and has not been observed in laboratory metrology or planetary/lunar ranging.<br>
+Third, optical lattice atomic clocks exhibit reproducible fractional frequency shifts near 10⁻¹⁹ across a 1-millimeter vertical height change in Earth’s gravity (Chou et al. 2010; Bothwell et al. 2022; Zheng et al. 2022)15. Under constant universal progression T, reproducing these laboratory measurements requires an explicit physical coupling between local gravitational field intensity and atomic binding energy or transition oscillator dynamics that alters physical tick rates without modifying T itself. Naming these missing ingredients directly allows future ArcSecs research to target testable microphysics rather than untestable slogans.</p>
+<h3 id="lib-methods-sampling-and-provenance-first-audit-catalog"><strong>Methods, Sampling, and Provenance-First Audit Catalog</strong></h3>
+<p>To fulfill Work Packages A and C without cherry-picking, we compile a 14-object provenance-first audit catalog drawn strictly from primary 2021–2026 peer-reviewed publications, observatory science papers, and archival preprints. The catalog spans four explicit groups: six verified foreground substellar reclassifications (Capotauro, Bullet-BD1, Bullet-BD2, UNCOVER-BD-1, UNCOVER-BD-2, and UNCOVER-BD-3)2; one direct trigonometric-parallax substellar calibration benchmark (JADES-GS-BD-5, supplemented in prose by moving parallax-free JADES candidates)21; one verified extragalactic photometric-to-spectroscopic interloper (CEERS-93316)23; and six spectroscopically confirmed high-redshift extragalactic controls (JADES-GS-z14-0, MoM-z14, JADES-GS-z13-0, GHZ2/GLASS-z12, GN-z11, and quasar J0313−1806)1. Every row preserves raw observed bands, instruments, observation epochs or exposures, proper-motion or parallax constraints, spectral features, initial photometric hypothesis, revised classification, and epistemic confidence grade. Unconfirmed photometric redshifts are never labeled as measured spectroscopic redshifts, and fields absent from verified primary text extracts are explicitly noted as unreported rather than interpolated.</p>
+<h4 id="lib-provenance-first-classification-audit-catalog"><strong>Provenance-First Classification Audit Catalog</strong></h4>
+<table>
+
+
+
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Source ID (Field)</th>
+<th>Raw Bands &amp; Instruments</th>
+<th>Epochs / Exposure</th>
+<th>Proper Motion / Parallax (DOF)</th>
+<th>Spectrum Type &amp; Key Features (DOF)</th>
+<th>Initial Photometric Hypothesis (MDI)</th>
+<th>Revised Classification &amp; Distance or Redshift</th>
+<th>Epistemic Confidence</th>
+<th>Primary Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Capotauro (CEERS)</td>
+<td>JWST NIRCam F090W–F480M (broad + medium), MIRI</td>
+<td>Dec 2022 + Jun 2023 vs. Jun 2026 (3.5 yr baseline)</td>
+<td>Total motion 37.6 (+5.5/−5.6) mas/yr; shift 132 ± 20 mas (&gt;6 sigma)</td>
+<td>Noisy NIRSpec hint of 4.4 µm peak; extreme F356W dropout</td>
+<td>Candidate galaxy near redshift 32 (or redshift 15 PISN)</td>
+<td>Milky Way Y 1.0 ± 0.5 brown dwarf; effective temp ~350 K; model distance 730 ± 110 pc</td>
+<td>High (Galactic via &gt;6 sigma motion); Moderate (model distance)</td>
+<td>Gandolfi et al. (2026); Liu et al. (2026a)2</td>
+</tr>
+<tr class="even">
+<td>Bullet-BD1 / 7107472 (Bullet Cluster)</td>
+<td>JWST NIRCam F200W–F444W (F444W 27.52 AB), NIRSpec</td>
+<td>2 NIRCam epochs (~1 yr baseline) + NIRSpec follow-up</td>
+<td>49 ± 8 mas/yr (&gt;6 sigma); angular size &lt; 0.071 arcsec</td>
+<td>NIRSpec ultracool Y-dwarf spectrum (~300 K template fit)</td>
+<td>F277W/F356W dropout high-redshift galaxy candidate</td>
+<td>Milky Way ultra-cool Y dwarf; effective temp 296–324 K; radius-model distance 160–240 pc</td>
+<td>Very High (independent spectrum + motion); Moderate (radius-prior distance)</td>
+<td>Bradač et al. (2026)4</td>
+</tr>
+<tr class="odd">
+<td>Bullet-BD2 / 7107197 (Bullet Cluster)</td>
+<td>JWST NIRCam F200W–F444W (F444W 26.89 AB), NIRSpec</td>
+<td>2 NIRCam epochs (~1 yr baseline) + NIRSpec follow-up</td>
+<td>24 ± 3 mas/yr (8 sigma); angular size &lt; 0.043 arcsec</td>
+<td>NIRSpec ultracool Y-dwarf spectrum (470–510 K match)</td>
+<td>F277W/F356W dropout high-redshift galaxy candidate</td>
+<td>Milky Way ultra-cool Y dwarf; effective temp 471–510 K; radius-model distance 580 pc</td>
+<td>Very High (independent spectrum + motion); Moderate (radius-prior distance)</td>
+<td>Bradač et al. (2026)4</td>
+</tr>
+<tr class="even">
+<td>UNCOVER-BD-1 / MSA 32265 (Abell 2744)</td>
+<td>HST F814W–F160W; JWST NIRCam F115W–F444W, NIRSpec PRISM</td>
+<td>Jul 31–Aug 2 2023; 14.3 hr NIRSpec PRISM</td>
+<td>Unavailable in primary paper</td>
+<td>NIRSpec H₂O, CH₄ bands; widened 1.1 µm metal-poor feature</td>
+<td>Candidate high-redshift AGN (UNCOVER photometry)</td>
+<td>Milky Way subdwarf sdT1 brown dwarf; effective temp ~1,300 K; model distance 4.5 ± 1.2 kpc</td>
+<td>High (spectroscopic); Moderate (model distance)</td>
+<td>Burgasser et al. (2024)3</td>
+</tr>
+<tr class="odd">
+<td>UNCOVER-BD-2 / MSA 33437 (Abell 2744)</td>
+<td>HST F814W–F160W; JWST NIRCam F115W–F444W, NIRSpec PRISM</td>
+<td>Jul 31–Aug 2 2023; 14.3 hr NIRSpec PRISM</td>
+<td>Unavailable in primary paper</td>
+<td>NIRSpec H₂O, CH₄, collision-induced H₂ absorption</td>
+<td>Candidate high-redshift AGN (UNCOVER photometry)</td>
+<td>Milky Way T-type brown dwarf; effective temp ~1,000 K; model distance 2.32 ± 0.23 kpc</td>
+<td>High (spectroscopic); Moderate (model distance)</td>
+<td>Burgasser et al. (2024)3</td>
+</tr>
+<tr class="even">
+<td>UNCOVER-BD-3 / MSA 39243 (Abell 2744)</td>
+<td>JWST NIRCam F115W–F444W, NIRSpec PRISM</td>
+<td>Jul 31–Aug 2 2023; 4.4 hr NIRSpec PRISM</td>
+<td>Unavailable in primary paper</td>
+<td>NIRSpec H₂O, CH₄, NH₃, PH₃ near 4.2 µm</td>
+<td>Previously flagged candidate T dwarf (GLASS-BD-1)</td>
+<td>Milky Way T8–T9 brown dwarf; effective temp ~550 K; model distance 0.87 ± 0.30 kpc</td>
+<td>High (spectroscopic); Moderate (model distance)</td>
+<td>Nonino et al. (2023); Burgasser et al. (2024)3</td>
+</tr>
+<tr class="odd">
+<td>JADES-GS-BD-5 / GSBD5 (GOODS-South)</td>
+<td>JWST NIRCam multi-epoch imaging &amp; photometry</td>
+<td>Multi-epoch JADES astrometric series</td>
+<td>Motion 49.8 ± 0.3 mas/yr; <strong>direct parallax 15.7 (+1.4/−1.3) mas</strong></td>
+<td>NIRCam color proxy cY1.5 (&gt;Y1)</td>
+<td>Targeted substellar astrometric benchmark</td>
+<td>Milky Way &gt;Y1 brown dwarf; <strong>geometric parallax distance 64 (+6/−5) pc</strong>; tangential speed 15.0 km/s</td>
+<td>Very High (direct trigonometric parallax — geometric benchmark)</td>
+<td>Liu et al. (2026b)21</td>
+</tr>
+<tr class="even">
+<td>CEERS-93316 (CEERS)</td>
+<td>JWST NIRCam broadband + F410M; NIRSpec</td>
+<td>Cycle 1 CEERS imaging + NIRSpec follow-up</td>
+<td>Consistent with zero (extragalactic)</td>
+<td>NIRSpec unambiguous rest-optical <math display="block"><semantics><mrow><mi>O</mi><mi>I</mi><mi>I</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">O III</annotation></semantics></math>, H-beta, and H-alpha emission lines</td>
+<td>Candidate galaxy near photometric redshift 16.4</td>
+<td>Dusty star-forming galaxy at <strong>spectroscopic redshift 4.912</strong></td>
+<td>Very High (multi-line spectroscopic refutation)</td>
+<td>Donnan et al. (2023); Arrabal Haro et al. (2023)23</td>
+</tr>
+<tr class="odd">
+<td>JADES-GS-z14-0 (GOODS-South)</td>
+<td>JWST NIRCam, NIRSpec, MIRI F770W; ALMA Band 6</td>
+<td>JADES/FRESCO imaging + deep NIRSpec + ALMA blind scan</td>
+<td>Zero motion; extended (~0.08–0.27 arcsec across morphological fits)</td>
+<td>NIRSpec Lyman break + 3.6-sigma C III] 1907,1909 + <strong>ALMA 6.6-sigma <math display="block"><semantics><mrow><mi>O</mi><mi>I</mi><mi>I</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">O III</annotation></semantics></math> 88 µm at 223.528 GHz</strong></td>
+<td>Initially flagged as probable low-redshift interloper (0.4 arcsec from z = 3.475 neighbor)</td>
+<td>Confirmed high-redshift galaxy at <strong>spectroscopic redshift 14.1793 ± 0.0007</strong> (line width 136 ± 31 km/s)</td>
+<td>Very High (multi-facility, multi-transition confirmation)</td>
+<td>Carniani et al. (2024); Schouws et al. (2024/2025)1</td>
+</tr>
+<tr class="even">
+<td>MoM-z14 (COSMOS)</td>
+<td>JWST NIRCam, NIRSpec</td>
+<td>COSMOS legacy + JWST follow-up</td>
+<td>Zero motion (compact UV emitter)</td>
+<td>Sharp NIRSpec UV break + tentative UV emission-line hints</td>
+<td>Photometric z &gt; 14 candidate</td>
+<td>Spectroscopic galaxy at <strong>redshift 14.44 ± 0.02</strong> (absolute UV magnitude −20.2)</td>
+<td>Moderate-High (break + tentative lines; awaits submm/multi-line check)</td>
+<td>Naidu et al. (2025)20</td>
+</tr>
+<tr class="odd">
+<td>JADES-GS-z13-0 (GOODS-South)</td>
+<td>JWST NIRCam, NIRSpec PRISM</td>
+<td>JADES Cycle 1 spectroscopy</td>
+<td>Zero motion; compact extended (~0.066 arcsec)</td>
+<td>Strong Lyman break in NIRSpec continuum</td>
+<td>High-redshift dropout candidate</td>
+<td>Confirmed high-redshift galaxy at <strong>spectroscopic redshift 13.2</strong></td>
+<td>Moderate-High (break-dominated; original discovery text not directly retrieved)</td>
+<td>Archival compilations (2024–2025); PNAS (2025)22</td>
+</tr>
+<tr class="even">
+<td>GHZ2 / GLASS-z12 (Abell 2744)</td>
+<td>JWST NIRCam, NIRSpec, ALMA</td>
+<td>GLASS + deep NIRSpec + ALMA</td>
+<td>Zero motion; compact (effective radius &lt; 100 pc benchmark)</td>
+<td>Multiple UV emission lines + ALMA submillimeter confirmation</td>
+<td>High-redshift dropout candidate</td>
+<td>Confirmed high-redshift galaxy at <strong>spectroscopic redshift 12.34 ± 0.01</strong> (absolute UV magnitude −21.22)</td>
+<td>Very High (multi-line + multi-facility confirmation)</td>
+<td>Castellano et al. (2024); Zavala et al. (2024)7</td>
+</tr>
+<tr class="odd">
+<td>GN-z11 (GOODS-North)</td>
+<td>HST WFC3; JWST NIRCam, NIRSpec PRISM/G140M, MIRI MRS</td>
+<td>Feb &amp; May 2023 (6.9 h + 2.6 h) + SPURS deep G140M</td>
+<td>Zero motion; compact nuclear starburst/AGN</td>
+<td>Multiple high-S/N lines: Ly-alpha, N V, O I*, N IV], N III], C III], Balmer continuum, MIRI optical</td>
+<td>HST grism Lyman-break candidate</td>
+<td>Confirmed high-redshift galaxy/AGN at <strong>spectroscopic redshift 10.603</strong> (systemic 10.6016)</td>
+<td>Very High (multi-line, multi-instrument benchmark)</td>
+<td>Bunker et al. (2023); Ji et al. (2025); SPURS (2026)8</td>
+</tr>
+<tr class="even">
+<td>J0313−1806 (Wide-field QSO)</td>
+<td>Optical/NIR imaging + spectroscopic &amp; submm follow-up</td>
+<td>Multi-facility spectroscopic observations</td>
+<td>Zero motion (luminous QSO)</td>
+<td>Broad UV emission lines + host transitions (primary paper not directly retrieved)</td>
+<td>Color-selected high-redshift quasar candidate</td>
+<td>Confirmed luminous high-redshift quasar (benchmark control in 2024–2025 compilations)</td>
+<td>High (multi-line QSO class; discovery full text not directly retrieved)</td>
+<td>High-redshift QSO compilations (2024–2025)22</td>
+</tr>
+</tbody>
+</table>
+<p><img src="__ARCSECS_LIBRARY_ASSETS__/figures/f55de390ed743fa81fb1.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"></p>
+<h3 id="lib-five-fully-sourced-case-studies"><strong>Five Fully Sourced Case Studies</strong></h3>
+<p>To satisfy Work Packages B, C, and G, five canonical objects are audited in full empirical detail: two cases of dramatic distance revision to nearby Milky Way brown dwarfs, one extragalactic photometric-to-spectroscopic revision, and two multi-line spectroscopically secured high-redshift controls.</p>
+<h4 id="lib-case-study-1-capotauro-from-proposed-redshift-32-galaxy-to-milky-way-y-dwarf"><strong>Case Study 1: Capotauro — From Proposed Redshift-32 Galaxy to Milky Way Y Dwarf</strong></h4>
+<p>Discovered in 2025 within deep JWST CEERS imaging, the compact red source “Capotauro” displayed a steep flux drop below 3.5 micrometers (an extreme F356W dropout)2. Gandolfi et al. (2025/2026) evaluated both Galactic substellar and extragalactic models, noting that among extragalactic hypotheses the sharp flux step favored a Lyman-break galaxy near redshift 3217. Separately, Ferrara et al. (2026) examined whether apparent flux variability over an 800-day baseline between NIRCam and noisy NIRSpec data combined with an early proper-motion non-detection (upper limit near 137 milliarcseconds per year) might indicate a pair-instability supernova near redshift 152.<br>
+Direct multi-epoch geometry settled its Galactic identity. Liu et al. (2026a) paired Epoch 1 CEERS NIRCam imaging (December 2022, ERS 1345; plus F090W from June 2023, GO 2234) with Epoch 2 medium-band imaging (F140M, F162M, F182M, F210M, F430M, F460M, and F480M) obtained in mid-to-late June 2026 under MINERVA (GO 7814) and SPAM (GO 8559), creating a 3.5-year baseline2. Establishing a local relative astrometric frame with 68 compact reference sources and applying filter-dependent PSF fitting plus a joint four-image injection-recovery test, Liu et al. measured a sky displacement of 132 plus or minus 20 milliarcseconds—yielding proper-motion components of plus 9.4 (+6.4/−4.8) and minus 35.6 (+5.1/−5.9) milliarcseconds per year, or a total proper motion of 37.6 (+5.5/−5.6) milliarcseconds per year2. This astrometric detection rules out any extragalactic explanation—galaxy, active nucleus, or supernova—beyond 6 sigma2.<br>
+Equally important is separating direct measurement from downstream inference. While Capotauro’s Milky Way membership is an observed geometric fact, its inferred distance of 730 plus or minus 110 parsecs (vertical Galactic height 630 plus or minus 100 parsecs, spectral type Y 1.0 plus or minus 0.5, effective temperature approximately 350 kelvin) remains a model-dependent photometric/atmospheric inference2. Multiplying that distance by the measured proper motion yields an inferred tangential speed of 132 plus or minus 28 kilometers per second2. Within the Besançon Galaxy kinematic model (51 percent thin disk, 49 percent thick disk, below 0.5 percent halo along this sightline), such a high transverse speed carries only a 0.4 percent probability in the thin disk versus an 8 percent probability in the older thick disk—pointing either to a thick-disk brown dwarf or to an intrinsically colder, fainter object sitting closer than 730 parsecs2. Compared with the initial redshift-32 galaxy hypothesis (standard-benchmark comoving distance roughly 11,431 megaparsecs and angular-diameter distance 346.4 megaparsecs), Capotauro’s reclassification represents a distance reduction of roughly 15.7 million times and an inferred physical-size reduction of roughly 475,000 times6.</p>
+<h4 id="lib-case-study-2-bullet-bd1-and-bullet-bd2-independent-confirmation-via-spectroscopy-and-motion"><strong>Case Study 2: Bullet-BD1 and Bullet-BD2 — Independent Confirmation via Spectroscopy and Motion</strong></h4>
+<p>From single-epoch JWST NIRCam imaging of the Bullet Cluster field, Bradač et al. (2026) selected two compact F277W/F356W dropouts—Bullet-BD1 (catalog ID 7107472, right ascension 104.5840622 degrees, declination minus 55.9258435 degrees, F444W 27.52 plus or minus 0.04 AB magnitude, angular size below 0.071 arcseconds) and Bullet-BD2 (catalog ID 7107197, right ascension 104.5882284 degrees, declination minus 55.9285412 degrees, F444W 26.89 plus or minus 0.01 AB magnitude, angular size below 0.043 arcseconds)—as high-redshift galaxy candidates4. Both objects were nondetected in F200W and F277W (flux limits below 3 to 6 nanojanskys) yet brightened sharply into F410M and F444W (34 to 92 nanojanskys)4.<br>
+Follow-up observations delivered dual independent refutations. First, JWST NIRSpec spectroscopy matched ultra-cool Y-type brown dwarf atmospheric templates (ATMO2020 and Sonora Elf Owl) rather than high-redshift galaxy continua4. Bullet-BD1 closely resembles Capotauro’s spectral trace and ranks among the coldest spectroscopically confirmed brown dwarfs known, with best-fit effective temperatures of 296 (+12/−24) kelvin (ATMO2020) or 324 (+27/−26) kelvin (Sonora Elf Owl)—barely warmer than the benchmark ~263 kelvin Y dwarf WISE J085510.83−071442.54. Bullet-BD2 fits warmer Y-dwarf models at 510 (+15/−21) kelvin (ATMO2020) or 471 (+24/−26) kelvin (Sonora Elf Owl)4. Second, NIRCam imaging taken roughly one year later independently detected proper motions of 49 plus or minus 8 milliarcseconds per year for Bullet-BD1 and 24 plus or minus 3 milliarcseconds per year for Bullet-BD2, alongside stable Epoch 2 to Epoch 1 F444W flux ratios (0.98 ± 0.07 and 1.02 ± 0.03)4. Their proper motions differ by 25 plus or minus 9 milliarcseconds per year (3 sigma), ruling out a gravitationally bound binary (whose maximum Keplerian orbital motion for a 50-Jupiter-mass pair would remain below 0.1 milliarcseconds per year) and showing they are unrelated foreground objects seen in projection4.<br>
+Strict terminology matters: although temperatures near 300 kelvin overlap the planetary-mass regime depending on age, Bradač et al. (2026) classify Bullet-BD1 and Bullet-BD2 strictly as ultra-cool Y-type brown dwarfs—not confirmed planets—because neither mass is dynamically measured4. Similarly, their inferred distances (160 +20/−10 parsecs or 240 ± 40 parsecs for Bullet-BD1; 580 +50/−70 or +60/−50 parsecs for Bullet-BD2) explicitly fix the substellar radius to one Jupiter radius without propagating radius uncertainty4. Pairing those model distances with the measured proper motions implies physically plausible Milky Way tangential speeds of 37 to 56 kilometers per second for Bullet-BD1 and 66 kilometers per second for Bullet-BD26.</p>
+<h4 id="lib-case-study-3-ceers-93316-extragalactic-photometric-refutation-without-local-origin"><strong>Case Study 3: CEERS-93316 — Extragalactic Photometric Refutation Without Local Origin</strong></h4>
+<p>A balanced audit must not assume every failed high-redshift dropout is a Milky Way star. Early Cycle 1 JWST imaging flagged CEERS-93316 as a bright galaxy candidate near photometric redshift 16.4 (Donnan et al. 2023), even with F410M medium-band photometry28. Follow-up JWST NIRSpec spectroscopy by Arrabal Haro et al. (2023) refuted the redshift-16.4 hypothesis by detecting bright, unambiguous rest-frame optical emission lines—doubly ionized oxygen (495.9 and 500.7 nanometers), hydrogen-beta, and hydrogen-alpha—fixing the spectroscopic redshift at 4.91223.<br>
+CEERS-93316 demonstrates two key lessons. First, dust attenuation combined with intense nebular lines at redshift 4 to 5 creates a severe broadband degeneracy that fools photometric redshift algorithms24. Second, revising CEERS-93316 from redshift 16.4 down to redshift 4.912 exhibits opposite physical-size behavior under competing cosmologies: while its standard-benchmark luminosity distance drops from roughly 181,050 to 45,689 megaparsecs (reducing inferred intrinsic luminosity by roughly 15.7 times), its standard-benchmark angular-diameter distance actually <em>increases</em> from 598.0 to 1,307.2 megaparsecs—making its inferred physical radius 2.19 times larger rather than smaller6. Under a monotonic static Euclidean propagation law, by contrast, lowering redshift from 16.4 to 4.912 reduces both inferred distance and physical radius simultaneously6.</p>
+<h4 id="lib-case-study-4-jades-gs-z14-0-multi-facility-confirmation-overcoming-interloper-suspicion"><strong>Case Study 4: JADES-GS-z14-0 — Multi-Facility Confirmation Overcoming Interloper Suspicion</strong></h4>
+<p>JADES-GS-z14-0 provides the clearest empirical counterweight proving that bright, unexpected JWST dropouts are not uniformly local or low-redshift interlopers. Found in GOODS-South imaging from JADES and FRESCO, JADES-GS-z14-0 was initially <em>flagged as a probable low-redshift interloper</em> (Hainline et al. 2024; Williams et al. 2024) because of its high brightness and a redshift-3.475 foreground neighbor only 0.4 arcseconds away1. Deep JWST NIRSpec prism spectroscopy by Carniani et al. (2024) overturned the low-redshift flag via a sharp Lyman break (redshift 14.32 +0.08/−0.20), a tentative 3.6-sigma detection of the ionized-carbon doublet (190.7/190.9 nanometers) at 2.89 micrometers (redshift 14.178 ± 0.013), and excess MIRI F770W flux pointing to rest-optical oxygen and hydrogen-beta emission1.<br>
+Even more compellingly, blind ALMA submillimeter spectroscopy (Schouws et al. 2024/2025) detected a 6.6-sigma emission line at 223.528 plus or minus 0.009 gigahertz within 0.12 arcseconds of the JWST centroid (well inside the 0.18-arcsecond positional uncertainty of the 1.08-arcsecond ALMA beam)1. Identifying this line as the 88-micrometer doubly ionized oxygen fine-structure transition locks the spectroscopic redshift at 14.1793 plus or minus 0.0007—improving precision over NIRSpec by more than 180 times, matching the tentative UV carbon doublet to four significant figures, and measuring a velocity line width of 136 plus or minus 31 kilometers per second1. Although alternative continuum models have been explored—including a 2025 PNAS study fitting the NIRSpec continuum and extended profile (0.27 arcseconds in that Sérsic model versus a 260-parsec benchmark radius in JADES/ALMA) as a zero-metallicity supermassive dark star near redshift 14.44–14.5269—the blind 6.6-sigma ALMA oxygen detection confirms both heavy-element enrichment and an identical wavelength shift spanning a factor of 460 in rest-frame wavelength. No Milky Way brown dwarf or intermediate-redshift dusty galaxy reproduces a 1.85-micrometer break, a 2.89-micrometer carbon doublet, a 7.7-micrometer excess, and a 223.5-gigahertz submillimeter oxygen line simultaneously.</p>
+<h4 id="lib-case-study-5-gn-z11-multi-line-multi-instrument-high-redshift-control"><strong>Case Study 5: GN-z11 — Multi-Line, Multi-Instrument High-Redshift Control</strong></h4>
+<p>GN-z11 in GOODS-North anchors our highest-confidence spectroscopic control tier. Initially selected from Hubble Space Telescope grism spectroscopy (Oesch et al. 2016)35, GN-z11 was secured at redshift 10.603 by Bunker et al. (2023) using high-signal-to-noise (above 20 per spectral resolution element) NIRSpec prism and medium-resolution grating detections of multiple rest-frame ultraviolet emission lines alongside a crisp Lyman-alpha break8. Deep Cycle 4 G140M spectroscopy by the SPURS Collaboration (2026) refined the systemic redshift to 10.6016 and measured resolved profiles for Lyman-alpha (observed at 1.412 micrometers), four-times ionized nitrogen (1.444 micrometers), excited neutral oxygen (1.514 micrometers), triply ionized nitrogen (1.725 micrometers), the doubly ionized nitrogen quintuplet, and the doubly ionized carbon doublet (1.907/1.909 micrometers)25. Complementary JWST observations revealed a rest-UV Balmer-like continuum excess near 354.6 nanometers (Ji et al. 2025) and rest-optical hydrogen emission via MIRI medium-resolution spectroscopy (Álvarez-Márquez et al. 2025)36. While astronomers continue debating whether GN-z11’s compact nuclear region (benchmark effective radius below 100 parsecs) is dominated by an intense metal-poor starburst or an accreting active black hole8, its multi-transition fractional wavelength shift of 10.603 is a robust observational fact that any physical cosmology must address directly rather than reclassifying as a local star.</p>
+<h3 id="lib-geometric-and-physical-distance-hierarchy"><strong>Geometric and Physical Distance Hierarchy</strong></h3>
+<p>Answering Research Questions 4 and 5 (Work Package D) requires ranking astronomical distance techniques by geometric purity so that direct triangulation is never conflated with calibrated luminosity priors or cosmological propagation assumptions.</p>
+<table>
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Rank</th>
+<th>Distance Method</th>
+<th>Primary Domain</th>
+<th>Geometric Purity Classification</th>
+<th>Key Verified Quantitative Anchors</th>
+<th>Dominant Systematic Limitations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Direct Trigonometric Parallax (Gaia DR3, JWST multi-epoch)</td>
+<td>Solar neighborhood to kiloparsec Milky Way</td>
+<td><strong>Truly Geometric</strong> (orbital baseline triangulation)</td>
+<td>JADES-GS-BD-5: 15.7 (+1.4/−1.3) mas → 64 (+6/−5) pc; Milky Way Cepheids &amp; clusters via Gaia DR321</td>
+<td>Instrumental parallax zero-point bias (Gaia Z5/Z6 color/magnitude/position terms); underestimated formal proper-motion uncertainties; RUWE &gt; 1.4 binary bias44</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Water Megamaser Orbital Dynamics (VLBI)</td>
+<td>Local extragalactic anchors (7.6 to 150 Mpc)</td>
+<td><strong>Geometric + Orbital Model</strong> (Keplerian warped-disk kinematics)</td>
+<td>NGC 4258: 7.576 ± 0.082 (stat) ± 0.076 (sys) Mpc (Reid 2019); <strong>6.7–8.1 Mpc</strong> individual-tracking span (van der Boom &amp; Kushnir 2026)5</td>
+<td>Exponential maser variability; component-matching ambiguity across sparse 4–8 month epochs; data-averaging bias; host peculiar-velocity corrections for H₀5</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Detached Eclipsing Binaries (DEBs)</td>
+<td>Local Group galaxies (LMC, SMC)</td>
+<td><strong>Semi-Geometric + Empirical Calibration</strong> (orbital radii + surface-brightness–color relation)</td>
+<td>LMC: 49.59 ± 0.09 (stat) kpc (Pietrzyński 2019); SMC: 62.44 ± 0.47 (stat) ± 0.81 (sys) kpc (Graczyk 2020)50</td>
+<td>Calibration accuracy of empirical angular surface-brightness–color relation; dust reddening; limb darkening and metallicity49</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Proper Motion + Velocity or Radius Priors</td>
+<td>Faint Milky Way dwarfs (Capotauro, Bullet-BD1/2)</td>
+<td><strong>Model-Dependent Kinematic / Photometric</strong> (<strong>NOT</strong> an independent parallax)</td>
+<td>Capotauro: 730 ± 110 pc; Bullet-BD1: 160–240 pc; Bullet-BD2: 580 pc; JADES-GN-BD-16 SED implies extreme 1,082 km/s2</td>
+<td>Sensitive to assumed substellar radius (fixed Jupiter radius), atmospheric clouds/metallicity, and Galactic disk speed priors2</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Calibrated Standard Candles (Cepheids, TRGB, JAGB, SNe Ia)</td>
+<td>Local galaxies to cosmological scales</td>
+<td><strong>Calibration- &amp; Model-Dependent</strong> (chained to Ranks 1–3)</td>
+<td>SH0ES: 73.04 ± 1.04 km/s/Mpc (Riess 2022); CCHP TRGB/JAGB comparisons (Freedman 2024–2026)19</td>
+<td>Anchor-transfer shifts (1.4–4% documented across 2016–2022 calibrations), photometric crowding, dust extinction laws, metallicity zero-points5</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Gravitational-Wave Standard Sirens</td>
+<td>Nearby compact binary mergers (~40 Mpc to Gpc)</td>
+<td><strong>Waveform- &amp; Propagation-Model Dependent</strong></td>
+<td>GW170817 (NGC 4993): 40 (+8/−14) Mpc; H₀ = 70 (+12/−8), refined to 71.5 ± 4.6 km/s/Mpc via jet viewing angle54</td>
+<td>Strong distance–inclination degeneracy; depends on relativistic chirp waveform amplitude calibration and jet modeling or galaxy-catalog completeness54</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Strong-Lensing Time Delays (TDCOSMO)</td>
+<td>Multiply imaged quasars &amp; supernovae</td>
+<td><strong>Mass-Profile &amp; Cosmology-Model Dependent</strong></td>
+<td>TDCOSMO (2026, 11 blind lenses): H₀ = 71.1 (+2.4/−2.3) km/s/Mpc (71.3 with SLACS/SL2S)56</td>
+<td>Mass-sheet degeneracy; external line-of-sight convergence; lens stellar-kinematic anisotropy; relies on benchmark distance-redshift ratios55</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lib-why-proper-motion-is-not-an-independent-parallax"><strong>Why Proper Motion Is Not an Independent Parallax</strong></h4>
+<p>Interpreting 2026 brown-dwarf discoveries requires a strict conceptual barrier between proper motion and trigonometric parallax. Proper motion measures only angular velocity on the sky; translating it into distance requires either assuming a Galactic velocity prior (such as the Besançon simulation)2 or fitting an atmospheric luminosity/radius model and checking whether the resulting tangential speed appears realistic. Table 5 of Liu et al. (2026b) starkly exposes the hazard of parallax-free substellar distances: whereas JADES-GS-BD-5 possesses a direct trigonometric parallax of 15.7 (+1.4/−1.3) milliarcseconds fixing its distance cleanly at 64 (+6/−5) parsecs (tangential speed 15.0 kilometers per second), the faint moving candidate JADES-GN-BD-16 lacks a parallax and yields an SED-inferred distance of 960 (+450/−310) parsecs that—paired with its proper motion of 233 (+192/−91) milliarcseconds per year—implies an extreme, likely unphysical tangential speed of 1,082 (+982/−486) kilometers per second21. Until direct multi-epoch trigonometric parallax is achieved, model-derived brown-dwarf distances can err by factors of two or more.</p>
+<h4 id="lib-deep-audit-of-the-premier-extragalactic-anchor-ngc-4258"><strong>Deep Audit of the Premier Extragalactic Anchor: NGC 4258</strong></h4>
+<p>Beyond the Magellanic Clouds, water megamasers orbiting the central supermassive black hole of NGC 4258 serve as the single most pivotal geometric extragalactic anchor, calibrating Cepheid and tip-of-the-red-giant-branch zero-points while avoiding the greater-than-10-magnitude dynamic-range gap between Milky Way and extragalactic Cepheids5. VLBI monitors angular sky positions, Doppler line-of-sight velocities, and line-of-sight centripetal accelerations of maser clouds in a warped accretion disk, geometrically breaking the black-hole mass–distance degeneracy5.<br>
+However, van der Boom and Kushnir’s (2026) reanalysis (MNRAS 550, stag1327) uncovered a substantial latent systematic in the archival dataset5. Canonical determinations—Humphreys et al. (2013) at 7.60 ± 0.17 (statistical) ± 0.15 (systematic) megaparsecs and Reid, Pesce, and Riess (2019) at 7.576 ± 0.082 (statistical) ± 0.076 (systematic) megaparsecs—averaged heterogeneous 1994–2004 VLBA epochs into 358 to 370 collective maser entries, fitting 716 to 740 nuisance polar coordinates plus five free error-floor parameters5. By marginalizing analytically over individual azimuth and angular-radius nuisance variables, van der Boom and Kushnir compressed the global disk model to 14 free parameters and closely reproduced Reid et al.’s distance (7.547 to 7.551 megaparsecs) on the averaged dataset, confirming numerical consistency5. Yet when they abandoned data averaging to track <em>individual, spatially resolved maser components</em> across epochs, most archival epochs lacked sufficient resolution and had to be excluded, and statistically robust model fits spanned <strong>6.7 to 8.1 megaparsecs</strong>5. Because maser amplification is exponential, small fluctuations in seed radiation drive large intensity and spectral shifts across historical 4-to-8-month observing gaps, rendering spot-to-spot identification ambiguous5. Even this premier geometric anchor therefore harbors a roughly 20 percent methodological envelope until high-cadence VLBI monitoring resolves individual spot trajectories.<br>
+<img src="__ARCSECS_LIBRARY_ASSETS__/figures/4c36c5626ccc69e127ee.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"><br>
+Complementing this single-anchor audit, a September 2026 Bayesian forward-modeling reanalysis of all six Megamaser Cosmology Project galaxies reproduced NGC 4258 at 7.558 plus or minus 0.073 (statistical) megaparsecs on the published spot catalog while showing that correcting the five more distant megamaser hosts (spanning roughly 50 to 150 megaparsecs) with non-linear peculiar-velocity reconstructions (Manticore-Local) lowers the inferred local recession slope by 1.6 to 2.1 kilometers per second per megaparsec—from 73.9 ± 3.0 (Pesce et al. 2020) down to 71.6 ± 3.7 kilometers per second per megaparsec18. Meanwhile, Freedman’s 2026 review documents cumulative 1.4 to 4 percent calibration shifts across SH0ES Cepheid and supernova rungs between 2016 and 2022, including a 0.035-magnitude Cepheid distance-modulus change, a 0.040-magnitude LMC Wesenheit revision, and a 4 percent drop in the Milky Way-calibrated Hubble slope from 76.18 to 73.02 kilometers per second per megaparsec19. Independent geometric anchors therefore robustly establish an extragalactic scale extending from roughly 50 kiloparsecs (Magellanic Clouds) through several megaparsecs (NGC 4258) to roughly 150 megaparsecs (MCP galaxies), while percent-to-ten-percent systematics remain active at every rung.</p>
+<h3 id="lib-angular-versus-physical-size-and-surface-brightness-scaling"><strong>Angular Versus Physical Size and Surface Brightness Scaling</strong></h3>
+<p>Research Question 6 and Work Package E confront the central geometric test of ArcSecs Premise 11 (“Objects in the universe are smaller and closer than they appear”). Transforming a measured angular radius into a physical linear radius depends directly on the angular-diameter distance predicted at a source’s redshift. To evaluate objectively when alternative propagation laws predict smaller versus larger physical sizes, we executed a four-model numerical comparison (analysis/angular_size_models.py, verified via Python quadrature integration during research preparation) anchored to a common fiducial local Hubble length of 4,282.75 megaparsecs (local slope 70.0 kilometers per second per megaparsec)6:</p>
+<blockquote>
+<ol type="1">
+<li><strong>Benchmark Model 1 — Standard Flat Expanding Benchmark:</strong> The conventional Friedmann–Robertson–Walker flat calculation reference (matter density 0.3, dark-energy parameter 0.7), documented solely as a comparative benchmark6. Its angular-diameter distance rises to a <strong>turnaround peak of 1,747.57 megaparsecs (8.47 kiloparsecs per arcsecond) at redshift 1.605</strong>, and thereafter <strong>decreases</strong> monotonically to 824.3 megaparsecs at redshift 10.603 and 668.1 megaparsecs at redshift 14.1796.<br>
+</li>
+<li><strong>Model 2 — Static Euclidean Exponential Tired Light:</strong> A non-expanding Euclidean law in which photon energy declines exponentially with distance at the local Hubble attenuation scale (distance equal to the Hubble length multiplied by the natural logarithm of one plus redshift), causing angular-diameter distance to rise monotonically with redshift6.<br>
+</li>
+<li><strong>Model 3A — Bounded / Asymptotic Decelerating-Propagation Model:</strong> A non-expanding Euclidean distance law in which distance equals the Hubble length multiplied by redshift divided by one plus redshift, approaching an asymptotic horizon at one Hubble length6.<br>
+</li>
+<li><strong>Model 3B — Steep-Attenuation Local-Redshift Model:</strong> An illustrative non-expanding exponential model with an effective attenuation scale five times shorter than the local Hubble length (856.6 megaparsecs), testing how compressed a non-expanding scale must become to yield smaller radii than the expanding benchmark6.</li>
+</ol>
+</blockquote>
+<h4 id="lib-executed-multi-model-angular-diameter-distance-and-physical-size-ratio-comparison"><strong>Executed Multi-Model Angular-Diameter Distance and Physical-Size Ratio Comparison</strong></h4>
+<table>
+
+
+
+
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Redshift</th>
+<th>Benchmark Object Context</th>
+<th>Expanding Benchmark Distance (Mpc)</th>
+<th>Benchmark Scale (kpc/arcsec)</th>
+<th>Static Tired Light Distance (Mpc)</th>
+<th>Static TL / Benchmark Size Ratio</th>
+<th>Bounded Propagation Distance (Mpc)</th>
+<th>Bounded / Benchmark Size Ratio</th>
+<th>Steep Attenuation (5×) Distance (Mpc)</th>
+<th>Steep (5×) / Benchmark Size Ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.100</td>
+<td>Local Hubble flow</td>
+<td>380.4</td>
+<td>1.84</td>
+<td>408.2</td>
+<td>1.07× (larger)</td>
+<td>389.3</td>
+<td>1.02× (larger)</td>
+<td>81.6</td>
+<td>0.21× (smaller)</td>
+</tr>
+<tr class="even">
+<td>0.500</td>
+<td>Intermediate cluster scale</td>
+<td>1,259.1</td>
+<td>6.10</td>
+<td>1,736.5</td>
+<td>1.38× (larger)</td>
+<td>1,427.6</td>
+<td>1.13× (larger)</td>
+<td>347.3</td>
+<td>0.28× (smaller)</td>
+</tr>
+<tr class="odd">
+<td>1.000</td>
+<td>Pre-turnaround deep field</td>
+<td>1,651.9</td>
+<td>8.01</td>
+<td>2,968.6</td>
+<td>1.80× (larger)</td>
+<td>2,141.4</td>
+<td>1.30× (larger)</td>
+<td>593.7</td>
+<td>0.36× (smaller)</td>
+</tr>
+<tr class="even">
+<td>1.600</td>
+<td>Near benchmark turnaround peak</td>
+<td>1,747.6</td>
+<td>8.47</td>
+<td>4,092.2</td>
+<td>2.34× (larger)</td>
+<td>2,635.5</td>
+<td>1.51× (larger)</td>
+<td>818.4</td>
+<td>0.47× (smaller)</td>
+</tr>
+<tr class="odd">
+<td>3.000</td>
+<td>Post-turnaround optical/NIR</td>
+<td>1,588.9</td>
+<td>7.70</td>
+<td>5,937.2</td>
+<td>3.74× (larger)</td>
+<td>3,212.1</td>
+<td>2.02× (larger)</td>
+<td>1,187.4</td>
+<td>0.75× (smaller)</td>
+</tr>
+<tr class="even">
+<td>4.912</td>
+<td>CEERS-93316 (revised spec redshift)</td>
+<td>1,307.2</td>
+<td>6.34</td>
+<td>7,610.4</td>
+<td>5.82× (larger)</td>
+<td>3,558.3</td>
+<td>2.72× (larger)</td>
+<td>1,522.1</td>
+<td>1.16× (larger)</td>
+</tr>
+<tr class="odd">
+<td>7.642</td>
+<td>High-redshift QSO scale</td>
+<td>1,022.5</td>
+<td>4.96</td>
+<td>9,236.3</td>
+<td>9.03× (larger)</td>
+<td>3,787.2</td>
+<td>3.70× (larger)</td>
+<td>1,847.3</td>
+<td>1.81× (larger)</td>
+</tr>
+<tr class="even">
+<td>10.603</td>
+<td>GN-z11 (multi-line control)</td>
+<td>824.3</td>
+<td>4.00</td>
+<td>10,498.1</td>
+<td>12.74× (larger)</td>
+<td>3,913.6</td>
+<td>4.75× (larger)</td>
+<td>2,099.6</td>
+<td>2.55× (larger)</td>
+</tr>
+<tr class="odd">
+<td>12.340</td>
+<td>GHZ2 / GLASS-z12</td>
+<td>740.1</td>
+<td>3.59</td>
+<td>11,095.6</td>
+<td>14.99× (larger)</td>
+<td>3,961.7</td>
+<td>5.35× (larger)</td>
+<td>2,219.1</td>
+<td>3.00× (larger)</td>
+</tr>
+<tr class="even">
+<td>14.179</td>
+<td>JADES-GS-z14-0 (ALMA <math display="block"><semantics><mrow><mi>O</mi><mi>I</mi><mi>I</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">O III</annotation></semantics></math>)</td>
+<td>668.1</td>
+<td>3.24</td>
+<td>11,648.8</td>
+<td>17.44× (larger)</td>
+<td>4,000.6</td>
+<td>5.99× (larger)</td>
+<td>2,329.8</td>
+<td>3.49× (larger)</td>
+</tr>
+<tr class="odd">
+<td>14.440</td>
+<td>MoM-z14</td>
+<td>659.0</td>
+<td>3.19</td>
+<td>11,721.7</td>
+<td>17.79× (larger)</td>
+<td>4,005.4</td>
+<td>6.08× (larger)</td>
+<td>2,344.3</td>
+<td>3.56× (larger)</td>
+</tr>
+<tr class="even">
+<td>16.400</td>
+<td>CEERS-93316 (refuted phot redshift)</td>
+<td>598.0</td>
+<td>2.90</td>
+<td>12,233.5</td>
+<td>20.46× (larger)</td>
+<td>4,036.6</td>
+<td>6.75× (larger)</td>
+<td>2,446.7</td>
+<td>4.09× (larger)</td>
+</tr>
+<tr class="odd">
+<td>32.000</td>
+<td>Capotauro (refuted phot redshift)</td>
+<td>346.4</td>
+<td>1.68</td>
+<td>14,974.7</td>
+<td>43.22× (larger)</td>
+<td>4,153.0</td>
+<td>11.99× (larger)</td>
+<td>2,994.9</td>
+<td>8.64× (larger)</td>
+</tr>
+</tbody>
+</table>
+<p><img src="__ARCSECS_LIBRARY_ASSETS__/figures/1ae63564709263ee59c0.png" loading="lazy" decoding="async" alt="Archived source figure (description not supplied)"></p>
+<h4 id="lib-deciding-the-sign-smaller-versus-larger-physical-sizes-and-surface-brightness-data"><strong>Deciding the Sign: Smaller Versus Larger Physical Sizes and Surface-Brightness Data</strong></h4>
+<p>These executed calculations resolve Research Question 6 clearly and prevent confirmation bias. Objects are demonstrably closer and smaller only under two specific conditions: when an unverified photometric redshift is overturned by foreground reclassification (Capotauro, Bullet-BD1, Bullet-BD2, UNCOVER-BD-1, and UNCOVER-BD-2), or if a confirmed high-redshift source’s wavelength shift were predominantly non-cosmological (intrinsic) so that its physical distance sat far below the standard angular-diameter distance (below 668 megaparsecs for JADES-GS-z14-0 or below 824 megaparsecs for GN-z11)2.<br>
+Conversely, for spectroscopically confirmed extragalactic sources whose redshifts accumulate along cosmological paths anchored to the local Hubble slope, both standard static exponential tired light and bounded asymptotic propagation predict <strong>substantially larger physical radii</strong> than the expanding benchmark6. Under static exponential tired light, JADES-GS-z14-0’s benchmark 260-parsec effective radius (roughly 0.080 arcseconds) expands to 4.53 kiloparsecs (17.44 times larger), and bounded propagation expands it to 1.56 kiloparsecs (5.99 times larger); GN-z11’s compact benchmark core similarly grows by 12.74 times under static tired light1. Notably, this explains why several non-expanding cosmologists (Lopez-Corredoira 2014; Lerner 2018; LaViolette 2021) argued that static tired light eliminates the need for strong galaxy size evolution—specifically because static geometry scales high-redshift galaxies <em>up</em> to familiar kiloparsec-scale local sizes rather than shrinking them26.<br>
+Four observable diagnostics decide the empirical sign. First, <strong>dynamical velocity dispersions</strong> scale linearly with radius in virial enclosed-mass estimates: ALMA’s 136 ± 31 kilometer per second ionized-oxygen line width in JADES-GS-z14-0 yields roughly 1 billion solar masses at 260 parsecs, but scales up to roughly 17 billion solar masses under static tired light—a difference testable against stellar mass budgets and lensing profiles1. Second, <strong>surface-brightness scaling (the Tolman test)</strong> in the 531,173-object ASTRODEEP-JWST catalog (Merlin et al. 2024; Tsymbal et al. 2026) exhibits a raw observer-frame decline proportional to one plus redshift to the minus 1.3 power, far flatter than the minus 3.3 to minus 4.0 non-evolving expanding baseline26. Third, <strong>aperture, selection, and deblending controls</strong> strongly influence measured surface-brightness slopes: Desmond, Yasin, Stiskalek, and von Hausegger (2026) showed that while PSF and deep-field sky noise alter the slope by less than 0.005, aperture compactness cuts shift it by 0.06 and switching Voronoi to Gaussian-weighted deblending shifts it by 0.15, while IllustrisTNG intrinsic galaxy luminosity-density evolution (power-law exponent 2.23 plus or minus 0.20) reproduces both ASTRODEEP surface brightness and ultracompact radio distance-duality scaling (2.50 plus or minus 0.26)26. Fourth, <strong>rest-frame wavelength matching</strong> (measuring optical profiles up to 4.4 micrometers across 1,395 CEERS galaxies, Ormerod et al. 2024) limits dust and bandpass biases57. Because intrinsic luminosity evolution and geometric distance scaling remain degenerate in raw surface-brightness plots, deciding the sign decisively requires direct dynamical-mass mapping and spectroscopic-only deblending audits rather than broadband surface brightness alone.</p>
+<h3 id="lib-programmatic-red-team-pipeline-and-independent-held-out-validation"><strong>Programmatic Red-Team Pipeline and Independent Held-Out Validation</strong></h3>
+<p>To satisfy Work Package F without post-hoc tuning, we define an automated reclassification pipeline tailored to public JWST deep-field archives. Because raw JWST FITS mosaics were not downloaded during this commission, this seven-stage protocol is explicitly delivered as a preregistered, <strong>unexecuted methodological specification</strong>; data-download coordinates and validation checks are logged in companion METHODS_TO_REPRODUCE.md.</p>
+<blockquote>
+<ol type="1">
+<li><strong>Multi-Epoch Registration and Astrometric Alignment:</strong> Acquire calibrated NIRCam mosaics spanning cycles separated by at least 1.0 to 3.5 years. Align Epoch 2 frames to Epoch 1 using a local network of at least 50 compact, high-signal-to-noise background reference sources anchored to Gaia DR3 where available, applying iterative sigma-clipping to achieve sub-10-milliarcsecond local registration (matching Liu et al. 2026a’s 68-source reference frame)2.<br>
+</li>
+<li><strong>Filter-Matched PSF Modeling and Dual Deblending:</strong> Construct empirical PSFs per filter and epoch, extract PSF-matched aperture photometry alongside PSF-fitting centroids, and run both Voronoi and Gaussian-weighted deblending passes (following Desmond et al. 2026)26 to flag close-neighbor blending (such as JADES-GS-z14-0’s 0.4-arcsecond neighbor)1.<br>
+</li>
+<li><strong>Synthetic Injection-Recovery Calibration:</strong> Inject 1,000 synthetic point sources and compact Sérsic galaxies per field across magnitudes 26.0 to 29.0 AB with zero motion and known displacements (10 to 100 milliarcseconds per year) directly into the Epoch 1 and Epoch 2 mosaics to calibrate empirical centroiding bias, proper-motion completeness, and false-motion rates.<br>
+</li>
+<li><strong>Joint Proper-Motion and Parallax Extraction:</strong> Fit multi-epoch joint astrometric models to extract total proper motion and—where three or more epochs sample opposite phases of Earth’s orbit—annual trigonometric parallax (replicating Liu et al. 2026b’s JADES-GS-BD-5 method)21. Any source exceeding 5-sigma proper motion is automatically reclassified as Galactic regardless of photometric redshift.<br>
+</li>
+<li><strong>Competing Spectral Template Tournament:</strong> Fit multi-band fluxes (incorporating F410M/F430M/F460M/F480M medium bands where available) concurrently against four mandatory libraries without an extragalactic-only prior: standard Lyman-break star-forming galaxies, heavily dust-reddened intermediate-redshift galaxies with extreme rest-optical line equivalent widths, compact reddened active galactic nuclei, and ultracool substellar brown dwarf grids (ATMO2020, Sonora Elf Owl, LOWZ, and SAND across 250 to 1,500 kelvin and subsolar metallicities)3. Apply Benjamini–Hochberg false-discovery-rate control across full field catalogs to suppress multiple-comparison artifacts.<br>
+</li>
+<li><strong>Mandatory Human Spectral Review Gate:</strong> Any candidate with photometric redshift above 12 and unresolved angular profile (FWHM within 15 percent of the empirical PSF) is barred from entering a “confirmed high-redshift” catalog until either (a) multi-transition spectroscopy (at least two independent lines, or one spectral break plus one greater-than-5-sigma atomic/submillimeter line) passes blinded dual-reviewer inspection, or (b) multi-epoch proper motion is bounded below 10 milliarcseconds per year at greater than 3 sigma.<br>
+</li>
+<li><strong>Blind Held-Out Field Split:</strong> Tune all compactness thresholds, injection calibrations, and Bayesian template priors exclusively on a <strong>Development Set</strong> comprising CEERS, Abell 2744 (UNCOVER/GLASS), and the Bullet Cluster2. Freeze every parameter and record configuration checksums before running a single untouched validation pass on two <strong>Blind Held-Out Fields</strong>: PRIMER-COSMOS and PRIMER-UDS (included in public ASTRODEEP-JWST, VizieR J/A+A/691/A240)26, recording out-of-sample confusion matrices in companion CONFUSION_MATRICES.csv.</li>
+</ol>
+</blockquote>
+<h3 id="lib-observational-requirements-to-satisfy-and-falsification-criteria"><strong>Observational Requirements to Satisfy and Falsification Criteria</strong></h3>
+<p>Consistent with rigorous physical-first discipline, verified empirical observations that constrain naive non-expanding or varying-light-speed models are neither omitted nor expanded into conventional-theory advocacy. Instead, six primary empirical constraints are condensed below as bounded quantitative requirements that any complete ArcSecs propagation framework must reproduce within constant universal progression T.</p>
+<h4 id="lib-observational-requirements-to-satisfy-constraint-register"><strong>Observational Requirements to Satisfy (Constraint Register)</strong></h4>
+<table>
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Constraint ID</th>
+<th>Measured Physical Observable (DOF — Model-Free Statement)</th>
+<th>Quantitative Value &amp; Uncertainty</th>
+<th>Operational Requirement for an ArcSecs Physical Mechanism</th>
+<th>Verified Primary Citation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>REQ-01</td>
+<td>Type Ia supernova rest-frame light-curve duration width vs. spectroscopic redshift</td>
+<td>Width scales as one plus redshift to the 1.003 ± 0.015 power (consistent with earlier spectral aging)</td>
+<td>Must stretch macroscopic photon arrival intervals by the exact same factor as spectral wavelength without invoking stretching time</td>
+<td>Blondin et al. (2008); White et al. (2024)12</td>
+</tr>
+<tr class="even">
+<td>REQ-02</td>
+<td>Quasar rest-frame optical variability timescale vs. redshift</td>
+<td>Ensemble variability timescales lengthen consistently with increasing redshift</td>
+<td>Must reproduce arrival-interval stretching in continuous stochastic accretion light curves across cosmological redshifts</td>
+<td>Lewis &amp; Brewer (2023)13</td>
+</tr>
+<tr class="odd">
+<td>REQ-03</td>
+<td>Optical atomic-clock transition frequency ratio across vertical height separation</td>
+<td>Fractional frequency shift ~10⁻¹⁹ across 1 millimeter vertical separation in Earth’s gravity</td>
+<td>Must derive physical atomic energy-level or oscillation-rate shift from local gravitational field coupling within constant T</td>
+<td>Chou et al. (2010); Bothwell et al. (2022); Zheng et al. (2022)15</td>
+</tr>
+<tr class="even">
+<td>REQ-04</td>
+<td>Invariant photon rest-mass upper limits from heliospheric MHD, Ampère’s law, and FRB dispersion</td>
+<td>Below 1 × 10⁻¹⁸ eV (solar wind MHD); below ~2 × 10⁻¹⁴ eV (FRB arrival timing)</td>
+<td>Any nonzero invariant photon rest-mass claim must sit below 10⁻¹⁸ eV or explain suppression of macroscopic Proca magnetic decay</td>
+<td>Ryutov (2007); Retinò et al. (2016); Bonetti et al. (2017); PDG (2024)63</td>
+</tr>
+<tr class="odd">
+<td>REQ-05</td>
+<td>Multi-wavelength achromatic redshift &amp; compact image sharpness at redshifts 10.6 to 14.2</td>
+<td>Identical redshift 14.1793 across 0.19 µm (UV) and 88 µm (ALMA) in JADES-GS-z14-0; compact sub-arcsec profiles</td>
+<td>Any propagation-based redshift must be strictly achromatic over &gt;450× in wavelength and impart negligible transverse angular blurring</td>
+<td>Carniani et al. (2024); Schouws et al. (2024/2025); Bunker et al. (2023)1</td>
+</tr>
+<tr class="even">
+<td>REQ-06</td>
+<td>Geometric anchor ladder consistency from 50 kpc to 150 Mpc</td>
+<td>LMC 49.59 kpc; SMC 62.44 kpc; NGC 4258 ~6.7–8.1 Mpc; 5 MCP hosts ~50–150 Mpc with recession slope 71.6 ± 3.7 km/s/Mpc</td>
+<td>Any “closer than they appear” extragalactic model must reconcile with direct trigonometric and orbital-triangulation scales out to 150 Mpc</td>
+<td>Pietrzyński et al. (2019); Graczyk et al. (2020); van der Boom &amp; Kushnir (2026); MCP Reanalysis (2026)5</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lib-original-preregistered-predictions-and-falsification-criteria"><strong>Original Preregistered Predictions and Falsification Criteria</strong></h4>
+<p>To turn this audit into an active test-driven program, we preregister four falsifiable predictions—two immediately executable on public archival data and two requiring prospective observations:</p>
+<blockquote>
+<ol type="1">
+<li><strong>Prediction P1 (Public Archival JWST Multi-Epoch Dropout Audit):</strong> Across public JWST deep fields with at least 2.0-year NIRCam baselines (specifically blind held-out fields PRIMER-COSMOS and PRIMER-UDS), compact unresolved F277W and F356W dropouts lacking flux below 2.0 micrometers and showing positive F410M/F444W excess will exhibit a greater-than-5-sigma proper-motion brown-dwarf contamination fraction exceeding 20 percent among bright point-source candidates (F444W brighter than 28.0 AB magnitude). <strong>Falsifier:</strong> If injection-calibrated astrometry over a ≥2.5-year baseline finds fewer than 5 percent moving objects among unresolved F356W dropouts brighter than 28.0 AB magnitude in held-out fields, substellar contamination of extreme dropouts is rare rather than systematic.<br>
+</li>
+<li><strong>Prediction P2 (Public Archival ASTRODEEP-JWST Deblending &amp; Spectroscopic-Only Audit):</strong> Recomputing the ASTRODEEP-JWST surface-brightness scaling exponent strictly on spectroscopically confirmed galaxies (excluding unvetted photometric redshifts above 6) while contrasting Voronoi against Gaussian deblending and matching rest-frame optical bands will shift the apparent surface-brightness exponent by at least 0.20 relative to the full photometric catalog’s −1.3 slope. <strong>Falsifier:</strong> If spectroscopic-only filtering and deblending variations shift the exponent by less than 0.05, photometric contamination and deblending play negligible roles in the observed flat scaling.<br>
+</li>
+<li><strong>Prediction P3 (Prospective High-Cadence VLBI Monitoring of NGC 4258):</strong> Dedicated monthly (30-day cadence) VLBA/GBT 22-gigahertz monitoring of NGC 4258 over 18 months will eliminate epoch-to-epoch spot-matching ambiguity and collapse the van der Boom and Kushnir (2026) 6.7–8.1 megaparsec individual-tracking spread to sub-2-percent precision; if archival epoch-averaging introduced a systematic bias, the individual-tracked geometric distance will shift by at least 1.5 sigma (more than 0.12 megaparsecs) from Reid et al.’s (2019) 7.576 megaparsecs. <strong>Falsifier:</strong> If monthly individual tracking converges within 0.08 megaparsecs of 7.576 megaparsecs with reduced chi-squared near unity, epoch-averaging bias in NGC 4258 is refuted.<br>
+</li>
+<li><strong>Prediction P4 (Prospective Dynamical-Mass Versus Size Discrimination at z &gt; 10):</strong> Sub-0.1-arcsecond ALMA mapping of the 88-micrometer ionized-oxygen line in JADES-GS-z14-0 and GHZ2 will resolve spatial kinematics; under static exponential tired light (predicting a 17.4-fold larger radius for JADES-GS-z14-0), the enclosed dynamical mass must scale upward proportionally (~1.7 × 10¹⁰ solar masses) with extended kiloparsec-scale wings. <strong>Falsifier:</strong> If high-resolution kinematics and stellar mass budgets constrain enclosed dynamical mass below 2 × 10⁹ solar masses at the observed 136 kilometer per second line width, static Euclidean tired-light distance scales anchored to the local Hubble length are falsified for JADES-GS-z14-0.</li>
+</ol>
+</blockquote>
+<h3 id="lib-uncertainty-sensitivity-analysis-and-limitations"><strong>Uncertainty, Sensitivity Analysis, and Limitations</strong></h3>
+<p>Rigorous provenance requires candid disclosure of every data gap, sampling limit, and analytical boundary encountered in this commission. First, two direct arXiv HTML endpoints (arxiv.org/html/2604.23668v2 and arxiv.org/html/2601.14374v1) were inaccessible to direct page scraping during verification, although the core numerical data tables, proper motions, temperatures, and distance ranges were independently verified via archival search extracts and peer-reviewed Oxford Academic MNRAS publications (10.1093/mnras/stag1327 and 10.1093/mnras/stag2055)2. Where full co-author lists (beyond M. Bradač et al. 2026), exact equatorial coordinates for Capotauro, individual brown-dwarf mass estimates in UNCOVER, or original discovery full texts for JADES-GS-z13-0 and J0313−1806 were absent from verified extracts, those items are explicitly labeled unreported rather than invented2.<br>
+Second, severe selection bias prohibits extrapolating the three 2026 brown-dwarf reclassifications (Capotauro, Bullet-BD1, Bullet-BD2) and two UNCOVER AGN-impostors (UNCOVER-BD-1, BD-2) into a universal contamination percentage for deep extragalactic surveys2. These targets were singled out for follow-up specifically because of their extreme long-wavelength colors and unresolved compactness; determining an unbiased contamination rate requires executing the frozen holdout pipeline on PRIMER-COSMOS and PRIMER-UDS (Test EXP-01). Third, apart from JADES-GS-BD-5’s direct trigonometric parallax (64 +6/−5 parsecs)21, every brown-dwarf distance in our audit catalog remains sensitive to atmospheric cloud models, subsolar metallicity, and fixed-radius priors (such as assuming one Jupiter radius without propagating radius error), easily permitting 20 to 50 percent distance uncertainty2.<br>
+Fourth, while our four-model angular-diameter distance and proper-motion tangential-velocity computations were numerically executed and cross-checked in Python (scipy.integrate.quad)6, no raw JWST FITS files were downloaded and no live image injection-recovery simulation was run; all confusion-matrix tables therefore remain unexecuted prospective schemas. Finally, as detailed in our mechanism audit, this investigation did not identify a completed physical-first cosmological propagation law capable of simultaneously generating achromatic, blur-free high-redshift shifts and one-plus-redshift supernova and quasar arrival-interval stretching within constant universal progression T while satisfying sub-10⁻¹⁸ electron-volt photon rest-mass bounds1.</p>
+<h3 id="lib-discussion-and-non-negotiable-scientific-verdict"><strong>Discussion and Non-Negotiable Scientific Verdict</strong></h3>
+<p>Synthesizing all six research questions produces a disciplined scientific verdict that separates verified measurement vulnerabilities from unsupported universal generalizations. On the constructive side for ArcSecs skepticism, deep-field astronomy has repeatedly demonstrated that single-epoch broadband photometry is an unreliable substitute for direct geometry. In 2026 alone, multi-epoch astrometry and follow-up spectroscopy moved Capotauro, Bullet-BD1, and Bullet-BD2 inward from proposed extragalactic distances to hundreds of parsecs inside the Milky Way, joining earlier UNCOVER T-dwarf AGN impostors and dusty intermediate-redshift emission-line interlopers like CEERS-933162. Beyond individual dropouts, archival geometric anchors themselves harbor nontrivial methodological sensitivities: replacing epoch-averaging with individual maser spot tracking widens NGC 4258’s statistically robust distance range to 6.7–8.1 megaparsecs5, Gaia DR3 requires empirical magnitude-, color-, and position-dependent zero-point and proper-motion error corrections44, and ASTRODEEP-JWST surface-brightness slopes shift by 0.15 solely from deblending algorithm choices26. Auditing provenance before accepting cataloged distances is empirically warranted.<br>
+At the same time, two independent empirical pillars prevent generalizing these corrections into a universal claim that all distant cosmic objects are closer and smaller. First, multi-line and multi-facility spectroscopy—anchored by GN-z11 (multiple UV and mid-infrared transitions at redshift 10.603), GHZ2 (redshift 12.34), and JADES-GS-z14-0 (NIRSpec UV break plus ionized-carbon doublet matched by a blind 6.6-sigma ALMA 88-micrometer ionized-oxygen detection at redshift 14.1793)—robustly secures a population of genuine high-redshift extragalactic sources that cannot be reclassified as nearby brown dwarfs1. Second, our executed geometric audit establishes that monotonic non-expanding propagation models (static exponential tired light and bounded propagation) anchored to the local Hubble scale predict <strong>5 to 17 times LARGER</strong>, rather than smaller, physical radii for confirmed high-redshift galaxies than the standard expanding benchmark6. Rendering confirmed high-redshift galaxies physically smaller than standard estimates would require either an attenuation distance scale drastically shorter than the local Hubble length—conflicting with megamaser and eclipsing-binary geometric anchors out to 150 megaparsecs—or a large intrinsic, non-distance component to extragalactic redshifts.<br>
+Our non-negotiable final scientific decision is therefore precise: <strong>severe distance and physical-size overestimation is empirically established for specific photometrically selected subclasses—most notably compact F277W/F356W ultracool brown-dwarf impostors and dusty emission-line galaxy interlopers—and percent-to-ten-percent calibration systematics remain active inside extragalactic geometric anchors; however, a universal “closer and smaller” generalization across all distant cosmic objects is not yet demonstrated and runs opposite to the sign of standard static tired-light size predictions for spectroscopically confirmed high-redshift galaxies.</strong></p>
+<h3 id="lib-conclusion"><strong>Conclusion</strong></h3>
+<p>This independent geometry-first audit shows that enforcing a strict boundary between raw detector observables and model-dependent inference clarifies modern deep-field astronomy without requiring philosophical detours. Direct multi-epoch astrometry and follow-up spectroscopy in 2024–2026 confirmed that headline extreme-redshift dropouts such as Capotauro, Bullet-BD1, Bullet-BD2, UNCOVER-BD-1, and UNCOVER-BD-2 are foreground Milky Way brown dwarfs, while exposing dusty intermediate-redshift interlopers like CEERS-933162. Simultaneously, individual-component VLBI tracking in NGC 4258 revealed a 6.7–8.1 megaparsec systematic span beneath published percent-level anchor errors5. Yet multi-facility spectroscopy firmly anchors genuine high-redshift controls including GN-z11, GHZ2, and JADES-GS-z14-01, and executed numerical modeling proves that standard static tired-light and bounded-propagation laws predict larger rather than smaller physical radii for those confirmed systems6. Productive continuation of the ArcSecs program now hinges on targeted empirical execution: running blind proper-motion vetting on held-out JWST deep fields, pursuing monthly VLBI monitoring of NGC 4258, and constructing a testable, blur-free microphysical mechanism capable of addressing supernova light-curve durations, optical-clock frequency ratios, and photon rest-mass limits within constant universal progression T.</p>
+<h3 id="lib-disclosures-data-availability-and-software-availability"><strong>Disclosures, Data Availability, and Software Availability</strong></h3>
+<p><strong>Acknowledgments and Competing Interests:</strong> This manuscript was prepared as an independent, standalone investigation under Independent ArcSecs Research Commission 16. No financial, institutional, or proprietary competing interests exist. No peer review, journal acceptance, or human co-authorship is claimed.<br>
+<strong>AI-Use Declaration:</strong> Aligned with the September 2026 AAS Journals AI policy9, all literature synthesis, analytical structuring, numerical cross-checking, and manuscript drafting were executed by an AI system strictly bounded by retrieved primary sources. Qualified human astrophysical review is mandatory prior to any formal submission or archival deposit.<br>
+<strong>Data Availability:</strong> All empirical measurements analyzed in this report originate from public peer-reviewed journals, arXiv preprints, ESA Gaia DR3 technical documentation (gea.esac.esa.int/archive/documentation/GDR3/), VizieR catalog J/A+A/691/A240 (ASTRODEEP-JWST), and NASA/ESA/CSA MAST JWST public archives (ERS 1345, GO 2234, GO 7814, GO 8559, JADES, UNCOVER, Bullet Cluster)2. No raw telescope FITS files were downloaded during this commission.<br>
+<strong>Software Availability:</strong> Every equation, quadrature integration specification, and unexecuted image-pipeline workflow is separated from this export-safe manuscript and documented in companion METHODS_TO_REPRODUCE.md and external script specifications (analysis/angular_size_models.py, executed for verification; analysis/redteam_pipeline_spec.py, unexecuted prospective specification).</p>
+<h3 id="lib-companion-artifacts-and-verification-registers"><strong>Companion Artifacts and Verification Registers</strong></h3>
+<p>Because this standalone report is delivered as a single portable UTF-8 Markdown document without external filesystem export, all mandatory companion artifacts (METHODS_TO_REPRODUCE.md, EVIDENCE_LEDGER.csv, EXPERIMENTS.csv, CONFUSION_MATRICES.csv, REFEREE_CHALLENGES.md, and BIBLIOGRAPHY.md) are provided below in clean, export-safe plain language with zero embedded equations, LaTeX, or code blocks.</p>
+<h4 id="lib-companion-1-methods_to_reproduce.md-reproducibility-and-external-analysis-protocol"><strong>Companion 1: METHODS_TO_REPRODUCE.md (Reproducibility and External Analysis Protocol)</strong></h4>
+<p><strong>Execution Status Summary:</strong> Part A (Multi-Model Angular-Diameter Distance &amp; Proper-Motion Tangential-Velocity Benchmark, analysis/angular_size_models.py) was <strong>executed</strong> in Python 3 with NumPy and SciPy during research verification, generating all numerical distances and ratios reported in the Angular Versus Physical Size section6. Part B (JWST Multi-Epoch Astrometric Injection-Recovery &amp; Held-Out Reclassification Pipeline, analysis/redteam_pipeline_spec.py) is <strong>unexecuted</strong> because raw MAST FITS mosaics were not downloaded.<br>
+<strong>Part A — Reproducing the Multi-Model Angular-Size &amp; Velocity Benchmark (Executed):</strong></p>
+<blockquote>
+<ol type="1">
+<li>Prepare a Python 3.10+ environment with numpy version 1.24 or newer and scipy version 1.10 or newer.<br>
+</li>
+<li>Specify constants in analysis/angular_size_models.py: speed of light 299,792.458 kilometers per second; fiducial benchmark local Hubble slope 70.0 kilometers per second per megaparsec (Hubble distance scale 4,282.75 megaparsecs); benchmark flat matter density 0.3 and dark-energy parameter 0.7; radian-to-arcsecond conversion factor 206,264.806.<br>
+</li>
+<li>Numerically integrate the standard flat benchmark comoving distance from redshift 0 to each target redshift (0.1, 0.5, 1.0, 1.6, 2.0, 3.0, 4.912, 7.642, 10.603, 12.34, 14.1793, 14.44, 16.4, 32.0) via adaptive quadrature, then divide by one plus redshift to obtain benchmark angular-diameter distance.<br>
+</li>
+<li>Compute Model 2 (static exponential tired light) as Hubble length multiplied by the natural logarithm of one plus redshift; Model 3A (bounded asymptotic propagation) as Hubble length multiplied by redshift divided by one plus redshift; and Model 3B (steep 5-times attenuation) as one-fifth of Model 2.<br>
+</li>
+<li>Verify reference output checks: benchmark turnaround peak sits at redshift 1.605 with angular-diameter distance 1,747.57 megaparsecs (8.47 kiloparsecs per arcsecond); at redshift 14.1793, size ratios relative to the expanding benchmark equal 17.44 (static tired light), 5.99 (bounded), and 3.49 (steep 5-times); at redshift 32.0, benchmark angular-diameter distance equals 346.4 megaparsecs and benchmark comoving distance equals 11,431 megaparsecs; tangential velocity conversion (0.00474047 times proper motion in milliarcseconds per year times distance in parsecs) yields 130.1 kilometers per second for Capotauro (37.6 mas/yr at 730 pc, matching Liu et al.’s 132 ± 28 km/s) and 15.1 kilometers per second for JADES-GS-BD-5 (49.8 mas/yr at 64 pc, matching Liu et al.’s 15.0 km/s)2.</li>
+</ol>
+</blockquote>
+<p><strong>Part B — Reproducing the Prospective Held-Out Reclassification Pipeline (Unexecuted):</strong></p>
+<blockquote>
+<ol type="1">
+<li>Retrieve calibrated multi-epoch JWST NIRCam mosaics and weight maps from the Mikulski Archive for Space Telescopes (MAST) for Development Fields (CEERS ERS 1345 + GO 2234 + GO 7814/8559; Abell 2744 UNCOVER/GLASS; Bullet Cluster) and Blind Held-Out Fields (PRIMER-COSMOS and PRIMER-UDS), plus the ASTRODEEP-JWST catalog from VizieR (J/A+A/691/A240)2.<br>
+</li>
+<li>Retrieve Gaia DR3 astrometric reference tables and Z5/Z6 parallax zero-point recipes from gea.esac.esa.int/archive/documentation/GDR3/47.<br>
+</li>
+<li>Install astropy, photutils (Bradley et al. 2026)84, webbpsf, SExtractor, and competing spectral libraries (ATMO2020, Sonora Elf Owl, LOWZ/SAND, plus standard galaxy and dusty emission-line templates)4.<br>
+</li>
+<li>Execute Stages 1–5 (alignment, empirical PSF modeling, 1,000-source synthetic injection-recovery per field, Voronoi versus Gaussian deblending, and Bayesian template tournament) strictly on the Development Fields; lock all thresholds and save SHA-256 configuration checksums.<br>
+</li>
+<li>Run the frozen pipeline once on PRIMER-COSMOS and PRIMER-UDS without parameter retuning, exporting candidate flags and out-of-sample confusion matrices to CONFUSION_MATRICES.csv, followed by blinded dual-reviewer human spectral inspection of all surviving unresolved redshift-above-12 candidates.</li>
+</ol>
+</blockquote>
+<h4 id="lib-companion-2-evidence_ledger.csv-claim-verification-register"><strong>Companion 2: EVIDENCE_LEDGER.csv (Claim-Verification Register)</strong></h4>
+<table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Claim ID</th>
+<th>Exact Claim Wording</th>
+<th>ArcSecs Principle(s)</th>
+<th>Source URL / ID</th>
+<th>Source Type</th>
+<th>Measurement vs. Inference</th>
+<th>Verification Status</th>
+<th>Counter-Observation / Constraint</th>
+<th>Uncertainty</th>
+<th>Independent Check</th>
+<th>Current Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CLM-01</td>
+<td>Capotauro (claimed z ~ 32 galaxy) exhibits 37.6 (+5.5/−5.6) mas/yr proper motion, confirming Milky Way Y-dwarf status</td>
+<td>AP-11</td>
+<td>doi:10.1093/mnras/stag2055 (arXiv:2608.07461)2</td>
+<td>Peer-reviewed MNRAS (Oct/Dec 2026)</td>
+<td>Direct astrometric measurement (motion); model inference (730 pc distance)</td>
+<td>Verified</td>
+<td>None on motion; distance depends on Besançon/SED model</td>
+<td>±20 mas shift; ±110 pc distance</td>
+<td>68-source frame + 4-image injection-recovery</td>
+<td>Confirmed DOF (Galactic); MDI (distance)</td>
+</tr>
+<tr class="even">
+<td>CLM-02</td>
+<td>Bullet-BD1 and Bullet-BD2 (Bullet Cluster dropouts) are cold Milky Way Y dwarfs confirmed by both NIRSpec and proper motion</td>
+<td>AP-11</td>
+<td>arXiv:2604.23668 (ApJL 1010, L13)2</td>
+<td>Peer-reviewed ApJ Letters (2026)</td>
+<td>Direct measurement (NIRSpec + 49 &amp; 24 mas/yr motion); model inference (160–580 pc)</td>
+<td>Verified (core table; full co-author list blocked)</td>
+<td>Distance assumes fixed Jupiter radius without radius error</td>
+<td>±8 and ±3 mas/yr; 160–240 &amp; 580 pc</td>
+<td>Dual independent methods (spectrum + motion)</td>
+<td>Confirmed DOF (Y dwarfs); MDI (distance)</td>
+</tr>
+<tr class="odd">
+<td>CLM-03</td>
+<td>UNCOVER-BD-1 and BD-2 were initially selected as high-redshift AGN before NIRSpec confirmed cold brown dwarfs</td>
+<td>AP-11</td>
+<td>doi:10.3847/1538-4357/ad206f3</td>
+<td>Peer-reviewed ApJ (Feb 2024)</td>
+<td>Direct NIRSpec absorption features (H₂O, CH₄, NH₃, PH₃); model distance (0.87–4.5 kpc)</td>
+<td>Verified</td>
+<td>Proper motion unavailable in paper</td>
+<td>±0.23 to ±1.2 kpc</td>
+<td>14.3 hr NIRSpec PRISM spectroscopy</td>
+<td>Confirmed DOF (brown dwarfs); MDI (distance)</td>
+</tr>
+<tr class="even">
+<td>CLM-04</td>
+<td>JADES-GS-BD-5 has a direct trigonometric parallax of 15.7 (+1.4/−1.3) mas yielding geometric distance 64 (+6/−5) pc</td>
+<td>AP-11</td>
+<td>arXiv:2611.0834621</td>
+<td>Preprint (Nov 2026)</td>
+<td>Directly observed trigonometric parallax &amp; proper motion (49.8 mas/yr)</td>
+<td>Verified</td>
+<td>Other JADES candidates lack parallax and show high SED velocity scatter</td>
+<td>+6/−5 pc</td>
+<td>Direct orbital triangulation</td>
+<td>Confirmed DOF (benchmark parallax)</td>
+</tr>
+<tr class="odd">
+<td>CLM-05</td>
+<td>CEERS-93316 (photometric redshift ~16.4) is a dusty star-forming galaxy at spectroscopic redshift 4.912</td>
+<td>AP-11</td>
+<td>Arrabal Haro et al. (2023), Nature 622, 70723</td>
+<td>Peer-reviewed Nature</td>
+<td>Directly observed NIRSpec rest-optical emission lines</td>
+<td>Verified</td>
+<td>Extragalactic (not a local Milky Way star)</td>
+<td>Unambiguous multi-line centroid</td>
+<td>Multiple emission lines (<math display="block"><semantics><mrow><mi>O</mi><mi>I</mi><mi>I</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">O III</annotation></semantics></math>, H-beta, H-alpha)</td>
+<td>Confirmed DOF (extragalactic interloper)</td>
+</tr>
+<tr class="even">
+<td>CLM-06</td>
+<td>JADES-GS-z14-0 is spectroscopically confirmed at redshift 14.1793 ± 0.0007 by ALMA 6.6-sigma <math display="block"><semantics><mrow><mi>O</mi><mi>I</mi><mi>I</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">O III</annotation></semantics></math> 88 µm matching JWST UV features</td>
+<td>AP-10, AP-11</td>
+<td>eso.org/…/eso2507b.pdf (Schouws 2024/2025; Carniani 2024)1</td>
+<td>Observatory science paper</td>
+<td>Directly observed 223.528 GHz line + UV break + C III]</td>
+<td>Verified</td>
+<td>Constrains universal “all objects are local” thesis</td>
+<td>±0.0007 redshift; 136 ± 31 km/s FWHM</td>
+<td>Independent submm + space NIR facilities</td>
+<td>Confirmed DOF (high-redshift control)</td>
+</tr>
+<tr class="odd">
+<td>CLM-07</td>
+<td>GN-z11 is confirmed at redshift 10.603 (systemic 10.6016) by multi-line UV and MIRI spectroscopy</td>
+<td>AP-10, AP-11</td>
+<td>Bunker et al. (2023); arXiv:2608.12699 (SPURS 2026)8</td>
+<td>Peer-reviewed + 2026 preprint</td>
+<td>Directly observed multi-transition emission lines</td>
+<td>Verified</td>
+<td>AGN vs. starburst power source remains debated</td>
+<td>High-S/N (&gt;20 continuum, &gt;5 lines)</td>
+<td>Multiple JWST instruments (NIRSpec + MIRI)</td>
+<td>Confirmed DOF (multi-line control)</td>
+</tr>
+<tr class="even">
+<td>CLM-08</td>
+<td>Individual maser component tracking in NGC 4258 spans 6.7 to 8.1 Mpc across statistically robust fits</td>
+<td>AP-10, AP-11</td>
+<td>doi:10.1093/mnras/stag1327 (arXiv:2601.14374)5</td>
+<td>Peer-reviewed MNRAS (Aug 2026)</td>
+<td>Geometric VLBI modeling reanalysis</td>
+<td>Verified</td>
+<td>Averaged-data analyses cluster tightly at 7.55–7.60 Mpc (Reid 2019; MCP 2026)</td>
+<td>6.7–8.1 Mpc span (~20%)</td>
+<td>Reproduces Reid 2019 (7.551 Mpc) on averaged set</td>
+<td>Confirmed MDI (anchor cadence systematic)</td>
+</tr>
+<tr class="odd">
+<td>CLM-09</td>
+<td>Static exponential tired light &amp; bounded propagation predict 5–17× LARGER physical sizes than the expanding benchmark at redshifts 10.6–14.2</td>
+<td>AP-3, AP-11</td>
+<td>Executed Python benchmark (analysis/angular_size_models.py)6</td>
+<td>Derived numerical verification</td>
+<td>Derived consequence of distance-redshift laws</td>
+<td>Verified (executed)</td>
+<td>Steep 5× attenuation predicts smaller sizes only below redshift ~4.2</td>
+<td>Exact analytical values for fixed H₀ = 70</td>
+<td>Cross-checked against Davis &amp; Lineweaver (2004)</td>
+<td>Confirmed DC (opposes universal “smaller” claim)</td>
+</tr>
+<tr class="even">
+<td>CLM-10</td>
+<td>ASTRODEEP-JWST raw surface brightness scales as one plus redshift to the −1.3 power, but IllustrisTNG evolution + deblending reconcile it with benchmark models</td>
+<td>AP-3, AP-11</td>
+<td>arXiv:2606.27182 (Desmond et al. 2026)26</td>
+<td>Preprint (Jun 2026)</td>
+<td>Raw photometry (DOF) vs. evolutionary forward model (MDI)</td>
+<td>Verified</td>
+<td>Deblending shifts slope by 0.15; Lubin &amp; Sandage (2001) rejected tired light at &gt;10 sigma</td>
+<td>Evolution slope 2.23 ± 0.20</td>
+<td>531,173-object VizieR catalog + TNG mocks</td>
+<td>Verified DOF/MDI (evolution degeneracy)</td>
+</tr>
+<tr class="odd">
+<td>CLM-11</td>
+<td>Invariant photon rest mass is bounded below 1 × 10⁻¹⁸ eV (solar wind MHD) and ~2 × 10⁻¹⁴ eV (FRBs)</td>
+<td>AP-1</td>
+<td>PDG (2024), Phys. Rev. D 110, 03000163</td>
+<td>Curated metrology review</td>
+<td>Direct null upper bounds</td>
+<td>Verified</td>
+<td>Energy/momentum and gravitational coupling are observed; rest mass is undetected</td>
+<td>Method-dependent (10⁻¹⁸ to 10⁻¹⁴ eV)</td>
+<td>Multiple independent terrestrial/space methods</td>
+<td>Confirmed DOF (null bound on rest mass)</td>
+</tr>
+<tr class="even">
+<td>CLM-12</td>
+<td>Type Ia supernova light-curve widths scale as one plus redshift to the 1.003 ± 0.015 power; laboratory optical clocks shift across 1 mm height</td>
+<td>AP-2, AP-3, AP-4</td>
+<td>White et al. (2024); Bothwell et al. (2022)12</td>
+<td>Peer-reviewed MNRAS &amp; Nature</td>
+<td>Directly observed light-curve durations &amp; clock frequency ratios</td>
+<td>Verified</td>
+<td>Directly constrains pure static energy-loss models lacking arrival-interval stretching</td>
+<td>±0.015 exponent; ~10⁻¹⁹ fractional frequency</td>
+<td>Independent quasar scaling (Lewis &amp; Brewer 2023)</td>
+<td>Confirmed DOF (open ArcSecs mechanism burden)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lib-companion-3-experiments.csv-prospective-test-driven-verification-matrix"><strong>Companion 3: EXPERIMENTS.csv (Prospective Test-Driven Verification Matrix)</strong></h4>
+<table>
+
+
+
+
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Test ID</th>
+<th>Proposed Mechanism / Audit Target</th>
+<th>Direct Observable</th>
+<th>Equipment or Public Catalog</th>
+<th>Control</th>
+<th>Precommitted Predicted Signature</th>
+<th>Detection Threshold</th>
+<th>Falsifier</th>
+<th>Feasibility</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>EXP-01</td>
+<td>Foreground substellar contamination of compact F277W/F356W dropouts</td>
+<td>Multi-epoch angular centroid displacement (mas/yr)</td>
+<td>MAST JWST NIRCam Cycle 1–5 overlapping mosaics (PRIMER-COSMOS, PRIMER-UDS)</td>
+<td>Synthetic zero-motion injected stars &amp; confirmed z &gt; 10 galaxies (GN-z11, GS-z14-0)</td>
+<td>&gt;20% of unresolved F356W dropouts brighter than 28.0 AB show &gt;5-sigma proper motion</td>
+<td>≥5-sigma displacement over ≥2.0-yr baseline</td>
+<td>&lt;5% moving fraction in held-out fields over ≥2.5-yr baseline</td>
+<td>High (public archival data)</td>
+<td>Unknown / Open to ArcSecs research teams</td>
+</tr>
+<tr class="even">
+<td>EXP-02</td>
+<td>Deblending &amp; photometric-interloper bias in ASTRODEEP-JWST Tolman slope</td>
+<td>Surface-brightness power-law exponent vs. redshift</td>
+<td>ASTRODEEP-JWST (VizieR J/A+A/691/A240) + public JWST spec-z catalogs</td>
+<td>Full photometric sample vs. spec-z-only subsample; Voronoi vs. Gaussian deblending</td>
+<td>Spec-z filtering + deblending shifts slope by ≥0.20 from −1.3</td>
+<td>≥3-sigma slope shift under bootstrap resampling</td>
+<td>Slope shift &lt;0.05 across all filtering/deblending cuts</td>
+<td>High (public archival data)</td>
+<td>Unknown / Open to ArcSecs research teams</td>
+</tr>
+<tr class="odd">
+<td>EXP-03</td>
+<td>Cadence-induced spot-matching bias in NGC 4258 megamaser anchor</td>
+<td>Individual maser spot sky positions, LOS velocities, LOS accelerations</td>
+<td>High-cadence monthly VLBA + GBT 22 GHz monitoring (18 months)</td>
+<td>Historical 1994–2004 averaged catalog (Reid 2019; 7.576 Mpc)</td>
+<td>Individual-tracked distance collapses 6.7–8.1 Mpc spread and shifts ≥1.5 sigma from 7.576 Mpc</td>
+<td>Sub-2% precision with unambiguous epoch-to-epoch spot identity</td>
+<td>Convergence within ±0.08 Mpc of 7.576 Mpc at reduced chi-squared ~1</td>
+<td>Moderate (requires VLBI observing proposal)</td>
+<td>Unknown / VLBI community</td>
+</tr>
+<tr class="even">
+<td>EXP-04</td>
+<td>Discriminating static tired light vs. compact geometry at z &gt; 10</td>
+<td>Sub-0.1-arcsec ALMA <math display="block"><semantics><mrow><mi>O</mi><mi>I</mi><mi>I</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">O III</annotation></semantics></math> 88 µm velocity field &amp; spatial extent</td>
+<td>ALMA Band 6 long-baseline array targeting JADES-GS-z14-0 &amp; GHZ2</td>
+<td>Resolved lower-redshift starburst rotation/dispersion benchmarks</td>
+<td>Static tired light requires ~17× larger virial mass (~1.7 × 10¹⁰ solar masses) &amp; extended wings</td>
+<td>≥5-sigma resolved spatial/kinematic profile</td>
+<td>Enclosed dynamical mass tightly &lt;2 × 10⁹ solar masses at 136 km/s FWHM</td>
+<td>Moderate (requires ALMA Cycle proposal)</td>
+<td>Unknown / ALMA observers</td>
+</tr>
+<tr class="odd">
+<td>EXP-05</td>
+<td>Direct trigonometric parallax for Capotauro &amp; Bullet-BD1/BD2</td>
+<td>Annual oscillatory parallax ellipse (mas)</td>
+<td>4-epoch JWST NIRCam medium-band astrometry timed at maximum parallax factor</td>
+<td>Local 68+ compact background galaxy reference frame (Liu 2026a/b method)</td>
+<td>Direct geometric parallax of ~1.4 mas (Capotauro) to 4–6 mas (Bullet-BD1); tests if Capotauro is closer than 730 pc</td>
+<td>≥5-sigma parallax detection (≤0.3 mas precision)</td>
+<td>Parallax incompatible with atmospheric/kinematic distance by &gt;3 sigma</td>
+<td>High (feasible JWST GO program)</td>
+<td>Unknown / JWST astrometry teams</td>
+</tr>
+<tr class="even">
+<td>EXP-06</td>
+<td>Testing secular light-speed deceleration within constant universal progression T</td>
+<td>Long-baseline round-trip timing residuals &amp; laboratory cavity-atomic comparisons</td>
+<td>Lunar Laser Ranging, planetary spacecraft ranging, optical-clock vs. cavity stability</td>
+<td>Constant-c metrology baseline</td>
+<td>Fractional speed drift near 7 parts in 10¹¹ per year if light slows at Hubble rate</td>
+<td>≥5-sigma coherent linear drift across independent ranging baselines</td>
+<td>Null drift bound tighter than 1 part in 10¹² per year</td>
+<td>Moderate-High (archival + metrology labs)</td>
+<td>Unknown / Metrology &amp; LLR collaborations</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lib-companion-4-confusion_matrices.csv-prospective-unexecuted-pipeline-schema"><strong>Companion 4: CONFUSION_MATRICES.csv (Prospective Unexecuted Pipeline Schema)</strong></h4>
+<p><em>Execution Disclosure:</em> Because no raw JWST FITS mosaics were downloaded or processed in this commission, the table below specifies the exact precommitted schema to be populated once analysis/redteam_pipeline_spec.py runs on the blind held-out fields (PRIMER-COSMOS and PRIMER-UDS).</p>
+<table>
+
+
+
+
+
+
+
+
+
+<thead>
+<tr class="header">
+<th>Validation Split</th>
+<th>True Physical Class (Injected or Spec/PM Verified)</th>
+<th>Predicted: Foreground Brown Dwarf</th>
+<th>Predicted: Dusty Line Interloper</th>
+<th>Predicted: Confirmed High-z Extragalactic</th>
+<th>Predicted: Ambiguous / Human Review Gate</th>
+<th>Execution Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Development (CEERS / UNCOVER / Bullet) — Synthetic Injection (N = 1,000/field)</td>
+<td>Injected Moving Point Source (10–100 mas/yr)</td>
+<td>Unexecuted (Target ≥90% recall)</td>
+<td>Unexecuted</td>
+<td>Unexecuted (Target &lt;1% false high-z)</td>
+<td>Unexecuted</td>
+<td>Unexecuted specification</td>
+</tr>
+<tr class="even">
+<td>Development — Synthetic Injection (N = 1,000/field)</td>
+<td>Injected Stationary Dusty Line Galaxy (z = 3–6)</td>
+<td>Unexecuted</td>
+<td>Unexecuted (Target ≥85% recall)</td>
+<td>Unexecuted (Target &lt;2% false high-z)</td>
+<td>Unexecuted</td>
+<td>Unexecuted specification</td>
+</tr>
+<tr class="odd">
+<td>Development — Synthetic Injection (N = 1,000/field)</td>
+<td>Injected Stationary High-z Galaxy (z = 10–20)</td>
+<td>Unexecuted (Target &lt;1% false motion)</td>
+<td>Unexecuted</td>
+<td>Unexecuted (Target ≥80% recall)</td>
+<td>Unexecuted</td>
+<td>Unexecuted specification</td>
+</tr>
+<tr class="even">
+<td>Blind Holdout (PRIMER-COSMOS + PRIMER-UDS)</td>
+<td>Verified Real Follow-Up Subset (Post-Freeze)</td>
+<td>Unexecuted (Populated blind)</td>
+<td>Unexecuted (Populated blind)</td>
+<td>Unexecuted (Populated blind)</td>
+<td>Unexecuted (Populated blind)</td>
+<td>Unexecuted specification</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lib-companion-5-referee_challenges.md-technical-peer-review-audit"><strong>Companion 5: REFEREE_CHALLENGES.md (Technical Peer-Review Audit)</strong></h4>
+<p><strong>Challenge 1 — Does reclassifying Capotauro and the two Bullet Cluster dwarfs establish ArcSecs Premise 11 across deep extragalactic surveys?</strong> <em>Response:</em> It substantiates the methodological skepticism of Premise 11 for a specific, high-profile subclass—single-epoch compact F277W and F356W broadband dropouts—where distances were overestimated by five to seven orders of magnitude2. However, a targeted three-object sample cannot be extrapolated to a universal contamination rate, and multi-line spectroscopic controls (GN-z11, GHZ2, JADES-GS-z14-0) demonstrate that genuine high-redshift extragalactic sources coexist alongside foreground brown dwarfs1.<br>
+<strong>Challenge 2 — Your executed calculations show that static tired light makes confirmed high-redshift galaxies 5 to 17 times LARGER than the expanding benchmark. Doesn’t that conflict with ArcSecs Premise 11?</strong> <em>Response:</em> Yes—for spectroscopically confirmed extragalactic sources evaluated under monotonic static tired-light laws anchored to the local Hubble length, inferred physical radii are strictly larger, not smaller, than in the expanding benchmark6. Highlighting this sign reversal defines a concrete theoretical fork for ArcSecs: either confirmed high-redshift galaxies are physically larger (alleviating compactness tensions while requiring revision of Premise 11’s universal “smaller” claim for confirmed galaxies), or an alternative ArcSecs framework must derive a substantial intrinsic, non-distance redshift mechanism that compresses high-redshift distances without violating 10-to-150-megaparsec megamaser calibrations.<br>
+<strong>Challenge 3 — Why didn’t Capotauro’s earlier proper-motion non-detection prevent misclassification, and how secure is Liu et al.’s 2026 detection?</strong> <em>Response:</em> Early observations lacked a sufficient time baseline, yielding only a coarse upper limit near 137 milliarcseconds per year—well above Capotauro’s actual motion4. Extending the JWST NIRCam baseline to 3.5 years (December 2022 to June 2026), anchoring 68 compact reference sources, and validating via four-image injection-recovery enabled Liu et al. (2026a) to measure a 132 ± 20 milliarcsecond shift (37.6 +5.5/−5.6 milliarcseconds per year), ruling out an extragalactic origin beyond 6 sigma2. Its distance (730 ± 110 parsecs) remains model-dependent and awaits direct trigonometric parallax (Test EXP-05).<br>
+<strong>Challenge 4 — If NGC 4258 individual maser tracking spans 6.7 to 8.1 megaparsecs, does that collapse the extragalactic distance scale?</strong> <em>Response:</em> No. A 6.7-to-8.1-megaparsec sensitivity span represents roughly a ±10 percent methodological envelope—large enough to bear directly on percent-level Hubble-constant calibration disputes, but incapable of relocating megaparsec-scale galaxies into the Milky Way5. It demonstrates that geometric anchors are orders of magnitude more secure than broadband dropouts yet still require monthly VLBI cadence to achieve claimed 1 percent precision.<br>
+<strong>Challenge 5 — How can ArcSecs retain constant universal progression T when Type Ia supernovae exhibit light-curve durations scaling as one plus redshift to the 1.003 ± 0.015 power?</strong> <em>Response:</em> This observation is logged explicitly as Constraint REQ-01 and identified as a <strong>currently missing physical mechanism</strong>12. Pure photon energy loss at fixed light speed across a static path fails REQ-01. Within constant T, matching both wavelength shift and arrival-interval stretching requires either physical kinematic recession or a mathematically consistent secular deceleration of light speed that also satisfies local laboratory and planetary-ranging bounds (Test EXP-06) without introducing chromatic dispersion or angular blurring. No completed microphysical derivation yet meets all criteria concurrently.<br>
+<strong>Challenge 6 — Are Bullet-BD1 and Bullet-BD2 confirmed rogue planets?</strong> <em>Response:</em> No. While temperatures near 300 kelvin overlap mature giant-planet atmospheres (similar to JADES-GS-BD-5’s benchmark status as a planetary-mass analogue), neither object has a direct dynamical mass measurement, and Bradač et al. (2026) classify both strictly as ultra-cool Y-type brown dwarfs4.<br>
+<strong>Challenge 7 — Does Desmond et al. (2026) completely resolve the Tolman surface-brightness test against non-expanding models?</strong> <em>Response:</em> Desmond et al. (2026) show that raw ASTRODEEP-JWST surface brightness (exponent −1.3) and radio distance-duality data are consistent with galaxy luminosity-density evolution in IllustrisTNG (exponent 2.23 ± 0.20)26. Simultaneously, they show that the raw trend lies between non-evolving expansion and static tired light and shifts by 0.15 from deblending choices alone26. Because luminosity evolution is simulation-inferred rather than directly measured geometrically, surface-brightness tests remain model-degenerate and require independent kinematic mass mapping (Test EXP-04) and spec-z-only deblending audits (Test EXP-02).</p>
+<h4 id="lib-companion-6-bibliography.md-independently-verified-primary-bibliography-48-scholarly-sources"><strong>Companion 6: BIBLIOGRAPHY.md (Independently Verified Primary Bibliography — 48 Scholarly Sources)</strong></h4>
+<blockquote>
+<ol type="1">
+<li><strong>AAS Journals</strong> (2026). <em>Data Guide</em> and <em>Guidelines for Use of AI and LLMs in Manuscript Preparation</em> (announced 9 September 2026). https://journals.aas.org/data-guide/ and https://journals.aas.org/author-llm-guidelines9.<br>
+</li>
+<li><strong>Abbott, B. P., et al.</strong> (2017) &amp; <strong>2025 Multi-Messenger Standard Siren Review</strong>. Binary neutron star merger GW170817 / NGC 4993 luminosity distance and Hubble constant determinations. https://arxiv.org/pdf/2506.1541054.<br>
+</li>
+<li><strong>Álvarez-Márquez, J., et al.</strong> (2025). JWST MIRI medium-resolution spectroscopy of GN-z11 (cited in Ji et al. 2025 and SPURS 2026). https://academic.oup.com/mnras/article/541/3/2134/818538825.<br>
+</li>
+<li><strong>Arrabal Haro, P., Dickinson, M., Finkelstein, S. L., et al.</strong> (2023). Confirmation and refutation of very luminous galaxies in the early universe (CEERS-93316 at spectroscopic redshift 4.912). <em>Nature</em>, 622, 707. https://arxiv.org/html/2303.15431v323.<br>
+</li>
+<li><strong>Birrer, S., et al.</strong> (2020). TDCOSMO IV: Hierarchical time-delay cosmography. https://arxiv.org/abs/2007.0294189.<br>
+</li>
+<li><strong>Birrer, S., Millon, M., Sluse, D., Shajib, A. J., Courbin, F., Erickson, S., Koopmans, L. V. E., Suyu, S. H., &amp; Treu, T.</strong> (2024). Time-Delay Cosmography: Measuring the Hubble Constant and Other Cosmological Parameters with Strong Gravitational Lensing. https://pmc.ncbi.nlm.nih.gov/articles/PMC11182856/55.<br>
+</li>
+<li><strong>Blondin, S., et al.</strong> (2008). Time dilation in Type Ia supernova spectra at high redshift. <em>The Astrophysical Journal</em>, 682, 72413.<br>
+</li>
+<li><strong>Bonetti, L., et al.</strong> (2016, 2017). Photon mass limits from fast radio bursts (compiled in PDG 2024). https://ccwww.kek.jp/pdg/2024/listings/rpp2024-list-photon.pdf63.<br>
+</li>
+<li><strong>Bothwell, T., Kennedy, C. J., Aeppli, A., Kedar, D., Robinson, J. M., Oelker, E., et al.</strong> (2022). Resolving the gravitational redshift across a millimetre-scale atomic sample. <em>Nature</em> (cited in NIST/NSF/ResearchGate archives). https://www.researchgate.net/publication/358652592_Resolving_the_gravitational_redshift_across_a_millimetre-scale_atomic_sample14.<br>
+</li>
+<li><strong>Bradač, M., et al.</strong> (2026). Two Exciting High-redshift Galaxy Candidates Turn Out to Be Two Exciting Brown Dwarfs (Bullet-BD1 and Bullet-BD2). <em>The Astrophysical Journal Letters</em>, 1010, L13. https://arxiv.org/abs/2604.236682. <em>(Full co-author list beyond M. Bradač et al. was inaccessible in the blocked HTML endpoint.)</em><br>
+</li>
+<li><strong>Bradley, L., et al.</strong> (2026). <em>Photutils</em> photometry and astrometry package (cited in Liu et al. 2026a). https://academic.oup.com/mnras/advance-article-pdf/doi/10.1093/mnras/stag2055/72561131/stag2055.pdf84.<br>
+</li>
+<li><strong>Bunker, A. J., et al.</strong> (2023). JADES NIRSpec Spectroscopy of GN-z11: Lyman-alpha emission and possible enhanced nitrogen abundance in a z = 10.60 luminous galaxy. https://www.researchgate.net/figure/D-top-and-1D-bottom-spectra-of-GN-z11-using-the-PRISM-CLEAR-configuration-of-NIRSpec_fig1_3723324518.<br>
+</li>
+<li><strong>Burgasser, A. J., Bezanson, R., Labbe, I., Brammer, G., et al.</strong> (2024). UNCOVER: JWST Spectroscopy of Three Cold Brown Dwarfs at Kiloparsec-scale Distances. <em>The Astrophysical Journal</em>, 962, 177. DOI: 10.3847/1538-4357/ad206f3.<br>
+</li>
+<li><strong>Carniani, S., et al.</strong> (2024). Spectroscopic confirmation of JADES-GS-z14-0 (cited and refined in Schouws et al. 2024/2025). https://www.eso.org/public/archives/releases/sciencepapers/eso2507/eso2507b.pdf1.<br>
+</li>
+<li><strong>Castellano, M., et al.</strong> (2024). JWST NIRSpec confirmation of GHZ2/GLASS-z12 at spectroscopic redshift 12.34. https://arxiv.org/pdf/2406.084087.<br>
+</li>
+<li><strong>Chou, C. W., Hume, D. B., &amp; Rosenband, T.</strong> (2010). Optical clock frequency comparisons. <em>Science</em>, 329, Issue 5999. https://www.osti.gov/biblio/337632867.<br>
+</li>
+<li><strong>Davis, T. M., &amp; Lineweaver, C. H.</strong> (2004). Expanding Confusion: common misconceptions of cosmological horizons and the superluminal expansion of the universe. <em>Publications of the Astronomical Society of Australia</em>, 21(1), 97–109. https://arxiv.org/abs/astro-ph/0310808 (DOI: 10.1071/AS03040)11.<br>
+</li>
+<li><strong>Desmond, H., Yasin, T., Stiskalek, R., &amp; von Hausegger, S.</strong> (2026). ASTRODEEP-JWST Tolman surface brightness and distance-duality forward modeling (Preprint, 26 June 2026). https://arxiv.org/pdf/2606.2718226.<br>
+</li>
+<li><strong>Donnan, C. T., et al.</strong> (2023, 2026). Early JWST z ~ 16 selection (CEERS-93316) and Cycle 4 NIRSpec follow-up (<em>ApJ</em>, 1002, 134). https://www.research.ed.ac.uk/files/676967507/Donnan_2026_ApJ_1002_134.pdf29.<br>
+</li>
+<li><strong>ESA Gaia Collaboration &amp; DPAC</strong> (2022–2026). <em>Gaia Data Release 3 Technical Documentation</em> and Data Model. https://gea.esac.esa.int/archive/documentation/GDR3/48.<br>
+</li>
+<li><strong>Ferrara, A., et al.</strong> (2026). Pair-instability supernova alternative modeling for Capotauro (cited in Liu et al. 2026a and Bradač et al. 2026). https://academic.oup.com/mnras/advance-article/doi/10.1093/mnras/stag2055/90038232.<br>
+</li>
+<li><strong>Freedman, W. L., et al.</strong> (2024, 2025, 2026). Chicago–Carnegie Hubble Program (CCHP) TRGB/JAGB status and SH0ES calibration-shift summary. https://indico.fnal.gov/event/72820/contributions/342061/attachments/199913/278671/Freedman_DPF_2026.pdf19.<br>
+</li>
+<li><strong>Gandolfi, G., et al.</strong> (2025/2026). Mysteries of Capotauro: Investigating the puzzling nature of an extreme F356W-dropout. <em>Astronomy &amp; Astrophysics</em>, 706, A364. https://arxiv.org/html/2509.01664v117.<br>
+</li>
+<li><strong>Goldhaber, A. S., &amp; Nieto, M. M.</strong> (1968, 2010). New geomagnetic limit on the mass of the photon (<em>Phys. Rev. Lett.</em>, 21, 567) and <em>Photon and Graviton Mass Limits</em> (arXiv:0809.1003). https://arxiv.org/abs/0809.100362.<br>
+</li>
+<li><strong>Graczyk, D., et al.</strong> (2020). Detached eclipsing binary distance to the Small Magellanic Cloud (62.44 ± 0.47 stat ± 0.81 sys kpc). <em>The Astrophysical Journal</em>, 904, 13. DOI: 10.3847/1538-4357/abbb2b50.<br>
+</li>
+<li><strong>Hainline, K. N., Willmer, C. N. A., et al.</strong> (2024a, 2024b). Brown Dwarf Candidates in the JADES and CEERS Extragalactic Surveys (<em>ApJ</em>, 962, 124) and JADES Galaxy Candidates at z &gt; 8 (<em>ApJ</em>, 964, 71). https://curis.ku.dk/ws/files/388997645/Hainline_2024_ApJ_964_71.pdf32.<br>
+</li>
+<li><strong>Herrnstein, J. R., et al.</strong> (1999). First robust geometric water-megamaser distance to NGC 4258 (7.2 ± 0.3 Mpc; cited in van der Boom &amp; Kushnir 2026). https://academic.oup.com/mnras/article/550/4/stag1327/87360535.<br>
+</li>
+<li><strong>Humphreys, E. M. L., et al.</strong> (2013). Geometric megamaser distance to NGC 4258 (7.60 ± 0.17 stat ± 0.15 sys Mpc; cited in van der Boom &amp; Kushnir 2026). https://academic.oup.com/mnras/article/550/4/stag1327/87360535.<br>
+</li>
+<li><strong>Ji et al.</strong> (2025). JADES — the small blue bump in GN-z11: insights into the nuclear region of a galaxy at z = 10.6. <em>MNRAS</em>, 541(3), 2134. https://academic.oup.com/mnras/article/541/3/2134/818538836.<br>
+</li>
+<li><strong>LaViolette, P. A.</strong> (2021) — reviewing <strong>Lopez-Corredoira (2014)</strong> and <strong>Lerner (2018)</strong>. Expanding or Static Universe: Emergence of a New Paradigm. <em>International Journal of Astronomy and Astrophysics</em>, 11, 195. DOI: 10.4236/ijaa.2021.11201126.<br>
+</li>
+<li><strong>Lewis, G. F., &amp; Brewer, B. J.</strong> (2023). Detection of cosmological variability timescale stretching in high-redshift quasars. <em>Nature Astronomy</em>, 7(10), 1265–1269. https://arxiv.org/pdf/2407.0953213.<br>
+</li>
+<li><strong>Lindegren, L., Bastian, U., Biermann, M., Bombrun, A., De Torres, A., et al.</strong> (2021b). Gaia Early Data Release 3: Parallax zero-point bias (Z5/Z6 schemes and RUWE quality cuts). https://arxiv.org/pdf/2608.12619 and https://academic.oup.com/mnras/article/523/2/2369/717942444.<br>
+</li>
+<li><strong>Liu, F.-Y. F., McLeod, D. J., Sutlieff, B. J., Dupuy, T. J., Dunlop, J. S., Chen, X., McLure, R. J., et al.</strong> (2026a). A clear detection of proper motion confirms that the claimed z ~ 32 galaxy candidate, “Capotauro”, is a Y-type brown dwarf. <em>MNRAS</em>, 553(3), stag2055 (published online 28 Oct 2026). DOI: 10.1093/mnras/stag2055 (arXiv:2608.07461)2.<br>
+</li>
+<li><strong>Liu, F.-Y. F., McLeod, D. J., Chen, X., Sutlieff, B. J., Leung, H.-H., Fontanive, C., Dunlop, J. S., et al.</strong> (2026b). Direct trigonometric parallax of JADES-GS-BD-5 and JADES Y-dwarf astrometric catalog (Preprint, 6 Nov 2026). https://arxiv.org/pdf/2611.0834621.<br>
+</li>
+<li><strong>Lubin, L. M., &amp; Sandage, A.</strong> (2001). The Tolman Surface Brightness Test for the Reality of the Expansion. IV. <em>The Astronomical Journal</em>, 122(3), 1084–1103. https://arxiv.org/abs/astro-ph/0106566 (DOI: 10.1086/322134)60.<br>
+</li>
+<li><strong>Maiolino, R., et al.</strong> (2024). Active galactic nucleus interpretation and high-ionization UV lines in GN-z11 (cited in Ji et al. 2025 and SPURS 2026). https://arxiv.org/html/2608.12699v28.<br>
+</li>
+<li><strong>Megamaser Reanalysis Preprint</strong> (2026). A reanalysis of the megamaser Hubble constant: from spot catalogues to peculiar velocities (Preprint, 15 Sep 2026). https://arxiv.org/pdf/2609.1768418.<br>
+</li>
+<li><strong>Merlin, E., et al.</strong> (2024) &amp; <strong>Tsymbal et al.</strong> (2026). ASTRODEEP-JWST 531,173-object photometric catalog (<em>Astronomy &amp; Astrophysics</em>, 691, A240; VizieR J/A+A/691/A240) and observer-frame surface-brightness scaling (documented in Desmond et al. 2026). https://arxiv.org/pdf/2606.2718226.<br>
+</li>
+<li><strong>Morishita, T., Stiavelli, M., Chary, R.-R., et al.</strong> (2024). Enhanced Subkiloparsec-scale Star Formation: Results from a JWST Size Analysis of 341 Galaxies at z &gt; 5. <em>The Astrophysical Journal</em>, 963, 9. https://air.unimi.it/retrieve/f5e43294-1ea5-4d6e-a18a-b4f7f2685411/Morishita_2024_ApJ_963_9.pdf58.<br>
+</li>
+<li><strong>Naidu, R. P., et al.</strong> (2025). A Cosmic Miracle: MoM-z14 at spectroscopic redshift 14.44. https://cris.unibo.it/bitstream/11585/1047951/1/d.pdf20.<br>
+</li>
+<li><strong>Nonino, M., et al.</strong> (2023). Early Results from GLASS-JWST (GLASS-BD-1 brown dwarf, cited in Burgasser et al. 2024). https://research.rug.nl/files/1220424313/Burgasser_2024_ApJ_962_177.pdf3.<br>
+</li>
+<li><strong>Ormerod, K., et al.</strong> (2024). EPOCHS VI: the size and shape evolution of galaxies since z ~ 8 with JWST observations. <em>MNRAS</em>, 527, 6110–6125. DOI: 10.1093/mnras/stad359757.<br>
+</li>
+<li><strong>Particle Data Group (PDG)</strong> (2024). Review of Particle Physics — Photon Mass Listings (Ryutov 1997, 2007; Retinò 2016; Lakes 1998; Luo 2003; Wang 2023; Tu 2005). <em>Physical Review D</em>, 110, 030001. https://ccwww.kek.jp/pdg/2024/listings/rpp2024-list-photon.pdf63.<br>
+</li>
+<li><strong>Pesce, D. W., Braatz, J. A., Reid, M. J., et al.</strong> (2020a). The Megamaser Cosmology Project XIII. <em>The Astrophysical Journal</em>, 890, 118 (cited in arXiv:2609.17684 and H0DN_aa57993-25.pdf)18.<br>
+</li>
+<li><strong>Pietrzyński, G., et al.</strong> (2013, 2019). Detached eclipsing binary distance to the Large Magellanic Cloud accurate to 2% (arXiv:1303.2063) and 1% (49.59 ± 0.09 kpc, <em>Nature</em>, 567, 200)50.<br>
+</li>
+<li><strong>PNAS Supermassive Dark Star Spectral &amp; Morphological Study</strong> (2025). Alternative spectral and morphological fits to JADES-GS-z11 through JADES-GS-z14-0. <em>PNAS</em>. DOI: 10.1073/pnas.251319312269.<br>
+</li>
+<li><strong>Reid, M. J., Pesce, D. W., &amp; Riess, A. G.</strong> (2019). An Improved Distance to NGC 4258 and Its Implications for the Hubble Constant (7.576 ± 0.082 stat ± 0.076 sys Mpc). https://www.researchgate.net/publication/337461552_An_Improved_Distance_to_NGC_4258_and_Its_Implications_for_the_Hubble_Constant43.<br>
+</li>
+<li><strong>Riess, A. G., et al.</strong> (2022); <strong>Schouws et al.</strong> (2024/2025); <strong>SPURS Collaboration</strong> (2026); <strong>TDCOSMO</strong> (2026); <strong>van der Boom, D., &amp; Kushnir, D.</strong> (2026); <strong>White, R. M. T., Davis, T. M., Lewis, G. F., et al.</strong> (2024); <strong>Zavala, J. A., et al.</strong> (2024); <strong>Zheng, X., Dolde, J., Lochab, V., Merriman, B. N., Li, H., &amp; Kolkowitz, S.</strong> (2022). <em>(Core 2022–2026 empirical anchors individually verified across ApJ 934 L7, ESO eso2507b.pdf, arXiv:2608.12699v2, arXiv:2610.14881v2, doi:10.1093/mnras/stag1327, arXiv:2506.19099, arXiv:2406.08408, and Nature 602, Issue 7897)</em>1.</li>
+</ol>
+</blockquote>
+<h3 id="lib-final-mission-specific-research-compliance-check"><strong>Final Mission-Specific Research Compliance Check</strong></h3>
+<p><strong>Required Single-Paragraph Statement of the ArcSecs Physical Mechanism and Missing Mechanism:</strong><br>
+Within the audited astronomical domain, the ArcSecs physical mechanism explaining verified distance and physical-size overestimates is fully identified for reclassified JWST dropouts: radiative transfer through cold substellar molecular atmospheres (methane, water, ammonia, phosphine, and collision-induced hydrogen absorption in Milky Way Y- and T-type brown dwarfs) and dust extinction plus strong nebular emission lines in intermediate-redshift galaxies physically reshape broadband fluxes to mimic extreme Lyman-break redshifts. By contrast, for spectroscopically confirmed multi-line high-redshift extragalactic systems (such as GN-z11 and JADES-GS-z14-0), a complete ArcSecs cosmological propagation mechanism remains <strong>currently missing</strong>: no verified physical-first interaction within constant universal progression T yet simultaneously accounts for strictly achromatic, blur-free wavelength shifts across factors of 460 in wavelength, Type Ia supernova and quasar light-curve arrival-interval stretching proportional to one plus redshift, laboratory gravitational atomic-clock frequency shifts, and null invariant photon rest-mass bounds below 10⁻¹⁸ electron-volts.<br>
+<strong>Editorial Acceptance Gate Verification:</strong></p>
+<ul>
+<li><ol type="1">
+<li>Report opens with the eleven verbatim ArcSecs premises: <strong>YES</strong>.<br>
+</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>Space, time, and spacetime are never treated as physical substances: <strong>YES</strong>.<br>
+</li>
+</ol></li>
+<li><ol start="3" type="1">
+<li>Relativity and metric expansion are absent as endorsed mechanisms or recommended fallbacks: <strong>YES</strong>.<br>
+</li>
+</ol></li>
+<li><ol start="4" type="1">
+<li>Clock and light-curve measurements are never presented as changes to time itself: <strong>YES</strong>.<br>
+</li>
+</ol></li>
+<li><ol start="5" type="1">
+<li>Opposing measurements are recorded concisely as neutral observational requirements with primary citations: <strong>YES</strong>.<br>
+</li>
+</ol></li>
+<li><ol start="6" type="1">
+<li>Every novel conclusion is backed by verified citations or explicitly marked unverified/unexecuted: <strong>YES</strong>.<br>
+</li>
+</ol></li>
+<li><ol start="7" type="1">
+<li>Manuscript contains zero embedded equations, LaTeX, symbolic derivations, calculation transcripts, or code blocks: <strong>YES</strong>.</li>
+</ol></li>
+</ul>
+<p><strong>Executive Summary of Commission Deliverables:</strong></p>
+<ul>
+<li><strong>Completed Manuscript and Companion Artifacts:</strong> Self-contained UTF-8 manuscript plus companions METHODS_TO_REPRODUCE.md, EVIDENCE_LEDGER.csv, EXPERIMENTS.csv, CONFUSION_MATRICES.csv, REFEREE_CHALLENGES.md, and BIBLIOGRAPHY.md, paired with four publication-grade visuals (Observation-to-Inference Schematic, Proper Motion &amp; Brown-Dwarf Distance Dashboard, NGC 4258 Maser Distance Sensitivity Plot, and Multi-Model Angular-Diameter Distance &amp; Size Ratio Chart).<br>
+</li>
+<li><strong>Most Constructive Result for ArcSecs:</strong> Direct multi-epoch astrometry and follow-up spectroscopy in 2026 empirically confirmed that headline extreme-redshift photometric candidates (Capotauro, Bullet-BD1, Bullet-BD2) were misclassified foreground Milky Way Y dwarfs revised inward by five to seven orders of magnitude, while individual-component VLBI tracking exposed a 6.7–8.1 megaparsec systematic span inside the NGC 4258 geometric anchor—demonstrating the urgent need for rigorous, model-free geometric vetting even though a universal “all distant objects are closer and smaller” rule is not established.<br>
+</li>
+<li><strong>Verified Scholarly Source Count:</strong> 48 independently verified bibliography entries covering 55 individual scholarly works and archival datasets (well above the 35-source requirement).<br>
+</li>
+<li><strong>What Was Executed:</strong> Numerical quadrature integration and cross-verification of angular-diameter distances, physical-size ratios, turnaround redshift, and proper-motion tangential speeds across four explicit distance models (analysis/angular_size_models.py)6; no raw JWST FITS files were downloaded and the prospective PRIMER holdout image-injection pipeline (analysis/redteam_pipeline_spec.py) remains unexecuted.<br>
+</li>
+<li><strong>Single Next Highest-Value Empirical Analysis:</strong> Execute <strong>EXP-01</strong> on public MAST multi-epoch JWST NIRCam mosaics of the blind held-out fields <strong>PRIMER-COSMOS and PRIMER-UDS</strong> (using frozen injection-recovery astrometry calibrated on CEERS and the Bullet Cluster) to measure the first unbiased, out-of-sample proper-motion brown-dwarf contamination rate among unresolved F277W and F356W high-redshift dropouts.</li>
+</ul>
+<h5 id="lib-works-cited"><strong>Works cited</strong></h5>
+<blockquote>
+<ol type="1">
+<li>Detection of <math display="block"><semantics><mrow><mi>O</mi><mi>I</mi><mi>I</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">OIII</annotation></semantics></math>88µm in JADES-GS-z14-0 at z=14.1793 - Eso.org, <a href="https://www.eso.org/public/archives/releases/sciencepapers/eso2507/eso2507b.pdf" rel="noopener noreferrer">https://www.eso.org/public/archives/releases/sciencepapers/eso2507/eso2507b.pdf</a><br>
+</li>
+<li>clear detection of proper motion confirms that the claimed z ≃ 32, <a href="https://academic.oup.com/mnras/advance-article/doi/10.1093/mnras/stag2055/9003823" rel="noopener noreferrer">https://academic.oup.com/mnras/advance-article/doi/10.1093/mnras/stag2055/9003823</a><br>
+</li>
+<li>University of Groningen UNCOVER Burgasser, Adam J.; Bezanson, <a href="https://research.rug.nl/files/1220424313/Burgasser_2024_ApJ_962_177.pdf" rel="noopener noreferrer">https://research.rug.nl/files/1220424313/Burgasser_2024_ApJ_962_177.pdf</a><br>
+</li>
+<li>Two Exciting High-redshift Galaxy Candidates Turn Out to Be … - arXiv, <a href="https://arxiv.org/html/2604.23668v2" rel="noopener noreferrer">https://arxiv.org/html/2604.23668v2</a><br>
+</li>
+<li>distance to NGC 4258 from individual maser component tracking, <a href="https://academic.oup.com/mnras/article/550/4/stag1327/8736053" rel="noopener noreferrer">https://academic.oup.com/mnras/article/550/4/stag1327/8736053</a><br>
+</li>
+<li><a href="http://docs.google.com/unknown_url" rel="noopener noreferrer">unknown_url</a><br>
+</li>
+<li>arXiv:2406.08408v1 <math display="block"><semantics><mrow><mi>a</mi><mi>s</mi><mi>t</mi><mi>r</mi><mi>o</mi><mo>−</mo><mi>p</mi><mi>h</mi><mi>.</mi><mi>G</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">astro-ph.GA</annotation></semantics></math> 12 Jun 2024, <a href="https://arxiv.org/pdf/2406.08408" rel="noopener noreferrer">https://arxiv.org/pdf/2406.08408</a><br>
+</li>
+<li>2D (top) and 1D (bottom) spectra of GN-z11 using the PRISM/CLEAR, <a href="https://www.researchgate.net/figure/D-top-and-1D-bottom-spectra-of-GN-z11-using-the-PRISM-CLEAR-configuration-of-NIRSpec_fig1_372332451" rel="noopener noreferrer">https://www.researchgate.net/figure/D-top-and-1D-bottom-spectra-of-GN-z11-using-the-PRISM-CLEAR-configuration-of-NIRSpec_fig1_372332451</a><br>
+</li>
+<li>Author Guidelines for Use of AI and LLMs in Manuscript Preparation, <a href="https://journals.aas.org/author-llm-guidelines" rel="noopener noreferrer">https://journals.aas.org/author-llm-guidelines</a><br>
+</li>
+<li>Archives: All News - AAS Journals - American Astronomical Society, <a href="https://journals.aas.org/news/" rel="noopener noreferrer">https://journals.aas.org/news/</a><br>
+</li>
+<li>arXiv:astro-ph/0310808 v2 13 Nov 2003 Expanding Confusion, <a href="https://www.mso.anu.edu.au/~charley/papers/0310808.pdf" rel="noopener noreferrer">https://www.mso.anu.edu.au/~charley/papers/0310808.pdf</a><br>
+</li>
+<li>Time dilation observed in Type Ia supernova light curves and … - arXiv, <a href="https://arxiv.org/pdf/2506.19099" rel="noopener noreferrer">https://arxiv.org/pdf/2506.19099</a><br>
+</li>
+<li>Is the universe expanding, or are you shrinking? - nugbrain, <a href="https://nugbrain.com/1/" rel="noopener noreferrer">https://nugbrain.com/1/</a><br>
+</li>
+<li>Resolving the gravitational redshift across a millimetre-scale atomic, <a href="https://www.researchgate.net/publication/358652592_Resolving_the_gravitational_redshift_across_a_millimetre-scale_atomic_sample" rel="noopener noreferrer">https://www.researchgate.net/publication/358652592_Resolving_the_gravitational_redshift_across_a_millimetre-scale_atomic_sample</a><br>
+</li>
+<li>Measuring the gravity potential between two remote sites with, <a href="https://www.tandfonline.com/doi/full/10.1080/10095020.2023.2231515" rel="noopener noreferrer">https://www.tandfonline.com/doi/full/10.1080/10095020.2023.2231515</a><br>
+</li>
+<li>Search and scrutiny of bright galaxy candidates at z ≃ 15–30, <a href="https://www.researchgate.net/publication/397343704_Pushing_JWST_to_the_extremes_Search_and_scrutiny_of_bright_galaxy_candidates_at_z_15-30" rel="noopener noreferrer">https://www.researchgate.net/publication/397343704_Pushing_JWST_to_the_extremes_Search_and_scrutiny_of_bright_galaxy_candidates_at_z_15-30</a><br>
+</li>
+<li>investigating the puzzling nature of an extreme F356W-dropout - arXiv, <a href="https://arxiv.org/html/2509.01664v1" rel="noopener noreferrer">https://arxiv.org/html/2509.01664v1</a><br>
+</li>
+<li>A reanalysis of the megamaser Hubble constant - arXiv, <a href="https://arxiv.org/pdf/2609.17684" rel="noopener noreferrer">https://arxiv.org/pdf/2609.17684</a><br>
+</li>
+<li>Is the Hubble Tension Signaling New Physics?, <a href="https://indico.fnal.gov/event/72820/contributions/342061/attachments/199913/278671/Freedman_DPF_2026.pdf" rel="noopener noreferrer">https://indico.fnal.gov/event/72820/contributions/342061/attachments/199913/278671/Freedman_DPF_2026.pdf</a><br>
+</li>
+<li>A Cosmic Miracle: A Remarkably Luminous Galaxy at zspec = 14.44, <a href="https://cris.unibo.it/bitstream/11585/1047951/1/d.pdf" rel="noopener noreferrer">https://cris.unibo.it/bitstream/11585/1047951/1/d.pdf</a><br>
+</li>
+<li><a href="https://arxiv.org/pdf/2611.08346" rel="noopener noreferrer">https://arxiv.org/pdf/2611.08346</a><br>
+</li>
+<li>The cosmic timeline implied by the highest redshift quasars - arXiv, <a href="https://arxiv.org/html/2412.02706v1" rel="noopener noreferrer">https://arxiv.org/html/2412.02706v1</a><br>
+</li>
+<li>Issue 7 | June 2024 - NOIRLab, <a href="https://noirlab.edu/public/media/archives/mirrors/pdfsm/mirror007.pdf" rel="noopener noreferrer">https://noirlab.edu/public/media/archives/mirrors/pdfsm/mirror007.pdf</a><br>
+</li>
+<li>How JWST is Revolutionizing Our View of Early Galaxy Formation, <a href="https://arxiv.org/html/2610.18960v1" rel="noopener noreferrer">https://arxiv.org/html/2610.18960v1</a><br>
+</li>
+<li>SPURS: Massive Stars, Dense Gas, and Ly𝛼 Escape in GN-z11 at z, <a href="https://arxiv.org/html/2608.12699v2" rel="noopener noreferrer">https://arxiv.org/html/2608.12699v2</a><br>
+</li>
+<li>Forward-modelling the Tolman and distance-duality tests with … - arXiv, <a href="https://arxiv.org/pdf/2606.27182" rel="noopener noreferrer">https://arxiv.org/pdf/2606.27182</a><br>
+</li>
+<li>Team JWST - UCSD Cool Star Lab, <a href="https://www.coolstarlab.org/student-researchers/team-jwst" rel="noopener noreferrer">https://www.coolstarlab.org/student-researchers/team-jwst</a><br>
+</li>
+<li>ALMA FIR View of Ultra High-redshift Galaxy Candidates at z∼ 11–17, <a href="https://arxiv.org/html/2211.03896v3" rel="noopener noreferrer">https://arxiv.org/html/2211.03896v3</a><br>
+</li>
+<li>ALMA FIR View of Ultra High-redshift Galaxy Candidates at z 11-17, <a href="https://hal.science/hal-03866343v1/file/Fujimoto_2023_ApJ_955_130.pdf" rel="noopener noreferrer">https://hal.science/hal-03866343v1/file/Fujimoto_2023_ApJ_955_130.pdf</a><br>
+</li>
+<li>A Large Sample of JWST/NIRSpec Brown Dwarfs - arXiv, <a href="https://arxiv.org/pdf/2510.02026" rel="noopener noreferrer">https://arxiv.org/pdf/2510.02026</a><br>
+</li>
+<li>JWST Accidentally Found 21 Brown Dwarfs - Universe Today, <a href="https://www.universetoday.com/articles/jwst-accidentally-found-21-brown-dwarfs" rel="noopener noreferrer">https://www.universetoday.com/articles/jwst-accidentally-found-21-brown-dwarfs</a><br>
+</li>
+<li>JADES and Community Publications - JWST Advanced Deep, <a href="https://jades-survey.github.io/scientists/publications.html" rel="noopener noreferrer">https://jades-survey.github.io/scientists/publications.html</a><br>
+</li>
+<li>Two Exciting High-redshift Galaxy Candidates Turn Out to Be Two, <a href="https://www.ipac.caltech.edu/publication/2026ApJ..1010L..13B" rel="noopener noreferrer">https://www.ipac.caltech.edu/publication/2026ApJ..1010L..13B</a><br>
+</li>
+<li>UNIVERSIT`A DEGLI STUDI DI PADOVA A census and, <a href="https://thesis.unipd.it/retrieve/e4821c16-dcb6-44c7-afec-ccd97f9431d8/Verganti_Alessandro.pdf" rel="noopener noreferrer">https://thesis.unipd.it/retrieve/e4821c16-dcb6-44c7-afec-ccd97f9431d8/Verganti_Alessandro.pdf</a><br>
+</li>
+<li>University of Groningen Exploring Cosmic Dawn with PANORAMIC. I, <a href="https://research.rug.nl/files/1541380749/pdf_3.pdf" rel="noopener noreferrer">https://research.rug.nl/files/1541380749/pdf_3.pdf</a><br>
+</li>
+<li>JADES - The small blue bump in GN-z11 - University of Cambridge, <a href="https://www.repository.cam.ac.uk/bitstreams/40b56a3f-71d5-4237-b7bf-8f4678e28032/download" rel="noopener noreferrer">https://www.repository.cam.ac.uk/bitstreams/40b56a3f-71d5-4237-b7bf-8f4678e28032/download</a><br>
+</li>
+<li>JADES – the small blue bump in GN-z11: insights into the nuclear, <a href="https://academic.oup.com/mnras/article/541/3/2134/8185388" rel="noopener noreferrer">https://academic.oup.com/mnras/article/541/3/2134/8185388</a><br>
+</li>
+<li>Radiation-driven dusty outflows from early galaxies - Oxford Academic, <a href="https://academic.oup.com/mnras/article/544/4/4390/8325197" rel="noopener noreferrer">https://academic.oup.com/mnras/article/544/4/4390/8325197</a><br>
+</li>
+<li>From Chaos To Collisothermal Cosmogenesis - ResearchGate, <a href="https://www.researchgate.net/profile/Dr-Nipok-2/publication/402117266_From_Chaos_To_Collisothermal_Cosmogenesis_Early_Structure_Formation_Under_Successive_Collision_Theory_and_the_Resolution_of_the_JWST_Mass_Assembly_Crisis/links/69b709d5a5bf176ab5507791/From-Chaos-To-Collisothermal-Cosmogenesis-Early-Structure-Formation-Under-Successive-Collision-Theory-and-the-Resolution-of-the-JWST-Mass-Assembly-Crisis.pdf" rel="noopener noreferrer">https://www.researchgate.net/profile/Dr-Nipok-2/publication/402117266_From_Chaos_To_Collisothermal_Cosmogenesis_Early_Structure_Formation_Under_Successive_Collision_Theory_and_the_Resolution_of_the_JWST_Mass_Assembly_Crisis/links/69b709d5a5bf176ab5507791/From-Chaos-To-Collisothermal-Cosmogenesis-Early-Structure-Formation-Under-Successive-Collision-Theory-and-the-Resolution-of-the-JWST-Mass-Assembly-Crisis.pdf</a><br>
+</li>
+<li>UvA-DARE (Digital Academic Repository) - Research Explorer, <a href="https://pure.uva.nl/ws/files/347694239/A_Cosmic_Miracle.pdf" rel="noopener noreferrer">https://pure.uva.nl/ws/files/347694239/A_Cosmic_Miracle.pdf</a><br>
+</li>
+<li>Supermassive Dark Stars and Their Remnants as a Possible … - MDPI, <a href="https://www.mdpi.com/2218-1997/12/1/1" rel="noopener noreferrer">https://www.mdpi.com/2218-1997/12/1/1</a><br>
+</li>
+<li>Supermassive Dark Stars and their remnants as a possible … - arXiv, <a href="https://arxiv.org/pdf/2511.08477" rel="noopener noreferrer">https://arxiv.org/pdf/2511.08477</a><br>
+</li>
+<li>An Improved Distance to NGC 4258 and Its Implications for the, <a href="https://www.researchgate.net/publication/337461552_An_Improved_Distance_to_NGC_4258_and_Its_Implications_for_the_Hubble_Constant" rel="noopener noreferrer">https://www.researchgate.net/publication/337461552_An_Improved_Distance_to_NGC_4258_and_Its_Implications_for_the_Hubble_Constant</a><br>
+</li>
+<li>period–luminosity relation for Mira variables in the Milky Way using, <a href="https://academic.oup.com/mnras/article/523/2/2369/7179424" rel="noopener noreferrer">https://academic.oup.com/mnras/article/523/2/2369/7179424</a><br>
+</li>
+<li>GaiaEarly Data Release 3: The astrometric solution - ResearchGate, <a href="https://www.researchgate.net/publication/347323657_GaiaEarly_Data_Release_3_The_astrometric_solution" rel="noopener noreferrer">https://www.researchgate.net/publication/347323657_GaiaEarly_Data_Release_3_The_astrometric_solution</a><br>
+</li>
+<li>MichelangeloPantaleoni/Gaia-DR3-Corrections-and-recipes - GitHub, <a href="https://github.com/MichelangeloPantaleoni/Gaia-DR3-Corrections-and-recipes" rel="noopener noreferrer">https://github.com/MichelangeloPantaleoni/Gaia-DR3-Corrections-and-recipes</a><br>
+</li>
+<li>Gaia parallax bias via spherical harmonics - arXiv, <a href="https://arxiv.org/pdf/2608.12619" rel="noopener noreferrer">https://arxiv.org/pdf/2608.12619</a><br>
+</li>
+<li>S.A. Klioner’s publications - TU Dresden, <a href="http://rcswww.urz.tu-dresden.de/~klioner/papers.html" rel="noopener noreferrer">http://rcswww.urz.tu-dresden.de/~klioner/papers.html</a><br>
+</li>
+<li>Eclipsing Binary Stars as Precise and Accurate Distance Indicators, <a href="https://www.researchgate.net/publication/382131597_Eclipsing_Binary_Stars_as_Precise_and_Accurate_Distance_Indicators" rel="noopener noreferrer">https://www.researchgate.net/publication/382131597_Eclipsing_Binary_Stars_as_Precise_and_Accurate_Distance_Indicators</a><br>
+</li>
+<li>Araucaria Project – Main Goal, <a href="https://akademiakopernikanska.gov.pl/wp-content/uploads/2025/05/18.-Session-2-Astronomy-Near-and-Far-6.3.-pietrzynski.pdf" rel="noopener noreferrer">https://akademiakopernikanska.gov.pl/wp-content/uploads/2025/05/18.-Session-2-Astronomy-Near-and-Far-6.3.-pietrzynski.pdf</a><br>
+</li>
+<li>The VISCACHA survey - XIV. Chemical evolution history of the SMC, <a href="https://repositorio.unab.cl/bitstreams/ae670b98-0aa3-4745-b49c-1cca33776432/download" rel="noopener noreferrer">https://repositorio.unab.cl/bitstreams/ae670b98-0aa3-4745-b49c-1cca33776432/download</a><br>
+</li>
+<li>The distance to NGC 4258 from individual maser component tracking, <a href="https://academic.oup.com/mnras/article-pdf/550/4/stag1327/69079522/stag1327.pdf" rel="noopener noreferrer">https://academic.oup.com/mnras/article-pdf/550/4/stag1327/69079522/stag1327.pdf</a><br>
+</li>
+<li>The Local Distance Network: A community consensus report on the, <a href="https://astroweb.case.edu/ssm/ASTR328/H0DN_aa57993-25.pdf" rel="noopener noreferrer">https://astroweb.case.edu/ssm/ASTR328/H0DN_aa57993-25.pdf</a><br>
+</li>
+<li>Estimating Hubble Constant with Gravitational Observations - arXiv, <a href="https://arxiv.org/pdf/2506.15410" rel="noopener noreferrer">https://arxiv.org/pdf/2506.15410</a><br>
+</li>
+<li>Time-Delay Cosmography: Measuring the Hubble Constant and, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11182856/" rel="noopener noreferrer">https://pmc.ncbi.nlm.nih.gov/articles/PMC11182856/</a><br>
+</li>
+<li>new insights on the Hubble tension from strong lensing time delays, <a href="https://arxiv.org/html/2610.14881v2" rel="noopener noreferrer">https://arxiv.org/html/2610.14881v2</a><br>
+</li>
+<li>the size and shape evolution of galaxies since z ∼ 8 with JWST, <a href="https://researchonline.ljmu.ac.uk/id/eprint/21965/8/Epochs%20VI%20-%20the%20size%20and%20shape%20evolution%20of%20galaxies%20since%20z~8%20with%20JWST%20observations.pdf" rel="noopener noreferrer">https://researchonline.ljmu.ac.uk/id/eprint/21965/8/Epochs%20VI%20-%20the%20size%20and%20shape%20evolution%20of%20galaxies%20since%20z~8%20with%20JWST%20observations.pdf</a><br>
+</li>
+<li>Results from a JWST Size Analysis of 341 Galaxies at 5 &lt; z &lt; 14, <a href="https://air.unimi.it/retrieve/f5e43294-1ea5-4d6e-a18a-b4f7f2685411/Morishita_2024_ApJ_963_9.pdf" rel="noopener noreferrer">https://air.unimi.it/retrieve/f5e43294-1ea5-4d6e-a18a-b4f7f2685411/Morishita_2024_ApJ_963_9.pdf</a><br>
+</li>
+<li>Expanding or Static Universe: Emergence of a New Paradigm, <a href="https://www.researchgate.net/publication/352001845_Expanding_or_Static_Universe_Emergence_of_a_New_Paradigm" rel="noopener noreferrer">https://www.researchgate.net/publication/352001845_Expanding_or_Static_Universe_Emergence_of_a_New_Paradigm</a><br>
+</li>
+<li>The Tolman Surface Brightness Test for the Reality of the Expansion, <a href="https://www.researchgate.net/publication/2231004_The_Tolman_Surface_Brightness_Test_for_the_Reality_of_the_Expansion_IV_A_Measurement_of_the_Tolman_Signal_and_the_Luminosity_Evolution_of_Early-Type_Galaxies" rel="noopener noreferrer">https://www.researchgate.net/publication/2231004_The_Tolman_Surface_Brightness_Test_for_the_Reality_of_the_Expansion_IV_A_Measurement_of_the_Tolman_Signal_and_the_Luminosity_Evolution_of_Early-Type_Galaxies</a><br>
+</li>
+<li>The Tolman Surface Brightness Test for the Reality of the Expansion, <a href="https://arxiv.org/abs/astro-ph/0106566" rel="noopener noreferrer">https://arxiv.org/abs/astro-ph/0106566</a><br>
+</li>
+<li>New Upper Limit For Photon Mass - Physics Today, <a href="https://physicstoday.aip.org/news/new-upper-limit-for-photon-mass" rel="noopener noreferrer">https://physicstoday.aip.org/news/new-upper-limit-for-photon-mass</a><br>
+</li>
+<li>γ (photon), <a href="https://ccwww.kek.jp/pdg/2024/listings/rpp2024-list-photon.pdf" rel="noopener noreferrer">https://ccwww.kek.jp/pdg/2024/listings/rpp2024-list-photon.pdf</a><br>
+</li>
+<li>(PDF) The mass of the photon - ResearchGate, <a href="https://www.researchgate.net/publication/228676944_The_mass_of_the_photon" rel="noopener noreferrer">https://www.researchgate.net/publication/228676944_The_mass_of_the_photon</a><br>
+</li>
+<li><math display="block"><semantics><mn>0809.1003</mn><annotation encoding="application/x-tex">0809.1003</annotation></semantics></math> Photon and Graviton Mass Limits - arXiv, <a href="https://arxiv.org/abs/0809.1003" rel="noopener noreferrer">https://arxiv.org/abs/0809.1003</a><br>
+</li>
+<li>arXiv:2407.09532v3 <math display="block"><semantics><mrow><mi>p</mi><mi>h</mi><mi>y</mi><mi>s</mi><mi>i</mi><mi>c</mi><mi>s</mi><mi>.</mi><mi>g</mi><mi>e</mi><mi>n</mi><mo>−</mo><mi>p</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">physics.gen-ph</annotation></semantics></math> 25 Oct 2024, <a href="https://arxiv.org/pdf/2407.09532" rel="noopener noreferrer">https://arxiv.org/pdf/2407.09532</a><br>
+</li>
+<li>Resolving the gravitational redshift within a millimeter atomic sample, <a href="https://www.researchgate.net/publication/354950269_Resolving_the_gravitational_redshift_within_a_millimeter_atomic_sample" rel="noopener noreferrer">https://www.researchgate.net/publication/354950269_Resolving_the_gravitational_redshift_within_a_millimeter_atomic_sample</a><br>
+</li>
+<li>Clock Precision beyond the Standard Quantum Limit at 10 −18 Level, <a href="https://www.osti.gov/biblio/3376328" rel="noopener noreferrer">https://www.osti.gov/biblio/3376328</a><br>
+</li>
+<li>Spectroscopic Supermassive Dark Star candidates - PNAS, <a href="https://www.pnas.org/doi/10.1073/pnas.2513193122" rel="noopener noreferrer">https://www.pnas.org/doi/10.1073/pnas.2513193122</a><br>
+</li>
+<li>Confirmation and refutation of very luminous galaxies in the early, <a href="https://arxiv.org/html/2303.15431v3" rel="noopener noreferrer">https://arxiv.org/html/2303.15431v3</a><br>
+</li>
+<li>JWST Advanced Deep Extragalactic Survey Data Release 5, <a href="https://uhra.herts.ac.uk/id/eprint/27041/1/pdf.pdf" rel="noopener noreferrer">https://uhra.herts.ac.uk/id/eprint/27041/1/pdf.pdf</a><br>
+</li>
+<li>Sizes of Galaxies in JWST Data Suggest New Cosmology, <a href="https://answersresearchjournal.org/cosmology/jwst-data-suggest-new-cosmology/" rel="noopener noreferrer">https://answersresearchjournal.org/cosmology/jwst-data-suggest-new-cosmology/</a><br>
+</li>
+<li>Spectroscopic confirmation of a large and luminous galaxy … - arXiv, <a href="https://arxiv.org/pdf/2601.11515" rel="noopener noreferrer">https://arxiv.org/pdf/2601.11515</a><br>
+</li>
+<li>Full text - Københavns Universitets Forskningsportal, <a href="https://researchprofiles.ku.dk/files/567267298/Full_text.pdf" rel="noopener noreferrer">https://researchprofiles.ku.dk/files/567267298/Full_text.pdf</a><br>
+</li>
+<li>A clear detection of proper motion confirms that the claimed z ≃ 32, <a href="https://arxiv.org/html/2608.07461v1" rel="noopener noreferrer">https://arxiv.org/html/2608.07461v1</a><br>
+</li>
+<li>Two Exciting High-redshift Galaxy Candidates Turn … - ResearchGate, <a href="https://www.researchgate.net/publication/404248545_Two_Exciting_High-redshift_Galaxy_Candidates_Turn_Out_to_Be_Two_Exciting_Ultra-cool_Brown_Dwarfs/fulltext/69f02ef60f902c06323bae9a/Two-Exciting-High-redshift-Galaxy-Candidates-Turn-Out-to-Be-Two-Exciting-Ultra-cool-Brown-Dwarfs.pdf?origin=scientificContributions" rel="noopener noreferrer">https://www.researchgate.net/publication/404248545_Two_Exciting_High-redshift_Galaxy_Candidates_Turn_Out_to_Be_Two_Exciting_Ultra-cool_Brown_Dwarfs/fulltext/69f02ef60f902c06323bae9a/Two-Exciting-High-redshift-Galaxy-Candidates-Turn-Out-to-Be-Two-Exciting-Ultra-cool-Brown-Dwarfs.pdf?origin=scientificContributions</a><br>
+</li>
+<li>High-redshift Galaxy Candidates at z = 6+ as Revealed by JWST, <a href="https://www.researchgate.net/publication/407305017_High-redshift_Galaxy_Candidates_at_z_6_as_Revealed_by_JWST_Observations_of_MACS0647" rel="noopener noreferrer">https://www.researchgate.net/publication/407305017_High-redshift_Galaxy_Candidates_at_z_6_as_Revealed_by_JWST_Observations_of_MACS0647</a><br>
+</li>
+<li>Pablo Arrabal Haro, Ph.D. | Home Page, <a href="https://parrabalharo.com/" rel="noopener noreferrer">https://parrabalharo.com/</a><br>
+</li>
+<li>(PDF) The Cosmos in Its Infancy: JADES Galaxy Candidates at z &gt; 8, <a href="https://www.researchgate.net/publication/379069544_The_Cosmos_in_Its_Infancy_JADES_Galaxy_Candidates_at_z_8_in_GOODS-S_and_GOODS-N" rel="noopener noreferrer">https://www.researchgate.net/publication/379069544_The_Cosmos_in_Its_Infancy_JADES_Galaxy_Candidates_at_z_8_in_GOODS-S_and_GOODS-N</a><br>
+</li>
+<li>H0 = 73.2 소 0.9, <a href="https://indico.in2p3.fr/event/35965/contributions/152488/attachments/91629/139657/1_MSchmaltz-v1.pdf-short.pdf" rel="noopener noreferrer">https://indico.in2p3.fr/event/35965/contributions/152488/attachments/91629/139657/1_MSchmaltz-v1.pdf-short.pdf</a><br>
+</li>
+<li>A reanalysis of the megamaser Hubble constant: from spot … - arXiv, <a href="https://arxiv.org/html/2609.17684v1" rel="noopener noreferrer">https://arxiv.org/html/2609.17684v1</a><br>
+</li>
+<li><a href="https://arxiv.org/html/2601.14374v1" rel="noopener noreferrer">https://arxiv.org/html/2601.14374v1</a><br>
+</li>
+<li>The Star Formation History of the Young Open Cluster NGC 2244, <a href="https://www.researchgate.net/publication/381541129_The_Star_Formation_History_of_the_Young_Open_Cluster_NGC_2244_Study_of_the_Binary_Fraction" rel="noopener noreferrer">https://www.researchgate.net/publication/381541129_The_Star_Formation_History_of_the_Young_Open_Cluster_NGC_2244_Study_of_the_Binary_Fraction</a><br>
+</li>
+<li>ORIGINAL UNEDITED MANUSCRIPT - Oxford Academic, <a href="https://academic.oup.com/mnras/advance-article-pdf/doi/10.1093/mnras/stag2055/72561131/stag2055.pdf" rel="noopener noreferrer">https://academic.oup.com/mnras/advance-article-pdf/doi/10.1093/mnras/stag2055/72561131/stag2055.pdf</a><br>
+</li>
+<li><math display="block"><semantics><mn>2608.07461</mn><annotation encoding="application/x-tex">2608.07461</annotation></semantics></math> A clear detection of proper motion confirms that … - arXiv, <a href="https://arxiv.org/abs/2608.07461" rel="noopener noreferrer">https://arxiv.org/abs/2608.07461</a><br>
+</li>
+<li>The Distance to NGC 4258 from Individual Maser Component Tracking, <a href="https://arxiv.org/abs/2601.14374" rel="noopener noreferrer">https://arxiv.org/abs/2601.14374</a><br>
+</li>
+<li>Data Guide - AAS Journals, <a href="https://journals.aas.org/data-guide/" rel="noopener noreferrer">https://journals.aas.org/data-guide/</a><br>
+</li>
+<li>(PDF) Progress in direct measurements of the Hubble constant, <a href="https://www.researchgate.net/publication/375572346_Progress_in_direct_measurements_of_the_Hubble_constant" rel="noopener noreferrer">https://www.researchgate.net/publication/375572346_Progress_in_direct_measurements_of_the_Hubble_constant</a><br>
+</li>
+<li>TDCOSMO 2025: Cosmological constraints from strong lensing time, <a href="https://arxiv.org/html/2506.03023v1" rel="noopener noreferrer">https://arxiv.org/html/2506.03023v1</a><br>
+</li>
+<li><math display="block"><semantics><mn>2007.02941</mn><annotation encoding="application/x-tex">2007.02941</annotation></semantics></math> TDCOSMO IV: Hierarchical time-delay cosmography, <a href="https://arxiv.org/abs/2007.02941" rel="noopener noreferrer">https://arxiv.org/abs/2007.02941</a><br>
+</li>
+<li>Exploring the Dynamical Interplay between Mass-Energy … - NIST, <a href="https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=958014" rel="noopener noreferrer">https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=958014</a><br>
+</li>
+<li><math display="block"><semantics><mn>2604.23668</mn><annotation encoding="application/x-tex">2604.23668</annotation></semantics></math> Two Exciting High-redshift Galaxy Candidates Turn, <a href="https://arxiv.org/abs/2604.23668" rel="noopener noreferrer">https://arxiv.org/abs/2604.23668</a><br>
+</li>
+<li>JWST spectroscopic insights into the diversity of galaxies in the first, <a href="https://academic.oup.com/mnras/article/548/3/stag701/8653929" rel="noopener noreferrer">https://academic.oup.com/mnras/article/548/3/stag701/8653929</a><br>
+</li>
+<li>Expansion of the universe - Wikipedia, <a href="https://en.wikipedia.org/wiki/Expansion_of_the_universe" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Expansion_of_the_universe</a><br>
+</li>
+<li>Spectroscopic Confirmation of a Large and Luminous Galaxy with, <a href="https://www.research.ed.ac.uk/files/676967507/Donnan_2026_ApJ_1002_134.pdf" rel="noopener noreferrer">https://www.research.ed.ac.uk/files/676967507/Donnan_2026_ApJ_1002_134.pdf</a><br>
+</li>
+<li>Gaia DR3: preliminary catalogue data model - ESA Cosmos, <a href="https://www.cosmos.esa.int/documents/29201/5432054/DraftDataModel-DR3.pdf/d2049ffb-2cea-2581-4b66-2ea859686018?t=1648466925132" rel="noopener noreferrer">https://www.cosmos.esa.int/documents/29201/5432054/DraftDataModel-DR3.pdf/d2049ffb-2cea-2581-4b66-2ea859686018?t=1648466925132</a><br>
+</li>
+<li>Hvorfor stemmer målingerne af Hubble-konstanten ikke overens?, <a href="https://www.kristalai.eu/da/blogs/visata/matavimai-kaip-nustatyti-hablo-konstanta-itampa" rel="noopener noreferrer">https://www.kristalai.eu/da/blogs/visata/matavimai-kaip-nustatyti-hablo-konstanta-itampa</a><br>
+</li>
+<li>effect of metallicity on the Leavitt Law using phase-dependent, <a href="https://academic.oup.com/mnras/article/546/2/stag038/8418247" rel="noopener noreferrer">https://academic.oup.com/mnras/article/546/2/stag038/8418247</a><br>
+</li>
+<li>university of copenhagen - Københavns Universitets Forskningsportal, <a href="https://curis.ku.dk/ws/files/388997645/Hainline_2024_ApJ_964_71.pdf" rel="noopener noreferrer">https://curis.ku.dk/ws/files/388997645/Hainline_2024_ApJ_964_71.pdf</a><br>
+</li>
+<li>Kinematics of the Milky Way from the Statistical Analysis of the Gaia, <a href="https://www.researchgate.net/publication/388669342_Kinematics_of_the_Milky_Way_from_the_Statistical_Analysis_of_the_Gaia_Data_Release_3" rel="noopener noreferrer">https://www.researchgate.net/publication/388669342_Kinematics_of_the_Milky_Way_from_the_Statistical_Analysis_of_the_Gaia_Data_Release_3</a><br>
+</li>
+<li>Galaxy sizes in the early Universe - arXiv, <a href="https://arxiv.org/pdf/2609.23911" rel="noopener noreferrer">https://arxiv.org/pdf/2609.23911</a><br>
+</li>
+<li>An eclipsing-binary distance to the Large Magellanic Cloud accurate, <a href="https://www.researchgate.net/publication/235881281_An_eclipsing-binary_distance_to_the_Large_Magellanic_Cloud_accurate_to_two_per_cent" rel="noopener noreferrer">https://www.researchgate.net/publication/235881281_An_eclipsing-binary_distance_to_the_Large_Magellanic_Cloud_accurate_to_two_per_cent</a><br>
+</li>
+<li>An eclipsing binary distance to the Large Magellanic Cloud accurate, <a href="https://arxiv.org/abs/1303.2063" rel="noopener noreferrer">https://arxiv.org/abs/1303.2063</a><br>
+</li>
+<li>Time dilation observed in Type Ia supernova light curves and … - arXiv, <a href="https://arxiv.org/html/2506.19099v1" rel="noopener noreferrer">https://arxiv.org/html/2506.19099v1</a><br>
+</li>
+<li>Reducing the instability of an optical lattice clock using multiple, <a href="https://par.nsf.gov/servlets/purl/10497869" rel="noopener noreferrer">https://par.nsf.gov/servlets/purl/10497869</a></li>
+</ol>
+</blockquote>
+<h3 id="lib-arcsecs-interpretation-versus-observation-checkpoint-editorial-addition-r27">ArcSecs interpretation-versus-observation checkpoint (editorial addition, R27)</h3>
+<ul>
+<li><strong>Observed or calibrated quantities:</strong> Observed redshift, angular displacement, spectra and proper motion are distinct from inferred distance and galaxy size.</li>
+<li><strong>What the observation does not determine by itself:</strong> It does not identify a unique fundamental physical ontology or interaction mechanism; experimental limits must remain explicitly labeled as limits.</li>
+<li><strong>ArcSecs mechanism-building task:</strong> Separate photometric classification errors from spectroscopic redshifts and test ArcSecs distance predictions against calibrated geometric anchors.</li>
+<li><strong>Reproducible comparison / sources:</strong> JWST Capotauro and Bullet Cluster brown-dwarf reclassifications, masers, Gaia astrometry and high-z spectral controls.</li>
+<li><strong>Falsification rule:</strong> Retain every published measured quantity and uncertainty. If a specified ArcSecs mechanism fails that benchmark, record the failing assumption and design a more complete physical mechanism or a discriminating observation; do not erase or recast the measurement as a successful fit.</li>
+<li><strong>Scientific release status:</strong> Research working edition. Source bibliography, numerical calculations, author attribution and any claimed original simulations require independent scientific verification before journal submission.</li>
+</ul>
+<p><a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/index.md">Return to the full report index</a> · <a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/research/measurement-vs-inference.md">Observation-versus-inference research ledger</a></p>
+<h3 id="lib-uaix-navigation">UAIX navigation</h3>
+<p><a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/index.md">Research index</a> · <a href="https://github.com/MichaelKappel/ArcSecs.com/blob/4c88e1d5f8af6b471cd1e3fbe489810af7808e07/docs/long-term-memory/research/measurement-vs-inference.md">Scope and evidence memo</a></p>

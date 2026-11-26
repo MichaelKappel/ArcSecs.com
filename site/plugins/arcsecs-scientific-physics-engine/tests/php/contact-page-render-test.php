@@ -1,4 +1,5 @@
 <?php
+if (PHP_SAPI !== "cli") { http_response_code(404); exit; }
 $activatorFile = __DIR__ . '/../../includes/class-arcsecs-physics-engine-activator.php';
 $pluginFile = __DIR__ . '/../../arcsecs-scientific-physics-engine.php';
 $activator = file_get_contents($activatorFile);
@@ -36,11 +37,10 @@ foreach ($required as $needle) {
         exit(1);
     }
 }
-if (strpos($plugin, 'Version: 5.8.36') === false) {
-    fwrite(STDERR, "Plugin identity was not updated to 5.8.36.
-");
-    exit(1);
+$package = json_decode(file_get_contents(__DIR__ . '/../../package.json'), true);
+$version = $package['version'];
+if (strpos($plugin, 'Version: ' . $version) === false || strpos($plugin, "ARCSECS_PHYSICS_ENGINE_VERSION', '" . $version . "'") === false) {
+    fwrite(STDERR, "Plugin header, runtime version and package version disagree.\n"); exit(1);
 }
-exit(0);
-
 if (strpos($activator, 'arcsecs_contact_page_live_verification_notes') === false) { fwrite(STDERR, "Contact live verification notes option missing.\n"); exit(1); }
+echo "Contact page marker and version contracts passed.\n";

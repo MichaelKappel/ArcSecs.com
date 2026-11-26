@@ -52,7 +52,7 @@ $support = arcsecs_publications_download_url( 'support' );
             <a class="arcsecs-button" href="<?php echo esc_url( arcsecs_ai_access_url( 'read-scientific-paper/' ) ); ?>">Read the full scientific paper online</a>
             <?php if ( $paper_pdf ) : ?><a class="arcsecs-button ghost" href="<?php echo esc_url( $paper_pdf ); ?>">Download scientific paper (PDF)</a><?php endif; ?>
             <?php if ( $zenodo ) : ?><a class="arcsecs-button ghost" href="<?php echo esc_url( $zenodo ); ?>">Zenodo research record</a><?php endif; ?>
-            <a class="arcsecs-button ghost" href="<?php echo esc_url( arcsecs_ai_access_url( 'research-library/' ) ); ?>">Evidence &amp; sources</a>
+            <a class="arcsecs-button ghost" href="<?php echo esc_url( arcsecs_ai_access_url( 'research-library/' ) ); ?>">Scientific Research Library</a>
         </div>
         <?php if ( ! $paper_pdf && ! $zenodo ) : ?><p class="arcsecs-pub-muted">The full paper file is temporarily unavailable.</p><?php endif; ?>
         <p class="arcsecs-pub-muted">Citation exports: <a href="<?php echo esc_url( arcsecs_publication_asset_url( 'review6.bib' ) ); ?>" download> BibTeX</a> · <a href="<?php echo esc_url( arcsecs_publication_asset_url( 'review6.ris' ) ); ?>" download>RIS</a>. These describe the local manuscript; use the Zenodo record for its registered citation and DOI.</p>

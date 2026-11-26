@@ -1,0 +1,156 @@
+{
+  "origin": "Round 1 plugin v3.141.1",
+  "workerSHA256": "e3ecaf03318e553650421ef058ba7680f407fa4576b2d42e50590539f0e2c3cc",
+  "node": "v22.16.0",
+  "config": {
+    "acceptedSteps": 500
+  },
+  "note": "SHA-256 of JSON.stringify buffer and original metrics, Node V8. Exact numeric regression fingerprint; not scientific validation.",
+  "rows": [
+    {
+      "scenario": "control",
+      "bufferSHA256": "e161c02f0ef5dca569b94ec34e737120f8785225f452192031acc31c2b0218be",
+      "metricsSHA256": "e90bf7ac36504d04c42fd8785e58548bd69830257d796b2a5bf271a4bdd03828"
+    },
+    {
+      "scenario": "vsl",
+      "bufferSHA256": "af471989be8c55479d2247e01e1ff387d67456d6299fb8e08c8554d52c0dc9f7",
+      "metricsSHA256": "8f4bda838a373f6b76f2e1adec1b77c14b0b61abcac0cd17692f16c38d14192d"
+    },
+    {
+      "scenario": "relationalLattice",
+      "bufferSHA256": "af8031162ed9a7dbe8490e9b1c6f89a6bef0e6f23e3657f7c8f6d8accac4f25e",
+      "metricsSHA256": "51e1dec8d288acd4aa6a140fed345e7e48142dce48d913c5b21b7c0bc33689c2"
+    },
+    {
+      "scenario": "relationalFlatSpaceEngine",
+      "bufferSHA256": "fecd43b06dc916d7a9296cc7eae93d7e3b3cb014d5f1216afef2b931dbf78174",
+      "metricsSHA256": "a4b020b275e1efe52807c29a2415f9114ddea3ef073c0a722b2d48de5dcdc1e2"
+    },
+    {
+      "scenario": "absoluteTimeQuantumOscillator",
+      "bufferSHA256": "093a899e89b2deec09ed6a943b003816c485896fda14e9d0f430e72d150b9015",
+      "metricsSHA256": "a7854cbd76c8a7d47f512765ca3658d9c01494f7f3de4d353769aafd4756ad7b"
+    },
+    {
+      "scenario": "teleparallelGravity",
+      "bufferSHA256": "6f8c7b352e6ffdc6ed13b3c519b7ad6098dcc8320910f309b74a7e8a86d2d360",
+      "metricsSHA256": "9dca7fce63ea71914d2f7c0809d18cc5afc52eb87497e3f319bdb353730af423"
+    },
+    {
+      "scenario": "tiredLightPhotonDecay",
+      "bufferSHA256": "3f87a91d102b9fffe912eb8e233390b1b7e9f31a43d396784c882fb4c7031bff",
+      "metricsSHA256": "1f7ebb4bf131b3aa71a93cc1719f13adbf7df6b29216f3f74ed1b99359708638"
+    },
+    {
+      "scenario": "mechanisticTiredLight",
+      "bufferSHA256": "8d65cefb15565f6b264870d1ecb421d54b581fd6e34651c527b60363ac0716ef",
+      "metricsSHA256": "c62c7c88764b9a29db0f06781f6cedf2ac5c6c4511bf4c8b401053291d23c68b"
+    },
+    {
+      "scenario": "entropicBetaMatter",
+      "bufferSHA256": "2f92615e19ab5dacd95611ddf8b779599337de745acc892b4683cfa508759c35",
+      "metricsSHA256": "02e88c940e3a5bc20d6c4f42b405e5e181b06f9daa11e7bfe233151f2720130d"
+    },
+    {
+      "scenario": "mondRotationCurves",
+      "bufferSHA256": "8a17b1fc35f3f2522644e3c47e80a3c773f3175b058c09f7c2890c60bf2f218d",
+      "metricsSHA256": "0b6d916257f41258b9a462b7b58dd0207647bfaaf376c10af607e592d85e7891"
+    },
+    {
+      "scenario": "procaPhotonDispersion",
+      "bufferSHA256": "afb03bb710c9b092912268a3823755a98066971252cda8acdcfcec21109cfd43",
+      "metricsSHA256": "75b7cd1de30bd2c45b4d2638c7e78e84dfebe87597174a96f9fbd1b02099ce3b"
+    },
+    {
+      "scenario": "massivePhotonProca",
+      "bufferSHA256": "86d7b9e3d147db1bd29928a011ad077e9406500e38022326a896c5d59f6abfc8",
+      "metricsSHA256": "ab0aad59493f5cd61430d54c1a6d8bb98c4d2c3ebaf6b5c90d9e5312e5664735"
+    },
+    {
+      "scenario": "eitSlowLight",
+      "bufferSHA256": "af1047a836997be11af661b1018ee0c51a29bdf9409416a2048ae79331447d9d",
+      "metricsSHA256": "002dead0021973639c695f0a4b3dabb15a429ac889761742b04ce1a6a813d5b3"
+    },
+    {
+      "scenario": "flatSpaceLensing",
+      "bufferSHA256": "fe1157c707c102aa8d62bbfc8081ae953e344296f4d99c670f96f83b8932a9c2",
+      "metricsSHA256": "17c5449da425fcd1371b4ed150e09b8c33001dfe8fbb1b9a7c6d1571681e582b"
+    },
+    {
+      "scenario": "massivePhotonLensing",
+      "bufferSHA256": "b0ebda0ba4f5d9309adfd94b85996a005dccf8086c6c2821ea9d2b6ec835fdca",
+      "metricsSHA256": "9d1ef7b5c168f30a1f2eeb77d51bcc5e88b37903d7d409143b2f2ba350fb71f5"
+    },
+    {
+      "scenario": "newtonianDarkStar",
+      "bufferSHA256": "e3b4cf88711a06e3eb79885de5c61398f1ef8094bd95c462e1429d4125421c79",
+      "metricsSHA256": "9d139356c7a7dfe755dd061341f33d7662900bb3bb4c4ef257fba41b14e365af"
+    },
+    {
+      "scenario": "superluminalGalilean",
+      "bufferSHA256": "b7c2505fed788db85c7e6db5eb14081030252c4061becf5825651d4d5e30693a",
+      "metricsSHA256": "3cf0dbb69227e37cee5da42581a5d562112ae06f226833525d579cc499067553"
+    },
+    {
+      "scenario": "tiredLightEnergyLedger",
+      "bufferSHA256": "1732e3f36da408125ac66c85dbe45478f47c3822e2fc85554eb46b09d57ad2ee",
+      "metricsSHA256": "825f3dcd3bf3d5ce3485a684580f02bfef83f0c3d0ae71eaad9e9cd86aad0317"
+    },
+    {
+      "scenario": "darkMatterCondensate",
+      "bufferSHA256": "6a0549af314ce6e7bc7a83c8ebf7a03f6f44e3879745757538e6f88d0a3f8e83",
+      "metricsSHA256": "86a19b3b5c8b059315d03943ff4cc70ae1af8cafd30042180b892d400edcded3"
+    },
+    {
+      "scenario": "distanceTimeKernel",
+      "bufferSHA256": "b108ed4cb884a974a98698929f92e9bbe42080512dbf1a4486e4b44e5448fc7d",
+      "metricsSHA256": "e5059d230553813c299a64fbe0bacfe7d95941d40432dd2c45495ff970f6c4c5"
+    },
+    {
+      "scenario": "singularitySafeGravity",
+      "bufferSHA256": "499c23675eace5e33aaf723023dc606ccd449870b433e5039ac31981380a773a",
+      "metricsSHA256": "b9c49b74efe11ce72974fa8748de64af1b034569859391f6bac7c8be0ebe82aa"
+    },
+    {
+      "scenario": "monteCarloPhotonPipeline",
+      "bufferSHA256": "71dd88b0dea83737d22cd96003897e58b004942016887c50f6f0f955a1aa3cc7",
+      "metricsSHA256": "13ef65ee083ee406e1c0493da52f4775b685c4237cb3911bc8b162a8f5e6c583"
+    },
+    {
+      "scenario": "parallaxCalibration",
+      "bufferSHA256": "d0f825ebcae24b5dddf388c32d33e7221f0c27a7dcafc674e3f1901dcbe99e4b",
+      "metricsSHA256": "ba67653b06873fac91b98b3c7546a38f5e3f4f6766d028061bd92bf313c09eff"
+    },
+    {
+      "scenario": "photometricCalibration",
+      "bufferSHA256": "e208245d79d0f3e48e1163508b910366c9734177f0271505155e845b1858954a",
+      "metricsSHA256": "648857095e8d2639f238a09f2383beee2b145dccb6c346e393a62f1ecd10095a"
+    },
+    {
+      "scenario": "rigidBodyDiagnostics",
+      "bufferSHA256": "72581d21ac233df9d5915934df7d0083c045c700738abc47824b74fceb49d0d0",
+      "metricsSHA256": "1f34c9d5926096b92179d75d3d8dff5a394340cc26c679b90b8c3c6616e083c1"
+    },
+    {
+      "scenario": "ccctl",
+      "bufferSHA256": "cce6db88efce6ff6e1e6105542e816b31e859127d851aba7778963d7c4d7b349",
+      "metricsSHA256": "c8d1819e35c863ea8ea9b0caf88332eb983286c0a6c9a1ab417fd53d6b50f87a"
+    },
+    {
+      "scenario": "darkMatterDrive",
+      "bufferSHA256": "e785b72b10a7969607cc8f33fb1b5ffd8df8b43bd041e18b167e6fd60251f86a",
+      "metricsSHA256": "ed2eb1f9f2542ecc928f68ed6eca24fdb1c5f4306356561210fa025f9490c623"
+    },
+    {
+      "scenario": "darkMatterRamjet",
+      "bufferSHA256": "bd461a683540e10e7773357f712603b0d528d10fc6f7482695d8a73b0df0f85a",
+      "metricsSHA256": "b9fd154d4668cec7ad8a1062dd63f84ae30c03296e0423482d508b979bea9191"
+    },
+    {
+      "scenario": "sunSimulation",
+      "bufferSHA256": "c74c50ee9e0b5539adde5187dfb088471eb4d4d9d36344ef82846feb5bfe511a",
+      "metricsSHA256": "ebea09658813efab8eff3f80e92b3d012ce97022f3ad04c4bd25799bf6abba2f"
+    }
+  ]
+}

@@ -1,0 +1,411 @@
+{
+  "3.140.0": {
+    "ai-corpus-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "Publications catalog smoke test passed (default and enabled links, route, unsafe URLs, schema).\nAI corpus smoke test passed."
+    },
+    "arcsecs-perspective-report-v550-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_ai_discovery_140/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_ai_discovery_140/arcsecs-v5/tests/php/arcsecs-perspective-report-v550-test.php on line 7\nTheme header must be version 5.0.58."
+    },
+    "arcsecs-research-hub-page-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Physical llms.txt does not mention the research hub."
+    },
+    "cosmic-anomalies-tracker-page-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_ai_discovery_140/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_ai_discovery_140/arcsecs-v5/tests/php/cosmic-anomalies-tracker-page-test.php on line 19\nPhysical llms.txt does not mention the cosmic anomalies tracker."
+    },
+    "cosmology-comparison-page-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_ai_discovery_140/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_ai_discovery_140/arcsecs-v5/tests/php/cosmology-comparison-page-test.php on line 16\n.uai does not document the cosmology comparison package."
+    },
+    "dark-matter-drive-main-site-integration-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_ai_discovery_140/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_ai_discovery_140/arcsecs-v5/tests/php/dark-matter-drive-main-site-integration-test.php on line 10\nMissing dark matter integration doc: docs/main-site-dark-matter-drive-integration.md"
+    },
+    "distance-time-event-theater-contract-v548-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_ai_discovery_140/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_ai_discovery_140/arcsecs-v5/tests/php/distance-time-event-theater-contract-v548-test.php on line 14\nllms.txt is missing v5.0.58 Event Theater alignment note."
+    },
+    "distance-time-export-evidence-v542-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_ai_discovery_140/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_ai_discovery_140/arcsecs-v5/tests/php/distance-time-export-evidence-v542-test.php on line 14\nv5.0.42 UAI memory update is missing."
+    },
+    "distance-time-framework-page-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_ai_discovery_140/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_ai_discovery_140/arcsecs-v5/tests/php/distance-time-framework-page-test.php on line 18\nMissing Distance-Time supporting file: /docs/ArcSecs Distance-Time Framework Page v5.0.38.md"
+    },
+    "distance-time-prod-screenshot-polish-v544-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "le or directory in /mnt/data/_ai_discovery_140/arcsecs-v5/tests/php/distance-time-prod-screenshot-polish-v544-test.php on line 16\nPHP Warning:  file_get_contents(/mnt/data/_ai_discovery_140/arcsecs-v5/.uai/exports/package-model.json): Failed to open stream: No such file or directory in /mnt/data/_ai_discovery_140/arcsecs-v5/tests/php/distance-time-prod-screenshot-polish-v544-test.php on line 17\nMissing v5.0.44 memory/handoff string: v5.0.44 Current State Handoff and Cross-Site Contract Alignment"
+    },
+    "distance-time-theme-wiring-v540-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "llms.txt must include the Distance-Time Framework route."
+    },
+    "distance-time-visual-polish-v541-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "v5.0.41 visual polish document is missing."
+    },
+    "favicon-and-seo-v554-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_ai_discovery_140/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_ai_discovery_140/arcsecs-v5/tests/php/favicon-and-seo-v554-test.php on line 6\nTheme header must be version 5.0.58."
+    },
+    "home-primary-path-overlap-v549-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Theme header must be version 5.0.58."
+    },
+    "multi-messenger-light-delay-page-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_ai_discovery_140/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_ai_discovery_140/arcsecs-v5/tests/php/multi-messenger-light-delay-page-test.php on line 22\nMissing Multi-Messenger asset/doc: /docs/Modeling Light Slowing and Energy Degeneration Multi-Messenger Events.md"
+    },
+    "open-knowledge-reader-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "Publications catalog smoke test passed (default and enabled links, route, unsafe URLs, schema).\nOpen knowledge reader smoke test passed."
+    },
+    "physics-engine-dropdown-accessibility-v553-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Theme header must be version 5.0.58."
+    },
+    "physics-engine-dropdown-nav-v552-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Theme header must be version 5.0.58."
+    },
+    "publications-catalog-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "Publications catalog smoke test passed (default and enabled links, route, unsafe URLs, schema)."
+    },
+    "space-travel-major-upgrade-v556-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Theme header must be version 5.0.58."
+    },
+    "space-travel-polish-v557-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Theme header must be version 5.0.58."
+    },
+    "space-travel-route-v555-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Theme header must be version 5.0.58."
+    },
+    "space-travel-shortcode-v558-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Theme header must be version 5.0.58."
+    },
+    "theme-css-fallback-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Theme style metadata is not 5.0.58."
+    },
+    "theme-evidence-source-browser-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "Evidence source browser test passed."
+    },
+    "theme-evidence-sources-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Static llms.txt does not mention evidence source layer."
+    },
+    "theme-facebook-header-link-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "ArcSecs Facebook header link contract passed."
+    },
+    "theme-header-nav-compact-drive-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "Compact Dark Matter Drive header navigation contract passed."
+    },
+    "theme-home-start-here-polish-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_ai_discovery_140/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_ai_discovery_140/arcsecs-v5/tests/php/theme-home-start-here-polish-test.php on line 14\n.uai memory does not document v5.0.33."
+    },
+    "theme-local-assets-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Missing required theme-local file: .uai/short-term-memory.uai"
+    },
+    "theme-mobile-navigation-accessibility-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "Mobile navigation accessibility source contract passed."
+    },
+    "theme-nav-diagnostics-and-dedup-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "Navigation diagnostics and de-duplication contract passed."
+    },
+    "theme-performance-sweep-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "Performance sweep source contract passed."
+    },
+    "theme-primary-nav-required-links-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "Primary navigation required links source contract passed."
+    },
+    "theme-research-library-page-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_ai_discovery_140/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_ai_discovery_140/arcsecs-v5/tests/php/theme-research-library-page-test.php on line 18\n.uai memory does not document Research Library."
+    },
+    "theme-route-health-dashboard-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_ai_discovery_140/arcsecs-v5/docs/theme-route-health-dashboard-v5.0.25.md): Failed to open stream: No such file or directory in /mnt/data/_ai_discovery_140/arcsecs-v5/tests/php/theme-route-health-dashboard-test.php on line 13\nRoute health dashboard documentation is too thin."
+    },
+    "theme-science-readability-sweep-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Readability sweep documentation is missing."
+    },
+    "theme-seo-sweep-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "SEO sweep documentation file is missing."
+    },
+    "theme-source-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_ai_discovery_140/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_ai_discovery_140/arcsecs-v5/tests/php/theme-source-test.php on line 13\nTheme header must be version 5.0.58."
+    },
+    "theme-typescript-source-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Missing TypeScript source file: assets/ts/arcsecs-physics-engine/README.md"
+    }
+  },
+  "3.141.0": {
+    "ai-corpus-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "Publications catalog smoke test passed (default and enabled links, route, unsafe URLs, schema).\nAI corpus smoke test passed."
+    },
+    "arcsecs-perspective-report-v550-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_research_library_141/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_research_library_141/arcsecs-v5/tests/php/arcsecs-perspective-report-v550-test.php on line 7\nTheme header must be version 5.0.58."
+    },
+    "arcsecs-research-hub-page-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Physical llms.txt does not mention the research hub."
+    },
+    "cosmic-anomalies-tracker-page-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_research_library_141/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_research_library_141/arcsecs-v5/tests/php/cosmic-anomalies-tracker-page-test.php on line 19\nPhysical llms.txt does not mention the cosmic anomalies tracker."
+    },
+    "cosmology-comparison-page-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_research_library_141/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_research_library_141/arcsecs-v5/tests/php/cosmology-comparison-page-test.php on line 16\n.uai does not document the cosmology comparison package."
+    },
+    "dark-matter-drive-main-site-integration-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_research_library_141/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_research_library_141/arcsecs-v5/tests/php/dark-matter-drive-main-site-integration-test.php on line 10\nMissing dark matter integration doc: docs/main-site-dark-matter-drive-integration.md"
+    },
+    "distance-time-event-theater-contract-v548-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_research_library_141/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_research_library_141/arcsecs-v5/tests/php/distance-time-event-theater-contract-v548-test.php on line 14\nllms.txt is missing v5.0.58 Event Theater alignment note."
+    },
+    "distance-time-export-evidence-v542-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_research_library_141/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_research_library_141/arcsecs-v5/tests/php/distance-time-export-evidence-v542-test.php on line 14\nv5.0.42 UAI memory update is missing."
+    },
+    "distance-time-framework-page-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_research_library_141/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_research_library_141/arcsecs-v5/tests/php/distance-time-framework-page-test.php on line 18\nMissing Distance-Time supporting file: /docs/ArcSecs Distance-Time Framework Page v5.0.38.md"
+    },
+    "distance-time-prod-screenshot-polish-v544-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "manifest.json): Failed to open stream: No such file or directory in /mnt/data/_research_library_141/arcsecs-v5/tests/php/distance-time-prod-screenshot-polish-v544-test.php on line 16\nPHP Warning:  file_get_contents(/mnt/data/_research_library_141/arcsecs-v5/.uai/exports/package-model.json): Failed to open stream: No such file or directory in /mnt/data/_research_library_141/arcsecs-v5/tests/php/distance-time-prod-screenshot-polish-v544-test.php on line 17\nFooter must keep Evidence & Sources link."
+    },
+    "distance-time-theme-wiring-v540-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "llms.txt must include the Distance-Time Framework route."
+    },
+    "distance-time-visual-polish-v541-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "v5.0.41 visual polish document is missing."
+    },
+    "favicon-and-seo-v554-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_research_library_141/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_research_library_141/arcsecs-v5/tests/php/favicon-and-seo-v554-test.php on line 6\nTheme header must be version 5.0.58."
+    },
+    "home-primary-path-overlap-v549-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Theme header must be version 5.0.58."
+    },
+    "multi-messenger-light-delay-page-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_research_library_141/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_research_library_141/arcsecs-v5/tests/php/multi-messenger-light-delay-page-test.php on line 22\nMissing Multi-Messenger asset/doc: /docs/Modeling Light Slowing and Energy Degeneration Multi-Messenger Events.md"
+    },
+    "open-knowledge-reader-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "Publications catalog smoke test passed (default and enabled links, route, unsafe URLs, schema).\nOpen knowledge reader smoke test passed."
+    },
+    "physics-engine-dropdown-accessibility-v553-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Theme header must be version 5.0.58."
+    },
+    "physics-engine-dropdown-nav-v552-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Theme header must be version 5.0.58."
+    },
+    "publications-catalog-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "Publications catalog smoke test passed (default and enabled links, route, unsafe URLs, schema)."
+    },
+    "research-library-edition-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "Scientific library smoke test passed: 49 routes, 47 source readers, 48 catalog entries, 12 premises, schema, hash checks, 404 and subdirectory routing."
+    },
+    "space-travel-major-upgrade-v556-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Theme header must be version 5.0.58."
+    },
+    "space-travel-polish-v557-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Theme header must be version 5.0.58."
+    },
+    "space-travel-route-v555-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Theme header must be version 5.0.58."
+    },
+    "space-travel-shortcode-v558-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Theme header must be version 5.0.58."
+    },
+    "theme-css-fallback-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Theme style metadata is not 5.0.58."
+    },
+    "theme-evidence-source-browser-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "Evidence source browser test passed."
+    },
+    "theme-evidence-sources-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Static llms.txt does not mention evidence source layer."
+    },
+    "theme-facebook-header-link-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "ArcSecs Facebook header link contract passed."
+    },
+    "theme-header-nav-compact-drive-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "Compact Dark Matter Drive header navigation contract passed."
+    },
+    "theme-home-start-here-polish-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_research_library_141/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_research_library_141/arcsecs-v5/tests/php/theme-home-start-here-polish-test.php on line 14\n.uai memory does not document v5.0.33."
+    },
+    "theme-local-assets-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Missing required theme-local file: .uai/short-term-memory.uai"
+    },
+    "theme-mobile-navigation-accessibility-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "Mobile navigation accessibility source contract passed."
+    },
+    "theme-nav-diagnostics-and-dedup-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "Navigation diagnostics and de-duplication contract passed."
+    },
+    "theme-performance-sweep-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "Performance sweep source contract passed."
+    },
+    "theme-primary-nav-required-links-test.php": {
+      "pass": true,
+      "exit": 0,
+      "message": "Primary navigation required links source contract passed."
+    },
+    "theme-research-library-page-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_research_library_141/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_research_library_141/arcsecs-v5/tests/php/theme-research-library-page-test.php on line 18\nMissing Research Library template string: A public source map for the observations, constraints, criticisms, speculative models, and engineering analogies behind ArcSecs."
+    },
+    "theme-route-health-dashboard-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_research_library_141/arcsecs-v5/docs/theme-route-health-dashboard-v5.0.25.md): Failed to open stream: No such file or directory in /mnt/data/_research_library_141/arcsecs-v5/tests/php/theme-route-health-dashboard-test.php on line 13\nRoute health dashboard documentation is too thin."
+    },
+    "theme-science-readability-sweep-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Readability sweep documentation is missing."
+    },
+    "theme-seo-sweep-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "SEO sweep documentation file is missing."
+    },
+    "theme-source-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "PHP Warning:  file_get_contents(/mnt/data/_research_library_141/arcsecs-v5/.uai/short-term-memory.uai): Failed to open stream: No such file or directory in /mnt/data/_research_library_141/arcsecs-v5/tests/php/theme-source-test.php on line 13\nTheme header must be version 5.0.58."
+    },
+    "theme-typescript-source-test.php": {
+      "pass": false,
+      "exit": 1,
+      "message": "Missing TypeScript source file: assets/ts/arcsecs-physics-engine/README.md"
+    }
+  }
+}

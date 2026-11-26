@@ -8610,3 +8610,36 @@ body:not(.arcsecs-fullscreen-demo) .entry-content .arcsecs-contact-hero {
     font-size: 0.98rem;
   }
 }
+
+/* Round 1: shared navigation and accessible control focus. */
+.arcsecs-demo-round-nav { display:flex; flex-wrap:wrap; gap:.5rem; width:100%; padding:.65rem 0; }
+.arcsecs-demo-round-nav a { color:#c7eaff; background:#14253c; border:1px solid #52738d; border-radius:.45rem; padding:.55rem .75rem; text-decoration:none; line-height:1.4; }
+.arcsecs-demo-round-nav a[aria-current=page] { color:#071424; background:#9cd9f5; }
+.arcsecs-demo-round-boundary { font-size:.9rem; line-height:1.5; color:#d6e5f4; margin:.4rem 0 .7rem; width:100%; }
+.arcsecs-demo-round-nav a:focus-visible, .arcsecs-physics-demo button:focus-visible, .arcsecs-space-travel-simulator :focus-visible { outline:3px solid #ffd27d; outline-offset:3px; }
+.arcsecs-physics-demo button:disabled { opacity:.55; cursor:not-allowed; }
+@media(prefers-reduced-motion:reduce){ .arcsecs-physics-demo *, .arcsecs-space-travel-simulator * { scroll-behavior:auto!important; animation-duration:.01ms!important; transition-duration:.01ms!important; } }
+
+.arcsecs-demo-hero > .arcsecs-demo-round-nav, .arcsecs-demo-hero > .arcsecs-demo-round-boundary, .arcsecs-drive-hero > .arcsecs-demo-round-nav, .arcsecs-drive-hero > .arcsecs-demo-round-boundary { grid-column:1 / -1; }
+.arcsecs-physics-demo .arcsecs-demo-hero { height:auto; min-height:74px; }
+/* Review 6 analytical lab */
+.arcsecs-research-lab {box-sizing:border-box;width:min(850px,calc(100vw - 24px));max-height:90vh;overflow:auto;background:#0c1b30;color:#edf5ff;border:1px solid #557b99;border-radius:12px;padding:clamp(12px,3vw,24px);font:16px/1.5 system-ui,sans-serif;}
+.arcsecs-research-lab::backdrop {background:rgba(0,0,0,.8)}
+.arcsecs-research-lab [hidden] {display:none!important}
+.arcsecs-research-lab h2 {font-size:1.35rem;margin:0;color:#edf5ff}
+.arcsecs-research-lab a {color:#91d7ff;text-decoration:underline}
+.arcsecs-research-lab label {display:block;margin:8px 0;color:#e7f2ff}
+.arcsecs-research-lab input,.arcsecs-research-lab select {display:block;width:100%;box-sizing:border-box;min-height:42px;padding:7px;border:1px solid #66819f;border-radius:5px;background:#14283e;color:#fff;font:inherit}
+.arcsecs-research-lab button,.arcsecs-demo-round-nav button[data-lab-open] {background:#14334e;color:#eff8ff;border:1px solid #729bbb;border-radius:6px;padding:8px 14px;min-height:42px;cursor:pointer;font:inherit}
+.arcsecs-research-lab button:disabled {opacity:.55;cursor:not-allowed}
+.arcsecs-research-lab :focus-visible,.arcsecs-demo-round-nav button[data-lab-open]:focus-visible {outline:3px solid #ffc46c;outline-offset:3px}
+.research-lab-top {display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.arcsecs-research-lab pre {max-width:100%;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;background:#071221;padding:12px;border-radius:6px;color:#e7f2ff}
+.arcsecs-research-lab svg {width:100%;height:auto;background:#071221}
+
+.arcsecs-research-lab .research-lab-top {position:sticky;top:0;z-index:1;background:#0c1b30;padding:8px 0;border-bottom:1px solid #36536e;}
+
+/* v3.142.0 standalone cosmic laboratory; scoped to shortcode. */
+.arcsecs-cosmic-lab{box-sizing:border-box;max-width:1100px;margin:1.5rem auto;padding:clamp(1rem,3vw,2rem);border:1px solid #304966;border-radius:16px;background:#0b1628;color:#edf5ff;font:inherit;overflow-wrap:anywhere;color-scheme:dark}.arcsecs-cosmic-lab *{box-sizing:border-box}.arcsecs-cosmic-lab h2{color:#edf5ff;font-size:clamp(1.6rem,4vw,2.5rem);margin:.3rem 0}.arcsecs-cosmic-lab p,.arcsecs-cosmic-lab label{color:#c9d8ec}.arcsecs-cosmic-lab .cosmic-kicker{font-size:.78rem;letter-spacing:.12em;color:#8fd0ff}.arcsecs-cosmic-lab a{color:#9bd8ff;text-decoration:underline}.arcsecs-cosmic-lab nav{margin:1rem 0}.arcsecs-cosmic-lab label{display:block;min-width:0}.arcsecs-cosmic-lab select,.arcsecs-cosmic-lab input{display:block;width:100%;max-width:100%;padding:.65rem;border:1px solid #55718c;border-radius:6px;color:#edf5ff;background:#14273c;font:inherit}.arcsecs-cosmic-lab .cosmic-inputs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:1rem}.arcsecs-cosmic-lab .cosmic-actions{display:flex;flex-wrap:wrap;gap:.65rem;margin:1rem 0}.arcsecs-cosmic-lab button{border:1px solid #7299bf;background:#244564;color:#fff;padding:.7rem 1rem;border-radius:8px;cursor:pointer;font:inherit}.arcsecs-cosmic-lab button:disabled{opacity:.45;cursor:not-allowed}.arcsecs-cosmic-lab :focus-visible{outline:3px solid #ffd188;outline-offset:3px}.arcsecs-cosmic-lab [hidden]{display:none!important}.arcsecs-cosmic-lab dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:.35rem 1rem}.arcsecs-cosmic-lab dt{font-weight:600}.arcsecs-cosmic-lab dd{margin:0;color:#a8ddff}.arcsecs-cosmic-lab figure{margin:1rem 0}.arcsecs-cosmic-lab svg{width:100%;height:auto;display:block}.arcsecs-cosmic-lab figcaption{display:flex;gap:1rem;flex-wrap:wrap}.arcsecs-cosmic-lab figcaption span{padding-left:.5rem}.arcsecs-cosmic-lab pre{white-space:pre-wrap;max-height:20rem;overflow:auto;background:#07111e;padding:1rem}.arcsecs-cosmic-lab details{margin:1rem 0}.arcsecs-cosmic-lab summary{cursor:pointer;color:#b4e0ff}
+
+.arcsecs-cosmic-lab .cosmic-actions label{display:flex;flex-direction:column;gap:.35rem;max-width:100%;font-size:.9rem}.arcsecs-cosmic-lab .cosmic-actions input[type=file]{max-width:100%;min-width:0}
